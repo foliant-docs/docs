@@ -5,4 +5,5 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
+      - ~/.ssh:/root/.ssh
     working_dir: /usr/src/app
