@@ -25,4 +25,3 @@ You'll love Foliant if you:
 <include sethead="3">
     $https://github.com/foliant-docs/foliant.git$changelog.md
 </include>
-
