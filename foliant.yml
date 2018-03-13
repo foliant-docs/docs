@@ -10,10 +10,12 @@ chapters:
     - backends/pandoc.md
   - Preprocessors:
     - preprocessors/blockdiag.md
+    - preprocessors/epsconvert.md
     - preprocessors/flags.md
     - preprocessors/flatten.md
     - preprocessors/includes.md
     - preprocessors/macros.md
+    - preprocessors/plantuml.md
   - CLI Extensions:
     - cli/init.md
 
