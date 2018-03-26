@@ -1,3 +1,4 @@
 .*cache
 *.mkdocs
 *.pdf
+*.mkdocs.src
