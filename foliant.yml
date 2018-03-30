@@ -10,6 +10,7 @@ chapters:
     - backends/pandoc.md
   - Preprocessors:
     - preprocessors/blockdiag.md
+    - preprocessors/customids.md
     - preprocessors/epsconvert.md
     - preprocessors/flags.md
     - preprocessors/flatten.md
