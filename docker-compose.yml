@@ -1,9 +1,19 @@
 version: '3'
 
 services:
-  foliant-docs:
-    build: .
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile-site
     volumes:
       - .:/usr/src/app
-      - ~/.ssh:/root/.ssh
     working_dir: /usr/src/app
+    command: make site
+  pdf:
+    build:
+      context: .
+      dockerfile: Dockerfile-pdf
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: make pdf

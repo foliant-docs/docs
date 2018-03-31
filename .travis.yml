@@ -6,7 +6,7 @@ services:
 install: ''
 
 script:
-  - docker-compose run --rm foliant-docs make site
+  - docker-compose run site
 
 deploy:
   provider: pages
