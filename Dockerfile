@@ -1,4 +1,4 @@
-FROM foliant/foliant:pandoc
+FROM foliant/foliant
 
 COPY requirements.txt .
 COPY template template
