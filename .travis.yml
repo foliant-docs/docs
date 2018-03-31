@@ -1,0 +1,18 @@
+sudo: required
+
+services:
+  - docker
+
+install: ''
+
+script:
+  - docker-compose run --rm foliant-docs make site
+
+deploy:
+  provider: pages
+  local-dir: foliant-docs
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
