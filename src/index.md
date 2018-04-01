@@ -23,5 +23,5 @@ You'll love Foliant if you:
 ## Changelog
 
 <include sethead="3">
-    $https://github.com/foliant-docs/foliant.git$changelog.md
+    $https://github.com/foliant-docs/foliant.git#develop$changelog.md
 </include>
