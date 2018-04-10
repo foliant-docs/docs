@@ -9,6 +9,7 @@ chapters:
     - MkDocs: backends/mkdocs.md
     - backends/pandoc.md
   - Preprocessors:
+    - preprocessors/bindsympli.md
     - preprocessors/blockdiag.md
     - preprocessors/customids.md
     - preprocessors/epsconvert.md
