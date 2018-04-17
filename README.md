@@ -8,9 +8,9 @@ With Docker Compose:
 $ git clone git@github.com:foliant-docs/foliant.git
 $ cd foliant/docs
 # Site:
-$ docker-compose run --rm foliant-docs make site
+$ docker-compose run --rm site
 # PDF:
-$ docker-compose run --rm foliant-docs make pdf
+$ docker-compose run --rm pdf
 ```
 
 With pip and stuff (requires Python 3.6+, Pandoc, and TeXLive):
