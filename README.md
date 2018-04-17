@@ -1,5 +1,7 @@
 #   Foliant Documentation
 
+[![Build Status](https://travis-ci.org/foliant-docs/docs.svg?branch=master)](https://travis-ci.org/foliant-docs/docs)
+
 ##  Build Locally
 
 With Docker Compose:
