@@ -64,4 +64,4 @@ backend_config:
         - codehilite
         - toc:
             permalink: true
-
+        - admonition
