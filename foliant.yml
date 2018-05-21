@@ -15,13 +15,20 @@ chapters:
     - preprocessors/epsconvert.md
     - preprocessors/flags.md
     - preprocessors/flatten.md
+    - preprocessors/imagemagick.md
     - preprocessors/includes.md
     - preprocessors/macros.md
     - preprocessors/plantuml.md
+    - preprocessors/repolink.md
+    - preprocessors/runcommands.md
   - CLI Extensions:
     - Init: cli/init/index.md
     - Templates:
       - cli/init/templates/preprocessor.md
+    - cli/src.md
+  - Config Extensions:
+    - config/from.md
+    - config/slugs.md
 
 preprocessors:
   - macros:
