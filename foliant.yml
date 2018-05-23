@@ -55,7 +55,7 @@ backend_config:
       theme:
         name: material
         palette:
-          primary: cyan
+          primary: grey
           accent: light blue
         font:
           text: PT Sans
