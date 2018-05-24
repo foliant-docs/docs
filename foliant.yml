@@ -55,7 +55,7 @@ backend_config:
       theme:
         name: material
         palette:
-          primary: grey
+          primary: "rgba(0, 0, 0, 0.87)"
           accent: light blue
         font:
           text: PT Sans
@@ -74,3 +74,5 @@ backend_config:
         - toc:
             permalink: true
         - admonition
+      extra_css:
+        - 'stylesheets/extra.css'
