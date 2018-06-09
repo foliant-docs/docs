@@ -76,3 +76,6 @@ backend_config:
         - admonition
       extra_css:
         - 'stylesheets/extra.css'
+      google_analytics:
+        - 'UA-120535275-2'
+        - 'auto'
