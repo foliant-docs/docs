@@ -1,0 +1,30 @@
+repo_name: foliant-docs/docs
+repo_url: https://github.com/foliant-docs/docs
+edit_uri: edit/master/src/
+theme:
+  name: material
+  palette:
+    primary: "rgba(0, 0, 0, 0.87)"
+    accent: light blue
+  font:
+    text: PT Sans
+    code: PT Mono
+  logo: assets/octopus-white.svg
+  favicon: assets/octopus-black-32.ico
+extra:
+  social:
+    - type: github
+      link: https://github.com/foliant-docs/foliant
+    - type: file-pdf-o
+      link: /foliant/assets/foliant-docs.pdf
+markdown_extensions:
+  - def_list
+  - codehilite
+  - toc:
+      permalink: true
+  - admonition
+extra_css:
+  - 'stylesheets/extra.css'
+google_analytics:
+  - 'UA-120535275-2'
+  - 'auto'
