@@ -26,6 +26,7 @@ chapters:
     - Templates:
       - cli/init/templates/preprocessor.md
     - cli/src.md
+    - cli/bump.md
   - Config Extensions:
     - config/from.md
     - config/slugs.md
