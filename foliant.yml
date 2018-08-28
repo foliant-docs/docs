@@ -22,6 +22,7 @@ chapters:
     - preprocessors/repolink.md
     - preprocessors/runcommands.md
     - preprocessors/multilinetables.md
+    - preprocessors/pgsqldoc.mds
   - CLI Extensions:
     - Init: cli/init/index.md
     - Templates:
