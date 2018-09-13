@@ -24,6 +24,7 @@ chapters:
     - preprocessors/replace.md
     - preprocessors/repolink.md
     - preprocessors/runcommands.md
+    - preprocessors/testrail.md
   - CLI Extensions:
     - Init: cli/init/index.md
     - Templates:
