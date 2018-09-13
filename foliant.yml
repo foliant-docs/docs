@@ -18,11 +18,12 @@ chapters:
     - preprocessors/imagemagick.md
     - preprocessors/includes.md
     - preprocessors/macros.md
-    - preprocessors/plantuml.md
-    - preprocessors/repolink.md
-    - preprocessors/runcommands.md
     - preprocessors/multilinetables.md
     - preprocessors/pgsqldocs.md
+    - preprocessors/plantuml.md
+    - preprocessors/replace.md
+    - preprocessors/repolink.md
+    - preprocessors/runcommands.md
   - CLI Extensions:
     - Init: cli/init/index.md
     - Templates:
