@@ -8,6 +8,7 @@ chapters:
   - Backends:
     - MkDocs: backends/mkdocs.md
     - backends/pandoc.md
+    - backends/gdoc.md
   - Preprocessors:
     - preprocessors/bindsympli.md
     - preprocessors/blockdiag.md
