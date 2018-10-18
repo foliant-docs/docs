@@ -28,12 +28,12 @@ chapters:
     - preprocessors/runcommands.md
     - preprocessors/testrail.md
   - CLI Extensions:
-    - Init: cli/init/index.md
-    - Templates:
-      - cli/init/templates/preprocessor.md
-    - cli/src.md
     - cli/bump.md
     - cli/gupload.md
+    - Init: cli/init/index.md
+    - Init Templates:
+      - cli/init/templates/preprocessor.md
+    - cli/src.md
   - Config Extensions:
     - config/from.md
     - config/slugs.md
