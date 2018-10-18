@@ -34,6 +34,7 @@ chapters:
     - Init Templates:
       - cli/init/templates/preprocessor.md
     - cli/src.md
+    - cli/subset.md
   - Config Extensions:
     - config/from.md
     - config/slugs.md
