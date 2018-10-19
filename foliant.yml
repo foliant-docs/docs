@@ -21,11 +21,12 @@ chapters:
     - preprocessors/includes.md
     - preprocessors/macros.md
     - preprocessors/multilinetables.md
-    - preprocessors/pgsqldocs.md
+    - preprocessors/pgsqldoc.md
     - preprocessors/plantuml.md
     - preprocessors/replace.md
     - preprocessors/repolink.md
     - preprocessors/runcommands.md
+    - preprocessors/swaggerdoc.md
     - preprocessors/testrail.md
   - CLI Extensions:
     - cli/bump.md
