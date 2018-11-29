@@ -1,5 +1,5 @@
-# Plantuml
+# apilinks
 
 <include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.plantuml.git$README.md
+    $https://github.com/foliant-docs/foliantcontrib.apilinks.git$README.md
 </include>
