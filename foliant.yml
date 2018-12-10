@@ -17,6 +17,7 @@ chapters:
     - preprocessors/epsconvert.md
     - preprocessors/flags.md
     - preprocessors/flatten.md
+    - preprocessors/graphviz.md
     - preprocessors/imagemagick.md
     - preprocessors/imgcaptions.md
     - preprocessors/includes.md
