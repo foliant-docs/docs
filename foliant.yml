@@ -13,6 +13,7 @@ chapters:
     - preprocessors/apilinks.md
     - preprocessors/bindsympli.md
     - preprocessors/blockdiag.md
+    - preprocessors/csvtables.md
     - preprocessors/customids.md
     - preprocessors/epsconvert.md
     - preprocessors/flags.md
