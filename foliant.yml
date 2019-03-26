@@ -10,6 +10,7 @@ chapters:
     - backends/pandoc.md
     - backends/slate.md
   - Preprocessors:
+    - preprocessors/anchors.md
     - preprocessors/apilinks.md
     - preprocessors/bindsympli.md
     - preprocessors/blockdiag.md
