@@ -31,6 +31,7 @@ chapters:
     - preprocessors/repolink.md
     - preprocessors/runcommands.md
     - preprocessors/swaggerdoc.md
+    - preprocessors/templateparser.md
     - preprocessors/testrail.md
   - CLI Extensions:
     - cli/bump.md
