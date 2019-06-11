@@ -13,6 +13,7 @@ chapters:
     - preprocessors/admonitions.md
     - preprocessors/anchors.md
     - preprocessors/apilinks.md
+    - preprocessors/badges.md
     - preprocessors/bindsympli.md
     - preprocessors/blockdiag.md
     - preprocessors/csvtables.md
