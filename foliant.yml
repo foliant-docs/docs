@@ -46,6 +46,8 @@ chapters:
   - Config Extensions:
     - config/from.md
     - config/slugs.md
+  - По-русски:
+    - ru/hello-world.md
 
 preprocessors:
   - macros:
