@@ -1,0 +1,35 @@
+2019-06-12 17:13:09,461 |                  flt |    ERROR | Traceback (most recent call last):
+  File "/home/mpk/.local/lib/python3.6/site-packages/foliant/cli/make.py", line 100, in get_config
+    config = Parser(project_path, config_file_name, self.logger).parse()
+  File "/home/mpk/.local/lib/python3.6/site-packages/foliant/config/base.py", line 31, in parse
+    config = {**self._defaults, **load(config_file)}
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/__init__.py", line 114, in load
+    return loader.get_single_data()
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 43, in get_single_data
+    return self.construct_document(node)
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 52, in construct_document
+    for dummy in generator:
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 404, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 210, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 135, in construct_mapping
+    value = self.construct_object(value_node, deep=deep)
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 92, in construct_object
+    data = constructor(self, node)
+  File "/home/mpk/.local/lib/python3.6/site-packages/yaml/constructor.py", line 420, in construct_undefined
+    node.start_mark)
+yaml.constructor.ConstructorError: could not determine a constructor for the tag '!path'
+  in "foliant.yml", line 61, column 15
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mpk/.local/lib/python3.6/site-packages/foliant/utils.py", line 131, in spinner
+    yield
+  File "/home/mpk/.local/lib/python3.6/site-packages/foliant/cli/make.py", line 108, in get_config
+    raise type(exception)(f'Invalid config: {exception}')
+yaml.constructor.ConstructorError: Invalid config: could not determine a constructor for the tag '!path'
+  in "foliant.yml", line 61, column 15
+
+2019-06-12 17:13:09,469 |                  flt | CRITICAL | Config parsing failed.
