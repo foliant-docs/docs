@@ -89,7 +89,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Open [localhost:8000](http://localhost:8000) in your web browser. You should see something like this:
 
-![Basic Foliant project built with MkDocs](_img/basic-mkdocs.png)
+![Basic Foliant project built with MkDocs](images/basic-mkdocs.png)
 
 
 ## Build Pdf
@@ -140,7 +140,7 @@ Result: Hello_Foliant-2018-01-23.pdf
 
 Your standalone pdf documentation is ready! It should look something like this:
 
-![Basic Foliant project built with Pandoc](_img/basic-pdf.png)
+![Basic Foliant project built with Pandoc](images/basic-pdf.png)
 
 
 ## Edit Content
@@ -187,9 +187,9 @@ Result: Hello_Foliant-2018-02-08.pdf
 
 And see the new page appear on the site and in the pdf document:
 
-![New page on the site](_img/basic-mkdocs-hello.png)
+![New page on the site](images/basic-mkdocs-hello.png)
 
-![New page in the pdf document](_img/basic-pdf-hello.png)
+![New page in the pdf document](images/basic-pdf-hello.png)
 
 ## Use Preprocessors
 
@@ -225,11 +225,11 @@ Blockdiag preprocessor adds several tags to Foliant, each corresponding to a cer
 
 Rebuild the site with `foliant make site` and open it in the browser:
 
-![Sequence diagram drawn with seqdiag on the site](_img/basic-mkdocs-seqdiag.png)
+![Sequence diagram drawn with seqdiag on the site](images/basic-mkdocs-seqdiag.png)
 
 Rebuild the pdf as well and see that the diagram there:
 
-![Sequence diagram drawn with seqdiag in the pdf](_img/basic-pdf-seqdiag.png)
+![Sequence diagram drawn with seqdiag in the pdf](images/basic-pdf-seqdiag.png)
 
 Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever popular Comic Sans font, but you can pick any font that’s available in `.ttf` format.
 
@@ -245,9 +245,9 @@ preprocessors:
 
 After a rebuild, the diagram on the site and in the pdf should look like this:
 
-![Sequence diagram with Comic Sans in labels, site](_img/basic-mkdocs-seqdiag-comic.png)
+![Sequence diagram with Comic Sans in labels, site](images/basic-mkdocs-seqdiag-comic.png)
 
-![Sequence diagram with Comic Sans in labels, pdf](_img/basic-pdf-seqdiag-comic.png)
+![Sequence diagram with Comic Sans in labels, pdf](images/basic-pdf-seqdiag-comic.png)
 
 There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with [Flags](<macro mkdocs="preprocessors/flags.md" pandoc="#flags">ref</macro>) you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:
 
