@@ -13,6 +13,7 @@ deploy:
   local-dir: foliant-docs.mkdocs
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: true
+  # keep-history: true
+  verbose: true
   on:
     branch: master
