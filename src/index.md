@@ -11,11 +11,11 @@ Foliant preprocessors let you include parts of documents in other documents, sho
 
 ## Who Is It for?
 
-You'll love Foliant if you:
+You’ll love Foliant if you:
 
 - need to ship documentation as pdf, docx, and website forms
 - want to use Markdown with consistent extension system instead of custome syntax for every new bit of functionality
-- like reStructuredText's extensibility and Asciidoc's flexibility, but actually would rather use Markdown
+- like reStructuredText’s extensibility and Asciidoc’s flexibility, but actually would rather use Markdown
 - want a tool that you can actually write custom extensions for without dealing with something as overengineered as Sphinx
 - have documentation spread across many repos and want to reuse parts between documents
 

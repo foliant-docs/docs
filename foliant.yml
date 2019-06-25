@@ -10,6 +10,7 @@ chapters:
     - backends/pandoc.md
     - backends/slate.md
   - Preprocessors:
+    - General Notes: preprocessors/general_notes.md
     - preprocessors/admonitions.md
     - preprocessors/anchors.md
     - preprocessors/apilinks.md

@@ -1,13 +1,13 @@
 # Quickstart
 
-In this tutorial, you'll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You'll also learn how to use Foliant preprocessors.
+In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
 
 ## Create New Project
 
-All Foliant projects must adhere to a certain structure. Luckily, you don't have to memorize it thanks to [Init](<macro pandoc="#foliantcontrib-init" mkdocs="cli/init.md">ref</macro>) extension.
+All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to [Init](<macro pandoc="#foliantcontrib-init" mkdocs="cli/init.md">ref</macro>) extension.
 
-You should have installed it during [Foliant installation](<macro pandoc="#installation" mkdocs="installation.md">ref</macro>) and it's included in Foliant's default Docker image.
+You should have installed it during [Foliant installation](<macro pandoc="#installation" mkdocs="installation.md">ref</macro>) and it’s included in Foliant’s default Docker image.
 
 To use it, run `foliant init` command:
 
@@ -29,7 +29,7 @@ Enter the project name: Hello Foliant
 Project "Hello Foliant" created in hello-foliant
 ```
 
-Here's what this command created:
+Here’s what this command created:
 
 ```bash
 $ cd hello-foliant
@@ -46,9 +46,9 @@ $ tree
 1 directory, 6 files
 ```
 
-`foliant.yml` is your project's config file.
+`foliant.yml` is your project’s config file.
 
-`src` directory is where the content of the project lives. Currently, there's just one file `index.md`.
+`src` directory is where the content of the project lives. Currently, there’s just one file `index.md`.
 
 `requirements.txt` lists  the Python packages required for the project: Foliant backends and preprocessors, MkDocs themes, and what not. The the Docker image for the project is built, these requirements are installed in it.
 
@@ -79,7 +79,7 @@ $ docker-compose run --rm hello-foliant make site
 Result: Hello_Foliant-2018-01-23.mkdocs
 ```
 
-That's it! Your static, MkDocs-powered website is ready. To view it, use any web server, for example, Python's built-in one:
+That’s it! Your static, MkDocs-powered website is ready. To view it, use any web server, for example, Python’s built-in one:
 
 ```bash
 $ cd Hello_Foliant-2018-01-23.mkdocs
@@ -109,7 +109,7 @@ $ foliant make pdf
 Result: Hello_Foliant-2018-01-23.pdf
 ```
 
-To build pdf in Docker container, first uncomment `foliant/foliant:pandoc` in your project's `Dockerfile`:
+To build pdf in Docker container, first uncomment `foliant/foliant:pandoc` in your project’s `Dockerfile`:
 
 ```diff
 - FROM foliant/foliant
@@ -145,7 +145,7 @@ Your standalone pdf documentation is ready! It should look something like this:
 
 ## Edit Content
 
-Your project's content lives in `*.md` files in `src` folder. You can split it between multiple files and subfolders.
+Your project’s content lives in `*.md` files in `src` folder. You can split it between multiple files and subfolders.
 
 Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in [`<<if></if>` blocks](<macro mkdocs="preprocessors/flags.md" pandoc="#flags">ref</macro>).
 
@@ -156,7 +156,7 @@ Create a file `hello.md` in `src` with the following content:
 
 This is regular text generated from regular Markdown.
 
-Foliant doesn't force any *special* Markdown flavor.
+Foliant doesn’t force any *special* Markdown flavor.
 ```
 
 Open `foliant.yml` and add `hello.md` to `chapters`:
@@ -191,7 +191,6 @@ And see the new page appear on the site and in the pdf document:
 
 ![New page in the pdf document](_img/basic-pdf-hello.png)
 
-
 ## Use Preprocessors
 
 Preprocessors is what makes Foliant special and extremely useful. Preprocessors are additional packages that, well, preprocess the source code of your project. You can do all kinds of stuff with preprocessors:
@@ -200,11 +199,11 @@ Preprocessors is what makes Foliant special and extremely useful. Preprocessors 
 -   render diagrams from textual description on build
 -   restructure the project source or compile it into a single file for a particular backend
 
-In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `✔ Applying preprocessor mkdocs` and `✔ Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs' requirements, and the second one tells you that [`flatten`](<macro mkdocs="preprocessors/flatten.md" pandoc="#flatten">ref</macro>) preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
+In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `✔ Applying preprocessor mkdocs` and `✔ Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that [`flatten`](<macro mkdocs="preprocessors/flatten.md" pandoc="#flatten">ref</macro>) preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
 
-These preprocessors where called by MkDocs and Pandoc backends respectively. You didn't have to install or activate them explicitly.
+These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
 
-Now, let's try to use a different kind of preprocessors, the ones that register new tags: [Blockdiag](<macro mkdocs="preprocessors/blockdiag.md" pandoc="#blockdiag">ref</macro>).
+Now, let’s try to use a different kind of preprocessors, the ones that register new tags: [Blockdiag](<macro mkdocs="preprocessors/blockdiag.md" pandoc="#blockdiag">ref</macro>).
 
 ### Embed Diagrams with Blockdiag
 
@@ -213,9 +212,9 @@ Now, let's try to use a different kind of preprocessors, the ones that register 
 In `hello.md`, add the following lines:
 
 ```diff
-Foliant doesn't force any *special* Markdown flavor.
+Foliant doesn’t force any *special* Markdown flavor.
 
-+ <seqdiag caption="This diagram is generated on the fly">
++ <<seqdiag caption="This diagram is generated on the fly">
 +   seqdiag {
 +     "foliant make site" -> "mkdocs preprocessor" -> "blockdiag preprocessor" -> "mkdocs backend" -> site;
 +   }
@@ -232,7 +231,7 @@ Rebuild the pdf as well and see that the diagram there:
 
 ![Sequence diagram drawn with seqdiag in the pdf](_img/basic-pdf-seqdiag.png)
 
-Let's customize the look of the diagrams in our project by setting their properties in the config file. For example, let's use a custom font for labels. I'm using the ever popular Comic Sans font, but you can pick any font that's available in `.ttf` format.
+Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever popular Comic Sans font, but you can pick any font that’s available in `.ttf` format.
 
 Put the font file in the project directory and add the following lines to `foliant.yml`:
 
@@ -255,7 +254,7 @@ There are many more params you can define for your diagrams. You can override gl
 ```markdown
 This is a diagram that is rendered to `.png` in html and to `.pdf` in pdf:
 
-<blockdiag format="<if targets="html">png</if><if targets="pdf">pdf</if">
+<<blockdiag format="<<if targets="html">png</if><<if targets="pdf">pdf</if">
     ...
 </blockdiag>
 ```
@@ -264,13 +263,13 @@ The possibilities acquired by combining different preprocessors are endless!
 
 > **Why Foliant Uses XML syntax for Preprocessor Tags**
 >
-> It's common for Markdown-based tools to extend Markdown with custom syntax for additional functions. There's no standard for custom syntax in the Markdown spec, so every developer uses whatever syntax is available for them, different one for every new extension.
+> It’s common for Markdown-based tools to extend Markdown with custom syntax for additional functions. There’s no standard for custom syntax in the Markdown spec, so every developer uses whatever syntax is available for them, different one for every new extension.
 >
 > In Foliant, we tried our best not to dive into this mess. Foliant aims to be an extensible platform, with many available preprocessors. So we needed one syntax for all preprocessors, but the one that was flexible enough to support them all.
 >
-> After trying many options, we settled with XML. Yes, normally you'd have a nervous tick when you hear XML, and so would we, but this is one rare case where XML syntax belongs just right:
+> After trying many options, we settled with XML. Yes, normally you’d have a nervous tick when you hear XML, and so would we, but this is one rare case where XML syntax belongs just right:
 
 > -   it allows to provide tag body and named parameters
-> -   it's familiar to every techwriter out there
-> -   it's close enough to HTML, and HTML tags are actually allowed by the Markdown spec, so we're not even breaking the vanilla Markdown spec (almost)
-> -   it's nicely highlighted in IDEs and text editors
+> -   it’s familiar to every techwriter out there
+> -   it’s close enough to HTML, and HTML tags are actually allowed by the Markdown spec, so we’re not even breaking the vanilla Markdown spec (almost)
+> -   it’s nicely highlighted in IDEs and text editors
