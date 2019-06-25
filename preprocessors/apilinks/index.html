@@ -1,0 +1,1618 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/octopus-black-32.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>APILinks - Foliant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,400i,700|PT+Mono&display=fallback">
+        <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"PT Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-120535275-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="rgba(0,-0,-0,-0.87)" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apilinks" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Foliant" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/octopus-white.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Foliant
+            </span>
+            <span class="md-header-nav__topic">
+              
+                APILinks
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Foliant" class="md-nav__button md-logo">
+      
+        <img src="../../assets/octopus-white.svg" width="48" height="48">
+      
+    </a>
+    Foliant
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to Foliant!" class="md-nav__link">
+      Welcome to Foliant!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Backends
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/pandoc/" title="Pandoc" class="md-nav__link">
+      Pandoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/slate/" title="Slate" class="md-nav__link">
+      Slate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Preprocessors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Preprocessors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general_notes/" title="General Notes" class="md-nav__link">
+      General Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../admonitions/" title="Admonitions" class="md-nav__link">
+      Admonitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../anchors/" title="Anchors" class="md-nav__link">
+      Anchors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        APILinks
+      </label>
+    
+    <a href="./" title="APILinks" class="md-nav__link md-nav__link--active">
+      APILinks
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" title="Quick Start" class="md-nav__link">
+    Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How Does It Work?" class="md-nav__link">
+    How Does It Work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-and-offline-modes-comparison" title="Online and Offline Modes Comparison" class="md-nav__link">
+    Online and Offline Modes Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturing-references" title="Capturing References" class="md-nav__link">
+    Capturing References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-output" title="Customizing Output" class="md-nav__link">
+    Customizing Output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-api-web-page" title="Parsing API Web-page" class="md-nav__link">
+    Parsing API Web-page
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../badges/" title="Badges" class="md-nav__link">
+      Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bindsympli/" title="BindSympli" class="md-nav__link">
+      BindSympli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blockdiag/" title="Blockdiag" class="md-nav__link">
+      Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
+      CSVTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epsconvert/" title="Epsconvert" class="md-nav__link">
+      Epsconvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flags/" title="Flags" class="md-nav__link">
+      Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flatten/" title="Flatten" class="md-nav__link">
+      Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../graphviz/" title="Graphviz" class="md-nav__link">
+      Graphviz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imagemagick/" title="ImageMagick" class="md-nav__link">
+      ImageMagick
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imgcaptions/" title="ImgCaptions" class="md-nav__link">
+      ImgCaptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../includes/" title="Includes" class="md-nav__link">
+      Includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../macros/" title="Macros" class="md-nav__link">
+      Macros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
+      MultilineTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
+      Pgsqldoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plantuml/" title="Plantuml" class="md-nav__link">
+      Plantuml
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../replace/" title="Replace" class="md-nav__link">
+      Replace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../repolink/" title="RepoLink" class="md-nav__link">
+      RepoLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runcommands/" title="RunCommands" class="md-nav__link">
+      RunCommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
+      SwaggerDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../templateparser/" title="TemplateParser" class="md-nav__link">
+      TemplateParser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testrail/" title="Testrail" class="md-nav__link">
+      Testrail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      CLI Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        CLI Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/bump/" title="Bump" class="md-nav__link">
+      Bump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/gupload/" title="Gupload" class="md-nav__link">
+      Gupload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/" title="Init" class="md-nav__link">
+      Init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Init Templates
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        Init Templates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
+      Preprocessor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/src/" title="Src" class="md-nav__link">
+      Src
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/subset/" title="Subset" class="md-nav__link">
+      Subset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Config Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Config Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/from/" title="MultiProject" class="md-nav__link">
+      MultiProject
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/slugs/" title="Slugs" class="md-nav__link">
+      Slugs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" title="Quick Start" class="md-nav__link">
+    Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How Does It Work?" class="md-nav__link">
+    How Does It Work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-and-offline-modes-comparison" title="Online and Offline Modes Comparison" class="md-nav__link">
+    Online and Offline Modes Comparison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturing-references" title="Capturing References" class="md-nav__link">
+    Capturing References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-output" title="Customizing Output" class="md-nav__link">
+    Customizing Output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-api-web-page" title="Parsing API Web-page" class="md-nav__link">
+    Parsing API Web-page
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/apilinks.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="apilinks">APILinks<a class="headerlink" href="#apilinks" title="Permanent link">&para;</a></h1>
+<p>Preprocessor for replacing API <em>reference</em>s in markdown files with links to actual method description on the API documentation web-page.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.apilinks
+</pre></div>
+
+
+<h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
+<p>Say, you have an API documentation hosted at the url http://example.com/api-docs</p>
+<p>On this page you have HTML headings before each method description which look like this:</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-authenticate&quot;</span><span class="p">&gt;</span>GET user/authenticate<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>You want references to these methods in your documentation to be replaced with the links to the actual method descriptions. Your references look like this:</p>
+<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="o">`</span><span class="p">.</span>
+</pre></div>
+
+
+<p>Now all you need to do is add the apilinks preprocessor into your foliant.yml and state your API url in its options like this:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs</span>
+</pre></div>
+
+
+<p>Here:</p>
+<ul>
+<li><code>API</code> is a required section;</li>
+<li><code>My-API</code> is a local name of your API. Right now it is not very important but will come in handy in the next example;</li>
+<li><code>url</code> is a string with full url to your API documentation web-page. It will be used to validate references and to construct a link to method.</li>
+</ul>
+<p>After foliant applies the preprocessor your document will be transformed into this:</p>
+<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">authenticate</span><span class="p">).</span>
+</pre></div>
+
+
+<p>Notice that preprocessor figured out the correct anchor <code>#get-user-authenticate</code> by himself. Now instead of plain name of the method you've got a link to the method description!</p>
+<p>Ok, what if I have two different APIs: client API and admin API?</p>
+<p>No problem, put both of them into your config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">Client-API</span><span class="p">:</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/client/api-docs</span>
+            <span class="nt">Admin-API</span><span class="p">:</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs</span>
+</pre></div>
+
+
+<p>Now this source:</p>
+<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="o">`</span><span class="p">.</span>
+<span class="k">To</span> <span class="n">ban</span> <span class="k">user</span> <span class="k">from</span> <span class="n">the</span> <span class="n">website</span> <span class="n">use</span> <span class="k">admin</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="n">POST</span> <span class="k">admin</span><span class="o">/</span><span class="n">ban_user</span><span class="o">/</span><span class="err">{</span><span class="n">user_id</span><span class="err">}</span><span class="o">`</span>
+</pre></div>
+
+
+<p>Will be transformed by apilinks into this:</p>
+<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">authenticate</span><span class="p">).</span>
+<span class="k">To</span> <span class="n">ban</span> <span class="k">user</span> <span class="k">from</span> <span class="n">the</span> <span class="n">website</span> <span class="n">use</span> <span class="k">admin</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="n">POST</span> <span class="k">admin</span><span class="o">/</span><span class="n">ban_user</span><span class="o">/</span><span class="err">{</span><span class="n">user_id</span><span class="err">}</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">admin</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">admin</span><span class="o">-</span><span class="n">ban_user</span><span class="o">-</span><span class="n">user_id</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Notice that apilinks determined that the first reference is from Client API, and the second one is from the Admin API. How is that possible? Easy: preprocessor parses each API url from the config and stores their methods before looking for references. When the time comes to process the references it already has a list of all methods to validate your reference and to determine which API link should be inserted.</p>
+<p>But what if we have the same-named method in both of our APIs? In this case you will see a warning:</p>
+<div class="codehilite"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">GET</span> <span class="sr">/service/</span><span class="n">healthcheck</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="n">several</span> <span class="n">APIs</span> <span class="o">(</span><span class="n">Client</span><span class="o">-</span><span class="n">API</span><span class="o">,</span> <span class="n">Admin</span><span class="o">-</span><span class="n">API</span><span class="o">).</span> <span class="n">Please</span><span class="o">,</span> <span class="n">use</span> <span class="n">prefix</span><span class="o">.</span> <span class="n">Skipping</span>
+</pre></div>
+
+
+<p>It suggests us to use prefix, and by that it means to prefix the reference by the local name of the API in config. Like that:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Check</span> <span class="nv">status</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">server</span> <span class="nv">through</span> <span class="nv">Client</span> <span class="nv">API</span>: `<span class="nv">Client</span><span class="o">-</span><span class="nv">API</span>: <span class="nv">GET</span> <span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">healthcheck</span>`
+<span class="k">Do</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">through</span> <span class="nv">Admin</span> <span class="nv">API</span>: `<span class="nv">Admin</span><span class="o">-</span><span class="nv">API</span>: <span class="nv">GET</span> <span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">healthcheck</span>`
+</pre></div>
+
+
+<p>Here <code>Client-API:</code> and <code>Admin-API:</code> are prefixes. And they should be the same as your API names in the config.</p>
+<p>Now each reference will be replaced with the link to corresponding API web-page.</p>
+<hr />
+<p>apilinks is a highly customizable preprocessor. You can tune:</p>
+<ul>
+<li>the format of the references;</li>
+<li>the output string which will replace the reference;</li>
+<li>the format of the headings in your API web-page;</li>
+<li>and more!</li>
+</ul>
+<p>For details look through the following sections.</p>
+<p>Glossary:</p>
+<ul>
+<li><strong>reference</strong> — reference to an API method in the source file. The one to be replaced with the link, e.g. <code>GET user/config</code></li>
+<li><strong>verb</strong> — HTTP method, e.g. <code>GET</code>, <code>POST</code>, etc.</li>
+<li><strong>command</strong> — resource used to represent method on the API documentation webpage, e.g. <code>/service/healthcheck</code>.</li>
+<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/satus</code> then the endpoint-prefix should be stated <code>/api/v0</code>. In references you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. apilinks will sort it out for you.</li>
+<li><strong>output</strong> — string, which will replace the <em>reference</em>.</li>
+<li><strong>header</strong> — HTML header on the API documentation web-page of the method description, e.g. <code>&lt;h2 id="get-user-config"&gt;GET user/config&lt;/h2&gt;</code></li>
+<li><strong>anchor</strong> — web-anchor leading to the specific <em>header</em> on the API documentation web-page, e.g. <code>#get-user-config</code></li>
+</ul>
+<h3 id="how-does-it-work">How Does It Work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h3>
+<p>Preprocessor can work in <em>online</em> and <em>offline</em> modes.</p>
+<p><strong>In offline mode</strong> it merely replaces <em>references</em> to API methods with links to their description. The references are catched by a regular expression. The link url is taken from config and the link <em>anchor</em> is generated from the reference automatically.</p>
+<p>You can have several different APIs stated in the config. You can use prefixes to point out which API is being <em>reference</em>d. Prefixes format may be customized  in the configuration but by default you do it like this: <code>Client-API: GET user/name</code>. Here '<em>Client-API</em>' is a prefix.</p>
+<p>If you don't use prefix in the <em>reference</em> preprocessor will suppose that you meant the default API, which is marked by <code>default</code> option in config. If none of them is marked — goes for the first in list.</p>
+<p><strong>In online mode</strong> things are getting interesting. Preprocessor actually goes to each of the API web-pages, and collects all method <strong>headers</strong> (right now only <code>h2</code> headers are supported). Then it goes through your document's source: when it meets a <em>reference</em>, it looks through all the collected methods and replaces the reference with the correct link to it. If method is not found — preprocessor will show warning and leave the reference unchanged. Same will happen if there are several methods with this name in different APIs.</p>
+<p>Prefixes, explained before, are supported too.</p>
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>apilinks</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apilinks</span>
+</pre></div>
+
+
+<p>The preprocessor has a lot of options. For your convenience the required options are marked <em>(required)</em>; and those options which are used in customization are marked <em>(optional)</em>. Most likely you will need just one or two of the latter.</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+    <span class="nt">targets</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
+    <span class="nt">offline</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+    <span class="nt">trim_if_targets</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
+    <span class="nt">prefix_to_ignore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ignore</span>
+    <span class="nt">reference</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="nv">*ref_pattern</span>
+          <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+          <span class="nt">only_defined_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
+          <span class="nt">trim_template</span><span class="p">:</span> <span class="s">&#39;`{verb}</span><span class="nv"> </span><span class="s">{command}`&#39;</span>
+    <span class="nt">API</span><span class="p">:</span>
+        <span class="nt">Client-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+            <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+            <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+        <span class="nt">Admin-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+            <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
+            <span class="nt">endpoint-prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v0</span>
+</pre></div>
+
+
+<dl>
+<dt><code>prefix_to_ignore</code></dt>
+<dd><em>(optional)</em> A default prefix for ignoring references. If apilinks meets a reference with this prefix it leaves it unchanged. Default: <code>Ignore</code></dd>
+<dt><code>targets</code></dt>
+<dd><em>(optional)</em> List of supported targets for <code>foliant make</code> command. If target is not listed here — preprocessor won't be applied. If the list is empty — preprocessor will be applied for any target. Default: <code>[]</code></dd>
+<dt><code>offline</code></dt>
+<dd><em>(optional)</em> Option determining whether the preprocessor will work in <em>online</em> or <em>offline</em> mode. Details in the <strong>How Does It Work?</strong> and <strong>Online and Offline Modes Comparison</strong> sections. Default: <code>False</code></dd>
+<dt><code>trim_if_targets</code></dt>
+<dd><em>(optional)</em> List of targets for <code>foliant make</code> command for which the prefixes from all <em>references</em> in the text will be cut out. Default: <code>[]</code></dd>
+</dl>
+<blockquote>
+<p>Only those references whose prefixes are defined in the <code>API</code> section (described below) are affected by this option. All references with unlisted prefixes will not be trimmed.</p>
+</blockquote>
+<dl>
+<dt><code>reference</code></dt>
+<dd><em>(optional)</em> A subsection for listing all the types of references you are going to catch in the text, and their properties. Options for this section are listed below.</dd>
+</dl>
+<hr />
+<dl>
+<dt><strong>Reference options</strong></dt>
+<dt><code>regex</code></dt>
+<dd><em>(optional)</em> regular expression used to catch <em>references</em> in the source. Look for details in the <strong>Capturing References</strong> section.
+Default:</dd>
+</dl>
+<div class="codehilite"><pre><span></span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">source</span><span class="o">&gt;</span>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`<span class="ss">)</span>
+</pre></div>
+
+
+<dl>
+<dt><code>only_with_prefixes</code></dt>
+<dd><em>(optional)</em> if this is <code>true</code>, only <em>references</em> with prefix will be transformed. Ordinary links like <code>GET user/info</code> will be ignored. Default: <code>false</code></dd>
+<dt><code>only_defined_prefixes</code></dt>
+<dd><em>(optional)</em> if this is <code>true</code> all references whose prefix is not listed in the <code>API</code> section (described below) will be ignored, left unchanged. References without prefix are not affected by this option. Default: <code>false</code>.</dd>
+<dt><code>output_template</code></dt>
+<dd><em>(optional)</em> A template string describing the <em>output</em> which will replace the <em>reference</em>. More info in the <strong>Customizing Output</strong> section. Default: <code>'[{verb} {command}]({url})'</code></dd>
+<dt><code>trim_template</code></dt>
+<dd><em>(optional)</em> Only for targets listed in <code>trim_if_targets</code> option. Tune this template if you want to customize how apilinks cuts out prefixes. The reference will be replaced with text based on this template. Default: <code>'`{verb} {command}`'</code></dd>
+</dl>
+<hr />
+<dl>
+<dt><code>API</code></dt>
+<dd><em>(required)</em> A subsection for listing all the APIs and their properties. Under this section there should be a separate subsection for each API. The section name represents the API name and, at the same time, the <em>prefix</em> used in the references. You need to add at least one API subsection for preprocessor to work.</dd>
+</dl>
+<hr />
+<p><strong>API properties</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method. In online mode it will also be parsed by preprocessor for validation.</dd>
+<dt><code>default</code></dt>
+<dd><em>(optional)</em> Only for offline mode. Marker to define the default API. If several APIs are marked default, preprocessor will choose the first of them. If none is marked default — the first API in the list will be chosen. The value of this item should be <code>true</code>.</dd>
+<dt><code>header_template</code></dt>
+<dd><em>(optional)</em> A template string describing the format of the headings in the API documentation web-page. Details in <strong>parsing API web-page</strong> section. Default: <code>'{verb} {command}'</code></dd>
+<dt><code>endpoint-prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — apilinks can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info coming soon. Default: <code>''</code></dd>
+</dl>
+<h3 id="online-and-offline-modes-comparison">Online and Offline Modes Comparison<a class="headerlink" href="#online-and-offline-modes-comparison" title="Permanent link">&para;</a></h3>
+<p>Let's study an example and look how the behavior of the preprocessor will change in online and offline modes.</p>
+<p>We have three APIs described in the config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+      <span class="nt">API</span><span class="p">:</span>
+        <span class="nt">Admin-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+        <span class="nt">Client-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+            <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+            <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+        <span class="nt">Remote-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://remote.net/api-ref/</span>
+            <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
+</pre></div>
+
+
+<p>Now let's look at different examples of the text used in Markdown source and how it is going to be transformed in Offline and Online modes</p>
+<p><strong>Example 1</strong>
+Source:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Offline mode</em> preprocessor won't do any checks and just replace the reference with the link to default API from the config:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">system</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
+</pre></div>
+
+
+<p>This is certainly a wrong decision, but it is our fault, we sould have added the prefix to the reference.</p>
+<p>But let's look what will happen in <em>Online mode</em>:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">remote</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="k">ref</span><span class="o">/#</span><span class="k">system</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
+</pre></div>
+
+
+<p>Without any prefix the preprocessor determined that it should choose the Remote API to replace this reference because this method exists only on its page. The <code>default</code> option is just ignored in this mode.</p>
+<p>By the way, notice how anchors differ in the two examples. For Remote API preprocessor used its header template to reconstruct the anchor, dropping the verb from it.</p>
+<p><strong>Example 2</strong>
+Source:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">`</span><span class="p">.</span>
+<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Offline mode</em> preprocessor won't do any checks again. No magic, the reference will be replaced with the link to default API from the config:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">sttus</span><span class="p">).</span>
+<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Online mode</em> preprocessor won't be able to find the method during validation and the reference won't be replaced at all:</p>
+<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">`</span><span class="p">.</span>
+<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+</pre></div>
+
+
+<p>During the Foliant project assembly you will see a warning message:</p>
+<div class="codehilite"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">method</span> <span class="n">GET</span> <span class="n">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">.</span> <span class="n">Skipping</span>
+</pre></div>
+
+
+<p><strong>Example 3</strong>
+Source:</p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="o">`</span><span class="k">Admin</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="o">`</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Offline mode</em> preprocessor will notice the prefix and will be able to replace the reference with an appropriate link:</p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">ban_forever</span><span class="p">).</span>
+</pre></div>
+
+
+<p>Notice that prefix disappeared from the text. If you wish it to stay there — edit the <code>output_template</code> option to something like this: <code>'{prefix}: {verb} {command}'</code>.</p>
+<p>In <em>Online mode</em> the result will be exactly the same. Preprocessor will check the Admin-API methods, find there the referenced method and replace it in the text:</p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">ban_forever</span><span class="p">).</span>
+</pre></div>
+
+
+<p><strong>Example 4</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
+<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Offline mode</em> preprocessor will perform no checks and just replace the reference with the link to Remote API:</p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">remote</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="k">ref</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="n">billling</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
+<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+</pre></div>
+
+
+<p><em>Online mode</em>, on the other hand, will make its homework. It will check whether the Remote API actually has the method <em>GET billling/info</em>. Finding out that it hasn't it will leave the reference unchanged:</p>
+<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
+<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+</pre></div>
+
+
+<p>...and warn us with the message:</p>
+<div class="codehilite"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">method</span> <span class="n">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span> <span class="k">in</span> <span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="o">.</span> <span class="n">Skipping</span>
+</pre></div>
+
+
+<p><strong>Example 5</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="o">`</span><span class="p">.</span>
+</pre></div>
+
+
+<p>In <em>Offline mode</em> preprocessor will just replace the reference with a link to default API:</p>
+<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="n">service</span><span class="o">-</span><span class="n">healthcheck</span><span class="p">).</span>
+</pre></div>
+
+
+<p>But in <em>Online mode</em> preprocessor will go through all API method lists. It will find several mentions of this exact method and, confused, won't replace the reference at all:</p>
+<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="o">`</span><span class="p">.</span>
+</pre></div>
+
+
+<p>You will also see a warning:</p>
+<div class="codehilite"><pre><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">GET</span> <span class="sr">/service/</span><span class="n">healthcheck</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="n">several</span> <span class="n">APIs</span> <span class="o">(</span><span class="n">Admin</span><span class="o">-</span><span class="n">API</span><span class="o">,</span> <span class="n">Client</span><span class="o">-</span><span class="n">API</span><span class="o">).</span> <span class="n">Please</span><span class="o">,</span> <span class="n">use</span> <span class="n">prefix</span><span class="o">.</span> <span class="n">Skipping</span>
+</pre></div>
+
+
+<h3 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h3>
+<p>apilinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
+<p>The default reg-ex is as following:</p>
+<div class="codehilite"><pre><span></span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">source</span><span class="o">&gt;</span>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`<span class="ss">)</span>
+</pre></div>
+
+
+<p>This expression accepts references like these:</p>
+<ul>
+<li><code>Client-API: GET user/info</code></li>
+<li><code>UPDATE user/details</code></li>
+</ul>
+<blockquote>
+<p>Notice that default expression uses <em>Named Capturing Groups</em>. You would probably want to use all of them too if you are to redefine the expression. Though not all of them are required, see the table below.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>YES</td>
+<td>The full original reference string</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td>NO</td>
+<td>Prefix pointing to the name of the API from config</td>
+</tr>
+<tr>
+<td>verb</td>
+<td>NO</td>
+<td>HTTP verb as <code>GET</code>, <code>POST</code>, etc</td>
+</tr>
+<tr>
+<td>command</td>
+<td>YES</td>
+<td>the full method resource as it is stated in the API header (may include endpoint prefix)</td>
+</tr>
+</tbody>
+</table>
+<p>To redefine the regular expression add an option <code>reg-regex</code> to the preprocessor config.</p>
+<p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+      <span class="nt">reference</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="s">&#39;(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`)&#39;</span>
+</pre></div>
+
+
+<blockquote>
+<p>This example is for illustrative purposes only. You can achieve the same goal by just switching on the <code>only_with_prefixes</code> option.</p>
+</blockquote>
+<p>Now the references without prefix (<code>UPDATE user/details</code>) will be ignored.</p>
+<h3 id="customizing-output">Customizing Output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h3>
+<p>You can customize the <em>output</em>-string which will replace the <em>reference</em> string. To do that add a template into your config-file.</p>
+<p>A <em>template</em> is a string which may contain properties, surrounded by curly braces. These properties will be replaced with the values, and all the rest will remain unchanged.</p>
+<p>For example, look at the default template:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+    <span class="nt">reference</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span>
+</pre></div>
+
+
+<blockquote>
+<p>Don't forget the single quotes around the template. This way we say to yaml engine that this is a string for it not to be confused with curly braces.</p>
+</blockquote>
+<p>With the default template, the reference string will be replaced by something like that:</p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+
+
+<p>If you don't want references to be transfromed into links, use your own template. Properties you may use in the template:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>Full url to the method description</td>
+<td><code>http://example.com/api/#get-user-info</code></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Full original reference string</td>
+<td>`<code>Client-API: GET user/info</code>`</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td>Prefix used in the reference</td>
+<td><code>Client-API</code></td>
+</tr>
+<tr>
+<td>verb</td>
+<td>HTTP verb used in the reference</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>command</td>
+<td>API command being referenced with endpoint prefix removed</td>
+<td><code>user/info</code></td>
+</tr>
+<tr>
+<td>endpoint_prefix</td>
+<td>Endpoint prefix to the API (if <code>endpoint-prefix</code> option is filled in)</td>
+<td><code>/api/v0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parsing-api-web-page">Parsing API Web-page<a class="headerlink" href="#parsing-api-web-page" title="Permanent link">&para;</a></h3>
+<p>apilinks goes through the API web-page content and gathers all the methods which are described there.</p>
+<p>To do this preprocessor scans each HTML <code>h2</code> tag and stores its <code>id</code> attribute (which is an <em>anchor</em> of the link to be constructed) and the contents of the tag (the <em>heading</em> itself).</p>
+<p>For example in this link:</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>the anchor would be <code>get-user-info</code> and the heading would be <code>GET user/info</code>.</p>
+<p>To construct the link to the method description we will have to create the correct anchor for it. To create an anchor we would need to reconstruct the heading first. But the heading format may be arbitrary and that's why we need the <code>header_template</code> config option.</p>
+<p>The <code>header_template</code> is a string which may contain properties, surrounded by curly braces. These properties will be replaced with the values, when preprocessor will attempt to reconstruct the heading. All the rest will remain unchanged.</p>
+<p>For example, if your API headings look like this:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">&quot;method-user-info-get&quot;</span><span class="nt">&gt;</span>Method user/info (GET)<span class="nt">&lt;/h2&gt;</span>
+</pre></div>
+
+
+<p>You should use the following option:</p>
+<div class="codehilite"><pre><span></span><span class="nn">...</span>
+<span class="nt">API</span><span class="p">:</span>
+    <span class="nt">Client-API</span><span class="p">:</span>
+        <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;Method</span><span class="nv"> </span><span class="s">{command}</span><span class="nv"> </span><span class="s">({verb})&#39;</span>
+<span class="nn">...</span>
+</pre></div>
+
+
+<blockquote>
+<p>Don't forget the single quotes around the template. This way we say to yaml engine that this is a string.</p>
+</blockquote>
+<p>If your headers do not have a verb at all:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">&quot;user-info&quot;</span><span class="nt">&gt;</span>user/info<span class="nt">&lt;/h2&gt;</span>
+</pre></div>
+
+
+<p>You should use the following option:</p>
+<div class="codehilite"><pre><span></span><span class="nn">...</span>
+<span class="nt">API</span><span class="p">:</span>
+    <span class="nt">Client-API</span><span class="p">:</span>
+        <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
+<span class="nn">...</span>
+</pre></div>
+
+
+<p>Properties you may use in the template:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>verb</td>
+<td>HTTP verb used in the reference</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>command</td>
+<td>API command being referenced</td>
+<td><code>user/info</code></td>
+</tr>
+<tr>
+<td>endpoint_prefix</td>
+<td>Endpoint prefix to the API (if <code>endpoint-prefix</code> option is filled in)</td>
+<td><code>/api/v0</code></td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../anchors/" title="Anchors" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Anchors
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../badges/" title="Badges" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Badges
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/foliant-docs/foliant" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="/foliant/assets/foliant-docs.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

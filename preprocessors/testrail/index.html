@@ -1,0 +1,1531 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/octopus-black-32.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Testrail - Foliant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,400i,700|PT+Mono&display=fallback">
+        <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"PT Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-120535275-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="rgba(0,-0,-0,-0.87)" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#testrail" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Foliant" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/octopus-white.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Foliant
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Testrail
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Foliant" class="md-nav__button md-logo">
+      
+        <img src="../../assets/octopus-white.svg" width="48" height="48">
+      
+    </a>
+    Foliant
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to Foliant!" class="md-nav__link">
+      Welcome to Foliant!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Backends
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/pandoc/" title="Pandoc" class="md-nav__link">
+      Pandoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/slate/" title="Slate" class="md-nav__link">
+      Slate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Preprocessors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Preprocessors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general_notes/" title="General Notes" class="md-nav__link">
+      General Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../admonitions/" title="Admonitions" class="md-nav__link">
+      Admonitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../anchors/" title="Anchors" class="md-nav__link">
+      Anchors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apilinks/" title="APILinks" class="md-nav__link">
+      APILinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../badges/" title="Badges" class="md-nav__link">
+      Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bindsympli/" title="BindSympli" class="md-nav__link">
+      BindSympli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blockdiag/" title="Blockdiag" class="md-nav__link">
+      Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
+      CSVTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epsconvert/" title="Epsconvert" class="md-nav__link">
+      Epsconvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flags/" title="Flags" class="md-nav__link">
+      Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flatten/" title="Flatten" class="md-nav__link">
+      Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../graphviz/" title="Graphviz" class="md-nav__link">
+      Graphviz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imagemagick/" title="ImageMagick" class="md-nav__link">
+      ImageMagick
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imgcaptions/" title="ImgCaptions" class="md-nav__link">
+      ImgCaptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../includes/" title="Includes" class="md-nav__link">
+      Includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../macros/" title="Macros" class="md-nav__link">
+      Macros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
+      MultilineTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
+      Pgsqldoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plantuml/" title="Plantuml" class="md-nav__link">
+      Plantuml
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../replace/" title="Replace" class="md-nav__link">
+      Replace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../repolink/" title="RepoLink" class="md-nav__link">
+      RepoLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runcommands/" title="RunCommands" class="md-nav__link">
+      RunCommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
+      SwaggerDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../templateparser/" title="TemplateParser" class="md-nav__link">
+      TemplateParser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Testrail
+      </label>
+    
+    <a href="./" title="Testrail" class="md-nav__link md-nav__link--active">
+      Testrail
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips" title="Tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      CLI Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        CLI Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/bump/" title="Bump" class="md-nav__link">
+      Bump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/gupload/" title="Gupload" class="md-nav__link">
+      Gupload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/" title="Init" class="md-nav__link">
+      Init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      Init Templates
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        Init Templates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
+      Preprocessor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/src/" title="Src" class="md-nav__link">
+      Src
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/subset/" title="Subset" class="md-nav__link">
+      Subset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Config Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Config Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/from/" title="MultiProject" class="md-nav__link">
+      MultiProject
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/slugs/" title="Slugs" class="md-nav__link">
+      Slugs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips" title="Tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/testrail.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="testrail">Testrail<a class="headerlink" href="#testrail" title="Permanent link">&para;</a></h1>
+<p>TestRail preprocessor collects test cases from TestRail project and adds to your testing procedure document.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.testrail
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>testrail</code> to <code>preprocessors</code> section in the project config. The preprocessor has a number of options (best values are set by default where possible):</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
+    <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span>
+    <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span>
+    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password                                                                 \\ Required</span>
+    <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35                                                                          \\ Required</span>
+    <span class="nt">suite_ids</span><span class="p">:</span>                                                                              <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">section_ids</span><span class="p">:</span>                                                                            <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">exclude_suite_ids</span><span class="p">:</span>                                                                      <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">exclude_section_ids</span><span class="p">:</span>                                                                    <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">exclude_case_ids</span><span class="p">:</span>                                                                       <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test_cases.md                                                                 \\ Optional</span>
+    <span class="nt">rewrite_src_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                                 \\ Optional</span>
+    <span class="nt">template_folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">case_templates                                                         \\ Optional</span>
+    <span class="nt">section_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Testing program                                                         \\ Recommended</span>
+    <span class="nt">add_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                     \\ Optional</span>
+    <span class="nt">std_table_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Table with testing results                                            \\ Recommended</span>
+    <span class="nt">std_table_column_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">№; Priority; Platform; ID; Test case name; Result; Comment    \\ Recommended</span>
+    <span class="nt">add_suite_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                 \\ Optional</span>
+    <span class="nt">add_section_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                               \\ Optional</span>
+    <span class="nt">add_case_id_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                       \\ Optional</span>
+    <span class="nt">add_case_id_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                         \\ Optional</span>
+    <span class="nt">multi_param_name</span><span class="p">:</span>                                                                       <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">multi_param_select</span><span class="p">:</span>                                                                     <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">multi_param_select_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">any                                                            \\ Optional</span>
+    <span class="nt">add_cases_without_multi_param</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                     \\ Optional</span>
+    <span class="nt">add_multi_param_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                   \\ Optional</span>
+    <span class="nt">add_multi_param_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                     \\ Optional</span>
+    <span class="nt">checkbox_param_name</span><span class="p">:</span>                                                                    <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">checkbox_param_select_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">checked                                                     \\ Optional</span>
+    <span class="nt">choose_priorities</span><span class="p">:</span>                                                                      <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
+    <span class="nt">add_priority_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                      \\ Optional</span>
+    <span class="nt">add_priority_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                        \\ Optional</span>
+    <span class="nt">resolve_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                      \\ Optional</span>
+    <span class="nt">screenshots_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://gitlab_repository.url                                          \\ Optional</span>
+    <span class="nt">screenshots_ext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.png                                                                   \\ Optional</span>
+    <span class="nt">print_case_structure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                              \\ For debugging</span>
+</pre></div>
+
+
+<dl>
+<dt><code>testrail_url</code></dt>
+<dd>URL of TestRail deployed.</dd>
+<dt><code>testrail_login</code></dt>
+<dd>Your TestRail username.</dd>
+<dt><code>testrail_pass</code></dt>
+<dd>Your TestRail password.</dd>
+<dt><code>project_id</code></dt>
+<dd>TestRail project ID. You can find it in the project URL, for example http://testrails.url/index.php?/projects/overview/17 &lt;-.</dd>
+<dt><code>suite_ids</code></dt>
+<dd>If you have several suites in your project, you can download test cases from certain suites. You can find suite ID in the URL again, for example http://testrails.url/index.php?/suites/view/63... &lt;-.</dd>
+<dt><code>section_ids</code></dt>
+<dd>Also you can download any sections you want regardless of it's level. Just keep in mind that this setting overrides previous <em>suite_ids</em> (but if you set <em>suite_ids</em> and then <em>section_ids</em> from another suite, nothing will be downloaded). And suddenly you can find section ID in it's URL, for example http://testrails.url/index.php?/suites/view/124&amp;group_by=cases:section_id&amp;group_order=asc&amp;group_id=3926 &lt;-.</dd>
+<dt><code>exclude_suite_ids</code></dt>
+<dd>You can exclude any suites (even stated in <em>suite_ids</em>) from the document.</dd>
+<dt><code>exclude_section_ids</code></dt>
+<dd>The same with the sections. </dd>
+<dt><code>exclude_case_ids</code></dt>
+<dd>And the same with the cases.</dd>
+<dt><code>filename</code></dt>
+<dd>Path to the test cases file. It should be added to project chapters in <em>foliant.yml</em>. Default: <em>test_cases.md</em>. For example:</dd>
+</dl>
+<div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
+
+<span class="nt">chapters</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conditions.md</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md &lt;- This one for test cases</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">appendum.md</span>
+
+<span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
+    <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url</span>
+    <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
+    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+    <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>
+    <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md</span>
+</pre></div>
+
+
+<dl>
+<dt><code>rewrite_src_file</code></dt>
+<dd>You can update (<em>true</em>) test cases file after each use of preprocessor. Be careful, previous data will be deleted.</dd>
+<dt><code>template_folder</code></dt>
+<dd>Preprocessor uses Jinja2 templates to compose the file with test cases. Here you can find documentation: http://jinja.pocoo.org/docs/2.10/ . You can store templates in folder inside the foliant project, but if it's not default <em>case_templates</em> you have to write it here.</dd>
+</dl>
+<p>If this parameter not set and there is no default <em>case_templates</em> folder in the project, it will be created automatically with two jinja files for TestRail templates by default — <em>Test Case (Text)</em> with <em>template_id=1</em> and <em>Test Case (Steps)</em> with <em>template_id=2</em>.</p>
+<p>You can create TestRail templates by yourself in <em>Administration</em> panel, <em>Customizations</em> section, <em>Templates</em> part. Then you have to create jinja templates whith the names <em>{template_id}.j2</em> for them. For example, file <em>2.j2</em> for <em>Test Case (Steps)</em> TestRail template:</p>
+<div class="codehilite"><pre><span></span>{<span class="o">%</span> <span class="k">if</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_steps_separated</span><span class="s1">&#39;</span>][<span class="mi">0</span>][<span class="s1">&#39;</span><span class="s">content</span><span class="s1">&#39;</span>] <span class="o">%</span>}
+{<span class="o">%</span> <span class="k">if</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_preconds</span><span class="s1">&#39;</span>] <span class="o">%</span>}
+<span class="o">**</span><span class="nv">Preconditions</span>:<span class="o">**</span>
+
+{{ <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_preconds</span><span class="s1">&#39;</span>] }}
+{<span class="o">%</span> <span class="k">endif</span> <span class="o">%</span>}
+
+<span class="o">**</span><span class="nv">Scenario</span>:<span class="o">**</span>
+
+{<span class="o">%</span> <span class="k">for</span> <span class="nv">case_step</span> <span class="nv">in</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_steps_separated</span><span class="s1">&#39;</span>] <span class="o">%</span>}
+
+<span class="o">*</span><span class="nv">Step</span> {{ <span class="k">loop</span>.<span class="nv">index</span> }}.<span class="o">*</span> {{ <span class="nv">case_step</span>[<span class="s1">&#39;</span><span class="s">content</span><span class="s1">&#39;</span>] }}
+
+<span class="o">*</span><span class="nv">Expected</span> <span class="nb">result</span>:<span class="o">*</span>
+
+{{ <span class="nv">case_step</span>[<span class="s1">&#39;</span><span class="s">expected</span><span class="s1">&#39;</span>] }}
+
+{<span class="o">%</span> <span class="nv">endfor</span> <span class="o">%</span>}
+{<span class="o">%</span> <span class="k">endif</span> <span class="o">%</span>}
+</pre></div>
+
+
+<p>You can use all parameters of two variables in the template — <em>case</em> and <em>params</em>. Case parameters depends on TestRail template. All custom parameters have prefix 'custom_' before system name set in TestRail.</p>
+<p>Here is an example of <em>case</em> variable (parameters depends on case template):</p>
+<div class="codehilite"><pre><span></span><span class="k">case</span> <span class="o">=</span> <span class="err">{</span>
+    <span class="s1">&#39;created_by&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;created_on&#39;</span><span class="p">:</span> <span class="mi">1524909903</span><span class="p">,</span>
+    <span class="s1">&#39;custom_expected&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
+    <span class="s1">&#39;custom_goals&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
+    <span class="s1">&#39;custom_mission&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
+    <span class="s1">&#39;custom_preconds&#39;</span><span class="p">:</span> <span class="s1">&#39;- The user is not registered in the system.\r\n&#39;</span>
+        <span class="s1">&#39;- Registration form opened.&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;custom_steps&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;custom_steps_separated&#39;</span><span class="p">:</span> <span class="p">[</span><span class="err">{</span>
+        <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Enter mobile phone number.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;expected&#39;</span><span class="p">:</span> <span class="s1">&#39;- Entered phone number &#39;</span>
+        <span class="s1">&#39;is visible in the form field.&#39;</span>
+        <span class="err">}</span><span class="p">,</span>
+        <span class="err">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Press OK button.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;expected&#39;</span><span class="p">:</span> <span class="s1">&#39;- SMS with registration code &#39;</span>
+        <span class="s1">&#39;received.\n&#39;</span><span class="err">}</span><span class="p">],</span>
+    <span class="s1">&#39;custom_test_androidtv&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
+    <span class="s1">&#39;custom_test_appletv&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
+    <span class="s1">&#39;custom_test_smarttv&#39;</span><span class="p">:</span> <span class="s1">&#39;None,</span>
+<span class="s1">    &#39;</span><span class="n">custom_tp</span><span class="s1">&#39;: True,</span>
+<span class="s1">    &#39;</span><span class="n">estimate</span><span class="s1">&#39;: None,</span>
+<span class="s1">    &#39;</span><span class="n">estimate_forecast</span><span class="s1">&#39;: None,</span>
+<span class="s1">    &#39;</span><span class="n">id</span><span class="s1">&#39;: 15940,</span>
+<span class="s1">    &#39;</span><span class="n">milestone_id</span><span class="s1">&#39;: None,</span>
+<span class="s1">    &#39;</span><span class="n">priority_id</span><span class="s1">&#39;: 4,</span>
+<span class="s1">    &#39;</span><span class="n">refs</span><span class="s1">&#39;: None,</span>
+<span class="s1">    &#39;</span><span class="n">section_id</span><span class="s1">&#39;: 3441,</span>
+<span class="s1">    &#39;</span><span class="n">suite_id</span><span class="s1">&#39;: 101,</span>
+<span class="s1">    &#39;</span><span class="n">template_id</span><span class="s1">&#39;: 7,</span>
+<span class="s1">    &#39;</span><span class="n">title</span><span class="s1">&#39;: &#39;</span><span class="n">Registration</span> <span class="k">by</span> <span class="n">mobile</span> <span class="n">phone</span> <span class="nb">number</span><span class="p">.</span><span class="s1">&#39;,</span>
+<span class="s1">    &#39;</span><span class="n">type_id</span><span class="s1">&#39;: 7,</span>
+<span class="s1">    &#39;</span><span class="n">updated_by</span><span class="s1">&#39;: 10,</span>
+<span class="s1">    &#39;</span><span class="n">updated_on</span><span class="err">&#39;</span><span class="p">:</span> <span class="mi">1528978979</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>And here is an example of <em>params</em> variable (parameters are always the same):</p>
+<div class="codehilite"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="err">{</span>
+    <span class="s1">&#39;multi_param_name&#39;</span><span class="p">:</span> <span class="s1">&#39;platform&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;multi_param_sys_name&#39;</span><span class="p">:</span> <span class="s1">&#39;custom_platform&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;multi_param_select&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ios&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;multi_param_select_type&#39;</span><span class="p">:</span> <span class="k">any</span><span class="p">,</span>
+    <span class="s1">&#39;add_cases_without_multi_param&#39;</span><span class="p">:</span> <span class="k">False</span><span class="p">,</span>
+    <span class="s1">&#39;checkbox_param_name&#39;</span><span class="p">:</span> <span class="s1">&#39;publish&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;checkbox_param_sys_name&#39;</span><span class="p">:</span> <span class="s1">&#39;custom_publish&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;checkbox_param_select_type&#39;</span><span class="p">:</span> <span class="s1">&#39;checked&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;choose_priorities&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;critical&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;add_multi_param_to_case_header&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
+    <span class="s1">&#39;add_multi_param_to_std_table&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
+    <span class="s1">&#39;add_priority_to_case_header&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
+    <span class="s1">&#39;add_priority_to_std_table&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
+    <span class="s1">&#39;add_case_id_to_case_header&#39;</span><span class="p">:</span> <span class="k">False</span><span class="p">,</span>
+    <span class="s1">&#39;add_case_id_to_std_table&#39;</span><span class="p">:</span> <span class="k">False</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>Next three fields are necessary due localization issues. While markdown document with test cases is composed on the go, you have to set up some document headers. Definitely not the best solution in my life. </p>
+<dl>
+<dt><code>section_header</code></dt>
+<dd>First level header of section with test cases. By default it's <em>Testing program</em> in Russian.</dd>
+<dt><code>add_std_table</code></dt>
+<dd>You can exclude (<em>false</em>) a testing table from the document.</dd>
+<dt><code>std_table_header</code></dt>
+<dd>First level header of section with test results table. By default it's <em>Testing table</em> in Russian.</dd>
+<dt><code>std_table_column_headers</code></dt>
+<dd>Semicolon separated headers of testing table columns. By default it's <em>№; Priority; Platform; ID; Test case name; Result; Comment</em> in Russian.</dd>
+<dt><code>add_suite_headers</code></dt>
+<dd>With <em>false</em> you can exclude all suite headers from the final document.</dd>
+<dt><code>add_section_headers</code></dt>
+<dd>With <em>false</em> you can exclude all section headers from the final document.</dd>
+<dt><code>add_case_id_to_case_header</code></dt>
+<dd>Every test case in TestRail has unique ID, which, as usual, you can find in the header or test case URL: http://testrails.url/index.php?/cases/view/15920... &lt;-. So you can add (<em>true</em>) this ID to the test case headers and testing table. Or not (<em>false</em>).</dd>
+<dt><code>add_case_id_to_std_table</code></dt>
+<dd>Also you can add (<em>true</em>) the column with the test case IDs to the testing table.</dd>
+</dl>
+<p>In TestRail you can add custom parameters to your test case template. With next settings you can use one <em>multi-select</em> or <em>dropdown</em> (good for platforms, for example) and one <em>checkbox</em> (publishing) plus default <em>priority</em> parameter for cases sampling.</p>
+<dl>
+<dt><code>multi_param_name</code></dt>
+<dd>Parameter name of <em>multi-select</em> or <em>dropdown</em> type you set in <em>System Name</em> field of <em>Add Custom Field</em> form in TestRail. For example, <em>platforms</em> with values <em>Android</em>, <em>iOS</em>, <em>PC</em>, <em>Mac</em> and <em>web</em>. If <em>multi_param_select</em> not set, all test cases will be downloaded (useful when you need just to add parameter value to the test headers or testing table).</dd>
+<dt><code>multi_param_select</code></dt>
+<dd>Here you can set the platforms for which you want to get test cases (case insensitive). For example, you have similar UX for mobile platforms and want to combine them:</dd>
+</dl>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="nt">multi_param_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">platforms</span>
+    <span class="nt">multi_param_select</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">android, ios</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+
+<dl>
+<dt><code>multi_param_select_type</code></dt>
+<dd>With this parameter you can make test cases sampling in different ways. It has several options:</dd>
+</dl>
+<ul>
+<li><em>any</em> (by default) — at least one of <em>multi_param_select</em> values should be set for the case,</li>
+<li><em>all</em> — all of <em>multi_param_select</em> values should be set and any other can be set for the case,</li>
+<li><em>only</em> — only <em>multi_param_select</em> values in any combination should be set for the case,</li>
+<li><em>match</em> — all and only <em>multi_param_select</em> values should be set for the case.</li>
+</ul>
+<p>With <em>multi_param_select: android, ios</em> we will get the following cases:</p>
+<table>
+<thead>
+<tr>
+<th>Test cases</th>
+<th align="center">Android</th>
+<th align="center">iOS</th>
+<th align="center">PC</th>
+<th align="center">Mac</th>
+<th align="center">web</th>
+<th></th>
+<th align="center">any</th>
+<th align="center">all</th>
+<th align="center">only</th>
+<th align="center">match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test case 1</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+</tr>
+<tr>
+<td>Test case 2</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+</tr>
+<tr>
+<td>Test case 3</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 4</td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td></td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 5</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">+</td>
+<td></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 6</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">+</td>
+<td></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 7</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 8</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td align="center">+</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Test case 9</td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center">+</td>
+<td align="center"></td>
+<td align="center">+</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt><code>add_cases_without_multi_param</code></dt>
+<dd>Also you can include (by default) or exclude (<em>false</em>) cases without any value of <em>multi-select</em> or <em>dropdown</em> parameter.</dd>
+<dt><code>add_multi_param_to_case_header</code></dt>
+<dd>You can add (<em>true</em>) values of <em>multi-select</em> or <em>dropdown</em> parameter to the case headers or not (by default).</dd>
+<dt><code>add_multi_param_to_std_table</code></dt>
+<dd>You can add (<em>true</em>) column with values of <em>multi-select</em> or <em>dropdown</em> parameter to the testing table or not (by default).</dd>
+<dt><code>checkbox_param_name</code></dt>
+<dd>Parameter name of <em>checkbox</em> type you set in <em>System Name</em> field of <em>Add Custom Field</em> form in TestRail. For example, <em>publish</em>. Without parameter name set all of cases will be downloaded.</dd>
+<dt><code>checkbox_param_select_type</code></dt>
+<dd>With this parameter you can make test cases sampling in different ways. It has several options:</dd>
+</dl>
+<ul>
+<li><em>checked</em> (by default) — only cases whith checked field will be downloaded,</li>
+<li><em>unchecked</em> — only cases whith unchecked field will be downloaded.</li>
+</ul>
+<dl>
+<dt><code>choose_priorities</code></dt>
+<dd>Here you can set test case priorities to download (case insensitive).</dd>
+</dl>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="nt">choose_priorities</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">critical, high, medium</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+
+<dl>
+<dt><code>add_priority_to_case_header</code></dt>
+<dd>You can add (<em>true</em>) priority to the case headers or not (by default).</dd>
+<dt><code>add_priority_to_std_table</code></dt>
+<dd>You can add (<em>true</em>) column with case priority to the testing table or not (by default).</dd>
+</dl>
+<p>Using described setting you can flexibly adjust test cases sampling. For example, you can download only published <em>critical</em> test cases for both and only <em>Mac</em> and <em>PC</em>.</p>
+<p>Now strange things, mostly made specially for my project, but may be useful for others.</p>
+<p>Screenshots. There is no possibility to store screenshots in TestRail projects, but you can store them in the GitLab repository (link to which should be stated in one of the following parameters). GitLab project should have following structure:</p>
+<div class="codehilite"><pre><span></span><span class="n">images</span><span class="o">/</span>
+<span class="err">├──</span> <span class="n">smarttv</span><span class="o">/</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_smarttv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_smarttv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
+<span class="err">├──</span> <span class="n">androidtv</span><span class="o">/</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_androidtv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_androidtv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
+<span class="err">├──</span> <span class="n">appletv</span><span class="o">/</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_appletv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_appletv</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
+<span class="err">├──</span> <span class="n">web</span><span class="o">/</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_web</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_web</span><span class="p">.</span><span class="n">png</span>
+<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
+<span class="err">├──</span> <span class="n">screenshot1</span><span class="p">.</span><span class="n">png</span>
+<span class="err">├──</span> <span class="n">screenshot2</span><span class="p">.</span><span class="n">png</span>
+<span class="err">└──</span> <span class="p">...</span>
+</pre></div>
+
+
+<p><em>images</em> folder used for projects without platforms.</p>
+<p>Filename ending is a first value of <em>multi_param_select</em> parameter (<em>platform</em>). Now to add screenshot to your document just add following string to the test case (unfortunately, in TestRail interface it will looks like broken image link):</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Image</span> <span class="n">title</span><span class="p">](</span><span class="n">main_filename_part</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Preprocessor will convert to the following format:</p>
+<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="p">.</span><span class="n">url</span><span class="o">/</span><span class="n">gitlab_group_name</span><span class="o">/</span><span class="n">gitlab_project_name</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">platform_name</span><span class="o">/</span><span class="n">main_filename_part_platform_name</span><span class="p">.</span><span class="n">png</span>
+</pre></div>
+
+
+<p>For example, in the project with <em>multi_param_select: smarttv</em> the string</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="k">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Application</span> <span class="n">main</span> <span class="n">screen</span><span class="p">](</span><span class="n">main_screen</span><span class="p">)</span>
+</pre></div>
+
+
+<p>will be converted to:</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="k">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Application</span> <span class="n">main</span> <span class="n">screen</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="p">.</span><span class="n">url</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="n">application</span><span class="o">-</span><span class="n">screenshots</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">smarttv</span><span class="o">/</span><span class="n">main_screen_smarttv</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+</pre></div>
+
+
+<p>That's it.</p>
+<dl>
+<dt><code>resolve_urls</code></dt>
+<dd>Turn on (<em>true</em>) or off (<em>false</em>, by default) image urls resolving.</dd>
+<dt><code>screenshots_url</code></dt>
+<dd>GitLab repository URL, in our example: https://gitlab.url/documentation/application-screenshots/ .</dd>
+<dt><code>screenshots_ext</code></dt>
+<dd>Screenshots extension. Yes, it must be only one and the same for all screenshots.</dd>
+</dl>
+<p>And the last one emergency tool. If you have no jinja template for any type of TestRail case, you'll see this message like this: <em>There is no jinja template for test case template_id 5 (case_id 1325) in folder case_templates</em>. So you have to write jinja template by yourself. To do this it's necessary to know case structure. This parameter shows it to you.</p>
+<dl>
+<dt><code>print_case_structure</code></dt>
+<dd>Turn on (<em>true</em>) or off (<em>false</em>, by default) printing out of case structure with all data in it if any problem occurs.</dd>
+</dl>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Just add the preprocessor to the project config, set it up and enjoy the automatically collected test cases to your document.</p>
+<h4 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h4>
+<p>In some cases you may encounter a problem with test cases text format, so composed markdown file will be converted to the document with bad formatting. In this cases <em>replace</em> preprocessor could be useful: https://foliant-docs.github.io/docs/preprocessors/replace/ .</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../templateparser/" title="TemplateParser" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                TemplateParser
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../cli/bump/" title="Bump" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Bump
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/foliant-docs/foliant" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="/foliant/assets/foliant-docs.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
