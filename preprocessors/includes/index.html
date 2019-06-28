@@ -595,8 +595,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#the-new-syntax" title="The New Syntax" class="md-nav__link">
+    The New Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" title="Attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-attributes-supported-in-both-syntax-variants" title="Optional Attributes Supported in Both Syntax Variants" class="md-nav__link">
+    Optional Attributes Supported in Both Syntax Variants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-legacy-syntax" title="The Legacy Syntax" class="md-nav__link">
+    The Legacy Syntax
   </a>
   
 </li>
@@ -953,8 +980,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#the-new-syntax" title="The New Syntax" class="md-nav__link">
+    The New Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" title="Attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-attributes-supported-in-both-syntax-variants" title="Optional Attributes Supported in Both Syntax Variants" class="md-nav__link">
+    Optional Attributes Supported in Both Syntax Variants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-legacy-syntax" title="The Legacy Syntax" class="md-nav__link">
+    The Legacy Syntax
   </a>
   
 </li>
@@ -993,24 +1047,24 @@
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor with default options, add <code>includes</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
 </pre></div>
 
 
 <p>The preprocessor has a number of options:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
-      <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.includescache</span>
-      <span class="nt">recursive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">aliases</span><span class="p">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
+        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.includescache</span>
+        <span class="nt">recursive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">aliases</span><span class="p">:</span>
+            <span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 
 
 <dl>
 <dt><code>cache_dir</code></dt>
 <dd>
-<p>Path to the directory for cloned repositories. It can be a path relative to the project path or a global one; you can use <code>~/</code> shortcut.</p>
+<p>Path to the directory for cloned Git repositories. It can be a path relative to the project path or a global one; you can use <code>~/</code> shortcut.</p>
 <blockquote>
 <p><strong>Note</strong></p>
 <p>To include files from remote repositories, the preprocessor clones them. To save time during build, cloned repositories are stored and reused in future builds.</p>
@@ -1021,33 +1075,146 @@
 <dt><code>aliases</code></dt>
 <dd>
 <p>Mapping from aliases to Git repository URLs. Once defined here, an alias can be used to refer to the repository instead of its full URL.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Aliases are available only within the legacy syntax of include statements (see below).</p>
+</blockquote>
 <p>For example, if you set this alias in the config:</p>
 <div class="codehilite"><pre><span></span><span class="o">-</span> <span class="n">includes</span><span class="p">:</span>
-  <span class="n">aliases</span><span class="p">:</span>
-    <span class="n">foo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">boo</span><span class="o">/</span><span class="n">bar</span><span class="p">.</span><span class="n">git</span>
-    <span class="n">baz</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span><span class="n">far</span><span class="p">.</span><span class="n">git</span><span class="o">#</span><span class="n">develop</span>
+    <span class="n">aliases</span><span class="p">:</span>
+        <span class="n">foo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">boo</span><span class="o">/</span><span class="n">bar</span><span class="p">.</span><span class="n">git</span>
+        <span class="n">baz</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span><span class="n">far</span><span class="p">.</span><span class="n">git</span><span class="o">#</span><span class="n">develop</span>
 </pre></div>
 
 
-<p>you can include README.md file content from this repository using this syntax:</p>
+<p>you can include the content of <code>doc.md</code> files from these repositories using the following syntax:</p>
 <div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="mh">$f</span><span class="nv">oo</span>$<span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">doc</span>.<span class="nv">md</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 
 <span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="mh">$ba</span><span class="nv">z</span>#<span class="nv">master</span>$<span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">doc</span>.<span class="nv">md</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 </pre></div>
 
 
-<p>Note that in the second example we override the default revision.</p>
+<p>Note that in the second example the default revision (<code>develop</code>) will be overridden with the custom one (<code>master</code>).</p>
 </dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To include a document from your machine, put the path to it between <code>&lt;include&gt;...&lt;/include&gt;</code> tags:</p>
+<p>The preprocessor allows two syntax variants for include statements.</p>
+<p>The <strong>legacy</strong> syntax is simpler and shorter but less flexible. There are no plans to extend it.</p>
+<p>The <strong>new</strong> syntax introduced in version 1.1.0 is stricter and more flexible. It is more suitable for complex cases, and it can be easily extended in the future. This is the preferred syntax.</p>
+<p>Both variants of syntax use the <code>&lt;include&gt;...&lt;/include&gt;</code> tags.</p>
+<p>If the included file is specified between the tags, it’s the legacy syntax. If the file is referenced in the tag attributes (<code>src</code>, <code>repo_url</code>, <code>path</code>), it’s the new one.</p>
+<h4 id="the-new-syntax">The New Syntax<a class="headerlink" href="#the-new-syntax" title="Permanent link">&para;</a></h4>
+<p>To enforce using the new syntax rules, put no content between <code>&lt;include&gt;...&lt;/include&gt;</code> tags, and specify a local file or a file in a remote Git repository in tag attributes.</p>
+<p>To include a local file, use the <code>src</code> attribute:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Text</span> <span class="nv">below</span> <span class="nv">is</span> <span class="nv">taken</span> <span class="nv">from</span> <span class="nv">another</span> <span class="nv">document</span>.
 
-<span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;/</span><span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">another</span><span class="o">/</span><span class="nv">document</span>.<span class="nv">md</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">path/to/another/document.md</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 </pre></div>
 
 
-<p>To include a document from a remote Git repository, put its URL between <code>$</code>s in front of the document path:</p>
+<p>To include a file from a remote Git repository, use the <code>repo_url</code> and <code>path</code> attributes:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Text</span> <span class="nv">below</span> <span class="nv">is</span> <span class="nv">taken</span> <span class="nv">from</span> <span class="nv">a</span> <span class="nv">remote</span> <span class="nv">repository</span>.
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">repo_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">https://github.com/foo/bar.git</span><span class="s2">&quot;</span> <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">path/to/doc.md</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>You have to specify the full remote repository URL in the <code>repo_url</code> attribute, aliases are not supported here.</p>
+<p>Optional branch or revision can be specified in the <code>revision</code> attribute:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Text</span> <span class="nv">below</span> <span class="nv">is</span> <span class="nv">taken</span> <span class="nv">from</span> <span class="nv">a</span> <span class="nv">remote</span> <span class="nv">repository</span> <span class="nv">on</span> <span class="nv">branch</span> <span class="nv">develop</span>.
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">repo_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">https://github.com/foo/bar.git</span><span class="s2">&quot;</span> <span class="nv">revision</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">develop</span><span class="s2">&quot;</span> <span class="nv">path</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">path/to/doc.md</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h5 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h5>
+<dl>
+<dt><code>src</code></dt>
+<dd>Path to the local file to include.</dd>
+<dt><code>repo_url</code></dt>
+<dd>Full remote Git repository URL without a revision.</dd>
+<dt><code>path</code></dt>
+<dd>
+<p>Path to the file inside the remote Git repository.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>If you are using the new syntax, the <code>src</code> attribute is required to include a local file, and the <code>repo_url</code> and <code>path</code> attributes are required to include a file from a remote Git repository. All other attributes are optional.</p>
+<p><strong>Note</strong></p>
+<p>Foliant 1.0.9 supports the processing of attribute values as YAML. You can precede the values of attributes by the <code>!path</code>, <code>!project_path</code>, and <code>!rel_path</code> modifiers (i.e. YAML tags). These modifiers can be useful in the <code>src</code>, <code>path</code>, and <code>project_root</code> attributes.</p>
+</blockquote>
+</dd>
+<dt><code>revision</code></dt>
+<dd>Revision of the Git repository.</dd>
+<dt><code>from_heading</code></dt>
+<dd>Full content of the starting heading when it’s necessary to include some part of the referenced file content.</dd>
+<dt><code>to_heading</code></dt>
+<dd>Full content of the ending heading when it’s necessary to include some part of the referenced file content.</dd>
+<dt><code>from_id</code></dt>
+<dd>ID of the starting heading when it’s necessary to include some part of the referenced file content.</dd>
+<dt><code>to_id</code></dt>
+<dd>
+<p>ID of the ending heading when it’s necessary to include some part of the referenced file content.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="k">Some</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id</span><span class="err">}</span>
+</pre></div>
+
+
+<p>Here <code>Some Heading {#custom_id}</code> is the full content of the heading, and <code>custom_id</code> is its ID.</p>
+</dd>
+</dl>
+<h4 id="optional-attributes-supported-in-both-syntax-variants">Optional Attributes Supported in Both Syntax Variants<a class="headerlink" href="#optional-attributes-supported-in-both-syntax-variants" title="Permanent link">&para;</a></h4>
+<dl>
+<dt><code>sethead</code></dt>
+<dd>The level of the topmost heading in the included content. Use it to guarantee that the included text does not break the parent document’s heading order:<div class="codehilite"><pre><span></span># <span class="nv">Title</span>
+
+## <span class="nv">Subtitle</span>
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">other.md</span><span class="s2">&quot;</span> <span class="nv">sethead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">3</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+</dd>
+<dt><code>nohead</code></dt>
+<dd>
+<p>Flag that tells the preprocessor to strip the starting heading from the included content:</p>
+<div class="codehilite"><pre><span></span># <span class="nv">My</span> <span class="nv">Custom</span> <span class="nv">Heading</span>
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">other.md</span><span class="s2">&quot;</span> <span class="nv">from_heading</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">Original Heading</span><span class="s2">&quot;</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>Default is <code>false</code>.</p>
+</dd>
+<dt><code>inline</code></dt>
+<dd>Flag that tells the preprocessor to replace sequences of whitespace characters of many kinds (including <code>\r</code>, <code>\n</code>, and <code>\t</code>) with single spaces (<code></code>) in the included content, and then to strip leading and trailing spaces. It may be useful in single-line table cells. Default value is <code>false</code>.</dd>
+<dt><code>project_root</code></dt>
+<dd>
+<p>Path to the top-level (“root”) directory of Foliant project that the included file belongs to. This option may be needed to resolve the <code>!path</code> and <code>!project_path</code> modifiers in the included content properly.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>By default, if a local file is included, <code>project_root</code> points to the top-level directory of the current Foliant project, and if a file in a remote Git repository is referenced, <code>project_root</code> points to the top-level directory of this repository. In most cases you don’t need to override the default behavior.</p>
+</blockquote>
+</dd>
+</dl>
+<p>Different options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you want to include a section with a custom heading:</p>
+<div class="codehilite"><pre><span></span>## <span class="nv">My</span> <span class="nv">Custom</span> <span class="nv">Heading</span>
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">other.md</span><span class="s2">&quot;</span> <span class="nv">from_heading</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">Original Heading</span><span class="s2">&quot;</span> <span class="nv">sethead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">1</span><span class="s2">&quot;</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h4 id="the-legacy-syntax">The Legacy Syntax<a class="headerlink" href="#the-legacy-syntax" title="Permanent link">&para;</a></h4>
+<p>This syntax was the only supported in the preprocessor up to version 1.0.11. It’s weird and cryptic, you had to memorize strange rules about <code>$</code>, <code>#</code> and stuff. The new syntax described above is much cleaner.</p>
+<p>The legacy syntax is kept for backward compatibility. To use it, put the reference to the included file between <code>&lt;include&gt;...&lt;/include&gt;</code> tags.</p>
+<p>Local path example:</p>
+<div class="codehilite"><pre><span></span><span class="nv">Text</span> <span class="nv">below</span> <span class="nv">is</span> <span class="nv">taken</span> <span class="nv">from</span> <span class="nv">another</span> <span class="nv">document</span>.
+
+<span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">another</span><span class="o">/</span><span class="nv">document</span>.<span class="nv">md</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>The path may be either relative to currently processed Markdown file or absolute.</p>
+<p>To include a document from a remote Git repository, put its URL between <code>$</code>s before the document path:</p>
 <div class="codehilite"><pre><span></span><span class="nv">Text</span> <span class="nv">below</span> <span class="nv">is</span> <span class="nv">taken</span> <span class="nv">from</span> <span class="nv">a</span> <span class="nv">remote</span> <span class="nv">repository</span>.
 
 <span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span>
@@ -1059,7 +1226,7 @@
 <p>If the repository alias is defined in the project config, you can use it instead of the URL:</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
     <span class="nt">aliases</span><span class="p">:</span>
-      <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foo/bar.git</span>
+        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foo/bar.git</span>
 </pre></div>
 
 
@@ -1076,56 +1243,23 @@
 
 
 <p>To include a part of a document between two headings, use the <code>#Start:Finish</code> syntax after the file path:</p>
-<div class="codehilite"><pre><span></span><span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> <span class="s2">&quot;</span><span class="s">Intro</span><span class="s2">&quot;</span> <span class="nv">up</span> <span class="nv">to</span> <span class="s2">&quot;</span><span class="s">Credits</span><span class="s2">&quot;</span>:
+<div class="codehilite"><pre><span></span><span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> “<span class="nv">Intro</span>” <span class="nv">up</span> <span class="nv">to</span> “<span class="nv">Credits</span>”:
 
 <span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="nv">sample</span>.<span class="nv">md</span>#<span class="nv">Intro</span>:<span class="nv">Credits</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 
-<span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> <span class="nv">start</span> <span class="nv">up</span> <span class="nv">to</span> <span class="s2">&quot;</span><span class="s">Credits</span><span class="s2">&quot;</span>:
+<span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> <span class="nv">start</span> <span class="nv">up</span> <span class="nv">to</span> “<span class="nv">Credits</span>”:
 
 <span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="nv">sample</span>.<span class="nv">md</span>#:<span class="nv">Credits</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 
-<span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> <span class="s2">&quot;</span><span class="s">Intro</span><span class="s2">&quot;</span> <span class="nv">up</span> <span class="nv">to</span> <span class="nv">the</span> <span class="k">next</span> <span class="nv">heading</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">level</span>:
+<span class="k">Include</span> <span class="nv">content</span> <span class="nv">from</span> “<span class="nv">Intro</span>” <span class="nv">up</span> <span class="nv">to</span> <span class="nv">the</span> <span class="k">next</span> <span class="nv">heading</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">level</span>:
 
 <span class="o">&lt;</span><span class="k">include</span><span class="o">&gt;</span><span class="nv">sample</span>.<span class="nv">md</span>#<span class="nv">Intro</span><span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
 </pre></div>
 
 
-<h4 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h4>
-<dl>
-<dt><code>sethead</code></dt>
-<dd>The level of the topmost heading in the included content. Use it to guarantee that the included text doesn't break the parent document's heading order:<div class="codehilite"><pre><span></span># <span class="nv">Title</span>
-
-## <span class="nv">Subtitle</span>
-
-<span class="o">&lt;</span><span class="k">include</span> <span class="nv">sethead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">3</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-    <span class="nv">other</span>.<span class="nv">md</span>
-<span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
-</pre></div>
-
-
-</dd>
-<dt><code>nohead</code></dt>
-<dd>
-<p>Flag that tells the preprocessor to strip the starting heading from the included content:</p>
-<div class="codehilite"><pre><span></span># <span class="nv">My</span> <span class="nv">Custom</span> <span class="nv">Heading</span>
-
-<span class="o">&lt;</span><span class="k">include</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-    <span class="nv">other</span>.<span class="nv">md</span>#<span class="nv">Original</span> <span class="nv">Heading</span>
-<span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
-</pre></div>
-
-
-<p>Default is <code>false</code>.</p>
-</dd>
-<dt><code>inline</code></dt>
-<dd>Flag that tells the preprocessor to replace sequences of whitespace characters of many kinds (including <code>\r</code>, <code>\n</code>, and <code>\t</code>) with single spaces (<code></code>) in the included content, and then to strip leading and trailing spaces. It may be useful in single-line table cells. Default value is <code>false</code>.</dd>
-</dl>
-<p>Options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you want to include a section with a custom heading:</p>
-<div class="codehilite"><pre><span></span>## <span class="nv">My</span> <span class="nv">Custom</span> <span class="nv">Heading</span>
-
-<span class="o">&lt;</span><span class="k">include</span> <span class="nv">sethead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">1</span><span class="s2">&quot;</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-  <span class="nv">other</span>.<span class="nv">md</span>#<span class="nv">Original</span> <span class="nv">Heading</span>
-<span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;</span>    <span class="o">**</span><span class="n">Note</span><span class="o">**</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span>    <span class="k">In</span> <span class="n">the</span> <span class="n">legacy</span> <span class="n">syntax</span><span class="p">,</span> <span class="n">problems</span> <span class="n">may</span> <span class="n">occur</span> <span class="k">with</span> <span class="n">the</span> <span class="n">use</span> <span class="k">of</span> <span class="o">`</span><span class="err">$</span><span class="o">`</span><span class="p">,</span> <span class="o">`#`</span><span class="p">,</span> <span class="k">and</span> <span class="o">`</span><span class="p">:</span><span class="o">`</span> <span class="n">characters</span> <span class="k">in</span> <span class="n">filenames</span> <span class="k">and</span> <span class="n">headings</span><span class="p">,</span> <span class="n">since</span> <span class="n">these</span> <span class="n">characters</span> <span class="n">may</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">delimeters</span><span class="p">.</span>
 </pre></div>
                 
                   
