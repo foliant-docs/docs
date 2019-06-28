@@ -39,6 +39,8 @@ chapters:
   - CLI Extensions:
     - cli/bump.md
     - cli/gupload.md
+    - cli/meta.md
+    - cli/project_graph.md
     - Init: cli/init/index.md
     - Init Templates:
       - cli/init/templates/preprocessor.md
