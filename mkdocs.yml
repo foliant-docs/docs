@@ -16,7 +16,7 @@ extra:
     - type: github
       link: https://github.com/foliant-docs/foliant
     - type: file-pdf-o
-      link: /foliant/assets/foliant-docs.pdf
+      link: /docs/assets/foliant-docs.pdf
 markdown_extensions:
   - def_list
   - codehilite
