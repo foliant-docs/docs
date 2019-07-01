@@ -199,7 +199,7 @@ Preprocessors is what makes Foliant special and extremely useful. Preprocessors 
 -   render diagrams from textual description on build
 -   restructure the project source or compile it into a single file for a particular backend
 
-In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `✔ Applying preprocessor mkdocs` and `✔ Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that [`flatten`](<macro mkdocs="preprocessors/flatten.md" pandoc="#flatten">ref</macro>) preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
+In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that [`flatten`](<macro mkdocs="preprocessors/flatten.md" pandoc="#flatten">ref</macro>) preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
 
 These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
 
