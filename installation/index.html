@@ -999,7 +999,7 @@
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Install Python 3.6 with Homebrew:</p>
+<p>Install Python 3 with Homebrew:</p>
 <div class="codehilite"><pre><span></span>$ brew install python3
 </pre></div>
 
@@ -1030,7 +1030,7 @@
 
 </li>
 <li>
-<p>Install Python 3.6 with Scoop:</p>
+<p>Install Python 3 with Scoop:</p>
 <div class="codehilite"><pre><span></span>$ scoop install python
 </pre></div>
 
@@ -1054,14 +1054,14 @@
 <h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Install Python 3.6 with apt. On 14.04 and 16.04:</p>
-<div class="codehilite"><pre><span></span>$ add-apt-repository ppa:jonathonf/python-3.6
-$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
+<p>Install Python 3 with apt. On 14.04 and 16.04:</p>
+<div class="codehilite"><pre><span></span>$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
 </pre></div>
 
 
-<p>On newer versions:</p>
-<div class="codehilite"><pre><span></span>$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
+<p>On 14.04 and 16.04:</p>
+<div class="codehilite"><pre><span></span>$ add-apt-repository ppa:jonathonf/python-3.6
+$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
 </pre></div>
 
 
@@ -1083,27 +1083,7 @@ $ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd6
 </li>
 </ol>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<p>If you use <a href="cli/init.md"><code>foliant init</code></a>, <code>Dockerfile</code> and <code>docker-compose.yml</code> files to build the project are created automatically. To build the project, run:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Site:</span>
-$ docker-compose run --rm &lt;project-name&gt; make site
-<span class="c1"># Pdf:</span>
-$ docker-compose run --rm &lt;project-name&gt; make pdf
-</pre></div>
-
-
-<p>Alternatively, you can create the Dockerfile manually using Foliant’s official Docker images:</p>
-<div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> foliant/foliant</span>
-<span class="c"># If you plan to bake PDFs, uncomment this line and comment the line above:</span>
-<span class="c"># FROM foliant/foliant:pandoc</span>
-<span class="k">RUN</span> pip3 install foliantcontrib.mkdocs
-</pre></div>
-
-
-<p>Then, run Foliant in a container:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Site:</span>
-$ docker run --rm -it -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/usr/src/app -w /usr/src/app my-project make site
-<span class="c1"># Pdf:</span>
-$ docker run --rm -it -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/usr/src/app -w /usr/src/app my-project make pdf
+<div class="codehilite"><pre><span></span>$ docker pull foliant/foliant
 </pre></div>
                 
                   
