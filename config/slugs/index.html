@@ -896,6 +896,26 @@
     Usage
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slug" title="Slug" class="md-nav__link">
+    Slug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" title="Version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -946,6 +966,26 @@
     Usage
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slug" title="Slug" class="md-nav__link">
+    Slug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" title="Version" class="md-nav__link">
+    Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -969,15 +1009,18 @@
                 
                 <h1 id="slugs">Slugs<a class="headerlink" href="#slugs" title="Permanent link">&para;</a></h1>
 <p>Slugs is an extension for Foliant to generate custom slugs from arbitrary lists of values.</p>
-<p>It resolves <code>!slug</code> and <code>!date</code> YAML tags in the project config.</p>
+<p>It resolves <code>!slug</code>, <code>!date</code>, <code>!version</code>, and <code>!commit_count</code> YAML tags in the project config.</p>
 <p>The list of values after the <code>!slug</code> tag is replaced with the string that joins these values using <code>-</code> delimeter. Spaces (<code></code>) in the values are replaced with underscores (<code>_</code>).</p>
 <p>The value of the node that contains the <code>!date</code> tag is replaced with the current local date.</p>
+<p>The list of values after the <code>!version</code> tag is replaced with the string that joins these values using <code>.</code> delimeter.</p>
+<p>The value of the node that contains the <code>!commit_count</code> tag is replaced by the number of commits in the current Git repository.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.slugs
 </pre></div>
 
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<h4 id="slug">Slug<a class="headerlink" href="#slug" title="Permanent link">&para;</a></h4>
 <p>Config example:</p>
 <div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 <span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
@@ -1002,6 +1045,46 @@
             <span class="p p-Indicator">-</span> <span class="kt">!date</span>
     <span class="nt">mkdocs</span><span class="p">:</span>
         <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_awesome_project</span>
+</pre></div>
+
+
+<h4 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
+<p>Config example:</p>
+<div class="codehilite"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">5</span><span class="p p-Indicator">]</span>
+</pre></div>
+
+
+<p>Resulting version:</p>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span>
+</pre></div>
+
+
+<p>If you wish to use the number of commits in the current branch as a part of your version, add the <code>!commit_count</code> tag:</p>
+<div class="codehilite"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span>
+</pre></div>
+
+
+<p>Resulting version:</p>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span><span class="mi">85</span>
+</pre></div>
+
+
+<p>The <code>!commit_count</code> tag accepts two arguments:</p>
+<ul>
+<li>name of the branch to count commits in;</li>
+<li>correction—a positive or negative number to adjust the commit count.</li>
+</ul>
+<p>Suppose you want to bump the major version and start counting commits from the beginning. Also you want to use only number of commits in the <code>master</code> branch. So your config will look like this:</p>
+<div class="codehilite"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span> <span class="l l-Scalar l-Scalar-Plain">master -85</span>
+</pre></div>
+
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
                 
                   
