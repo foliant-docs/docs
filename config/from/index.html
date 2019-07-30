@@ -484,6 +484,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../preprocessors/escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
+      EscapeCode and UnescapeCode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../preprocessors/flags/" title="Flags" class="md-nav__link">
       Flags
     </a>
@@ -969,11 +981,13 @@
                 
                 <h1 id="multiproject">MultiProject<a class="headerlink" href="#multiproject" title="Permanent link">&para;</a></h1>
 <p>This extension resolves the <code>!from</code> YAML tag in the project config and replaces the value of the tag with <code>chaptres</code> section of related subproject.</p>
+<p>include</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multiproject
 </pre></div>
 
 
+<p>include</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>The subproject location may be specified as a local path, or as a Git repository with optional revision (branch name, commit hash or another reference).</p>
 <p>Example of <code>chapters</code> section in the project config:</p>
@@ -987,6 +1001,7 @@
 
 <p>Before building the documentation superproject, Multiproject extension calls Foliant to build each subproject into <code>pre</code> target, and then moves the directories of built subprojects into the source directory of the superproject (usually called as <code>src</code>).</p>
 <p>Note that Foliant allows to override default config file name <code>foliant.yml</code> by using <code>--config</code> or <code>-c</code> command line option. To provide correct working of Multiproject extension, the same names of config files should be used in the superproject and in all subprojects.</p>
+<p>include</p>
                 
                   
                 

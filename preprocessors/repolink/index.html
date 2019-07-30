@@ -486,6 +486,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
+      EscapeCode and UnescapeCode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../flags/" title="Flags" class="md-nav__link">
       Flags
     </a>
@@ -970,12 +982,14 @@
                 <h1 id="repolink">RepoLink<a class="headerlink" href="#repolink" title="Permanent link">&para;</a></h1>
 <p>This preprocessor allows to add into each Markdown source a hyperlink to the related file in Git repository. The hyperlink appears after the first heading of the document.</p>
 <p>The preprocessor emulates MkDocs behavior and supports the same options <code>repo_url</code> and <code>edit_uri</code> as MkDocs. Applying of the preprocessor to subprojects allows to get links to separate repositories from different pages of a single site (or a single MkDocs project).</p>
+<p>include</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>RepoLink preprocessor is a part of MultiProject extension:</p>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multiproject
 </pre></div>
 
 
+<p>include</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>To enable the preprocessor, add <code>repolink</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
@@ -1010,7 +1024,8 @@
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
-<p>You may override the value of the <code>edit_uri</code> config option with the <code>FOLIANT_REPOLINK_EDIT_URI</code> system environment variable. It can be useful in some non-stable testing or staging environments.</p>
+<p>You may override the value of the <code>edit_uri</code> config option with the <code>FOLIANT_REPOLINK_EDIT_URI</code> system environment variable. It can be useful in some non-stable testing or staging environments.
+include</p>
                 
                   
                 
