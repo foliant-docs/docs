@@ -28,6 +28,7 @@ chapters:
     - preprocessors/imgcaptions.md
     - preprocessors/includes.md
     - preprocessors/macros.md
+    - preprocessors/mermaid.md
     - preprocessors/multilinetables.md
     - preprocessors/pgsqldoc.md
     - preprocessors/plantuml.md
