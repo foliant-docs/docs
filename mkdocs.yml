@@ -1,6 +1,5 @@
-repo_name: foliant-docs/docs
-repo_url: https://github.com/foliant-docs/docs
-edit_uri: edit/master/src/
+repo_url: https://github.com/foliant-docs/foliant
+edit_uri: ""
 theme:
   name: material
   palette:
@@ -13,11 +12,12 @@ theme:
   favicon: assets/octopus-black-32.ico
 extra:
   social:
-    - type: github
-      link: https://github.com/foliant-docs/foliant
+    - type: book
+      link: https://github.com/foliant-docs/docs
     - type: file-pdf-o
       link: /docs/assets/foliant-docs.pdf
 markdown_extensions:
+  - smarty
   - def_list
   - codehilite
   - toc:
