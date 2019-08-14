@@ -1198,16 +1198,20 @@
 <dt><code>to_heading</code></dt>
 <dd>Full content of the ending heading when it’s necessary to include some part of the referenced file content.</dd>
 <dt><code>from_id</code></dt>
-<dd>ID of the starting heading when it’s necessary to include some part of the referenced file content.</dd>
+<dd>ID of the starting heading or starting anchor when it’s necessary to include some part of the referenced file content. The <code>from_id</code> attribute has higher priority than <code>from_heading</code>.</dd>
 <dt><code>to_id</code></dt>
+<dd>ID of the ending heading or ending anchor when it’s necessary to include some part of the referenced file content. The <code>to_id</code> attribute has higher priority than <code>to_heading</code>.</dd>
+<dt><code>to_end</code></dt>
 <dd>
-<p>ID of the ending heading when it’s necessary to include some part of the referenced file content.</p>
+<p>Flag that tells the preprocessor to cut to the end of the included content. Otherwise, if <code>from_heading</code> or <code>from_id</code> is specified, the preprocessor cuts the included content to the next heading of the same level as the starting heading, or the heading that precedes the starting anchor.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="k">Some</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id</span><span class="err">}</span>
+<div class="codehilite"><pre><span></span>## Some Heading {#custom_id}
+
+<span class="nt">&lt;anchor&gt;</span>one_more_custom_id<span class="nt">&lt;/anchor&gt;</span>
 </pre></div>
 
 
-<p>Here <code>Some Heading {#custom_id}</code> is the full content of the heading, and <code>custom_id</code> is its ID.</p>
+<p>Here <code>Some Heading {#custom_id}</code> is the full content of the heading, <code>custom_id</code> is its ID, and <code>one_more_custom_id</code> is the ID of the anchor.</p>
 </dd>
 </dl>
 <h4 id="optional-attributes-supported-in-both-syntax-variants">Optional Attributes Supported in Both Syntax Variants<a class="headerlink" href="#optional-attributes-supported-in-both-syntax-variants" title="Permanent link">&para;</a></h4>
@@ -1232,6 +1236,7 @@
 
 
 <p>Default is <code>false</code>.</p>
+<p>By default, the starting heading is included to the output, and the ending heading is not. Starting and ending anchors are never included into the output.</p>
 </dd>
 <dt><code>inline</code></dt>
 <dd>Flag that tells the preprocessor to replace sequences of whitespace characters of many kinds (including <code>\r</code>, <code>\n</code>, and <code>\t</code>) with single spaces (<code></code>) in the included content, and then to strip leading and trailing spaces. It may be useful in single-line table cells. Default value is <code>false</code>.</dd>
