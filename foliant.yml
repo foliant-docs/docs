@@ -6,6 +6,7 @@ chapters:
   - installation.md
   - quickstart.md
   - Backends:
+    - backends/confluence.md
     - MkDocs: backends/mkdocs.md
     - backends/pandoc.md
     - backends/slate.md
