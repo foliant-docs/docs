@@ -1,5 +1,3 @@
 # Slate
 
-<include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.slate.git$README.md
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.slate.git" path="README.md" sethead="2" nohead="true"></include>

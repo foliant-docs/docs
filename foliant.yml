@@ -53,6 +53,8 @@ chapters:
     - config/from.md
     - config/slugs.md
 
+escape_code: true
+
 preprocessors:
   - macros:
       macros:
