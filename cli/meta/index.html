@@ -1157,17 +1157,6 @@
 </pre></div>
 
 
-<p>You can also specify metadata in the middle of the document. In this case it should appear just after a heading of any level:</p>
-<div class="codehilite"><pre><span></span><span class="c1">### System protocol description</span>
-
-<span class="nn">---</span>
-<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">System protocol</span>
-<span class="nt">relates</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MAIN_DOC</span>
-<span class="nn">---</span>
-</pre></div>
-
-
-<p>Each new metadata block means a new section of the chapter.</p>
 <h3 id="meta-generate-command"><code>meta generate</code> command<a class="headerlink" href="#meta-generate-command" title="Permanent link">&para;</a></h3>
 <h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h4>
 <p>To generate meta file run the <code>meta generate</code> command:</p>
@@ -1188,42 +1177,50 @@
 <dd>name of the YAML-file with generated project metadata.</dd>
 </dl>
 <h3 id="meta-preprocessor"><code>meta</code> preprocessor<a class="headerlink" href="#meta-preprocessor" title="Permanent link">&para;</a></h3>
-<p><code>meta</code> preprocessor is necessary if you add metadata into the middle of your documents: it removes the metadata blocks before building the document so it won't get to the result.</p>
+<p><code>meta</code> preprocessor allows you to remove metadata from your Markdown source files before build. It may be necessary if some backend doesn't accept the YAML Front Matter syntax.</p>
 <p>This preprocessor also offers you a feature which we call <em>seeds</em>:</p>
-<p>Seeds are little string templates which will appear after the metadata block in the resulting document, if specific keys were mentioned in the metadata. Details in the <strong>Seeds</strong> section.</p>
+<p>Seeds are little string templates which will may be used to add some text after the metadata block in the resulting document, if specific keys were mentioned in the metadata. Details in the <strong>Seeds</strong> section.</p>
 <h4 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h4>
 <p>Add <code>meta</code> preprocessor to your <code>preprocessors</code> section of foliant.yml and specify all your seeds:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">meta</span><span class="p">:</span>
+        <span class="nt">delete_meta</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">seeds</span><span class="p">:</span>
             <span class="nt">section</span><span class="p">:</span> <span class="s">&#39;*Section</span><span class="nv"> </span><span class="s">&quot;{value}&quot;*&#39;</span>
             <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;anchor&gt;{value}&lt;/anchor&gt;</span>
 </pre></div>
 
 
+<dl>
+<dt><code>delete_meta</code></dt>
+<dd>If set to <code>true</code> — metadata block will be deleted from the document before build. Default: <code>false</code></dd>
+<dt><code>seeds</code></dt>
+<dd>Seeds dictionary. Details in the next section.</dd>
+</dl>
 <h4 id="seeds">Seeds<a class="headerlink" href="#seeds" title="Permanent link">&para;</a></h4>
-<p>Seeds allow you to add small chunks of text based on specific keys mentioned in the metadata block. For example, if you wish to add a small subcaption at the beginning of every section, which will use this section's name, add a <code>section</code> seed:</p>
+<p>Seeds allow you to add small chunks of text based on specific keys mentioned in the metadata block. For example, if you wish to add a small subcaption at the beginning of the document, which will use this document's title, add the <code>title</code> seed:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">meta</span><span class="p">:</span>
         <span class="nt">seeds</span><span class="p">:</span>
-            <span class="nt">section</span><span class="p">:</span> <span class="s">&#39;*Section</span><span class="nv"> </span><span class="s">&quot;{value}&quot;*&#39;</span>
+            <span class="nt">title</span><span class="p">:</span> <span class="s">&#39;*Section</span><span class="nv"> </span><span class="s">&quot;{value}&quot;*&#39;</span>
 </pre></div>
 
 
 <p>If we have a meta block like this in our document:</p>
-<div class="codehilite"><pre><span></span><span class="c1">## Terms of use</span>
-<span class="nn">---</span>
+<div class="codehilite"><pre><span></span><span class="nn">---</span>
 <span class="nt">ID</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">legal_info</span>
 <span class="nt">relates</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-<span class="nt">section</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Legal information</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Legal information</span>
 <span class="nn">---</span>
+
+<span class="c1">## Terms of use</span>
 </pre></div>
 
 
-<p>Preprocessor will notice that <code>section</code> key was used in the meta block, and will add the seed with <code>{value}</code> placeholder replaced by the value of the <code>section</code> field:</p>
-<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Terms</span> <span class="k">of</span> <span class="n">use</span>
+<p>Preprocessor will notice that <code>title</code> key was used in the meta block, and will add the seed with <code>{value}</code> placeholder replaced by the value of the <code>title</code> field:</p>
+<div class="codehilite"><pre><span></span><span class="o">*</span><span class="n">Section</span> <span class="ss">&quot;Legal information&quot;</span>
 
-<span class="o">*</span><span class="n">Section</span> <span class="ss">&quot;Legal information&quot;</span>
+<span class="o">##</span> <span class="n">Terms</span> <span class="k">of</span> <span class="n">use</span>
 </pre></div>
                 
                   

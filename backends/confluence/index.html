@@ -333,37 +333,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#confluence_upload-backend-for-foliant" title="confluence_upload backend for Foliant" class="md-nav__link">
+    confluence_upload backend for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" title="Installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" title="Usage" class="md-nav__link">
     Usage
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" title="Config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#modes" title="Modes" class="md-nav__link">
+    Modes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-mode" title="single mode" class="md-nav__link">
+    single mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-mode" title="multiple mode" class="md-nav__link">
+    multiple mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#creating-pages-with-confluence_upload" title="Creating pages with confluence_upload" class="md-nav__link">
     Creating pages with confluence_upload
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#updating-pages-with-confluence_upload" title="Updating pages with confluence_upload" class="md-nav__link">
     Updating pages with confluence_upload
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -992,37 +1032,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#confluence_upload-backend-for-foliant" title="confluence_upload backend for Foliant" class="md-nav__link">
+    confluence_upload backend for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" title="Installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" title="Usage" class="md-nav__link">
     Usage
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" title="Config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#modes" title="Modes" class="md-nav__link">
+    Modes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-mode" title="single mode" class="md-nav__link">
+    single mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-mode" title="multiple mode" class="md-nav__link">
+    multiple mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#creating-pages-with-confluence_upload" title="Creating pages with confluence_upload" class="md-nav__link">
     Creating pages with confluence_upload
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#updating-pages-with-confluence_upload" title="Updating pages with confluence_upload" class="md-nav__link">
     Updating pages with confluence_upload
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1046,6 +1126,8 @@
                 
                 
                 <h1 id="confluence">Confluence<a class="headerlink" href="#confluence" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.confluence_upload.svg" /></p>
+<h2 id="confluence_upload-backend-for-foliant">confluence_upload backend for Foliant<a class="headerlink" href="#confluence_upload-backend-for-foliant" title="Permanent link">&para;</a></h2>
 <p>confluence_upload backend generates a confluence article and uploads it into your confluence server. With it you can create and edit pages in Confluence based on your Foliant project.</p>
 <p>It also has a feature of restoring the user inline comments, added for the article, even after the commented fragment was changed.</p>
 <p>This backend adds the <code>confluence</code> target for your Foliant <code>make</code> command.</p>
@@ -1055,10 +1137,10 @@
 
 
 <blockquote>
-<p>confluence_upload backend requires <a href="https://pandoc.org/">Pandoc</a> to be installed in your system.</p>
+<p>confluence_upload backend requires <a href="https://pandoc.org/">Pandoc</a> to be installed in your system. Pandoc is needed to convert Markdown into HTML.</p>
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To upload a Foliant project to Confluence server use this command:</p>
+<p>To upload a Foliant project to Confluence server use <code>make confluence</code> command:</p>
 <div class="codehilite"><pre><span></span>$ foliant make confluence
 Parsing config... Done
 Making confluence... Done
@@ -1075,10 +1157,13 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+    <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">single</span>
+    <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
     <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Title of the page</span>
     <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
     <span class="nt">parent_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124442</span>
+    <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
 </pre></div>
 
 
@@ -1086,23 +1171,74 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
 <dt><code>host</code></dt>
 <dd><strong>Required</strong> Host of your confluence server.</dd>
 <dt><code>login</code></dt>
-<dd><strong>Required</strong> Login of the user who has the rights to create and update pages.</dd>
+<dd>Login of the user who has the rights to create and update pages. If login is not supplied, it will be prompted during build</dd>
 <dt><code>password</code></dt>
-<dd><strong>Required</strong> Password of the user.</dd>
+<dd>Password of the user. If password is not supplied, it will be prompted during build</dd>
+<dt><code>mode</code></dt>
+<dd>One of: <code>single</code>, <code>multiple</code>. In single mode backend uploads the whole Foliant project into specified Confluence page. In multiple mode backend uploads several chapters into separate Confluecnce pages defined with metadata. More info in the <strong>Modes</strong> section. Default: <code>single</code>.</dd>
+<dt><code>toc</code></dt>
+<dd>Set to <code>true</code> to add table of contents into the beginning of the document. Default: <code>false</code></dd>
 <dt><code>id</code></dt>
-<dd>ID of the page into which the content will be uploaded. <em>Only for already existing pages</em></dd>
+<dd>ID of the page into which the content will be uploaded (use only with <code>single</code> mode). <em>Only for already existing pages</em></dd>
 <dt><code>title</code></dt>
-<dd>Title of the page to be created or updated.</dd>
+<dd>Title of the page to be created or updated (use only with <code>single</code> mode).</dd>
 </dl>
 <blockquote>
 <p>Remember that titles of the pages in one space are unique in Confluence.</p>
 </blockquote>
 <dl>
 <dt><code>space_key</code></dt>
-<dd>The key of the space where the page will be created/edited.</dd>
+<dd>The key of the space where the page(s) will be created/edited.</dd>
 <dt><code>parent_id</code></dt>
-<dd>ID of the parent page under which the new one should be created. <em>Only for not yet existing pages</em>.</dd>
+<dd>ID of the parent page under which the new one(s) should be created. <em>Only for not yet existing pages</em>.</dd>
+<dt><code>pandoc_path</code></dt>
+<dd>Path to Pandoc executable (Pandoc is used to convert Markdown into HTML).</dd>
 </dl>
+<h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h3>
+<p>Backend confluence_upload can work in two modes:</p>
+<p><code>single</code> — the whole project is flattened and uploaded into a single Confluence page;
+<code>multiple</code> — you may upload several chapters of your project into separate Confluence pages.</p>
+<h4 id="single-mode">single mode<a class="headerlink" href="#single-mode" title="Permanent link">&para;</a></h4>
+<p>To use single mode first supply an option <code>mode: single</code> in foliant.yml, and then specify all the page properties (id or title &amp; space) in the same foliant.yml config file. The project will be built, flattened into a single page and uploaded under the defined properties.</p>
+<h4 id="multiple-mode">multiple mode<a class="headerlink" href="#multiple-mode" title="Permanent link">&para;</a></h4>
+<p>With the power of multiple mode you may create or update several Confluence pages with just one <code>make</code> command.</p>
+<p>To switch on multiple mode, add an option <code>mode: multiple</code> to your foliant.yml file. Next, add properties defining the confluence page (like id or title &amp; space) to the meta section of each chapter that you want to upload.</p>
+<p>Meta section is a YAML field-value section in the beginning of the document, which is defined like this:</p>
+<div class="codehilite"><pre><span></span><span class="nn">---</span>
+<span class="nt">field</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
+<span class="nt">field2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
+<span class="nn">---</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Your chapter md-content</span>
+</pre></div>
+
+
+<p>So if you want to upload a chapter into confluence, add something like this into the beginning of it:</p>
+<div class="codehilite"><pre><span></span><span class="nn">---</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My confluence page</span>
+<span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
+<span class="nt">confluence</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>  <span class="c1"># this is required</span>
+<span class="nn">---</span>
+
+<span class="l l-Scalar l-Scalar-Plain">You chapter md-content</span>
+</pre></div>
+
+
+<blockquote>
+<p>Notice that we've also added a <code>confluence: true</code> key, which is required for chapter to be uploaded. If the key is <code>false</code> or is not defined, confluence_upload backend will ignore this chapter.</p>
+</blockquote>
+<p>After you've added properties to every page you want to be uploaded, run the same <code>make confluence</code> command:</p>
+<div class="codehilite"><pre><span></span>$ foliant make confluence
+Parsing config... Done
+Making confluence... Done
+────────────────────
+Result:
+https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</span><span class="m">1231</span>
+https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</span><span class="m">1232</span>
+https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</span><span class="m">1233</span>
+</pre></div>
+
+
 <h3 id="creating-pages-with-confluence_upload">Creating pages with confluence_upload<a class="headerlink" href="#creating-pages-with-confluence_upload" title="Permanent link">&para;</a></h3>
 <p>If you want a new page to be created for content in your Foliant project, just supply the title and the space key in the config. Remember that in Confluence page titles are unique inside one space. If you use a title of already existing page, confluence_upload will attempt to edit it and replace its content with your project.</p>
 <p>Example config for this situation is:</p>
