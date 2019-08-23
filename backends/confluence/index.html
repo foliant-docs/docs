@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.1">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -333,8 +333,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confluence_upload-backend-for-foliant" title="confluence_upload backend for Foliant" class="md-nav__link">
-    confluence_upload backend for Foliant
+  <a href="#confluence-backend-for-foliant" title="Confluence backend for Foliant" class="md-nav__link">
+    Confluence backend for Foliant
   </a>
   
     <nav class="md-nav">
@@ -389,15 +389,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-pages-with-confluence_upload" title="Creating pages with confluence_upload" class="md-nav__link">
-    Creating pages with confluence_upload
+  <a href="#creating-pages-with-confluence-backend" title="Creating pages with confluence backend" class="md-nav__link">
+    Creating pages with confluence backend
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#updating-pages-with-confluence_upload" title="Updating pages with confluence_upload" class="md-nav__link">
-    Updating pages with confluence_upload
+  <a href="#updating-pages-with-confluence-backend" title="Updating pages with confluence backend" class="md-nav__link">
+    Updating pages with confluence backend
   </a>
   
 </li>
@@ -1032,8 +1032,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confluence_upload-backend-for-foliant" title="confluence_upload backend for Foliant" class="md-nav__link">
-    confluence_upload backend for Foliant
+  <a href="#confluence-backend-for-foliant" title="Confluence backend for Foliant" class="md-nav__link">
+    Confluence backend for Foliant
   </a>
   
     <nav class="md-nav">
@@ -1088,15 +1088,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-pages-with-confluence_upload" title="Creating pages with confluence_upload" class="md-nav__link">
-    Creating pages with confluence_upload
+  <a href="#creating-pages-with-confluence-backend" title="Creating pages with confluence backend" class="md-nav__link">
+    Creating pages with confluence backend
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#updating-pages-with-confluence_upload" title="Updating pages with confluence_upload" class="md-nav__link">
-    Updating pages with confluence_upload
+  <a href="#updating-pages-with-confluence-backend" title="Updating pages with confluence backend" class="md-nav__link">
+    Updating pages with confluence backend
   </a>
   
 </li>
@@ -1126,18 +1126,18 @@
                 
                 
                 <h1 id="confluence">Confluence<a class="headerlink" href="#confluence" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.confluence_upload.svg" /></p>
-<h2 id="confluence_upload-backend-for-foliant">confluence_upload backend for Foliant<a class="headerlink" href="#confluence_upload-backend-for-foliant" title="Permanent link">&para;</a></h2>
-<p>confluence_upload backend generates a confluence article and uploads it into your confluence server. With it you can create and edit pages in Confluence based on your Foliant project.</p>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.confluence.svg" /></p>
+<h2 id="confluence-backend-for-foliant">Confluence backend for Foliant<a class="headerlink" href="#confluence-backend-for-foliant" title="Permanent link">&para;</a></h2>
+<p>Confluence backend generates a confluence article and uploads it into your confluence server. With it you can create and edit pages in Confluence based on your Foliant project.</p>
 <p>It also has a feature of restoring the user inline comments, added for the article, even after the commented fragment was changed.</p>
 <p>This backend adds the <code>confluence</code> target for your Foliant <code>make</code> command.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.confluence_upload
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.confluence
 </pre></div>
 
 
 <blockquote>
-<p>confluence_upload backend requires <a href="https://pandoc.org/">Pandoc</a> to be installed in your system. Pandoc is needed to convert Markdown into HTML.</p>
+<p>The backend requires <a href="https://pandoc.org/">Pandoc</a> to be installed in your system. Pandoc is needed to convert Markdown into HTML.</p>
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To upload a Foliant project to Confluence server use <code>make confluence</code> command:</p>
@@ -1151,9 +1151,9 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You have to set up a config for this backend to work properly.</p>
-<p>Specify all options in <code>backend_config.confluence_upload</code> section:</p>
+<p>Specify all options in <code>backend_config.confluence</code> section:</p>
 <div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence_upload</span><span class="p">:</span>
+  <span class="nt">confluence</span><span class="p">:</span>
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
@@ -1195,7 +1195,7 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
 <dd>Path to Pandoc executable (Pandoc is used to convert Markdown into HTML).</dd>
 </dl>
 <h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h3>
-<p>Backend confluence_upload can work in two modes:</p>
+<p>Backend confluence can work in two modes:</p>
 <p><code>single</code> — the whole project is flattened and uploaded into a single Confluence page;
 <code>multiple</code> — you may upload several chapters of your project into separate Confluence pages.</p>
 <h4 id="single-mode">single mode<a class="headerlink" href="#single-mode" title="Permanent link">&para;</a></h4>
@@ -1225,7 +1225,7 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
 
 
 <blockquote>
-<p>Notice that we've also added a <code>confluence: true</code> key, which is required for chapter to be uploaded. If the key is <code>false</code> or is not defined, confluence_upload backend will ignore this chapter.</p>
+<p>Notice that we've also added a <code>confluence: true</code> key, which is required for chapter to be uploaded. If the key is <code>false</code> or is not defined, the backend will ignore this chapter.</p>
 </blockquote>
 <p>After you've added properties to every page you want to be uploaded, run the same <code>make confluence</code> command:</p>
 <div class="codehilite"><pre><span></span>$ foliant make confluence
@@ -1239,11 +1239,11 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 </pre></div>
 
 
-<h3 id="creating-pages-with-confluence_upload">Creating pages with confluence_upload<a class="headerlink" href="#creating-pages-with-confluence_upload" title="Permanent link">&para;</a></h3>
-<p>If you want a new page to be created for content in your Foliant project, just supply the title and the space key in the config. Remember that in Confluence page titles are unique inside one space. If you use a title of already existing page, confluence_upload will attempt to edit it and replace its content with your project.</p>
+<h3 id="creating-pages-with-confluence-backend">Creating pages with confluence backend<a class="headerlink" href="#creating-pages-with-confluence-backend" title="Permanent link">&para;</a></h3>
+<p>If you want a new page to be created for content in your Foliant project, just supply the title and the space key in the config. Remember that in Confluence page titles are unique inside one space. If you use a title of already existing page, the backend will attempt to edit it and replace its content with your project.</p>
 <p>Example config for this situation is:</p>
 <div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence_upload</span><span class="p">:</span>
+  <span class="nt">confluence</span><span class="p">:</span>
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
@@ -1252,13 +1252,13 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 </pre></div>
 
 
-<p>Now if you change the title in your config, confluence_upload will <em>create a new page with the new title</em>, the old one remaining intact.</p>
+<p>Now if you change the title in your config, confluence will <em>create a new page with the new title</em>, the old one remaining intact.</p>
 <p>If you want to change the title of your page, the answer is in the following section.</p>
-<h3 id="updating-pages-with-confluence_upload">Updating pages with confluence_upload<a class="headerlink" href="#updating-pages-with-confluence_upload" title="Permanent link">&para;</a></h3>
+<h3 id="updating-pages-with-confluence-backend">Updating pages with confluence backend<a class="headerlink" href="#updating-pages-with-confluence-backend" title="Permanent link">&para;</a></h3>
 <p>Generally to update the page contents you may use the same config you used to create it (see previous section).</p>
 <p>Also, you can just specify the id of your page, this way after build its contents will be updated.</p>
 <div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence_upload</span><span class="p">:</span>
+  <span class="nt">confluence</span><span class="p">:</span>
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
@@ -1266,9 +1266,9 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 </pre></div>
 
 
-<p>This is also <em>the only</em> way to edit a page title. If <code>title</code> param is specified, confluence_upload will attempt to change the page's title to the new one:</p>
+<p>This is also <em>the only</em> way to edit a page title. If <code>title</code> param is specified, the backend will attempt to change the page's title to the new one:</p>
 <div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence_upload</span><span class="p">:</span>
+  <span class="nt">confluence</span><span class="p">:</span>
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
@@ -1353,7 +1353,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
