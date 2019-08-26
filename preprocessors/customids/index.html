@@ -1030,7 +1030,7 @@
 
 <dl>
 <dt><code>stylesheet_path</code></dt>
-<dd>Path to the CSS stylesheet file. This stylesheet should define rules for <code>.custom_id_anchor_container</code>, <code>.custom_id_anchor</code>, <code>.custom_id_anchor_first</code> and <code>.custom_id_anchor_ordinary</code> classes. Default path is <code>customids.css</code>. If stylesheet file does not exist, default built-in stylesheet will be used.</dd>
+<dd>Path to the CSS stylesheet file. This stylesheet should define rules for <code>.custom_id_anchor_container</code>, <code>.custom_id_anchor_container_level_N</code>, <code>.custom_id_anchor</code>, and <code>.custom_id_anchor_level_N</code> classes. Here <code>N</code> is the heading level (<code>1</code> to <code>6</code>). Default path is <code>customids.css</code>. If stylesheet file does not exist, default built-in stylesheet will be used.</dd>
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
@@ -1039,22 +1039,22 @@
 
 <span class="n">A</span> <span class="n">paragraph</span><span class="p">.</span>
 
-<span class="o">###</span> <span class="n">Ordinary</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_second_heading</span><span class="err">}</span>
+<span class="o">###</span> <span class="k">Second</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_second_heading</span><span class="err">}</span>
 
 <span class="k">Some</span> <span class="n">another</span> <span class="n">paragraph</span><span class="p">.</span>
 </pre></div>
 
 
 <p>This Markdown source will be finally transformed into the HTML code:</p>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_first_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_first&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_first_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>First Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_second_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_ordinary&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_second_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Ordinary Heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Second Heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some another paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
