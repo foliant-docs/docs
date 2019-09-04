@@ -2,73 +2,123 @@ title: &title Foliant
 slug: foliant-docs
 
 chapters:
-  - index.md
-  - installation.md
-  - quickstart.md
-  - Backends:
-    - backends/confluence.md
-    - MkDocs: backends/mkdocs.md
-    - backends/pandoc.md
-    - backends/slate.md
-  - Preprocessors:
-    - General Notes: preprocessors/general_notes.md
-    - preprocessors/admonitions.md
-    - preprocessors/anchors.md
-    - preprocessors/apilinks.md
-    - preprocessors/badges.md
-    - preprocessors/bindsympli.md
-    - preprocessors/blockdiag.md
-    - preprocessors/csvtables.md
-    - preprocessors/customids.md
-    - preprocessors/epsconvert.md
-    - preprocessors/escapecode.md
-    - preprocessors/flags.md
-    - preprocessors/flatten.md
-    - preprocessors/graphviz.md
-    - preprocessors/imagemagick.md
-    - preprocessors/imgcaptions.md
-    - preprocessors/includes.md
-    - preprocessors/macros.md
-    - preprocessors/mermaid.md
-    - preprocessors/multilinetables.md
-    - preprocessors/pgsqldoc.md
-    - preprocessors/plantuml.md
-    - preprocessors/replace.md
-    - preprocessors/repolink.md
-    - preprocessors/runcommands.md
-    - preprocessors/swaggerdoc.md
-    - preprocessors/templateparser.md
-    - preprocessors/testrail.md
-  - CLI Extensions:
-    - cli/bump.md
-    - cli/gupload.md
-    - cli/meta.md
-    - cli/project_graph.md
-    - Init: cli/init/index.md
-    - Init Templates:
-      - cli/init/templates/preprocessor.md
-    - cli/src.md
-    - cli/subset.md
-  - Config Extensions:
-    - config/from.md
-    - config/slugs.md
+    - index.md
+    - installation.md
+    - quickstart.md
+    - Backends:
+        - backends/confluence.md
+        - MkDocs: backends/mkdocs.md
+        - backends/pandoc.md
+        - backends/slate.md
+    - Preprocessors:
+        - General Notes: preprocessors/general_notes.md
+        - preprocessors/admonitions.md
+        - preprocessors/anchors.md
+        - preprocessors/apilinks.md
+        - preprocessors/badges.md
+        - preprocessors/bindsympli.md
+        - preprocessors/blockdiag.md
+        - preprocessors/csvtables.md
+        - preprocessors/customids.md
+        - preprocessors/epsconvert.md
+        - preprocessors/escapecode.md
+        - preprocessors/flags.md
+        - preprocessors/flatten.md
+        - preprocessors/graphviz.md
+        - preprocessors/history.md
+        - preprocessors/imagemagick.md
+        - preprocessors/imgcaptions.md
+        - preprocessors/includes.md
+        - preprocessors/macros.md
+        - preprocessors/mermaid.md
+        - preprocessors/multilinetables.md
+        - preprocessors/pgsqldoc.md
+        - preprocessors/plantuml.md
+        - preprocessors/replace.md
+        - preprocessors/repolink.md
+        - preprocessors/runcommands.md
+        - preprocessors/swaggerdoc.md
+        - preprocessors/templateparser.md
+        - preprocessors/testrail.md
+    - CLI Extensions:
+        - cli/bump.md
+        - cli/gupload.md
+        - cli/meta.md
+        - cli/project_graph.md
+        - Init: cli/init/index.md
+        - Init Templates:
+            - cli/init/templates/preprocessor.md
+        - cli/src.md
+        - cli/subset.md
+    - Config Extensions:
+        - config/from.md
+        - config/slugs.md
+    - History of Releases: releases.md
 
 preprocessors:
-  - macros:
-      macros:
-        ref: <if backends="pandoc">{pandoc}</if><if backends="mkdocs">{mkdocs}</if>
-  - flags
-  - includes
+    - macros:
+            macros:
+                ref: <if backends="pandoc">{pandoc}</if><if backends="mkdocs">{mkdocs}</if>
+    - flags
+    - includes
+    - history:
+        link: true
+        repos:
+            - https://github.com/foliant-docs/foliant.git
+            - https://github.com/foliant-docs/foliantcontrib.admonitions.git
+            - https://github.com/foliant-docs/foliantcontrib.anchors.git
+            - https://github.com/foliant-docs/foliantcontrib.apilinks.git
+            - https://github.com/foliant-docs/foliantcontrib.badges.git
+            - https://github.com/foliant-docs/foliantcontrib.bindsympli.git
+            - https://github.com/foliant-docs/foliantcontrib.blockdiag.git
+            - https://github.com/foliant-docs/foliantcontrib.bump.git
+            - https://github.com/foliant-docs/foliantcontrib.confluence.git
+            - https://github.com/foliant-docs/foliantcontrib.csvtables.git
+            - https://github.com/foliant-docs/foliantcontrib.customids.git
+            - https://github.com/foliant-docs/foliantcontrib.docus.git
+            - https://github.com/foliant-docs/foliantcontrib.epsconvert.git
+            - https://github.com/foliant-docs/foliantcontrib.escapecode.git
+            - https://github.com/foliant-docs/foliantcontrib.flags.git
+            - https://github.com/foliant-docs/foliantcontrib.flatten.git
+            - https://github.com/foliant-docs/foliantcontrib.graphviz.git
+            - https://github.com/foliant-docs/foliantcontrib.gupload.git
+            - https://github.com/foliant-docs/foliantcontrib.history.git
+            - https://github.com/foliant-docs/foliantcontrib.imagemagick.git
+            - https://github.com/foliant-docs/foliantcontrib.imgcaptions.git
+            - https://github.com/foliant-docs/foliantcontrib.includes.git
+            - https://github.com/foliant-docs/foliantcontrib.init.git
+            - https://github.com/foliant-docs/foliantcontrib.macros.git
+            - https://github.com/foliant-docs/foliantcontrib.mermaid.git
+            - https://github.com/foliant-docs/foliantcontrib.meta.git
+            - https://github.com/foliant-docs/foliantcontrib.mkdocs.git
+            - https://github.com/foliant-docs/foliantcontrib.multilinetables.git
+            - https://github.com/foliant-docs/foliantcontrib.multiproject.git
+            - https://github.com/foliant-docs/foliantcontrib.notifier.git
+            - https://github.com/foliant-docs/foliantcontrib.pandoc.git
+            - https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git
+            - https://github.com/foliant-docs/foliantcontrib.plantuml.git
+            - https://github.com/foliant-docs/foliantcontrib.project_graph.git
+            - https://github.com/foliant-docs/foliantcontrib.replace.git
+            - https://github.com/foliant-docs/foliantcontrib.runcommands.git
+            - https://github.com/foliant-docs/foliantcontrib.slate.git
+            - https://github.com/foliant-docs/foliantcontrib.slugs.git
+            - https://github.com/foliant-docs/foliantcontrib.subset.git
+            - https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git
+            - https://github.com/foliant-docs/foliantcontrib.templateparser.git
+            - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
+            - https://github.com/foliant-docs/foliantcontrib.testrail.git
+            - https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
+            - https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git
 
 backend_config:
-  pandoc:
-    template: !path template/docs.tex
-    vars:
-      title: *title
-      subtitle: User's Manual
-      logo: !path template/octopus-black-512.png
-    params:
-      pdf_engine: xelatex
-      listings: true
-  mkdocs:
-    mkdocs.yml: !include mkdocs.yml
+    pandoc:
+        template: !path template/docs.tex
+        vars:
+            title: *title
+            subtitle: User’s Manual
+            logo: !path template/octopus-black-512.png
+        params:
+            pdf_engine: xelatex
+            listings: true
+    mkdocs:
+        mkdocs.yml: !include mkdocs.yml
