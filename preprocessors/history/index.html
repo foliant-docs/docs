@@ -1042,7 +1042,7 @@
                 
                 
                 <h1 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h1>
-<p>History is a preprocessor that generates single linear history of releases for multiple Git repositories based on their changelogs.</p>
+<p>History is a preprocessor that generates single linear history of releases for multiple Git repositories based on their changelogs. The history may be represented as Markdown, and as RSS feed.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.history
 </pre></div>
@@ -1064,8 +1064,14 @@
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">target_top_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">date_format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">year_first</span>
-    <span class="nt">link</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+    <span class="nt">link</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="nt">rss</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">rss_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rss.xml</span>
+    <span class="nt">rss_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">History of Releases</span>
+    <span class="nt">rss_link</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+    <span class="nt">rss_description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+    <span class="nt">rss_language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en-US</span>
 </pre></div>
 
 
@@ -1084,17 +1090,29 @@ repos:
 <dt><code>changelog</code></dt>
 <dd>Path to changelog file. Changelogs must be located at the same paths in all listed repositories.</dd>
 <dt><code>title</code></dt>
-<dd>Content of the top-level heading of the history.</dd>
+<dd>Content of the top-level heading of the target Markdown content of generated history.</dd>
 <dt><code>source_heading_level</code></dt>
 <dd>Level of headings that precede descriptions of releases in the source Markdown content. It must be the same for all listed repositories.</dd>
 <dt><code>target_top_level</code></dt>
-<dd>Level of the heading that contains <code>title</code> in the target Markdown content of generated history.</dd>
+<dd>Level of the heading that contains the <code>title</code> value in the target Markdown content of generated history.</dd>
 <dt><code>date_format</code></dt>
-<dd>Output date format. If the default value <code>year_first</code> is used, dates are represented as <code>2019-09-04</code>. If the <code>day_first</code> value is used, dates are represented as <code>04.09.2019</code>.</dd>
+<dd>Output date format to use in the target Markdown content. If the default value <code>year_first</code> is used, the date “September 4, 2019” will be represented as <code>2019-09-04</code>. If the <code>day_first</code> value is used, this date will be represented as <code>04.09.2019</code>.</dd>
 <dt><code>link</code></dt>
-<dd>Flag that tells the preprocessor to add the link to the repository to each heading of history item.</dd>
+<dd>Flag that tells the preprocessor to add the link to the repository to each heading of history item in the target Markdown content.</dd>
 <dt><code>limit</code></dt>
-<dd>Maximum number of items to include into the history; <code>0</code> means no limit.</dd>
+<dd>Maximum number of items to include into the target Markdown content; <code>0</code> means no limit.</dd>
+<dt><code>rss</code></dt>
+<dd>Flag that tells the preprocessor to export the history into RSS feed. Note that the parameters <code>title</code>, <code>target_top_level</code>, <code>date_format</code>, <code>link</code>, and <code>limit</code> are applied to Markdown content only, not to RSS feed content.</dd>
+<dt><code>rss_file</code></dt>
+<dd>Subpath to the file with RSS feed. It’s relative to the temporary working directory during building, to the directory of built project after building, and to the <code>rss_link</code> value in URLs.</dd>
+<dt><code>rss_title</code></dt>
+<dd>RSS channel title.</dd>
+<dt><code>rss_link</code></dt>
+<dd>RSS channel link, e.g. <code>https://foliant-docs.github.io/docs/</code>. If the <code>rss</code> parameter value is <code>rss.xml</code>, the RSS feed URL will be <code>https://foliant-docs.github.io/docs/rss.xml</code>.</dd>
+<dt><code>rss_description</code></dt>
+<dd>RSS channel description.</dd>
+<dt><code>rss_language</code></dt>
+<dd>RSS channel language.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert some history into Markdown content, use the <code>&lt;history&gt;&lt;/history&gt;</code> tags:</p>
@@ -1108,7 +1126,16 @@ More optional content.
 
 <p>If no attributes specified, the values of options from the project config will be used.</p>
 <p>You may override each config option value with the attribute of the same name. Example:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;history</span> <span class="na">repos=</span><span class="s">&quot;https://github.com/foliant-docs/foliantcontrib.mkdocs.git&quot;</span> <span class="na">revision=</span><span class="s">&quot;develop&quot;</span> <span class="na">link=</span><span class="s">&quot;True&quot;</span> <span class="na">limit=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;&lt;/history&gt;</span>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;history</span>
+    <span class="na">repos=</span><span class="s">&quot;https://github.com/foliant-docs/foliantcontrib.mkdocs.git&quot;</span>
+    <span class="na">revision=</span><span class="s">&quot;develop&quot;</span>
+    <span class="na">link=</span><span class="s">&quot;true&quot;</span>
+    <span class="na">limit=</span><span class="s">&quot;5&quot;</span>
+    <span class="na">rss=</span><span class="s">&quot;true&quot;</span>
+    <span class="na">rss_file=</span><span class="s">&quot;some_another.xml&quot;</span>
+    <span class="err">...</span>
+<span class="nt">&gt;</span>
+<span class="nt">&lt;/history&gt;</span>
 </pre></div>
                 
                   
