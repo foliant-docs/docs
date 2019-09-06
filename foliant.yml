@@ -63,6 +63,10 @@ preprocessors:
     - includes
     - history:
         link: true
+        rss: true
+        rss_link: https://foliant-docs.github.io/docs/
+        rss_title: Foliant Releases History
+        rss_description: Releases of Foliant documentation authoring tool and its extensions.
         repos:
             - https://github.com/foliant-docs/foliant.git
             - https://github.com/foliant-docs/foliantcontrib.admonitions.git

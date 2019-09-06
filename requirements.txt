@@ -1,5 +1,5 @@
 foliantcontrib.flags >= 1.0.1
-foliantcontrib.history >= 1.0.0
+foliantcontrib.history >= 1.0.1
 foliantcontrib.includes >= 1.1.6
 foliantcontrib.macros >= 1.0.3
 foliantcontrib.mkdocs >= 1.0.2
