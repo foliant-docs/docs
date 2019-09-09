@@ -3,6 +3,7 @@ repo_url: https://github.com/foliant-docs/docs
 edit_uri: edit/master/src/
 theme:
   name: material
+  custom_dir: !path ./theme/
   palette:
     primary: "rgba(0, 0, 0, 0.87)"
     accent: light blue
