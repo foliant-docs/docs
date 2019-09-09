@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.history 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#3bb44d8c906097d33b65a06aeafb1033</guid>
+            <pubDate>Mon, 09 Sep 2019 14:02:11 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Do not generate common top-level heading of target Markdown content.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.history 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.history.git#de57ef0e1b2402e7058e159fbc2b2fa7</guid>

@@ -1060,9 +1060,8 @@
     <span class="nt">repos</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
     <span class="nt">revision</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
     <span class="nt">changelog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog.md</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">History of Releases</span>
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">target_top_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">target_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">date_format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">year_first</span>
     <span class="nt">link</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
@@ -1089,12 +1088,10 @@ repos:
 <dd>Revision or branch name to use. Branches that are used for stable releases must have the same names in all listed repositories.</dd>
 <dt><code>changelog</code></dt>
 <dd>Path to changelog file. Changelogs must be located at the same paths in all listed repositories.</dd>
-<dt><code>title</code></dt>
-<dd>Content of the top-level heading of the target Markdown content of generated history.</dd>
 <dt><code>source_heading_level</code></dt>
 <dd>Level of headings that precede descriptions of releases in the source Markdown content. It must be the same for all listed repositories.</dd>
-<dt><code>target_top_level</code></dt>
-<dd>Level of the heading that contains the <code>title</code> value in the target Markdown content of generated history.</dd>
+<dt><code>target_heading_level</code></dt>
+<dd>Level of headings that precede descriptions of releases in the target Markdown content of generated history.</dd>
 <dt><code>date_format</code></dt>
 <dd>Output date format to use in the target Markdown content. If the default value <code>year_first</code> is used, the date “September 4, 2019” will be represented as <code>2019-09-04</code>. If the <code>day_first</code> value is used, this date will be represented as <code>04.09.2019</code>.</dd>
 <dt><code>link</code></dt>
@@ -1102,7 +1099,7 @@ repos:
 <dt><code>limit</code></dt>
 <dd>Maximum number of items to include into the target Markdown content; <code>0</code> means no limit.</dd>
 <dt><code>rss</code></dt>
-<dd>Flag that tells the preprocessor to export the history into RSS feed. Note that the parameters <code>title</code>, <code>target_top_level</code>, <code>date_format</code>, <code>link</code>, and <code>limit</code> are applied to Markdown content only, not to RSS feed content.</dd>
+<dd>Flag that tells the preprocessor to export the history into RSS feed. Note that the parameters <code>target_heading_level</code>, <code>date_format</code>, <code>link</code>, and <code>limit</code> are applied to Markdown content only, not to RSS feed content.</dd>
 <dt><code>rss_file</code></dt>
 <dd>Subpath to the file with RSS feed. It’s relative to the temporary working directory during building, to the directory of built project after building, and to the <code>rss_link</code> value in URLs.</dd>
 <dt><code>rss_title</code></dt>
