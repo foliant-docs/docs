@@ -9,8 +9,8 @@ theme:
   font:
     text: PT Sans
     code: PT Mono
-  logo: assets/octopus-white.svg
-  favicon: assets/octopus-black-32.ico
+  logo: assets/images/octopus-white.svg
+  favicon: assets/images/octopus-black-32.ico
 extra:
   social:
     - type: github

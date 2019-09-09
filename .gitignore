@@ -1,4 +1,8 @@
-.*cache
-*.mkdocs
-*.pdf
-*.mkdocs.src
+/.*cache/
+/*.pre/
+/*.pdf
+/*.docx
+/*.mkdocs/
+/*.mkdocs.src/
+/*.log
+.DS_Store
