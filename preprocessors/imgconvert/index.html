@@ -36,7 +36,7 @@
     
     
       
-        <title>Flatten - Foliant</title>
+        <title>ImgConvert - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#flatten" tabindex="1" class="md-skip">
+      <a href="#imgconvert" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Flatten
+                ImgConvert
               
             </span>
           
@@ -522,56 +522,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Flatten
-      </label>
-    
-    <a href="./" title="Flatten" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../flatten/" title="Flatten" class="md-nav__link">
       Flatten
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -627,11 +582,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../imgconvert/" title="ImgConvert" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ImgConvert
+      </label>
+    
+    <a href="./" title="ImgConvert" class="md-nav__link md-nav__link--active">
       ImgConvert
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1038,37 +1038,56 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/flatten.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/imgconvert.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="flatten">Flatten<a class="headerlink" href="#flatten" title="Permanent link">&para;</a></h1>
-<p>This preprocessor converts a Foliant project source directory into a single Markdown file containing all the sources, preserving order and inheritance.</p>
-<p>This preprocessor is used by backends that require a single Markdown file as input instead of a directory. The Pandoc backend is one such example.</p>
+                <h1 id="imgconvert">ImgConvert<a class="headerlink" href="#imgconvert" title="Permanent link">&para;</a></h1>
+<p>ImgConvert is a tool to convert images from an arbitrary format into PNG.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.flatten
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.imgconvert
 </pre></div>
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>This preprocessor is required by Pandoc backend, so if you use it, you don't need to install Flatten or enable it in the project config manually.</p>
-<p>However, it's still a regular preprocessor, and you can run it manually by listing it in <code>preprocessors</code>:</p>
+<p>To enable the preprocessor, add <code>imgconvert</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flatten</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imgconvert</span>
 </pre></div>
 
 
-<p>The preprocessor has only one option—<code>flat_src_file_name</code>. It's the name of the flattened file that is created in the tmp directory:</p>
+<p>The preprocessor has a number of options with the following default values:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">flatten</span><span class="p">:</span>
-      <span class="nt">flat_src_file_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flattened.md</span>
+    <span class="p p-Indicator">-</span> <span class="nt">imgconvert</span><span class="p">:</span>
+        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
+        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.imgconvertcache</span>
+        <span class="nt">image_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">formats</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
 </pre></div>
 
 
-<p>Default value is <code>__all__.md</code>.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>Flatten preprocessor uses includes, so when you install Pandoc backend, Includes preprocessor will also be installed, along with Flatten.</p>
-</blockquote>
+<dl>
+<dt><code>convert_path</code></dt>
+<dd>Path to <code>convert</code> binary. By default, it is assumed that you have this command in <code>PATH</code>. <a href="https://imagemagick.org/">ImageMagick</a> must be installed.</dd>
+<dt><code>cache_dir</code></dt>
+<dd>Directory to store processed images. They may be reused later.</dd>
+<dt><code>image_width</code></dt>
+<dd>Width of PNG images in pixels. By default (in case when the value is <code>0</code>), the width of each image is set by ImageMagick automatically. Default behavior is recommended. If the width is given explicitly, file size may increase.</dd>
+<dt><code>formats</code></dt>
+<dd>Settings that apply to each format of source images.</dd>
+</dl>
+<p>The <code>formats</code> option may be used to define lists of targets for each format. If targets for a format are not specified explicitly, the preprocessor will be applied to all targets.</p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><span class="nt">formats</span><span class="p">:</span>
+    <span class="nt">eps</span><span class="p">:</span>
+        <span class="nt">targets</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
+    <span class="nt">svg</span><span class="p">:</span>
+        <span class="nt">targets</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
+</pre></div>
+
+
+<p>Formats should be named in lowercase.</p>
                 
                   
                 
@@ -1089,7 +1108,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../flags/" title="Flags" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../imgcaptions/" title="ImgCaptions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1098,19 +1117,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Flags
+                ImgCaptions
               </span>
             </div>
           </a>
         
         
-          <a href="../graphviz/" title="Graphviz" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../includes/" title="Includes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Graphviz
+                Includes
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
