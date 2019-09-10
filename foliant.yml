@@ -91,6 +91,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.history.git
             - https://github.com/foliant-docs/foliantcontrib.imagemagick.git
             - https://github.com/foliant-docs/foliantcontrib.imgcaptions.git
+            - https://github.com/foliant-docs/foliantcontrib.imgconvert.git
             - https://github.com/foliant-docs/foliantcontrib.includes.git
             - https://github.com/foliant-docs/foliantcontrib.init.git
             - https://github.com/foliant-docs/foliantcontrib.macros.git
