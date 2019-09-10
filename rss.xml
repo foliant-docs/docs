@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.epsconvert 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.epsconvert.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#9b966ddd4c21233e076b8b301a6e6c93</guid>
+            <pubDate>Tue, 10 Sep 2019 17:50:20 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix image reference detection pattern, other minor fixes.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.history 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.history.git#3bb44d8c906097d33b65a06aeafb1033</guid>
