@@ -28,6 +28,7 @@ chapters:
         - preprocessors/history.md
         - preprocessors/imagemagick.md
         - preprocessors/imgcaptions.md
+        - preprocessors/imgconvert.md
         - preprocessors/includes.md
         - preprocessors/macros.md
         - preprocessors/mermaid.md
