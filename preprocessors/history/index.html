@@ -1076,15 +1076,16 @@
     <span class="nt">changelog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog.md</span>
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">target_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">target_heading_template</span><span class="p">:</span> <span class="s">&#39;[%date%]</span><span class="nv"> </span><span class="s">[%repo%](%link%)</span><span class="nv"> </span><span class="s">%version%&#39;</span>
     <span class="nt">date_format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">year_first</span>
-    <span class="nt">link</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
     <span class="nt">rss</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">rss_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rss.xml</span>
-    <span class="nt">rss_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">History of Releases</span>
+    <span class="nt">rss_title</span><span class="p">:</span> <span class="s">&#39;History</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Releases&#39;</span>
     <span class="nt">rss_link</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
     <span class="nt">rss_description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
     <span class="nt">rss_language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">en-US</span>
+    <span class="nt">rss_item_title_template</span><span class="p">:</span> <span class="s">&#39;%repo%</span><span class="nv"> </span><span class="s">%version%&#39;</span>
 </pre></div>
 
 
@@ -1106,14 +1107,14 @@ repos:
 <dd>Level of headings that precede descriptions of releases in the source Markdown content. It must be the same for all listed repositories.</dd>
 <dt><code>target_heading_level</code></dt>
 <dd>Level of headings that precede descriptions of releases in the target Markdown content of generated history.</dd>
+<dt><code>target_heading_template</code></dt>
+<dd>Template for top-level headings in the target Markdown content. You may use any characters, and the variables: <code>%date%</code>—date, <code>%repo%</code>—repo name, <code>%link%</code>—repo URL, <code>%version%</code>—content of source changelog heading (usually includes release version).</dd>
 <dt><code>date_format</code></dt>
 <dd>Output date format to use in the target Markdown content. If the default value <code>year_first</code> is used, the date “September 4, 2019” will be represented as <code>2019-09-04</code>. If the <code>day_first</code> value is used, this date will be represented as <code>04.09.2019</code>.</dd>
-<dt><code>link</code></dt>
-<dd>Flag that tells the preprocessor to add the link to the repository to each heading of history item in the target Markdown content.</dd>
 <dt><code>limit</code></dt>
 <dd>Maximum number of items to include into the target Markdown content; <code>0</code> means no limit.</dd>
 <dt><code>rss</code></dt>
-<dd>Flag that tells the preprocessor to export the history into RSS feed. Note that the parameters <code>target_heading_level</code>, <code>date_format</code>, <code>link</code>, and <code>limit</code> are applied to Markdown content only, not to RSS feed content.</dd>
+<dd>Flag that tells the preprocessor to export the history into RSS feed. Note that the parameters <code>target_heading_level</code>, <code>target_heading_template</code>, <code>date_format</code>, and <code>limit</code> are applied to Markdown content only, not to RSS feed content.</dd>
 <dt><code>rss_file</code></dt>
 <dd>Subpath to the file with RSS feed. It’s relative to the temporary working directory during building, to the directory of built project after building, and to the <code>rss_link</code> value in URLs.</dd>
 <dt><code>rss_title</code></dt>
@@ -1124,6 +1125,8 @@ repos:
 <dd>RSS channel description.</dd>
 <dt><code>rss_language</code></dt>
 <dd>RSS channel language.</dd>
+<dt><code>rss_item_title_template</code></dt>
+<dd>Template for titles of RSS feed items. You may use any characters, and the variables: <code>%repo%</code>—repo name, <code>%version%</code>—content of source changelog heading (usually includes release version).</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert some history into Markdown content, use the <code>&lt;history&gt;&lt;/history&gt;</code> tags:</p>
@@ -1140,7 +1143,6 @@ More optional content.
 <div class="codehilite"><pre><span></span><span class="nt">&lt;history</span>
     <span class="na">repos=</span><span class="s">&quot;https://github.com/foliant-docs/foliantcontrib.mkdocs.git&quot;</span>
     <span class="na">revision=</span><span class="s">&quot;develop&quot;</span>
-    <span class="na">link=</span><span class="s">&quot;true&quot;</span>
     <span class="na">limit=</span><span class="s">&quot;5&quot;</span>
     <span class="na">rss=</span><span class="s">&quot;true&quot;</span>
     <span class="na">rss_file=</span><span class="s">&quot;some_another.xml&quot;</span>

@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.history 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#a44a54261907279f1099093d36673412</guid>
+            <pubDate>Fri, 13 Sep 2019 14:35:53 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add templates for target Markdown headings and RSS items titles.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.history 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#fee1070a3bd82d0c25b0c8c54b6e3a59</guid>
+            <pubDate>Fri, 13 Sep 2019 13:12:47 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Escape regex metacharacters in headings.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.epsconvert 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.epsconvert.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#9b966ddd4c21233e076b8b301a6e6c93</guid>
