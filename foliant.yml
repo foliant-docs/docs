@@ -64,7 +64,6 @@ preprocessors:
     - includes
     - history:
         target_heading_level: 2
-        link: true
         rss: true
         rss_link: https://foliant-docs.github.io/docs/
         rss_title: Foliant Releases History
