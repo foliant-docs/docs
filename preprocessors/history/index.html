@@ -1056,7 +1056,7 @@
                 
                 
                 <h1 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h1>
-<p>History is a preprocessor that generates single linear history of releases for multiple Git repositories based on their changelogs. The history may be represented as Markdown, and as RSS feed.</p>
+<p>History is a preprocessor that generates single linear history of releases for multiple Git repositories based on their changelog files, tags, or commits. The history may be represented as Markdown, and as RSS feed.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.history
 </pre></div>
@@ -1073,6 +1073,7 @@
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">history</span><span class="p">:</span>
     <span class="nt">repos</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
     <span class="nt">revision</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+    <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog</span>
     <span class="nt">changelog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog.md</span>
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">target_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
@@ -1101,6 +1102,8 @@ repos:
 </dd>
 <dt><code>revision</code></dt>
 <dd>Revision or branch name to use. Branches that are used for stable releases must have the same names in all listed repositories.</dd>
+<dt><code>from</code></dt>
+<dd>Data source to generate history: <code>changelog</code>—changelog file, <code>tags</code>—tags, <code>commits</code>—all commits. Data sources of the same type will be used for all listed repositories.</dd>
 <dt><code>changelog</code></dt>
 <dd>Path to changelog file. Changelogs must be located at the same paths in all listed repositories.</dd>
 <dt><code>source_heading_level</code></dt>
@@ -1108,7 +1111,7 @@ repos:
 <dt><code>target_heading_level</code></dt>
 <dd>Level of headings that precede descriptions of releases in the target Markdown content of generated history.</dd>
 <dt><code>target_heading_template</code></dt>
-<dd>Template for top-level headings in the target Markdown content. You may use any characters, and the variables: <code>%date%</code>—date, <code>%repo%</code>—repo name, <code>%link%</code>—repo URL, <code>%version%</code>—content of source changelog heading (usually includes release version).</dd>
+<dd>Template for top-level headings in the target Markdown content. You may use any characters, and the variables: <code>%date%</code>—date, <code>%repo%</code>—repo name, <code>%link%</code>—repo URL, <code>%version%</code>—version data (content of source changelog heading, tag value, or commit hash).</dd>
 <dt><code>date_format</code></dt>
 <dd>Output date format to use in the target Markdown content. If the default value <code>year_first</code> is used, the date “September 4, 2019” will be represented as <code>2019-09-04</code>. If the <code>day_first</code> value is used, this date will be represented as <code>04.09.2019</code>.</dd>
 <dt><code>limit</code></dt>
@@ -1126,7 +1129,7 @@ repos:
 <dt><code>rss_language</code></dt>
 <dd>RSS channel language.</dd>
 <dt><code>rss_item_title_template</code></dt>
-<dd>Template for titles of RSS feed items. You may use any characters, and the variables: <code>%repo%</code>—repo name, <code>%version%</code>—content of source changelog heading (usually includes release version).</dd>
+<dd>Template for titles of RSS feed items. You may use any characters, and the variables: <code>%repo%</code>—repo name, <code>%version%</code>—version data.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert some history into Markdown content, use the <code>&lt;history&gt;&lt;/history&gt;</code> tags:</p>

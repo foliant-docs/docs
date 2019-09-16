@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.history 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#50986d8e939f7157a1878f91a344539d</guid>
+            <pubDate>Mon, 16 Sep 2019 15:35:28 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix some regex patterns.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.history 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#de93df0c54f5d46646e6f606793a8b70</guid>
+            <pubDate>Mon, 16 Sep 2019 14:35:51 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow to generate history based on tags and commits.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.history 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.history.git#a44a54261907279f1099093d36673412</guid>
