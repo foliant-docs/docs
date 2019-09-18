@@ -1073,6 +1073,8 @@
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">history</span><span class="p">:</span>
     <span class="nt">repos</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
     <span class="nt">revision</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+    <span class="nt">name_from_readme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">readme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
     <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog</span>
     <span class="nt">changelog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog.md</span>
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
@@ -1102,6 +1104,10 @@ repos:
 </dd>
 <dt><code>revision</code></dt>
 <dd>Revision or branch name to use. Branches that are used for stable releases must have the same names in all listed repositories.</dd>
+<dt><code>name_from_readme</code></dt>
+<dd>Flag that tells the preprocessor to try to use the content of the first heading of README file in each listed repository as the repo name. If the flag set to <code>false</code>, or an attempt to get the first heading content is unsuccessful, the repo name will be based on the repo URL.</dd>
+<dt><code>readme</code></dt>
+<dd>Path to README file. README files must be located at the same paths in all listed repositories.</dd>
 <dt><code>from</code></dt>
 <dd>Data source to generate history: <code>changelog</code>—changelog file, <code>tags</code>—tags, <code>commits</code>—all commits. Data sources of the same type will be used for all listed repositories.</dd>
 <dt><code>changelog</code></dt>
