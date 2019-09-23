@@ -7,6 +7,26 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.5.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#136672a1f6ca89de19d654bbf468eb1b</guid>
+            <pubDate>Thu, 19 Sep 2019 13:54:50 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Completely rewrite restoring inline comments feature.</li>
+<li>Add <code>restore_comments</code> and <code>resolve_if_changed</code> emergency options.</li>
+<li>Allow insert raw confluence code (macros, etc) inside <code>&lt;raw_confluence&gt;</code> tag.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.history 1.0.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#e74d8dad5d5cd8d8ecc49f93f0fc7b38</guid>
+            <pubDate>Thu, 19 Sep 2019 13:47:54 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow to ignore merge commits in <code>from: commits</code> mode.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.history 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.history.git#b4184ae1d0533d99f1ca966cb92dd60d</guid>

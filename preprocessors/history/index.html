@@ -1076,6 +1076,7 @@
     <span class="nt">name_from_readme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">readme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">README.md</span>
     <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog</span>
+    <span class="nt">merge_commits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">changelog</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">changelog.md</span>
     <span class="nt">source_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="nt">target_heading_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
@@ -1110,6 +1111,8 @@ repos:
 <dd>Path to README file. README files must be located at the same paths in all listed repositories.</dd>
 <dt><code>from</code></dt>
 <dd>Data source to generate history: <code>changelog</code>—changelog file, <code>tags</code>—tags, <code>commits</code>—all commits. Data sources of the same type will be used for all listed repositories.</dd>
+<dt><code>merge_commits</code></dt>
+<dd>Flag that tells the preprocessor to include merge commits into history when <code>from: commits</code> is used.</dd>
 <dt><code>changelog</code></dt>
 <dd>Path to changelog file. Changelogs must be located at the same paths in all listed repositories.</dd>
 <dt><code>source_heading_level</code></dt>

@@ -404,6 +404,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#inserting-raw-confluence-tags" class="md-nav__link">
+    Inserting raw confluence tags
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1139,6 +1146,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#inserting-raw-confluence-tags" class="md-nav__link">
+    Inserting raw confluence tags
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1202,6 +1216,8 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
     <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
     <span class="nt">parent_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124442</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+    <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 
 
@@ -1231,6 +1247,10 @@ Result: https://my_confluence_server.org/pages/viewpage.action?pageId<span class
 <dd>ID of the parent page under which the new one(s) should be created. <em>Only for not yet existing pages</em>.</dd>
 <dt><code>pandoc_path</code></dt>
 <dd>Path to Pandoc executable (Pandoc is used to convert Markdown into HTML).</dd>
+<dt><code>restore_comments</code></dt>
+<dd>Attempt to restore inline comments near the same places after updating the page. Default: <code>true</code></dd>
+<dt><code>resolve_if_changed</code></dt>
+<dd>Delete inline comment from the source if the commented text was changed. This will automatically mark comment as resolved. Default: <code>false</code></dd>
 </dl>
 <h3 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h3>
 <p>Backend confluence can work in two modes:</p>
@@ -1312,6 +1332,17 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
     <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
     <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">New unique title</span>
+</pre></div>
+
+
+<h3 id="inserting-raw-confluence-tags">Inserting raw confluence tags<a class="headerlink" href="#inserting-raw-confluence-tags" title="Permanent link">&para;</a></h3>
+<p>If you want to add confluence macros to your article, or any other storage-specific html, you may do it by defining them inside the <code>&lt;raw_confluence&gt;&lt;/raw_confluence&gt;</code> tag.</p>
+<p>For example, if you wish to add a table of contents, but want it to be in the middle of the document for some reason, you can do something like this:</p>
+<div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorem nulla quam doloribus delectus voluptate.
+
+<span class="nt">&lt;raw_confluence&gt;&lt;ac:structured-macro</span> <span class="na">ac:macro-id=</span><span class="s">&quot;1&quot;</span> <span class="na">ac:name=</span><span class="s">&quot;toc&quot;</span> <span class="na">ac:schema-version=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;&lt;/raw_confluence&gt;</span>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam cumque soluta sequi blanditiis, voluptatibus quaerat similique nihil debitis repellendus.
 </pre></div>
                 
                   
