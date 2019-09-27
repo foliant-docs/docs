@@ -460,52 +460,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Blockdiag
-      </label>
-    
     <a href="./" title="Blockdiag" class="md-nav__link md-nav__link--active">
       Blockdiag
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -578,6 +535,18 @@
   <li class="md-nav__item">
     <a href="../flatten/" title="Flatten" class="md-nav__link">
       Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
     </a>
   </li>
 
@@ -1012,36 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1056,105 +995,9 @@
                 
                 
                 <h1 id="blockdiag">Blockdiag<a class="headerlink" href="#blockdiag" title="Permanent link">&para;</a></h1>
-<p><a href="http://blockdiag.com/">Blockdiag</a> is a tool to generate diagrams from plain text. This preprocessor finds diagram definitions in the source and converts them into images on the fly during project build. It supports all Blockdiag flavors: blockdiag, seqdiag, actdiag, and nwdiag.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.blockdiag
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>blockdiag</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">blockdiag</span><span class="p">:</span>
-      <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
-      <span class="nt">blockdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
-      <span class="nt">seqdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seqdiag</span>
-      <span class="nt">actdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actdiag</span>
-      <span class="nt">nwdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nwdiag</span>
-      <span class="nt">params</span><span class="p">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
-</pre></div>
-
-
-<dl>
-<dt><code>cache_dir</code></dt>
-<dd>
-<p>Path to the directory with the generated diagrams. It can be a path relative to the project root or a global one; you can use <code>~/</code> shortcut.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>To save time during build, only new and modified diagrams are rendered. The generated images are cached and reused in future builds.</p>
-</blockquote>
-</dd>
-<dt><code>*_path</code></dt>
-<dd>Paths to the <code>blockdiag</code>, <code>seqdiag</code>, <code>actdiag</code>, and <code>nwdiag</code> binaries. By default, it is assumed that you have these commands in <code>PATH</code>, but if they're installed in a custom place, you can define it here.</dd>
-<dt><code>params</code></dt>
-<dd>
-<p>Params passed to the image generation commands (<code>blockdiag</code>, <code>seqdiag</code>, etc.). Params should be defined by their long names, with dashes replaced with underscores (e.g. <code>--no-transparency</code> becomes <code>no_transparency</code>); also, <code>-T</code> param is called <code>format</code> for readability:</p>
-<div class="codehilite"><pre><span></span><span class="n">preprocessors</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">blockdiag</span><span class="p">:</span>
-      <span class="n">params</span><span class="p">:</span>
-        <span class="n">antialias</span><span class="p">:</span> <span class="k">true</span>
-        <span class="n">font</span><span class="p">:</span> <span class="o">!</span><span class="n">path</span> <span class="n">Anonymous_pro</span><span class="p">.</span><span class="n">ttf</span>
-</pre></div>
-
-
-<p>To see the full list of params, run <code>blockdiag -h</code>.</p>
-</dd>
-</dl>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;blockdiag&gt;...&lt;/blockdiag&gt;</code>, <code>&lt;seqdiag&gt;...&lt;/seqdiag&gt;</code>, <code>&lt;actdiag&gt;...&lt;/actdiag&gt;</code>, or <code>&lt;nwdiag&gt;...&lt;/nwdiag&gt;</code> tags (indentation inside tags is optional):</p>
-<div class="codehilite"><pre><span></span>Here&#39;s a block diagram:
-
-<span class="nt">&lt;blockdiag&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
-
-Here&#39;s a sequence diagram:
-
-<span class="nt">&lt;seqdiag&gt;</span>
-  seqdiag {
-    browser  -&gt; webserver [label = &quot;GET /index.html&quot;];
-    browser <span class="nt">&lt;--</span> <span class="err">webserver;</span>
-    <span class="err">browser</span>  <span class="err">-</span><span class="nt">&gt;</span> webserver [label = &quot;POST /blog/comment&quot;];
-                webserver  -&gt; database [label = &quot;INSERT comment&quot;];
-                webserver <span class="nt">&lt;--</span> <span class="err">database;</span>
-    <span class="err">browser</span> <span class="err">&lt;--</span> <span class="err">webserver;</span>
-  <span class="err">}</span>
-<span class="err">&lt;/seqdiag</span><span class="nt">&gt;</span>
-</pre></div>
-
-
-<p>To set a caption, use <code>caption</code> option:</p>
-<div class="codehilite"><pre><span></span>Diagram with a caption:
-
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;Sample diagram from the official site&quot;</span><span class="nt">&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
-</pre></div>
-
-
-<p>You can override <code>params</code> values from the preprocessor config for each diagram:</p>
-<div class="codehilite"><pre><span></span>By default, diagrams are in png. But this diagram is in svg:
-
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;High-quality diagram&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
-</pre></div>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.blockdiag.git$README.md
+</include></p>
                 
                   
                 

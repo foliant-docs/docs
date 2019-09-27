@@ -472,59 +472,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        CSVTables
-      </label>
-    
     <a href="./" title="CSVTables" class="md-nav__link md-nav__link--active">
       CSVTables
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -585,6 +535,18 @@
   <li class="md-nav__item">
     <a href="../flatten/" title="Flatten" class="md-nav__link">
       Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
     </a>
   </li>
 
@@ -1019,43 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1070,84 +995,9 @@
                 
                 
                 <h1 id="csvtables">CSVTables<a class="headerlink" href="#csvtables" title="Permanent link">&para;</a></h1>
-<p>This preprocessor converts csv data to markdown tables.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.csvtables
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor with default options, add <code>csvtables</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">csvtables</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options (default values stated below):</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">csvtables</span><span class="p">:</span>
-        <span class="nt">delimiter</span><span class="p">:</span> <span class="s">&#39;;&#39;</span>
-        <span class="nt">padding_symbol</span><span class="p">:</span> <span class="s">&#39;</span><span class="nv"> </span><span class="s">&#39;</span>
-        <span class="nt">paddings_number</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-</pre></div>
-
-
-<dl>
-<dt><code>delimiter</code></dt>
-<dd>Delimiter of csv data.</dd>
-<dt><code>padding_symbol</code></dt>
-<dd>Symbol combination that will be places around datum (reversed on the right side).</dd>
-<dt><code>paddings_number</code></dt>
-<dd>Symbol combination multiplier.</dd>
-</dl>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>You can place csv data in <code>csvtable</code> tag.</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;csvtable&gt;</span>
-    Header 1;Header 2;Header 3;Header 4;Header 5
-    Datum 1;Datum 2;Datum 3;Datum 4;Datum 5
-    Datum 6;Datum 7;Datum 8;Datum 9;Datum 10
-<span class="nt">&lt;/csvtable&gt;</span>
-</pre></div>
-
-
-<p>Or in external <code>file.csv</code>.</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;csvtable</span> <span class="na">src=</span><span class="s">&quot;table.csv&quot;</span><span class="nt">&gt;&lt;/csvtable&gt;</span>
-</pre></div>
-
-
-<p>You can reassign setting for certain csv tables.</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;csvtable</span> <span class="na">delimiter=</span><span class="s">&quot;:&quot;</span> <span class="na">padding_symbol=</span><span class="s">&quot; *&quot;</span><span class="nt">&gt;</span>
-    Header 1:Header 2:Header 3:Header 4:Header 5
-    Datum 1:Datum 2:Datum 3:Datum 4:Datum 5
-    Datum 6:Datum 7:Datum 8:Datum 9:Datum 10
-<span class="nt">&lt;/csvtable&gt;</span>
-</pre></div>
-
-
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<p><code>Usage</code> section will be converted to this:</p>
-<p>You can place csv data in <code>csvtable</code> tag.</p>
-<div class="codehilite"><pre><span></span><span class="o">|</span> <span class="n">Header</span> <span class="mi">1</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">5</span> <span class="o">|</span>
-<span class="o">|</span><span class="c1">----------|----------|----------|----------|----------|</span>
-<span class="o">|</span> <span class="n">Datum</span> <span class="mi">1</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">2</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">3</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">4</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">5</span>  <span class="o">|</span>
-<span class="o">|</span> <span class="n">Datum</span> <span class="mi">6</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">7</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">8</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">9</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">10</span> <span class="o">|</span>
-</pre></div>
-
-
-<p>Or in external <code>file.csv</code>.</p>
-<div class="codehilite"><pre><span></span><span class="o">|</span> <span class="n">Header</span> <span class="mi">1</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">Header</span> <span class="mi">5</span> <span class="o">|</span>
-<span class="o">|</span><span class="c1">----------|----------|----------|----------|----------|</span>
-<span class="o">|</span> <span class="n">Datum</span> <span class="mi">1</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">2</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">3</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">4</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">5</span>  <span class="o">|</span>
-<span class="o">|</span> <span class="n">Datum</span> <span class="mi">6</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">7</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">8</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">9</span>  <span class="o">|</span> <span class="n">Datum</span> <span class="mi">10</span> <span class="o">|</span>
-</pre></div>
-
-
-<p>You can reassign setting for certain csv tables.</p>
-<div class="codehilite"><pre><span></span><span class="o">|</span> <span class="o">*</span><span class="n">Header</span> <span class="mi">1</span><span class="o">*</span> <span class="o">|</span> <span class="o">*</span><span class="n">Header</span> <span class="mi">2</span><span class="o">*</span> <span class="o">|</span> <span class="o">*</span><span class="n">Header</span> <span class="mi">3</span><span class="o">*</span> <span class="o">|</span> <span class="o">*</span><span class="n">Header</span> <span class="mi">4</span><span class="o">*</span> <span class="o">|</span> <span class="o">*</span><span class="n">Header</span> <span class="mi">5</span><span class="o">*</span> <span class="o">|</span>
-<span class="o">|</span><span class="c1">------------|------------|------------|------------|------------|</span>
-<span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">1</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">2</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">3</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">4</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">5</span><span class="o">*</span>  <span class="o">|</span>
-<span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">6</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">7</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">8</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">9</span><span class="o">*</span>  <span class="o">|</span> <span class="o">*</span><span class="n">Datum</span> <span class="mi">10</span><span class="o">*</span> <span class="o">|</span>
-</pre></div>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.csvtables.git$README.md
+</include></p>
                 
                   
                 

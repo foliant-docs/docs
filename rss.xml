@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.flatten 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#05beb8ca02466f69be84f2c51a838cee</guid>
+            <pubDate>Thu, 26 Sep 2019 12:22:33 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add the <code>keep_sources</code> option to keep original files in the temporary working directory after flattening.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.5.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#136672a1f6ca89de19d654bbf468eb1b</guid>

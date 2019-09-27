@@ -536,6 +536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
@@ -676,65 +688,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Replace
-      </label>
-    
     <a href="./" title="Replace" class="md-nav__link md-nav__link--active">
       Replace
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dictionary-format" class="md-nav__link">
-    Dictionary format
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1025,49 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dictionary-format" class="md-nav__link">
-    Dictionary format
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1082,47 +995,9 @@
                 
                 
                 <h1 id="replace">Replace<a class="headerlink" href="#replace" title="Permanent link">&para;</a></h1>
-<p>Replace preprocessor reads the dictionary (yaml format) placed in foliant project folder and changes one word to another in created document.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.replace
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>replace</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">replace</span>
-</pre></div>
-
-
-<p>The preprocessor has two options (default values stated):</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
-      <span class="nt">dictionary_filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">replace_dictionary.yml</span>
-      <span class="nt">with_confirmation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-</pre></div>
-
-
-<dl>
-<dt><code>dictionary_filename</code></dt>
-<dd>File in foliant project folder with dictionary in it (<em>replace_dictionary.yml</em> by default).</dd>
-<dt><code>with_confirmation</code></dt>
-<dd>if <code>true</code> you will be prompted to confirm any changes.</dd>
-</dl>
-<h4 id="dictionary-format">Dictionary format<a class="headerlink" href="#dictionary-format" title="Permanent link">&para;</a></h4>
-<p>Dictionary stores data in yaml format. It has two sections — with words and with regular expressions. You can pass the lambda function in <code>regexs</code> section. For example:</p>
-<div class="codehilite"><pre><span></span><span class="nt">words</span><span class="p">:</span>
-  <span class="nt">cod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CoD</span>
-  <span class="nt">epg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EPG</span>
-  <span class="nt">vod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VoD</span>
-<span class="nt">regexs</span><span class="p">:</span>
-  <span class="s">&#39;!\w*!&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#39;</span>
-  <span class="s">&#39;\.</span><span class="nv"> </span><span class="s">*(\w)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;lambda</span><span class="nv"> </span><span class="s">x:</span><span class="nv"> </span><span class="s">x.group(0).upper()&#39;</span>
-</pre></div>
-
-
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Just add the preprocessor to the project config, set the dictionary and enjoy the result.</p>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.replace.git$README.md
+</include></p>
                 
                   
                 

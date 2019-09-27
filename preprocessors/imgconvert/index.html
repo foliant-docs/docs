@@ -536,6 +536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
@@ -592,45 +604,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        ImgConvert
-      </label>
-    
     <a href="./" title="ImgConvert" class="md-nav__link md-nav__link--active">
       ImgConvert
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1005,29 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1042,52 +995,9 @@
                 
                 
                 <h1 id="imgconvert">ImgConvert<a class="headerlink" href="#imgconvert" title="Permanent link">&para;</a></h1>
-<p>ImgConvert is a tool to convert images from an arbitrary format into PNG.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.imgconvert
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>imgconvert</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imgconvert</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options with the following default values:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">imgconvert</span><span class="p">:</span>
-        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.imgconvertcache</span>
-        <span class="nt">image_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-        <span class="nt">formats</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
-</pre></div>
-
-
-<dl>
-<dt><code>convert_path</code></dt>
-<dd>Path to <code>convert</code> binary. By default, it is assumed that you have this command in <code>PATH</code>. <a href="https://imagemagick.org/">ImageMagick</a> must be installed.</dd>
-<dt><code>cache_dir</code></dt>
-<dd>Directory to store processed images. They may be reused later.</dd>
-<dt><code>image_width</code></dt>
-<dd>Width of PNG images in pixels. By default (in case when the value is <code>0</code>), the width of each image is set by ImageMagick automatically. Default behavior is recommended. If the width is given explicitly, file size may increase.</dd>
-<dt><code>formats</code></dt>
-<dd>Settings that apply to each format of source images.</dd>
-</dl>
-<p>The <code>formats</code> option may be used to define lists of targets for each format. If targets for a format are not specified explicitly, the preprocessor will be applied to all targets.</p>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="nt">formats</span><span class="p">:</span>
-    <span class="nt">eps</span><span class="p">:</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
-    <span class="nt">svg</span><span class="p">:</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
-</pre></div>
-
-
-<p>Formats should be named in lowercase.</p>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.imgconvert.git$README.md
+</include></p>
                 
                   
                 

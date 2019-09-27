@@ -400,78 +400,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Admonitions
-      </label>
-    
     <a href="./" title="Admonitions" class="md-nav__link md-nav__link--active">
       Admonitions
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#admonitions-preprocessor-for-foliant" class="md-nav__link">
-    Admonitions preprocessor for Foliant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes-for-slate" class="md-nav__link">
-    Notes for slate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -604,6 +535,18 @@
   <li class="md-nav__item">
     <a href="../flatten/" title="Flatten" class="md-nav__link">
       Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
     </a>
   </li>
 
@@ -1038,62 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#admonitions-preprocessor-for-foliant" class="md-nav__link">
-    Admonitions preprocessor for Foliant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes-for-slate" class="md-nav__link">
-    Notes for slate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1108,73 +995,9 @@
                 
                 
                 <h1 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.admonitions.svg" /></p>
-<h2 id="admonitions-preprocessor-for-foliant">Admonitions preprocessor for Foliant<a class="headerlink" href="#admonitions-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
-<p>Preprocessor which tries to make admonitions syntax available for most backends.</p>
-<p>Admonitions are decorated fragments of text which indicate a warning, notice, tip, etc.</p>
-<p>We use <a href="https://python-markdown.github.io/extensions/admonition/">rST-style syntax for admonitions</a> which is already supported by mkdocs backend with <code>admonition</code> extension turned on. This preprocessor makes this syntax work for pandoc and slate backends.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.admonitions
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>Just add <code>admonitions</code> into your preprocessors list. Right now the preprocessor doesn't have any options:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonitions</span>
-</pre></div>
-
-
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Add an admonition to your Markdown file:</p>
-<div class="codehilite"><pre><span></span><span class="o">!!!</span> <span class="n">warning</span> <span class="ss">&quot;optional admonition title&quot;</span>
-    <span class="n">Admonition</span> <span class="nb">text</span><span class="p">.</span>
-
-    <span class="n">May</span> <span class="n">be</span> <span class="n">several</span> <span class="n">paragraphs</span><span class="p">.</span>
-</pre></div>
-
-
-<h4 id="notes-for-slate">Notes for slate<a class="headerlink" href="#notes-for-slate" title="Permanent link">&para;</a></h4>
-<p>Slate has its own admonitions syntax of three types: <code>notice</code> (blue notes), <code>warning</code> (red warnings) and <code>success</code> (green notes). If another type is supplied, slate draws a blue note but without the "i" icon.</p>
-<p>Admonitions preprocessor transforms some of the general admonition types into slate's for convenience (so you could use <code>error</code> type to display same kind of note in both slate and mkdocs). These translations are indicated in the table below:</p>
-<table>
-<thead>
-<tr>
-<th>original type</th>
-<th>translates to</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>error</td>
-<td>warning</td>
-</tr>
-<tr>
-<td>danger</td>
-<td>warning</td>
-</tr>
-<tr>
-<td>caution</td>
-<td>warning</td>
-</tr>
-<tr>
-<td>info</td>
-<td>notice</td>
-</tr>
-<tr>
-<td>note</td>
-<td>notice</td>
-</tr>
-<tr>
-<td>tip</td>
-<td>notice</td>
-</tr>
-<tr>
-<td>hint</td>
-<td>notice</td>
-</tr>
-</tbody>
-</table>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.admonitions.git$README.md
+</include></p>
                 
                   
                 

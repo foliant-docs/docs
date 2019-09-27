@@ -328,86 +328,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MkDocs
-      </label>
-    
     <a href="./" title="MkDocs" class="md-nav__link md-nav__link--active">
       MkDocs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preprocessor" class="md-nav__link">
-    Preprocessor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fenced-code-is-not-rendered-in-list-items-or-blockquotes" class="md-nav__link">
-    Fenced Code Is Not Rendered in List Items or Blockquotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paragraphs-inside-list-items-are-rendered-on-the-root-level" class="md-nav__link">
-    Paragraphs Inside List Items Are Rendered on the Root Level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -612,6 +535,18 @@
   <li class="md-nav__item">
     <a href="../../preprocessors/flatten/" title="Flatten" class="md-nav__link">
       Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preprocessors/glossary/" title="Glossary" class="md-nav__link">
+      Glossary
     </a>
   </li>
 
@@ -1046,70 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#preprocessor" class="md-nav__link">
-    Preprocessor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fenced-code-is-not-rendered-in-list-items-or-blockquotes" class="md-nav__link">
-    Fenced Code Is Not Rendered in List Items or Blockquotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paragraphs-inside-list-items-are-rendered-on-the-root-level" class="md-nav__link">
-    Paragraphs Inside List Items Are Rendered on the Root Level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1124,102 +995,9 @@
                 
                 
                 <h1 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h1>
-<p>MkDocs backend lets you build websites from Foliant projects using <a href="https://mkdocs.org">MkDocs</a> static site generator.</p>
-<p>The backend adds three targets: <code>mkdocs</code>, <code>site</code>, and <code>ghp</code>. The first one converts a Foliant project into a MkDocs project without building any html files. The second one builds a standalone website. The last one deploys the website to GitHub Pages.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.mkdocs
-</pre></div>
-
-
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Convert Foliant project to MkDocs:</p>
-<div class="codehilite"><pre><span></span>$ foliant make mkdocs -p my-project
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making mkdocs with MkDocs
-─────────────────────
-Result: My_Project-2017-12-04.mkdocs.src
-</pre></div>
-
-
-<p>Build a standalone website:</p>
-<div class="codehilite"><pre><span></span>$ foliant make site -p my-project
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making site with MkDocs
-─────────────────────
-Result: My_Project-2017-12-04.mkdocs
-</pre></div>
-
-
-<p>Deploy to GitHub Pages:</p>
-<div class="codehilite"><pre><span></span>$ foliant make ghp -p my-project
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making ghp with MkDocs
-─────────────────────
-Result: https://account-name.github.io/my-project/
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>You don't have to put anything in the config to use MkDocs backend. If it's installed, Foliant detects it.</p>
-<p>To customize the output, use options in <code>backend_config.mkdocs</code> section:</p>
-<div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">mkdocs</span><span class="p">:</span>
-    <span class="nt">mkdocs_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
-    <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_awesome_project</span>
-    <span class="nt">use_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">use_chapters</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">use_headings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">default_subsection_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Expand</span>
-    <span class="nt">mkdocs.yml</span><span class="p">:</span>
-      <span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Custom Title</span>
-      <span class="nt">site_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com</span>
-      <span class="nt">site_author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">John Smith</span>
-</pre></div>
-
-
-<dl>
-<dt><code>mkdocs_path</code></dt>
-<dd>Path to the MkDocs executable. By default, <code>mkdocs</code> command is run, which implies it's somewhere in your <code>PATH</code>.</dd>
-<dt><code>slug</code></dt>
-<dd>Result directory name without suffix (e.g. <code>.mkdocs</code>). Overrides top-level config option <code>slug</code>.</dd>
-<dt><code>use_title</code></dt>
-<dd>
-<p>If <code>true</code>, use <code>title</code> value from <code>foliant.yml</code> as <code>site_name</code> in <code>mkdocs.yml</code>. It this case, you don't have to specify <code>site_name</code> in <code>mkdocs.yml</code> section. If you do, the value from <code>mkdocs.yml</code> section has higher priority.</p>
-<p>If <code>false</code>, you <em>must</em> specify <code>site_name</code> manually, otherwise MkDocs will not be able to build the site.</p>
-<p>Default is <code>true</code>.</p>
-</dd>
-<dt><code>use_chapters</code></dt>
-<dd>Similar to <code>use_title</code>, but for <code>pages</code>. If <code>true</code>, <code>chapters</code> value from <code>foliant.yml</code> is used as <code>pages</code> in <code>mkdocs.yml</code>.</dd>
-<dt><code>use_headings</code></dt>
-<dd>If <code>true</code>, the resulting data of <code>pages</code> section in <code>mkdocs.yml</code> will be updated with the content of top-level headings of source Markdown files.</dd>
-<dt><code>default_subsection_title</code></dt>
-<dd>Default title of a subsection, i.e. a group of nested chapters, in case the title is specified as an empty string. If <code>default_subsection_title</code> is not set in the config, <strong>…</strong> will be used.</dd>
-<dt><code>mkdocs.yml</code></dt>
-<dd>Params to be copied into <code>mkdocs.yml</code> file. The params are passed “as is,” so you should consult with the <a href="http://www.mkdocs.org/user-guide/configuration/">MkDocs configuration docs</a>.</dd>
-</dl>
-<h3 id="preprocessor">Preprocessor<a class="headerlink" href="#preprocessor" title="Permanent link">&para;</a></h3>
-<p>MkDocs backend ships with a preprocessor that transforms a Foliant project into a MkDocs one. Basically, <code>foliant make mkdocs</code> just applies the preprocessor.</p>
-<p>The preprocessor is invoked automatically when you run MkDocs backend, so you don't have to add it in <code>preprocessors</code> section manually.</p>
-<p>However, it's just a regular preprocessor like any other, so you can call it manually if necessary:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">mkdocs</span><span class="p">:</span>
-      <span class="nt">mkdocs_project_dir_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
-</pre></div>
-
-
-<dl>
-<dt><code>mkdocs_project_dir_name</code></dt>
-<dd>Name of the directory for the generated MkDocs project within the tmp directory.</dd>
-</dl>
-<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
-<h4 id="fenced-code-is-not-rendered-in-list-items-or-blockquotes">Fenced Code Is Not Rendered in List Items or Blockquotes<a class="headerlink" href="#fenced-code-is-not-rendered-in-list-items-or-blockquotes" title="Permanent link">&para;</a></h4>
-<p>MkDocs can't handle fenced code blocks in blockquotes or list items due to an <a href="https://github.com/Python-Markdown/markdown/issues/53">issue in Python Markdown</a>.</p>
-<p>Unfortunately, nothing can be done about it, either on MkDocs's or Foliant's part. As a workaround, use <a href="https://daringfireball.net/projects/markdown/syntax#precode">indented code blocks</a>.</p>
-<h4 id="paragraphs-inside-list-items-are-rendered-on-the-root-level">Paragraphs Inside List Items Are Rendered on the Root Level<a class="headerlink" href="#paragraphs-inside-list-items-are-rendered-on-the-root-level" title="Permanent link">&para;</a></h4>
-<p>Check if you use <strong>four-space indentation</strong>. <a href="https://pythonhosted.org/Markdown/index.html#differences">Python Markdown is stern about this point</a>.</p>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.mkdocs.git$README.md
+</include></p>
                 
                   
                 

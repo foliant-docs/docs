@@ -536,6 +536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
@@ -568,52 +580,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        ImageMagick
-      </label>
-    
     <a href="./" title="ImageMagick" class="md-nav__link md-nav__link--active">
       ImageMagick
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1012,36 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1056,54 +995,9 @@
                 
                 
                 <h1 id="imagemagick">ImageMagick<a class="headerlink" href="#imagemagick" title="Permanent link">&para;</a></h1>
-<p>This tool provides additional processing of images that referred in Markdown source, with <a href="https://imagemagick.org/">ImageMagick</a>.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.imagemagick
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>imagemagick</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imagemagick</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options with the following default values:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">imagemagick</span><span class="p">:</span>
-        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.imagemagickcache</span>
-</pre></div>
-
-
-<dl>
-<dt><code>convert_path</code></dt>
-<dd>Path to <code>convert</code> binary, a part of ImageMagick.</dd>
-<dt><code>cache_dir</code></dt>
-<dd>Directory to store processed images. These files can be reused later.</dd>
-</dl>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Suppose you want to apply the following command to your picture <code>image.eps</code>:</p>
-<div class="codehilite"><pre><span></span>$ convert image.eps -resize <span class="m">600</span> -background Orange label:<span class="s1">&#39;Picture&#39;</span> +swap -gravity Center -append image.jpg
-</pre></div>
-
-
-<p>This command takes the source EPS image <code>image.eps</code>, resizes it, puts a text label over the picture, and writes the result into new file <code>image.jpg</code>. The suffix of output file name specifies that the image must be converted into JPEG format.</p>
-<p>To use the ImageMagick preprocessor to do the same, enclose one or more image references in your Markdown source between <code>&lt;magick&gt;</code> and <code>&lt;/magick&gt;</code> tags.</p>
-<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">magick</span> <span class="n">command_params</span><span class="o">=</span><span class="s">&quot;-resize 600 -background Orange label:&#39;Picture&#39; +swap -gravity Center -append&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
-</pre></div>
-
-
-<p>Use <code>output_format</code> attribute to specify the suffix of output file name. The whole output file name will be generated automatically.</p>
-<p>Use <code>command_params</code> attribute to specify the string of parameters that should be passed to ImageMagick <code>convert</code> binary.</p>
-<p>Instead of using <code>command_params</code> attribute, you may specify each parameter as its own attribute with the same name:</p>
-<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">magick</span> <span class="n">resize</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="n">background</span><span class="o">=</span><span class="s">&quot;Orange label:&#39;Picture&#39; +swap&quot;</span> <span class="n">gravity</span><span class="o">=</span><span class="s">&quot;Center&quot;</span> <span class="n">append</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
-</pre></div>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.imagemagick.git$README.md
+</include></p>
                 
                   
                 

@@ -536,6 +536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
@@ -1042,49 +1054,18 @@
                 
                 
                 <h1 id="repolink">RepoLink<a class="headerlink" href="#repolink" title="Permanent link">&para;</a></h1>
-<p>This preprocessor allows to add into each Markdown source a hyperlink to the related file in Git repository. The hyperlink appears after the first heading of the document.</p>
-<p>The preprocessor emulates MkDocs behavior and supports the same options <code>repo_url</code> and <code>edit_uri</code> as MkDocs. Applying of the preprocessor to subprojects allows to get links to separate repositories from different pages of a single site (or a single MkDocs project).</p>
+<p><include nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#RepoLink Preprocessor:Usage of the Preprocessor
+</include></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>RepoLink preprocessor is a part of MultiProject extension:</p>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multiproject
-</pre></div>
-
-
+<p><include nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#Installation:Config Extension to Resolve the <code>!from</code> Tag
+</include></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>To enable the preprocessor, add <code>repolink</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">repolink</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">repolink</span><span class="p">:</span>
-        <span class="nt">repo_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs/</span>
-        <span class="nt">edit_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/blob/master/src/</span>
-        <span class="nt">link_text</span><span class="p">:</span> <span class="s">&quot;&amp;#xE3C9;&quot;</span>
-        <span class="nt">link_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">View the source file</span>
-        <span class="nt">link_html_attributes</span><span class="p">:</span> <span class="s">&quot;class=\&quot;md-icon</span><span class="nv"> </span><span class="s">md-content__icon\&quot;</span><span class="nv"> </span><span class="s">style=\&quot;margin:</span><span class="nv"> </span><span class="s">-7.5rem</span><span class="nv"> </span><span class="s">0\&quot;&quot;</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
-</pre></div>
-
-
-<dl>
-<dt><code>repo_url</code></dt>
-<dd>URL of the related repository. Default value is an empty string; in this case the preprocessor does not apply. Trailing slashes do not affect.</dd>
-<dt><code>edit_uri</code></dt>
-<dd>Revision-dependent part of URL of each file in the repository. Default value is <code>/blob/master/src/</code>. Leading and trailing slashes do not affect.</dd>
-<dt><code>link_text</code></dt>
-<dd>Hyperlink text. Default value is <code>Edit this page</code>.</dd>
-<dt><code>link_title</code></dt>
-<dd>Hyperlink title (the value of <code>title</code> HTML attribute). Default value is also <code>Edit this page</code>.</dd>
-<dt><code>link_html_attributes</code></dt>
-<dd>Additional HTML attributes for the hyperlink. By using CSS in combination with <code>class</code> attribute, and/or <code>style</code> attribute, you may customize the presentation of your hyperlinks. Default value is an empty string.</dd>
-<dt><code>targets</code></dt>
-<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
-</dl>
-<p>You may override the value of the <code>edit_uri</code> config option with the <code>FOLIANT_REPOLINK_EDIT_URI</code> system environment variable. It can be useful in some non-stable testing or staging environments.</p>
+<p><include nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#Usage of the Preprocessor
+</include></p>
                 
                   
                 

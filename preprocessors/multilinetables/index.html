@@ -536,6 +536,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
@@ -640,52 +652,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MultilineTables
-      </label>
-    
     <a href="./" title="MultilineTables" class="md-nav__link md-nav__link--active">
       MultilineTables
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1012,36 +981,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1056,55 +995,9 @@
                 
                 
                 <h1 id="multilinetables">MultilineTables<a class="headerlink" href="#multilinetables" title="Permanent link">&para;</a></h1>
-<p>This preprocessor converts tables to multiline and grid format before creating document (very useful especially for pandoc processing). It helps to make tables in doc and pdf formats more proportional — column with more text in it will be more wide. Also it helps whith processing of extremely wide tables with pandoc. Convertation to the grid format allows arbitrary cell' content (multiple paragraphs, code blocks, lists, etc.).</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multilinetables
-</pre></div>
-
-
-<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor with default options, add <code>multilinetables</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">multilinetables</span>
-</pre></div>
-
-
-<p>The preprocessor has a number of options (best values set by default):</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">multilinetables</span><span class="p">:</span>
-        <span class="nt">rewrite_src_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">min_table_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-        <span class="nt">keep_narrow_tables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">table_columns_to_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-        <span class="nt">enable_hyphenation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">hyph_combination</span><span class="p">:</span> <span class="s">&#39;&lt;br&gt;&#39;</span>
-        <span class="nt">convert_to_grid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
-</pre></div>
-
-
-<dl>
-<dt><code>rewrite_src_file</code></dt>
-<dd>You can update source files after each use of preprocessor. Be careful, previous data will be deleted.</dd>
-<dt><code>min_table_width</code></dt>
-<dd>Wide markdown tables will be shrinked to this width in symbols. This parameter affects scaling - change it if table columns are merging.</dd>
-<dt><code>keep_narrow_tables</code></dt>
-<dd>If <code>true</code> narrow tables will not be stretched to minimum table width.</dd>
-<dt><code>table_columns_to_scale</code></dt>
-<dd>Minimum amount of columns to process the table.</dd>
-<dt><code>enable_hyphenation</code></dt>
-<dd>Switch breaking text in table cells with the tag set in <code>hyph_combination</code>. Good for lists, paragraphs, etc.</dd>
-<dt><code>hyph_combination</code></dt>
-<dd>Custom tag to break a text in multiline tables.</dd>
-<dt><code>convert_to_grid</code></dt>
-<dd>If <code>true</code> tables will be converted to the grid format, that allows arbitrary cell' content (multiple paragraphs, code blocks, lists, etc.).</dd>
-<dt><code>targets</code></dt>
-<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
-</dl>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Just add preprocessor to the project config and enjoy the result.</p>
+<p><include sethead="2" nohead="true">
+    $https://github.com/foliant-docs/foliantcontrib.multilinetables.git$README.md
+</include></p>
                 
                   
                 
