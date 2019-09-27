@@ -352,9 +352,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Slate
+      </label>
+    
     <a href="./" title="Slate" class="md-nav__link md-nav__link--active">
       Slate
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-shards" class="md-nav__link">
+    About shards
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1031,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-shards" class="md-nav__link">
+    About shards
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1082,92 @@
                 
                 
                 <h1 id="slate">Slate<a class="headerlink" href="#slate" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.slate.git$README.md
-</include></p>
+<p>Slate backend generates API documentation from Markdown using <a href="https://github.com/lord/slate">Slate docs generator</a>.</p>
+<p>This backend operates two targets:</p>
+<ul>
+<li><code>site</code> — build a standalone website;</li>
+<li><code>slate</code> — generate a slate project out from your Foliant project.</li>
+</ul>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.slate
+</pre></div>
+
+
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To use this backend Slate should be installed in your system. Follow the <a href="https://github.com/lord/slate#getting-set-up">instruction</a> in Slate repo.</p>
+<p>To test if you've installed Slate properly head to the cloned Slate repo in your terminal and try the command below. You should get similar response.</p>
+<div class="codehilite"><pre><span></span>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
+<span class="o">==</span> The Middleman is <span class="nv">loading</span>
+<span class="o">==</span> View your site at ...
+<span class="o">==</span> Inspect your site configuration at ...
+</pre></div>
+
+
+<p>To convert Foliant project to Slate:</p>
+<div class="codehilite"><pre><span></span>$ foliant make slate
+✔ Parsing config
+✔ Making slate
+─────────────────────
+Result: My_Project-2018-09-19.src/
+</pre></div>
+
+
+<p>Build a standalone website:</p>
+<div class="codehilite"><pre><span></span>$ foliant make site
+✔ Parsing config
+✔ Making site
+─────────────────────
+Result: My_Project-2018-09-19.slate/
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>You don't have to put anything in the config to use Slate backend. If it is installed, Foliant detects it.</p>
+<p>To customize the output, use options in <code>backend_config.slate</code> section:</p>
+<div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
+  <span class="nt">slate</span><span class="p">:</span>
+    <span class="nt">shards</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">data/shards</span>
+    <span class="nt">header</span><span class="p">:</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My API documentation</span>
+        <span class="nt">language_tabs</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">xml</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Response example</span>
+        <span class="nt">search</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<dl>
+<dt><code>shards</code></dt>
+<dd>Path to the shards directory relative to Foliant project dir or list of such paths. Shards allow you to customize Slate's layout, add scripts etc. More info on shards in the following section. Default: <code>shards</code></dd>
+<dt><code>header</code></dt>
+<dd>Params to be copied into the beginning of Slate main Markdown file <code>index.html.md</code>. They allow you to change the title of the website, toggle search and add language tabs. More info in <a href="https://github.com/lord/slate/wiki">Slate Wiki</a>.</dd>
+</dl>
+<h3 id="about-shards">About shards<a class="headerlink" href="#about-shards" title="Permanent link">&para;</a></h3>
+<p>Shards is just a folder with files which will be copied into the generated Slate project replacing all files in there. If you follow the Slate project structure you can replace stylesheets, scripts, images, layouts etc to customize the view of the resulting site.</p>
+<p>If shards is a string — it is considered a path to single shards directory relative to Foliant project dir:</p>
+<div class="codehilite"><pre><span></span><span class="n">slate</span><span class="o">:</span>
+    <span class="n">shards</span><span class="o">:</span> <span class="s1">&#39;data/shards&#39;</span>
+</pre></div>
+
+
+<p>If shards is a list — each list item is considered as a shards dir. They will be copied into the Slate project subsequently with replace.</p>
+<div class="codehilite"><pre><span></span><span class="n">slate</span><span class="o">:</span>
+    <span class="n">shards</span><span class="o">:</span>
+        <span class="o">-</span> <span class="s1">&#39;common/shards&#39;</span>
+        <span class="o">-</span> <span class="s1">&#39;custom/shards&#39;</span>
+        <span class="o">-</span> <span class="s1">&#39;new_design&#39;</span>
+</pre></div>
+
+
+<p>For example, I want to customize standard Slate stylesheets. I look at the Slate repo and see that they lie in the folder <code>&lt;slate&gt;/source/stylesheets</code>. I create new stylesheets with the same names as the original ones and put them into my shards dir like that:</p>
+<div class="codehilite"><pre><span></span><span class="n">shards</span><span class="err">\</span>
+    <span class="k">source</span><span class="err">\</span>
+        <span class="n">stylesheets</span><span class="err">\</span>
+            <span class="n">_variables</span><span class="p">.</span><span class="n">scss</span>
+            <span class="n">screen</span><span class="p">.</span><span class="n">css</span><span class="p">.</span><span class="n">scss</span>
+</pre></div>
+
+
+<p>These stylesheets will replace the original ones in the Slate project just before the website is be baked. So the page will have my styles in the end.</p>
                 
                   
                 

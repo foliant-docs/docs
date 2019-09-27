@@ -556,9 +556,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Graphviz
+      </label>
+    
     <a href="./" title="Graphviz" class="md-nav__link md-nav__link--active">
       Graphviz
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graphviz-diagrams-preprocessor-for-foliant" class="md-nav__link">
+    Graphviz Diagrams Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1037,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graphviz-diagrams-preprocessor-for-foliant" class="md-nav__link">
+    Graphviz Diagrams Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1094,90 @@
                 
                 
                 <h1 id="graphviz">Graphviz<a class="headerlink" href="#graphviz" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.graphviz.git$README.md
-</include></p>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.graphviz.svg" /></p>
+<h2 id="graphviz-diagrams-preprocessor-for-foliant">Graphviz Diagrams Preprocessor for Foliant<a class="headerlink" href="#graphviz-diagrams-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
+<p><a href="http://plantuml.com/">Graphviz</a> is an open source graph visualization tool. This preprocessor converts Graphviz diagram definitions in the source and converts them into images on the fly during project build.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.graphviz
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>graphviz</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">graphviz</span>
+</pre></div>
+
+
+<p>The preprocessor has a number of options:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">graphviz</span><span class="p">:</span>
+        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
+        <span class="nt">graphviz_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dot</span>
+        <span class="nt">engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dot</span>
+        <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">png</span>
+        <span class="nt">as_image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">params</span><span class="p">:</span>
+            <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+
+<dl>
+<dt><code>cache_dir</code></dt>
+<dd>Path to the directory with the generated diagrams. It can be a path relative to the project root or a global one; you can use <code>~/</code> shortcut.</dd>
+</dl>
+<blockquote>
+<p>To save time during build, only new and modified diagrams are rendered. The generated images are cached and reused in future builds.</p>
+</blockquote>
+<dl>
+<dt><code>graphviz_path</code></dt>
+<dd>Path to Graphviz launcher. By default, it is assumed that you have the <code>dot</code> command in your <code>PATH</code>, but if Graphviz uses another command to launch, or if the <code>dot</code> launcher is installed in a custom place, you can define it here.</dd>
+<dt><code>engine</code></dt>
+<dd>Layout engine used to process the diagram source. Available engines: (<code>circo</code>, <code>dot</code>, <code>fdp</code>, <code>neato</code>, <code>osage</code>, <code>patchwork</code>, <code>sfdp</code> <code>twopi</code>). Default: <code>dot</code></dd>
+<dt><code>format</code></dt>
+<dd>Output format of the diagram image. Available formats: <a href="https://graphviz.gitlab.io/_pages/doc/info/output.html">tons of them</a>. Default: <code>png</code></dd>
+<dt><code>as_image</code></dt>
+<dd>If <code>true</code> — inserts scheme into document as md-image. If <code>false</code> — inserts the file generated by GraphViz directly into the document (may be handy for <code>svg</code> images). Default: <code>true</code></dd>
+<dt><code>params</code></dt>
+<dd>Params passed to the image generation command:<div class="codehilite"><pre><span></span><span class="n">preprocessors</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">graphviz</span><span class="p">:</span>
+        <span class="n">params</span><span class="p">:</span>
+            <span class="n">Gdpi</span><span class="p">:</span> <span class="mi">100</span>
+</pre></div>
+
+
+</dd>
+</dl>
+<blockquote>
+<p>To see the full list of params, run the command that launches Graphviz, with <code>-?</code> command line option.</p>
+</blockquote>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;graphviz&gt;...&lt;/graphviz&gt;</code> tags:</p>
+<div class="codehilite"><pre><span></span>Here’s a diagram:
+
+<span class="nt">&lt;graphviz&gt;</span>
+    a -&gt; b
+<span class="nt">&lt;/graphviz&gt;</span>
+</pre></div>
+
+
+<p>You can set any parameters in the tag options. Tag options have priority over the config options so you can override some values for specific diagrams while having the default ones set up in the config.</p>
+<p>Tags also have two exclusive options: <code>caption</code> option — the markdown caption of the diagram image and <code>src</code> — path to diagram source (relative to current file).</p>
+<blockquote>
+<p>If <code>src</code> tag option is supplied, tag body is ignored. Diagram source is loaded from external file.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>Diagram with a caption:
+
+<span class="nt">&lt;graphviz</span> <span class="na">caption=</span><span class="s">&quot;Deployment diagram&quot;</span>
+           <span class="na">params=</span><span class="s">&quot;Earrowsize: 0.5&quot;</span>
+           <span class="na">src=</span><span class="s">&quot;diags/sample.gv&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/graphviz&gt;</span>
+</pre></div>
+
+
+<blockquote>
+<p>Note that command params listed in the <code>params</code> option are stated in YAML format. Remember that YAML is sensitive to indentation so for several params it is more suitable to use JSON-like mappings: <code>{key1: 1, key2: 'value2'}</code>.</p>
+</blockquote>
                 
                   
                 

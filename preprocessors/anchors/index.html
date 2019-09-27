@@ -412,9 +412,79 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Anchors
+      </label>
+    
     <a href="./" title="Anchors" class="md-nav__link md-nav__link--active">
       Anchors
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anchors_1" class="md-nav__link">
+    Anchors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    Additional info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice-for-mkdocs" class="md-nav__link">
+    Notice for Mkdocs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1051,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anchors_1" class="md-nav__link">
+    Anchors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    Additional info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice-for-mkdocs" class="md-nav__link">
+    Notice for Mkdocs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1122,113 @@
                 
                 
                 <h1 id="anchors">Anchors<a class="headerlink" href="#anchors" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.anchors.git$README.md
-</include></p>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.anchors.svg" /></p>
+<h2 id="anchors_1">Anchors<a class="headerlink" href="#anchors_1" title="Permanent link">&para;</a></h2>
+<p>Preprocessor which allows to use arbitrary anchors in Foliant documents.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.anchors
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add anchors to preprocessors section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">anchors</span>
+</pre></div>
+
+
+<p>The preprocessor has some options, but most probably you won't need any of them:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
+        <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
+        <span class="nt">tex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+
+<dl>
+<dt><code>element</code></dt>
+<dd>Template of an HTML-element which will be placed instead of the <code>&lt;anchor&gt;</code> tag. In this template <code>{anchor}</code> will be replaced with the tag contents. Default: <code>'&lt;span id="{anchor}"&gt;&lt;/span&gt;'</code></dd>
+<dt><code>tex</code></dt>
+<dd>If this option is <code>True</code>, preprocessor will try to use TeX-language anchors: <code>\hypertarget{anchor}{}</code>. Default: <code>False</code></dd>
+</dl>
+<blockquote>
+<p>Notice, this option will work only with <code>pdf</code> target. For all other targets it is set to <code>False</code>.</p>
+</blockquote>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Just add an <code>anchor</code> tag to some place and then use an ordinary Markdown-link to this anchor:</p>
+<div class="codehilite"><pre><span></span>...
+
+<span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>limitation<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span>
+Some important notice about system limitation.
+
+...
+
+Don&#39;t forget about [limitation](#limitation)!
+</pre></div>
+
+
+<p>You can also place anchors in the middle of paragraph:</p>
+<div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>middle<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span> Molestiae illum iusto, sequi magnam consequatur porro iste facere at fugiat est corrupti dolorum quidem sapiente pariatur rem, alias unde! Iste, aliquam.
+
+[Go to the middle of the paragraph](#middle)
+</pre></div>
+
+
+<p>You can place anchors inside tables:</p>
+<div class="codehilite"><pre><span></span>Name | Age | Weight
+---- | --- | ------
+Max  | 17  | 60
+Jane | 98  | 12
+John | 10  | 40
+Katy | 54  | 54
+Mike <span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>Mike<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span>| 22  | 299
+Cinty| 25  | 42
+
+...
+
+Something&#39;s wrong with Mike, [look](#Mike)!
+</pre></div>
+
+
+<h3 id="additional-info">Additional info<a class="headerlink" href="#additional-info" title="Permanent link">&para;</a></h3>
+<p><strong>1. Anchors are case sensitive</strong></p>
+<p><code>Markdown</code> and <code>MarkDown</code> are two different anchors.</p>
+<p><strong>2. Anchors should be unique</strong></p>
+<p>You can't use two anchors with the same name in one document.</p>
+<p>If preprocessor notices repeating anchors in one md-file it will throw you a warning.</p>
+<p>If there are repeating anchors in different md-files and they all go into single pdf or docx, all links will lead to the first one.</p>
+<p><strong>3. Anchors may conflict with headers</strong></p>
+<p>Headers are usually assigned anchors of their own. Be careful, your anchors may conflict with them.</p>
+<p>Preprocessor will try to detect if you are using anchor which is already taken by the header and warn you in console.</p>
+<p>Remember, that header anchors are almost always in lower-case and almost never use special symbols except <code>-</code>.</p>
+<p><strong>4. Some symbols are restricted</strong></p>
+<p>You can't use these symbols in anchors:</p>
+<div class="codehilite"><pre><span></span><span class="p">[]</span><span class="o">&lt;&gt;</span><span class="err">\&quot;</span>
+</pre></div>
+
+
+<p>Also you can't use space.</p>
+<p><strong>5. But a lot of other symbols are available</strong></p>
+<p>All these are valid anchors:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;anchor&gt;</span>!important!<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>_anchor_<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>section(1)<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>section/1/<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>anchor$1$<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>about:info<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>test&#39;1&#39;;<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>якорь<span class="nt">&lt;/anchor&gt;</span>
+<span class="nt">&lt;anchor&gt;</span>👀<span class="nt">&lt;/anchor&gt;</span>
+</pre></div>
+
+
+<h3 id="notice-for-mkdocs">Notice for Mkdocs<a class="headerlink" href="#notice-for-mkdocs" title="Permanent link">&para;</a></h3>
+<p>In many Mkdocs themes the top menu lays over the text with absolute position. In this situation all anchors will be hidden by the menu.</p>
+<p>Possible solution is to use <code>element</code> option. Example config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
+        <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">style=&quot;display:block;</span><span class="nv"> </span><span class="s">margin:-3.1rem;</span><span class="nv"> </span><span class="s">padding:3.1rem;&quot;</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
+</pre></div>
                 
                   
                 

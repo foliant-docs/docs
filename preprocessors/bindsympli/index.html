@@ -448,9 +448,52 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        BindSympli
+      </label>
+    
     <a href="./" title="BindSympli" class="md-nav__link md-nav__link--active">
       BindSympli
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1024,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1068,64 @@
                 
                 
                 <h1 id="bindsympli">BindSympli<a class="headerlink" href="#bindsympli" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.bindsympli.git$README.md
-</include></p>
+<p>BindSympli is a tool to download design layout images from <a href="https://sympli.io/">Sympli</a> CDN using certain Sympli account, to resize these images, and to bind them with the documentation project.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<p>Before using BindSympli, you need to install <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a>, <a href="https://www.gnu.org/software/wget/">wget</a>, and <a href="https://imagemagick.org/">ImageMagick</a>.</p>
+<p>BindSympli preprocessor code is written in Python, but it uses the external script written in JavaScript. This script is provided in BindSympli package:</p>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.bindsympli
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>bindsympli</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bindsympli</span>
+</pre></div>
+
+
+<p>The preprocessor has a number of options with the following default values:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">bindsympli</span><span class="p">:</span>
+        <span class="nt">get_sympli_img_urls_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">get_sympli_img_urls.js</span>
+        <span class="nt">wget_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wget</span>
+        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
+        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.bindsymplicache</span>
+        <span class="nt">sympli_login</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">sympli_password</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">image_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">800</span>
+        <span class="nt">max_attempts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+
+
+<dl>
+<dt><code>get_sympli_img_urls_path</code></dt>
+<dd>Path to the script <code>get_sympli_img_urls.js</code> or alternative command that launches it (e.g. <code>node some_another_script.js</code>). By default, it is assumed that you have this command and all other commands in <code>PATH</code>.</dd>
+<dt><code>wget_path</code></dt>
+<dd>Path to <code>wget</code> binary.</dd>
+<dt><code>convert_path</code></dt>
+<dd>Path to <code>convert</code> binary, a part of ImageMagick.</dd>
+<dt><code>cache_dir</code></dt>
+<dd>Directory to store downloaded and resized images.</dd>
+<dt><code>sympli_login</code></dt>
+<dd>Your username in Sympli account.</dd>
+<dt><code>sympli_password</code></dt>
+<dd>Your password in Sympli account.</dd>
+<dt><code>image_width</code></dt>
+<dd>Width of resulting images in pixels (original images are too large).</dd>
+<dt><code>max_attempts</code></dt>
+<dd>Maximum number of attempts to run the script <code>get_sympli_img_urls.js</code> on fails.</dd>
+</dl>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To insert a design layout image from Sympli into your documentation, use <code>&lt;sympli&gt;...&lt;/sympli&gt;</code> tags in Markdown source:</p>
+<div class="codehilite"><pre><span></span>Here’s an image from Sympli:
+
+<span class="nt">&lt;sympli</span> <span class="na">caption=</span><span class="s">&quot;An optional caption&quot;</span> <span class="na">width=</span><span class="s">&quot;400&quot;</span> <span class="na">url=</span><span class="s">&quot;https://app.sympli.io/app#!/designs/0123456789abcdef01234567/specs/assets&quot;</span><span class="nt">&gt;&lt;/sympli&gt;</span>
+</pre></div>
+
+
+<p>You have to specify the URL of Sympli design layout page in <code>url</code> attribute.</p>
+<p>You may specify an optional caption in the <code>caption</code> attribute, and an optional custom image width in the <code>width</code> attribute. The <code>width</code> attribute overrides the <code>image_width</code> config option for a certain image.</p>
+<p>BindSympli preprocessor will replace such blocks with local image references.</p>
                 
                   
                 

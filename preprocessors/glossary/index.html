@@ -544,9 +544,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Glossary
+      </label>
+    
     <a href="./" title="Glossary" class="md-nav__link md-nav__link--active">
       Glossary
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1031,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1082,139 @@
                 
                 
                 <h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.glossary.git$README.md
-</include></p>
+<p>Glossary preprocessor collects terms and definitions from the files stated and inserts them to specified places of the document.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.glossary
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>glossary</code> to <code>preprocessors</code> section in the project config.</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
+</pre></div>
+
+
+<p>The preprocessor has a number of options (default values stated below):</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">glossary</span><span class="p">:</span>
+        <span class="nt">term_definitions</span><span class="p">:</span> <span class="s">&#39;term_definitions.md&#39;</span>
+        <span class="nt">definition_mark</span><span class="p">:</span> <span class="s">&#39;:</span><span class="nv">   </span><span class="s">&#39;</span>
+        <span class="nt">files_to_process</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+</pre></div>
+
+
+<dl>
+<dt><code>term_definitions</code></dt>
+<dd>Local or remote file with terms and definitions in Pandoc <a href="https://pandoc.org/MANUAL.html#definition-lists">definition_lists</a> notation (by default this file stored in foliant project folder, but you can place it other folder). Also you can use <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">includes</a> in this file to join several glossary files. In this case <code>includes</code> preprocessor should be stated before <code>glossary</code> in <code>foliant.yml</code> preprocessors section. Note that if several definitions of one term are found, only first will be used.</dd>
+<dt><code>definition_mark</code></dt>
+<dd>Preprocessor uses this string to determine, if the definition should be inserted here. <code>":   "</code> for Pandoc <a href="https://pandoc.org/MANUAL.html#definition-lists">definition_lists</a> notation.</dd>
+<dt><code>files_to_process</code></dt>
+<dd>You can set certain files to process by preprocessor.</dd>
+</dl>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Just add the preprocessor to the project config, set it up and enjoy the automatically collected glossary in your document.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p><strong>foliant.yml</strong></p>
+<div class="codehilite"><pre><span></span><span class="nn">...</span>
+<span class="nt">chapters</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">text.md</span>
+
+<span class="nt">preprocessors</span><span class="p">:</span>
+<span class="nn">...</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
+<span class="nn">...</span>
+</pre></div>
+
+
+<p><strong>term_definitions.md</strong></p>
+<div class="codehilite"><pre><span></span>## <span class="nv">Glossary</span>
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    $<span class="nv">https</span>:<span class="o">//</span><span class="nv">git</span>.<span class="nv">repo</span><span class="o">/</span><span class="nv">repo_name_1</span>$<span class="nv">src</span><span class="o">/</span><span class="nv">glossary_1</span>.<span class="nv">md</span>
+<span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="k">include</span> <span class="nv">nohead</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    $<span class="nv">https</span>:<span class="o">//</span><span class="nv">git</span>.<span class="nv">repo</span><span class="o">/</span><span class="nv">repo_name_2</span>$<span class="nv">src</span><span class="o">/</span><span class="nv">glossary_2</span>.<span class="nv">md</span>
+<span class="o">&lt;/</span><span class="k">include</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p><strong>glossary_1.md</strong> from <strong>repo_1</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Glossary</span>
+
+<span class="n">Term</span> <span class="mi">1</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">1</span>
+
+<span class="n">Term</span> <span class="mi">2</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">2</span>
+
+<span class="n">Term</span> <span class="mi">3</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p><strong>glossary_2.md</strong> from <strong>repo_2</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Glossary</span>
+
+<span class="n">Term</span> <span class="mi">4</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">4</span>
+
+        <span class="err">{</span> <span class="k">some</span> <span class="n">code</span><span class="p">,</span> <span class="n">part</span> <span class="k">of</span> <span class="n">Definition</span> <span class="mi">4</span> <span class="err">}</span>
+
+    <span class="n">Third</span> <span class="n">paragraph</span> <span class="k">of</span> <span class="n">definition</span> <span class="mi">4</span><span class="p">.</span>
+
+<span class="n">Term</span> <span class="mi">5</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">5</span>
+</pre></div>
+
+
+<p><strong>text.md</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Main</span> <span class="n">chapter</span>
+
+<span class="k">Some</span> <span class="nb">text</span><span class="p">.</span>
+
+<span class="o">##</span> <span class="n">Glossary</span>
+
+<span class="p">:</span>   <span class="n">Term</span> <span class="mi">1</span>
+
+<span class="p">:</span>   <span class="n">Term</span> <span class="mi">4</span>
+
+<span class="p">:</span>   <span class="n">Term</span> <span class="mi">2</span>
+</pre></div>
+
+
+<p><strong>__all__.md</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Main</span> <span class="n">chapter</span>
+
+<span class="k">Some</span> <span class="nb">text</span><span class="p">.</span>
+
+<span class="o">##</span> <span class="n">Glossary</span>
+
+<span class="n">Term</span> <span class="mi">1</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">1</span>
+
+
+<span class="n">Term</span> <span class="mi">4</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">4</span>
+
+        <span class="err">{</span> <span class="k">some</span> <span class="n">code</span><span class="p">,</span> <span class="n">part</span> <span class="k">of</span> <span class="n">Definition</span> <span class="mi">4</span> <span class="err">}</span>
+
+    <span class="n">Third</span> <span class="n">paragraph</span> <span class="k">of</span> <span class="n">definition</span> <span class="mi">4</span><span class="p">.</span>
+
+
+<span class="n">Term</span> <span class="mi">2</span>
+
+<span class="p">:</span>   <span class="n">Definition</span> <span class="mi">2</span>
+</pre></div>
                 
                   
                 

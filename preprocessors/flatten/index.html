@@ -532,9 +532,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Flatten
+      </label>
+    
     <a href="./" title="Flatten" class="md-nav__link md-nav__link--active">
       Flatten
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1017,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1054,39 @@
                 
                 
                 <h1 id="flatten">Flatten<a class="headerlink" href="#flatten" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.flatten.git$README.md
-</include></p>
+<p>This preprocessor converts a Foliant project source directory into a single Markdown file containing all the sources, preserving order and inheritance.</p>
+<p>This preprocessor is used by backends that require a single Markdown file as input instead of a directory. The Pandoc backend is one such example.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.flatten
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>This preprocessor is required by Pandoc backend, so if you use it, you don’t need to install Flatten or enable it in the project config manually.</p>
+<p>However, it’s still a regular preprocessor, and you can run it manually by listing it in <code>preprocessors</code>:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flatten</span>
+</pre></div>
+
+
+<p>The preprocessor has a number of options with the following default values:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">flatten</span><span class="p">:</span>
+        <span class="nt">flat_src_file_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">__all__.md</span>
+        <span class="nt">keep_sources</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+
+
+<dl>
+<dt><code>flat_src_file_name</code></dt>
+<dd>Name of the flattened file that is created in the temporary working directory.</dd>
+<dt><code>keep_sources</code></dt>
+<dd>Flag that tells the preprocessor to keep Markdown sources in the temporary working directory after flattening. If set to <code>false</code>, all Markdown files excepting the flattened will be deleted from the temporary working directory.</dd>
+</dl>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Flatten preprocessor uses Includes, so when you install Pandoc backend, Includes preprocessor will also be installed, along with Flatten.</p>
+</blockquote>
                 
                   
                 

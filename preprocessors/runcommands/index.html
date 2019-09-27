@@ -712,9 +712,58 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RunCommands
+      </label>
+    
     <a href="./" title="RunCommands" class="md-nav__link md-nav__link--active">
       RunCommands
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-environment-variables" class="md-nav__link">
+    Supported environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1030,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-environment-variables" class="md-nav__link">
+    Supported environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1080,42 @@
                 
                 
                 <h1 id="runcommands">RunCommands<a class="headerlink" href="#runcommands" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.runcommands.git$README.md
-</include></p>
+<p>RunCommands is a preprocessor that allows to execute a sequence of arbitrary external commands.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.runcommands
+</pre></div>
+
+
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>runcommands</code> to <code>preprocessors</code> section in the project config, and specify the commands to run:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">runcommands</span><span class="p">:</span>
+        <span class="nt">commands</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./build.sh</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;Hello World&quot; &gt; ${WORKING_DIR}/hello.txt</span>
+        <span class="nt">targets</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tex</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
+</pre></div>
+
+
+<dl>
+<dt><code>commands</code></dt>
+<dd>Sequence of system commands to execute one after the other.</dd>
+<dt><code>targets</code></dt>
+<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
+</dl>
+<h4 id="supported-environment-variables">Supported environment variables<a class="headerlink" href="#supported-environment-variables" title="Permanent link">&para;</a></h4>
+<p>You may use the following environment variables in your commands:</p>
+<ul>
+<li><code>${PROJECT_DIR}</code> — full path to the project directory, e.g. <code>/usr/src/app</code>;</li>
+<li><code>${SRC_DIR}</code> — full path to the directory that contains Markdown sources, e.g. <code>/usr/src/app/src</code>;</li>
+<li><code>${WORKING_DIR}</code> — full path to the temporary directory that is used by preprocessors, e.g. <code>/usr/src/app/__folianttmp__</code>;</li>
+<li><code>${BACKEND}</code> — currently used backend, e.g. <code>pre</code>, <code>pandoc</code>, or <code>mkdocs</code>;</li>
+<li><code>${TARGET}</code> — current target, e.g. <code>site</code>, or <code>pdf</code>.</li>
+</ul>
                 
                   
                 

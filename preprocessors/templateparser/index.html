@@ -736,9 +736,85 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        TemplateParser
+      </label>
+    
     <a href="./" title="TemplateParser" class="md-nav__link md-nav__link--active">
       TemplateParser
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#templateparser-preprocessor-for-foliant" class="md-nav__link">
+    TemplateParser preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-variables-to-template" class="md-nav__link">
+    Sending variables to template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extends-and-includes" class="md-nav__link">
+    Extends and includes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1057,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#templateparser-preprocessor-for-foliant" class="md-nav__link">
+    TemplateParser preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-variables-to-template" class="md-nav__link">
+    Sending variables to template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extends-and-includes" class="md-nav__link">
+    Extends and includes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1134,117 @@
                 
                 
                 <h1 id="templateparser">TemplateParser<a class="headerlink" href="#templateparser" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.templateparser.git$README.md
-</include></p>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.templateparser.svg" /></p>
+<h2 id="templateparser-preprocessor-for-foliant">TemplateParser preprocessor for Foliant<a class="headerlink" href="#templateparser-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
+<p>Preprocessor which allows to use templates in Foliant source files. Preprocessor now supports only <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine, but more can be added easily.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.templateparser
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>All params that are stated in foliant.yml are considered global params. All of them may be overriden in template tag options, which have higher priority.</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">templateparser</span><span class="p">:</span>
+        <span class="nt">engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jinja2</span>
+        <span class="nt">engine_params</span><span class="p">:</span>
+            <span class="nt">root</span><span class="p">:</span> <span class="s">&#39;/usr/src/app&#39;</span>
+        <span class="nt">context</span><span class="p">:</span>
+            <span class="nt">param1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1008</span>
+            <span class="nt">param2</span><span class="p">:</span> <span class="s">&#39;Kittens&#39;</span>
+        <span class="nt">ext_context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">context.yml</span>
+        <span class="nt">param3</span><span class="p">:</span> <span class="s">&#39;Puppies&#39;</span>
+</pre></div>
+
+
+<dl>
+<dt><code>engine</code></dt>
+<dd>name of the template engine which will be used to process template. Supported engines right now: <code>jinja2</code>.</dd>
+<dt><code>engine_params</code></dt>
+<dd>dictionary with parameters which will be transfered to the template engine.</dd>
+<dt><code>context</code></dt>
+<dd>dictionary with variables which will be redirected to the template.</dd>
+<dt><code>ext_context</code></dt>
+<dd>path to YAML- or JSON-file with context dictionary. (relative to current md-file)</dd>
+</dl>
+<p><em>All parameters with other names are also transfered to the template, as if they appeared inside the <code>context</code> dictionary. (<code>param3</code> in the above example)</em></p>
+<blockquote>
+<p>Please note that even if this may seem convenient, it is preferred to include template variables in the <code>context</code> dictionary, as in future more reserved parameters may be added which may conflict with your stray variables.</p>
+</blockquote>
+<p>If some variable names overlap among these methods to supply context, preprocessor uses this priority order:</p>
+<ol>
+<li>Context dictionary.</li>
+<li>Stray variables.</li>
+<li>External context file.</li>
+</ol>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To use the template in a Markdown file just insert a tag of the template engine name, for example:</p>
+<div class="codehilite"><pre><span></span>This is ordinary markdown text.
+<span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+This is a Jinja2 template:
+I can count to five!
+{% for i in range(5) %}{{ i + 1 }}{% endfor %}
+<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>After making a document with Foliant this will be transformed to:</p>
+<div class="codehilite"><pre><span></span><span class="n">This</span> <span class="k">is</span> <span class="n">ordinary</span> <span class="n">markdown</span> <span class="nb">text</span><span class="p">.</span>
+
+<span class="n">This</span> <span class="k">is</span> <span class="n">a</span> <span class="n">Jinja2</span> <span class="k">template</span><span class="p">:</span>
+<span class="n">I</span> <span class="n">can</span> <span class="k">count</span> <span class="k">to</span> <span class="n">five</span><span class="o">!</span>
+<span class="mi">12345</span>
+</pre></div>
+
+
+<p>You can also use a general <code>&lt;template&gt;</code> tag, but in this case you have to specify the engine you want to use in the <code>engine</code> parameter:</p>
+<div class="codehilite"><pre><span></span>This is ordinary markdown text.
+<span class="p">&lt;</span><span class="nt">template</span> <span class="na">engine</span><span class="o">=</span><span class="s">&quot;jinja2&quot;</span><span class="p">&gt;</span>
+This is a Jinja2 template:
+I can count to five!
+{% for i in range(5) %}{{ i + 1 }}{% endfor %}
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h4 id="sending-variables-to-template">Sending variables to template<a class="headerlink" href="#sending-variables-to-template" title="Permanent link">&para;</a></h4>
+<p>To send a variable to template, add them into the <code>context</code> option. This option accepts <code>yaml</code> dictionary format.</p>
+<blockquote>
+<p>Please note that foliant doesn't support multiline tag options yet, so use one-line dictionary format {'key1': value1, ...}</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">context</span><span class="o">=</span><span class="s">&quot;{&#39;name&#39;: Andy, &#39;age&#39;: 8}&quot;</span><span class="p">&gt;</span>
+Hi, my name is {{name}}!
+I am {{age}} years old.
+{% for prev in range(age - 1, 0, -1) %}
+The year before I was {{prev}} years old.
+{% endfor %}
+<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span><span class="n">Hi</span><span class="p">,</span> <span class="n">my</span> <span class="n">name</span> <span class="k">is</span> <span class="n">Andy</span><span class="o">!</span>
+<span class="n">I</span> <span class="n">am</span> <span class="mi">8</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">7</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">6</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">5</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">4</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">3</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">2</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">1</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+</pre></div>
+
+
+<h4 id="extends-and-includes">Extends and includes<a class="headerlink" href="#extends-and-includes" title="Permanent link">&para;</a></h4>
+<p>Extends and includes work in templates. The path of the extending\included file is relative to the Markdown file where the template lives.</p>
+<p>In Jinja2 engine you can override the path of the included\extended files with <code>root</code> engine_param. <strong>Note that this param is relative to project root.</strong></p>
                 
                   
                 

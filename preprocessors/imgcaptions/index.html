@@ -592,9 +592,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ImgCaptions
+      </label>
+    
     <a href="./" title="ImgCaptions" class="md-nav__link md-nav__link--active">
       ImgCaptions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1017,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1054,48 @@
                 
                 
                 <h1 id="imgcaptions">ImgCaptions<a class="headerlink" href="#imgcaptions" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.imgcaptions.git$README.md
-</include></p>
+<p>ImgCaptions is a preprocessor that generates visible captions for the images from alternative text descriptions of the images. The preprocessor is useful in projects built with MkDocs or another backend that provides HTML output.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.imgcaptions
+</pre></div>
+
+
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>imgcaptions</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imgcaptions</span>
+</pre></div>
+
+
+<p>The preprocessor supports the following options:</p>
+<div class="codehilite"><pre><span></span>    <span class="p p-Indicator">-</span> <span class="nt">imgcaptions</span><span class="p">:</span>
+        <span class="nt">stylesheet_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">imgcaptions.css</span>
+        <span class="nt">targets</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ghp</span>
+</pre></div>
+
+
+<dl>
+<dt><code>stylesheet_path</code></dt>
+<dd>Path to the CSS stylesheet file. This stylesheet should define rules for the <code>.image_caption</code> class. Default path is <code>imgcaptions.css</code>. If stylesheet file does not exist, default built-in stylesheet will be used.</dd>
+<dt><code>targets</code></dt>
+<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
+</dl>
+<p>Image definition example:</p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">My</span> <span class="n">Picture</span><span class="p">](</span><span class="n">picture</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+</pre></div>
+
+
+<p>This Markdown source will be finally transformed into the HTML code:</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;My Picture&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;picture.png&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;image_caption&quot;</span><span class="p">&gt;</span>My Picture<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>(Note that ImgCaptions preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags <code>&lt;p class="image_caption"&gt;My Picture&lt;/p&gt;</code> into Markdown code after the image definitions. Empty alternative text descriptions are ignored.)</p>
                 
                   
                 

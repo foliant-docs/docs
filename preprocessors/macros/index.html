@@ -628,9 +628,52 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Macros
+      </label>
+    
     <a href="./" title="Macros" class="md-nav__link md-nav__link--active">
       Macros
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1024,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1068,66 @@
                 
                 
                 <h1 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.macros.git$README.md
-</include></p>
+<p><em>Macro</em> is a string with placeholders that is replaced with predefined content during documentation build. Macros are defined in the config.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.macros
+</pre></div>
+
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>Enable the preprocessor by adding it to <code>preprocessors</code> and listing your macros in <code>macros</code> dictionary:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
+      <span class="nt">macros</span><span class="p">:</span>
+        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a macro definition.</span>
+        <span class="nt">bar</span><span class="p">:</span> <span class="s">&quot;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">macro</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parameter:</span><span class="nv"> </span><span class="s">{0}&quot;</span>
+</pre></div>
+
+
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Here's the simplest usecase for macros:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
+      <span class="nt">macros</span><span class="p">:</span>
+        <span class="nt">support_number</span><span class="p">:</span> <span class="s">&quot;8</span><span class="nv"> </span><span class="s">800</span><span class="nv"> </span><span class="s">123-45-67&quot;</span>
+</pre></div>
+
+
+<p>Now, every time you need to insert your support phone number, you put a macro instead:</p>
+<div class="codehilite"><pre><span></span>Call you support team: <span class="nt">&lt;macro&gt;</span>support_number<span class="nt">&lt;/macro&gt;</span>.
+
+Here&#39;s the number again: <span class="nt">&lt;m&gt;</span>support_number<span class="nt">&lt;/m&gt;</span>.
+</pre></div>
+
+
+<p>Macros are useful in documentation that should be built into multiple targets, e.g. site and pdf, when the same thing is done differently in one target than in the other.</p>
+<p>For example, to reference a page in MkDocs, you just put the Markdown file in the link:</p>
+<div class="codehilite"><pre><span></span><span class="n">Here</span> <span class="n">is</span> <span class="p">[</span><span class="n">another</span> <span class="n">page</span><span class="p">](</span><span class="n">another_page</span><span class="p">.</span><span class="n">md</span><span class="p">).</span>
+</pre></div>
+
+
+<p>But when building documents with Pandoc all sources are flattened into a single Markdown, so you refer to different parts of the document by anchor links:</p>
+<div class="codehilite"><pre><span></span><span class="n">Here</span> <span class="n">is</span> <span class="p">[</span><span class="n">another</span> <span class="n">page</span><span class="p">](</span><span class="err">#</span><span class="n">another_page</span><span class="p">).</span>
+</pre></div>
+
+
+<p>This can be implemented using <code>&lt;if&gt;&lt;/if&gt;</code> tag:</p>
+<div class="codehilite"><pre><span></span><span class="n">Here</span> <span class="n">is</span> <span class="p">[</span><span class="n">another</span> <span class="n">page</span><span class="p">](</span><span class="o">&lt;</span><span class="k">if</span> <span class="n">backends</span><span class="o">=</span><span class="s">&quot;pandoc&quot;</span><span class="o">&gt;</span><span class="err">#</span><span class="n">another_page</span><span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;&lt;</span><span class="k">if</span> <span class="n">backends</span><span class="o">=</span><span class="s">&quot;mkdocs&quot;</span><span class="o">&gt;</span><span class="n">another_page</span><span class="p">.</span><span class="n">md</span><span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span><span class="p">).</span>
+</pre></div>
+
+
+<p>This bulky construct quickly gets old when you use many cross-references in your documentation.</p>
+<p>To make your sources cleaner, move this construct to the config as a reusable macro:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
+      <span class="nt">macros</span><span class="p">:</span>
+        <span class="nt">ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{0}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{1}&lt;/if&gt;</span>
+</pre></div>
+
+
+<p>And use it in the source:</p>
+<div class="codehilite"><pre><span></span><span class="n">Here</span> <span class="n">is</span> <span class="p">[</span><span class="n">another</span> <span class="n">page</span><span class="p">](</span><span class="o">&lt;</span><span class="n">macro</span> <span class="n">params</span><span class="o">=</span><span class="s">&quot;#another_page, another_page.md&quot;</span><span class="o">&gt;</span><span class="n">ref</span><span class="o">&lt;/</span><span class="n">macro</span><span class="o">&gt;</span><span class="p">).</span>
+</pre></div>
                 
                   
                 

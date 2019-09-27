@@ -436,9 +436,72 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Badges
+      </label>
+    
     <a href="./" title="Badges" class="md-nav__link md-nav__link--active">
       Badges
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#badges_1" class="md-nav__link">
+    Badges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -981,6 +1044,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#badges_1" class="md-nav__link">
+    Badges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -995,9 +1108,81 @@
                 
                 
                 <h1 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h1>
-<p><include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.badges.git$README.md
-</include></p>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.badges.svg" /></p>
+<h2 id="badges_1">Badges<a class="headerlink" href="#badges_1" title="Permanent link">&para;</a></h2>
+<p>Preprocessor for Foliant which helps to add badges to your documents. It uses <a href="https://shields.io">Shields.io</a> to generate badges.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.badges
+</pre></div>
+
+
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<p>To enable the preprocessor, add <code>badges</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">badges</span>
+</pre></div>
+
+
+<p>The preprocessor has a number of options:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
+        <span class="nt">server</span><span class="p">:</span> <span class="s">&#39;https://img.shields.io&#39;</span>
+        <span class="nt">as_object</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">add_link</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">vars</span><span class="p">:</span>
+            <span class="nt">jira_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost:3000/jira</span>
+            <span class="nt">package</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foliant</span>
+        <span class="c1"># badge look parameters</span>
+        <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flat-square</span>
+        <span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jira</span>
+</pre></div>
+
+
+<dl>
+<dt><code>server</code></dt>
+<dd>Shields server URL, which hosts badges. default: <code>https://img.shields.io</code></dd>
+<dt><code>as_object</code></dt>
+<dd>If <code>true</code> — preprocessor inserts <code>svg</code> badges with HTML <code>&lt;object&gt;</code> tag, instead of Markdown image tag. This is required for links and hints to work. default: <code>true</code></dd>
+<dt><code>add_link</code></dt>
+<dd>If <code>true</code> preprocessor tries to determine the link which should be added to badge (for example, link to jira issue page for jira issue badge). Only works with <code>as_object = true</code>. default: <code>true</code></dd>
+</dl>
+<blockquote>
+<p>Please note that right now only links for <strong>pypi</strong> and <strong>jira-issue</strong> badges are being added automatically. Please contribute or contact author for adding other services.</p>
+</blockquote>
+<dl>
+<dt><code>vars</code></dt>
+<dd>Dictionary with variables which will be replaced in badge urls. See <strong>variables</strong> section.</dd>
+</dl>
+<p>Also you may add parameters specified on the shields.io website which alter the badge view like: <code>label</code>, <code>logo</code>, <code>style</code> etc.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>Just add the <code>badge</code> tag and specify path to badge in the tag body:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;badge&gt;</span>jira/issue/https/issues.apache.org/jira/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>
+</pre></div>
+
+
+<p>All options from config may be overriden in tag parameters:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;badge</span> <span class="na">style=</span><span class="s">&quot;social&quot;</span> <span class="na">as_object=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>jira/issue/https/issues.apache.org/jira/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>
+</pre></div>
+
+
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<p>You can use variables in your badges to replace parts which repeat often. For example, if we need to add many badges to our Jira tracker, we may put the protocol and host parameters into a variable like this:</p>
+<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
+        <span class="nt">vars</span><span class="p">:</span>
+            <span class="nt">jira</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https/issues.apache.org/jira</span>
+</pre></div>
+
+
+<p>To reference a variable in a badge path use syntax <code>${variable}</code>:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;badge&gt;</span>jira/issue/<span class="cp">${</span><span class="n">jira</span><span class="cp">}</span>/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>
+
+Description of the issue goes here. But it&#39;s not the only one.
+
+<span class="nt">&lt;badge&gt;</span>jira/issue/<span class="cp">${</span><span class="n">jira</span><span class="cp">}</span>/KAFKA-7951.svg<span class="nt">&lt;/badge&gt;</span>
+
+Description of the second issue.
+</pre></div>
                 
                   
                 
