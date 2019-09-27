@@ -24,6 +24,7 @@ chapters:
         - preprocessors/escapecode.md
         - preprocessors/flags.md
         - preprocessors/flatten.md
+        - preprocessors/glossary.md
         - preprocessors/graphviz.md
         - preprocessors/history.md
         - preprocessors/imagemagick.md
