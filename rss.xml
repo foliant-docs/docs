@@ -16,6 +16,20 @@
 </ul>]]></description>
         </item>
         <item>
+            <title>foliantcontrib.confluence 0.6.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#19a37a4d0012049f11d2c064a8288fb0</guid>
+            <pubDate>Wed, 25 Sep 2019 13:19:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Now content is put in place of <code>foliant</code> anchor or instead of <code>foliant_start</code>...<code>foliant_end</code> anchors on the target page. If no anchors on page — content replaces the whole body.</li>
+<li>New modes (backwards compatibility is broken!).</li>
+<li>Now following files are available for debug in cache dir: 1. markdown before conversion to html. 2. Converted to HTML. 3. Final XHTML source which is uploaded to confluence.</li>
+<li>Working (but far from perfect) detection if file was changed.</li>
+<li>Only upload changed attachments.</li>
+<li>Updating attachments instead of deleting and uploading again.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.5.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#136672a1f6ca89de19d654bbf468eb1b</guid>
