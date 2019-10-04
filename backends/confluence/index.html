@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
@@ -1226,6 +1226,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Title of the page</span>
     <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
     <span class="nt">parent_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124442</span>
+    <span class="nt">parent_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Parent</span>
     <span class="nt">notify_watchers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1254,6 +1255,8 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dd>The space key where the page(s) will be created/edited. <em>Only for not yet existing pages</em>.</dd>
 <dt><code>parent_id</code></dt>
 <dd>ID of the parent page under which the new one(s) should be created. <em>Only for not yet existing pages</em>.</dd>
+<dt><code>parent_title</code></dt>
+<dd>Another way to define parent of the page. Lower priority than <code>paren_di</code>. Title of the parent page under which the new one(s) should be created. Parent should exist under the space_key specified. <em>Only for not yet existing pages</em>.</dd>
 <dt><code>notify_watchers</code></dt>
 <dd>If <code>true</code> — watchers will be notified that the page has changed. Default: <code>false</code></dd>
 <dt><code>toc</code></dt>
@@ -1430,7 +1433,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
       
     </div>
     
-      <script src="../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

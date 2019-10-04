@@ -7,6 +7,43 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.mermaid 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mermaid.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mermaid.git#6bb42bf20729ad2fa433a740dbabef9f</guid>
+            <pubDate>Fri, 04 Oct 2019 15:12:26 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better error reporting</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.combined_options 1.0.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#a1da4f195c77bc265f7c321c2f6dbaf5</guid>
+            <pubDate>Wed, 02 Oct 2019 10:10:50 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix <code>validate_exists</code> validator.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#40460e036a971a5808efb2a692d8acef</guid>
+            <pubDate>Tue, 01 Oct 2019 12:43:46 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Added <code>parent_title</code> parameter.</li>
+<li>Fix: images were not uploaded for new pages.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.multiproject 1.0.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#0101c153e72a6b97dee65128a99fb2e5</guid>
+            <pubDate>Tue, 01 Oct 2019 00:44:14 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow the first heading to be located not in the beginning of a document.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.flatten 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#05beb8ca02466f69be84f2c51a838cee</guid>
