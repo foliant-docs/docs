@@ -1054,8 +1054,9 @@
                 
                 
                 <h1 id="repolink">RepoLink<a class="headerlink" href="#repolink" title="Permanent link">&para;</a></h1>
-<p>This preprocessor allows to add into each Markdown source a hyperlink to the related file in Git repository. The hyperlink appears after the first heading of the document.</p>
-<p>The preprocessor emulates MkDocs behavior and supports the same options <code>repo_url</code> and <code>edit_uri</code> as MkDocs. Applying of the preprocessor to subprojects allows to get links to separate repositories from different pages of a single site (or a single MkDocs project).</p>
+<p>This preprocessor allows to add into each Markdown source a hyperlink to the related file in Git repository. Applying of the preprocessor to subprojects allows to get links to separate repositories from different pages of a single site (e.g. generated with MkDocs).</p>
+<p>By default, the preprocessor emulates MkDocs behavior. The preprocessor generates HTML hyperlink with specific attributes and inserts the link after the first heading of the document. The default behavior may be overridden.</p>
+<p>The preprocessor supports the same options <code>repo_url</code> and <code>edit_uri</code> as MkDocs.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>RepoLink preprocessor is a part of MultiProject extension:</p>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multiproject
@@ -1074,6 +1075,8 @@
     <span class="p p-Indicator">-</span> <span class="nt">repolink</span><span class="p">:</span>
         <span class="nt">repo_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs/</span>
         <span class="nt">edit_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/blob/master/src/</span>
+        <span class="nt">link_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">html</span>
+        <span class="nt">link_location</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">after_first_heading</span>
         <span class="nt">link_text</span><span class="p">:</span> <span class="s">&quot;&amp;#xE3C9;&quot;</span>
         <span class="nt">link_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">View the source file</span>
         <span class="nt">link_html_attributes</span><span class="p">:</span> <span class="s">&quot;class=\&quot;md-icon</span><span class="nv"> </span><span class="s">md-content__icon\&quot;</span><span class="nv"> </span><span class="s">style=\&quot;margin:</span><span class="nv"> </span><span class="s">-7.5rem</span><span class="nv"> </span><span class="s">0\&quot;&quot;</span>
@@ -1087,12 +1090,16 @@
 <dd>URL of the related repository. Default value is an empty string; in this case the preprocessor does not apply. Trailing slashes do not affect.</dd>
 <dt><code>edit_uri</code></dt>
 <dd>Revision-dependent part of URL of each file in the repository. Default value is <code>/blob/master/src/</code>. Leading and trailing slashes do not affect.</dd>
+<dt><code>link_type</code></dt>
+<dd>Link type: HTML (<code>html</code>) or Markdown (<code>markdown</code>). Default value is <code>html</code>.</dd>
+<dt><code>link_location</code></dt>
+<dd>Place in the document to put the hyperlink. By default, the hyperlink is placed after the first heading, and newlines are added before and after it (<code>after_first_heading</code>). Other values: <code>before_content</code>—the hyperlink is placed before the content of the document, the newline after it is provided; <code>after_content</code>—the hyperlink is placed after the content of the document, the newline before it is added; <code>defined_by_tag</code>—the tags <code>&lt;repo_link&gt;&lt;/repo_link&gt;</code> that are met in the content of the document are replaced with the hyperlink.</dd>
 <dt><code>link_text</code></dt>
 <dd>Hyperlink text. Default value is <code>Edit this page</code>.</dd>
 <dt><code>link_title</code></dt>
-<dd>Hyperlink title (the value of <code>title</code> HTML attribute). Default value is also <code>Edit this page</code>.</dd>
+<dd>Hyperlink title (the value of <code>title</code> HTML attribute). Default value is also <code>Edit this page</code>. This option takes effect only when <code>link_type</code> is set to <code>html</code>.</dd>
 <dt><code>link_html_attributes</code></dt>
-<dd>Additional HTML attributes for the hyperlink. By using CSS in combination with <code>class</code> attribute, and/or <code>style</code> attribute, you may customize the presentation of your hyperlinks. Default value is an empty string.</dd>
+<dd>Additional HTML attributes for the hyperlink. By using CSS in combination with <code>class</code> attribute, and/or <code>style</code> attribute, you may customize the presentation of your hyperlinks. Default value is an empty string. This option takes effect only when <code>link_type</code> is set to <code>html</code>.</dd>
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>

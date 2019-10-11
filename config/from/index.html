@@ -1055,6 +1055,7 @@
                 
                 <h1 id="multiproject">MultiProject<a class="headerlink" href="#multiproject" title="Permanent link">&para;</a></h1>
 <p>This extension resolves the <code>!from</code> YAML tag in the project config and replaces the value of the tag with <code>chaptres</code> section of related subproject.</p>
+<p>Nested subprojects are processed recursively.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.multiproject
 </pre></div>
@@ -1072,7 +1073,14 @@
 
 
 <p>Before building the documentation superproject, Multiproject extension calls Foliant to build each subproject into <code>pre</code> target, and then moves the directories of built subprojects into the source directory of the superproject (usually called as <code>src</code>).</p>
-<p>Note that Foliant allows to override default config file name <code>foliant.yml</code> by using <code>--config</code> or <code>-c</code> command line option. To provide correct working of Multiproject extension, the same names of config files should be used in the superproject and in all subprojects.</p>
+<p>Limitations:</p>
+<ul>
+<li>directory names of subprojects of the same level should be unique;</li>
+<li>source directories of the multiproject and of all the subprojects should have the same names; also they should be located inside the “root” directories of corresponding projects;</li>
+<li>config files of the multiproject and of all the subprojects should have the same names;</li>
+<li>subprojects from remote Git repositories do not need to be newly cloned before each build, but local subprojects are copied into cache before each build;</li>
+<li>it’s undesirable if the path of the “root” directory of the top-level project contains <code>.multiprojectcache</code> directory as its some part.</li>
+</ul>
                 
                   
                 

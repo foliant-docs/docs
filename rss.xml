@@ -7,6 +7,26 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.multiproject 1.0.11</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#a662aa9605ecb5d05c8d4ff625c81e9d</guid>
+            <pubDate>Thu, 10 Oct 2019 18:26:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow recursive processing of nested subprojects.</li>
+<li>Allow to specify type (HTML/Markdown) and location for repo links.</li>
+<li>Fix incompatibility with new Cliar: key names should not contain hyphens.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#0aae645e8a678fcdb9c0d8bf4b9f821b</guid>
+            <pubDate>Mon, 07 Oct 2019 12:39:57 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Remove resolved inline comments as they mix up with unresolved.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.mermaid 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mermaid.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.mermaid.git#6bb42bf20729ad2fa433a740dbabef9f</guid>
