@@ -7,6 +7,52 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.escapecode 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.escapecode.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.escapecode.git#8d151018644a7cabb462b0e4c1314711</guid>
+            <pubDate>Wed, 16 Oct 2019 15:21:41 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Improve flexibility: add new actions, allow to override defaults.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.multiproject 1.0.12</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#e4df0511945a523c58a7d7a9ae6fc6a2</guid>
+            <pubDate>Wed, 16 Oct 2019 14:44:08 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Take into account the <code>quiet</code> flag. Require Foliant 1.0.11 for this reason.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.includes 1.1.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#71c96065b21249d4327d4beaecb54822</guid>
+            <pubDate>Wed, 16 Oct 2019 14:38:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow to specify custom options for EscapeCode preprocessor as the <code>escape_code.options</code> config parameter value.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliant 1.0.11</title>
+            <link>https://github.com/foliant-docs/foliant.git</link>
+            <guid>https://github.com/foliant-docs/foliant.git#274536f42b30fa3bcd6053b1f45408aa</guid>
+            <pubDate>Wed, 16 Oct 2019 14:23:01 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Allow to specify custom options for EscapeCode preprocessor as the <code>escape_code.options</code> config parameter value.</li>
+<li>Pass the <code>quiet</code> flag to <code>BaseParser()</code> as an optional argument for using in config extensions.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.subset 1.0.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.subset.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#b27443be7836003bbb0cbbec5f858c7d</guid>
+            <pubDate>Tue, 15 Oct 2019 15:31:10 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix incompatibilities with newer versions of modules: Cliar, PyYAML.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.multiproject 1.0.11</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#a662aa9605ecb5d05c8d4ff625c81e9d</guid>
