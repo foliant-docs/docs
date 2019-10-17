@@ -22,7 +22,7 @@ Project "Hello Foliant" created in hello-foliant
 To do the same with Docker, run:
 
 ```bash
-$ docker run --rm -it -v `pwd`:/usr/app/src -w /usr/app/src foliant/foliant init
+$ docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app foliant/foliant init
 Enter the project name: Hello Foliant
 ✔ Generating Foliant project
 ─────────────────────
