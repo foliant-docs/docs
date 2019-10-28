@@ -7,6 +7,25 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.slate 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.slate.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.slate.git#499a81b10ec9388e6ef999e87255541f</guid>
+            <pubDate>Fri, 25 Oct 2019 14:17:03 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix bug with error catching introduced in 1.0.5</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.slate 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.slate.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.slate.git#e4118f02e737d0e0526f0b9f0223adb2</guid>
+            <pubDate>Fri, 25 Oct 2019 12:11:32 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better error reporting.</li>
+<li>Fixes for working with includes.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.escapecode 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.escapecode.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.escapecode.git#8d151018644a7cabb462b0e4c1314711</guid>
