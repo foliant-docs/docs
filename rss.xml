@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.aglio 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.aglio.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.aglio.git#b36117122fd73553f09f68398f9d2119</guid>
+            <pubDate>Mon, 28 Oct 2019 16:36:16 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.slate 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.slate.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.slate.git#499a81b10ec9388e6ef999e87255541f</guid>
