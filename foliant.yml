@@ -72,6 +72,7 @@ preprocessors:
         rss_description: Releases of Foliant documentation authoring tool and its extensions.
         repos:
             - https://github.com/foliant-docs/foliant.git
+            - https://github.com/foliant-docs/foliantcontrib.aglio.git
             - https://github.com/foliant-docs/foliantcontrib.admonitions.git
             - https://github.com/foliant-docs/foliantcontrib.anchors.git
             - https://github.com/foliant-docs/foliantcontrib.apilinks.git
