@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.ramldoc 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.ramldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#160201968ee1d48ba28583546d828557</guid>
+            <pubDate>Wed, 06 Nov 2019 15:22:50 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.aglio 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.aglio.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.aglio.git#b36117122fd73553f09f68398f9d2119</guid>
