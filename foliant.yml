@@ -37,6 +37,7 @@ chapters:
         - preprocessors/multilinetables.md
         - preprocessors/pgsqldoc.md
         - preprocessors/plantuml.md
+        - preprocessors/ramldoc.md
         - preprocessors/replace.md
         - preprocessors/repolink.md
         - preprocessors/runcommands.md
@@ -107,6 +108,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git
             - https://github.com/foliant-docs/foliantcontrib.plantuml.git
             - https://github.com/foliant-docs/foliantcontrib.project_graph.git
+            - https://github.com/foliant-docs/foliantcontrib.ramldoc.git
             - https://github.com/foliant-docs/foliantcontrib.replace.git
             - https://github.com/foliant-docs/foliantcontrib.runcommands.git
             - https://github.com/foliant-docs/foliantcontrib.slate.git
