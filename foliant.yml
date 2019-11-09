@@ -8,6 +8,7 @@ chapters:
     - Backends:
         - backends/aglio.md
         - backends/confluence.md
+        - backends/mdtopdf.md
         - MkDocs: backends/mkdocs.md
         - backends/pandoc.md
         - backends/slate.md
@@ -98,6 +99,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.includes.git
             - https://github.com/foliant-docs/foliantcontrib.init.git
             - https://github.com/foliant-docs/foliantcontrib.macros.git
+            - https://github.com/foliant-docs/foliantcontrib.mdtopdf.git
             - https://github.com/foliant-docs/foliantcontrib.mermaid.git
             - https://github.com/foliant-docs/foliantcontrib.meta.git
             - https://github.com/foliant-docs/foliantcontrib.mkdocs.git
