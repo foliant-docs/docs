@@ -7,10 +7,19 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
-            <title>foliantcontrib.ramldoc 1.0.0</title>
+            <title>foliantcontrib.mdtopdf 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git#a9591036eff5bbcd7660b6f311326056</guid>
+            <pubDate>Sat, 09 Nov 2019 12:34:29 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.ramldoc 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.ramldoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#160201968ee1d48ba28583546d828557</guid>
-            <pubDate>Wed, 06 Nov 2019 15:22:50 +0300</pubDate>
+            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#007197b836d7a631eb9a571a89ff8968</guid>
+            <pubDate>Wed, 06 Nov 2019 16:03:18 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
 </ul>]]></description>
