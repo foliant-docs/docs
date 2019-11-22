@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -1106,6 +1106,7 @@
 <p>The preprocessor supports the following options:</p>
 <div class="codehilite"><pre><span></span>    <span class="p p-Indicator">-</span> <span class="nt">imgcaptions</span><span class="p">:</span>
         <span class="nt">stylesheet_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">imgcaptions.css</span>
+        <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;p class=&quot;image_caption&quot;&gt;{caption}&lt;/p&gt;</span>
         <span class="nt">targets</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
@@ -1117,6 +1118,8 @@
 <dl>
 <dt><code>stylesheet_path</code></dt>
 <dd>Path to the CSS stylesheet file. This stylesheet should define rules for the <code>.image_caption</code> class. Default path is <code>imgcaptions.css</code>. If stylesheet file does not exist, default built-in stylesheet will be used.</dd>
+<dt><code>template</code></dt>
+<dd>Template string representing the HTML tag of the caption to be placed after the image. The template should contain the <code>{caption}</code> variable that will be replaced with the image caption. Default: <code>&lt;p class="image_caption"&gt;{caption}&lt;/p&gt;</code>.</dd>
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
@@ -1131,7 +1134,7 @@
 </pre></div>
 
 
-<p>(Note that ImgCaptions preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags <code>&lt;p class="image_caption"&gt;My Picture&lt;/p&gt;</code> into Markdown code after the image definitions. Empty alternative text descriptions are ignored.)</p>
+<p>(Note that ImgCaptions preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags like <code>&lt;p class="image_caption"&gt;My Picture&lt;/p&gt;</code> into Markdown code after the image definitions. Empty alternative text descriptions are ignored.)</p>
                 
                   
                 
@@ -1210,7 +1213,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

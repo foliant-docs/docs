@@ -7,6 +7,53 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.meta 1.2.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#46122085c4eb997c13d056f17ac1546a</guid>
+            <pubDate>Fri, 22 Nov 2019 09:33:09 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix bug with imports.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.meta 1.2.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#ce5146e98d6a4a8eafd2c652c49bf412</guid>
+            <pubDate>Thu, 21 Nov 2019 16:10:19 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support sections</li>
+<li>meta.yml format restructure</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#982f768b56c0de7a1d5770226cf10743</guid>
+            <pubDate>Thu, 21 Nov 2019 16:06:34 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support meta 1.2. Now you can publish sections to confluence.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.includes 1.1.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#7484e03432f55f2bdd33ad81557a14e1</guid>
+            <pubDate>Thu, 21 Nov 2019 15:59:55 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support meta 1.2</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.imgcaptions 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#eb2f09a11039abefb8bb9ce380597cf1</guid>
+            <pubDate>Wed, 20 Nov 2019 10:35:17 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: <code>stylesheet_path</code> only worked with the <code>!project_path</code> modifier.</li>
+<li>Add the <code>template</code> parameter to customize the caption HTML tag.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.mdtopdf 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git#a9591036eff5bbcd7660b6f311326056</guid>
@@ -607,11 +654,9 @@
         <item>
             <title>foliantcontrib.meta 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#6aeeb1b34c8de37a99ff49469b0b1c7b</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#7539c6329ec750a4b858585fc0560d92</guid>
             <pubDate>Fri, 28 Jun 2019 17:38:47 +0300</pubDate>
-            <description><![CDATA[<p>Initial release.
-<!-- meta section start glossary.md:main --></p>
-<!-- meta section start glossary.md:main -->]]></description>
+            <description><![CDATA[<p>Initial release.</p>]]></description>
         </item>
         <item>
             <title>foliantcontrib.includes 1.1.0</title>

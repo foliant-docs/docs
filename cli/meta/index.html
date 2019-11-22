@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -911,35 +911,36 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#meta-preprocessor" class="md-nav__link">
-    meta preprocessor
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usage_1" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seeds" class="md-nav__link">
-    Seeds
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#users-guide" class="md-nav__link">
+    User's guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    Sections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-fields" class="md-nav__link">
+    Special fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    Additional info
+  </a>
   
 </li>
       
@@ -1172,35 +1173,36 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#meta-preprocessor" class="md-nav__link">
-    meta preprocessor
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usage_1" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seeds" class="md-nav__link">
-    Seeds
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#users-guide" class="md-nav__link">
+    User's guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    Sections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-fields" class="md-nav__link">
+    Special fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-info" class="md-nav__link">
+    Additional info
+  </a>
   
 </li>
       
@@ -1227,14 +1229,13 @@
 <p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.meta.svg" /></p>
 <h2 id="metadata-for-foliant">Metadata for Foliant<a class="headerlink" href="#metadata-for-foliant" title="Permanent link">&para;</a></h2>
 <p>This extension adds the <code>meta generate</code> command to Foliant, which generates the yaml-file with project metadata. It also allows to add other meta commands <code>meta &lt;command&gt;</code> which use the generated metadata.</p>
-<p>It also adds the preprocessor <code>meta</code> which removes metadata blocks from the documents before builds and allows inserting formatted strings on the place of meta blocks, based on specific metadata keys.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ pip install foliantcontrib.meta
 </pre></div>
 
 
 <h3 id="specifying-metadata">Specifying metadata<a class="headerlink" href="#specifying-metadata" title="Permanent link">&para;</a></h3>
-<p>Metadata may be specified in the beginning of a Markdown-file using <a href="http://www.yaml.org/spec/1.2/spec.html#id2760395">YAML Front Matter</a> format:</p>
+<p>Metadata for the <em>main section</em> (more on sections in <strong>User's Guide</strong> below) may be specified in the beginning of a Markdown-file using <a href="http://www.yaml.org/spec/1.2/spec.html#id2760395">YAML Front Matter</a> format:</p>
 <div class="codehilite"><pre><span></span><span class="nn">---</span>
 <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MAIN_DOC</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Description of the product</span>
@@ -1243,6 +1244,14 @@
 </pre></div>
 
 
+<p>You may also use regular XML-like format with <code>meta</code> tag:</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+
+<blockquote>
+<p>If <code>meta</code> tag is present, all Metadata from YAML Front Matter is ignored.</p>
+</blockquote>
 <h3 id="meta-generate-command"><code>meta generate</code> command<a class="headerlink" href="#meta-generate-command" title="Permanent link">&para;</a></h3>
 <h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h4>
 <p>To generate meta file run the <code>meta generate</code> command:</p>
@@ -1262,52 +1271,34 @@
 <dt><code>filename</code></dt>
 <dd>name of the YAML-file with generated project metadata.</dd>
 </dl>
-<h3 id="meta-preprocessor"><code>meta</code> preprocessor<a class="headerlink" href="#meta-preprocessor" title="Permanent link">&para;</a></h3>
-<p><code>meta</code> preprocessor allows you to remove metadata from your Markdown source files before build. It may be necessary if some backend doesn't accept the YAML Front Matter syntax.</p>
-<p>This preprocessor also offers you a feature which we call <em>seeds</em>:</p>
-<p>Seeds are little string templates which will may be used to add some text after the metadata block in the resulting document, if specific keys were mentioned in the metadata. Details in the <strong>Seeds</strong> section.</p>
-<h4 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h4>
-<p>Add <code>meta</code> preprocessor to your <code>preprocessors</code> section of foliant.yml and specify all your seeds:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">meta</span><span class="p">:</span>
-        <span class="nt">delete_meta</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">seeds</span><span class="p">:</span>
-            <span class="nt">section</span><span class="p">:</span> <span class="s">&#39;*Section</span><span class="nv"> </span><span class="s">&quot;{value}&quot;*&#39;</span>
-            <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;anchor&gt;{value}&lt;/anchor&gt;</span>
-</pre></div>
-
-
-<dl>
-<dt><code>delete_meta</code></dt>
-<dd>If set to <code>true</code> — metadata block will be deleted from the document before build. Default: <code>false</code></dd>
-<dt><code>seeds</code></dt>
-<dd>Seeds dictionary. Details in the next section.</dd>
-</dl>
-<h4 id="seeds">Seeds<a class="headerlink" href="#seeds" title="Permanent link">&para;</a></h4>
-<p>Seeds allow you to add small chunks of text based on specific keys mentioned in the metadata block. For example, if you wish to add a small subcaption at the beginning of the document, which will use this document's title, add the <code>title</code> seed:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">meta</span><span class="p">:</span>
-        <span class="nt">seeds</span><span class="p">:</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="s">&#39;*Section</span><span class="nv"> </span><span class="s">&quot;{value}&quot;*&#39;</span>
-</pre></div>
-
-
-<p>If we have a meta block like this in our document:</p>
-<div class="codehilite"><pre><span></span><span class="nn">---</span>
-<span class="nt">ID</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">legal_info</span>
-<span class="nt">relates</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Legal information</span>
-<span class="nn">---</span>
-
-<span class="c1">## Terms of use</span>
-</pre></div>
-
-
-<p>Preprocessor will notice that <code>title</code> key was used in the meta block, and will add the seed with <code>{value}</code> placeholder replaced by the value of the <code>title</code> field:</p>
-<div class="codehilite"><pre><span></span><span class="o">*</span><span class="n">Section</span> <span class="ss">&quot;Legal information&quot;</span>
-
-<span class="o">##</span> <span class="n">Terms</span> <span class="k">of</span> <span class="n">use</span>
-</pre></div>
+<h2 id="users-guide">User's guide<a class="headerlink" href="#users-guide" title="Permanent link">&para;</a></h2>
+<p>Metadata allows you to specific properties to your documents, which won't be visible directly to the end-user. These properties may be:</p>
+<ul>
+<li>the document author's name;</li>
+<li>Jira ticket id;</li>
+<li>date of last revision;</li>
+<li>or anything else, there is not limitation.</li>
+</ul>
+<p>This module is required for metadata to work in your projects. But it doesn't care about most of the fields and their values. The only exception being the <code>id</code> field. See <strong>Special fields</strong> section.</p>
+<h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
+<p>You can specify metadata for a whole chapter and for it's portions, which are called <em>sections</em>. Section is a fragment of the document from one heading to another one of the same level of higher.</p>
+<p>Metadata, specified at the beginning of the document (before the first heading), is applied to the whole Markdown document. We call it the <em>main section</em> of the chapter.</p>
+<blockquote>
+<p>Note that you can specify metadata for the main section either in YAML Front Matter format, or with <code>meta</code> tag.</p>
+</blockquote>
+<p>If you specify metadata after the heading of some level, it will be applied to all content inside this heading, including all other nested headings. See the illustration below.</p>
+<p><img alt="" src="../../_img_83ce4c16-0cf8-11ea-9344-0242ac120002/pic1_83cf9de6-0cf8-11ea-9344-0242ac120002.png" /></p>
+<h2 id="special-fields">Special fields<a class="headerlink" href="#special-fields" title="Permanent link">&para;</a></h2>
+<p>Right now there's only one field that is treated specially: the <code>id</code> field.</p>
+<p>If specified, it will used as identificator of the section. Note that IDs must be unique within the whole project.</p>
+<p>If <code>id</code> field is omited — the section will get auto generated id based on:</p>
+<ul>
+<li>chapter filename for main section,</li>
+<li>title for general sections.</li>
+</ul>
+<h2 id="additional-info">Additional info<a class="headerlink" href="#additional-info" title="Permanent link">&para;</a></h2>
+<p>Metadata works only for files, mentioned in the <code>chapters</code> section in foliant.yml. All other files in <code>src</code> dir are ignored.</p>
+<p>When using <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">includes</a>, all metadata from the included content is removed.</p>
                 
                   
                 
@@ -1386,7 +1377,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
