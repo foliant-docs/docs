@@ -5,6 +5,8 @@ chapters:
     - index.md
     - installation.md
     - quickstart.md
+    - Tutorials:
+        - tutorials/api.md
     - Backends:
         - backends/aglio.md
         - backends/confluence.md
