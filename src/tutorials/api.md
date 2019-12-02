@@ -65,6 +65,12 @@ In the end you will get the following directory structure:
         └── index.md
 ```
 
+If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated `Dockerfile` and replace its contents with the following line:
+
+```Dockerfile
+FROM foliant/foliant:full
+```
+
 ## Configuring project
 
 Now let's set up `foliant.yml`. Right now it looks like this:
@@ -105,25 +111,17 @@ foliant make site --with slate
     Applying preprocessor swaggerdoc... Done
     Applying preprocessor slate... Done
     Applying preprocessor _unescape... Done
-    Making site... == Sprockets will render css with ruby sass
-       consider using Sprockets 4.x to render with SassC
-          create  build/stylesheets/print-bccf8c07.css
-          create  build/stylesheets/screen-a1ce949a.css
-          create  build/images/logo-1e815a84.png
-          create  build/images/navbar-cad8cdcb.png
-          create  build/fonts/slate-33847ce5.woff
-          create  build/fonts/slate-ddd488db.woff2
-          create  build/fonts/slate-7b7da4fe.ttf
-          create  build/fonts/slate-cfc9d06b.eot
-          create  build/fonts/slate-e55b8307.svg
-          create  build/javascripts/all_nosearch-c275c2f6.js
-          create  build/javascripts/all-c5541673.js
-          create  build/index.html
-    Project built successfully.
-
+    Making site...
+...
     Done
     ────────────────────
     Result: OpenAPI_docs-2019-11-29.slate/
+```
+
+If you use docker, the command is:
+
+```shell
+docker-compose run --rm foliant make site --with slate
 ```
 
 Now if you open the `index.html` from just created `OpenAPI_docs-2019-11-29.slate` folder, you should see something like this:
@@ -193,6 +191,12 @@ In the end you will get the following directory structure:
         └── index.md
 ```
 
+If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated `Dockerfile` and replace its contents with the following line:
+
+```Dockerfile
+FROM foliant/foliant:full
+```
+
 ## Configuring project
 
 Now let's set up `foliant.yml`. Right now it looks like this:
@@ -233,25 +237,19 @@ foliant make site --with slate
     Applying preprocessor ramldoc... Done
     Applying preprocessor slate... Done
     Applying preprocessor _unescape... Done
-    Making site... == Sprockets will render css with ruby sass
-       consider using Sprockets 4.x to render with SassC
-          create  build/stylesheets/print-bccf8c07.css
-          create  build/stylesheets/screen-a1ce949a.css
-          create  build/images/navbar-cad8cdcb.png
-          create  build/images/logo-1e815a84.png
-          create  build/fonts/slate-33847ce5.woff
-          create  build/fonts/slate-ddd488db.woff2
-          create  build/fonts/slate-7b7da4fe.ttf
-          create  build/fonts/slate-cfc9d06b.eot
-          create  build/fonts/slate-e55b8307.svg
-          create  build/index.html
-          create  build/javascripts/all_nosearch-c275c2f6.js
-          create  build/javascripts/all-c5541673.js
+    Making site...
+...
     Project built successfully.
 
     Done
     ────────────────────
     Result: API_docs-2019-11-29.slate/
+```
+
+If you use docker, the command is:
+
+```shell
+docker-compose run --rm foliant make site --with slate
 ```
 
 Now if you open the `index.html` from just created `API_docs-2019-11-29.slate` folder, you should see something like this:
@@ -306,6 +304,12 @@ In the end you will get the following directory structure:
         └── spec.md
 ```
 
+If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated `Dockerfile` and replace its contents with the following line:
+
+```Dockerfile
+FROM foliant/foliant:full
+```
+
 ## Configuring project
 
 Now let's set up `foliant.yml`. Right now it looks like this:
@@ -338,6 +342,12 @@ foliant make site --with aglio
     Making site... Done
     ────────────────────
     Result: OpenAPI_docs-2019-11-29.aglio
+```
+
+If you use docker, the command is:
+
+```shell
+docker-compose run --rm foliant make site --with slate
 ```
 
 Now if you open the `index.html` from just created `API_docs-2019-11-29.aglio` folder, you should see something like this:
