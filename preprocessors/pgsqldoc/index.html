@@ -291,10 +291,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -386,13 +422,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -860,13 +896,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -939,13 +975,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1004,13 +1040,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1193,17 +1229,17 @@ This document contains the most awesome automatically generated documentation of
 
 <p>Each time the preprocessor encounters the tag <code>&lt;pgsqldoc&gt;&lt;/pgsqldoc&gt;</code> it inserts the whole generated documentation text instead of it. The connection parameters are taken from the config-file.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span>## <span class="nv">Introduction</span>
+<div class="codehilite"><pre><span></span>## Introduction
 
-<span class="nv">Introduction</span> <span class="nv">text</span> <span class="k">for</span> <span class="nv">database</span> <span class="nv">documentation</span>.
+Introduction text for database documentation.
 
-<span class="o">&lt;</span><span class="nv">pgsqldoc</span> <span class="nv">draw</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span>
-          <span class="nv">host</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">11.51.126.8</span><span class="s2">&quot;</span>
-          <span class="nv">port</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">5432</span><span class="s2">&quot;</span>
-          <span class="nv">dbname</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">mydb</span><span class="s2">&quot;</span>
-          <span class="nv">user</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">scott</span><span class="s2">&quot;</span>
-          <span class="nv">password</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">tiger</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="nv">pgsqldoc</span><span class="o">&gt;</span>
+<span class="nt">&lt;pgsqldoc</span> <span class="na">draw=</span><span class="s">&quot;true&quot;</span>
+          <span class="na">host=</span><span class="s">&quot;11.51.126.8&quot;</span>
+          <span class="na">port=</span><span class="s">&quot;5432&quot;</span>
+          <span class="na">dbname=</span><span class="s">&quot;mydb&quot;</span>
+          <span class="na">user=</span><span class="s">&quot;scott&quot;</span>
+          <span class="na">password=</span><span class="s">&quot;tiger&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/pgsqldoc&gt;</span>
 </pre></div>
 
 

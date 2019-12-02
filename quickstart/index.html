@@ -370,10 +370,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -463,13 +499,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -871,13 +907,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -950,13 +986,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1015,13 +1051,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1353,11 +1389,11 @@ Result: Hello_Foliant-2018-02-08.pdf
 <p><img alt="Sequence diagram with Comic Sans in labels, site" src="../images/basic-mkdocs-seqdiag-comic.png" /></p>
 <p><img alt="Sequence diagram with Comic Sans in labels, pdf" src="../images/basic-pdf-seqdiag-comic.png" /></p>
 <p>There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <a href="../preprocessors/flags/">Flags</a> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:</p>
-<div class="codehilite"><pre><span></span><span class="nv">This</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">diagram</span> <span class="nv">that</span> <span class="nv">is</span> <span class="nv">rendered</span> <span class="nv">to</span> `.<span class="nv">png</span>` <span class="nv">in</span> <span class="nv">html</span> <span class="nv">and</span> <span class="nv">to</span> `.<span class="nv">pdf</span>` <span class="nv">in</span> <span class="nv">pdf</span>:
+<div class="codehilite"><pre><span></span>This is a diagram that is rendered to `.png` in html and to `.pdf` in pdf:
 
-<span class="o">&lt;&lt;</span><span class="nv">blockdiag</span> <span class="nv">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">&lt;if targets=</span><span class="s2">&quot;</span><span class="nv">html</span><span class="s2">&quot;</span><span class="s">&gt;png&lt;/if&gt;&lt;&lt;if targets=</span><span class="s2">&quot;</span><span class="nv">pdf</span><span class="s2">&quot;</span><span class="s">&gt;pdf&lt;/if</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+<span class="err">&lt;</span><span class="nt">&lt;blockdiag</span> <span class="na">format=</span><span class="s">&quot;&lt;if targets=&quot;</span><span class="err">html&quot;</span><span class="nt">&gt;</span>png<span class="nt">&lt;/if&gt;</span><span class="err">&lt;</span><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>pdf<span class="err">&lt;</span>/if&quot;&gt;
     ...
-<span class="o">&lt;/</span><span class="nv">blockdiag</span><span class="o">&gt;</span>
+<span class="nt">&lt;/blockdiag&gt;</span>
 </pre></div>
 
 
@@ -1409,13 +1445,13 @@ Result: Hello_Foliant-2018-02-08.pdf
           </a>
         
         
-          <a href="../backends/aglio/" title="Aglio" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tutorials/api/" title="Documenting API with Foliant" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Aglio
+                Documenting API with Foliant
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

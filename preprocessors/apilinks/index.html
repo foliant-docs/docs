@@ -291,10 +291,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -386,13 +422,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -881,13 +917,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -960,13 +996,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1025,13 +1061,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1188,7 +1224,7 @@
 
 
 <p>You want references to these methods in your documentation to be replaced with the links to the actual method descriptions. Your references look like this:</p>
-<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="o">`</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">To authenticate user use API method `GET user/authenticate`.</span>
 </pre></div>
 
 
@@ -1208,7 +1244,7 @@
 <li><code>url</code> is a string with full url to your API documentation web-page. It will be used to validate references and to construct a link to method.</li>
 </ul>
 <p>After foliant applies the preprocessor your document will be transformed into this:</p>
-<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">authenticate</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">To authenticate user use API method [GET user/authenticate](http://example.com/api-docs/#get-user-authenticate).</span>
 </pre></div>
 
 
@@ -1226,14 +1262,14 @@
 
 
 <p>Now this source:</p>
-<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="o">`</span><span class="p">.</span>
-<span class="k">To</span> <span class="n">ban</span> <span class="k">user</span> <span class="k">from</span> <span class="n">the</span> <span class="n">website</span> <span class="n">use</span> <span class="k">admin</span> <span class="n">API</span> <span class="k">method</span> <span class="o">`</span><span class="n">POST</span> <span class="k">admin</span><span class="o">/</span><span class="n">ban_user</span><span class="o">/</span><span class="err">{</span><span class="n">user_id</span><span class="err">}</span><span class="o">`</span>
+<div class="codehilite"><pre><span></span><span class="err">To authenticate user use API method `GET user/authenticate`.</span>
+<span class="err">To ban user from the website use admin API method `POST admin/ban_user/{user_id}`</span>
 </pre></div>
 
 
 <p>Will be transformed by apilinks into this:</p>
-<div class="codehilite"><pre><span></span><span class="k">To</span> <span class="n">authenticate</span> <span class="k">user</span> <span class="n">use</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">authenticate</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">authenticate</span><span class="p">).</span>
-<span class="k">To</span> <span class="n">ban</span> <span class="k">user</span> <span class="k">from</span> <span class="n">the</span> <span class="n">website</span> <span class="n">use</span> <span class="k">admin</span> <span class="n">API</span> <span class="k">method</span> <span class="p">[</span><span class="n">POST</span> <span class="k">admin</span><span class="o">/</span><span class="n">ban_user</span><span class="o">/</span><span class="err">{</span><span class="n">user_id</span><span class="err">}</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">admin</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">docs</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">admin</span><span class="o">-</span><span class="n">ban_user</span><span class="o">-</span><span class="n">user_id</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">To authenticate user use API method [GET user/authenticate](http://example.com/client/api-docs/#get-user-authenticate).</span>
+<span class="err">To ban user from the website use admin API method [POST admin/ban_user/{user_id}](http://example.com/admin/api-docs/#post-admin-ban_user-user_id)</span>
 </pre></div>
 
 
@@ -1244,8 +1280,8 @@
 
 
 <p>It suggests us to use prefix, and by that it means to prefix the reference by the local name of the API in config. Like that:</p>
-<div class="codehilite"><pre><span></span><span class="nv">Check</span> <span class="nv">status</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">server</span> <span class="nv">through</span> <span class="nv">Client</span> <span class="nv">API</span>: `<span class="nv">Client</span><span class="o">-</span><span class="nv">API</span>: <span class="nv">GET</span> <span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">healthcheck</span>`
-<span class="k">Do</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">through</span> <span class="nv">Admin</span> <span class="nv">API</span>: `<span class="nv">Admin</span><span class="o">-</span><span class="nv">API</span>: <span class="nv">GET</span> <span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">healthcheck</span>`
+<div class="codehilite"><pre><span></span><span class="err">Check status of the server through Client API: `Client-API: GET /service/healthcheck`</span>
+<span class="err">Do the same through Admin API: `Admin-API: GET /service/healthcheck`</span>
 </pre></div>
 
 
@@ -1335,7 +1371,7 @@
 <dd><em>(optional)</em> regular expression used to catch <em>references</em> in the source. Look for details in the <strong>Capturing References</strong> section.
 Default:</dd>
 </dl>
-<div class="codehilite"><pre><span></span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">source</span><span class="o">&gt;</span>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`<span class="ss">)</span>
+<div class="codehilite"><pre><span></span><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </pre></div>
 
 
@@ -1387,18 +1423,18 @@ Default:</dd>
 <p>Now let's look at different examples of the text used in Markdown source and how it is going to be transformed in Offline and Online modes</p>
 <p><strong>Example 1</strong>
 Source:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link which only exists in Remote API: `GET system/info`.</span>
 </pre></div>
 
 
 <p>In <em>Offline mode</em> preprocessor won't do any checks and just replace the reference with the link to default API from the config:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">system</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link which only exists in Remote API: [GET system/info](http://example.com/api/client/#get-system-info).</span>
 </pre></div>
 
 
 <p>This is certainly a wrong decision, but it is our fault, we sould have added the prefix to the reference.</p>
 <p>But let's look what will happen in <em>Online mode</em>:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="n">which</span> <span class="k">only</span> <span class="k">exists</span> <span class="k">in</span> <span class="n">Remote</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">system</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">remote</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="k">ref</span><span class="o">/#</span><span class="k">system</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link which only exists in Remote API: [GET system/info](https://remote.net/api-ref/#system-info).</span>
 </pre></div>
 
 
@@ -1406,20 +1442,20 @@ Source:</p>
 <p>By the way, notice how anchors differ in the two examples. For Remote API preprocessor used its header template to reconstruct the anchor, dropping the verb from it.</p>
 <p><strong>Example 2</strong>
 Source:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">`</span><span class="p">.</span>
-<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link with misprint: `GET user/sttus`.</span>
+<span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </pre></div>
 
 
 <p>In <em>Offline mode</em> preprocessor won't do any checks again. No magic, the reference will be replaced with the link to default API from the config:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">sttus</span><span class="p">).</span>
-<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link with misprint: [GET user/sttus](http://example.com/api/client/#get-user-sttus).</span>
+<span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </pre></div>
 
 
 <p>In <em>Online mode</em> preprocessor won't be able to find the method during validation and the reference won't be replaced at all:</p>
-<div class="codehilite"><pre><span></span><span class="n">Unprefixed</span> <span class="n">link</span> <span class="k">with</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">`</span><span class="p">.</span>
-<span class="n">The</span> <span class="n">link</span> <span class="k">is</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">there</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">no</span> <span class="n">such</span> <span class="k">method</span> <span class="k">in</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">APIs</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Unprefixed link with misprint: `GET user/sttus`.</span>
+<span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </pre></div>
 
 
@@ -1430,36 +1466,36 @@ Source:</p>
 
 <p><strong>Example 3</strong>
 Source:</p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="o">`</span><span class="k">Admin</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="o">`</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Admin API: `Admin-API: POST user/ban_forever`.</span>
 </pre></div>
 
 
 <p>In <em>Offline mode</em> preprocessor will notice the prefix and will be able to replace the reference with an appropriate link:</p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">ban_forever</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Admin API: [POST user/ban_forever](http://example.com/api/client/#post-user-ban_forever).</span>
 </pre></div>
 
 
 <p>Notice that prefix disappeared from the text. If you wish it to stay there — edit the <code>output_template</code> option to something like this: <code>'{prefix}: {verb} {command}'</code>.</p>
 <p>In <em>Online mode</em> the result will be exactly the same. Preprocessor will check the Admin-API methods, find there the referenced method and replace it in the text:</p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="k">Admin</span> <span class="n">API</span><span class="p">:</span> <span class="p">[</span><span class="n">POST</span> <span class="k">user</span><span class="o">/</span><span class="n">ban_forever</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="n">post</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">ban_forever</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Admin API: [POST user/ban_forever](http://example.com/api/client/#post-user-ban_forever).</span>
 </pre></div>
 
 
 <p><strong>Example 4</strong></p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
-<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Remote API with a misprint: `Remote-API: GET billling/info`.</span>
+<span class="err">Oh no, the method is incorrect again.</span>
 </pre></div>
 
 
 <p>In <em>Offline mode</em> preprocessor will perform no checks and just replace the reference with the link to Remote API:</p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">remote</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="k">ref</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="n">billling</span><span class="o">-</span><span class="n">info</span><span class="p">).</span>
-<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Remote API with a misprint: [GET billling/info](https://remote.net/api-ref/#get-billling-info).</span>
+<span class="err">Oh no, the method is incorrect again.</span>
 </pre></div>
 
 
 <p><em>Online mode</em>, on the other hand, will make its homework. It will check whether the Remote API actually has the method <em>GET billling/info</em>. Finding out that it hasn't it will leave the reference unchanged:</p>
-<div class="codehilite"><pre><span></span><span class="n">Prefixed</span> <span class="n">link</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Remote</span> <span class="n">API</span> <span class="k">with</span> <span class="n">a</span> <span class="n">misprint</span><span class="p">:</span> <span class="o">`</span><span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="p">:</span> <span class="k">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span><span class="o">`</span><span class="p">.</span>
-<span class="n">Oh</span> <span class="k">no</span><span class="p">,</span> <span class="n">the</span> <span class="k">method</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">again</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Prefixed link to the Remote API with a misprint: `Remote-API: GET billling/info`.</span>
+<span class="err">Oh no, the method is incorrect again.</span>
 </pre></div>
 
 
@@ -1469,17 +1505,17 @@ Source:</p>
 
 
 <p><strong>Example 5</strong></p>
-<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="o">`</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: `GET service/healthcheck`.</span>
 </pre></div>
 
 
 <p>In <em>Offline mode</em> preprocessor will just replace the reference with a link to default API:</p>
-<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="p">[</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">client</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="n">service</span><span class="o">-</span><span class="n">healthcheck</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: [GET service/healthcheck](http://example.com/api/client/#get-service-healthcheck).</span>
 </pre></div>
 
 
 <p>But in <em>Online mode</em> preprocessor will go through all API method lists. It will find several mentions of this exact method and, confused, won't replace the reference at all:</p>
-<div class="codehilite"><pre><span></span><span class="n">Now</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">reference</span> <span class="n">a</span> <span class="k">method</span> <span class="n">which</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="k">both</span> <span class="n">Client</span> <span class="k">and</span> <span class="k">Admin</span> <span class="n">APIs</span><span class="p">:</span> <span class="o">`</span><span class="k">GET</span> <span class="n">service</span><span class="o">/</span><span class="n">healthcheck</span><span class="o">`</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: `GET service/healthcheck`.</span>
 </pre></div>
 
 
@@ -1491,7 +1527,7 @@ Source:</p>
 <h3 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h3>
 <p>apilinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
 <p>The default reg-ex is as following:</p>
-<div class="codehilite"><pre><span></span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">source</span><span class="o">&gt;</span>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`<span class="ss">)</span>
+<div class="codehilite"><pre><span></span><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </pre></div>
 
 
@@ -1562,7 +1598,7 @@ Source:</p>
 <p>Don't forget the single quotes around the template. This way we say to yaml engine that this is a string for it not to be confused with curly braces.</p>
 </blockquote>
 <p>With the default template, the reference string will be replaced by something like that:</p>
-<div class="codehilite"><pre><span></span><span class="p">[</span><span class="k">GET</span> <span class="k">user</span><span class="o">/</span><span class="n">info</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/#</span><span class="k">get</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="n">info</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">[GET user/info](http://example.com/api/#get-user-info)</span>
 </pre></div>
 
 

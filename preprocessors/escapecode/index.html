@@ -291,10 +291,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -386,13 +422,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -860,13 +896,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -939,13 +975,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1004,13 +1040,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1148,9 +1184,9 @@
 <p>You may call EscapeCode and UnescapeCode explicitly, but these preprocessors are integrated with Foliant core (since version 1.0.10) and with Includes preprocessor (since version 1.1.1).</p>
 <p>The <code>escape_code</code> project’s config option, if set to <code>true</code>, provides applying EscapeCode before all other preprocessors, and applying UnescapeCode after all other preprocessors. Also this option tells Includes preprocessor to apply EscapeCode to each included file.</p>
 <p>In this mode EscapeCode and UnescapeCode preprocessors deprecate _unescape preprocessor.</p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span>    <span class="o">**</span><span class="nv">Note</span><span class="o">**</span>
-<span class="o">&gt;</span>
-<span class="o">&gt;</span>    <span class="nv">The</span> <span class="nv">preprocessor</span> <span class="nv">_unescape</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">part</span> <span class="nv">of</span> <span class="nv">Foliant</span> <span class="nv">core</span>. <span class="nv">It</span> <span class="nv">allows</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">pseudo</span><span class="o">-</span><span class="nv">XML</span> <span class="nv">tags</span> <span class="nv">in</span> <span class="nv">code</span> <span class="nv">examples</span>. <span class="k">If</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">an</span> <span class="nv">opening</span> <span class="nv">tag</span> <span class="nv">not</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">interpreted</span> <span class="nv">by</span> <span class="nv">any</span> <span class="nv">preprocessor</span>, <span class="nv">precede</span> <span class="nv">this</span> <span class="nv">tag</span> <span class="nv">with</span> <span class="nv">the</span> `<span class="o">&lt;</span>` <span class="nv">character</span>. <span class="nv">The</span> <span class="nv">preprocessor</span> <span class="nv">_unescape</span> <span class="nv">applies</span> <span class="nv">after</span> <span class="nv">all</span> <span class="nv">other</span> <span class="nv">preprocessors</span> <span class="nv">and</span> <span class="nv">removes</span> <span class="nv">such</span> <span class="nv">characters</span>.
+<div class="codehilite"><pre><span></span><span class="err">&gt;    **Note**</span>
+<span class="err">&gt;</span>
+<span class="err">&gt;    The preprocessor _unescape is a part of Foliant core. It allows to use pseudo-XML tags in code examples. If you want an opening tag not to be interpreted by any preprocessor, precede this tag with the `&lt;` character. The preprocessor _unescape applies after all other preprocessors and removes such characters.</span>
 </pre></div>
 
 

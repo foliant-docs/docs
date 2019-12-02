@@ -291,10 +291,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -386,13 +422,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -886,13 +922,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -965,13 +1001,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1030,13 +1066,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1252,19 +1288,19 @@ This document contains the automatically generated documentation of our API.
 
 <p>Each time the preprocessor encounters the tag <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to Swagger spec file are taken from foliant.yml.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span>## <span class="nv">Introduction</span>
+<div class="codehilite"><pre><span></span>## Introduction
 
-<span class="nv">Introduction</span> <span class="nv">text</span> <span class="k">for</span> <span class="nv">API</span> <span class="nv">documentation</span>.
+Introduction text for API documentation.
 
-<span class="o">&lt;</span><span class="nv">swaggerdoc</span> <span class="nv">json_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://localhost/swagger.json</span><span class="s2">&quot;</span>
-            <span class="nv">mode</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">jinja</span><span class="s2">&quot;</span>
-            <span class="nv">template</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">swagger.j2</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="nv">swaggerdoc</span><span class="o">&gt;</span>
+<span class="nt">&lt;swaggerdoc</span> <span class="na">json_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
+            <span class="na">mode=</span><span class="s">&quot;jinja&quot;</span>
+            <span class="na">template=</span><span class="s">&quot;swagger.j2&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/swaggerdoc&gt;</span>
 
-<span class="o">&lt;</span><span class="nv">swaggerdoc</span> <span class="nv">json_url</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://localhost/swagger.json</span><span class="s2">&quot;</span>
-            <span class="nv">mode</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">widdershins</span><span class="s2">&quot;</span>
-            <span class="nv">environment</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">env.yml</span><span class="s2">&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="nv">swaggerdoc</span><span class="o">&gt;</span>
+<span class="nt">&lt;swaggerdoc</span> <span class="na">json_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
+            <span class="na">mode=</span><span class="s">&quot;widdershins&quot;</span>
+            <span class="na">environment=</span><span class="s">&quot;env.yml&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/swaggerdoc&gt;</span>
 </pre></div>
 
 

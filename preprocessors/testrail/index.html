@@ -291,10 +291,46 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Backends
+      Tutorials
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Backends
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -386,13 +422,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Preprocessors
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Preprocessors
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -859,13 +895,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       CLI Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         CLI Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -938,13 +974,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-7-6">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-7-6">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1003,13 +1039,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Config Extensions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Config Extensions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1226,85 +1262,85 @@
 </dl>
 <p>If this parameter not set and there is no default <em>case_templates</em> folder in the project, it will be created automatically with two jinja files for TestRail templates by default — <em>Test Case (Text)</em> with <em>template_id=1</em> and <em>Test Case (Steps)</em> with <em>template_id=2</em>.</p>
 <p>You can create TestRail templates by yourself in <em>Administration</em> panel, <em>Customizations</em> section, <em>Templates</em> part. Then you have to create jinja templates whith the names <em>{template_id}.j2</em> for them. For example, file <em>2.j2</em> for <em>Test Case (Steps)</em> TestRail template:</p>
-<div class="codehilite"><pre><span></span>{<span class="o">%</span> <span class="k">if</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_steps_separated</span><span class="s1">&#39;</span>][<span class="mi">0</span>][<span class="s1">&#39;</span><span class="s">content</span><span class="s1">&#39;</span>] <span class="o">%</span>}
-{<span class="o">%</span> <span class="k">if</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_preconds</span><span class="s1">&#39;</span>] <span class="o">%</span>}
-<span class="o">**</span><span class="nv">Preconditions</span>:<span class="o">**</span>
+<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">case</span><span class="o">[</span><span class="s1">&#39;custom_steps_separated&#39;</span><span class="o">][</span><span class="m">0</span><span class="o">][</span><span class="s1">&#39;content&#39;</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">case</span><span class="o">[</span><span class="s1">&#39;custom_preconds&#39;</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">**Preconditions:**</span>
 
-{{ <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_preconds</span><span class="s1">&#39;</span>] }}
-{<span class="o">%</span> <span class="k">endif</span> <span class="o">%</span>}
+<span class="cp">{{</span> <span class="nv">case</span><span class="o">[</span><span class="s1">&#39;custom_preconds&#39;</span><span class="o">]</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 
-<span class="o">**</span><span class="nv">Scenario</span>:<span class="o">**</span>
+<span class="x">**Scenario:**</span>
 
-{<span class="o">%</span> <span class="k">for</span> <span class="nv">case_step</span> <span class="nv">in</span> <span class="nv">case</span>[<span class="s1">&#39;</span><span class="s">custom_steps_separated</span><span class="s1">&#39;</span>] <span class="o">%</span>}
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">case_step</span> <span class="k">in</span> <span class="nv">case</span><span class="o">[</span><span class="s1">&#39;custom_steps_separated&#39;</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
 
-<span class="o">*</span><span class="nv">Step</span> {{ <span class="k">loop</span>.<span class="nv">index</span> }}.<span class="o">*</span> {{ <span class="nv">case_step</span>[<span class="s1">&#39;</span><span class="s">content</span><span class="s1">&#39;</span>] }}
+<span class="x">*Step </span><span class="cp">{{</span> <span class="nb">loop</span><span class="nv">.index</span> <span class="cp">}}</span><span class="x">.* </span><span class="cp">{{</span> <span class="nv">case_step</span><span class="o">[</span><span class="s1">&#39;content&#39;</span><span class="o">]</span> <span class="cp">}}</span><span class="x"></span>
 
-<span class="o">*</span><span class="nv">Expected</span> <span class="nb">result</span>:<span class="o">*</span>
+<span class="x">*Expected result:*</span>
 
-{{ <span class="nv">case_step</span>[<span class="s1">&#39;</span><span class="s">expected</span><span class="s1">&#39;</span>] }}
+<span class="cp">{{</span> <span class="nv">case_step</span><span class="o">[</span><span class="s1">&#39;expected&#39;</span><span class="o">]</span> <span class="cp">}}</span><span class="x"></span>
 
-{<span class="o">%</span> <span class="nv">endfor</span> <span class="o">%</span>}
-{<span class="o">%</span> <span class="k">endif</span> <span class="o">%</span>}
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 
 
 <p>You can use all parameters of two variables in the template — <em>case</em> and <em>params</em>. Case parameters depends on TestRail template. All custom parameters have prefix 'custom_' before system name set in TestRail.</p>
 <p>Here is an example of <em>case</em> variable (parameters depends on case template):</p>
-<div class="codehilite"><pre><span></span><span class="k">case</span> <span class="o">=</span> <span class="err">{</span>
-    <span class="s1">&#39;created_by&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s1">&#39;created_on&#39;</span><span class="p">:</span> <span class="mi">1524909903</span><span class="p">,</span>
-    <span class="s1">&#39;custom_expected&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-    <span class="s1">&#39;custom_goals&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-    <span class="s1">&#39;custom_mission&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-    <span class="s1">&#39;custom_preconds&#39;</span><span class="p">:</span> <span class="s1">&#39;- The user is not registered in the system.\r\n&#39;</span>
-        <span class="s1">&#39;- Registration form opened.&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;custom_steps&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;custom_steps_separated&#39;</span><span class="p">:</span> <span class="p">[</span><span class="err">{</span>
-        <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Enter mobile phone number.&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;expected&#39;</span><span class="p">:</span> <span class="s1">&#39;- Entered phone number &#39;</span>
-        <span class="s1">&#39;is visible in the form field.&#39;</span>
-        <span class="err">}</span><span class="p">,</span>
-        <span class="err">{</span><span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Press OK button.&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;expected&#39;</span><span class="p">:</span> <span class="s1">&#39;- SMS with registration code &#39;</span>
-        <span class="s1">&#39;received.\n&#39;</span><span class="err">}</span><span class="p">],</span>
-    <span class="s1">&#39;custom_test_androidtv&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-    <span class="s1">&#39;custom_test_appletv&#39;</span><span class="p">:</span> <span class="k">None</span><span class="p">,</span>
-    <span class="s1">&#39;custom_test_smarttv&#39;</span><span class="p">:</span> <span class="s1">&#39;None,</span>
-<span class="s1">    &#39;</span><span class="n">custom_tp</span><span class="s1">&#39;: True,</span>
-<span class="s1">    &#39;</span><span class="n">estimate</span><span class="s1">&#39;: None,</span>
-<span class="s1">    &#39;</span><span class="n">estimate_forecast</span><span class="s1">&#39;: None,</span>
-<span class="s1">    &#39;</span><span class="n">id</span><span class="s1">&#39;: 15940,</span>
-<span class="s1">    &#39;</span><span class="n">milestone_id</span><span class="s1">&#39;: None,</span>
-<span class="s1">    &#39;</span><span class="n">priority_id</span><span class="s1">&#39;: 4,</span>
-<span class="s1">    &#39;</span><span class="n">refs</span><span class="s1">&#39;: None,</span>
-<span class="s1">    &#39;</span><span class="n">section_id</span><span class="s1">&#39;: 3441,</span>
-<span class="s1">    &#39;</span><span class="n">suite_id</span><span class="s1">&#39;: 101,</span>
-<span class="s1">    &#39;</span><span class="n">template_id</span><span class="s1">&#39;: 7,</span>
-<span class="s1">    &#39;</span><span class="n">title</span><span class="s1">&#39;: &#39;</span><span class="n">Registration</span> <span class="k">by</span> <span class="n">mobile</span> <span class="n">phone</span> <span class="nb">number</span><span class="p">.</span><span class="s1">&#39;,</span>
-<span class="s1">    &#39;</span><span class="n">type_id</span><span class="s1">&#39;: 7,</span>
-<span class="s1">    &#39;</span><span class="n">updated_by</span><span class="s1">&#39;: 10,</span>
-<span class="s1">    &#39;</span><span class="n">updated_on</span><span class="err">&#39;</span><span class="p">:</span> <span class="mi">1528978979</span>
+<div class="codehilite"><pre><span></span><span class="err">case = {</span>
+<span class="err">    &#39;created_by&#39;: 3,</span>
+<span class="err">    &#39;created_on&#39;: 1524909903,</span>
+<span class="err">    &#39;custom_expected&#39;: None,</span>
+<span class="err">    &#39;custom_goals&#39;: None,</span>
+<span class="err">    &#39;custom_mission&#39;: None,</span>
+<span class="err">    &#39;custom_preconds&#39;: &#39;- The user is not registered in the system.\r\n&#39;</span>
+<span class="err">        &#39;- Registration form opened.&#39;,</span>
+<span class="err">    &#39;custom_steps&#39;: &#39;&#39;,</span>
+<span class="err">    &#39;custom_steps_separated&#39;: [{</span>
+<span class="err">        &#39;content&#39;: &#39;Enter mobile phone number.&#39;,</span>
+<span class="err">        &#39;expected&#39;: &#39;- Entered phone number &#39;</span>
+<span class="err">        &#39;is visible in the form field.&#39;</span>
+<span class="err">        },</span>
+<span class="err">        {&#39;content&#39;: &#39;Press OK button.&#39;,</span>
+<span class="err">        &#39;expected&#39;: &#39;- SMS with registration code &#39;</span>
+<span class="err">        &#39;received.\n&#39;}],</span>
+<span class="err">    &#39;custom_test_androidtv&#39;: None,</span>
+<span class="err">    &#39;custom_test_appletv&#39;: None,</span>
+<span class="err">    &#39;custom_test_smarttv&#39;: &#39;None,</span>
+<span class="err">    &#39;custom_tp&#39;: True,</span>
+<span class="err">    &#39;estimate&#39;: None,</span>
+<span class="err">    &#39;estimate_forecast&#39;: None,</span>
+<span class="err">    &#39;id&#39;: 15940,</span>
+<span class="err">    &#39;milestone_id&#39;: None,</span>
+<span class="err">    &#39;priority_id&#39;: 4,</span>
+<span class="err">    &#39;refs&#39;: None,</span>
+<span class="err">    &#39;section_id&#39;: 3441,</span>
+<span class="err">    &#39;suite_id&#39;: 101,</span>
+<span class="err">    &#39;template_id&#39;: 7,</span>
+<span class="err">    &#39;title&#39;: &#39;Registration by mobile phone number.&#39;,</span>
+<span class="err">    &#39;type_id&#39;: 7,</span>
+<span class="err">    &#39;updated_by&#39;: 10,</span>
+<span class="err">    &#39;updated_on&#39;: 1528978979</span>
 <span class="err">}</span>
 </pre></div>
 
 
 <p>And here is an example of <em>params</em> variable (parameters are always the same):</p>
-<div class="codehilite"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="err">{</span>
-    <span class="s1">&#39;multi_param_name&#39;</span><span class="p">:</span> <span class="s1">&#39;platform&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;multi_param_sys_name&#39;</span><span class="p">:</span> <span class="s1">&#39;custom_platform&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;multi_param_select&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;android&#39;</span><span class="p">,</span> <span class="s1">&#39;ios&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;multi_param_select_type&#39;</span><span class="p">:</span> <span class="k">any</span><span class="p">,</span>
-    <span class="s1">&#39;add_cases_without_multi_param&#39;</span><span class="p">:</span> <span class="k">False</span><span class="p">,</span>
-    <span class="s1">&#39;checkbox_param_name&#39;</span><span class="p">:</span> <span class="s1">&#39;publish&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;checkbox_param_sys_name&#39;</span><span class="p">:</span> <span class="s1">&#39;custom_publish&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;checkbox_param_select_type&#39;</span><span class="p">:</span> <span class="s1">&#39;checked&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;choose_priorities&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;critical&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;add_multi_param_to_case_header&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
-    <span class="s1">&#39;add_multi_param_to_std_table&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
-    <span class="s1">&#39;add_priority_to_case_header&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
-    <span class="s1">&#39;add_priority_to_std_table&#39;</span><span class="p">:</span> <span class="k">True</span><span class="p">,</span>
-    <span class="s1">&#39;add_case_id_to_case_header&#39;</span><span class="p">:</span> <span class="k">False</span><span class="p">,</span>
-    <span class="s1">&#39;add_case_id_to_std_table&#39;</span><span class="p">:</span> <span class="k">False</span>
+<div class="codehilite"><pre><span></span><span class="err">params = {</span>
+<span class="err">    &#39;multi_param_name&#39;: &#39;platform&#39;,</span>
+<span class="err">    &#39;multi_param_sys_name&#39;: &#39;custom_platform&#39;,</span>
+<span class="err">    &#39;multi_param_select&#39;: [&#39;android&#39;, &#39;ios&#39;],</span>
+<span class="err">    &#39;multi_param_select_type&#39;: any,</span>
+<span class="err">    &#39;add_cases_without_multi_param&#39;: False,</span>
+<span class="err">    &#39;checkbox_param_name&#39;: &#39;publish&#39;,</span>
+<span class="err">    &#39;checkbox_param_sys_name&#39;: &#39;custom_publish&#39;,</span>
+<span class="err">    &#39;checkbox_param_select_type&#39;: &#39;checked&#39;,</span>
+<span class="err">    &#39;choose_priorities&#39;: [&#39;critical&#39;, &#39;high&#39;, &#39;medium&#39;],</span>
+<span class="err">    &#39;add_multi_param_to_case_header&#39;: True,</span>
+<span class="err">    &#39;add_multi_param_to_std_table&#39;: True,</span>
+<span class="err">    &#39;add_priority_to_case_header&#39;: True,</span>
+<span class="err">    &#39;add_priority_to_std_table&#39;: True,</span>
+<span class="err">    &#39;add_case_id_to_case_header&#39;: False,</span>
+<span class="err">    &#39;add_case_id_to_std_table&#39;: False</span>
 <span class="err">}</span>
 </pre></div>
 
@@ -1528,26 +1564,26 @@
 <p>Using described setting you can flexibly adjust test cases sampling. For example, you can download only published <em>critical</em> test cases for both and only <em>Mac</em> and <em>PC</em>.</p>
 <p>Now strange things, mostly made specially for my project, but may be useful for others.</p>
 <p>Screenshots. There is no possibility to store screenshots in TestRail projects, but you can store them in the GitLab repository (link to which should be stated in one of the following parameters). GitLab project should have following structure:</p>
-<div class="codehilite"><pre><span></span><span class="n">images</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">smarttv</span><span class="o">/</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_smarttv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_smarttv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">androidtv</span><span class="o">/</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_androidtv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_androidtv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">appletv</span><span class="o">/</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_appletv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_appletv</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">web</span><span class="o">/</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot1_web</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">├──</span> <span class="n">screenshot2_web</span><span class="p">.</span><span class="n">png</span>
-<span class="o">|</span>   <span class="err">└──</span> <span class="p">...</span>
-<span class="err">├──</span> <span class="n">screenshot1</span><span class="p">.</span><span class="n">png</span>
-<span class="err">├──</span> <span class="n">screenshot2</span><span class="p">.</span><span class="n">png</span>
-<span class="err">└──</span> <span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">images/</span>
+<span class="err">├── smarttv/</span>
+<span class="err">|   ├── screenshot1_smarttv.png</span>
+<span class="err">|   ├── screenshot2_smarttv.png</span>
+<span class="err">|   └── ...</span>
+<span class="err">├── androidtv/</span>
+<span class="err">|   ├── screenshot1_androidtv.png</span>
+<span class="err">|   ├── screenshot2_androidtv.png</span>
+<span class="err">|   └── ...</span>
+<span class="err">├── appletv/</span>
+<span class="err">|   ├── screenshot1_appletv.png</span>
+<span class="err">|   ├── screenshot2_appletv.png</span>
+<span class="err">|   └── ...</span>
+<span class="err">├── web/</span>
+<span class="err">|   ├── screenshot1_web.png</span>
+<span class="err">|   ├── screenshot2_web.png</span>
+<span class="err">|   └── ...</span>
+<span class="err">├── screenshot1.png</span>
+<span class="err">├── screenshot2.png</span>
+<span class="err">└── ...</span>
 </pre></div>
 
 
@@ -1558,17 +1594,17 @@
 
 
 <p>Preprocessor will convert to the following format:</p>
-<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="p">.</span><span class="n">url</span><span class="o">/</span><span class="n">gitlab_group_name</span><span class="o">/</span><span class="n">gitlab_project_name</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">platform_name</span><span class="o">/</span><span class="n">main_filename_part_platform_name</span><span class="p">.</span><span class="n">png</span>
+<div class="codehilite"><pre><span></span><span class="c">https://gitlab.url/gitlab_group_name/gitlab_project_name/raw/master/images/platform_name/main_filename_part_platform_name.png</span>
 </pre></div>
 
 
 <p>For example, in the project with <em>multi_param_select: smarttv</em> the string</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="k">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Application</span> <span class="n">main</span> <span class="n">screen</span><span class="p">](</span><span class="n">main_screen</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">(leading exclamation mark here!)[Application main screen](main_screen)</span>
 </pre></div>
 
 
 <p>will be converted to:</p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="k">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Application</span> <span class="n">main</span> <span class="n">screen</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="p">.</span><span class="n">url</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="n">application</span><span class="o">-</span><span class="n">screenshots</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">smarttv</span><span class="o">/</span><span class="n">main_screen_smarttv</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">(leading exclamation mark here!)[Application main screen](https://gitlab.url/documentation/application-screenshots/raw/master/images/smarttv/main_screen_smarttv.png)</span>
 </pre></div>
 
 
