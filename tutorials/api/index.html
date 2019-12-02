@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
     
     
       
@@ -1120,6 +1120,11 @@ foliant init
 </pre></div>
 
 
+<p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
+<div class="codehilite"><pre><span></span><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+</pre></div>
+
+
 <h2 id="configuring-project">Configuring project<a class="headerlink" href="#configuring-project" title="Permanent link">&para;</a></h2>
 <p>Now let's set up <code>foliant.yml</code>. Right now it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">OpenAPI docs</span>
@@ -1150,25 +1155,16 @@ foliant init
     Applying preprocessor swaggerdoc... Done
     Applying preprocessor slate... Done
     Applying preprocessor _unescape... Done
-    Making site... <span class="o">==</span> Sprockets will render css with ruby sass
-       consider using Sprockets <span class="m">4</span>.x to render with SassC
-          create  build/stylesheets/print-bccf8c07.css
-          create  build/stylesheets/screen-a1ce949a.css
-          create  build/images/logo-1e815a84.png
-          create  build/images/navbar-cad8cdcb.png
-          create  build/fonts/slate-33847ce5.woff
-          create  build/fonts/slate-ddd488db.woff2
-          create  build/fonts/slate-7b7da4fe.ttf
-          create  build/fonts/slate-cfc9d06b.eot
-          create  build/fonts/slate-e55b8307.svg
-          create  build/javascripts/all_nosearch-c275c2f6.js
-          create  build/javascripts/all-c5541673.js
-          create  build/index.html
-    Project built successfully.
-
+    Making site...
+...
     Done
     ────────────────────
     Result: OpenAPI_docs-2019-11-29.slate/
+</pre></div>
+
+
+<p>If you use docker, the command is:</p>
+<div class="codehilite"><pre><span></span>docker-compose run --rm foliant make site --with slate
 </pre></div>
 
 
@@ -1224,6 +1220,11 @@ foliant init
 </pre></div>
 
 
+<p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
+<div class="codehilite"><pre><span></span><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+</pre></div>
+
+
 <h2 id="configuring-project_1">Configuring project<a class="headerlink" href="#configuring-project_1" title="Permanent link">&para;</a></h2>
 <p>Now let's set up <code>foliant.yml</code>. Right now it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
@@ -1254,25 +1255,18 @@ foliant init
     Applying preprocessor ramldoc... Done
     Applying preprocessor slate... Done
     Applying preprocessor _unescape... Done
-    Making site... <span class="o">==</span> Sprockets will render css with ruby sass
-       consider using Sprockets <span class="m">4</span>.x to render with SassC
-          create  build/stylesheets/print-bccf8c07.css
-          create  build/stylesheets/screen-a1ce949a.css
-          create  build/images/navbar-cad8cdcb.png
-          create  build/images/logo-1e815a84.png
-          create  build/fonts/slate-33847ce5.woff
-          create  build/fonts/slate-ddd488db.woff2
-          create  build/fonts/slate-7b7da4fe.ttf
-          create  build/fonts/slate-cfc9d06b.eot
-          create  build/fonts/slate-e55b8307.svg
-          create  build/index.html
-          create  build/javascripts/all_nosearch-c275c2f6.js
-          create  build/javascripts/all-c5541673.js
+    Making site...
+...
     Project built successfully.
 
     Done
     ────────────────────
     Result: API_docs-2019-11-29.slate/
+</pre></div>
+
+
+<p>If you use docker, the command is:</p>
+<div class="codehilite"><pre><span></span>docker-compose run --rm foliant make site --with slate
 </pre></div>
 
 
@@ -1317,6 +1311,11 @@ rm ~/projects/api-docs/src/index.md
 </pre></div>
 
 
+<p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
+<div class="codehilite"><pre><span></span><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+</pre></div>
+
+
 <h2 id="configuring-project_2">Configuring project<a class="headerlink" href="#configuring-project_2" title="Permanent link">&para;</a></h2>
 <p>Now let's set up <code>foliant.yml</code>. Right now it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
@@ -1342,6 +1341,11 @@ rm ~/projects/api-docs/src/index.md
     Making site... Done
     ────────────────────
     Result: OpenAPI_docs-2019-11-29.aglio
+</pre></div>
+
+
+<p>If you use docker, the command is:</p>
+<div class="codehilite"><pre><span></span>docker-compose run --rm foliant make site --with slate
 </pre></div>
 
 
@@ -1443,7 +1447,7 @@ rm ~/projects/api-docs/src/index.md
       
     </div>
     
-      <script src="../../assets/javascripts/application.a8b5e56f.js"></script>
+      <script src="../../assets/javascripts/application.8e03edeb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

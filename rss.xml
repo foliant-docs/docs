@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.init 1.0.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#b572eeb30b090e441959baef7d641d21</guid>
+            <pubDate>Mon, 02 Dec 2019 17:34:43 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add comment to Dockerfile with option to use Foliant full image.</li>
+<li>Remove slugs from docker-compose. Now the service is always named <code>foliant</code>.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.meta 1.2.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#46122085c4eb997c13d056f17ac1546a</guid>
