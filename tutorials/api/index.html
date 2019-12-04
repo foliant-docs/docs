@@ -1068,7 +1068,7 @@
                 
                 <h1 id="documenting-api-with-foliant">Documenting API with Foliant<a class="headerlink" href="#documenting-api-with-foliant" title="Permanent link">&para;</a></h1>
 <p>In this tutorial we will learn how to use Foliant to generate documentation from API specification formats <a href="https://swagger.io/specification/">OpenAPI (Swagger)</a>, <a href="https://raml.org/">RAML</a> and <a href="https://apiblueprint.org/">API Blueprint</a>.</p>
-<p>The general idea is supply a specification file path (<code>json</code> or <code>yaml</code> for OpenAPI, <code>raml</code> for RAML) to a preprocessor which will create a Markdown document out of it. Markdown is what Foliant is good at, so you could do anything with it afterwards: convert to PDF, partially include in other documents, etc. But in this guide we will concentrate on building a static website for your API documentation.</p>
+<p>The general idea is that you supply a specification file path (<code>json</code> or <code>yaml</code> for OpenAPI, <code>raml</code> for RAML) to a preprocessor which will generate a Markdown document out of it. Markdown is what Foliant is good at, so after that you can do anything with it: convert to PDF, partially include in other documents, etc. In this guide we will concentrate on building a static website for your API documentation.</p>
 <blockquote>
 <p>Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component's doc page.</p>
 </blockquote>
@@ -1090,9 +1090,9 @@
 </pre></div>
 
 
-<p>Also note that Slate requires <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://bundler.io/">Bundler</a> to work (I know, that's a lot of dependencies).</p>
+<p>Also note that Slate requires <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://bundler.io/">Bundler</a> to work (that's a lot of dependencies, I know).</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
-<p>Let's create a foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "OpenAPI docs", but it may be anything:</p>
+<p>Let's create Foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "OpenAPI docs", but it may be anything:</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/projects
 foliant init
     Enter the project name: OpenAPI docs
@@ -1102,12 +1102,12 @@ foliant init
 </pre></div>
 
 
-<p>In the output Foliant informs us that the project was created in a new folder <code>openapi-docs</code>. Now let's copy your OpenAPI spec file to this folder:</p>
+<p>In the output Foliant informs us that the project was created in a new folder <code>openapi-docs</code>. Let's copy your OpenAPI spec file into this folder:</p>
 <div class="codehilite"><pre><span></span>cp ~/Downloads/my_api.yaml ~/projects/openapi-docs
 </pre></div>
 
 
-<p>In the end you will get the following directory structure:</p>
+<p>In the end you should get the following directory structure:</p>
 <div class="codehilite"><pre><span></span><span class="err">└── openapi-docs</span>
 <span class="err">    ├── Dockerfile</span>
 <span class="err">    ├── README.md</span>
@@ -1137,7 +1137,7 @@ foliant init
 <p>First add and fill up the <code>preprocessors</code> section at the bottom:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your api spec file, relative to project root</span>
+        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your API spec file, relative to project root</span>
 </pre></div>
 
 
@@ -1148,7 +1148,7 @@ foliant init
 </pre></div>
 
 
-<p>Foliant will insert generated markdown on the place of this tag during build. You may even add some kind of introduction for the API docs before the tag, if you don't have such in your spec file.</p>
+<p>Foliant will insert generated markdown on the place of this tag during build. You may even add some kind of introduction for the API docs before the tag, if you don't have such inside your spec file.</p>
 <p>That's it! All is left to do is run <code>make</code> command to build your site.</p>
 <div class="codehilite"><pre><span></span>foliant make site --with slate
     Parsing config... Done
@@ -1192,7 +1192,7 @@ foliant init
 
 <p>Also note that Slate requires <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://bundler.io/">Bundler</a> to work.</p>
 <h2 id="creating-project_1">Creating project<a class="headerlink" href="#creating-project_1" title="Permanent link">&para;</a></h2>
-<p>Let's create a foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:</p>
+<p>Let's create Foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/projects
 foliant init
     Enter the project name: API docs
@@ -1207,7 +1207,7 @@ foliant init
 </pre></div>
 
 
-<p>In the end you will get the following directory structure:</p>
+<p>In the end you should get the following directory structure:</p>
 <div class="codehilite"><pre><span></span><span class="err">└── api-docs</span>
 <span class="err">    ├── Dockerfile</span>
 <span class="err">    ├── README.md</span>
@@ -1237,11 +1237,11 @@ foliant init
 <p>First add and fill up the <code>preprocessors</code> section at the bottom:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">ramldoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your api spec file, relative to project root</span>
+        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your API spec file, relative to project root</span>
 </pre></div>
 
 
-<p>At this stage you may also specify path to custom templates dir in the <code>template_dir</code> parameter. Templates describe the exact way of how to convert structured specification file into a Markdown document. raml2html uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templates, which are stored in the theme. So the easiest way to create your own templates is to copy <a href="https://github.com/Vanderhoof/raml2html-full-markdown-theme/tree/master/templates">default</a> ones and adjust them to your needs.</p>
+<p>At this stage you may also specify path to custom templates dir in the <code>template_dir</code> parameter. Templates describe the exact way of how to convert structured specification file into a Markdown document. raml2html uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templates, which are stored in the theme. So the easiest way to create your own templates is to copy <a href="https://github.com/Vanderhoof/raml2html-full-markdown-theme/tree/master/templates">default</a> ones and adjust them to your needs. But we will use the default template which works great with Slate.</p>
 <p>The last thing we need to do is point Foliant where to insert the generated Markdown from the spec file. We already have a source file created for us by <code>init</code> command, called <code>index.md</code>, so let's use it to store our API docs.</p>
 <p>Open <code>api-docs/src/index.md</code> with text editor and replace its contents with the following:</p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">ramldoc</span><span class="p">&gt;&lt;/</span><span class="nt">ramldoc</span><span class="p">&gt;</span>
@@ -1283,7 +1283,7 @@ npm install -g aglio
 
 
 <h2 id="creating-project_2">Creating project<a class="headerlink" href="#creating-project_2" title="Permanent link">&para;</a></h2>
-<p>Let's create a foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:</p>
+<p>Let's create a Foliant project. The easiest way is to use <a href="https://github.com/foliant-docs/foliantcontrib.init/">foliant init</a> command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/projects
 foliant init
     Enter the project name: API docs
@@ -1293,13 +1293,12 @@ foliant init
 </pre></div>
 
 
-<p>In the output Foliant informs us that the project was created in a new folder <code>api-docs</code>. Now copy your Blueprint spec file to the <code>src</code> subfolder (it's better to change the extension to <code>.md</code> too) and remove "index.md" from there:</p>
-<div class="codehilite"><pre><span></span>cp ~/Downloads/spec.abip ~/projects/api-docs/src/spec.md
-rm ~/projects/api-docs/src/index.md
+<p>In the output Foliant informs us that the project was created in a new folder <code>api-docs</code>. Now copy your Blueprint spec file into the <code>src</code> subfolder (it's better to change the extension to <code>.md</code> too), replacing "index.md":</p>
+<div class="codehilite"><pre><span></span>cp ~/Downloads/spec.abip ~/projects/api-docs/src/index.md
 </pre></div>
 
 
-<p>In the end you will get the following directory structure:</p>
+<p>In the end you should get the following directory structure:</p>
 <div class="codehilite"><pre><span></span><span class="err">└── openapi-docs</span>
 <span class="err">    ├── Dockerfile</span>
 <span class="err">    ├── README.md</span>
@@ -1307,7 +1306,7 @@ rm ~/projects/api-docs/src/index.md
 <span class="err">    ├── foliant.yml</span>
 <span class="err">    ├── requirements.txt</span>
 <span class="err">    └── src</span>
-<span class="err">        └── spec.md</span>
+<span class="err">        └── index.md</span>
 </pre></div>
 
 
@@ -1317,23 +1316,15 @@ rm ~/projects/api-docs/src/index.md
 
 
 <h2 id="configuring-project_2">Configuring project<a class="headerlink" href="#configuring-project_2" title="Permanent link">&para;</a></h2>
-<p>Now let's set up <code>foliant.yml</code>. Right now it looks like this:</p>
+<p>Now check your <code>foliant.yml</code>. Right now it looks like this:</p>
 <div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
 
 <span class="nt">chapters</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>  <span class="c1"># this should be your API Blueprint specification</span>
 </pre></div>
 
 
-<p>Change the name of the chapter file. We've removed <code>index.md</code> and replaced it with <code>spec.md</code>:</p>
-<div class="codehilite"><pre><span></span><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
-
-<span class="nt">chapters</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">spec.md</span>
-</pre></div>
-
-
-<p>It may be hard to believe, but we've finished with necessary configuration! Let's build our project:</p>
+<p>It may be hard to believe, but no other configuration is required! Let's build our project:</p>
 <div class="codehilite"><pre><span></span>foliant make site --with aglio
     Parsing config... Done
     Applying preprocessor flatten... Done
@@ -1345,7 +1336,7 @@ rm ~/projects/api-docs/src/index.md
 
 
 <p>If you use docker, the command is:</p>
-<div class="codehilite"><pre><span></span>docker-compose run --rm foliant make site --with slate
+<div class="codehilite"><pre><span></span>docker-compose run --rm foliant make site --with aglio
 </pre></div>
 
 

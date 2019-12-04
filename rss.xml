@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.slate 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.slate.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.slate.git#a97d4d407135b84915ba693ddf0ae300</guid>
+            <pubDate>Wed, 04 Dec 2019 13:30:23 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: images are preserved in the output, even from subfolders.</li>
+<li>YAML Front Matter from the sources is now ignored.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.init 1.0.8</title>
             <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.init.git#b572eeb30b090e441959baef7d641d21</guid>
