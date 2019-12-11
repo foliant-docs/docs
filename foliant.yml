@@ -44,6 +44,7 @@ chapters:
         - preprocessors/replace.md
         - preprocessors/repolink.md
         - preprocessors/runcommands.md
+        - preprocessors/showcommits.md
         - preprocessors/swaggerdoc.md
         - preprocessors/templateparser.md
         - preprocessors/testrail.md
@@ -115,6 +116,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.ramldoc.git
             - https://github.com/foliant-docs/foliantcontrib.replace.git
             - https://github.com/foliant-docs/foliantcontrib.runcommands.git
+            - https://github.com/foliant-docs/foliantcontrib.showcommits.git
             - https://github.com/foliant-docs/foliantcontrib.slate.git
             - https://github.com/foliant-docs/foliantcontrib.slugs.git
             - https://github.com/foliant-docs/foliantcontrib.subset.git
