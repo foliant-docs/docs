@@ -6,9 +6,9 @@ The general idea is that you supply a specification file path (`json` or `yaml` 
 
 > Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component's doc page.
 
-# OpenAPI
+## OpenAPI
 
-## Installing prerequisites
+### Installing prerequisites
 
 Besides Foliant you will need to install some additional packages on your system. If you are using our full docker image `foliant/foliant:full`, you can skip this chapter.
 
@@ -32,7 +32,7 @@ pip3 install foliantcontrib.slate
 
 Also note that Slate requires [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to work (that's a lot of dependencies, I know).
 
-## Creating project
+### Creating project
 
 Let's create Foliant project. The easiest way is to use [foliant init](https://github.com/foliant-docs/foliantcontrib.init/) command. After running the command Foliant will ask you about your project name. We've chosen "OpenAPI docs", but it may be anything:
 
@@ -71,7 +71,7 @@ If you wish to use Docker with full Foliant image, which is the recommended way 
 FROM foliant/foliant:full
 ```
 
-## Configuring project
+### Configuring project
 
 Now let's set up `foliant.yml`. Right now it looks like this:
 
@@ -130,11 +130,11 @@ Now if you open the `index.html` from just created `OpenAPI_docs-2019-11-29.slat
 
 You can customize the page styles, add or remove language example tabs and tune other options. Check the [Slate backend](https://foliant-docs.github.io/docs/backends/slate/) documentation for details.
 
-# RAML
+## RAML
 
 Building API docs from RAML specification is quite similar to that of OpenAPI, the difference is that instead of `swaggerdoc` preprocessor you use `ramldoc`. We will go through all the steps anyway.
 
-## Installing prerequisites
+### Installing prerequisites
 
 Besides Foliant you will need to install some additional packages on your system. If you are using our full docker image `foliant/foliant:full`, you can skip this chapter.
 
@@ -158,7 +158,7 @@ pip3 install foliantcontrib.slate
 
 Also note that Slate requires [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to work.
 
-## Creating project
+### Creating project
 
 Let's create Foliant project. The easiest way is to use [foliant init](https://github.com/foliant-docs/foliantcontrib.init/) command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:
 
@@ -197,7 +197,7 @@ If you wish to use Docker with full Foliant image, which is the recommended way 
 FROM foliant/foliant:full
 ```
 
-## Configuring project
+### Configuring project
 
 Now let's set up `foliant.yml`. Right now it looks like this:
 
@@ -258,11 +258,11 @@ Now if you open the `index.html` from just created `API_docs-2019-11-29.slate` f
 
 You can customize the page styles, add or remove language example tabs and tune other options. Check the [Slate backend](https://foliant-docs.github.io/docs/backends/slate/) documentation for details.
 
-# Blueprint
+## Blueprint
 
 API Blueprint is a Markdown-based API specification format. That's why the build process differs from that of OpenAPI or RAML: we skip the converting step and just add the specification file as a source.
 
-## Installing prerequisites
+### Installing prerequisites
 
 To build a static site we will use [Aglio](https://foliant-docs.github.io/docs/backends/aglio/) backend which is designed specifically for rendering API Blueprint. So first install the backend and [Aglio renderer](https://github.com/danielgtaylor/aglio) itself:
 
@@ -271,7 +271,7 @@ pip3 install foliantcontrib.aglio
 npm install -g aglio
 ```
 
-## Creating project
+### Creating project
 
 Let's create a Foliant project. The easiest way is to use [foliant init](https://github.com/foliant-docs/foliantcontrib.init/) command. After running the command Foliant will ask you about your project name. We've chosen "API docs", but it may be anything:
 
@@ -309,7 +309,7 @@ If you wish to use Docker with full Foliant image, which is the recommended way 
 FROM foliant/foliant:full
 ```
 
-## Configuring project
+### Configuring project
 
 Now check your `foliant.yml`. Right now it looks like this:
 
