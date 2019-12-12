@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.flatten 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#e81b2a39352ade41acd339151535e654</guid>
+            <pubDate>Thu, 12 Dec 2019 12:20:50 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Rewrite local links (e.g. <code>some_file.md#some_id</code> → <code>#some_id</code>).</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.slate 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.slate.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.slate.git#a97d4d407135b84915ba693ddf0ae300</guid>
