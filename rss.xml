@@ -7,6 +7,55 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.utils.header_anchors 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#836df0f482faf7722e123df56ab61699</guid>
+            <pubDate>Fri, 20 Dec 2019 16:24:16 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.anchors 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#468c582e2aa8002e061274eaeb0946eb</guid>
+            <pubDate>Fri, 20 Dec 2019 16:22:58 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better regex patterns.</li>
+<li>Conflicts are now determined for each backend separately.</li>
+<li>Add confluence anchors</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.meta 1.2.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#70184c5c0c92c039a389679f9696fbfc</guid>
+            <pubDate>Fri, 20 Dec 2019 16:21:30 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Don't require empty line between heading and meta tag.</li>
+<li>Allow comments in YFM.</li>
+<li>Better patterns for sections detection.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#8a1547ec800d3bf92d3863222d2d0c2b</guid>
+            <pubDate>Fri, 20 Dec 2019 16:14:18 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.showcommits 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.showcommits.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.showcommits.git#1eb39df5ac33a422b86910518c80c450</guid>
+            <pubDate>Thu, 12 Dec 2019 16:10:08 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix template processing. Log repo path.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.flatten 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#e81b2a39352ade41acd339151535e654</guid>
