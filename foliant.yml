@@ -45,6 +45,7 @@ chapters:
         - preprocessors/repolink.md
         - preprocessors/runcommands.md
         - preprocessors/showcommits.md
+        - preprocessors/superlinks.md
         - preprocessors/swaggerdoc.md
         - preprocessors/templateparser.md
         - preprocessors/testrail.md
@@ -120,11 +121,13 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.slate.git
             - https://github.com/foliant-docs/foliantcontrib.slugs.git
             - https://github.com/foliant-docs/foliantcontrib.subset.git
+            - https://github.com/foliant-docs/foliantcontrib.superlinks.git
             - https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git
             - https://github.com/foliant-docs/foliantcontrib.templateparser.git
             - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
             - https://github.com/foliant-docs/foliantcontrib.testrail.git
             - https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
+            - https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git
             - https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git
 
 backend_config:
