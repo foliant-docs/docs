@@ -1265,7 +1265,9 @@
 <dt><code>meta_id</code></dt>
 <dd>ID of the meta section which is being referenced. (if <code>title</code> is used, then this title MUST be inside this meta section)</dd>
 <dt><code>anchor</code></dt>
-<dd>Just a hardoded anchor. No magic here.</dd>
+<dd>Name of the anchor defined by <a href="../anchors.md">Anchors</a> preprocessor or an ID defined by <a href="../customids.md">CustomIDs</a> preprocessor. If <code>src</code> or <code>meta</code> is not provided — the id will be searched globally.</dd>
+<dt><code>id</code></dt>
+<dd>Just a hardcoded id. No magic here.</dd>
 </dl>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p><strong>Reference a title in the same document</strong></p>
@@ -1290,6 +1292,16 @@
 
 <p><strong>Reference the beginning of meta section</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">meta_id</span><span class="o">=</span><span class="s">&quot;SECTION1&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><strong>Reference an anchor and search for it globally</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><strong>Reference an anchor and search for it in specific chapter</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </pre></div>
 
 
@@ -1324,7 +1336,7 @@
 </tr>
 <tr>
 <td>confluence</td>
-<td>❌ NO</td>
+<td>❌ NOt yet</td>
 </tr>
 </tbody>
 </table>

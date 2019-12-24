@@ -7,6 +7,54 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.superlinks 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#65fc4760f9cdf20a046cbe214ceca18a</guid>
+            <pubDate>Tue, 24 Dec 2019 10:57:19 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>add dependencies order check</li>
+<li>rename anchor parameter to id.</li>
+<li>add anchor parameter for possibly global anchor search.</li>
+<li>link to anchors in Confluence are now partly supported.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.header_anchors 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#0f595d84026dfe0781f1f163300494b1</guid>
+            <pubDate>Tue, 24 Dec 2019 10:48:02 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>is_flat</code> function to determine flat backends.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.anchors 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#24029246466e2ad78f2392cede06bf3e</guid>
+            <pubDate>Tue, 24 Dec 2019 10:43:58 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Applied anchors are now checked from all chapters for flat backends.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.1.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#8ed439fb5ce32ce3a509ce9ef68f652d</guid>
+            <pubDate>Tue, 24 Dec 2019 09:28:09 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Function to get case data by id added.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#146128d9677298038baa8b479d1a9c94</guid>
+            <pubDate>Mon, 23 Dec 2019 09:35:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.utils.header_anchors 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#836df0f482faf7722e123df56ab61699</guid>
@@ -18,12 +66,12 @@
         <item>
             <title>foliantcontrib.anchors 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#468c582e2aa8002e061274eaeb0946eb</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#a82d4fea2b41e14a3a85d9a5a8032cb4</guid>
             <pubDate>Fri, 20 Dec 2019 16:22:58 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Better regex patterns.</li>
 <li>Conflicts are now determined for each backend separately.</li>
-<li>Add confluence anchors</li>
+<li>Add confluence anchors.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -35,15 +83,6 @@
 <li>Don't require empty line between heading and meta tag.</li>
 <li>Allow comments in YFM.</li>
 <li>Better patterns for sections detection.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.superlinks 1.0.0</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#8a1547ec800d3bf92d3863222d2d0c2b</guid>
-            <pubDate>Fri, 20 Dec 2019 16:14:18 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Initial release</li>
 </ul>]]></description>
         </item>
         <item>
