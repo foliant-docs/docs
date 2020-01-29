@@ -36,7 +36,7 @@
     
     
       
-        <title>Blockdiag - Foliant</title>
+        <title>Elasticsearch - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#blockdiag" tabindex="1" class="md-skip">
+      <a href="#elasticsearch" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Blockdiag
+                Elasticsearch
               
             </span>
           
@@ -510,6 +510,42 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../blockdiag/" title="Blockdiag" class="md-nav__link">
+      Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
+      CSVTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -521,11 +557,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Blockdiag
+        Elasticsearch
       </label>
     
-    <a href="./" title="Blockdiag" class="md-nav__link md-nav__link--active">
-      Blockdiag
+    <a href="./" title="Elasticsearch" class="md-nav__link md-nav__link--active">
+      Elasticsearch
     </a>
     
       
@@ -567,42 +603,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
-      CSVTables
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../customids/" title="CustomIDs" class="md-nav__link">
-      CustomIDs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../elasticsearch/" title="Elasticsearch" class="md-nav__link">
-      Elasticsearch
-    </a>
   </li>
 
         
@@ -1172,109 +1172,122 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/blockdiag.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/elasticsearch.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="blockdiag">Blockdiag<a class="headerlink" href="#blockdiag" title="Permanent link">&para;</a></h1>
-<p><a href="http://blockdiag.com/">Blockdiag</a> is a tool to generate diagrams from plain text. This preprocessor finds diagram definitions in the source and converts them into images on the fly during project build. It supports all Blockdiag flavors: blockdiag, seqdiag, actdiag, and nwdiag.</p>
+                <h1 id="elasticsearch">Elasticsearch<a class="headerlink" href="#elasticsearch" title="Permanent link">&para;</a></h1>
+<p>This extension allows to integrate Foliant-managed documentation projects with <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html">Elasticsearch</a> search engine.</p>
+<p>The main part of this extension is a preprocessor that prepares data for a search index.</p>
+<p>Also this extension provides a simple working example of a client-side Web application that may be used to perform searching. By editing HTML, CSS and JS code you may customize it according to your needs.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.blockdiag
+<p>To install the preprocessor, run the command:</p>
+<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.elasticsearch
 </pre></div>
 
 
+<p>To use an example of a client-side Web application for searching, download <a href="https://github.com/foliant-docs/foliantcontrib.elasticsearch/tree/master/webapp_example/">these HTML, CSS, and JS files</a> and open the file <code>index.html</code> in your Web browser.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>blockdiag</code> to <code>preprocessors</code> section in the project config:</p>
+<p>To enable the preprocessor, add <code>elasticsearch</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
 </pre></div>
 
 
-<p>The preprocessor has a number of options:</p>
+<p>The preprocessor has a number of options with the following default values:</p>
 <div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">blockdiag</span><span class="p">:</span>
-      <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
-      <span class="nt">blockdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
-      <span class="nt">seqdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">seqdiag</span>
-      <span class="nt">actdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actdiag</span>
-      <span class="nt">nwdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nwdiag</span>
-      <span class="nt">params</span><span class="p">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="p p-Indicator">-</span> <span class="nt">elasticsearch</span><span class="p">:</span>
+        <span class="nt">es_url</span><span class="p">:</span> <span class="s">&#39;http://127.0.0.1:9200/&#39;</span>
+        <span class="nt">index_name</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">index_properties</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+        <span class="nt">actions</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create</span>
+        <span class="nt">use_chapters</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">url_transform</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="s">&#39;\/?index\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
+            <span class="p p-Indicator">-</span> <span class="s">&#39;\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
+            <span class="p p-Indicator">-</span> <span class="s">&#39;^([^\/]+)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/\g&lt;1&gt;&#39;</span>
+        <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 </pre></div>
 
 
 <dl>
-<dt><code>cache_dir</code></dt>
-<dd>
-<p>Path to the directory with the generated diagrams. It can be a path relative to the project root or a global one; you can use <code>~/</code> shortcut.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>To save time during build, only new and modified diagrams are rendered. The generated images are cached and reused in future builds.</p>
-</blockquote>
-</dd>
-<dt><code>*_path</code></dt>
-<dd>Paths to the <code>blockdiag</code>, <code>seqdiag</code>, <code>actdiag</code>, and <code>nwdiag</code> binaries. By default, it is assumed that you have these commands in <code>PATH</code>, but if they're installed in a custom place, you can define it here.</dd>
-<dt><code>params</code></dt>
-<dd>
-<p>Params passed to the image generation commands (<code>blockdiag</code>, <code>seqdiag</code>, etc.). Params should be defined by their long names, with dashes replaced with underscores (e.g. <code>--no-transparency</code> becomes <code>no_transparency</code>); also, <code>-T</code> param is called <code>format</code> for readability:</p>
-<div class="codehilite"><pre><span></span><span class="c">preprocessors:</span>
-<span class="c">  - blockdiag:</span>
-<span class="c">      params:</span>
-<span class="c">        antialias: true</span>
-<span class="c">        font: !path Anonymous_pro.ttf</span>
-</pre></div>
-
-
-<p>To see the full list of params, run <code>blockdiag -h</code>.</p>
-</dd>
+<dt><code>es_url</code></dt>
+<dd>Elasticsearch API URL.</dd>
+<dt><code>index_name</code></dt>
+<dd>Name of the index. Your index must have an explicitly specified name, otherwise API URL will be invalid.</dd>
+<dt><code>index_properties</code></dt>
+<dd>Settings and other properties that should be used when creating an index. If not specified, the default settings will be used. More details are described below.</dd>
+<dt><code>actions</code></dt>
+<dd>List of actions that the preprocessor should to perform. Available values are: <code>delete</code>, <code>create</code>. Often it is needed to remove and then fully rebuild the index.</dd>
+<dt><code>use_chapters</code></dt>
+<dd>If set to <code>true</code>, the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all of the files of the project.</dd>
+<dt><code>url_transform</code></dt>
+<dd>Sequence of rules to transform local paths of source Markdown files into URLs of target pages. Each rule should be a dictionary. Its data is passed to the <a href="https://docs.python.org/3/library/re.html#re.sub"><code>re.sub()</code> method</a>: key as the <code>pattern</code> argument, and value as the <code>repl</code> argument. The local path (possibly previously transformed) to the source Markdown file relative to the temporary working directory is passed as the <code>string</code> argument. The default value of the <code>url_transform</code> option is designed to be used to build static websites with MkDocs backend.</dd>
+<dt><code>targets</code></dt>
+<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;blockdiag&gt;...&lt;/blockdiag&gt;</code>, <code>&lt;seqdiag&gt;...&lt;/seqdiag&gt;</code>, <code>&lt;actdiag&gt;...&lt;/actdiag&gt;</code>, or <code>&lt;nwdiag&gt;...&lt;/nwdiag&gt;</code> tags (indentation inside tags is optional):</p>
-<div class="codehilite"><pre><span></span>Here&#39;s a block diagram:
-
-<span class="nt">&lt;blockdiag&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
-
-Here&#39;s a sequence diagram:
-
-<span class="nt">&lt;seqdiag&gt;</span>
-  seqdiag {
-    browser  -&gt; webserver [label = &quot;GET /index.html&quot;];
-    browser <span class="nt">&lt;--</span> <span class="err">webserver;</span>
-    <span class="err">browser</span>  <span class="err">-</span><span class="nt">&gt;</span> webserver [label = &quot;POST /blog/comment&quot;];
-                webserver  -&gt; database [label = &quot;INSERT comment&quot;];
-                webserver <span class="nt">&lt;--</span> <span class="err">database;</span>
-    <span class="err">browser</span> <span class="err">&lt;--</span> <span class="err">webserver;</span>
-  <span class="err">}</span>
-<span class="err">&lt;/seqdiag</span><span class="nt">&gt;</span>
+<p>The preprocessor reads each source Markdown file and generates three fields for indexing:</p>
+<ul>
+<li><code>url</code>—target page URL;</li>
+<li><code>title</code>—document title, it is taken from the first heading of source Markdown content;</li>
+<li><code>text</code>—source Markdown content converted into plain text.</li>
+</ul>
+<p>When all the files are processed, the preprocessor calls Elasticsearch API to create the index.</p>
+<p>Optionally the preprocessor may call Elasticsearch API to delete previously created index.</p>
+<p>By using the <code>index_properties</code> option, you may override the default Elasticsearch settings when creating an index. Below is an example of JSON-formatted value of the <code>index_properties</code> option to create an index with Russian morphology analysis:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;settings&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;analysis&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;filter&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;ru_stop&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;stopwords&quot;</span><span class="p">:</span> <span class="s2">&quot;_russian_&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;ru_stemmer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;stemmer&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;russian&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;analyzer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;tokenizer&quot;</span><span class="p">:</span> <span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;filter&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;lowercase&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;ru_stop&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;ru_stemmer&quot;</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p>To set a caption, use <code>caption</code> option:</p>
-<div class="codehilite"><pre><span></span>Diagram with a caption:
-
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;Sample diagram from the official site&quot;</span><span class="nt">&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
+<p>You may perform custom search requests to Elasticsearch API.</p>
+<p>The <a href="https://github.com/foliant-docs/foliantcontrib.elasticsearch/tree/master/webapp_example/">simple client-side Web application example</a> that is provided as a part of this extension, performs requests like this:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;multi_match&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;foliant&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;phrase_prefix&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;title^3&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span> <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;highlight&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">50</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p>You can override <code>params</code> values from the preprocessor config for each diagram:</p>
-<div class="codehilite"><pre><span></span>By default, diagrams are in png. But this diagram is in svg:
-
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;High-quality diagram&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
-  blockdiag {
-    A -&gt; B -&gt; C -&gt; D;
-    A -&gt; E -&gt; F -&gt; G;
-  }
-<span class="nt">&lt;/blockdiag&gt;</span>
-</pre></div>
+<p>Search results may look like that:</p>
+<p><img alt="Search Results" src="../../_img_9976d702-4292-11ea-95bc-0242ac120002/foliant_elasticsearch_9977cbee-4292-11ea-95bc-0242ac120002.png" /></p>
+<p>If you use self-hosted instance of Elasticsearch, you may need to configure it to append <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> headers to HTTP API responses.</p>
                 
                   
                 
@@ -1296,7 +1309,7 @@ Here&#39;s a sequence diagram:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../bindsympli/" title="BindSympli" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../customids/" title="CustomIDs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1305,19 +1318,19 @@ Here&#39;s a sequence diagram:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                BindSympli
+                CustomIDs
               </span>
             </div>
           </a>
         
         
-          <a href="../csvtables/" title="CSVTables" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../epsconvert/" title="Epsconvert" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CSVTables
+                Epsconvert
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

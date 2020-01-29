@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#1f8f555c1864cff7c677575a166166d6</guid>
+            <pubDate>Wed, 22 Jan 2020 17:06:51 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: build crashed when several resolved inline comments referred to same string</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.superlinks 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#65fc4760f9cdf20a046cbe214ceca18a</guid>
