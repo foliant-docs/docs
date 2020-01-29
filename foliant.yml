@@ -24,6 +24,7 @@ chapters:
         - preprocessors/blockdiag.md
         - preprocessors/csvtables.md
         - preprocessors/customids.md
+        - preprocessors/elasticsearch.md
         - preprocessors/epsconvert.md
         - preprocessors/escapecode.md
         - preprocessors/flags.md
@@ -90,6 +91,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.csvtables.git
             - https://github.com/foliant-docs/foliantcontrib.customids.git
             - https://github.com/foliant-docs/foliantcontrib.docus.git
+            - https://github.com/foliant-docs/foliantcontrib.elasticsearch.git
             - https://github.com/foliant-docs/foliantcontrib.epsconvert.git
             - https://github.com/foliant-docs/foliantcontrib.escapecode.git
             - https://github.com/foliant-docs/foliantcontrib.flags.git
