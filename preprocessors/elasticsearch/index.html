@@ -1200,8 +1200,10 @@
         <span class="nt">index_name</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
         <span class="nt">index_properties</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
         <span class="nt">actions</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">delete</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create</span>
         <span class="nt">use_chapters</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">escape_html</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">url_transform</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&#39;\/?index\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
             <span class="p p-Indicator">-</span> <span class="s">&#39;\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
@@ -1214,13 +1216,15 @@
 <dt><code>es_url</code></dt>
 <dd>Elasticsearch API URL.</dd>
 <dt><code>index_name</code></dt>
-<dd>Name of the index. Your index must have an explicitly specified name, otherwise API URL will be invalid.</dd>
+<dd>Name of the index. Your index must have an explicitly specified name, otherwise (by default) API URL will be invalid.</dd>
 <dt><code>index_properties</code></dt>
-<dd>Settings and other properties that should be used when creating an index. If not specified, the default settings will be used. More details are described below.</dd>
+<dd>Settings and other properties that should be used when creating an index. If not specified (by default), the default Elasticsearch settings will be used. More details are described below.</dd>
 <dt><code>actions</code></dt>
-<dd>List of actions that the preprocessor should to perform. Available values are: <code>delete</code>, <code>create</code>. Often it is needed to remove and then fully rebuild the index.</dd>
+<dd>List of actions that the preprocessor should to perform. Available item values are: <code>delete</code>, <code>create</code>. By default, both of them are used since in most cases it’s needed to remove and then fully rebuild the index.</dd>
 <dt><code>use_chapters</code></dt>
-<dd>If set to <code>true</code>, the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all of the files of the project.</dd>
+<dd>If set to <code>true</code> (by default), the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all of the files of the project.</dd>
+<dt><code>escape_html</code></dt>
+<dd>If set to <code>true</code> (by default), HTML syntax constructions in the text will be escaped by converting <code>&amp;</code> to <code>&amp;amp;</code>, <code>&lt;</code> to <code>&amp;lt;</code>, <code>&gt;</code> to <code>&amp;gt;</code>, and <code>"</code> to <code>&amp;quot;</code>.</dd>
 <dt><code>url_transform</code></dt>
 <dd>Sequence of rules to transform local paths of source Markdown files into URLs of target pages. Each rule should be a dictionary. Its data is passed to the <a href="https://docs.python.org/3/library/re.html#re.sub"><code>re.sub()</code> method</a>: key as the <code>pattern</code> argument, and value as the <code>repl</code> argument. The local path (possibly previously transformed) to the source Markdown file relative to the temporary working directory is passed as the <code>string</code> argument. The default value of the <code>url_transform</code> option is designed to be used to build static websites with MkDocs backend.</dd>
 <dt><code>targets</code></dt>
@@ -1230,7 +1234,7 @@
 <p>The preprocessor reads each source Markdown file and generates three fields for indexing:</p>
 <ul>
 <li><code>url</code>—target page URL;</li>
-<li><code>title</code>—document title, it is taken from the first heading of source Markdown content;</li>
+<li><code>title</code>—document title, it’s taken from the first heading of source Markdown content;</li>
 <li><code>text</code>—source Markdown content converted into plain text.</li>
 </ul>
 <p>When all the files are processed, the preprocessor calls Elasticsearch API to create the index.</p>
