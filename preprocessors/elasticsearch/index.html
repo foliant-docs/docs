@@ -1203,6 +1203,7 @@
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">delete</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create</span>
         <span class="nt">use_chapters</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">plaintext</span>
         <span class="nt">escape_html</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">url_transform</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="s">&#39;\/?index\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
@@ -1223,8 +1224,10 @@
 <dd>List of actions that the preprocessor should to perform. Available item values are: <code>delete</code>, <code>create</code>. By default, both of them are used since in most cases it’s needed to remove and then fully rebuild the index.</dd>
 <dt><code>use_chapters</code></dt>
 <dd>If set to <code>true</code> (by default), the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all of the files of the project.</dd>
+<dt><code>format</code></dt>
+<dd>Format that the source Markdown content should be converted to before adding to the index; available values are: <code>plaintext</code> (by default), <code>html</code>, <code>markdown</code> (for no conversion).</dd>
 <dt><code>escape_html</code></dt>
-<dd>If set to <code>true</code> (by default), HTML syntax constructions in the text will be escaped by converting <code>&amp;</code> to <code>&amp;amp;</code>, <code>&lt;</code> to <code>&amp;lt;</code>, <code>&gt;</code> to <code>&amp;gt;</code>, and <code>"</code> to <code>&amp;quot;</code>.</dd>
+<dd>If set to <code>true</code> (by default), HTML syntax constructions in the content converted to <code>plaintext</code> will be escaped by replacing <code>&amp;</code> with <code>&amp;amp;</code>, <code>&lt;</code> with <code>&amp;lt;</code>, <code>&gt;</code> with <code>&amp;gt;</code>, and <code>"</code> with <code>&amp;quot;</code>.</dd>
 <dt><code>url_transform</code></dt>
 <dd>Sequence of rules to transform local paths of source Markdown files into URLs of target pages. Each rule should be a dictionary. Its data is passed to the <a href="https://docs.python.org/3/library/re.html#re.sub"><code>re.sub()</code> method</a>: key as the <code>pattern</code> argument, and value as the <code>repl</code> argument. The local path (possibly previously transformed) to the source Markdown file relative to the temporary working directory is passed as the <code>string</code> argument. The default value of the <code>url_transform</code> option is designed to be used to build static websites with MkDocs backend.</dd>
 <dt><code>targets</code></dt>
@@ -1235,7 +1238,7 @@
 <ul>
 <li><code>url</code>—target page URL;</li>
 <li><code>title</code>—document title, it’s taken from the first heading of source Markdown content;</li>
-<li><code>text</code>—source Markdown content converted into plain text.</li>
+<li><code>content</code>—source Markdown content, optionally converted into plain text or HTML.</li>
 </ul>
 <p>When all the files are processed, the preprocessor calls Elasticsearch API to create the index.</p>
 <p>Optionally the preprocessor may call Elasticsearch API to delete previously created index.</p>
@@ -1276,12 +1279,12 @@
         <span class="nt">&quot;multi_match&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;foliant&quot;</span><span class="p">,</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;phrase_prefix&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;title^3&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span> <span class="p">]</span>
+            <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;title^3&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span> <span class="p">]</span>
         <span class="p">}</span>
     <span class="p">},</span>
     <span class="nt">&quot;highlight&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;fields&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="p">{}</span>
+            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{}</span>
         <span class="p">}</span>
     <span class="p">},</span>
     <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">50</span>

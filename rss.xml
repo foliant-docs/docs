@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.elasticsearch 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#5fdac9cc64132d64f396aa3b1b7496aa</guid>
+            <pubDate>Fri, 31 Jan 2020 17:37:34 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>format</code> option. Use <code>escape_html</code> only for <code>format: plaintext</code>.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.elasticsearch 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#2806901437433c2fdc9a0451beb9d6db</guid>
