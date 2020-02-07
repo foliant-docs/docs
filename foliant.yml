@@ -61,6 +61,7 @@ chapters:
         - cli/src.md
         - cli/subset.md
     - Config Extensions:
+        - config/alt_structure.md
         - config/from.md
         - config/slugs.md
     - releases.md
@@ -79,8 +80,9 @@ preprocessors:
         rss_description: Releases of Foliant documentation authoring tool and its extensions.
         repos:
             - https://github.com/foliant-docs/foliant.git
-            - https://github.com/foliant-docs/foliantcontrib.aglio.git
             - https://github.com/foliant-docs/foliantcontrib.admonitions.git
+            - https://github.com/foliant-docs/foliantcontrib.aglio.git
+            - https://github.com/foliant-docs/foliantcontrib.alt_structure.git
             - https://github.com/foliant-docs/foliantcontrib.anchors.git
             - https://github.com/foliant-docs/foliantcontrib.apilinks.git
             - https://github.com/foliant-docs/foliantcontrib.badges.git
