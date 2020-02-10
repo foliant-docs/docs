@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#slate" tabindex="1" class="md-skip">
+      <a href="#slate" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -123,9 +123,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Foliant" class="md-header-nav__button md-logo">
+        <a href="../.." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
           
-            <img src="../../assets/images/octopus-white.svg" width="24" height="24">
+            <img alt="logo" src="../../assets/images/octopus-white.svg" width="24" height="24">
           
         </a>
       </div>
@@ -154,7 +154,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -217,7 +217,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Foliant" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/octopus-white.svg" width="48" height="48">
+        <img alt="logo" src="../../assets/images/octopus-white.svg" width="48" height="48">
       
     </a>
     Foliant
@@ -1100,6 +1100,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../config/alt_structure/" title="AltStructure" class="md-nav__link">
+      AltStructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../config/from/" title="MultiProject" class="md-nav__link">
       MultiProject
     </a>
@@ -1225,42 +1237,42 @@
 <li><code>slate</code> — generate a slate project out from your Foliant project.</li>
 </ul>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.slate
-</pre></div>
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.slate
+</code></pre></div>
 
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To use this backend Slate should be installed in your system. Follow the <a href="https://github.com/lord/slate#getting-set-up">instruction</a> in Slate repo.</p>
 <p>To test if you've installed Slate properly head to the cloned Slate repo in your terminal and try the command below. You should get similar response.</p>
-<div class="codehilite"><pre><span></span>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
+<div class="codehilite"><pre><span></span><code>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
 <span class="o">==</span> The Middleman is <span class="nv">loading</span>
 <span class="o">==</span> View your site at ...
 <span class="o">==</span> Inspect your site configuration at ...
-</pre></div>
+</code></pre></div>
 
 
 <p>To convert Foliant project to Slate:</p>
-<div class="codehilite"><pre><span></span>$ foliant make slate
+<div class="codehilite"><pre><span></span><code>$ foliant make slate
 ✔ Parsing config
 ✔ Making slate
 ─────────────────────
 Result: My_Project-2018-09-19.src/
-</pre></div>
+</code></pre></div>
 
 
 <p>Build a standalone website:</p>
-<div class="codehilite"><pre><span></span>$ foliant make site
+<div class="codehilite"><pre><span></span><code>$ foliant make site
 ✔ Parsing config
 ✔ Making site
 ─────────────────────
 Result: My_Project-2018-09-19.slate/
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use Slate backend. If it is installed, Foliant detects it.</p>
 <p>To customize the output, use options in <code>backend_config.slate</code> section:</p>
-<div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">slate</span><span class="p">:</span>
     <span class="nt">shards</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">data/shards</span>
     <span class="nt">header</span><span class="p">:</span>
@@ -1268,7 +1280,7 @@ Result: My_Project-2018-09-19.slate/
         <span class="nt">language_tabs</span><span class="p">:</span>
           <span class="p p-Indicator">-</span> <span class="nt">xml</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Response example</span>
         <span class="nt">search</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-</pre></div>
+</code></pre></div>
 
 
 <dl>
@@ -1280,27 +1292,27 @@ Result: My_Project-2018-09-19.slate/
 <h3 id="about-shards">About shards<a class="headerlink" href="#about-shards" title="Permanent link">&para;</a></h3>
 <p>Shards is just a folder with files which will be copied into the generated Slate project replacing all files in there. If you follow the Slate project structure you can replace stylesheets, scripts, images, layouts etc to customize the view of the resulting site.</p>
 <p>If shards is a string — it is considered a path to single shards directory relative to Foliant project dir:</p>
-<div class="codehilite"><pre><span></span><span class="n">slate</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">slate</span><span class="o">:</span>
     <span class="n">shards</span><span class="o">:</span> <span class="s1">&#39;data/shards&#39;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>If shards is a list — each list item is considered as a shards dir. They will be copied into the Slate project subsequently with replace.</p>
-<div class="codehilite"><pre><span></span><span class="n">slate</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">slate</span><span class="o">:</span>
     <span class="n">shards</span><span class="o">:</span>
         <span class="o">-</span> <span class="s1">&#39;common/shards&#39;</span>
         <span class="o">-</span> <span class="s1">&#39;custom/shards&#39;</span>
         <span class="o">-</span> <span class="s1">&#39;new_design&#39;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>For example, I want to customize standard Slate stylesheets. I look at the Slate repo and see that they lie in the folder <code>&lt;slate&gt;/source/stylesheets</code>. I create new stylesheets with the same names as the original ones and put them into my shards dir like that:</p>
-<div class="codehilite"><pre><span></span><span class="err">shards\</span>
+<div class="codehilite"><pre><span></span><code><span class="err">shards\</span>
 <span class="err">    source\</span>
 <span class="err">        stylesheets\</span>
 <span class="err">            _variables.scss</span>
 <span class="err">            screen.css.scss</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>These stylesheets will replace the original ones in the Slate project just before the website is be baked. So the page will have my styles in the end.</p>
@@ -1362,18 +1374,18 @@ Result: My_Project-2018-09-19.slate/
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/foliant-docs/foliant" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="/docs/assets/foliant-docs.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+      <a href="/docs/assets/foliant-docs.pdf" target="_blank" rel="noopener" title="file-pdf-o" class="md-footer-social__link fa fa-file-pdf-o"></a>
     
   </div>
 
@@ -1383,7 +1395,7 @@ Result: My_Project-2018-09-19.slate/
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

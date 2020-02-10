@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#mkdocs" tabindex="1" class="md-skip">
+      <a href="#mkdocs" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -123,9 +123,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Foliant" class="md-header-nav__button md-logo">
+        <a href="../.." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
           
-            <img src="../../assets/images/octopus-white.svg" width="24" height="24">
+            <img alt="logo" src="../../assets/images/octopus-white.svg" width="24" height="24">
           
         </a>
       </div>
@@ -154,7 +154,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -217,7 +217,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Foliant" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/octopus-white.svg" width="48" height="48">
+        <img alt="logo" src="../../assets/images/octopus-white.svg" width="48" height="48">
       
     </a>
     Foliant
@@ -1114,6 +1114,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../config/alt_structure/" title="AltStructure" class="md-nav__link">
+      AltStructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../config/from/" title="MultiProject" class="md-nav__link">
       MultiProject
     </a>
@@ -1247,45 +1259,45 @@
 <p>MkDocs backend lets you build websites from Foliant projects using <a href="https://mkdocs.org">MkDocs</a> static site generator.</p>
 <p>The backend adds three targets: <code>mkdocs</code>, <code>site</code>, and <code>ghp</code>. The first one converts a Foliant project into a MkDocs project without building any html files. The second one builds a standalone website. The last one deploys the website to GitHub Pages.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ pip install foliantcontrib.mkdocs
-</pre></div>
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.mkdocs
+</code></pre></div>
 
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Convert Foliant project to MkDocs:</p>
-<div class="codehilite"><pre><span></span>$ foliant make mkdocs -p my-project
+<div class="codehilite"><pre><span></span><code>$ foliant make mkdocs -p my-project
 ✔ Parsing config
 ✔ Applying preprocessor mkdocs
 ✔ Making mkdocs with MkDocs
 ─────────────────────
 Result: My_Project-2017-12-04.mkdocs.src
-</pre></div>
+</code></pre></div>
 
 
 <p>Build a standalone website:</p>
-<div class="codehilite"><pre><span></span>$ foliant make site -p my-project
+<div class="codehilite"><pre><span></span><code>$ foliant make site -p my-project
 ✔ Parsing config
 ✔ Applying preprocessor mkdocs
 ✔ Making site with MkDocs
 ─────────────────────
 Result: My_Project-2017-12-04.mkdocs
-</pre></div>
+</code></pre></div>
 
 
 <p>Deploy to GitHub Pages:</p>
-<div class="codehilite"><pre><span></span>$ foliant make ghp -p my-project
+<div class="codehilite"><pre><span></span><code>$ foliant make ghp -p my-project
 ✔ Parsing config
 ✔ Applying preprocessor mkdocs
 ✔ Making ghp with MkDocs
 ─────────────────────
 Result: https://account-name.github.io/my-project/
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use MkDocs backend. If it's installed, Foliant detects it.</p>
 <p>To customize the output, use options in <code>backend_config.mkdocs</code> section:</p>
-<div class="codehilite"><pre><span></span><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">mkdocs</span><span class="p">:</span>
     <span class="nt">mkdocs_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
     <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_awesome_project</span>
@@ -1297,7 +1309,7 @@ Result: https://account-name.github.io/my-project/
       <span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Custom Title</span>
       <span class="nt">site_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com</span>
       <span class="nt">site_author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">John Smith</span>
-</pre></div>
+</code></pre></div>
 
 
 <dl>
@@ -1324,10 +1336,10 @@ Result: https://account-name.github.io/my-project/
 <p>MkDocs backend ships with a preprocessor that transforms a Foliant project into a MkDocs one. Basically, <code>foliant make mkdocs</code> just applies the preprocessor.</p>
 <p>The preprocessor is invoked automatically when you run MkDocs backend, so you don't have to add it in <code>preprocessors</code> section manually.</p>
 <p>However, it's just a regular preprocessor like any other, so you can call it manually if necessary:</p>
-<div class="codehilite"><pre><span></span><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">mkdocs</span><span class="p">:</span>
       <span class="nt">mkdocs_project_dir_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
-</pre></div>
+</code></pre></div>
 
 
 <dl>
@@ -1398,18 +1410,18 @@ Result: https://account-name.github.io/my-project/
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/foliant-docs/foliant" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="/docs/assets/foliant-docs.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+      <a href="/docs/assets/foliant-docs.pdf" target="_blank" rel="noopener" title="file-pdf-o" class="md-footer-social__link fa fa-file-pdf-o"></a>
     
   </div>
 
@@ -1419,7 +1431,7 @@ Result: https://account-name.github.io/my-project/
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

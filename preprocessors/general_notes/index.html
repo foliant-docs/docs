@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#general-notes-on-usage" tabindex="1" class="md-skip">
+      <a href="#general-notes-on-usage" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -123,9 +123,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Foliant" class="md-header-nav__button md-logo">
+        <a href="../.." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
           
-            <img src="../../assets/images/octopus-white.svg" width="24" height="24">
+            <img alt="logo" src="../../assets/images/octopus-white.svg" width="24" height="24">
           
         </a>
       </div>
@@ -154,7 +154,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -217,7 +217,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Foliant" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/octopus-white.svg" width="48" height="48">
+        <img alt="logo" src="../../assets/images/octopus-white.svg" width="48" height="48">
       
     </a>
     Foliant
@@ -1037,6 +1037,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../config/alt_structure/" title="AltStructure" class="md-nav__link">
+      AltStructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../config/from/" title="MultiProject" class="md-nav__link">
       MultiProject
     </a>
@@ -1105,8 +1117,8 @@
                 <h1 id="general-notes-on-usage">General Notes on Usage<a class="headerlink" href="#general-notes-on-usage" title="Permanent link">&para;</a></h1>
 <p>Most simple preprocessors apply unconditionally to the whole content of each Markdown file in the Foliant project. But usually preprocessors look for some specific pseudo-XML tags in Markdown content. Each preprocessor registers its own set of tags.</p>
 <p>Tags can have attributes and a body. Attributes are usually used to specify some required or optional parameters. Body is the content that is enclosed between opening and closing tags; preprocessors usually do something with this content:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;tag</span> <span class="na">attribute_1=</span><span class="s">&quot;value_1&quot;</span> <span class="err">...</span> <span class="na">attribute_N=</span><span class="s">&quot;value_N&quot;</span><span class="nt">&gt;</span>body<span class="nt">&lt;/tag&gt;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;tag</span> <span class="na">attribute_1=</span><span class="s">&quot;value_1&quot;</span> <span class="err">...</span> <span class="na">attribute_N=</span><span class="s">&quot;value_N&quot;</span><span class="nt">&gt;</span>body<span class="nt">&lt;/tag&gt;</span>
+</code></pre></div>
 
 
 <p>Foliant under 1.0.8 tries to convert each attribute value into a boolean value, a number, or a string. Attribute values must be enclosed in double quotes (<code>"</code>).</p>
@@ -1179,18 +1191,18 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/foliant-docs/foliant" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="/docs/assets/foliant-docs.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+      <a href="/docs/assets/foliant-docs.pdf" target="_blank" rel="noopener" title="file-pdf-o" class="md-footer-social__link fa fa-file-pdf-o"></a>
     
   </div>
 
@@ -1200,7 +1212,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
