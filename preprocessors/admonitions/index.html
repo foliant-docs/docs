@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -568,6 +568,18 @@
   <li class="md-nav__item">
     <a href="../badges/" title="Badges" class="md-nav__link">
       Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bindfigma/" title="BindFigma" class="md-nav__link">
+      BindFigma
     </a>
   </li>
 
@@ -1266,6 +1278,21 @@
 </code></pre></div>
 
 
+<p>Currently supported backends:</p>
+<ul>
+<li><code>pandoc</code></li>
+<li><code>mkdocs</code>*</li>
+<li><code>slate</code></li>
+</ul>
+<p>* for admonitions to work in mkdocs, add <code>admonition</code> to the <code>markdown_extensions</code> section of your mkdocs.yml config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+    <span class="nt">mkdocs</span><span class="p">:</span>
+        <span class="nt">mkdocs.yml</span><span class="p">:</span>
+            <span class="nt">markdown_extensions</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
+</code></pre></div>
+
+
 <h4 id="notes-for-slate">Notes for slate<a class="headerlink" href="#notes-for-slate" title="Permanent link">&para;</a></h4>
 <p>Slate has its own admonitions syntax of three types: <code>notice</code> (blue notes), <code>warning</code> (red warnings) and <code>success</code> (green notes). If another type is supplied, slate draws a blue note but without the "i" icon.</p>
 <p>Admonitions preprocessor transforms some of the general admonition types into slate's for convenience (so you could use <code>error</code> type to display same kind of note in both slate and mkdocs). These translations are indicated in the table below:</p>
@@ -1388,7 +1415,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
     
   </body>

@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.alt_structure 0.1.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.alt_structure.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.alt_structure.git#6e1bf25a40ec212fe41de79769f0b9f7</guid>
+            <pubDate>Wed, 12 Feb 2020 16:19:55 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: Remove config check from init</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.alt_structure 0.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.alt_structure.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.alt_structure.git#f254b546919cf133d59a598ba238bc54</guid>
