@@ -20,6 +20,7 @@ chapters:
         - preprocessors/anchors.md
         - preprocessors/apilinks.md
         - preprocessors/badges.md
+        - preprocessors/bindfigma.md
         - preprocessors/bindsympli.md
         - preprocessors/blockdiag.md
         - preprocessors/csvtables.md
@@ -86,6 +87,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.anchors.git
             - https://github.com/foliant-docs/foliantcontrib.apilinks.git
             - https://github.com/foliant-docs/foliantcontrib.badges.git
+            - https://github.com/foliant-docs/foliantcontrib.bindfigma.git
             - https://github.com/foliant-docs/foliantcontrib.bindsympli.git
             - https://github.com/foliant-docs/foliantcontrib.blockdiag.git
             - https://github.com/foliant-docs/foliantcontrib.bump.git
