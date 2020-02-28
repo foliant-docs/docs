@@ -7,6 +7,17 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.bindfigma 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#612e36e62eb22e5b373eacfe2d6e4454</guid>
+            <pubDate>Fri, 28 Feb 2020 15:08:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>hyperlinks</code> and <code>multi_delimeter</code> options.</li>
+<li>Output error messages to STDOUT.</li>
+<li>Minor improvements.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.alt_structure 0.1.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.alt_structure.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.alt_structure.git#6e1bf25a40ec212fe41de79769f0b9f7</guid>

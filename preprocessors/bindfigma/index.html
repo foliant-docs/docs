@@ -1221,6 +1221,8 @@
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.bindfigmacache</span>
         <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
         <span class="nt">caption</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">hyperlinks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">multi_delimeter</span><span class="p">:</span> <span class="s">&#39;\n\n&#39;</span>
         <span class="nt">resize</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
         <span class="nt">access_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
         <span class="nt">file_key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -1242,6 +1244,10 @@
 <dd>Path to <code>convert</code> binary, a part of ImageMagick. If resizing is not needed, ImageMagick will not be used.</dd>
 <dt><code>caption</code></dt>
 <dd>Caption of images. The <code>{{image_id}}</code> placeholder in the caption will be replaced with Figma node ID.</dd>
+<dt><code>hyperlinks</code></dt>
+<dd>Flag that tells the preprocessor to wrap image references into hyperlinks to related Figma URLs.</dd>
+<dt><code>multi_delimeter</code></dt>
+<dd>String that should separate multiple image references.</dd>
 <dt><code>resize</code></dt>
 <dd>Width of resulting images in pixels. If not specified, resizing is not performed.</dd>
 <dt><code>access_token</code></dt>
@@ -1262,7 +1268,7 @@
 
 
 <p>You may use tag attributes to override the values of the project config options with the same names. All the options excepting <code>cache_dir</code> and <code>convert_path</code> may be overridden in this way.</p>
-<p>BindFigma preprocessor will replace such statements with local image references. If <code>ids</code> refers to more than one image, a set of image references will be generated.</p>
+<p>BindFigma preprocessor will replace such statements with local image references. If <code>ids</code> refers to more than one image, a set of image references will be generated. Multiple image references will be separated with the string specified as <code>multi_delimeter</code>.</p>
                 
                   
                 
