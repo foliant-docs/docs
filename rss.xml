@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#584497b54c81f8d127f4219040943eb5</guid>
+            <pubDate>Wed, 11 Mar 2020 08:28:30 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix another conflict with escapecode</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.graphviz 1.1.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.graphviz.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#eec1af5484f69cb29a5a2bf71838530a</guid>
+            <pubDate>Thu, 05 Mar 2020 12:41:05 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: as_image takes effect only with <code>svg</code> format.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.bindfigma 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#612e36e62eb22e5b373eacfe2d6e4454</guid>
