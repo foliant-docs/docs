@@ -7,6 +7,114 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.testcoverage 0.1.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testcoverage.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testcoverage.git#c43ed9f7aaa285a2ba01e92f8596fa7b</guid>
+            <pubDate>Wed, 01 Apr 2020 09:39:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support meta 1.3.0</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testcoverage 0.1.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testcoverage.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testcoverage.git#9473d219856e302d4d27404ee552ef9e</guid>
+            <pubDate>Wed, 01 Apr 2020 09:39:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.metagraph 0.1.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.metagraph.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#a2e47cd9b808b429ab653bbab7efc27c</guid>
+            <pubDate>Wed, 01 Apr 2020 09:37:15 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Metadata is now taken from src_dir to minimize possible conflicts with other preprocessors.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.metagraph 0.1.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.metagraph.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#ab52e435b64873c66679c32365b01851</guid>
+            <pubDate>Fri, 27 Mar 2020 12:05:20 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New parameter: <code>draw_all</code>, which controls which sections are included.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.metagraph 0.1.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.metagraph.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#998c8ee4a7940b670d6bfc991926ce80</guid>
+            <pubDate>Thu, 26 Mar 2020 14:46:47 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.templateparser 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#9533dd933f98db8697777ce74f38a2d9</guid>
+            <pubDate>Thu, 26 Mar 2020 14:22:37 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Now meta dictionary is available inside templates under <code>meta</code> variable.</li>
+<li>Project's meta object is available inside templates under <code>meta_object</code> variable.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.meta 1.3.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#d184113c8b987125bf70bc764a5ed41d</guid>
+            <pubDate>Thu, 26 Mar 2020 11:19:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li><code>remove_meta</code> now also trims whitespaces in the beginning of the file after removing YFM</li>
+<li>Main section's title is now set to first heading, if:<ul>
+<li>the first heading is a 1-level heading (#),</li>
+<li>the first heading doesn't have meta.</li>
+</ul>
+</li>
+<li>Fix: YFM was not included in meta in some cases</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#6bdfac5d0cb269d0ea502979a3cd02c2</guid>
+            <pubDate>Wed, 25 Mar 2020 11:20:16 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Now foliant-anchors are always added even for new pages</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.combined_options 1.0.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#4b2d2f8fa92eadd9df8eddc7e5484cc3</guid>
+            <pubDate>Mon, 23 Mar 2020 11:47:36 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: default dict was overriden after the first use.</li>
+<li>Allow to supply the list of priorities instead of just one priority.</li>
+<li>Priority for those option dictionaries, which are not mentioned in the <code>priority</code> param, are now defined by the order dictionaries are defined.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.1.11</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#216698b9744467c985f1871b475e9d22</guid>
+            <pubDate>Thu, 12 Mar 2020 09:24:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Misprint fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.1.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#14e91bc3f0ecba2f23340fc6b1284797</guid>
+            <pubDate>Thu, 12 Mar 2020 08:43:22 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Bug with template handling fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.6.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#584497b54c81f8d127f4219040943eb5</guid>

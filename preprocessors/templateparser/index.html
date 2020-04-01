@@ -728,6 +728,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../metagraph/" title="MetaGraph" class="md-nav__link">
+      MetaGraph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
       MultilineTables
     </a>
@@ -905,6 +917,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#integration-with-metadata" class="md-nav__link">
+    Integration with metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sending-variables-to-template" class="md-nav__link">
     Sending variables to template
   </a>
@@ -1017,18 +1036,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/project_graph/" title="ProjectGraph" class="md-nav__link">
-      ProjectGraph
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../cli/init/" title="Init" class="md-nav__link">
       Init
     </a>
@@ -1042,13 +1049,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-7-6">
+    <label class="md-nav__link" for="nav-7-5">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-6">
+      <label class="md-nav__title" for="nav-7-5">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1223,6 +1230,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#integration-with-metadata" class="md-nav__link">
+    Integration with metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sending-variables-to-template" class="md-nav__link">
     Sending variables to template
   </a>
@@ -1266,7 +1280,7 @@
                 
                 
                 <h1 id="templateparser">TemplateParser<a class="headerlink" href="#templateparser" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.templateparser.svg" /></p>
+<p><a href="https://pypi.org/project/foliantcontrib.templateparser/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.templateparser.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.templateparser"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.templateparser.svg?label=GitHub" /></a></p>
 <h2 id="templateparser-preprocessor-for-foliant">TemplateParser preprocessor for Foliant<a class="headerlink" href="#templateparser-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Preprocessor which allows to use templates in Foliant source files. Preprocessor now supports only <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine, but more can be added easily.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1336,6 +1350,42 @@ This is a Jinja2 template:
 I can count to five!
 {% for i in range(5) %}{{ i + 1 }}{% endfor %}
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<h4 id="integration-with-metadata">Integration with metadata<a class="headerlink" href="#integration-with-metadata" title="Permanent link">&para;</a></h4>
+<p>Templates support latest Foliant <a href="https://foliant-docs.github.io/docs/cli/meta/">metadata</a> functionality. You can find the meta dictionary for current section under <code>meta</code> variable inside template:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+Document status: {{ meta.status }}
+
+The document &quot;{{ meta.title }}&quot; is brought to you by {{ meta.author }}
+<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span><code>Document status: ready
+
+The document &quot;Custom Title&quot; is brought to you by John
+</code></pre></div>
+
+
+<p>You can also find the whole project's <code>Meta</code> object under <code>meta_object</code> variable inside template:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+List of chapters in this project:
+{% for chapter in meta_object.chapters %}
+* {{ chapter.name }}
+{%- endfor %}
+<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span><code>List of chapters in this project:
+
+* index
+* sub
+* auth
 </code></pre></div>
 
 

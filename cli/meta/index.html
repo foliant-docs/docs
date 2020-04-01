@@ -726,6 +726,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../preprocessors/metagraph/" title="MetaGraph" class="md-nav__link">
+      MetaGraph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../preprocessors/multilinetables/" title="MultilineTables" class="md-nav__link">
       MultilineTables
     </a>
@@ -1092,18 +1104,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../project_graph/" title="ProjectGraph" class="md-nav__link">
-      ProjectGraph
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../init/" title="Init" class="md-nav__link">
       Init
     </a>
@@ -1117,13 +1117,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
     
-    <label class="md-nav__link" for="nav-7-6">
+    <label class="md-nav__link" for="nav-7-5">
       Init Templates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-6">
+      <label class="md-nav__title" for="nav-7-5">
         Init Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1416,7 +1416,7 @@
                 
                 
                 <h1 id="meta">Meta<a class="headerlink" href="#meta" title="Permanent link">&para;</a></h1>
-<p><a href="https://pypi.org/project/foliantcontrib.meta/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.meta.svg" /></a></p>
+<p><a href="https://pypi.org/project/foliantcontrib.meta/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.meta.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.meta"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.meta.svg?label=GitHub" /></a></p>
 <h2 id="metadata-for-foliant">Metadata for Foliant<a class="headerlink" href="#metadata-for-foliant" title="Permanent link">&para;</a></h2>
 <p>This extension adds the <code>meta generate</code> command to Foliant, which generates the yaml-file with project metadata. It also allows to add other meta commands <code>meta &lt;command&gt;</code> which use the generated metadata.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1514,10 +1514,12 @@
 
 <p><strong>iter_sections()</strong></p>
 <p>This method returns an iterator which yields project's meta-sections (<code>Section</code> objects) in the proper order from the first chapter to the last one.</p>
-<p><strong>get_chapter(self, filename: str) -&gt; Chapter</strong></p>
-<p>Get chapter (<code>Chapter</code> object) by its name. <code>filename</code> should be path to chapter relative to the src dir.</p>
+<p><strong>get_chapter(self, filename: str or PosixPath) -&gt; Chapter</strong></p>
+<p>Get chapter (<code>Chapter</code> object) by its name. <code>filename</code> should be path to chapter relative to the Project dir (or absolute path).</p>
 <p><strong>get_by_id(self, id_: str) -&gt; Section</strong></p>
 <p>Get section (<code>Section</code> object) by its id.</p>
+<p><strong>chapters</strong></p>
+<p>A property which holds the list of chapters (<code>Chapter</code> objects).</p>
 <h3 id="the-chapter-class">The Chapter class<a class="headerlink" href="#the-chapter-class" title="Permanent link">&para;</a></h3>
 <p><code>Chapter</code> class represents a project's chapter. It has several important methods which may be useful for working with metadata.</p>
 <p><strong>iter_sections()</strong></p>
@@ -1592,13 +1594,13 @@
           </a>
         
         
-          <a href="../project_graph/" title="ProjectGraph" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../init/" title="Init" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ProjectGraph
+                Init
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
