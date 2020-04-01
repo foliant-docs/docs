@@ -39,6 +39,7 @@ chapters:
         - preprocessors/includes.md
         - preprocessors/macros.md
         - preprocessors/mermaid.md
+        - preprocessors/metagraph.md
         - preprocessors/multilinetables.md
         - preprocessors/pgsqldoc.md
         - preprocessors/plantuml.md
@@ -55,7 +56,6 @@ chapters:
         - cli/bump.md
         - cli/gupload.md
         - cli/meta.md
-        - cli/project_graph.md
         - Init: cli/init/index.md
         - Init Templates:
             - cli/init/templates/preprocessor.md
@@ -112,6 +112,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.mdtopdf.git
             - https://github.com/foliant-docs/foliantcontrib.mermaid.git
             - https://github.com/foliant-docs/foliantcontrib.meta.git
+            - https://github.com/foliant-docs/foliantcontrib.metagraph.git
             - https://github.com/foliant-docs/foliantcontrib.mkdocs.git
             - https://github.com/foliant-docs/foliantcontrib.multilinetables.git
             - https://github.com/foliant-docs/foliantcontrib.multiproject.git
@@ -131,6 +132,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git
             - https://github.com/foliant-docs/foliantcontrib.templateparser.git
             - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
+            - https://github.com/foliant-docs/foliantcontrib.testcoverage.git
             - https://github.com/foliant-docs/foliantcontrib.testrail.git
             - https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
             - https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git
