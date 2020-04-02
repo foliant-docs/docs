@@ -383,36 +383,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confluence-backend-for-foliant" class="md-nav__link">
-    Confluence backend for Foliant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -459,8 +446,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#code-blocks-processing" class="md-nav__link">
+    Code blocks processing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
   
 </li>
       
@@ -639,6 +640,18 @@
   <li class="md-nav__item">
     <a href="../../preprocessors/blockdiag/" title="Blockdiag" class="md-nav__link">
       Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preprocessors/confluence/" title="Confluence" class="md-nav__link">
+      Confluence
     </a>
   </li>
 
@@ -1221,36 +1234,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confluence-backend-for-foliant" class="md-nav__link">
-    Confluence backend for Foliant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1297,8 +1297,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#code-blocks-processing" class="md-nav__link">
+    Code blocks processing
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
   
 </li>
       
@@ -1322,8 +1336,6 @@
                 
                 
                 <h1 id="confluence">Confluence<a class="headerlink" href="#confluence" title="Permanent link">&para;</a></h1>
-<p><a href="https://pypi.org/project/foliantcontrib.confluence/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.confluence.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.confluence"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.confluence.svg?label=GitHub" /></a></p>
-<h2 id="confluence-backend-for-foliant">Confluence backend for Foliant<a class="headerlink" href="#confluence-backend-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Confluence backend generates confluence articles and uploads them on your confluence server. It can create and edit pages in Confluence with content based on your Foliant project.</p>
 <p>It also has a feature of restoring the user inline comments, added for the article, even after the commented fragment was changed.</p>
 <p>This backend adds the <code>confluence</code> target for your Foliant <code>make</code> command.</p>
@@ -1347,7 +1359,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>You have to set up correct config for this backend to work properly.</p>
+<p>You have to set up the correct config for this backend to work properly.</p>
 <p>Specify all options in <code>backend_config.confluence</code> section:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">confluence</span><span class="p">:</span>
@@ -1359,11 +1371,14 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
     <span class="nt">parent_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124442</span>
     <span class="nt">parent_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Parent</span>
+    <span class="nt">test_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">notify_watchers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+    <span class="nt">codeblocks</span><span class="p">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
 
 
@@ -1371,9 +1386,9 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dt><code>host</code></dt>
 <dd><strong>Required</strong> Host of your confluence server.</dd>
 <dt><code>login</code></dt>
-<dd>Login of the user who has permissions to create and update pages. If login is not supplied, it will be prompted during build.</dd>
+<dd>Login of the user who has permissions to create and update pages. If login is not supplied, it will be prompted during the build.</dd>
 <dt><code>password</code></dt>
-<dd>Password of the user. If password is not supplied, it will be prompted during build.</dd>
+<dd>Password of the user. If the password is not supplied, it will be prompted during the build.</dd>
 <dt><code>id</code></dt>
 <dd>ID of the page where the content will be uploaded. <em>Only for already existing pages</em></dd>
 <dt><code>title</code></dt>
@@ -1388,21 +1403,25 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dt><code>parent_id</code></dt>
 <dd>ID of the parent page under which the new one(s) should be created. <em>Only for not yet existing pages</em>.</dd>
 <dt><code>parent_title</code></dt>
-<dd>Another way to define parent of the page. Lower priority than <code>paren_di</code>. Title of the parent page under which the new one(s) should be created. Parent should exist under the space_key specified. <em>Only for not yet existing pages</em>.</dd>
+<dd>Another way to define the parent of the page. Lower priority than <code>paren_di</code>. Title of the parent page under which the new one(s) should be created. The parent should exist under the space_key specified. <em>Only for not yet existing pages</em>.</dd>
+<dt><code>test_run</code></dt>
+<dd>If this option is true, Foliant will prepare the files for uploading to Confluence, but won't actually upload them. Use this option for testing your content before upload. The prepared files can be found in <code>.confluencecache/debug</code> folder. Default: <code>false</code></dd>
 <dt><code>notify_watchers</code></dt>
 <dd>If <code>true</code> — watchers will be notified that the page has changed. Default: <code>false</code></dd>
 <dt><code>toc</code></dt>
-<dd>Set to <code>true</code> to add table of contents to the beginning of the document. Default: <code>false</code></dd>
+<dd>Set to <code>true</code> to add a table of contents to the beginning of the document. Default: <code>false</code></dd>
 <dt><code>restore_comments</code></dt>
 <dd>Attempt to restore inline comments near the same places after updating the page. Default: <code>true</code></dd>
 <dt><code>resolve_if_changed</code></dt>
-<dd>Delete inline comment from the source if the commented text was changed. This will automatically mark comment as resolved. Default: <code>false</code></dd>
+<dd>Delete inline comment from the source if the commented text was changed. This will automatically mark the comment as resolved. Default: <code>false</code></dd>
 <dt><code>pandoc_path</code></dt>
 <dd>Path to Pandoc executable (Pandoc is used to convert Markdown into HTML).</dd>
+<dt><code>codeblocks</code></dt>
+<dd>Configuration for converting Markdown code blocks into code-block macros. See details in <strong>Code blocks processing</strong> sections.</dd>
 </dl>
-<h2 id="users-guide">User's guide<a class="headerlink" href="#users-guide" title="Permanent link">&para;</a></h2>
-<h3 id="uploading-articles">Uploading articles<a class="headerlink" href="#uploading-articles" title="Permanent link">&para;</a></h3>
-<p>By default if you specify <code>id</code> or <code>space_key</code> and <code>title</code> in foliant.yml, the whole project will be built and uploaded to this page.</p>
+<h3 id="users-guide">User's guide<a class="headerlink" href="#users-guide" title="Permanent link">&para;</a></h3>
+<h4 id="uploading-articles">Uploading articles<a class="headerlink" href="#uploading-articles" title="Permanent link">&para;</a></h4>
+<p>By default, if you specify <code>id</code> or <code>space_key</code> and <code>title</code> in foliant.yml, the whole project will be built and uploaded to this page.</p>
 <p>If you wish to upload separate chapters into separate articles, you need to specify the respective <code>id</code> or <code>space_key</code> and <code>title</code> in <em>meta section</em> of the chapter.</p>
 <p>Meta section is a YAML-formatted field-value section in the beginning of the document, which is defined like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="nn">---</span>
@@ -1427,10 +1446,10 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 
 <blockquote>
 <p><strong>Important notice!</strong>
-Both modes work together. If you specify the <code>id1</code> in foliant.yml and <code>id2</code> in chapter's meta — the whole project will be uploaded to the page with <code>id1</code>, and the specific chapter will also be uploaded to page with <code>id2</code>.</p>
+Both modes work together. If you specify the <code>id1</code> in foliant.yml and <code>id2</code> in chapter's meta — the whole project will be uploaded to the page with <code>id1</code>, and the specific chapter will also be uploaded to the page with <code>id2</code>.</p>
 </blockquote>
-<h3 id="creating-pages">Creating pages<a class="headerlink" href="#creating-pages" title="Permanent link">&para;</a></h3>
-<p>If you want a new page to be created for content in your Foliant project, just supply in foliant.yml the space key and a title which does not yet exist in this space. Remember that in Confluence page titles are unique inside one space. If you use a title of an already existing page, the backend will attempt to edit it and replace its content with your project.</p>
+<h4 id="creating-pages">Creating pages<a class="headerlink" href="#creating-pages" title="Permanent link">&para;</a></h4>
+<p>If you want a new page to be created for content in your Foliant project, just supply in foliant.yml the space key and a title that does not yet exist in this space. Remember that in Confluence page titles are unique inside one space. If you use a title of an already existing page, the backend will attempt to edit it and replace its content with your project.</p>
 <p>Example config for this situation is:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">confluence</span><span class="p">:</span>
@@ -1444,8 +1463,8 @@ Both modes work together. If you specify the <code>id1</code> in foliant.yml and
 
 <p>Now if you change the title in your config, confluence will <em>create a new page with the new title</em>, leaving the old one intact.</p>
 <p>If you want to change the title of your page, the answer is in the following section.</p>
-<h3 id="updating-pages">Updating pages<a class="headerlink" href="#updating-pages" title="Permanent link">&para;</a></h3>
-<p>Generally to update the page contents you may use the same config you used to create it (see previous section). If the page with specified title exists, it will be updated.</p>
+<h4 id="updating-pages">Updating pages<a class="headerlink" href="#updating-pages" title="Permanent link">&para;</a></h4>
+<p>Generally to update the page contents you may use the same config you used to create it (see the previous section). If the page with a specified title exists, it will be updated.</p>
 <p>Also, you can just specify the id of an existing page. After build its contents will be updated.</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">confluence</span><span class="p">:</span>
@@ -1467,7 +1486,7 @@ Both modes work together. If you specify the <code>id1</code> in foliant.yml and
 </code></pre></div>
 
 
-<h3 id="updating-part-of-a-page">Updating part of a page<a class="headerlink" href="#updating-part-of-a-page" title="Permanent link">&para;</a></h3>
+<h4 id="updating-part-of-a-page">Updating part of a page<a class="headerlink" href="#updating-part-of-a-page" title="Permanent link">&para;</a></h4>
 <p>Confluence backend can also upload an article into the middle of a Confluence page, leaving all the rest of it intact. To do this you need to add an <em>Anchor</em> into your page in the place where you want Foliant content to appear.</p>
 <ol>
 <li>Go to Confluence web interface and open the article.</li>
@@ -1477,9 +1496,9 @@ Both modes work together. If you specify the <code>id1</code> in foliant.yml and
 <li>Save the page.</li>
 </ol>
 <p>Now if you upload content into this page (see two previous sections), Confluence backend will leave all text which was before and after the anchor intact, and add your Foliant content in the middle.</p>
-<p>You can also add two anchors: <code>foliant_start</code> and <code>foliant_end</code>. In this case all text between these anchors will be replaced by your Foliant content.</p>
-<h3 id="inserting-raw-confluence-tags">Inserting raw confluence tags<a class="headerlink" href="#inserting-raw-confluence-tags" title="Permanent link">&para;</a></h3>
-<p>If you want to supplement your page with confluence macros or any other storage-specific html, you may do it by wrapping them in the <code>&lt;raw_confluence&gt;&lt;/raw_confluence&gt;</code> tag.</p>
+<p>You can also add two anchors: <code>foliant_start</code> and <code>foliant_end</code>. In this case, all text between these anchors will be replaced by your Foliant content.</p>
+<h4 id="inserting-raw-confluence-tags">Inserting raw confluence tags<a class="headerlink" href="#inserting-raw-confluence-tags" title="Permanent link">&para;</a></h4>
+<p>If you want to supplement your page with confluence macros or any other storage-specific HTML, you may do it by wrapping them in the <code>&lt;raw_confluence&gt;&lt;/raw_confluence&gt;</code> tag.</p>
 <p>For example, if you wish to add a table of contents into the middle of the document for some reason, you can do something like this:</p>
 <div class="codehilite"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorem nulla quam doloribus delectus voluptate.
 
@@ -1487,6 +1506,92 @@ Both modes work together. If you specify the <code>id1</code> in foliant.yml and
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam cumque soluta sequi blanditiis, voluptatibus quaerat similique nihil debitis repellendus.
 </code></pre></div>
+
+
+<h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
+<p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+    <span class="nt">confluence</span><span class="p">:</span>
+        <span class="nt">codeblocks</span><span class="p">:</span>  <span class="c1"># all are optional</span>
+            <span class="nt">theme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">django</span>
+            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Code example</span>
+            <span class="nt">linenumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+            <span class="nt">collapse</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+
+<dl>
+<dt><code>theme</code></dt>
+<dd>Color theme of the code blocks. Should be one of:</dd>
+</dl>
+<ul>
+<li><code>emacs</code>,</li>
+<li><code>django</code>,</li>
+<li><code>fadetogrey</code>,</li>
+<li><code>midnight</code>,</li>
+<li><code>rdark</code>,</li>
+<li><code>eclipse</code>,</li>
+<li><code>confluence</code>.</li>
+</ul>
+<dl>
+<dt><code>title</code></dt>
+<dd>Title of the code block.</dd>
+<dt><code>linenumbers</code></dt>
+<dd>Show line numbers in code blocks. Default: <code>false</code></dd>
+<dt><code>collapse</code></dt>
+<dd>Collapse code blocks into a clickable bar. Default: <code>false</code></dd>
+</dl>
+<p>Right now Foliant only converts code blocks by backticks/tildes (tabbed code blocks are ignored for now):</p>
+<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="n">code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span><span class="p">:</span>
+
+<span class="o">```</span><span class="n">python</span>
+<span class="n">def</span> <span class="n">test2</span><span class="p">():</span>
+    <span class="n">pass</span>
+ <span class="o">```</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="err">And this:</span>
+<span class="err">~~~</span>
+<span class="err">def test3():</span>
+<span class="err">    pass</span>
+<span class="err">~~~</span>
+</code></pre></div>
+
+
+<p>Syntax name, defined after backticks/tildes is converted into its Confluence counterpart. Right now following syntaxes are supported:</p>
+<ul>
+<li><code>actionscript</code>,</li>
+<li><code>applescript</code>,</li>
+<li><code>bash</code>,</li>
+<li><code>c</code>,</li>
+<li><code>c</code>,</li>
+<li><code>coldfusion</code>,</li>
+<li><code>cpp</code>,</li>
+<li><code>cs</code>,</li>
+<li><code>css</code>,</li>
+<li><code>delphi</code>,</li>
+<li><code>diff</code>,</li>
+<li><code>erlang</code>,</li>
+<li><code>groovy</code>,</li>
+<li><code>html</code>,</li>
+<li><code>java</code>,</li>
+<li><code>javascript</code>,</li>
+<li><code>js</code>,</li>
+<li><code>perl</code>,</li>
+<li><code>php</code>,</li>
+<li><code>powershell</code>,</li>
+<li><code>python</code>,</li>
+<li><code>xml</code>,</li>
+<li><code>yaml</code>.</li>
+</ul>
+<h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
+<p>The following wonderful tools and libraries are used in foliantcontrib.confluence:</p>
+<ul>
+<li><a href="https://github.com/atlassian-api/atlassian-python-api">Atlassian Python API wrapper</a>,</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a>,</li>
+<li><a href="https://github.com/pyparsing/pyparsing">PyParsing</a>.</li>
+</ul>
                 
                   
                 

@@ -36,7 +36,7 @@
     
     
       
-        <title>ImageMagick - Foliant</title>
+        <title>Confluence - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#imagemagick" tabindex="0" class="md-skip">
+      <a href="#confluence" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                ImageMagick
+                Confluence
               
             </span>
           
@@ -534,11 +534,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../confluence/" title="Confluence" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Confluence
+      </label>
+    
+    <a href="./" title="Confluence" class="md-nav__link md-nav__link--active">
       Confluence
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -666,63 +718,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        ImageMagick
-      </label>
-    
-    <a href="./" title="ImageMagick" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../imagemagick/" title="ImageMagick" class="md-nav__link">
       ImageMagick
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1208,57 +1208,59 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/imagemagick.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/confluence.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="imagemagick">ImageMagick<a class="headerlink" href="#imagemagick" title="Permanent link">&para;</a></h1>
-<p>This tool provides additional processing of images that referred in Markdown source, with <a href="https://imagemagick.org/">ImageMagick</a>.</p>
+                <h1 id="confluence">Confluence<a class="headerlink" href="#confluence" title="Permanent link">&para;</a></h1>
+<p>Confluence preprocessor allows inserting content from Confluence server into your Foliant project.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.imagemagick
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.confluence
 </code></pre></div>
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>imagemagick</code> to <code>preprocessors</code> section in the project config:</p>
+<p>To enable the preprocessor, add <code>confluence</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imagemagick</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">confluence</span>
 </code></pre></div>
 
 
-<p>The preprocessor has a number of options with the following default values:</p>
+<p>The preprocessor has a number of options:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">imagemagick</span><span class="p">:</span>
-        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.imagemagickcache</span>
+    <span class="p p-Indicator">-</span> <span class="nt">confluence</span><span class="p">:</span>
+        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
+        <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+        <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user_password</span>
+        <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
+        <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
 </code></pre></div>
 
 
 <dl>
-<dt><code>convert_path</code></dt>
-<dd>Path to <code>convert</code> binary, a part of ImageMagick.</dd>
-<dt><code>cache_dir</code></dt>
-<dd>Directory to store processed images. These files can be reused later.</dd>
+<dt><code>host</code></dt>
+<dd><strong>Required</strong> Host of your confluence server. If not stated — it would be taken from Confluence backend config.</dd>
+<dt><code>login</code></dt>
+<dd>Login of the user who has permissions to create and update pages. If login is not supplied, it would be taken from backend config, or prompted during the build.</dd>
+<dt><code>password</code></dt>
+<dd>Password of the user. If password is not supplied, it would be taken from backend config, or prompted during the build.</dd>
+<dt><code>space_key</code></dt>
+<dd>The space key where the page titles will be searched for.</dd>
+<dt><code>pandoc_path</code></dt>
+<dd>Path to Pandoc executable (Pandoc is used to convert Confluence content into Markdown).</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Suppose you want to apply the following command to your picture <code>image.eps</code>:</p>
-<div class="codehilite"><pre><span></span><code>$ convert image.eps -resize <span class="m">600</span> -background Orange label:<span class="s1">&#39;Picture&#39;</span> +swap -gravity Center -append image.jpg
-</code></pre></div>
+<p>Add a <code>&lt;confluence&gt;&lt;/confluence&gt;</code> tag at the position in the document where the content from Confluence should be inserted. The page is defined by its <code>id</code> or <code>title</code>. If you are specifying page by title, you will also need to set <code>space_key</code> either in tag or in the preprocessor options.</p>
+<div class="codehilite"><pre><span></span><code>The following content is imported from Confluence:
 
+<span class="p">&lt;</span><span class="nt">confluence</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;12345&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">confluence</span><span class="p">&gt;</span>
 
-<p>This command takes the source EPS image <code>image.eps</code>, resizes it, puts a text label over the picture, and writes the result into new file <code>image.jpg</code>. The suffix of output file name specifies that the image must be converted into JPEG format.</p>
-<p>To use the ImageMagick preprocessor to do the same, enclose one or more image references in your Markdown source between <code>&lt;magick&gt;</code> and <code>&lt;/magick&gt;</code> tags.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">magick</span> <span class="n">command_params</span><span class="o">=</span><span class="s">&quot;-resize 600 -background Orange label:&#39;Picture&#39; +swap -gravity Center -append&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
-</code></pre></div>
+This is from Confluence too, but determined by page title (space key is defined in preprocessor config):
 
+<span class="p">&lt;</span><span class="nt">confluence</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;My Page&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">confluence</span><span class="p">&gt;</span>
 
-<p>Use <code>output_format</code> attribute to specify the suffix of output file name. The whole output file name will be generated automatically.</p>
-<p>Use <code>command_params</code> attribute to specify the string of parameters that should be passed to ImageMagick <code>convert</code> binary.</p>
-<p>Instead of using <code>command_params</code> attribute, you may specify each parameter as its own attribute with the same name:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">magick</span> <span class="n">resize</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="n">background</span><span class="o">=</span><span class="s">&quot;Orange label:&#39;Picture&#39; +swap&quot;</span> <span class="n">gravity</span><span class="o">=</span><span class="s">&quot;Center&quot;</span> <span class="n">append</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
+Here we are overriding space_key:
+
+<span class="p">&lt;</span><span class="nt">confluence</span> <span class="na">space_key</span><span class="o">=</span><span class="s">&quot;ANOTHER_SPACE&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;My Page&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">confluence</span><span class="p">&gt;</span>
 </code></pre></div>
                 
                   
@@ -1281,7 +1283,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../history/" title="History" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../blockdiag/" title="Blockdiag" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1290,19 +1292,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                History
+                Blockdiag
               </span>
             </div>
           </a>
         
         
-          <a href="../imgcaptions/" title="ImgCaptions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../csvtables/" title="CSVTables" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ImgCaptions
+                CSVTables
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

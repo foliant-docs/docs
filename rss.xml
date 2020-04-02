@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#fbbebf4370517a97a84c20f6e1f6cee0</guid>
+            <pubDate>Thu, 02 Apr 2020 13:52:54 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Disabled tabbed code blocks conversion because of conflicts.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.preprocessor_ext 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#e528ec223336a7629e0b9a3caafd9c46</guid>
+            <pubDate>Thu, 02 Apr 2020 12:07:42 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>_process_all_files</code> method for preprocessors without tags.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.testcoverage 0.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.testcoverage.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.testcoverage.git#c43ed9f7aaa285a2ba01e92f8596fa7b</guid>
@@ -83,6 +101,20 @@
             <pubDate>Wed, 25 Mar 2020 11:20:16 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Now foliant-anchors are always added even for new pages</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d6e35f3be43610727aa684a029abbecc</guid>
+            <pubDate>Wed, 25 Mar 2020 11:15:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Introducing import from confluence into Foliant with <code>confluence</code> tag</li>
+<li>Fix: solved conflicts between inline comments and macros (including anchors)</li>
+<li>Fix: backend crashed if new page content was empty</li>
+<li>Markdown code blocks are now converted into code-block macros</li>
+<li>Markdown task lists are now converted into task-list macros</li>
+<li>New <code>test_run</code> option</li>
 </ul>]]></description>
         </item>
         <item>
@@ -935,11 +967,11 @@
         <item>
             <title>foliantcontrib.utils.preprocessor_ext 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#ffe7446d90418ec70d06559d1f455802</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#d318180b9fd118adc48fd1bc63d9858e</guid>
             <pubDate>Mon, 29 Jul 2019 13:16:33 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>fix output</li>
-<li>remove get_options overriding, it's now implemented similarly in core</li>
+<li>Fix output</li>
+<li>Remove get_options overriding, it's now implemented similarly in core</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1059,10 +1091,10 @@
         <item>
             <title>foliantcontrib.utils.preprocessor_ext 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#0078c551a274f7b036085e461f051c38</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#1d3dc4d47338908a3a208f19cb0c4c4c</guid>
             <pubDate>Fri, 14 Jun 2019 16:21:08 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>support PyYAML 5.1</li>
+<li>Support PyYAML 5.1</li>
 </ul>]]></description>
         </item>
         <item>
