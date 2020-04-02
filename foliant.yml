@@ -23,6 +23,7 @@ chapters:
         - preprocessors/bindfigma.md
         - preprocessors/bindsympli.md
         - preprocessors/blockdiag.md
+        - preprocessors/confluence.md
         - preprocessors/csvtables.md
         - preprocessors/customids.md
         - preprocessors/elasticsearch.md
