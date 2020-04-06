@@ -7,6 +7,19 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.meta 1.3.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#f09953d1b99d781116c90fc650ccd4c5</guid>
+            <pubDate>Mon, 06 Apr 2020 13:04:12 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Cutomids are now cut out from titles.</li>
+<li>Added logging.</li>
+<li>Meta commands now support <code>--debug -d</code> and <code>--quiet -q</code> arguments.</li>
+<li><code>meta generate</code> command now gives some verbose output after work.</li>
+<li>Fix: get_section_by_offset didn't count YFM.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.6.10</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#fbbebf4370517a97a84c20f6e1f6cee0</guid>
