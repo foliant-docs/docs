@@ -1,19 +1,19 @@
 sudo: required
 
 services:
-  - docker
+    - docker
 
 install: ''
 
 script:
-  - docker-compose run site
+    - docker-compose run site
 
 deploy:
-  provider: pages
-  local-dir: foliant-docs.mkdocs
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  verbose: true
-  on:
-    branch: master
+    provider: pages
+    local-dir: foliant-docs.mkdocs
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    verbose: true
+    on:
+        branch: master

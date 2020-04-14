@@ -2,30 +2,30 @@ repo_name: foliant-docs/docs
 repo_url: https://github.com/foliant-docs/docs
 edit_uri: edit/master/src/
 theme:
-  name: material
-  custom_dir: !path ./theme/
-  palette:
-    primary: "rgba(0, 0, 0, 0.87)"
-    accent: light blue
-  font:
-    text: PT Sans
-    code: PT Mono
-  logo: assets/images/octopus-white.svg
-  favicon: assets/images/octopus-black-32.ico
+    name: material
+    custom_dir: !path ./theme/
+    palette:
+        primary: "rgba(0, 0, 0, 0.87)"
+        accent: light blue
+    font:
+        text: PT Sans
+        code: PT Mono
+    logo: assets/images/octopus-white.svg
+    favicon: assets/images/octopus-black-32.ico
 extra:
-  social:
-    - type: github
-      link: https://github.com/foliant-docs/foliant
-    - type: file-pdf-o
-      link: /docs/assets/foliant-docs.pdf
+    social:
+        -   type: github
+            link: https://github.com/foliant-docs/foliant
+        -   type: file-pdf-o
+            link: /docs/assets/foliant-docs.pdf
 markdown_extensions:
-  - def_list
-  - codehilite
-  - toc:
-      permalink: true
-  - admonition
+    - def_list
+    - codehilite
+    - toc:
+        permalink: true
+    - admonition
 extra_css:
-  - 'stylesheets/extra.css'
+    - 'stylesheets/extra.css'
 google_analytics:
-  - 'UA-120535275-2'
-  - 'auto'
+    - 'UA-120535275-2'
+    - 'auto'
