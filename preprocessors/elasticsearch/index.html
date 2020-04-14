@@ -1246,6 +1246,7 @@
     <span class="p p-Indicator">-</span> <span class="nt">elasticsearch</span><span class="p">:</span>
         <span class="nt">es_url</span><span class="p">:</span> <span class="s">&#39;http://127.0.0.1:9200/&#39;</span>
         <span class="nt">index_name</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">index_copy_name</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
         <span class="nt">index_properties</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
         <span class="nt">actions</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">delete</span>
@@ -1257,6 +1258,7 @@
             <span class="p p-Indicator">-</span> <span class="s">&#39;\/?index\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
             <span class="p p-Indicator">-</span> <span class="s">&#39;\.md$&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/&#39;</span>
             <span class="p p-Indicator">-</span> <span class="s">&#39;^([^\/]+)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;/\g&lt;1&gt;&#39;</span>
+        <span class="nt">require_env</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
         <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 </code></pre></div>
 
@@ -1266,10 +1268,21 @@
 <dd>Elasticsearch API URL.</dd>
 <dt><code>index_name</code></dt>
 <dd>Name of the index. Your index must have an explicitly specified name, otherwise (by default) API URL will be invalid.</dd>
+<dt><code>index_copy_name</code></dt>
+<dd>Name of the index copy when the <code>copy</code> action is used; see below. If the <code>index_copy_name</code> is not set explicitly, and if the <code>index_name</code> is specified, the <code>index_copy_name</code> value will be formed as the <code>index_name</code> value with the <code>_copy</code> string appended to the end.</dd>
 <dt><code>index_properties</code></dt>
 <dd>Settings and other properties that should be used when creating an index. If not specified (by default), the default Elasticsearch settings will be used. More details are described below.</dd>
 <dt><code>actions</code></dt>
-<dd>List of actions that the preprocessor should to perform. Available item values are: <code>delete</code>, <code>create</code>. By default, both of them are used since in most cases it’s needed to remove and then fully rebuild the index.</dd>
+<dd>
+<p>Sequence of actions that the preprocessor should to perform. Available item values are: <code>delete</code>, <code>create</code>, <code>copy</code>. By default, the actions <code>delete</code> and <code>create</code> are performed since in most cases it’s needed to remove and then fully rebuild the index. The <code>copy</code> action is used to duplicate an index, i.e to create a copy of the index <code>index_name</code> with the name <code>index_copy_name</code>. This action may be useful when a common search index is created for multiple Foliant projects, and the index may remain incomplete during for a long time during their building. The <code>copy</code> action is not atomic. To perform it, the preprocessor:</p>
+<ul>
+<li>marks the source index <code>index_name</code> as read-only;</li>
+<li>deletes the target index <code>index_copy_name</code> if it exists;</li>
+<li>clones the source index <code>index_name</code> and thereby creates the target index <code>index_copy_name</code>;</li>
+<li>unmarks the source index <code>index_name</code> as read-only;</li>
+<li>also unmarks the target index <code>index_copy_name</code> as read-only, since the target index inherits the settings of the source one.</li>
+</ul>
+</dd>
 <dt><code>use_chapters</code></dt>
 <dd>If set to <code>true</code> (by default), the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all of the files of the project.</dd>
 <dt><code>format</code></dt>
@@ -1278,6 +1291,8 @@
 <dd>If set to <code>true</code> (by default), HTML syntax constructions in the content converted to <code>plaintext</code> will be escaped by replacing <code>&amp;</code> with <code>&amp;amp;</code>, <code>&lt;</code> with <code>&amp;lt;</code>, <code>&gt;</code> with <code>&amp;gt;</code>, and <code>"</code> with <code>&amp;quot;</code>.</dd>
 <dt><code>url_transform</code></dt>
 <dd>Sequence of rules to transform local paths of source Markdown files into URLs of target pages. Each rule should be a dictionary. Its data is passed to the <a href="https://docs.python.org/3/library/re.html#re.sub"><code>re.sub()</code> method</a>: key as the <code>pattern</code> argument, and value as the <code>repl</code> argument. The local path (possibly previously transformed) to the source Markdown file relative to the temporary working directory is passed as the <code>string</code> argument. The default value of the <code>url_transform</code> option is designed to be used to build static websites with MkDocs backend.</dd>
+<dt><code>require_env</code></dt>
+<dd>If set to <code>true</code>, the <code>FOLIANT_ELASTICSEARCH</code> environment variable must be set to allow the preprocessor to perform any operations with Elasticsearch index. This flag may be useful in CI/CD jobs.</dd>
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>

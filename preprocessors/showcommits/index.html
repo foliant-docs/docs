@@ -1241,11 +1241,13 @@
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">showcommits</span><span class="p">:</span>
         <span class="nt">repo_path</span><span class="p">:</span> <span class="kt">!rel_path</span> <span class="l l-Scalar l-Scalar-Plain">./</span>    <span class="c1"># Path object that points to the current Foliant project’s top-level (“root”) directory when the preprocessor initializes</span>
+        <span class="nt">try_default_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">remote_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">origin</span>
         <span class="nt">self-hosted</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gitlab</span>
         <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https</span>
         <span class="nt">position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">after_content</span>
         <span class="nt">date_format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">year_first</span>
+        <span class="nt">escape_html</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
         <span class="nt">template</span><span class="p">:</span> <span class="p p-Indicator">|</span>
             <span class="no">## File History</span>
 
@@ -1265,6 +1267,8 @@
 <dl>
 <dt><code>repo_path</code></dt>
 <dd>Path to the locally cloned copy of the Git repository that the current Foliant project’s files belong to.</dd>
+<dt><code>try_default_path</code></dt>
+<dd>Flag that tells the preprocessor to try to use the default <code>repo_path</code> if user-specified <code>repo_path</code> does not exist.</dd>
 <dt><code>remote_name</code></dt>
 <dd>Identifier of remote repository; in most cases you don’t need to override the default value.</dd>
 <dt><code>self-hosted</code></dt>
@@ -1275,6 +1279,8 @@
 <dd>String that defines where the history of commits should be placed. Supported values are: <code>after_content</code> for concatenating the history with the currently processed Markdown file content, and <code>defined_by_tag</code> for replacing the tags <code>&lt;commits&gt;&lt;/commits&gt;</code> with the history.</dd>
 <dt><code>date_format</code></dt>
 <dd>Output date format. If the default value <code>year_first</code> is used, the date “December 11, 2019” will be represented as <code>2019-12-11</code>. If the <code>day_first</code> value is used, this date will be represented as <code>11.12.2019</code>.</dd>
+<dt><code>escape_html</code></dt>
+<dd>Flag that tells the preprocessor to replace HTML control characters with corresponding HTML entities in commit messages and diffs: <code>&amp;</code> with <code>&amp;amp;</code>, <code>&lt;</code> with <code>&amp;lt;</code>, <code>&gt;</code> with <code>&amp;gt;</code>, <code>"</code> with <code>&amp;quot;</code>.</dd>
 <dt><code>template</code></dt>
 <dd>Template to render the history of commits. If the value is a string that contains one or more newlines (<code>\n</code>) or double opening curly braces (<code>{{</code>), it is interpreted as a template itself. If the value is a string without newlines and any double opening curly braces, or a <code>Path</code> object, it is interpreted as a path to the file that contains a template. Template syntax is described below.</dd>
 <dt><code>targets</code></dt>

@@ -7,6 +7,53 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.elasticsearch 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#04e42203581dac708e1cebd017ed9c8e</guid>
+            <pubDate>Tue, 14 Apr 2020 01:33:26 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>copy</code> action.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.replace 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.replace.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.replace.git#1b79999ec4f4a10af0bb405dafb45949</guid>
+            <pubDate>Fri, 10 Apr 2020 14:30:18 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Replace in links and images fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.alt_structure 0.2.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.alt_structure.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.alt_structure.git#dd2b5e6bd54a296130fc95288aa57aae</guid>
+            <pubDate>Fri, 10 Apr 2020 10:43:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Preprocessor now doesn't read config file, which previously caused MultiProject to run second time.</li>
+<li>Registry is now flat dictionary.</li>
+<li>Structure is now supplied via dictionary.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.showcommits 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.showcommits.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.showcommits.git#db4645086fc751ca70c324e6d02fece8</guid>
+            <pubDate>Fri, 10 Apr 2020 00:04:35 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>try_default_path</code> and <code>escape_html</code> options.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.elasticsearch 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#040585fbdcfdcee336198a836673b410</guid>
+            <pubDate>Thu, 09 Apr 2020 23:04:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>require_env</code> option.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.meta 1.3.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#f09953d1b99d781116c90fc650ccd4c5</guid>
