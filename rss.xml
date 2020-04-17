@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.multiproject 1.0.13</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#a3abc1ba9c7861112641642de0a41514</guid>
+            <pubDate>Fri, 17 Apr 2020 12:46:30 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Keep temporary directories of built subprojects. It is needed when local includes that rewrite image paths are used.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.elasticsearch 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#04e42203581dac708e1cebd017ed9c8e</guid>
