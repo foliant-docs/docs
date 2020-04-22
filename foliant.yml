@@ -20,6 +20,7 @@ chapters:
         - preprocessors/admonitions.md
         - preprocessors/anchors.md
         - preprocessors/apilinks.md
+        - preprocessors/archeme.md
         - preprocessors/badges.md
         - preprocessors/bindfigma.md
         - preprocessors/bindsympli.md
@@ -89,6 +90,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.alt_structure.git
             - https://github.com/foliant-docs/foliantcontrib.anchors.git
             - https://github.com/foliant-docs/foliantcontrib.apilinks.git
+            - https://github.com/foliant-docs/foliantcontrib.archeme.git
             - https://github.com/foliant-docs/foliantcontrib.badges.git
             - https://github.com/foliant-docs/foliantcontrib.bindfigma.git
             - https://github.com/foliant-docs/foliantcontrib.bindsympli.git
