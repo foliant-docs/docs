@@ -36,7 +36,7 @@
     
     
       
-        <title>CustomIDs - Foliant</title>
+        <title>DBMLDoc - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#customids" tabindex="0" class="md-skip">
+      <a href="#dbmldoc" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                CustomIDs
+                DBMLDoc
               
             </span>
           
@@ -570,6 +570,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -581,11 +593,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        CustomIDs
+        DBMLDoc
       </label>
     
-    <a href="./" title="CustomIDs" class="md-nav__link md-nav__link--active">
-      CustomIDs
+    <a href="./" title="DBMLDoc" class="md-nav__link md-nav__link--active">
+      DBMLDoc
     </a>
     
       
@@ -599,16 +611,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dbml-docs-generator-for-foliant" class="md-nav__link">
+    DBML Docs Generator for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-output" class="md-nav__link">
+    Customizing output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jinja" class="md-nav__link">
+    Jinja
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -620,18 +672,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dbmldoc/" title="DBMLDoc" class="md-nav__link">
-      DBMLDoc
-    </a>
   </li>
 
         
@@ -1189,16 +1229,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dbml-docs-generator-for-foliant" class="md-nav__link">
+    DBML Docs Generator for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-output" class="md-nav__link">
+    Customizing output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jinja" class="md-nav__link">
+    Jinja
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1218,75 +1298,93 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/customids.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/dbmldoc.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="customids">CustomIDs<a class="headerlink" href="#customids" title="Permanent link">&para;</a></h1>
-<p>CustomIDs is a preprocessor that allows to define custom identifiers (IDs) for headings in Markdown source by using Pandoc-style syntax in projects built with MkDocs or another backend that provides HTML output. These IDs may be used in hyperlinks that refer to a specific part of a page.</p>
+                <h1 id="dbmldoc">DBMLDoc<a class="headerlink" href="#dbmldoc" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.dbmldoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.dbmldoc.png" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.dbmldoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.dbmldoc.png?label=GitHub" /></a></p>
+<h2 id="dbml-docs-generator-for-foliant">DBML Docs Generator for Foliant<a class="headerlink" href="#dbml-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
+<p>This preprocessor generates Markdown documentation from <a href="https://www.dbml.org/">DBML</a> specification files . It uses <a href="https://github.com/Vanderhoof/PyDBML">PyDBML</a> for parsing DBML syntax and <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine for generating Markdown.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.customids
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbmldoc
 </code></pre></div>
 
 
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>customids</code> to <code>preprocessors</code> section in the project config:</p>
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>dbmldoc</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">customids</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">dbmldoc</span>
 </code></pre></div>
 
 
-<p>The preprocessor supports the following options:</p>
-<div class="codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">customids</span><span class="p">:</span>
-        <span class="nt">stylesheet_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">customids.css</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ghp</span>
+<p>The preprocessor has a number of options:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">dbmldoc</span><span class="p">:</span>
+        <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/scheme.dbml</span>
+        <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">scheme.dbml</span>
+        <span class="nt">doc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">chart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dbml.j2</span>
+        <span class="nt">scheme_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">scheme.j2</span>
 </code></pre></div>
 
 
 <dl>
-<dt><code>stylesheet_path</code></dt>
-<dd>Path to the CSS stylesheet file. This stylesheet should define rules for <code>.custom_id_anchor_container</code>, <code>.custom_id_anchor_container_level_N</code>, <code>.custom_id_anchor</code>, and <code>.custom_id_anchor_level_N</code> classes. Here <code>N</code> is the heading level (<code>1</code> to <code>6</code>). Default path is <code>customids.css</code>. If stylesheet file does not exist, default built-in stylesheet will be used.</dd>
-<dt><code>targets</code></dt>
-<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
+<dt><code>spec_url</code></dt>
+<dd>URL to DBML spec file. If it is a list — preprocessor uses the first url which works.</dd>
+<dt><code>spec_path</code></dt>
+<dd>Local path to DBML spec file (relative to project dir).</dd>
 </dl>
-<p>Custom ID may be specified after a heading content at the same line. Examples of Markdown syntax:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">##</span> <span class="k">First</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="err">}</span>
+<blockquote>
+<p>If both url and path params are specified — preprocessor first tries to fetch spec from url, and only if that fails looks for the file on the local path.</p>
+</blockquote>
+<dl>
+<dt><code>doc</code></dt>
+<dd>If <code>true</code> — documentation will be generated. Set to <code>false</code> if you only want to draw a scheme of the database. Default <code>true</code></dd>
+<dt><code>scheme</code></dt>
+<dd>If <code>true</code> — the platuml code for database scheme will be generated. Default <code>true</code></dd>
+<dt><code>template</code></dt>
+<dd>Path to jinja-template for rendering the generated documentation. Path is relative to the project directory. If no template is specified preprocessor will use default template (and put it into project dir if it was missing). Default: <code>dbml.j2</code></dd>
+<dt><code>scheme_template</code></dt>
+<dd>Path to jinja-template for generating planuml code for the database scheme. Path is relative to the project directory. If no template is specified preprocessor will use default template (and put it into project dir if it was missing). Default: <code>scheme.j2</code></dd>
+</dl>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>Add a <code>&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</code> tag at the position in the document where the generated documentation should be inserted:</p>
+<div class="codehilite"><pre><span></span><code>## Introduction
 
-<span class="n">A</span> <span class="n">paragraph</span><span class="p">.</span>
+This document contains the automatically generated documentation of our Database schema.
 
-<span class="o">###</span> <span class="k">Second</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_second_heading</span><span class="err">}</span>
-
-<span class="k">Some</span> <span class="n">another</span> <span class="n">paragraph</span><span class="p">.</span>
+<span class="p">&lt;</span><span class="nt">dbmldoc</span><span class="p">&gt;&lt;/</span><span class="nt">dbmldoc</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
-<p>This Markdown source will be finally transformed into the HTML code:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_first_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<p>Each time the preprocessor encounters the tag <code>&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to DBML spec file is taken from foliant.yml.</p>
+<p>You can also override some parameters (or all of them) in the tag options:</p>
+<div class="codehilite"><pre><span></span><code>## Introduction
 
-<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>First Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+Introduction text for API documentation.
 
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="nt">&lt;dbmldoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/schema.dbml&quot;</span>
+         <span class="na">template=</span><span class="s">&quot;dbml.j2&quot;</span>
+         <span class="na">scheme=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/dbmldoc&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_2&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_second_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+## Database scheme
 
-<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Second Heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+And here goes a visual diagram of our database:
 
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Some another paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="nt">&lt;dbmldoc</span> <span class="na">doc=</span><span class="s">&quot;false&quot;</span> <span class="na">scheme=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/dbmldoc&gt;</span>
 </code></pre></div>
 
 
-<p>(Note that CustomIDs preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags <code>&lt;div class="custom_id_anchor_container"&gt;...&lt;/div&gt;</code> into Markdown code.)</p>
-<p>Custom IDs must not contain spaces and non-ASCII characters.</p>
-<p>Examples of hyperlinks that refer to custom IDs:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">1</span><span class="p">](</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="p">)</span>
-
-<span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">2</span> <span class="k">in</span> <span class="k">some</span> <span class="n">document</span> <span class="k">at</span> <span class="n">the</span> <span class="k">current</span> <span class="n">site</span><span class="p">](</span><span class="o">/</span><span class="k">some</span><span class="o">/</span><span class="n">page</span><span class="o">/#</span><span class="n">custom_id_for_second_heading</span><span class="p">)</span>
-
-<span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="k">some</span> <span class="n">heading</span> <span class="k">with</span> <span class="n">custom</span> <span class="n">ID</span> <span class="k">at</span> <span class="n">an</span> <span class="k">external</span> <span class="n">site</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="k">some</span><span class="p">.</span><span class="n">site</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">the</span><span class="o">/</span><span class="n">page</span><span class="o">/#</span><span class="n">some_custom_id</span><span class="p">)</span>
-</code></pre></div>
+<p>Tag parameters have the highest priority.</p>
+<p>This way you can put your database description in one place and its diagram in the other (like in the example above). Or you can even have documentation from several different DBML spec files in one Foliant project.</p>
+<h3 id="customizing-output">Customizing output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h3>
+<h4 id="jinja">Jinja<a class="headerlink" href="#jinja" title="Permanent link">&para;</a></h4>
+<p>In <code>jinja</code> mode the output markdown is generated by the <a href="http://jinja.pocoo.org/">Jinja2</a> template. Inside the template all data from the parsed DBML file is available under the <code>data</code> variable. It is in fact a <code>PyDBMLParseResults</code> object, as returned by <a href="https://github.com/Vanderhoof/PyDBML">PyDBML</a> (see the docs to find out which attributes are available).</p>
+<p>To customize the output create a template which suits your needs. Then supply the path to it in the <code>template</code> parameter. Same goes for the scheme template, which is defined in the <code>scheme_template</code> parameter.</p>
+<p>If you wish to use the default template as a starting point, build the foliant project with <code>dbmldoc</code> preprocessor turned on. After the first build the default templates will appear in your foliant project dir under the names <code>dbml.j2</code> and <code>scheme.j2</code>.</p>
                 
                   
                 
@@ -1308,7 +1406,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../csvtables/" title="CSVTables" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../customids/" title="CustomIDs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1317,19 +1415,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CSVTables
+                CustomIDs
               </span>
             </div>
           </a>
         
         
-          <a href="../dbmldoc/" title="DBMLDoc" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../elasticsearch/" title="Elasticsearch" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                DBMLDoc
+                Elasticsearch
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
