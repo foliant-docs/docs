@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.archeme 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.archeme.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.archeme.git#3091eb5438c07f59831ff174ad871794</guid>
+            <pubDate>Thu, 23 Apr 2020 02:55:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix very strange bug with modules cache.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbmldoc 0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#966eebea58cb760b02724490b7c077c5</guid>
