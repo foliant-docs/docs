@@ -36,7 +36,7 @@
     
     
       
-        <title>MultilineTables - Foliant</title>
+        <title>RemoveExcess - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#multilinetables" tabindex="0" class="md-skip">
+      <a href="#removeexcess" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                MultilineTables
+                RemoveExcess
               
             </span>
           
@@ -786,63 +786,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        MultilineTables
-      </label>
-    
-    <a href="./" title="MultilineTables" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
       MultilineTables
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -886,11 +834,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../removeexcess/" title="RemoveExcess" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RemoveExcess
+      </label>
+    
+    <a href="./" title="RemoveExcess" class="md-nav__link md-nav__link--active">
       RemoveExcess
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1256,59 +1256,28 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/multilinetables.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/removeexcess.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="multilinetables">MultilineTables<a class="headerlink" href="#multilinetables" title="Permanent link">&para;</a></h1>
-<p>This preprocessor converts tables to multiline and grid format before creating document (very useful especially for pandoc processing). It helps to make tables in doc and pdf formats more proportional — column with more text in it will be more wide. Also it helps whith processing of extremely wide tables with pandoc. Convertation to the grid format allows arbitrary cell' content (multiple paragraphs, code blocks, lists, etc.).</p>
+                <h1 id="removeexcess">RemoveExcess<a class="headerlink" href="#removeexcess" title="Permanent link">&para;</a></h1>
+<p>RemoveExcess is a preprocessor that removes unnecessary Markdown files that are not mentioned in the project’s <code>chapters</code>, from the temporary working directory.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.multilinetables
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.removeexcess
 </code></pre></div>
 
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor with default options, add <code>multilinetables</code> to <code>preprocessors</code> section in the project config:</p>
+<p>To enable the preprocessor, add <code>removeexcess</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">multilinetables</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">removeexcess</span>
 </code></pre></div>
 
 
-<p>The preprocessor has a number of options (best values set by default):</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">multilinetables</span><span class="p">:</span>
-        <span class="nt">rewrite_src_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">min_table_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-        <span class="nt">keep_narrow_tables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">table_columns_to_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-        <span class="nt">enable_hyphenation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">hyph_combination</span><span class="p">:</span> <span class="s">&#39;&lt;br&gt;&#39;</span>
-        <span class="nt">convert_to_grid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
-</code></pre></div>
-
-
-<dl>
-<dt><code>rewrite_src_file</code></dt>
-<dd>You can update source files after each use of preprocessor. Be careful, previous data will be deleted.</dd>
-<dt><code>min_table_width</code></dt>
-<dd>Wide markdown tables will be shrinked to this width in symbols. This parameter affects scaling - change it if table columns are merging.</dd>
-<dt><code>keep_narrow_tables</code></dt>
-<dd>If <code>true</code> narrow tables will not be stretched to minimum table width.</dd>
-<dt><code>table_columns_to_scale</code></dt>
-<dd>Minimum amount of columns to process the table.</dd>
-<dt><code>enable_hyphenation</code></dt>
-<dd>Switch breaking text in table cells with the tag set in <code>hyph_combination</code>. Good for lists, paragraphs, etc.</dd>
-<dt><code>hyph_combination</code></dt>
-<dd>Custom tag to break a text in multiline tables.</dd>
-<dt><code>convert_to_grid</code></dt>
-<dd>If <code>true</code> tables will be converted to the grid format, that allows arbitrary cell' content (multiple paragraphs, code blocks, lists, etc.).</dd>
-<dt><code>targets</code></dt>
-<dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
-</dl>
+<p>The preprocessor has no options.</p>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Just add preprocessor to the project config and enjoy the result.</p>
+<p>By default, all preprocessors are applied to each Markdown source file copied into the temporary working directory.</p>
+<p>Often it’s needed not to include some files to the project’s <code>chapters</code>. But anyway, preprocessors will be applied to all source files, that will take extra time and may cause extra errors. Also, extra files may pass to backends that might be undesirable for security reasons.</p>
+<p>When RemoveExcess preprocessor is enabled, unnecessary files will be deleted. Decide at your discretion to which place in the preprocessor queue to put it.</p>
                 
                   
                 
@@ -1330,7 +1299,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../metagraph/" title="MetaGraph" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ramldoc/" title="RAMLDoc" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1339,19 +1308,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MetaGraph
+                RAMLDoc
               </span>
             </div>
           </a>
         
         
-          <a href="../pgsqldoc/" title="Pgsqldoc" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../replace/" title="Replace" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Pgsqldoc
+                Replace
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

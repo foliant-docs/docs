@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.archeme 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.archeme.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.archeme.git#516fd70cbb88e8b2dd1a23c9b126a4b3</guid>
+            <pubDate>Thu, 23 Apr 2020 05:52:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix the same bug in stronger way.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.archeme 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.archeme.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.archeme.git#3091eb5438c07f59831ff174ad871794</guid>
