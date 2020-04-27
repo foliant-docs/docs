@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbmldoc 0.2.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#bd25d812c36886725fcb650ba95ff338</guid>
+            <pubDate>Mon, 27 Apr 2020 15:29:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Pydbml parser version updated to 0.3.1</li>
+<li>Updated templates</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.archeme 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.archeme.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.archeme.git#516fd70cbb88e8b2dd1a23c9b126a4b3</guid>
