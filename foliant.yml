@@ -7,6 +7,7 @@ chapters:
     - quickstart.md
     - Tutorials:
         - tutorials/api.md
+        - tutorials/devguide.md
     - meta.md
     - Backends:
         - backends/aglio.md
