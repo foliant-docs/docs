@@ -21,4 +21,4 @@ There are 4 types of Foliant extensions.
 
 Foliant’s architecture is shown at the following diagram.
 
-![Architecture of Foliant](https://github.com/foliant-docs/docs/blob/feature/devguide/src/images/basic-architecture.png)
+![Architecture of Foliant](https://github.com/foliant-docs/docs/blob/master/src/images/basic-architecture.png)
