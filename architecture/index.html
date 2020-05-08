@@ -31,18 +31,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
+      <link rel="shortcut icon" href="../assets/images/octopus-black-32.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>General Notes - Foliant</title>
+        <title>Architecture And Basic Design Concepts - Foliant</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -60,10 +60,10 @@
         <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"PT Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#general-notes-on-usage" tabindex="0" class="md-skip">
+      <a href="#architecture-and-basic-design-concepts" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -123,9 +123,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
+        <a href=".." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
           
-            <img alt="logo" src="../../assets/images/octopus-white.svg" width="24" height="24">
+            <img alt="logo" src="../assets/images/octopus-white.svg" width="24" height="24">
           
         </a>
       </div>
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                General Notes
+                Architecture And Basic Design Concepts
               
             </span>
           
@@ -215,9 +215,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Foliant" class="md-nav__button md-logo">
+    <a href=".." title="Foliant" class="md-nav__button md-logo">
       
-        <img alt="logo" src="../../assets/images/octopus-white.svg" width="48" height="48">
+        <img alt="logo" src="../assets/images/octopus-white.svg" width="48" height="48">
       
     </a>
     Foliant
@@ -251,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Welcome to Foliant!" class="md-nav__link">
+    <a href=".." title="Welcome to Foliant!" class="md-nav__link">
       Welcome to Foliant!
     </a>
   </li>
@@ -263,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../installation/" title="Installation" class="md-nav__link">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -275,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../quickstart/" title="Quickstart" class="md-nav__link">
+    <a href="../quickstart/" title="Quickstart" class="md-nav__link">
       Quickstart
     </a>
   </li>
@@ -285,11 +285,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../architecture/" title="Architecture And Basic Design Concepts" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Architecture And Basic Design Concepts" class="md-nav__link md-nav__link--active">
       Architecture And Basic Design Concepts
     </a>
+    
   </li>
 
     
@@ -318,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+    <a href="../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
       Documenting API with Foliant
     </a>
   </li>
@@ -330,7 +339,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/dev_reference/" title="Developer’s Reference" class="md-nav__link">
+    <a href="../tutorials/dev_reference/" title="Developer’s Reference" class="md-nav__link">
       Developer’s Reference
     </a>
   </li>
@@ -347,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../meta/" title="Metadata" class="md-nav__link">
+    <a href="../meta/" title="Metadata" class="md-nav__link">
       Metadata
     </a>
   </li>
@@ -378,7 +387,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/aglio/" title="Aglio" class="md-nav__link">
+    <a href="../backends/aglio/" title="Aglio" class="md-nav__link">
       Aglio
     </a>
   </li>
@@ -390,7 +399,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/confluence/" title="Confluence" class="md-nav__link">
+    <a href="../backends/confluence/" title="Confluence" class="md-nav__link">
       Confluence
     </a>
   </li>
@@ -402,7 +411,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/mdtopdf/" title="MdToPdf" class="md-nav__link">
+    <a href="../backends/mdtopdf/" title="MdToPdf" class="md-nav__link">
       MdToPdf
     </a>
   </li>
@@ -414,7 +423,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/mkdocs/" title="MkDocs" class="md-nav__link">
+    <a href="../backends/mkdocs/" title="MkDocs" class="md-nav__link">
       MkDocs
     </a>
   </li>
@@ -426,7 +435,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/pandoc/" title="Pandoc" class="md-nav__link">
+    <a href="../backends/pandoc/" title="Pandoc" class="md-nav__link">
       Pandoc
     </a>
   </li>
@@ -438,7 +447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../backends/slate/" title="Slate" class="md-nav__link">
+    <a href="../backends/slate/" title="Slate" class="md-nav__link">
       Slate
     </a>
   </li>
@@ -453,12 +462,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
       Preprocessors
@@ -474,20 +481,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="General Notes" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../preprocessors/general_notes/" title="General Notes" class="md-nav__link">
       General Notes
     </a>
-    
   </li>
 
         
@@ -497,7 +495,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../admonitions/" title="Admonitions" class="md-nav__link">
+    <a href="../preprocessors/admonitions/" title="Admonitions" class="md-nav__link">
       Admonitions
     </a>
   </li>
@@ -509,7 +507,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../anchors/" title="Anchors" class="md-nav__link">
+    <a href="../preprocessors/anchors/" title="Anchors" class="md-nav__link">
       Anchors
     </a>
   </li>
@@ -521,7 +519,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../apilinks/" title="APILinks" class="md-nav__link">
+    <a href="../preprocessors/apilinks/" title="APILinks" class="md-nav__link">
       APILinks
     </a>
   </li>
@@ -533,7 +531,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../archeme/" title="Archeme" class="md-nav__link">
+    <a href="../preprocessors/archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
   </li>
@@ -545,7 +543,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../badges/" title="Badges" class="md-nav__link">
+    <a href="../preprocessors/badges/" title="Badges" class="md-nav__link">
       Badges
     </a>
   </li>
@@ -557,7 +555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../bindfigma/" title="BindFigma" class="md-nav__link">
+    <a href="../preprocessors/bindfigma/" title="BindFigma" class="md-nav__link">
       BindFigma
     </a>
   </li>
@@ -569,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../bindsympli/" title="BindSympli" class="md-nav__link">
+    <a href="../preprocessors/bindsympli/" title="BindSympli" class="md-nav__link">
       BindSympli
     </a>
   </li>
@@ -581,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../blockdiag/" title="Blockdiag" class="md-nav__link">
+    <a href="../preprocessors/blockdiag/" title="Blockdiag" class="md-nav__link">
       Blockdiag
     </a>
   </li>
@@ -593,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../confluence/" title="Confluence" class="md-nav__link">
+    <a href="../preprocessors/confluence/" title="Confluence" class="md-nav__link">
       Confluence
     </a>
   </li>
@@ -605,7 +603,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
+    <a href="../preprocessors/csvtables/" title="CSVTables" class="md-nav__link">
       CSVTables
     </a>
   </li>
@@ -617,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+    <a href="../preprocessors/customids/" title="CustomIDs" class="md-nav__link">
       CustomIDs
     </a>
   </li>
@@ -629,7 +627,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dbmldoc/" title="DBMLDoc" class="md-nav__link">
+    <a href="../preprocessors/dbmldoc/" title="DBMLDoc" class="md-nav__link">
       DBMLDoc
     </a>
   </li>
@@ -641,7 +639,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../elasticsearch/" title="Elasticsearch" class="md-nav__link">
+    <a href="../preprocessors/elasticsearch/" title="Elasticsearch" class="md-nav__link">
       Elasticsearch
     </a>
   </li>
@@ -653,7 +651,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../epsconvert/" title="Epsconvert" class="md-nav__link">
+    <a href="../preprocessors/epsconvert/" title="Epsconvert" class="md-nav__link">
       Epsconvert
     </a>
   </li>
@@ -665,7 +663,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
+    <a href="../preprocessors/escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
       EscapeCode and UnescapeCode
     </a>
   </li>
@@ -677,7 +675,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../flags/" title="Flags" class="md-nav__link">
+    <a href="../preprocessors/flags/" title="Flags" class="md-nav__link">
       Flags
     </a>
   </li>
@@ -689,7 +687,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../flatten/" title="Flatten" class="md-nav__link">
+    <a href="../preprocessors/flatten/" title="Flatten" class="md-nav__link">
       Flatten
     </a>
   </li>
@@ -701,7 +699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../glossary/" title="Glossary" class="md-nav__link">
+    <a href="../preprocessors/glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
   </li>
@@ -713,7 +711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../graphviz/" title="Graphviz" class="md-nav__link">
+    <a href="../preprocessors/graphviz/" title="Graphviz" class="md-nav__link">
       Graphviz
     </a>
   </li>
@@ -725,7 +723,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../history/" title="History" class="md-nav__link">
+    <a href="../preprocessors/history/" title="History" class="md-nav__link">
       History
     </a>
   </li>
@@ -737,7 +735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../imagemagick/" title="ImageMagick" class="md-nav__link">
+    <a href="../preprocessors/imagemagick/" title="ImageMagick" class="md-nav__link">
       ImageMagick
     </a>
   </li>
@@ -749,7 +747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../imgcaptions/" title="ImgCaptions" class="md-nav__link">
+    <a href="../preprocessors/imgcaptions/" title="ImgCaptions" class="md-nav__link">
       ImgCaptions
     </a>
   </li>
@@ -761,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../imgconvert/" title="ImgConvert" class="md-nav__link">
+    <a href="../preprocessors/imgconvert/" title="ImgConvert" class="md-nav__link">
       ImgConvert
     </a>
   </li>
@@ -773,7 +771,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../includes/" title="Includes" class="md-nav__link">
+    <a href="../preprocessors/includes/" title="Includes" class="md-nav__link">
       Includes
     </a>
   </li>
@@ -785,7 +783,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../macros/" title="Macros" class="md-nav__link">
+    <a href="../preprocessors/macros/" title="Macros" class="md-nav__link">
       Macros
     </a>
   </li>
@@ -797,7 +795,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mermaid/" title="Mermaid" class="md-nav__link">
+    <a href="../preprocessors/mermaid/" title="Mermaid" class="md-nav__link">
       Mermaid
     </a>
   </li>
@@ -809,7 +807,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../metagraph/" title="MetaGraph" class="md-nav__link">
+    <a href="../preprocessors/metagraph/" title="MetaGraph" class="md-nav__link">
       MetaGraph
     </a>
   </li>
@@ -821,7 +819,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
+    <a href="../preprocessors/multilinetables/" title="MultilineTables" class="md-nav__link">
       MultilineTables
     </a>
   </li>
@@ -833,7 +831,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
+    <a href="../preprocessors/pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
       Pgsqldoc
     </a>
   </li>
@@ -845,7 +843,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../plantuml/" title="Plantuml" class="md-nav__link">
+    <a href="../preprocessors/plantuml/" title="Plantuml" class="md-nav__link">
       Plantuml
     </a>
   </li>
@@ -857,7 +855,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ramldoc/" title="RAMLDoc" class="md-nav__link">
+    <a href="../preprocessors/ramldoc/" title="RAMLDoc" class="md-nav__link">
       RAMLDoc
     </a>
   </li>
@@ -869,7 +867,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../removeexcess/" title="RemoveExcess" class="md-nav__link">
+    <a href="../preprocessors/removeexcess/" title="RemoveExcess" class="md-nav__link">
       RemoveExcess
     </a>
   </li>
@@ -881,7 +879,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../replace/" title="Replace" class="md-nav__link">
+    <a href="../preprocessors/replace/" title="Replace" class="md-nav__link">
       Replace
     </a>
   </li>
@@ -893,7 +891,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../repolink/" title="RepoLink" class="md-nav__link">
+    <a href="../preprocessors/repolink/" title="RepoLink" class="md-nav__link">
       RepoLink
     </a>
   </li>
@@ -905,7 +903,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../runcommands/" title="RunCommands" class="md-nav__link">
+    <a href="../preprocessors/runcommands/" title="RunCommands" class="md-nav__link">
       RunCommands
     </a>
   </li>
@@ -917,7 +915,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../showcommits/" title="ShowCommits" class="md-nav__link">
+    <a href="../preprocessors/showcommits/" title="ShowCommits" class="md-nav__link">
       ShowCommits
     </a>
   </li>
@@ -929,7 +927,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../superlinks/" title="SuperLinks" class="md-nav__link">
+    <a href="../preprocessors/superlinks/" title="SuperLinks" class="md-nav__link">
       SuperLinks
     </a>
   </li>
@@ -941,7 +939,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
+    <a href="../preprocessors/swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
       SwaggerDoc
     </a>
   </li>
@@ -953,7 +951,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../templateparser/" title="TemplateParser" class="md-nav__link">
+    <a href="../preprocessors/templateparser/" title="TemplateParser" class="md-nav__link">
       TemplateParser
     </a>
   </li>
@@ -965,7 +963,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../testrail/" title="Testrail" class="md-nav__link">
+    <a href="../preprocessors/testrail/" title="Testrail" class="md-nav__link">
       Testrail
     </a>
   </li>
@@ -1001,7 +999,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/bump/" title="Bump" class="md-nav__link">
+    <a href="../cli/bump/" title="Bump" class="md-nav__link">
       Bump
     </a>
   </li>
@@ -1013,7 +1011,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/gupload/" title="Gupload" class="md-nav__link">
+    <a href="../cli/gupload/" title="Gupload" class="md-nav__link">
       Gupload
     </a>
   </li>
@@ -1025,7 +1023,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/meta_generate/" title="Meta Generate" class="md-nav__link">
+    <a href="../cli/meta_generate/" title="Meta Generate" class="md-nav__link">
       Meta Generate
     </a>
   </li>
@@ -1037,7 +1035,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/init/" title="Init" class="md-nav__link">
+    <a href="../cli/init/" title="Init" class="md-nav__link">
       Init
     </a>
   </li>
@@ -1068,7 +1066,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
+    <a href="../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
       Preprocessor
     </a>
   </li>
@@ -1085,7 +1083,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/src/" title="Src" class="md-nav__link">
+    <a href="../cli/src/" title="Src" class="md-nav__link">
       Src
     </a>
   </li>
@@ -1097,7 +1095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cli/subset/" title="Subset" class="md-nav__link">
+    <a href="../cli/subset/" title="Subset" class="md-nav__link">
       Subset
     </a>
   </li>
@@ -1133,7 +1131,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../config/alt_structure/" title="AltStructure" class="md-nav__link">
+    <a href="../config/alt_structure/" title="AltStructure" class="md-nav__link">
       AltStructure
     </a>
   </li>
@@ -1145,7 +1143,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../config/from/" title="MultiProject" class="md-nav__link">
+    <a href="../config/from/" title="MultiProject" class="md-nav__link">
       MultiProject
     </a>
   </li>
@@ -1157,7 +1155,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../config/slugs/" title="Slugs" class="md-nav__link">
+    <a href="../config/slugs/" title="Slugs" class="md-nav__link">
       Slugs
     </a>
   </li>
@@ -1174,7 +1172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../releases/" title="History of Releases" class="md-nav__link">
+    <a href="../releases/" title="History of Releases" class="md-nav__link">
       History of Releases
     </a>
   </li>
@@ -1207,28 +1205,30 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/general_notes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/architecture.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="general-notes-on-usage">General Notes on Usage<a class="headerlink" href="#general-notes-on-usage" title="Permanent link">&para;</a></h1>
-<p>Most simple preprocessors apply unconditionally to the whole content of each Markdown file in the Foliant project. But usually preprocessors look for some specific pseudo-XML tags in Markdown content. Each preprocessor registers its own set of tags.</p>
-<p>Tags can have attributes and a body. Attributes are usually used to specify some required or optional parameters. Body is the content that is enclosed between opening and closing tags; preprocessors usually do something with this content:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;tag</span> <span class="na">attribute_1=</span><span class="s">&quot;value_1&quot;</span> <span class="err">...</span> <span class="na">attribute_N=</span><span class="s">&quot;value_N&quot;</span><span class="nt">&gt;</span>body<span class="nt">&lt;/tag&gt;</span>
-</code></pre></div>
-
-
-<p>Foliant under 1.0.8 tries to convert each attribute value into a boolean value, a number, or a string. Attribute values must be enclosed in double quotes (<code>"</code>).</p>
-<p>Since Foliant 1.0.9, attribute values are processed as YAML. Scalar values are also converted into boolean values, numbers and strings, but you may specify composite values that should be transformed into lists or dictionaries. You may also use modifiers (i.e. YAML tags) that are available in the Foliant project’s config.</p>
-<dl>
-<dt><code>!path</code></dt>
-<dd>The string preceded by this modifier should be converted into an existing path relative to the Foliant project’s top-level (“root”) directory.</dd>
-<dt><code>!project_path</code></dt>
-<dd>The string preceded by this modifier should be converted into a path relative to the Foliant project’s top-level (“root”) directory. This path may be nonexistent.</dd>
-<dt><code>!rel_path</code></dt>
-<dd>The string preceded by this modifier should be converted into a path relative to the currently processed Markdown file. This path may be nonexistent.</dd>
-</dl>
-<p>If you develop a preprocessor that accepts some path, by default it is better to be a path relative to the currently processed Markdown file.</p>
-<p>Also, since Foliant 1.0.9, attribute values may be enclosed into double (<code>"</code>) or single (<code>'</code>) quotes.</p>
+                <h1 id="architecture-and-basic-design-concepts">Architecture And Basic Design Concepts<a class="headerlink" href="#architecture-and-basic-design-concepts" title="Permanent link">&para;</a></h1>
+<p>Foliant is an open-source software written in Python.</p>
+<p>Foliant has modular architecture. Foliant itself, also known as <a href="https://github.com/foliant-docs/foliant/">Foliant Core</a>, is a relatively compact and rarely updated package. Foliant Core centrally manages extensions and provides base classes for developing extensions according to a common pattern.</p>
+<p>Suddenly, Foliant Core doesn’t build documentation projects. All application functionality is provided by Foliant extensions. There are almost 50 extensions for Foliant. If you don’t need some extensions, you may not to install them.</p>
+<p>There are 4 types of Foliant extensions.</p>
+<ul>
+<li><strong>Backends</strong> are modules that prepare your Markdown content in accordance to requirements of third-party software that builds some final <strong>targets</strong>, e.g. PDF files or static sites. Also backends manage external commands that call such software. Usually one backend manages one external command, for example, <code>pandoc</code> or <code>mkdocs</code>. A backend may not to call any external command but upload your content to some external service, e.g. Confluence. A single backend may generate multiple targets. Different backends may build the same target. For example, the target <code>site</code> (a static site) can be built with 3 backends: MkDocs, Slate, and Aglio. If more than one of them are installed, you should choose the certain backend to build the required target: it may be specified in the command line or asked interactively.</li>
+<li><strong>Preprocessors</strong> are modules that perform various transformations of your source Markdown content before passing the content to a backend. Preprocessors are the most numerous type of Foliant extensions. They may be very simple like <a href="https://github.com/foliant-docs/foliantcontrib.removeexcess/blob/develop/foliant/preprocessors/removeexcess.py">RemoveExcess</a>, or pretty complicated like <a href="https://github.com/foliant-docs/foliantcontrib.includes/blob/develop/foliant/preprocessors/includes.py">Includes</a>. Each Foliant project may use any number of preprocessors that are applied sequentially, one after another. Preprocessors provide many kinds of content transformations. Preprocessors may:<ul>
+<li>replace something in your content according to some rules;</li>
+<li>draw diagrams and schemes from code;</li>
+<li>include content from external files into your sources;</li>
+<li>get data for your documentation project from external services, e.g. remote Git repositories, Swagger, Testrail, Figma, Sympli, etc.;</li>
+<li>set high-level semantic relations between different parts of you content to provide smart cross-target links, or to restructure your single-source documentation automatically, context-dependently;</li>
+<li>and even run arbitrary external commands that can do anything with your files.</li>
+</ul>
+</li>
+<li><strong>CLI extensions</strong> extend Foliant’s command-line interface and provide additional actions that may be called from the command line.</li>
+<li><strong>Config extensions</strong> provide additional actions that are performed during reading the project’s config. For example, MultiProject extension allows to include multiple nested Foliant projects into a parent Foliant project’s structure.</li>
+</ul>
+<p>Foliant’s architecture is shown at the following diagram.</p>
+<p><img alt="Architecture of Foliant" src="https://github.com/foliant-docs/docs/blob/master/src/images/basic-architecture.png" /></p>
                 
                   
                 
@@ -1250,7 +1250,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../backends/slate/" title="Slate" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quickstart/" title="Quickstart" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1259,19 +1259,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Slate
+                Quickstart
               </span>
             </div>
           </a>
         
         
-          <a href="../admonitions/" title="Admonitions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tutorials/api/" title="Documenting API with Foliant" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Admonitions
+                Documenting API with Foliant
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1294,7 +1294,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
@@ -1308,9 +1308,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
     
   </body>
