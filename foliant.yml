@@ -5,9 +5,10 @@ chapters:
     - index.md
     - installation.md
     - quickstart.md
+    - architecture.md
     - Tutorials:
         - tutorials/api.md
-        - tutorials/devguide.md
+        - tutorials/dev_reference.md
     - meta.md
     - Backends:
         - backends/aglio.md

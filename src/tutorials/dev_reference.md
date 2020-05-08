@@ -1,35 +1,12 @@
-# Developer’s Guide
+# Developer’s Reference
 
-Foliant with its extensions is an open-source software written in Python. You’re welcome to contribute.
+You’re welcome to contribute to Foliant and its extensions. Foliant ecosystem, of course, needs a lot of new useful extensions for all occasions.
 
 Foliant and its extensions are developed in Git repositories that belong to the [foliant-docs](https://github.com/foliant-docs/) GitHub group.
 
-The repo of Foliant itself (also known as Foliant Core) is called [foliant](https://github.com/foliant-docs/foliant/). Repositories of Foliant extensions have names starting with the `foliantcontrib.` prefix. There are almost 50 extensions for Foliant. The repo of this documentation is called [docs](https://github.com/foliant-docs/docs/).
+The repo of Foliant Core is called [foliant](https://github.com/foliant-docs/foliant/). Repositories of Foliant extensions have names starting with the `foliantcontrib.` prefix. The repo of this documentation is called [docs](https://github.com/foliant-docs/docs/).
 
-## Architecture
-
-Foliant has modular architecture. If you don’t need some modules, you may not to install them.
-
-Foliant Core is a relatively compact and rarely updated package. Foliant Core centrally manages extensions and provides base classes for developing extensions according to a common pattern.
-
-Suddenly, Foliant Core doesn’t build documentation projects. All application functionality is provided by Foliant extensions.
-
-There are 4 types of Foliant extensions.
-
-* **Backends** are modules that prepare your Markdown content in accordance to requirements of third-party software that builds some final **targets**, e.g. PDF files or static sites. Also backends manage external commands that call such software. Usually one backend manages one external command, for example, `pandoc` or `mkdocs`. A backend may not to call any external command but upload your content to some external service, e.g. Confluence. A single backend may generate multiple targets. Different backends may build the same target. For example, the target `site` (a static site) can be built with 3 backends: MkDocs, Slate, and Aglio. If more than one of them are installed, you should choose the certain backend to build the required target: it may be specified in the command line or asked interactively.
-* **Preprocessors** are modules that perform various transformations of your source Markdown content before passing the content to a backend. Preprocessors are the most numerous type of Foliant extensions. They may be very simple like [RemoveExcess](https://github.com/foliant-docs/foliantcontrib.removeexcess/blob/develop/foliant/preprocessors/removeexcess.py), or pretty complicated like [Includes](https://github.com/foliant-docs/foliantcontrib.includes/blob/develop/foliant/preprocessors/includes.py). Each Foliant project may use any number of preprocessors that are applied sequentially, one after another. Preprocessors provide many kinds of content transformations. Preprocessors may:
-    * replace something in your content according to some rules;
-    * draw diagrams and schemes from code;
-    * include content from external files into your sources;
-    * get data for your documentation project from external services, e.g. remote Git repositories, Swagger, Testrail, Figma, Sympli, etc.;
-    * set high-level semantic relations between different parts of you content to provide smart cross-target links, or to restructurize your single-source documentation automatically, context-dependently;
-    * and even run arbitrary external commands that can do anything with your files.
-* **CLI extensions** extend Foliant’s command-line interface and provide additional actions that may be called from command line.
-* **Config extensions** provide additional actions that are performed during reading the project’s config. For example, MultiProject extension allows to include multiple nested Foliant projects into a parent Foliant project’s structure.
-
-Foliant’s architecture is shown at the following diagram.
-
-![Architecture of Foliant](https://github.com/foliant-docs/docs/blob/feature/devguide/src/images/tutorials-devguide-architecture.png)
+Foliant Core modules and base classes that should be used in all newly developed extensions, are described at this page.
 
 ## Core Modules
 
@@ -55,7 +32,7 @@ Foliant Core includes a number of modules:
 
 To build any Foliant project, the method `make()` that is defined in the module [`foliant.cli.make`](https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/make.py) should be called in one or another way.
 
-The method takes a number of arguments some of them pass onwards to backends and preprocessors:
+The method takes a number of arguments; some of them pass onwards to backends and preprocessors:
 
 * `target` (string)—required resulting target of the current build;
 * `backend` (string, defaults to an empty string)—backend that is used for the current build;
@@ -64,7 +41,6 @@ The method takes a number of arguments some of them pass onwards to backends and
 * `quiet` (boolean, default to `False`)—flag that prohibits writing to `STDOUT`;
 * `keep_tmp` (boolean, defaults to `False`)—flag that tells Foliant and its extensions not to delete a temporary working directory that is used during build;
 * `debug` (boolean, defaults to `False`)—flag that tells Foliant and its extensions to log events of `info` and `debug` levels in additional to messages of `warning`, `error`, and `critical` levels.
-
 
 ## Base Classes
 
