@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.superlinks 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#8676916cae02e5e251072cb39ec0c99d</guid>
+            <pubDate>Wed, 20 May 2020 15:21:08 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: bug with chapters</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbmldoc 0.2.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#c623ad5cca95c3fa90f168067199ee77</guid>

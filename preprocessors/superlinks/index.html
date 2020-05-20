@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -1352,7 +1352,7 @@
                 
                 
                 <h1 id="superlinks">SuperLinks<a class="headerlink" href="#superlinks" title="Permanent link">&para;</a></h1>
-<p><a href="https://pypi.org/project/foliantcontrib.superlinks/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.superlinks.svg" /></a></p>
+<p><a href="https://pypi.org/project/foliantcontrib.superlinks/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.superlinks.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.superlinks"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.superlinks.svg?label=GitHub" /></a></p>
 <h2 id="superlinks-for-foliant">SuperLinks for Foliant<a class="headerlink" href="#superlinks-for-foliant" title="Permanent link">&para;</a></h2>
 <p>This preprocessor extends the functionality of Markdown links, allowing you to reference by the heading title, file name or meta id. It works correctly with most backends, resolving to proper links, depending on which backend is being used.</p>
 <p>It adds the <code>&lt;link&gt;</code> tag.</p>
@@ -1371,6 +1371,17 @@
 <p>To enable the preprocessor, add <code>superlink</code> to <code>preprocessors</code> section in the project config.</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
+</code></pre></div>
+
+
+<p><strong>Important:</strong> SuperLinks preprocessor is very sensitive to its position in the preprocessors list. If you are using it in along with <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a>, <a href="https://foliant-docs.github.io/docs/preprocessors/anchors/">Anchors</a> or <a href="https://foliant-docs.github.io/docs/preprocessors/customids/">CustomIDs</a> preprocessor, the order in which they are mentioned must be following:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>   <span class="c1"># indludes must be defined BEFORE superlinks in the list</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>        <span class="c1"># following preprocessors must be defined AFTER superlinks in the list</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">anchors</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">customids</span>
 </code></pre></div>
 
 
@@ -1541,7 +1552,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
     
   </body>
