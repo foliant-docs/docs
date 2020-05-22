@@ -1001,15 +1001,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#integration-with-metadata" class="md-nav__link">
-    Integration with metadata
+  <a href="#sending-variables-to-template" class="md-nav__link">
+    Sending variables to template
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sending-variables-to-template" class="md-nav__link">
-    Sending variables to template
+  <a href="#integration-with-metadata" class="md-nav__link">
+    Integration with metadata
   </a>
   
 </li>
@@ -1314,15 +1314,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#integration-with-metadata" class="md-nav__link">
-    Integration with metadata
+  <a href="#sending-variables-to-template" class="md-nav__link">
+    Sending variables to template
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sending-variables-to-template" class="md-nav__link">
-    Sending variables to template
+  <a href="#integration-with-metadata" class="md-nav__link">
+    Integration with metadata
   </a>
   
 </li>
@@ -1395,7 +1395,7 @@
 <dt><code>context</code></dt>
 <dd>dictionary with variables which will be redirected to the template.</dd>
 <dt><code>ext_context</code></dt>
-<dd>path to YAML- or JSON-file with context dictionary. (relative to current md-file)</dd>
+<dd>path to YAML- or JSON-file with context dictionary. (relative to current md-file), or URL to such file on the remote server.</dd>
 </dl>
 <p><em>All parameters with other names are also transfered to the template, as if they appeared inside the <code>context</code> dictionary. (<code>param3</code> in the above example)</em></p>
 <blockquote>
@@ -1437,6 +1437,78 @@ I can count to five!
 </code></pre></div>
 
 
+<h4 id="sending-variables-to-template">Sending variables to template<a class="headerlink" href="#sending-variables-to-template" title="Permanent link">&para;</a></h4>
+<p>To send a variable to template, add them into the <code>context</code> option. This option accepts <code>yaml</code> dictionary format.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">context</span><span class="o">=</span><span class="s">&quot;{&#39;name&#39;: Andy, &#39;age&#39;: 8}&quot;</span><span class="p">&gt;</span>
+Hi, my name is {{name}}!
+I am {{ age }} years old.
+{% for prev in range(age - 1, 0, -1) %}
+The year before I was {{prev}} years old.
+{% endfor %}
+<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>Result:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Hi</span><span class="p">,</span> <span class="n">my</span> <span class="n">name</span> <span class="k">is</span> <span class="n">Andy</span><span class="o">!</span>
+<span class="n">I</span> <span class="n">am</span> <span class="mi">8</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">7</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">6</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">5</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">4</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">3</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">2</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+
+<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">1</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+</code></pre></div>
+
+
+<p>Also, you can supply a yaml-file with variables in an <code>ext_context</code> parameter:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;jinja2</span> <span class="na">ext_context=</span><span class="s">&quot;swagger.yaml&quot;</span><span class="nt">&gt;</span>
+Swagger file version: <span class="cp">{{</span> <span class="nv">swagger</span> <span class="cp">}}</span>
+Base path: <span class="cp">{{</span> <span class="nv">base_path</span> <span class="cp">}}</span>
+...
+<span class="nt">&lt;/jinja2&gt;</span>
+</code></pre></div>
+
+
+<p><strong>Pro tip #1</strong></p>
+<p>All context variables are also available in the <code>_foliant_context</code> dictionary. It may be handy if you don't know at design-time which key names are supplied in the external context file:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;jinja2</span> <span class="na">ext_context=</span><span class="s">&quot;customers.yml&quot;</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">name</span><span class="o">,</span> <span class="nv">data</span> <span class="k">in</span> <span class="nv">_foliant_context.items</span><span class="o">()</span> <span class="cp">%}</span>
+
+## Customer <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
+
+Purchase: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;purchase&#39;</span><span class="o">]</span> <span class="cp">}}</span>
+Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;order_id&#39;</span><span class="o">]</span> <span class="cp">}}</span>
+
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/jinja2&gt;</span>
+</code></pre></div>
+
+
+<p><strong>Pro tip #2</strong></p>
+<p>If your context file is inside private git repository, you can utilize the power of <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a> preprocessor to retrieve it.</p>
+<ol>
+<li>Create a file in your <code>src</code> dir, for example, <code>context.md</code> (<code>md</code> extension is obligatory, includes only process markdown files).</li>
+<li>Add an includes tag:</li>
+</ol>
+<p><strong>&lt;include repo_url="https://my_login:my_password@my.git.org/my_repo.git" path="path/to/file.yml"&gt;</include></strong></p>
+<ol>
+<li>And supply path to this file in your <code>ext_context</code> param:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="err">&lt;jinja2 ext_context=&quot;context.md&quot;&gt;</span>
+</code></pre></div>
+
+
+<p><strong>Pro tip #3</strong></p>
+<p>If data inside your external context file is not a dictionary, it will be available inside template under <code>context</code> variable (or <code>_foliant_context['context']</code>).</p>
 <h4 id="integration-with-metadata">Integration with metadata<a class="headerlink" href="#integration-with-metadata" title="Permanent link">&para;</a></h4>
 <p>Templates support latest Foliant <a href="https://foliant-docs.github.io/docs/cli/meta/">metadata</a> functionality. You can find the meta dictionary for current section under <code>meta</code> variable inside template:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
@@ -1470,41 +1542,6 @@ List of chapters in this project:
 * index
 * sub
 * auth
-</code></pre></div>
-
-
-<h4 id="sending-variables-to-template">Sending variables to template<a class="headerlink" href="#sending-variables-to-template" title="Permanent link">&para;</a></h4>
-<p>To send a variable to template, add them into the <code>context</code> option. This option accepts <code>yaml</code> dictionary format.</p>
-<blockquote>
-<p>Please note that foliant doesn't support multiline tag options yet, so use one-line dictionary format {'key1': value1, ...}</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">context</span><span class="o">=</span><span class="s">&quot;{&#39;name&#39;: Andy, &#39;age&#39;: 8}&quot;</span><span class="p">&gt;</span>
-Hi, my name is {{name}}!
-I am {{age}} years old.
-{% for prev in range(age - 1, 0, -1) %}
-The year before I was {{prev}} years old.
-{% endfor %}
-<span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
-</code></pre></div>
-
-
-<p>Result:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Hi</span><span class="p">,</span> <span class="n">my</span> <span class="n">name</span> <span class="k">is</span> <span class="n">Andy</span><span class="o">!</span>
-<span class="n">I</span> <span class="n">am</span> <span class="mi">8</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">7</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">6</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">5</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">4</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">3</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">2</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
-
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">1</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
 </code></pre></div>
 
 

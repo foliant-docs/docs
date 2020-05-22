@@ -7,6 +7,17 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.templateparser 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#5d9216002da2f46d5de0feae21259839</guid>
+            <pubDate>Fri, 22 May 2020 14:53:02 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>All variables, supplied in context, are also available inside the <code>_foliant_context</code> variable</li>
+<li>You can now supply a link to file on remote server in the <code>ext_context</code> parameter.</li>
+<li>External context yaml-file now may be not a dictionary. In this case it will be available under the <code>context</code> template variable.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.superlinks 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#8676916cae02e5e251072cb39ec0c99d</guid>
