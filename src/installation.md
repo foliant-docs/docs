@@ -19,6 +19,10 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
         $ brew install pandoc mactex librsvg
 
+    And finally, install the Pandoc backend:
+
+        $ python3 -m pip install foliantcontrib.pandoc
+
 ## Windows
 
 0.  Install [Scoop package manager](http://scoop.sh/) in PowerShell:
@@ -37,6 +41,10 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
         $ scoop install pandoc latex
 
+    And finally, install the Pandoc backend:
+
+        $ python3 -m pip install foliantcontrib.pandoc
+
 ## Ubuntu
 
 1.  Install Python 3 with apt. On 14.04 and 16.04:
@@ -50,12 +58,16 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
 2.  Install Foliant with pip:
 
-        $ python3.6 -m pip install foliant foliantcontrib.init
+        $ python3 -m pip install foliant foliantcontrib.init
 
 3.  If you plan to bake pdf or docx, install Pandoc and TeXLive with apt and wget:
 
         $ apt update && apt install -y wget texlive-full librsvg2-bin
         $ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && dpkg -i pandoc-2.0.5-1-amd64.deb
+
+    And finally, install the Pandoc backend:
+
+        $ python3 -m pip install foliantcontrib.pandoc
 
 
 ## Docker
