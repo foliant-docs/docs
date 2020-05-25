@@ -317,7 +317,7 @@
       
         <li class="md-nav__item">
   <a href="#build-pdf" class="md-nav__link">
-    Build Pdf
+    Build PDF
   </a>
   
 </li>
@@ -1284,7 +1284,7 @@
       
         <li class="md-nav__item">
   <a href="#build-pdf" class="md-nav__link">
-    Build Pdf
+    Build PDF
   </a>
   
 </li>
@@ -1352,7 +1352,7 @@ Project <span class="s2">&quot;Hello Foliant&quot;</span> created in hello-folia
 <p>To do the same with Docker, run:</p>
 <div class="codehilite"><pre><span></span><code>$ docker run --rm -it -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/usr/src/app -w /usr/src/app foliant/foliant init
 Enter the project name: Hello Foliant
-✔ Generating Foliant project
+Generating project... Done
 ─────────────────────
 Project <span class="s2">&quot;Hello Foliant&quot;</span> created in hello-foliant
 </code></pre></div>
@@ -1379,47 +1379,54 @@ $ tree
 <p><code>requirements.txt</code> lists  the Python packages required for the project: Foliant backends and preprocessors, MkDocs themes, and what not. The the Docker image for the project is built, these requirements are installed in it.</p>
 <p><code>Dockerfile</code> and <code>docker-compose.yml</code> are necessary to build the project in a Docker container.</p>
 <h2 id="build-site">Build Site<a class="headerlink" href="#build-site" title="Permanent link">&para;</a></h2>
-<p>In the project directory, run:</p>
+<p>To build a site you will first need a suitable backend (to catch up with the terminology, check <a href="https://foliant-docs.github.io/docs/architecture/">this</a> article). Let's start with <strong>MkDocs</strong> backend. First, install it using the following command (or skip to the docker example):</p>
+<div class="codehilite"><pre><span></span><code>python3 -m pip install foliantcontrib.mkdocs
+</code></pre></div>
+
+
+<p>Then, in the project directory, run:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make site
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making site with MkDocs
-─────────────────────
-Result: Hello_Foliant-2018-01-23.mkdocs
+Parsing config... Done
+Applying preprocessor mkdocs... Done
+Applying preprocessor _unescape... Done
+Making site with MkDocs... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.mkdocs
 </code></pre></div>
 
 
 <p>Or, with Docker Compose:</p>
-<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm hello-foliant make site
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making site with MkDocs
-─────────────────────
-Result: Hello_Foliant-2018-01-23.mkdocs
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site
+Parsing config... Done
+Applying preprocessor mkdocs... Done
+Applying preprocessor _unescape... Done
+Making site with MkDocs... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.mkdocs
 </code></pre></div>
 
 
-<p>That’s it! Your static, MkDocs-powered website is ready. To view it, use any web server, for example, Python’s built-in one:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> Hello_Foliant-2018-01-23.mkdocs
-$ python -m http.server
+<p>That’s it! Your static, MkDocs-powered website is ready. To look at it, use any web server, for example, Python’s built-in one:</p>
+<div class="codehilite"><pre><span></span><code>$ python3 -m http.server -d Hello_Foliant-2020-05-25.mkdocs
 Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> <span class="o">(</span>http://0.0.0.0:8000/<span class="o">)</span> ...
 </code></pre></div>
 
 
 <p>Open <a href="http://localhost:8000">localhost:8000</a> in your web browser. You should see something like this:</p>
 <p><img alt="Basic Foliant project built with MkDocs" src="../images/basic-mkdocs.png" /></p>
-<h2 id="build-pdf">Build Pdf<a class="headerlink" href="#build-pdf" title="Permanent link">&para;</a></h2>
+<h2 id="build-pdf">Build PDF<a class="headerlink" href="#build-pdf" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong>Note</strong></p>
-<p>To build pdfs with Pandoc, make sure you have it and TeXLive installed (see <a href="../installation/">Installation</a>).</p>
+<p>To build PDF with Pandoc, make sure you have it and TeXLive installed (see <a href="../installation/">Installation</a>).</p>
 </blockquote>
 <p>In the project directory, run:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make pdf
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making pdf with Pandoc
-─────────────────────
-Result: Hello_Foliant-2018-01-23.pdf
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making pdf with Pandoc... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 
 
@@ -1441,12 +1448,13 @@ RUN pip3 install -r requirements.txt
 <p>Run <code>docker-compose build</code> to rebuild the image from the new base image if you have previously run <code>docker-compose run</code> with the old one. Also, run it whenever you need to update the versions of the required packages from <code>requirements.txt</code>.</p>
 </blockquote>
 <p>Then, run this command in the project directory:</p>
-<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm hello-foliant make pdf
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making pdf with Pandoc
-─────────────────────
-Result: Hello_Foliant-2018-01-23.pdf
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making pdf with Pandoc... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 
 
@@ -1474,17 +1482,19 @@ chapters:
 
 
 <p>Rebuild the project to see the new page:</p>
-<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm hello-foliant make site <span class="o">&amp;&amp;</span> docker-compose run --rm hello-foliant make pdf
-✔ Parsing config
-✔ Applying preprocessor mkdocs
-✔ Making site with MkDocs
-─────────────────────
-Result: Hello_Foliant-2018-02-08.mkdocs
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making pdf with Pandoc
-─────────────────────
-Result: Hello_Foliant-2018-02-08.pdf
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site <span class="o">&amp;&amp;</span> docker-compose run --rm foliant make pdf
+Parsing config... Done
+Applying preprocessor mkdocs... Done
+Applying preprocessor _unescape... Done
+Making site with MkDocs... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.mkdocs
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making pdf with Pandoc... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 
 
@@ -1492,18 +1502,36 @@ Result: Hello_Foliant-2018-02-08.pdf
 <p><img alt="New page on the site" src="../images/basic-mkdocs-hello.png" /></p>
 <p><img alt="New page in the pdf document" src="../images/basic-pdf-hello.png" /></p>
 <h2 id="use-preprocessors">Use Preprocessors<a class="headerlink" href="#use-preprocessors" title="Permanent link">&para;</a></h2>
-<p>Preprocessors is what makes Foliant special and extremely useful. Preprocessors are additional packages that, well, preprocess the source code of your project. You can do all kinds of stuff with preprocessors:</p>
+<p>Preprocessors is what makes Foliant special and extremely flexible. Preprocessors are additional packages that, well, preprocess the source code of your project. You can do all kinds of stuff with preprocessors:</p>
 <ul>
-<li>include remote Markdown files or their parts in the source files</li>
-<li>render diagrams from textual description on build</li>
-<li>restructure the project source or compile it into a single file for a particular backend</li>
+<li>include remote Markdown files or their parts in the source files,</li>
+<li>render diagrams from textual description on build,</li>
+<li>restructure the project source or compile it into a single file for a particular backend.</li>
 </ul>
 <p>In fact, you have already used two preprocessors! Check the output of the <code>foliant make</code> commands and note the lines <code>Applying preprocessor mkdocs</code> and <code>Applying preprocessor flatten</code>. The first one informs you that the project source has been preprocessed with <code>mkdocs</code> preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that <a href="../preprocessors/flatten/"><code>flatten</code></a> preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).</p>
 <p>These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.</p>
 <p>Now, let’s try to use a different kind of preprocessors, the ones that register new tags: <a href="../preprocessors/blockdiag/">Blockdiag</a>.</p>
 <h3 id="embed-diagrams-with-blockdiag">Embed Diagrams with Blockdiag<a class="headerlink" href="#embed-diagrams-with-blockdiag" title="Permanent link">&para;</a></h3>
 <p><a href="http://blockdiag.com">Blockdiag</a> is a Python app for generating diagrams. Blockdiag preprocessor extracts diagram descriptions from the project source and replaces them with the generated images.</p>
-<p>In <code>hello.md</code>, add the following lines:</p>
+<p>First, we need to install the blockdiag preprocessor:</p>
+<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.blockdiag
+</code></pre></div>
+
+
+<p>Or, if you are building with docker, add <code>foliantcontrib.blockdiag</code> to requirements.txt and rebuild the image with <code>docker-compose build</code> command.</p>
+<p>Next, we need to switch on the <a href="https://foliant-docs.github.io/docs/preprocessors/blockdiag/"><code>blockdiag</code></a> preprocessor in config. Open <code>foliant.yml</code> and add the following lines:</p>
+<div class="codehilite"><pre><span></span><code>title: Hello Foliant
+<span class="gi">+</span>
+<span class="gi">+ preprocessors:</span>
+<span class="gi">+  - blockdiag</span>
+
+chapters:
+  - index.md
+  - hello.md
+</code></pre></div>
+
+
+<p>Then, in <code>hello.md</code>, add the following:</p>
 <div class="codehilite"><pre><span></span><code>Foliant doesn’t force any *special* Markdown flavor.
 
 <span class="gi">+ &lt;seqdiag caption=&quot;This diagram is generated on the fly&quot;&gt;</span>
@@ -1517,7 +1545,7 @@ Result: Hello_Foliant-2018-02-08.pdf
 <p>Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with <code>&lt;seqdiag&gt;&lt;/seqdiag&gt;</code> tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.</p>
 <p>Rebuild the site with <code>foliant make site</code> and open it in the browser:</p>
 <p><img alt="Sequence diagram drawn with seqdiag on the site" src="../images/basic-mkdocs-seqdiag.png" /></p>
-<p>Rebuild the pdf as well and see that the diagram there:</p>
+<p>Rebuild the pdf as well and see that the diagram is there too:</p>
 <p><img alt="Sequence diagram drawn with seqdiag in the pdf" src="../images/basic-pdf-seqdiag.png" /></p>
 <p>Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever popular Comic Sans font, but you can pick any font that’s available in <code>.ttf</code> format.</p>
 <p>Put the font file in the project directory and add the following lines to <code>foliant.yml</code>:</p>
@@ -1548,10 +1576,10 @@ Result: Hello_Foliant-2018-02-08.pdf
 <p>In Foliant, we tried our best not to dive into this mess. Foliant aims to be an extensible platform, with many available preprocessors. So we needed one syntax for all preprocessors, but the one that was flexible enough to support them all.</p>
 <p>After trying many options, we settled with XML. Yes, normally you’d have a nervous tick when you hear XML, and so would we, but this is one rare case where XML syntax belongs just right:</p>
 <ul>
-<li>it allows to provide tag body and named parameters</li>
-<li>it’s familiar to every techwriter out there</li>
-<li>it’s close enough to HTML, and HTML tags are actually allowed by the Markdown spec, so we’re not even breaking the vanilla Markdown spec (almost)</li>
-<li>it’s nicely highlighted in IDEs and text editors</li>
+<li>it allows to provide tag body and named parameters,</li>
+<li>it’s familiar to every techwriter out there,</li>
+<li>it’s close enough to HTML, and HTML tags are actually allowed by the Markdown spec, so we’re not even breaking the vanilla Markdown spec (almost),</li>
+<li>it’s nicely highlighted in IDEs and text editors.</li>
 </ul>
 </blockquote>
                 
