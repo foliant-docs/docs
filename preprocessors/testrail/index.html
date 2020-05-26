@@ -1330,8 +1330,9 @@
     <span class="nt">exclude_section_ids</span><span class="p">:</span>                                                                    <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
     <span class="nt">exclude_case_ids</span><span class="p">:</span>                                                                       <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
     <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test_cases.md                                                                 \\ Optional</span>
-    <span class="nt">rewrite_src_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                                 \\ Optional</span>
+    <span class="nt">rewrite_src_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                                \\ Optional</span>
     <span class="nt">template_folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">case_templates                                                         \\ Optional</span>
+    <span class="nt">img_folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testrail_imgs                                                               \\ Optional</span>
     <span class="nt">section_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Testing program                                                         \\ Recommended</span>
     <span class="nt">add_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                     \\ Optional</span>
     <span class="nt">std_table_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Table with testing results                                            \\ Recommended</span>
@@ -1353,7 +1354,7 @@
     <span class="nt">add_priority_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                        \\ Optional</span>
     <span class="nt">resolve_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                      \\ Optional</span>
     <span class="nt">screenshots_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://gitlab_repository.url                                          \\ Optional</span>
-    <span class="nt">screenshots_ext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.png                                                                   \\ Optional</span>
+    <span class="nt">img_ext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.png                                                                           \\ Optional</span>
     <span class="nt">print_case_structure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                              \\ For debugging</span>
 </code></pre></div>
 
@@ -1399,7 +1400,7 @@
 
 
 <dl>
-<dt><code>rewrite_src_file</code></dt>
+<dt><code>rewrite_src_files</code></dt>
 <dd>You can update (<em>true</em>) test cases file after each use of preprocessor. Be careful, previous data will be deleted.</dd>
 <dt><code>template_folder</code></dt>
 <dd>Preprocessor uses Jinja2 templates to compose the file with test cases. Here you can find documentation: http://jinja.pocoo.org/docs/2.10/ . You can store templates in folder inside the foliant project, but if it's not default <em>case_templates</em> you have to write it here.</dd>
@@ -1491,6 +1492,8 @@
 
 <p>Next three fields are necessary due localization issues. While markdown document with test cases is composed on the go, you have to set up some document headers. Definitely not the best solution in my life. </p>
 <dl>
+<dt><code>img_folder</code></dt>
+<dd>Folder to store downloaded images if <code>rewrite_src_files=True</code>.</dd>
 <dt><code>section_header</code></dt>
 <dd>First level header of section with test cases. By default it's <em>Testing program</em> in Russian.</dd>
 <dt><code>add_std_table</code></dt>
@@ -1707,7 +1710,7 @@
 </dl>
 <p>Using described setting you can flexibly adjust test cases sampling. For example, you can download only published <em>critical</em> test cases for both and only <em>Mac</em> and <em>PC</em>.</p>
 <p>Now strange things, mostly made specially for my project, but may be useful for others.</p>
-<p>Screenshots. There is no possibility to store screenshots in TestRail projects, but you can store them in the GitLab repository (link to which should be stated in one of the following parameters). GitLab project should have following structure:</p>
+<p>Screenshots. There is a possibility to store screenshots in TestRail test cases, but you can store them in the GitLab repository (link to which should be stated in one of the following parameters). GitLab project should have following structure:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">images/</span>
 <span class="err">├── smarttv/</span>
 <span class="err">|   ├── screenshot1_smarttv.png</span>
@@ -1758,8 +1761,8 @@
 <dd>Turn on (<em>true</em>) or off (<em>false</em>, by default) image urls resolving.</dd>
 <dt><code>screenshots_url</code></dt>
 <dd>GitLab repository URL, in our example: https://gitlab.url/documentation/application-screenshots/ .</dd>
-<dt><code>screenshots_ext</code></dt>
-<dd>Screenshots extension. Yes, it must be only one and the same for all screenshots.</dd>
+<dt><code>img_ext</code></dt>
+<dd>Screenshots extension. Yes, it must be only one and the same for all screenshots. Also this parameter used to save downloaded images from TestRail.</dd>
 </dl>
 <p>And the last one emergency tool. If you have no jinja template for any type of TestRail case, you'll see this message like this: <em>There is no jinja template for test case template_id 5 (case_id 1325) in folder case_templates</em>. So you have to write jinja template by yourself. To do this it's necessary to know case structure. This parameter shows it to you.</p>
 <dl>

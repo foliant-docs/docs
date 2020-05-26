@@ -1303,6 +1303,7 @@
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">bindfigma</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.bindfigmacache</span>
+        <span class="nt">api_caching</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disabled</span>
         <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
         <span class="nt">caption</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
         <span class="nt">hyperlinks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1323,7 +1324,9 @@
 <p>Some values of options specified in the project config may be overridden by tag attributes, see below.</p>
 <dl>
 <dt><code>cache_dir</code></dt>
-<dd>Directory to store downloaded and resized images.</dd>
+<dd>Directory to store cached API responses, downloaded and resized images.</dd>
+<dt><code>api_caching</code></dt>
+<dd>API responses caching mode. Available values: <code>disabled</code>—switch off unconditionally; <code>enabled</code>—switch on unconditionally; <code>env</code>—switch on only if the <code>FOLIANT_FIGMA_CACHING</code> environment variable is set, otherwise switch off. If this mode is switched on, the preprocessor caches Figma API responses locally and uses cached data instead of performing API request. In this case, Figma node updating without changing API URL may not take effect.</dd>
 <dt><code>convert_path</code></dt>
 <dd>Path to <code>convert</code> binary, a part of ImageMagick. If resizing is not needed, ImageMagick will not be used.</dd>
 <dt><code>caption</code></dt>
@@ -1351,7 +1354,7 @@
 </code></pre></div>
 
 
-<p>You may use tag attributes to override the values of the project config options with the same names. All the options excepting <code>cache_dir</code> and <code>convert_path</code> may be overridden in this way.</p>
+<p>You may use tag attributes to override the values of the project config options with the same names. All the options excepting <code>cache_dir</code>, <code>api_caching</code> and <code>convert_path</code> may be overridden in this way.</p>
 <p>BindFigma preprocessor will replace such statements with local image references. If <code>ids</code> refers to more than one image, a set of image references will be generated. Multiple image references will be separated with the string specified as <code>multi_delimeter</code>.</p>
                 
                   

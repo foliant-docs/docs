@@ -7,6 +7,34 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.bindfigma 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#2e3efb15c42c6ccf01065bc382a6b987</guid>
+            <pubDate>Wed, 27 May 2020 00:54:36 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <code>api_caching</code> option. Add source Markdown file path to the messages written to STDOUT.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.2.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#fa0b86ae6cf16206f819dd179f8af862</guid>
+            <pubDate>Tue, 26 May 2020 15:27:56 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Downloading of images from test cases implemented.</li>
+<li>New parameter:<ul>
+<li>img_folder – folder name to store downloaded images.</li>
+</ul>
+</li>
+<li>Renamed parameters:<ul>
+<li>rewrite_src_file -&gt; rewrite_src_files,</li>
+<li>screenshots_ext -&gt; img_ext.</li>
+</ul>
+</li>
+<li>Paths processing fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.templateparser 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#5d9216002da2f46d5de0feae21259839</guid>
