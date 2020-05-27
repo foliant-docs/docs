@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.bindfigma 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#82926dbbf9d39a1584d07512c57371d3</guid>
+            <pubDate>Wed, 27 May 2020 16:24:37 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix bug in caching.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.bindfigma 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#2e3efb15c42c6ccf01065bc382a6b987</guid>
