@@ -31,6 +31,7 @@ chapters:
         - preprocessors/csvtables.md
         - preprocessors/customids.md
         - preprocessors/dbmldoc.md
+        - preprocessors/dbdoc.md
         - preprocessors/elasticsearch.md
         - preprocessors/epsconvert.md
         - preprocessors/escapecode.md
@@ -103,6 +104,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.csvtables.git
             - https://github.com/foliant-docs/foliantcontrib.customids.git
             - https://github.com/foliant-docs/foliantcontrib.dbmldoc.git
+            - https://github.com/foliant-docs/foliantcontrib.dbdoc.git
             - https://github.com/foliant-docs/foliantcontrib.docus.git
             - https://github.com/foliant-docs/foliantcontrib.elasticsearch.git
             - https://github.com/foliant-docs/foliantcontrib.epsconvert.git
