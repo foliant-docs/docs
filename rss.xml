@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbmldoc 0.2.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#b90b6883edd64b6497bc81535396728f</guid>
+            <pubDate>Wed, 03 Jun 2020 13:51:28 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Pydbml parser version updated to 0.3.2</li>
+<li>Updated templates</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.pgsqldoc 1.1.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git#92fc68b25ade98f2f7b6c5d4df931ee0</guid>
