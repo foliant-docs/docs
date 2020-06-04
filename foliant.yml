@@ -6,8 +6,15 @@ chapters:
     - installation.md
     - quickstart.md
     - architecture.md
+    - architecture.md
     - Tutorials:
+        - tutorials/full_docker.md
         - tutorials/api.md
+        - Documenting Databases with Foliant:
+            - tutorials/db/db.md
+            - tutorials/db/dbml.md
+            - tutorials/db/oracle.md
+            - tutorials/db/pgsql.md
         - tutorials/dev_reference.md
     - meta.md
     - Backends:

@@ -1,11 +1,11 @@
-# Documenting Oracle Database
+# Documenting PostgreSQL Database
 
 > Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component's doc page.
 
 
 ## Installing prerequisites
 
-First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our [Full Docker image](../full_docker.md), you don't need to do anything just now, you can skip to the next stage.
+First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our [Full Docker image](../full_docker.md), you don't need to do anything, you can skip to the next stage.
 
 First, you will need Foliant, of course. If you don't have it yet, please, refer to the [installation guide](https://foliant-docs.github.io/docs/installation/).
 
@@ -24,8 +24,6 @@ $ pip3 install foliantcontrib.dbdoc foliantcontrib.slate, foliantcontrib.plantum
 We are going to use [Slate](https://github.com/slatedocs/slate) for building a static website with documentation, so you will need to [install Slate dependencies](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively).
 
 [Install PlantUML](https://plantuml.com/ru/starting), we will need it to draw the database scheme.
-
-Install [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html), if you don't have it. We will needed it to query the database.
 
 ## Creating project
 
@@ -70,15 +68,15 @@ chapters:
 +preprocessors:
 +   - dbdoc:
 +       host: localhost
-+       port: 1521
-+       dbname: orcl
-+       user: hr
-+       password: oracle
++       port: 5432
++       dbname: posgres
++       user: posgres
++       password: posgres
 +  - plantuml
 +
 ```
 
-Make sure to use proper credentials for your Oracle database. If you are running Foliant from docker, you can use `host: host.docker.internal` to access `localhost` from docker.
+Make sure to use proper credentials for your PostgreSQL database. If you are running Foliant from docker, you can use `host: host.docker.internal` to access `localhost` from docker.
 
 > Note: if plantuml is not available under `$ plantuml` in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
 > ```yaml

@@ -1,11 +1,42 @@
-# Documenting Oracle Database
+# Documenting DBML schema
 
-> Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component's doc page.
+Quote from the official website: *[DBML](https://dbml.org) (Database Markup Language) is an open-source DSL language designed to define and document database schemas and structures. It is designed to be simple, consistent and highly-readable.* And that makes it a perfect choice for designing your database. You can create your table structure without messing with cumbersome SQL in a more human-readible way like this:
 
+```
+Table users {
+  id integer
+  username varchar
+  role varchar
+  created_at timestamp
+}
+
+Table posts {
+  id integer [primary key]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer
+  status post_status
+  created_at timestamp
+}
+
+Enum post_status {
+  draft
+  published
+  private [note: 'visible via URL only']
+}
+
+Ref: posts.user_id > users.id // many-to-one
+```
+
+As you may have noticed, DBML also has tools to document pieces of you schema using *notes* (`body text [note: 'Content of the post']`) and comments (`Ref: posts.user_id > users.id // many-to-one`).
+
+So how can we convert DBML schema descriptions into a human-readible document? The idea is pretty simple: we parse the DBML definitions and pass them to a Jinja template, which renders markdown for us. After that we use one of our backends (we will use [Slate](https://foliant-docs.github.io/docs/backends/slate/) in this tutorial) to build a static site out of it.
+
+We won't need to do it all manually, of course, we just need to configure Foliant to do that for us.
 
 ## Installing prerequisites
 
-First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our [Full Docker image](../full_docker.md), you don't need to do anything just now, you can skip to the next stage.
+If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our [Full Foliant Docker image](../full_docker.md), you don't need to do that, just go to the next stage.
 
 First, you will need Foliant, of course. If you don't have it yet, please, refer to the [installation guide](https://foliant-docs.github.io/docs/installation/).
 
@@ -15,21 +46,19 @@ Next, let's install [Foliant Init](https://github.com/foliant-docs/foliantcontri
 $ pip3 install foliantcontrib.init
 ```
 
-Install DBDoc and PlantUML preprocessors, and the Slate backend:
+Install DBMLDoc and PlantUML preprocessors, and the Slate backend:
 
 ```bash
-$ pip3 install foliantcontrib.dbdoc foliantcontrib.slate, foliantcontrib.plantuml
+$ pip3 install foliantcontrib.dbmldoc foliantcontrib.slate, foliantcontrib.plantuml
 ```
 
 We are going to use [Slate](https://github.com/slatedocs/slate) for building a static website with documentation, so you will need to [install Slate dependencies](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively).
 
-[Install PlantUML](https://plantuml.com/ru/starting), we will need it to draw the database scheme.
-
-Install [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html), if you don't have it. We will needed it to query the database.
+Finally, [install PlantUML](https://plantuml.com/ru/starting), we will need it to draw database scheme.
 
 ## Creating project
 
-Let's create a Foliant project for our experiments. `cd` to the directory where you want your project created and run the `init` command:
+Let's create a Foliant project for our experiments. `cd` into the directory where you want your project created and run the `init` command:
 
 ```bash
 $ cd ~/foliant_projects
@@ -57,6 +86,12 @@ Unpacking objects: 100% (11/11), done.
 $ cd database-docs
 ```
 
+Next, let's download the sample DBML spec and save it into file `schema.dbml` in the root your Foliant project:
+
+```bash
+$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
+```
+
 ## Setting up project
 
 Now it's time to set up our config. Open `foliant.yml` and add the following lines:
@@ -68,17 +103,13 @@ chapters:
   - index.md
 
 +preprocessors:
-+   - dbdoc:
-+       host: localhost
-+       port: 1521
-+       dbname: orcl
-+       user: hr
-+       password: oracle
++  - dbmldoc:
++      spec_path: schema.dbml
 +  - plantuml
 +
 ```
 
-Make sure to use proper credentials for your Oracle database. If you are running Foliant from docker, you can use `host: host.docker.internal` to access `localhost` from docker.
+We've added the PlantUML and DBMLDoc preprocessors to the pipeline and specified path to our DBML sample schema. DBMLDoc will parse our schema and convert it into Markdown, plantuml will draw the visual diagram of our DB schema.
 
 > Note: if plantuml is not available under `$ plantuml` in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
 > ```yaml
@@ -92,11 +123,9 @@ Finally, we need to tell Foliant where in the source files should it insert the 
 # Welcome to Database Docs
 
 -Your content goes here.
-+<dbdoc></dbdoc>
++<dbmldoc></dbmldoc>
 +
 ```
-
-If you are using Docker, you will also need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it's not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this [Dockerfile by Sergey Makinen](https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile). Copy all commands starting from the third line into your `Dockerfile` and run `docker-compose build` to rebuild the image.
 
 ## Building site
 
@@ -105,7 +134,7 @@ All preparations done, let's build our site:
 ```
 $ foliant make site -w slate
 Parsing config... Done
-Applying preprocessor dbdoc... Done
+Applying preprocessor dbmldoc... Done
 Applying preprocessor plantuml... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -123,6 +152,6 @@ $ docker-compose run --rm foliant make site -w slate
 
 Now open `Database_Docs-2020-06-03.slate/index.html` and look what you've got:
 
-![](img/oracle.png)
+![](img/dbml.png)
 
 That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. After first build, the default template should have appeared in your project dir under the name `dbml.j2`. If you want to change the looks of you site, please, refer for instructions to the [Slate](https://foliant-docs.github.io/docs/backends/slate/) backend documentation.
