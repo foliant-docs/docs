@@ -6,7 +6,6 @@ chapters:
     - installation.md
     - quickstart.md
     - architecture.md
-    - architecture.md
     - Tutorials:
         - tutorials/full_docker.md
         - tutorials/api.md
