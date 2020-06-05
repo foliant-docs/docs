@@ -17,5 +17,7 @@ After describing all your entities inside your database, we need to get all this
 ## The tutorials
 
 [Documenting with DBML specification](dbml.md)
+
 [Documenting Oracle Database](oracle.md)
+
 [Documenting PostgreSQL Database](pgsql.md)
