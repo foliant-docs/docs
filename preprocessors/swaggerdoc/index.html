@@ -1092,15 +1092,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#jinja" class="md-nav__link">
-    Jinja
+  <a href="#widdershins" class="md-nav__link">
+    Widdershins
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#widdershins" class="md-nav__link">
-    Widdershins
+  <a href="#jinja" class="md-nav__link">
+    Jinja
   </a>
   
 </li>
@@ -1417,15 +1417,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#jinja" class="md-nav__link">
-    Jinja
+  <a href="#widdershins" class="md-nav__link">
+    Widdershins
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#widdershins" class="md-nav__link">
-    Widdershins
+  <a href="#jinja" class="md-nav__link">
+    Jinja
   </a>
   
 </li>
@@ -1460,16 +1460,23 @@
                 
                 
                 <h1 id="swaggerdoc">SwaggerDoc<a class="headerlink" href="#swaggerdoc" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></p>
+<p><a href="https://pypi.org/project/foliantcontrib.swaggerdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.swaggerdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.swaggerdoc.svg?label=GitHub" /></a></p>
 <h2 id="swagger-api-docs-generator-for-foliant">Swagger API Docs Generator for Foliant<a class="headerlink" href="#swagger-api-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
-<p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files . It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">widdershins</a> for generating Markdown from swagger spec files.</p>
+<p><img alt="" src="../../_img_0e2a804a-a728-11ea-88ec-0242ac120002/swagger_0e2c0938-a728-11ea-88ec-0242ac120002.png" /></p>
+<p><em>The static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with SwaggerDoc preprocessor</em></p>
+<p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">Widdershins</a> for generating Markdown from swagger spec files.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.swaggerdoc
 </code></pre></div>
 
 
+<p>This preprocessor requires <a href="https://github.com/Mermade/widdershins">Widdershins</a> to be installed on your system (unless you are using <a href="https://foliant-docs.github.io/docs/tutorials/full_docker/">Foliant with Full Docker Image</a>):</p>
+<div class="codehilite"><pre><span></span><code><span class="err">npm install -g widdershins</span>
+</code></pre></div>
+
+
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<p>To enable the preprocessor, add <code>pgsqldoc</code> to <code>preprocessors</code> section in the project config:</p>
+<p>To enable the preprocessor, add <code>swaggerdoc</code> to <code>preprocessors</code> section in the project config:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">swaggerdoc</span>
 </code></pre></div>
@@ -1478,28 +1485,23 @@
 <p>The preprocessor has a number of options:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">json_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/swagger.json</span>
-        <span class="nt">json_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
+        <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/swagger.json</span>
+        <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
         <span class="nt">additional_json_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tags.json</span>
-        <span class="nt">mode</span><span class="p">:</span> <span class="s">&#39;jinja&#39;</span>
+        <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">widdershins</span>
         <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.j2</span>
         <span class="nt">environment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">env.yaml</span>
 </code></pre></div>
 
 
 <dl>
-<dt><code>json_url</code></dt>
+<dt><code>spec_url</code></dt>
 <dd>URL to Swagger spec file. If it is a list — preprocessor takes the first url which works.</dd>
-</dl>
-<blockquote>
-<p>even though the parameters are called <em>json</em>_url and <em>json</em>_path, yaml format is supported too. Parameters may be softly renamed in future.</p>
-</blockquote>
-<dl>
-<dt><code>json_path</code></dt>
+<dt><code>spec_path</code></dt>
 <dd>Local path to Swagger spec file (relative to project dir).</dd>
 </dl>
 <blockquote>
-<p>If both url and path are specified — preprocessor first tries to fetch JSON from url, and then (if that fails) looks for the file on local path.</p>
+<p>If both url and path are specified — preprocessor first tries to fetch spec from url, and then (if that fails) looks for the file on local path.</p>
 </blockquote>
 <dl>
 <dt><code>additional_json_path</code></dt>
@@ -1532,12 +1534,12 @@ This document contains the automatically generated documentation of our API.
 
 Introduction text for API documentation.
 
-<span class="nt">&lt;swaggerdoc</span> <span class="na">json_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
+<span class="nt">&lt;swaggerdoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
             <span class="na">mode=</span><span class="s">&quot;jinja&quot;</span>
             <span class="na">template=</span><span class="s">&quot;swagger.j2&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/swaggerdoc&gt;</span>
 
-<span class="nt">&lt;swaggerdoc</span> <span class="na">json_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
+<span class="nt">&lt;swaggerdoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
             <span class="na">mode=</span><span class="s">&quot;widdershins&quot;</span>
             <span class="na">environment=</span><span class="s">&quot;env.yml&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/swaggerdoc&gt;</span>
@@ -1547,13 +1549,6 @@ Introduction text for API documentation.
 <p>Tag parameters have the highest priority.</p>
 <p>This way you can have documentation from several different Swagger spec files in one foliant project (even in one md-file if you like it so).</p>
 <h3 id="customizing-output">Customizing output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h3>
-<h4 id="jinja">Jinja<a class="headerlink" href="#jinja" title="Permanent link">&para;</a></h4>
-<blockquote>
-<p><code>jinja</code> mode is deprecated. It may be removed in future</p>
-</blockquote>
-<p>In <code>jinja</code> mode the output markdown is generated by the <a href="http://jinja.pocoo.org/">Jinja2</a> template. In this template all fields from Swagger spec file are available under the dictionary named <code>swagger_data</code>.</p>
-<p>To customize the output create a template which suits your needs. Then supply the path to it in the <code>template</code> parameter.</p>
-<p>If you wish to use the default template as a starting point, build the foliant project with <code>swaggerdoc</code> preprocessor turned on. After the first build the default template will appear in your foliant project dir under name <code>swagger.j2</code>.</p>
 <h4 id="widdershins">Widdershins<a class="headerlink" href="#widdershins" title="Permanent link">&para;</a></h4>
 <p>In <code>widdershins</code> mode the output markdown is generated by <a href="https://github.com/mermade/widdershins">widdershins</a> Node.js application. It supports customizing the output with <a href="https://github.com/olado/doT">doT.js</a> templates.</p>
 <ol>
@@ -1563,10 +1558,19 @@ Introduction text for API documentation.
 </ol>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">json_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
+        <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
         <span class="nt">environment</span><span class="p">:</span>
             <span class="nt">user_templates</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">./widdershins_templates/</span>
 </code></pre></div>
+
+
+<h4 id="jinja">Jinja<a class="headerlink" href="#jinja" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><code>jinja</code> mode is deprecated. It may be removed in future</p>
+</blockquote>
+<p>In <code>jinja</code> mode the output markdown is generated by the <a href="http://jinja.pocoo.org/">Jinja2</a> template. In this template all fields from Swagger spec file are available under the dictionary named <code>swagger_data</code>.</p>
+<p>To customize the output create a template which suits your needs. Then supply the path to it in the <code>template</code> parameter.</p>
+<p>If you wish to use the default template as a starting point, build the foliant project with <code>swaggerdoc</code> preprocessor turned on. After the first build the default template will appear in your foliant project dir under name <code>swagger.j2</code>.</p>
                 
                   
                 

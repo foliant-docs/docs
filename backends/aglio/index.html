@@ -1474,8 +1474,9 @@
                 
                 
                 <h1 id="aglio">Aglio<a class="headerlink" href="#aglio" title="Permanent link">&para;</a></h1>
-<p><a href="https://pypi.org/project/foliantcontrib.aglio/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.aglio.svg" /></a></p>
+<p><a href="https://pypi.org/project/foliantcontrib.aglio/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.aglio.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.aglio"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.aglio.svg?label=GitHub" /></a></p>
 <h2 id="aglio-backend-for-foliant">Aglio Backend for Foliant<a class="headerlink" href="#aglio-backend-for-foliant" title="Permanent link">&para;</a></h2>
+<p><img alt="Static site built with Aglio backend" src="../../_img_0e2a804a-a728-11ea-88ec-0242ac120002/aglio_0e2ca910-a728-11ea-88ec-0242ac120002.png" /></p>
 <p>Aglio backend generates API documentation from <a href="https://apiblueprint.org/">API Blueprint</a> using <a href="https://github.com/danielgtaylor/aglio">aglio renderer</a>.</p>
 <p>This backend operates the <code>site</code> target.</p>
 <blockquote>
@@ -1486,14 +1487,19 @@
 </code></pre></div>
 
 
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>To use this backend aglio should be installed in your system. Follow the <a href="https://github.com/danielgtaylor/aglio#installation--usage">instruction</a> in aglio repo.</p>
+<p>To use this backend <a href="https://github.com/danielgtaylor/aglio#installation--usage">Aglio should be installed</a> on your system:</p>
+<div class="codehilite"><pre><span></span><code>$ npm install -g aglio
+</code></pre></div>
+
+
 <p>To test if you've installed aglio properly run the <code>aglio -h</code> command, which should return you a list of options.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To generate a static website from your Foliant project run the following command:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make site --with aglio
 Parsing config... Done
-Making site...
-Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making site... Done
 ────────────────────
 Result: My_Awesome_Project.aglio
 </code></pre></div>

@@ -1420,8 +1420,9 @@
                 
                 
                 <h1 id="slate">Slate<a class="headerlink" href="#slate" title="Permanent link">&para;</a></h1>
-<p><a href="https://pypi.org/project/foliantcontrib.slate/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.slate.svg" /></a></p>
+<p><a href="https://pypi.org/project/foliantcontrib.slate/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.slate.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.slate"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.slate.svg?label=GitHub" /></a></p>
 <h2 id="slate-backend-for-foliant">Slate Backend for Foliant<a class="headerlink" href="#slate-backend-for-foliant" title="Permanent link">&para;</a></h2>
+<p><img alt="Static site built by Foliant and Slate backend" src="../../_img_0e2a804a-a728-11ea-88ec-0242ac120002/slate_0e2c8516-a728-11ea-88ec-0242ac120002.png" /></p>
 <p>Slate backend generates API documentation from Markdown using <a href="https://github.com/lord/slate">Slate docs generator</a>.</p>
 <p>This backend operates two targets:</p>
 <ul>
@@ -1433,7 +1434,6 @@
 </code></pre></div>
 
 
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To use this backend Slate should be installed in your system. Follow the <a href="https://github.com/lord/slate#getting-set-up">instruction</a> in Slate repo.</p>
 <p>To test if you've installed Slate properly head to the cloned Slate repo in your terminal and try the command below. You should get similar response.</p>
 <div class="codehilite"><pre><span></span><code>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
@@ -1443,19 +1443,23 @@
 </code></pre></div>
 
 
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To convert Foliant project to Slate:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make slate
-✔ Parsing config
-✔ Making slate
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making slate... Done
 ─────────────────────
 Result: My_Project-2018-09-19.src/
 </code></pre></div>
 
 
 <p>Build a standalone website:</p>
-<div class="codehilite"><pre><span></span><code>$ foliant make site
-✔ Parsing config
-✔ Making site
+<div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
 ─────────────────────
 Result: My_Project-2018-09-19.slate/
 </code></pre></div>

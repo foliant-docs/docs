@@ -1476,6 +1476,8 @@
                 <h1 id="dbdoc">DBDoc<a class="headerlink" href="#dbdoc" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.dbdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.dbdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.dbdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.dbdoc.svg?label=GitHub" /></a></p>
 <h2 id="database-documentation-generator-for-foliant">Database Documentation Generator for Foliant<a class="headerlink" href="#database-documentation-generator-for-foliant" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../_img_0e2a804a-a728-11ea-88ec-0242ac120002/dbdoc_0e2b8120-a728-11ea-88ec-0242ac120002.png" /></p>
+<p><em>Static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with DBDoc preprocessor</em></p>
 <p>This preprocessor generates simple documentation based on the structure of the database. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine for customizing the layout and <a href="http://plantuml.com/">PlantUML</a> for drawing the database scheme.</p>
 <p>Currently supported databases:</p>
 <ul>
@@ -1545,7 +1547,7 @@
 <dt><code>scheme_template</code></dt>
 <dd>Path to jinja-template for scheme. Path is relative to the project directory. If not supplied — default template would be used.</dd>
 <dt><code>components</code></dt>
-<dd>List of components to be added to documentation. If not supplied — everything will be added. Use to exclude some parts of documentation.</dd>
+<dd>List of components to be added to documentation. If not supplied — everything will be added. Use to exclude some parts of documentation. Available components: <code>'tables'</code>, <code>'views'</code>, <code>'functions'</code>, <code>'triggers'</code>.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>DBDoc currently supports two database engines: Oracle and PostgreSQL. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
