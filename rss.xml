@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.flatten 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#4b5bdc725759c3bbc1946d6f7f20d1bc</guid>
+            <pubDate>Tue, 09 Jun 2020 11:43:23 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: bug in rewrite local links regex.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.2.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#b7cc4432ca44be03ea336a4498fec2f3</guid>
+            <pubDate>Mon, 08 Jun 2020 15:40:40 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Processing of several images in one case-step fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbdoc 0.1.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#a9ec97a121ea2253352e61fe88d595d8</guid>
