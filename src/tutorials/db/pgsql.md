@@ -79,10 +79,11 @@ chapters:
 Make sure to use proper credentials for your PostgreSQL database. If you are running Foliant from docker, you can use `host: host.docker.internal` to access `localhost` from docker.
 
 > Note: if plantuml is not available under `$ plantuml` in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
-> ```yaml
->   - plantuml:
->       plantuml_path: /usr/bin/plantuml.jar
-> ```
+
+```yaml
+  - plantuml:
+      plantuml_path: /usr/bin/plantuml.jar
+```
 
 Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an `index.md` chapter created for us by `init` command, let's put it in there. Open `src/index.md` and make it look like this:
 
@@ -123,4 +124,4 @@ Now open `Database_Docs-2020-06-03.slate/index.html` and look what you've got:
 
 ![](img/oracle.png)
 
-That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. After first build, the default template should have appeared in your project dir under the name `dbml.j2`. If you want to change the looks of you site, please, refer for instructions to the [Slate](https://foliant-docs.github.io/docs/backends/slate/) backend documentation.
+That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. The default template can be found [here](https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2). Edit it and save in your project dir, then specify in the `doc_template` parameter. If you want to change the looks of you site, please, refer for instructions to the [Slate](https://foliant-docs.github.io/docs/backends/slate/) backend documentation.
