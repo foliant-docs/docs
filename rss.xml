@@ -7,6 +7,37 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.11</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#b2be90d59cf97b45983f1c5bbd4a22fe</guid>
+            <pubDate>Tue, 16 Jun 2020 10:57:48 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: XML error in code block conversion.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.3.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#72c59ed23099e2e4d3529d31883bb73a</guid>
+            <pubDate>Wed, 10 Jun 2020 10:15:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Now it's possible to use one image in several test-cases and process it correctly with <em>move_imgs_from_text</em> parameter.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.testrail 1.3.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#437435ca4ea1f1709357d7e0f5ab7ca0</guid>
+            <pubDate>Tue, 09 Jun 2020 14:46:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New parameter:<ul>
+<li>move_imgs_from_text — converts image links in test cases to ordinary markdown-links, and adds all links to <em>params</em> variable to use in jinja template.</li>
+</ul>
+</li>
+<li>Some readme.md bugs fixed.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.flatten 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#4b5bdc725759c3bbc1946d6f7f20d1bc</guid>

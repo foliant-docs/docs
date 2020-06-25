@@ -36,7 +36,7 @@
     
     
       
-        <title>Installation - Foliant</title>
+        <title>Debugging Builds - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#installation" tabindex="0" class="md-skip">
+      <a href="#debugging-builds" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Installation
+                Debugging Builds
               
             </span>
           
@@ -261,70 +261,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Installation
-      </label>
-    
-    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    macOS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    Ubuntu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -356,11 +297,70 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../debugging_builds/" title="Debugging Builds" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Debugging Builds
+      </label>
+    
+    <a href="./" title="Debugging Builds" class="md-nav__link md-nav__link--active">
       Debugging Builds
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-docker-use" class="md-nav__link">
+    Notes on Docker Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-foliant-in-the-debug-mode" class="md-nav__link">
+    Running Foliant in the Debug Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pre-backend-and-target-and-keeping-the-working-directory" class="md-nav__link">
+    The pre Backend and Target, and Keeping the Working Directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killing-two-birds-with-one-stone" class="md-nav__link">
+    Killing Two Birds With One Stone
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -1357,29 +1357,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    macOS
+  <a href="#notes-on-docker-use" class="md-nav__link">
+    Notes on Docker Use
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
+  <a href="#running-foliant-in-the-debug-mode" class="md-nav__link">
+    Running Foliant in the Debug Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    Ubuntu
+  <a href="#the-pre-backend-and-target-and-keeping-the-working-directory" class="md-nav__link">
+    The pre Backend and Target, and Keeping the Working Directory
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
+  <a href="#killing-two-birds-with-one-stone" class="md-nav__link">
+    Killing Two Birds With One Stone
   </a>
   
 </li>
@@ -1400,116 +1400,174 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/foliant-docs/docs/edit/master/src/installation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/debugging_builds.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<p>Installing Foliant to your system can be split into three stages: installing Python with your system’s package manager, installing Foliant with pip, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.</p>
-<p>Alternatively, you can avoid installing Foliant and its dependencies on your system by using <a href="#docker">Docker and Docker Compose</a>.</p>
-<h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Install Python 3 with Homebrew:</p>
-<div class="codehilite"><pre><span></span><code>$ brew install python3
+                <h1 id="debugging-builds">Debugging Builds<a class="headerlink" href="#debugging-builds" title="Permanent link">&para;</a></h1>
+<p>Building of simple documentation projects with Foliant is usually straightforward. But Foliant and its extensions are designed to build complex projects. Foliant with its extensions is a powerful, customizable, and very flexible tool. If you understand what do you exactly want to do, and you can formalize it at the project config level, Foliant will perform you task efficiently and accurately.</p>
+<p>The problem is that it’s sometimes may be difficult to configure all preprocessors and backends correctly for the first time. Some settings are pretty subtle and unobvious. The sequence of applying of the preprocessors matters. Some preprocessors may work unexpectedly if others are used. It may be necessary to apply some preprocessor twice—before and after some another preprocessor. Fetching data from external sources may also become a bottleneck.</p>
+<p>Fortunately, Foliant will not ask you to diagnose problems with the car engine without opening the hood. Foliant provides advanced diagnostic facilities such as the following:</p>
+<ul>
+<li>detailed event logging in the special debug mode;</li>
+<li>the backend <code>pre</code> that does nothing, i.e. does not convert preprocessed Markdown into any target;</li>
+<li>keeping the temporary working directory that is used during builds, for further analysis.</li>
+</ul>
+<h2 id="notes-on-docker-use">Notes on Docker Use<a class="headerlink" href="#notes-on-docker-use" title="Permanent link">&para;</a></h2>
+<p>In this documentation, examples of shell commands in most cases represent the native use of Foliant, i.e. as an applicaion that is installed directly on your local operating system.</p>
+<p>In practice, Foliant is more commonly used with Docker. Public images of Foliant with different sets of extensions are available <a href="https://hub.docker.com/r/foliant/foliant">at Docker Hub</a>. The actual tags are:</p>
+<ul>
+<li><code>slim</code>—minimal image of Foliant with no extensions;</li>
+<li><code>latest</code>—same as <code>slim</code> but with the <code>foliant init</code> command support;</li>
+<li><code>pandoc</code>—image of Foliant with Pandoc backend, Pandoc itself, and LaTeX (<code>texlive-full</code> Ubuntu package);</li>
+<li><code>full</code>—most complete image of Foliant with all released extensions and dependencies required for them.</li>
+</ul>
+<p>You can find Dockerfiles for each image in <a href="https://github.com/foliant-docs/docker/">this GitHub repository</a>.</p>
+<p>If you need to build PDFs with Pandoc/LaTeX, and some additional functionality is required, e.g. drawing diagrams with PlantUML, it’s recommended to use the image with the tag <code>full</code>. This image is widely used, frequently updated, and well supported.</p>
+<p>To get or update the Foliant Docker image, run the command:</p>
+<div class="codehilite"><pre><span></span><code>$ docker pull foliant/foliant:full
 </code></pre></div>
 
 
-</li>
-<li>
-<p>Install Foliant with pip:</p>
-<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliant foliantcontrib.init
+<p>It’s not necessary but recommended to use <a href="https://docs.docker.com/compose/">Docker Compose</a> utility to build images for Foliant projects and run containers based on them.</p>
+<p>To prepare your Foliant project to be built within Docker container, add the files <code>Dockerfile</code> and <code>docker-compose.yml</code> into the project’s “root” directory.</p>
+<p>If you decided to use the image with the <code>full</code> tag, the content of <code>Dockerfile</code> should be the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">FROM foliant/foliant:full</span>
 </code></pre></div>
 
 
-</li>
-<li>
-<p>If you plan to bake pdf or docx, install Pandoc and MacTeX with Homebrew:</p>
-<div class="codehilite"><pre><span></span><code>$ brew install pandoc mactex librsvg
+<p>The file <code>docker-compose.yml</code> should define the <code>foliant</code> service in this way:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">foliant</span><span class="p">:</span>
+    <span class="nt">build</span><span class="p">:</span>
+      <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./</span>
+      <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./Dockerfile</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./:/usr/src/app/</span>
 </code></pre></div>
 
 
-<p>And finally, install the Pandoc backend:</p>
-<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.pandoc
+<p>For debug purposes, it’s useful to add one more service, <code>bash</code>, to run containers with an interactive shell. Recommended full content of the file <code>docker-compose.yml</code> is the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+
+<span class="n">services</span><span class="p">:</span>
+  <span class="n">foliant</span><span class="p">:</span>
+    <span class="n">build</span><span class="p">:</span>
+      <span class="n">context</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span>
+      <span class="n">dockerfile</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span><span class="n">Dockerfile</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="p">.</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
+  <span class="n">bash</span><span class="p">:</span>
+    <span class="n">build</span><span class="p">:</span>
+      <span class="n">context</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span>
+      <span class="n">dockerfile</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span><span class="n">Dockerfile</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="p">.</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
+    <span class="n">entrypoint</span><span class="p">:</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>
 </code></pre></div>
 
 
-</li>
-</ol>
-<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Install <a href="http://scoop.sh/">Scoop package manager</a> in PowerShell:</p>
-<div class="codehilite"><pre><span></span><code>$ iex <span class="o">(</span>new-object net.webclient<span class="o">)</span>.downloadstring<span class="o">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="o">)</span>
+<p>To run Foliant project build, first, you have to build an image for the project:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose build
 </code></pre></div>
 
 
-</li>
-<li>
-<p>Install Python 3 with Scoop:</p>
-<div class="codehilite"><pre><span></span><code>$ scoop install python
+<p>This command should be executed in the project’s “root” directory.</p>
+<p>The image for the project should be rebuilt after pulling a newer version of Foliant image. Also, if you use a custom <code>Dockerfile</code>, and some local files are mentioned in it, the image for the project should be rebuilt after any updates of these files.</p>
+<p>To perform the project build with Foliant, run the command like the following:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make &lt;target&gt; --with &lt;backend&gt;
 </code></pre></div>
 
 
-</li>
-<li>
-<p>Install Foliant with pip:</p>
-<div class="codehilite"><pre><span></span><code>$ python -m pip install foliant foliantcontrib.init
+<p>You need to specify the certain target and the certain backend. So, if you want to build PDF with Pandoc, the command should be:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf --with pandoc
 </code></pre></div>
 
 
-</li>
-<li>
-<p>If you plan to bake pdf or docx, install Pandoc and MikTeX with Scoop:</p>
-<div class="codehilite"><pre><span></span><code>$ scoop install pandoc latex
+<p>This command corresponds to the native command:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc
 </code></pre></div>
 
 
-<p>And finally, install the Pandoc backend:</p>
-<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.pandoc
+<p>Note that by default the commands within Docker containers run as root. So, after running a container, you can get some files owned by root in your local file system. To avoid this, run commands inside Docker containers as an user with the user ID and group ID of your local user on the host machine:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm foliant make pdf --with pandoc
 </code></pre></div>
 
 
-</li>
-</ol>
-<h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Install Python 3 with apt. On 14.04 and 16.04:</p>
-<div class="codehilite"><pre><span></span><code>$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
+<p>If you described the service <code>bash</code> in your <code>docker-compose.yml</code> file, you may run a container based on the project’s image, with an interactive shell. To open shell for root, run:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm bash
 </code></pre></div>
 
 
-<p>On 14.04 and 16.04:</p>
-<div class="codehilite"><pre><span></span><code>$ add-apt-repository ppa:jonathonf/python-3.6
-$ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pip
+<p>To open shell for an user with the same user ID and group ID as your current user on the host machine:</p>
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm bash
 </code></pre></div>
 
 
-</li>
-<li>
-<p>Install Foliant with pip:</p>
-<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliant foliantcontrib.init
+<p>All examples below will represent native commands. Add <code>docker-compose run --rm</code> or <code>docker-compose run --user="$(id -u):$(id -g)" --rm</code> to their beginnings to run the corresponding commands within Docker containers.</p>
+<h2 id="running-foliant-in-the-debug-mode">Running Foliant in the Debug Mode<a class="headerlink" href="#running-foliant-in-the-debug-mode" title="Permanent link">&para;</a></h2>
+<p>The usual command to build some target with some backend, <code>foliant make &lt;target&gt; --with &lt;backend&gt;</code>, runs Foliant in the regular mode. In this mode, Foliant and its extensions will log only events of the levels <code>critical</code>, <code>error</code>, and <code>warning</code>. Normally, there should not be critical cases (i.e. fatal crashes) and errors (they mean, for example, fails of some preprocessors, unavailability of some external services, etc.). Warnings are almost acceptable. Some preprocessors generate large numbers of specific warnings, and such behavior doesn’t mean that something is wrong.</p>
+<p>Foliant provides the <code>--debug</code> or <code>-d</code> command line option that enables the debug mode. In the debug mode, Foliant and its extensions also log events of the levels <code>debug</code> and <code>info</code>. How detailed the logging of such events is, depends on the implementation of a particular extension. Complex preprocessors like Includes usually log their actions in great detail. Usually the messages of the <code>info</code> level are informative: they indicate, for example, the beginning of some preprocessor’s work. The messages with the <code>debug</code> level generally show the status of atomic operations, e.g. reading data from the certain file. These messages often contain the values of variables that are important in this context: paths to files, external commands that are called, etc.</p>
+<p>The variant of the command that tells Foliant to build PDF with Pandoc in the debug mode, looks like:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --debug
 </code></pre></div>
 
 
-</li>
-<li>
-<p>If you plan to bake pdf or docx, install Pandoc and TeXLive with apt and wget:</p>
-<div class="codehilite"><pre><span></span><code>$ apt update <span class="o">&amp;&amp;</span> apt install -y wget texlive-full librsvg2-bin
-$ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb <span class="o">&amp;&amp;</span> dpkg -i pandoc-2.0.5-1-amd64.deb
+<p>Log files will be written to the project’s “root” directory with names <code>*.log</code>, where <code>*</code> represents UNIX timestamps of the moments when the certain files were created. We were asked to implement optional overriding of logs location—it will be done in future release of Foliant Core. But it’s so easy to move logs to any custom place with a simple shell script; fixed location of logs is a really imaginary inconvenience!</p>
+<p>Each log is a text file that contains a number of lines (records). Each record represents a single event and consists of 4 separated fields:</p>
+<ul>
+<li>date and time of registration of the event;</li>
+<li>context (“place,” module) that the event is registered in;</li>
+<li>event log level: one of <code>CRITICAL</code>, <code>ERROR</code>, <code>WARNING</code>, <code>DEBUG</code>, <code>INFO</code>;</li>
+<li>message text that explains the essence of the event.</li>
+</ul>
+<p>For example, the first record of a log is usually looks like that:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">2020-06-25 09:40:54,419 |                  flt |     INFO | Build started.</span>
 </code></pre></div>
 
 
-<p>And finally, install the Pandoc backend:</p>
-<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.pandoc
+<p>The string <code>flt</code> in the second field means Foliant itself, i.e. Foliant Core.</p>
+<p>The context is hierarchical. The following record represents an event that is registered in the preprocessor Includes that is called from the preprocessor Flatten, that is called during project build with Pandoc backend.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">2020-06-25 09:40:54,678 | flt.pandoc.flatten.includes |    DEBUG | Processing Markdown file: /usr/src/app/__folianttmp__/__all__.md</span>
 </code></pre></div>
 
 
-</li>
-</ol>
-<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>$ docker pull foliant/foliant
+<p>In this example, the message text contains the path to the file that is currently processed.</p>
+<p>In the next example, Pandoc backend logs the external command that is called to build needed target:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">2020-06-25 09:40:54,684 |           flt.pandoc |    DEBUG | PDF generation command: pandoc --template=&quot;/foliant_stuff/pandoc_templates/tex_templates/main.tex&quot; --output &quot;My_Awesome_Project-1.0-2020-06-25.pdf&quot; --variable title=&quot;My Awesome Project&quot; --variable version=&quot;1.0&quot; --variable subtitle=&quot;Description Of My Awesome Project&quot; --variable logo=&quot;/foliant_stuff/pandoc_templates/logos/logo.png&quot; --variable year=&quot;2020&quot; --variable title_page --variable toc --variable tof  --pdf-engine=xelatex --listings -f markdown __folianttmp__/__all__.md</span>
 </code></pre></div>
+
+
+<p>If you suspect that the command executes wrong, you can copy it and try to run directly in an interactive shell.</p>
+<p>Detailed logging in the debug mode allows you to quickly localize problems accurate to a specific Foliant extension, specific source Markdown file, specific syntax construction, and solve them with minimal time.</p>
+<h2 id="the-pre-backend-and-target-and-keeping-the-working-directory">The <code>pre</code> Backend and Target, and Keeping the Working Directory<a class="headerlink" href="#the-pre-backend-and-target-and-keeping-the-working-directory" title="Permanent link">&para;</a></h2>
+<p>Every Foliant backend takes preprocessed Markdown content and passes it to an external command. So it would be nice to see what content the backend gets, and how the backend additionally modifies this content.</p>
+<p>During build, source files of Foliant project are moved to the temporary working directory. By default, it is called <code>__folianttmp__/</code> and located in the “root” directory of the project. Source files of the project are kept unchanged. Any transformations are applied only to the files located in the temporary working directory.</p>
+<p>Foliant Core provides the built-in backend <code>pre</code> that does nothing. More precisely, this backend makes the <code>pre</code> target. The <code>pre</code> target is obtained simply by copying the temporary working directory to the project directory as the result of build.</p>
+<p>The <code>pre</code> target is the content that comes after all preprocessors are applied, but before any backend of another kind than <code>pre</code> is called.</p>
+<p>If the backend is not the location of your problem, and your problem occurs in an extension of another type (most often in a preprocessor), you don’t need to wait each time when the backend will complete to make the requested target.</p>
+<p>The <code>pre</code> target is convenient for debugging extensions of all types excluding backends, and especially preprocessors.</p>
+<p>To build Foliant project to the <code>pre</code> target, run the command:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pre
+</code></pre></div>
+
+
+<p>In additional to the <code>pre</code> backend and target, Foliant Core supports the <code>--keep_tmp</code> or <code>-k</code> command line option. By default, the temporary working directory is removed after the project build. But if the <code>--keep_tmp</code> or <code>-k</code> option is specified, the temporary working directory will be kept after build.</p>
+<p>After the project build, this directory will contain the files that are modified by all preprocessors and the chosen backend.</p>
+<p>The following command tells Foliant to build PDF with Pandoc, keeping the temporary working directory after build:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --keep_tmp
+</code></pre></div>
+
+
+<p>Tip: if Pandoc doesn’t make PDF due to errors in LaTeX markup, you can build the target <code>tex</code> and first debug the LaTeX source. Also, you may call Pandoc directly from the command line to build PDF from LaTeX source.</p>
+<h2 id="killing-two-birds-with-one-stone">Killing Two Birds With One Stone<a class="headerlink" href="#killing-two-birds-with-one-stone" title="Permanent link">&para;</a></h2>
+<p>Now you know what debugging facilities are provided by Foliant. But we strongly recommend you to make it a rule to start debugging Foliant projects with one universal shell command:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pre --debug
+</code></pre></div>
+
+
+<p>This command tells Foliant to build the <code>pre</code> target in the debug mode. And this is a very effective way to get closer to understanding what is wrong with your project.</p>
                 
                   
                 
@@ -1531,7 +1589,7 @@ $ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd6
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Welcome to Foliant!" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../architecture/" title="Architecture And Basic Design Concepts" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1540,19 +1598,19 @@ $ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd6
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Welcome to Foliant!
+                Architecture And Basic Design Concepts
               </span>
             </div>
           </a>
         
         
-          <a href="../quickstart/" title="Quickstart" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tutorials/full_docker/" title="Working Full Foliant Docker image" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Quickstart
+                Working Full Foliant Docker image
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
