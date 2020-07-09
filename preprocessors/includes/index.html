@@ -1490,6 +1490,9 @@
     <span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.includescache</span>
         <span class="nt">recursive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">extensions</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">md</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">j2</span>
         <span class="nt">aliases</span><span class="p">:</span>
             <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
@@ -1506,6 +1509,8 @@
 </dd>
 <dt><code>recursive</code></dt>
 <dd>Flag that defines whether includes in included documents should be processed.</dd>
+<dt><code>extensions</code></dt>
+<dd>List of file extensions where includes will be processed. Might be useful if you want to include content into config-file or a template-file. Default: <code>[md]</code>.</dd>
 <dt><code>aliases</code></dt>
 <dd>
 <p>Mapping from aliases to Git repository URLs. Once defined here, an alias can be used to refer to the repository instead of its full URL.</p>
@@ -1565,6 +1570,8 @@
 <dl>
 <dt><code>src</code></dt>
 <dd>Path to the local file to include.</dd>
+<dt><code>url</code></dt>
+<dd>Direct link to remote file, which needs to be included.</dd>
 <dt><code>repo_url</code></dt>
 <dd>Full remote Git repository URL without a revision.</dd>
 <dt><code>path</code></dt>
@@ -1572,7 +1579,7 @@
 <p>Path to the file inside the remote Git repository.</p>
 <blockquote>
 <p><strong>Note</strong></p>
-<p>If you are using the new syntax, the <code>src</code> attribute is required to include a local file, and the <code>repo_url</code> and <code>path</code> attributes are required to include a file from a remote Git repository. All other attributes are optional.</p>
+<p>If you are using the new syntax, the <code>src</code> attribute is required to include a local file, <code>url</code> is required to include a remote file, and the <code>repo_url</code> and <code>path</code> attributes are required to include a file from a remote Git repository. All other attributes are optional.</p>
 <p><strong>Note</strong></p>
 <p>Foliant 1.0.9 supports the processing of attribute values as YAML. You can precede the values of attributes by the <code>!path</code>, <code>!project_path</code>, and <code>!rel_path</code> modifiers (i.e. YAML tags). These modifiers can be useful in the <code>src</code>, <code>path</code>, and <code>project_root</code> attributes.</p>
 </blockquote>
