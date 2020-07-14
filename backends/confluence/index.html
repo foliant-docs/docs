@@ -550,50 +550,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#creating-pages" class="md-nav__link">
-    Creating pages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updating-pages" class="md-nav__link">
-    Updating pages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updating-part-of-a-page" class="md-nav__link">
-    Updating part of a page
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inserting-raw-confluence-tags" class="md-nav__link">
-    Inserting raw confluence tags
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-blocks-processing" class="md-nav__link">
-    Code blocks processing
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#credits" class="md-nav__link">
-    Credits
-  </a>
   
 </li>
       
@@ -1449,50 +1407,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#creating-pages" class="md-nav__link">
-    Creating pages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updating-pages" class="md-nav__link">
-    Updating pages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updating-part-of-a-page" class="md-nav__link">
-    Updating part of a page
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inserting-raw-confluence-tags" class="md-nav__link">
-    Inserting raw confluence tags
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-blocks-processing" class="md-nav__link">
-    Code blocks processing
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#credits" class="md-nav__link">
-    Credits
-  </a>
   
 </li>
       
@@ -1544,6 +1460,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <p>Specify all options in <code>backend_config.confluence</code> section:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">confluence</span><span class="p">:</span>
+    <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yml</span>
     <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
     <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user_password</span>
@@ -1555,6 +1472,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">test_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">notify_watchers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">nohead</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
@@ -1564,6 +1482,8 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 
 
 <dl>
+<dt><code>passfile</code></dt>
+<dd>Path to YAML-file holding credentials. See details in <strong>Supplying Credentials</strong> section. Default: <code>confluence_secrets.yml</code></dd>
 <dt><code>host</code></dt>
 <dd><strong>Required</strong> Host of your confluence server.</dd>
 <dt><code>login</code></dt>
@@ -1576,7 +1496,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dd>Title of the page to be created or updated.</dd>
 </dl>
 <blockquote>
-<p>Remember that page titles in the space have to be unique.</p>
+<p>Remember that page titles in one space must be unique.</p>
 </blockquote>
 <dl>
 <dt><code>space_key</code></dt>
@@ -1591,6 +1511,8 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dd>If <code>true</code> — watchers will be notified that the page has changed. Default: <code>false</code></dd>
 <dt><code>toc</code></dt>
 <dd>Set to <code>true</code> to add a table of contents to the beginning of the document. Default: <code>false</code></dd>
+<dt><code>nohead</code></dt>
+<dd>If set to <code>true</code>, first title will be removed from the page. Use it if you are experiencing duplicate titles. Default: <code>false</code></dd>
 <dt><code>restore_comments</code></dt>
 <dd>Attempt to restore inline comments near the same places after updating the page. Default: <code>true</code></dd>
 <dt><code>resolve_if_changed</code></dt>
@@ -1614,6 +1536,14 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 </code></pre></div>
 
 
+<p>or like this:</p>
+<div class="codehilite"><pre><span></span><code>Your chapter md-content
+</code></pre></div>
+
+
+<blockquote>
+<p>The result of the above examples will be exactly the same. Just remember that first syntax, with three dashes --- will only work if it is in the beginning of the document. For all other cases use the meta-tag syntax.</p>
+</blockquote>
 <p>If you want to upload a chapter into confluence, add its properties under the <code>confluence</code> key like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">confluence</span><span class="p">:</span>
@@ -1628,151 +1558,11 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <blockquote>
 <p><strong>Important notice!</strong>
 Both modes work together. If you specify the <code>id1</code> in foliant.yml and <code>id2</code> in chapter's meta — the whole project will be uploaded to the page with <code>id1</code>, and the specific chapter will also be uploaded to the page with <code>id2</code>.</p>
+<p><strong>Notice</strong>
+You can omit <code>title</code> param in metadata. In this case section heading will be used as a title.</p>
 </blockquote>
-<h4 id="creating-pages">Creating pages<a class="headerlink" href="#creating-pages" title="Permanent link">&para;</a></h4>
-<p>If you want a new page to be created for content in your Foliant project, just supply in foliant.yml the space key and a title that does not yet exist in this space. Remember that in Confluence page titles are unique inside one space. If you use a title of an already existing page, the backend will attempt to edit it and replace its content with your project.</p>
-<p>Example config for this situation is:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My unique title</span>
-    <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
-</code></pre></div>
-
-
-<p>Now if you change the title in your config, confluence will <em>create a new page with the new title</em>, leaving the old one intact.</p>
-<p>If you want to change the title of your page, the answer is in the following section.</p>
-<h4 id="updating-pages">Updating pages<a class="headerlink" href="#updating-pages" title="Permanent link">&para;</a></h4>
-<p>Generally to update the page contents you may use the same config you used to create it (see the previous section). If the page with a specified title exists, it will be updated.</p>
-<p>Also, you can just specify the id of an existing page. After build its contents will be updated.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
-</code></pre></div>
-
-
-<p>This is also <em>the only</em> way to edit a page title. If <code>title</code> param is specified, the backend will attempt to change the page's title to the new one:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">New unique title</span>
-</code></pre></div>
-
-
-<h4 id="updating-part-of-a-page">Updating part of a page<a class="headerlink" href="#updating-part-of-a-page" title="Permanent link">&para;</a></h4>
-<p>Confluence backend can also upload an article into the middle of a Confluence page, leaving all the rest of it intact. To do this you need to add an <em>Anchor</em> into your page in the place where you want Foliant content to appear.</p>
-<ol>
-<li>Go to Confluence web interface and open the article.</li>
-<li>Go to Edit mode.</li>
-<li>Put the cursor in the position where you want your Foliant content to be inserted and start typing <code>{anchor</code> to open the macros menu and locate the Anchor macro.</li>
-<li>Add an anchor with the name <code>foliant</code>.</li>
-<li>Save the page.</li>
-</ol>
-<p>Now if you upload content into this page (see two previous sections), Confluence backend will leave all text which was before and after the anchor intact, and add your Foliant content in the middle.</p>
-<p>You can also add two anchors: <code>foliant_start</code> and <code>foliant_end</code>. In this case, all text between these anchors will be replaced by your Foliant content.</p>
-<h4 id="inserting-raw-confluence-tags">Inserting raw confluence tags<a class="headerlink" href="#inserting-raw-confluence-tags" title="Permanent link">&para;</a></h4>
-<p>If you want to supplement your page with confluence macros or any other storage-specific HTML, you may do it by wrapping them in the <code>&lt;raw_confluence&gt;&lt;/raw_confluence&gt;</code> tag.</p>
-<p>For example, if you wish to add a table of contents into the middle of the document for some reason, you can do something like this:</p>
-<div class="codehilite"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorem nulla quam doloribus delectus voluptate.
-
-<span class="p">&lt;</span><span class="nt">raw_confluence</span><span class="p">&gt;&lt;</span><span class="nt">ac:structured-macro</span> <span class="na">ac:macro-id</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">ac:name</span><span class="o">=</span><span class="s">&quot;toc&quot;</span> <span class="na">ac:schema-version</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">raw_confluence</span><span class="p">&gt;</span>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam cumque soluta sequi blanditiis, voluptatibus quaerat similique nihil debitis repellendus.
-</code></pre></div>
-
-
-<h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
-<p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">codeblocks</span><span class="p">:</span>  <span class="c1"># all are optional</span>
-            <span class="nt">theme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">django</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Code example</span>
-            <span class="nt">linenumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-            <span class="nt">collapse</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div>
-
-
-<dl>
-<dt><code>theme</code></dt>
-<dd>Color theme of the code blocks. Should be one of:</dd>
-</dl>
-<ul>
-<li><code>emacs</code>,</li>
-<li><code>django</code>,</li>
-<li><code>fadetogrey</code>,</li>
-<li><code>midnight</code>,</li>
-<li><code>rdark</code>,</li>
-<li><code>eclipse</code>,</li>
-<li><code>confluence</code>.</li>
-</ul>
-<dl>
-<dt><code>title</code></dt>
-<dd>Title of the code block.</dd>
-<dt><code>linenumbers</code></dt>
-<dd>Show line numbers in code blocks. Default: <code>false</code></dd>
-<dt><code>collapse</code></dt>
-<dd>Collapse code blocks into a clickable bar. Default: <code>false</code></dd>
-</dl>
-<p>Right now Foliant only converts code blocks by backticks/tildes (tabbed code blocks are ignored for now):</p>
-<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="n">code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span><span class="p">:</span>
-
-<span class="o">```</span><span class="n">python</span>
-<span class="n">def</span> <span class="n">test2</span><span class="p">():</span>
-    <span class="n">pass</span>
- <span class="o">```</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code><span class="err">And this:</span>
-<span class="err">~~~</span>
-<span class="err">def test3():</span>
-<span class="err">    pass</span>
-<span class="err">~~~</span>
-</code></pre></div>
-
-
-<p>Syntax name, defined after backticks/tildes is converted into its Confluence counterpart. Right now following syntaxes are supported:</p>
-<ul>
-<li><code>actionscript</code>,</li>
-<li><code>applescript</code>,</li>
-<li><code>bash</code>,</li>
-<li><code>c</code>,</li>
-<li><code>c</code>,</li>
-<li><code>coldfusion</code>,</li>
-<li><code>cpp</code>,</li>
-<li><code>cs</code>,</li>
-<li><code>css</code>,</li>
-<li><code>delphi</code>,</li>
-<li><code>diff</code>,</li>
-<li><code>erlang</code>,</li>
-<li><code>groovy</code>,</li>
-<li><code>html</code>,</li>
-<li><code>java</code>,</li>
-<li><code>javascript</code>,</li>
-<li><code>js</code>,</li>
-<li><code>perl</code>,</li>
-<li><code>php</code>,</li>
-<li><code>powershell</code>,</li>
-<li><code>python</code>,</li>
-<li><code>xml</code>,</li>
-<li><code>yaml</code>.</li>
-</ul>
-<h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
-<p>The following wonderful tools and libraries are used in foliantcontrib.confluence:</p>
-<ul>
-<li><a href="https://github.com/atlassian-api/atlassian-python-api">Atlassian Python API wrapper</a>,</li>
-<li><a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a>,</li>
-<li><a href="https://github.com/pyparsing/pyparsing">PyParsing</a>.</li>
-</ul>
+<p>If you want to upload just a part of the chapter, specify meta tag under the heading, which you want to upload, like this:</p>
+<p>```html</p>
                 
                   
                 

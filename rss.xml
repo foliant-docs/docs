@@ -7,6 +7,19 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.12</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d4a8def709441f0a6a324db5543d21cf</guid>
+            <pubDate>Tue, 14 Jul 2020 12:47:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: option to store passwords in passfile.</li>
+<li>New: nohead option to crop first title from the page.</li>
+<li>Fix: better error reporting after updated atlassian-python-api package.</li>
+<li>New: if you specified only <code>space_key</code> param in metadata and no <code>title</code>, section heading will be used as title.</li>
+<li>Fix: if hierarchy is created on the test run, missing parents by title are now ignored</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.multilinetables 1.2.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multilinetables.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.multilinetables.git#202478c1b929691ecd88cfd123c2a874</guid>

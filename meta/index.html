@@ -1619,7 +1619,7 @@
 <p><strong>main_section</strong></p>
 <p>A property which holds the main section of the chapter.</p>
 <p><strong>name</strong></p>
-<p>Chapter's name.</p>
+<p>Chapter's name as stated in foliant.yml.</p>
 <p><strong>filename</strong></p>
 <p>Chapter's filename.</p>
 <h3 id="the-section-class">The Section class<a class="headerlink" href="#the-section-class" title="Permanent link">&para;</a></h3>
@@ -1627,7 +1627,7 @@
 <p><strong>iter_children()</strong></p>
 <p>This method returns an iterator which yields the section's child sections (<code>Section</code> objects) in the proper order.</p>
 <p><strong>get_source(self, without_meta=True) -&gt; str</strong></p>
-<p>Returns section's source. If <code>without_meta</code> is <code>True</code>, all meta tags are cut out from the text.</p>
+<p>Returns section's source. The section title is also included in the output. If <code>without_meta</code> is <code>True</code>, all meta tags are cut out from the text.</p>
 <p><strong>is_main(self) -&gt; bool</strong></p>
 <p>Determine whether the section is main or not.</p>
 <p><em>important properties</em></p>
