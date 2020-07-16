@@ -1474,7 +1474,7 @@
                 <h1 id="swaggerdoc">SwaggerDoc<a class="headerlink" href="#swaggerdoc" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.swaggerdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.swaggerdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.swaggerdoc.svg?label=GitHub" /></a></p>
 <h2 id="swagger-api-docs-generator-for-foliant">Swagger API Docs Generator for Foliant<a class="headerlink" href="#swagger-api-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../_img_175453bc-c5cd-11ea-9ab4-0242ac120002/swagger_1755cf4e-c5cd-11ea-9ab4-0242ac120002.png" /></p>
+<p><img alt="" src="../../_img_534d2722-c73f-11ea-8d18-0242ac120002/swagger_534f01aa-c73f-11ea-8d18-0242ac120002.png" /></p>
 <p><em>The static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with SwaggerDoc preprocessor</em></p>
 <p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">Widdershins</a> for generating Markdown from swagger spec files.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1532,7 +1532,7 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> tag at the position in the document where the generated documentation should be inserted:</p>
-<div class="codehilite"><pre><span></span><code>## Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the automatically generated documentation of our API.
 
@@ -1542,7 +1542,7 @@ This document contains the automatically generated documentation of our API.
 
 <p>Each time the preprocessor encounters the tag <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to Swagger spec file are taken from foliant.yml.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span><code>## Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 Introduction text for API documentation.
 

@@ -9,13 +9,13 @@
         <item>
             <title>foliantcontrib.confluence 0.6.12</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d4a8def709441f0a6a324db5543d21cf</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#6cc5e7a9b27940aef1129e0d40ff8c3b</guid>
             <pubDate>Tue, 14 Jul 2020 12:47:49 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>New: option to store passwords in passfile.</li>
 <li>New: nohead option to crop first title from the page.</li>
 <li>Fix: better error reporting after updated atlassian-python-api package.</li>
-<li>New: if you specified only <code>space_key</code> param in metadata and no <code>title</code>, section heading will be used as title.</li>
+<li>New: if you specified only <escaped hash="b55c89987a5aad4cc26e7361c285d881"></escaped> param in metadata and no <escaped hash="92f24a1f999095d1e7e6125d7916d913"></escaped>, section heading will be used as title.</li>
 <li>Fix: if hierarchy is created on the test run, missing parents by title are now ignored</li>
 </ul>]]></description>
         </item>
@@ -29,13 +29,13 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.includes 1.1.10</title>
+            <title>foliantcontrib.includes 1.1.11</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#9a7618bb83e96f090f652fc6862e8141</guid>
-            <pubDate>Wed, 08 Jul 2020 11:37:28 +0300</pubDate>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#67d34d9dc37f8481643b3259cf946625</guid>
+            <pubDate>Thu, 09 Jul 2020 11:22:08 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>New: <code>extensions</code> parameter to process file types different from .md</li>
-<li>New: <code>url</code> attribute to include content from direct link to file</li>
+<li>New: <escaped hash="0f377c5efd7c12d18230e8e4315fbbd8"></escaped> parameter to process file types different from .md</li>
+<li>New: <escaped hash="61d7330b4e95acd575f02a3b2ee3c73a"></escaped> attribute to include content from direct link to file</li>
 </ul>]]></description>
         </item>
         <item>
@@ -139,7 +139,7 @@
         <item>
             <title>foliantcontrib.dbdoc 0.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#23070fb2e0c384efcbb45ff5d2244c9d</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#05494a96deada5f44f49f265a8071936</guid>
             <pubDate>Tue, 02 Jun 2020 14:52:05 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -166,10 +166,10 @@
         <item>
             <title>foliantcontrib.bindfigma 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#2e3efb15c42c6ccf01065bc382a6b987</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#98765a25203df15fb36061b6776debea</guid>
             <pubDate>Wed, 27 May 2020 00:54:36 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>api_caching</code> option. Add source Markdown file path to the messages written to STDOUT.</li>
+<li>Add <escaped hash="fa3871eca6696eec5a70d4effd0880e6"></escaped> option. Add source Markdown file path to the messages written to STDOUT.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -194,12 +194,12 @@
         <item>
             <title>foliantcontrib.templateparser 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#5d9216002da2f46d5de0feae21259839</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#24e9085760b78b0e3297b192b098398f</guid>
             <pubDate>Fri, 22 May 2020 14:53:02 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>All variables, supplied in context, are also available inside the <code>_foliant_context</code> variable</li>
-<li>You can now supply a link to file on remote server in the <code>ext_context</code> parameter.</li>
-<li>External context yaml-file now may be not a dictionary. In this case it will be available under the <code>context</code> template variable.</li>
+<li>All variables, supplied in context, are also available inside the <escaped hash="f8ccae7dbfb67c5098d896a45573aa96"></escaped> variable</li>
+<li>You can now supply a link to file on remote server in the <escaped hash="f3e53cdf08019a1a68c77580b8e5d96d"></escaped> parameter.</li>
+<li>External context yaml-file now may be not a dictionary. In this case it will be available under the <escaped hash="fe9e5d5d906fef995c2763452b9c8733"></escaped> template variable.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -242,7 +242,7 @@
         <item>
             <title>foliantcontrib.dbmldoc 0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#966eebea58cb760b02724490b7c077c5</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#ea6b11d7461eeab19538a052606cbd85</guid>
             <pubDate>Wed, 22 Apr 2020 11:17:43 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -260,10 +260,10 @@
         <item>
             <title>foliantcontrib.elasticsearch 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#04e42203581dac708e1cebd017ed9c8e</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#3016a5d1519b3c5d6ed861c010c72bb7</guid>
             <pubDate>Tue, 14 Apr 2020 01:33:26 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>copy</code> action.</li>
+<li>Add <escaped hash="cf1b3b1776d0d05e295618646490b382"></escaped> action.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -289,31 +289,31 @@
         <item>
             <title>foliantcontrib.showcommits 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.showcommits.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.showcommits.git#db4645086fc751ca70c324e6d02fece8</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.showcommits.git#227e54fbc8705a2065038e5e2efc82eb</guid>
             <pubDate>Fri, 10 Apr 2020 00:04:35 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>try_default_path</code> and <code>escape_html</code> options.</li>
+<li>Add <escaped hash="dcffaa955b72457afc5e4403503ff918"></escaped> and <escaped hash="97ad1372dc273b84f34dd6143fdb801b"></escaped> options.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.elasticsearch 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#040585fbdcfdcee336198a836673b410</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#54fe3d11216356e404d9897cbfa8327b</guid>
             <pubDate>Thu, 09 Apr 2020 23:04:44 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>require_env</code> option.</li>
+<li>Add <escaped hash="6257cba03eb07c2b00bc48ffb06eea8e"></escaped> option.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.meta 1.3.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#f09953d1b99d781116c90fc650ccd4c5</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#7dda34ae7ab180538810b50be137f023</guid>
             <pubDate>Mon, 06 Apr 2020 13:04:12 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Cutomids are now cut out from titles.</li>
 <li>Added logging.</li>
-<li>Meta commands now support <code>--debug -d</code> and <code>--quiet -q</code> arguments.</li>
-<li><code>meta generate</code> command now gives some verbose output after work.</li>
+<li>Meta commands now support <escaped hash="4698d0300c725329cb2716ab48b4fff4"></escaped> and <escaped hash="0c64009b07551591d6ef4cfeb6e917c2"></escaped> arguments.</li>
+<li><escaped hash="d5e7c185c484acbe8db0e17b6955e2bf"></escaped> command now gives some verbose output after work.</li>
 <li>Fix: get_section_by_offset didn't count YFM.</li>
 </ul>]]></description>
         </item>
@@ -329,10 +329,10 @@
         <item>
             <title>foliantcontrib.utils.preprocessor_ext 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#e528ec223336a7629e0b9a3caafd9c46</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#d0edd35c6ed604699197eff6551d0c50</guid>
             <pubDate>Thu, 02 Apr 2020 12:07:42 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>_process_all_files</code> method for preprocessors without tags.</li>
+<li>Add <escaped hash="b8ead95d49c07ba6e8738382ffafca0a"></escaped> method for preprocessors without tags.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -365,10 +365,10 @@
         <item>
             <title>foliantcontrib.metagraph 0.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.metagraph.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#ab52e435b64873c66679c32365b01851</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#8ea256cf8f6e4852a4b8af853bd72da1</guid>
             <pubDate>Fri, 27 Mar 2020 12:05:20 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>New parameter: <code>draw_all</code>, which controls which sections are included.</li>
+<li>New parameter: <escaped hash="607ebdcbbe45e9c195740d2a904e66a9"></escaped>, which controls which sections are included.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -383,20 +383,20 @@
         <item>
             <title>foliantcontrib.templateparser 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#9533dd933f98db8697777ce74f38a2d9</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#7dab5418e601af840a34133c9f59699c</guid>
             <pubDate>Thu, 26 Mar 2020 14:22:37 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Now meta dictionary is available inside templates under <code>meta</code> variable.</li>
-<li>Project's meta object is available inside templates under <code>meta_object</code> variable.</li>
+<li>Now meta dictionary is available inside templates under <escaped hash="071d88d257bddad6490719e081065bd7"></escaped> variable.</li>
+<li>Project's meta object is available inside templates under <escaped hash="b4b91136b716b15a225149598b29a85b"></escaped> variable.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.meta 1.3.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#d184113c8b987125bf70bc764a5ed41d</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#c5b9eb0d5b6acb083cf27ff1f3f96be0</guid>
             <pubDate>Thu, 26 Mar 2020 11:19:21 +0300</pubDate>
             <description><![CDATA[<ul>
-<li><code>remove_meta</code> now also trims whitespaces in the beginning of the file after removing YFM</li>
+<li><escaped hash="e018895f65e2f601d1784a1abf39f8fb"></escaped> now also trims whitespaces in the beginning of the file after removing YFM</li>
 <li>Main section's title is now set to first heading, if:<ul>
 <li>the first heading is a 1-level heading (#),</li>
 <li>the first heading doesn't have meta.</li>
@@ -417,26 +417,26 @@
         <item>
             <title>foliantcontrib.confluence 0.6.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d6e35f3be43610727aa684a029abbecc</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#7235129e7f8d24af5ebe8bfc05f35a14</guid>
             <pubDate>Wed, 25 Mar 2020 11:15:21 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Introducing import from confluence into Foliant with <code>confluence</code> tag</li>
+<li>Introducing import from confluence into Foliant with <escaped hash="948952df8499cbb3e0a7be039cfb2aca"></escaped> tag</li>
 <li>Fix: solved conflicts between inline comments and macros (including anchors)</li>
 <li>Fix: backend crashed if new page content was empty</li>
 <li>Markdown code blocks are now converted into code-block macros</li>
 <li>Markdown task lists are now converted into task-list macros</li>
-<li>New <code>test_run</code> option</li>
+<li>New <escaped hash="657ccf102db124d5883838d8847a7220"></escaped> option</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.utils.combined_options 1.0.10</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#4b2d2f8fa92eadd9df8eddc7e5484cc3</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#dc5128f8d81bf1510fe9073e90d6d35e</guid>
             <pubDate>Mon, 23 Mar 2020 11:47:36 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Fix: default dict was overriden after the first use.</li>
 <li>Allow to supply the list of priorities instead of just one priority.</li>
-<li>Priority for those option dictionaries, which are not mentioned in the <code>priority</code> param, are now defined by the order dictionaries are defined.</li>
+<li>Priority for those option dictionaries, which are not mentioned in the <escaped hash="6dd9cfc9dd7efe6460008e181811c4a0"></escaped> param, are now defined by the order dictionaries are defined.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -469,19 +469,19 @@
         <item>
             <title>foliantcontrib.graphviz 1.1.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.graphviz.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#eec1af5484f69cb29a5a2bf71838530a</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#7bf5f9ccf430489a9e08a41904ec7a3b</guid>
             <pubDate>Thu, 05 Mar 2020 12:41:05 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix: as_image takes effect only with <code>svg</code> format.</li>
+<li>Fix: as_image takes effect only with <escaped hash="6fd57b1aa12c9e312a87900701b6fa54"></escaped> format.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.bindfigma 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindfigma.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#612e36e62eb22e5b373eacfe2d6e4454</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindfigma.git#0e71c7e3a722f4bff31f16030a2bb53d</guid>
             <pubDate>Fri, 28 Feb 2020 15:08:44 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>hyperlinks</code> and <code>multi_delimeter</code> options.</li>
+<li>Add <escaped hash="9e28803ecc5830638bf8e9c528c8910c"></escaped> and <escaped hash="97ed225654b3dfb636ee3f58b466525c"></escaped> options.</li>
 <li>Output error messages to STDOUT.</li>
 <li>Minor improvements.</li>
 </ul>]]></description>
@@ -507,11 +507,11 @@
         <item>
             <title>foliantcontrib.utils.combined_options 1.0.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#d743f066b3862d5ccf1e409485155b7a</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#109f94b7d4ef9ef78347746c7a8b02eb</guid>
             <pubDate>Fri, 07 Feb 2020 09:42:34 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>defaults now actually supply default value (before they were only used for validation)</li>
-<li>add None to possible type validation in <code>val_type</code>.</li>
+<li>add None to possible type validation in <escaped hash="b29ecda4b5f31dfbf2ee3134ea8faec9"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -553,10 +553,10 @@
         <item>
             <title>foliantcontrib.meta 1.3.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#014bfbb935af161b1d5ce4f2d3fea98b</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#d250018383ee621b72fe2fc9709929ab</guid>
             <pubDate>Tue, 04 Feb 2020 10:15:49 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Restructure modules to aid import errors. Meta-related functions and classes are now available independantly from <code>foliant.meta</code> package.</li>
+<li>Restructure modules to aid import errors. Meta-related functions and classes are now available independantly from <escaped hash="e821e8ee8f8c2407ed47d93427c13f31"></escaped> package.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -573,29 +573,29 @@
         <item>
             <title>foliantcontrib.meta 1.2.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#4270a6c68bc9a80ac4a886ba6c68b848</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#1d179340a620233773c285d5fa5c2935</guid>
             <pubDate>Mon, 03 Feb 2020 15:33:37 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>get_chapter</code> method to Meta class.</li>
+<li>Add <escaped hash="05899b01d9391d9753b9ea45d4a612aa"></escaped> method to Meta class.</li>
 <li>Add Developer's guide to readme.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.elasticsearch 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#5fdac9cc64132d64f396aa3b1b7496aa</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#c05e5f865c4c568d36d3e2f471556579</guid>
             <pubDate>Fri, 31 Jan 2020 17:37:34 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>format</code> option. Use <code>escape_html</code> only for <code>format: plaintext</code>.</li>
+<li>Add <escaped hash="703769be5e6210b6a2b6b99e92112954"></escaped> option. Use <escaped hash="97ad1372dc273b84f34dd6143fdb801b"></escaped> only for <escaped hash="ae42b10a2275c764a90ccc3f86c6ffe6"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.elasticsearch 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#2806901437433c2fdc9a0451beb9d6db</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.elasticsearch.git#f30e3ece5a05144e2f33328ada367308</guid>
             <pubDate>Fri, 31 Jan 2020 15:03:58 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>escape_html</code> option. Perform actions <code>delete</code>, <code>create</code> by default. Fix HTML markup in Web application example.</li>
+<li>Add <escaped hash="97ad1372dc273b84f34dd6143fdb801b"></escaped> option. Perform actions <escaped hash="3649b15e31d22a1e2210f014d843b9fa"></escaped>, <escaped hash="e49cf31f5ed35f0eb694c7714e8c3234"></escaped> by default. Fix HTML markup in Web application example.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -622,10 +622,10 @@
         <item>
             <title>foliantcontrib.utils.header_anchors 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#0f595d84026dfe0781f1f163300494b1</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#65ff8764e3531544fb3136fb3115dfc7</guid>
             <pubDate>Tue, 24 Dec 2019 10:48:02 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>is_flat</code> function to determine flat backends.</li>
+<li>Add <escaped hash="4917d79132a2177e737912d39f741a03"></escaped> function to determine flat backends.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -698,10 +698,10 @@
         <item>
             <title>foliantcontrib.flatten 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#e81b2a39352ade41acd339151535e654</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#46b17902849548175990625e7d2a8b4e</guid>
             <pubDate>Thu, 12 Dec 2019 12:20:50 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Rewrite local links (e.g. <code>some_file.md#some_id</code> → <code>#some_id</code>).</li>
+<li>Rewrite local links (e.g. <escaped hash="28e842e12ace283ef9ffb57cdb7004d0"></escaped> → <escaped hash="74ee36e7cce26aa003e6cc05601ab499"></escaped>).</li>
 </ul>]]></description>
         </item>
         <item>
@@ -717,11 +717,11 @@
         <item>
             <title>foliantcontrib.init 1.0.8</title>
             <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#b572eeb30b090e441959baef7d641d21</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#f15faf44e597d28475b362d1e455ce32</guid>
             <pubDate>Mon, 02 Dec 2019 17:34:43 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Add comment to Dockerfile with option to use Foliant full image.</li>
-<li>Remove slugs from docker-compose. Now the service is always named <code>foliant</code>.</li>
+<li>Remove slugs from docker-compose. Now the service is always named <escaped hash="759368b41ef8c39040e99ac58cd44b65"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -764,17 +764,17 @@
         <item>
             <title>foliantcontrib.imgcaptions 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#eb2f09a11039abefb8bb9ce380597cf1</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#4b75215f2c17b3c14decf2cd3cf6a1a8</guid>
             <pubDate>Wed, 20 Nov 2019 10:35:17 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix: <code>stylesheet_path</code> only worked with the <code>!project_path</code> modifier.</li>
-<li>Add the <code>template</code> parameter to customize the caption HTML tag.</li>
+<li>Fix: <escaped hash="8916f606a2e825fbcd680e74b45ce453"></escaped> only worked with the <escaped hash="b49a3941ba7c6b3716b144be8712cd39"></escaped> modifier.</li>
+<li>Add the <escaped hash="6ce79995ebc883962d47778ff4c82428"></escaped> parameter to customize the caption HTML tag.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.mdtopdf 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git#a9591036eff5bbcd7660b6f311326056</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mdtopdf.git#5124bc6564ab6d6bf32786e1562dc79a</guid>
             <pubDate>Sat, 09 Nov 2019 12:34:29 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release.</li>
@@ -783,7 +783,7 @@
         <item>
             <title>foliantcontrib.ramldoc 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.ramldoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#007197b836d7a631eb9a571a89ff8968</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#7e805eff6b75862f2c69f0191de48259</guid>
             <pubDate>Wed, 06 Nov 2019 16:03:18 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -829,29 +829,29 @@
         <item>
             <title>foliantcontrib.multiproject 1.0.12</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#e4df0511945a523c58a7d7a9ae6fc6a2</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#46e8049fffd7e7d4bfabfaacde539cf8</guid>
             <pubDate>Wed, 16 Oct 2019 14:44:08 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Take into account the <code>quiet</code> flag. Require Foliant 1.0.11 for this reason.</li>
+<li>Take into account the <escaped hash="2959cc5bc440197137e555586ecf8cda"></escaped> flag. Require Foliant 1.0.11 for this reason.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.includes 1.1.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#71c96065b21249d4327d4beaecb54822</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#e7b38600688d26a8f582642363baddcd</guid>
             <pubDate>Wed, 16 Oct 2019 14:38:39 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow to specify custom options for EscapeCode preprocessor as the <code>escape_code.options</code> config parameter value.</li>
+<li>Allow to specify custom options for EscapeCode preprocessor as the <escaped hash="c53f1d2c0e939213c86b3f2f5787390b"></escaped> config parameter value.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliant 1.0.11</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#274536f42b30fa3bcd6053b1f45408aa</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#1bf9e16d5b1eb70ef563758d89cfebac</guid>
             <pubDate>Wed, 16 Oct 2019 14:23:01 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow to specify custom options for EscapeCode preprocessor as the <code>escape_code.options</code> config parameter value.</li>
-<li>Pass the <code>quiet</code> flag to <code>BaseParser()</code> as an optional argument for using in config extensions.</li>
+<li>Allow to specify custom options for EscapeCode preprocessor as the <escaped hash="c53f1d2c0e939213c86b3f2f5787390b"></escaped> config parameter value.</li>
+<li>Pass the <escaped hash="2959cc5bc440197137e555586ecf8cda"></escaped> flag to <escaped hash="7ddc7d2c86e6f7e0e33dca80580491c3"></escaped> as an optional argument for using in config extensions.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -895,19 +895,19 @@
         <item>
             <title>foliantcontrib.utils.combined_options 1.0.8</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#a1da4f195c77bc265f7c321c2f6dbaf5</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#d0e7bf89f9ed9222ddfe75d4e46bfd9d</guid>
             <pubDate>Wed, 02 Oct 2019 10:10:50 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix <code>validate_exists</code> validator.</li>
+<li>Fix <escaped hash="92dd2e169f7e5bafc813491db04715d5"></escaped> validator.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.confluence 0.6.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#40460e036a971a5808efb2a692d8acef</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#82d5167eb690d185f21d321bf1fb7437</guid>
             <pubDate>Tue, 01 Oct 2019 12:43:46 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Added <code>parent_title</code> parameter.</li>
+<li>Added <escaped hash="2bd9359523b1e7dc82bf3372344abdec"></escaped> parameter.</li>
 <li>Fix: images were not uploaded for new pages.</li>
 </ul>]]></description>
         </item>
@@ -923,19 +923,19 @@
         <item>
             <title>foliantcontrib.flatten 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#05beb8ca02466f69be84f2c51a838cee</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#15103b8585c9fb43ca54cc9873f5a8ac</guid>
             <pubDate>Thu, 26 Sep 2019 12:22:33 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add the <code>keep_sources</code> option to keep original files in the temporary working directory after flattening.</li>
+<li>Add the <escaped hash="97d1812548be9fa1f6dddbc110629a6b"></escaped> option to keep original files in the temporary working directory after flattening.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.confluence 0.6.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#19a37a4d0012049f11d2c064a8288fb0</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#3f40267a372e506016aae2d53c410752</guid>
             <pubDate>Wed, 25 Sep 2019 13:19:44 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Now content is put in place of <code>foliant</code> anchor or instead of <code>foliant_start</code>...<code>foliant_end</code> anchors on the target page. If no anchors on page — content replaces the whole body.</li>
+<li>Now content is put in place of <escaped hash="759368b41ef8c39040e99ac58cd44b65"></escaped> anchor or instead of <escaped hash="3b1d6a5cd98be0c63dff49b486375679"></escaped>...<escaped hash="a8136d8ac4fc467e373d1ace2e742812"></escaped> anchors on the target page. If no anchors on page — content replaces the whole body.</li>
 <li>New modes (backwards compatibility is broken!).</li>
 <li>Now following files are available for debug in cache dir: 1. markdown before conversion to html. 2. Converted to HTML. 3. Final XHTML source which is uploaded to confluence.</li>
 <li>Working (but far from perfect) detection if file was changed.</li>
@@ -946,21 +946,21 @@
         <item>
             <title>foliantcontrib.confluence 0.5.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#136672a1f6ca89de19d654bbf468eb1b</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#fbe0a349ad8cffb21721aebc8fd62e59</guid>
             <pubDate>Thu, 19 Sep 2019 13:54:50 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Completely rewrite restoring inline comments feature.</li>
-<li>Add <code>restore_comments</code> and <code>resolve_if_changed</code> emergency options.</li>
-<li>Allow insert raw confluence code (macros, etc) inside <code>&lt;raw_confluence&gt;</code> tag.</li>
+<li>Add <escaped hash="bcb05e50741b9d2d8cdee2201a5c130d"></escaped> and <escaped hash="40b727f0f56c55fc43dec48ee2c6cdb6"></escaped> emergency options.</li>
+<li>Allow insert raw confluence code (macros, etc) inside <escaped hash="3c683a5d70c981556f6ee0ac8a937f22"></escaped> tag.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.history 1.0.8</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#e74d8dad5d5cd8d8ecc49f93f0fc7b38</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#9a96c77b1bcbaebade8e0af808f3963c</guid>
             <pubDate>Thu, 19 Sep 2019 13:47:54 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow to ignore merge commits in <code>from: commits</code> mode.</li>
+<li>Allow to ignore merge commits in <escaped hash="9166a7229a0379ddc3ce81c2bfc77dbe"></escaped> mode.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1065,10 +1065,10 @@
         <item>
             <title>foliantcontrib.swaggerdoc 1.2.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git#b6aa0eef50e96ac08678bd23d2635987</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git#a6cc64b1ebf1287c822037fe13d75cf9</guid>
             <pubDate>Mon, 26 Aug 2019 16:40:39 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>spec_path</code> and <code>spec_url</code> parameters.</li>
+<li>Add <escaped hash="ed0d48e65bd1e566227549770b3a63cf"></escaped> and <escaped hash="d3a537a87b3aab9157ae99e8f6f427c5"></escaped> parameters.</li>
 <li>All path tag parameters are now loaded relative to current file.</li>
 <li>Better logging and error reporting</li>
 </ul>]]></description>
@@ -1076,11 +1076,11 @@
         <item>
             <title>foliantcontrib.utils.combined_options 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#b330a8e589e1a0aadbdfae01d2765dfd</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#fcad30d66afaf03126ddfd090cda966c</guid>
             <pubDate>Mon, 26 Aug 2019 16:27:24 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>validate_exists</code> validator.</li>
-<li>Add <code>rel_path_convertor</code>.</li>
+<li>Add <escaped hash="92dd2e169f7e5bafc813491db04715d5"></escaped> validator.</li>
+<li>Add <escaped hash="0fcc787bdff6c16e598eabdbd47bc31e"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1183,11 +1183,11 @@
         <item>
             <title>foliantcontrib.confluence 0.2.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#f29b5ce03bd2538270339572738aab6c</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#6770f15d6031aa3b69c96e7409c82e32</guid>
             <pubDate>Fri, 16 Aug 2019 15:26:14 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Allow to input login and/or password during build</li>
-<li>Added <code>pandoc_path</code> option</li>
+<li>Added <escaped hash="afcd4216ee796fa6ca872293c825b774"></escaped> option</li>
 <li>Better logging and error catching</li>
 </ul>]]></description>
         </item>
@@ -1205,7 +1205,7 @@
         <item>
             <title>foliantcontrib.confluence 0.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#e4f4e62aa9843dd43dcce6c4e52097dd</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#b3e4b28e677b288baec0968d724d5203</guid>
             <pubDate>Thu, 15 Aug 2019 16:17:50 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release.</li>
@@ -1214,10 +1214,10 @@
         <item>
             <title>foliantcontrib.includes 1.1.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#199fdd0044f2ca42f2e3448d04397762</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#d348c8eab4e4f67c918684fcf9960599</guid>
             <pubDate>Wed, 14 Aug 2019 14:05:07 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow to specify IDs of anchors in the <code>from_id</code> and <code>to_id</code> attributes. Support the <code>to_end</code> attribute.</li>
+<li>Allow to specify IDs of anchors in the <escaped hash="b7f09109bab8a6749d345d4714d60259"></escaped> and <escaped hash="0904eea66de77f737d8ceb126d4b3ecd"></escaped> attributes. Support the <escaped hash="5c84cc5aeec5e20cfc8b3ff5c8d41666"></escaped> attribute.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1241,7 +1241,7 @@
         <item>
             <title>foliantcontrib.mermaid 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mermaid.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.mermaid.git#43fe80476fea0ec05c6e8b3937108542</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mermaid.git#a12c85760cc8ac734f33e3152d77cd30</guid>
             <pubDate>Thu, 01 Aug 2019 10:12:37 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -1250,29 +1250,29 @@
         <item>
             <title>foliantcontrib.includes 1.1.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#8d9b5eb91134f50a6dc8af7f2ef7b244</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#7113307f5d7bf9a37e9cb027237ef448</guid>
             <pubDate>Tue, 30 Jul 2019 17:11:16 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix include statement regex pattern. Tags joined with <code>|</code> must be in non-capturing parentheses.</li>
+<li>Fix include statement regex pattern. Tags joined with <escaped hash="6544f41493de8c467288a7b6f13614d5"></escaped> must be in non-capturing parentheses.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliant 1.0.10</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#e7fd9adec33814411a7a3bcf927354a8</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#a0f161735a2e173a176c854f520aa08c</guid>
             <pubDate>Tue, 30 Jul 2019 15:43:40 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>escape_code</code> config option. To use it, escapecode and unescapecode preprocessors must be installed.</li>
+<li>Add <escaped hash="80f56b684b71be2939707b2d152aeb6f"></escaped> config option. To use it, escapecode and unescapecode preprocessors must be installed.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.includes 1.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#6d7f870a8e179018adfcd8f35267e6ea</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#9f87942860e75211da3505a04e0e06a5</guid>
             <pubDate>Tue, 30 Jul 2019 15:30:28 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Support <code>escape_code</code> config option. Require Foliant 1.0.10 and escapecode preprocessor 1.0.0.</li>
-<li>Process <code>sethead</code> recursively.</li>
+<li>Support <escaped hash="80f56b684b71be2939707b2d152aeb6f"></escaped> config option. Require Foliant 1.0.10 and escapecode preprocessor 1.0.0.</li>
+<li>Process <escaped hash="75ed5477f4312d008e1fd238bbd8f08f"></escaped> recursively.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1288,20 +1288,20 @@
         <item>
             <title>foliantcontrib.bindsympli 1.0.14</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindsympli.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#177a5e16021ce1dcd205c7556930e199</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#c19c771432f7f9b8b116d67ea39f580a</guid>
             <pubDate>Tue, 16 Jul 2019 13:50:48 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>width</code> attribute to <code>&lt;sympli&gt;</code> tag.</li>
+<li>Add <escaped hash="b5807817c16d39e1ee0779073d343365"></escaped> attribute to <escaped hash="c4ed3a7c7bdb0b8c1aad91cd10cd6245"></escaped> tag.</li>
 <li>Refactor a little.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.slugs 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.slugs.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.slugs.git#d2a04fdb9ee87d35d2c65e5d3e381cd0</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.slugs.git#4f5685faed6b17f1a449472280405426</guid>
             <pubDate>Mon, 15 Jul 2019 13:40:38 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>!version</code> and <code>!commit_count</code> YAML tags.</li>
+<li>Add <escaped hash="98392830aea9a5a98eca2bc5eec38fd7"></escaped> and <escaped hash="3e89282d63aa0f48b1758b69180a23c1"></escaped> YAML tags.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1316,7 +1316,7 @@
         <item>
             <title>foliantcontrib.docus 0.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.docus.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.docus.git#20a368c72f95387b8e68ce9bbd7717bc</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.docus.git#db8039e8650db85c810fe3a3f13a014c</guid>
             <pubDate>Tue, 09 Jul 2019 13:40:52 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release.</li>
@@ -1344,10 +1344,10 @@
         <item>
             <title>foliantcontrib.project_graph 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.project_graph.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.project_graph.git#559bc3a5b336c81551fc15436e3fe3b9</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.project_graph.git#1c6ba98bb120fcf9fb50e84b74bc67b5</guid>
             <pubDate>Mon, 01 Jul 2019 18:54:52 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Rename rel attributes: <code>rel_path</code> to <code>path</code>, <code>rel_id</code> to <code>id</code></li>
+<li>Rename rel attributes: <escaped hash="084b666d4058e36ce5dcbd31aa9074b3"></escaped> to <escaped hash="da3d24b144279ab47ba56f2ed438e492"></escaped>, <escaped hash="fc592b68fb419b513c3a1df4f2502a44"></escaped> to <escaped hash="d2c23d1b4feeec456d72cdc94cc44595"></escaped></li>
 <li>Relation types now don't implicitly go to edge labels. Add label explicitly from now on.</li>
 <li>Fixed: relations to !project_path and !rel_path didn't work.</li>
 </ul>]]></description>
@@ -1379,11 +1379,11 @@
         <item>
             <title>foliantcontrib.includes 1.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#19b748b78ee92fa8e6a88352d06fbc96</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#5266f1dbcb4da58019a114677060555b</guid>
             <pubDate>Fri, 28 Jun 2019 14:28:45 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Support Foliant 1.0.9. Add processing of <code>!path</code>, <code>!project_path</code>, and <code>!rel_path</code> modifiers (i.e. YAML tags) in attribute values of pseudo-XML tags inside the included content. Replace the values that preceded by these modifiers with absolute paths resolved depending on current context.</li>
-<li>Allow to specify the top-level (“root”) directory of Foliant project that the included file belongs to, with optional <code>project_root</code> attribute of the <code>&lt;include&gt;</code> tag. This can be necessary to resolve the <code>!path</code> and the <code>!project_path</code> modifiers in the included content correctly.</li>
+<li>Support Foliant 1.0.9. Add processing of <escaped hash="b87f36c468353a7a278a5f1e85ffcc30"></escaped>, <escaped hash="b49a3941ba7c6b3716b144be8712cd39"></escaped>, and <escaped hash="5575228ee58cc184ab5301b2f35228dc"></escaped> modifiers (i.e. YAML tags) in attribute values of pseudo-XML tags inside the included content. Replace the values that preceded by these modifiers with absolute paths resolved depending on current context.</li>
+<li>Allow to specify the top-level (“root”) directory of Foliant project that the included file belongs to, with optional <escaped hash="57a80dadcf6521844d4f349e56c0e462"></escaped> attribute of the <escaped hash="bf3e209cc6c99ff9f53a813b62421264"></escaped> tag. This can be necessary to resolve the <escaped hash="b87f36c468353a7a278a5f1e85ffcc30"></escaped> and the <escaped hash="b49a3941ba7c6b3716b144be8712cd39"></escaped> modifiers in the included content correctly.</li>
 <li>Allow to specify all necessary parameters of each include statement as attribute values of pseudo-XML tags. Keep legacy syntax for backward compatibility.</li>
 <li>Update README.</li>
 </ul>]]></description>
@@ -1391,12 +1391,12 @@
         <item>
             <title>foliant 1.0.9</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#3f8351c21bff183566bbcc42499b7930</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#89810b4718b768708ac4bd6ea0dc236a</guid>
             <pubDate>Mon, 17 Jun 2019 14:25:21 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Process attribute values of pseudo-XML tags as YAML.</li>
 <li>Allow single quotes for enclosing attribute values of pseudo-XML tags.</li>
-<li>Add <code>!project_path</code> and <code>!rel_path</code> YAML tags.</li>
+<li>Add <escaped hash="b49a3941ba7c6b3716b144be8712cd39"></escaped> and <escaped hash="5575228ee58cc184ab5301b2f35228dc"></escaped> YAML tags.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1429,12 +1429,12 @@
         <item>
             <title>foliantcontrib.bindsympli 1.0.13</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindsympli.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#2664fafbfe55da253ed6d75160fdf0d6</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#eead18d27e31c1573a92bec12faecfc9</guid>
             <pubDate>Fri, 14 Jun 2019 14:34:25 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Set 2-minutes timeout instead of default 30-seconds when launching Chromium.</li>
-<li>Use <code>page.waitForSelector()</code> instead of <code>page.waitForNavigation()</code>.</li>
-<li>Use custom <code>sleep()</code> function for intentional delays.</li>
+<li>Use <escaped hash="224a1dce43da714013651f7663df727a"></escaped> instead of <escaped hash="159f3c3224521adaf0182d751b814ee3"></escaped>.</li>
+<li>Use custom <escaped hash="9727d29912613dc94500f6fc0d7e9a1f"></escaped> function for intentional delays.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1459,7 +1459,7 @@
         <item>
             <title>foliantcontrib.badges 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.badges.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.badges.git#05ff0269cb9c0258ee031310613c0c72</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.badges.git#6f6aecb1098675064c03fcfb7919877e</guid>
             <pubDate>Tue, 11 Jun 2019 13:38:21 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -1515,10 +1515,10 @@
         <item>
             <title>foliantcontrib.plantuml 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#19760e690cc3cde08eebb0fc7efb25fc</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#a00113e2ec309ed308f5d0c961945aa2</guid>
             <pubDate>Fri, 17 May 2019 14:09:57 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Attributes of <code>&lt;plantuml&gt;</code> tag have higher priority than config file options.</li>
+<li>Attributes of <escaped hash="485700309812a992bf24211185379faf"></escaped> tag have higher priority than config file options.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1533,10 +1533,10 @@
         <item>
             <title>foliantcontrib.utils.combined_options 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#f9252e53265141147c9b6c2453d0147f</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#498c319ea0f623e270b4aabcb3e73a43</guid>
             <pubDate>Wed, 15 May 2019 08:51:30 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>add <strong>iter</strong> method to allow <code>for param in options</code></li>
+<li>add <strong>iter</strong> method to allow <escaped hash="513492d7de579ccf8f9ac6a4bc20c960"></escaped></li>
 </ul>]]></description>
         </item>
         <item>
@@ -1551,7 +1551,7 @@
         <item>
             <title>foliantcontrib.templateparser 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#4d4d5d70177435838fce83a160420f1e</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#d59185c5537d13c0f80a69cfbcd47187</guid>
             <pubDate>Tue, 14 May 2019 15:58:00 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -1598,10 +1598,10 @@
         <item>
             <title>foliantcontrib.pandoc 1.0.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#1facf4d2c8834f910ee8fba1c5fef726</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#88ded226344cc4c09996077814d24f25</guid>
             <pubDate>Wed, 10 Apr 2019 17:27:32 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Escape double quotation marks (<code>"</code>) and dollar signs (<code>$</code>) which may be used in PDF, docx, and TeX generation commands as parts of filenames, variable values, etc. Enclose filenames that may be used in commands into double quotes.</li>
+<li>Escape double quotation marks (<escaped hash="145aca01fcbcf7fe6af497a70858abdc"></escaped>) and dollar signs (<escaped hash="44547b946b90d457c007999bad364e0b"></escaped>) which may be used in PDF, docx, and TeX generation commands as parts of filenames, variable values, etc. Enclose filenames that may be used in commands into double quotes.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1643,7 +1643,7 @@
         <item>
             <title>foliantcontrib.anchors 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#72235411d377b489edf7c24848798576</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#d1610e91bee9ab68bd462d42c9d64de6</guid>
             <pubDate>Thu, 21 Mar 2019 16:54:01 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -1806,7 +1806,7 @@
         <item>
             <title>foliantcontrib.graphviz 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.graphviz.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#725694be2b935d47874d7711bac32090</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#c97ad990e8c75b2d9ca4638aa9fdaf6d</guid>
             <pubDate>Mon, 17 Dec 2018 14:16:25 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
@@ -1815,12 +1815,12 @@
         <item>
             <title>foliantcontrib.apilinks 1.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#4c5de38af75ea5dd0fd9389552eb4255</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#1adcae2975a3d75449061505ea4e283d</guid>
             <pubDate>Thu, 13 Dec 2018 12:34:09 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Prefixes are now case insensitive.</li>
 <li>Only prefixes which are defined are trimmed.</li>
-<li>New option <code>only-defined-prefixes</code> to ignore all prefixes which are not listed in config.</li>
+<li>New option <escaped hash="d949643e03b9776331145c115afd3117"></escaped> to ignore all prefixes which are not listed in config.</li>
 <li>Options renamed and regrouped. Breaks backward compatibility.</li>
 <li>Support of several reference pattern and properties (to catch models).</li>
 <li>Now search on API page for headers h1, h2, h3 and h4.</li>
@@ -1838,40 +1838,40 @@
         <item>
             <title>foliantcontrib.subset 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.subset.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#d547a2901ed3b5ee3c2d0ae6d82bee5f</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#4aa20b8cafc3895696c327f62e52e154</guid>
             <pubDate>Thu, 06 Dec 2018 19:27:37 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Move the imports of the <code>oyaml</code> module directly into the methods that use it.</li>
+<li>Move the imports of the <escaped hash="5133b72d470f5f5ba6673a311cff8723"></escaped> module directly into the methods that use it.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.bindsympli 1.0.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindsympli.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#ccde299ca372d43b4ebcaae830697756</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#2d3c3a2482cf24279674ab7bbd05a65c</guid>
             <pubDate>Thu, 06 Dec 2018 17:52:26 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Move the <code>while</code> loop from JavaScript code to Python code.</li>
-<li>Add the <code>max_attempts</code> config option.</li>
-<li>Require Foliant 1.0.8 because of using the <code>utils.output()</code> method.</li>
+<li>Move the <escaped hash="8314dbf086b7ed41505bf34e930a90d8"></escaped> loop from JavaScript code to Python code.</li>
+<li>Add the <escaped hash="619a942e6655ce32ddd89b87f5cd4640"></escaped> config option.</li>
+<li>Require Foliant 1.0.8 because of using the <escaped hash="ea718514297aad49a0f8020e522be319"></escaped> method.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.subset 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.subset.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#eded8c31b59705cd821ba6f6509d1a28</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#034dc369889adef54936777a9366c72e</guid>
             <pubDate>Tue, 04 Dec 2018 16:35:16 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix a bug: check if subset partial config contains <code>chapters</code> section correctly.</li>
-<li>Inherit the class <code>Cli</code> from <code>BaseCli</code>, not from <code>Cliar</code>.</li>
+<li>Fix a bug: check if subset partial config contains <escaped hash="b69bf64c111244a1c314cfb645c77971"></escaped> section correctly.</li>
+<li>Inherit the class <escaped hash="b3faa15a3827d76e480565be056440c7"></escaped> from <escaped hash="ae1134f61743f5c35876ca165e84ec10"></escaped>, not from <escaped hash="24b3f308bc625792300ebdd341963b79"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.multiproject 1.0.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#6e9d95242b4adcb20c31e1cfc2c97358</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#ea6ff45dff503b0f17116503e0e67213</guid>
             <pubDate>Tue, 04 Dec 2018 16:25:10 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Inherit the class <code>Cli</code> from <code>BaseCli</code>, not from <code>Cliar</code>.</li>
+<li>Inherit the class <escaped hash="b3faa15a3827d76e480565be056440c7"></escaped> from <escaped hash="ae1134f61743f5c35876ca165e84ec10"></escaped>, not from <escaped hash="24b3f308bc625792300ebdd341963b79"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1934,11 +1934,11 @@
         <item>
             <title>foliantcontrib.templates.preprocessor 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#521a6436ce2197c3e6a8814abbb37cc4</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#fb954c8eb92f7a6a7b8ff2b1a2e2ca3a</guid>
             <pubDate>Fri, 23 Nov 2018 13:00:36 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix <code>packages</code> value in <code>setup.py</code> of the template: use <code>foliant.preprocessors</code> instead of <code>foliantcontrib.preprocessors</code>.</li>
-<li>Require Foliant 1.0.8 in <code>setup.py</code> of the template.</li>
+<li>Fix <escaped hash="5fa06f80972ff05cf8eb18aa9af90bbd"></escaped> value in <escaped hash="08d65c70128f2408d8aad9a2a109c24d"></escaped> of the template: use <escaped hash="f41899424a85e038deb886cc55854777"></escaped> instead of <escaped hash="801df60a0fff6d368478a1e8663dfb34"></escaped>.</li>
+<li>Require Foliant 1.0.8 in <escaped hash="08d65c70128f2408d8aad9a2a109c24d"></escaped> of the template.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2030,10 +2030,10 @@
         <item>
             <title>foliantcontrib.templates.preprocessor 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#70fe882fa37d36640a9133fdbe11d7c7</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#dc6978e7f5f805f4f803ebbdec63457a</guid>
             <pubDate>Fri, 16 Nov 2018 15:19:32 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Require foliantcontrib.init 1.0.7, import the <code>output()</code> method.</li>
+<li>Require foliantcontrib.init 1.0.7, import the <escaped hash="23029249ab3b75d741d2b23f16efc6bc"></escaped> method.</li>
 <li>Do not rewrite source Markdown file if an error occurs.</li>
 </ul>]]></description>
         </item>
@@ -2187,11 +2187,11 @@
         <item>
             <title>foliant 1.0.8</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#3adccbbd7444ed32fbc5a37045d0532c</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#2b68cfe401a1781c82f7f470a0aaea4c</guid>
             <pubDate>Wed, 14 Nov 2018 19:04:46 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Restore quiet mode.</li>
-<li>Add the <code>output()</code> method for using in preprocessors.</li>
+<li>Add the <escaped hash="23029249ab3b75d741d2b23f16efc6bc"></escaped> method for using in preprocessors.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2244,10 +2244,10 @@
         <item>
             <title>foliantcontrib.subset 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.subset.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#4a674f6512f7cbdfaf3afe945f877b80</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.subset.git#1847b58c672989cf727f85ea955559b1</guid>
             <pubDate>Fri, 09 Nov 2018 16:09:54 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Do not use <code>yaml</code> alias for <code>oyaml</code> module to prevent possible influence of this overriding on other parts of code.</li>
+<li>Do not use <escaped hash="fd7c0e3a1ce0d55c4a17f8b636b1650d"></escaped> alias for <escaped hash="5133b72d470f5f5ba6673a311cff8723"></escaped> module to prevent possible influence of this overriding on other parts of code.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2289,10 +2289,10 @@
         <item>
             <title>foliantcontrib.plantuml 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#b8eee73eb86e569688576670fd445852</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#5577b05de08ec1058ee71389bda752dc</guid>
             <pubDate>Thu, 08 Nov 2018 14:00:51 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>parse_raw</code> option.</li>
+<li>Add <escaped hash="486c7e9ce693a0fbfb23d991c1a221a4"></escaped> option.</li>
 <li>Do not fail the preprocessor if some diagrams contain errors. Write error messages into the log.</li>
 </ul>]]></description>
         </item>
@@ -2335,10 +2335,10 @@
         <item>
             <title>foliantcontrib.templates.preprocessor 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#0e83ce47dcbc57ea0bce95414000113e</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git#7e3f37fc52cdfd867f8383c36411451e</guid>
             <pubDate>Thu, 01 Nov 2018 14:56:00 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>package_data</code> to <code>setup.py</code>.</li>
+<li>Add <escaped hash="58b414a5d5b7aecec19873a0971628ba"></escaped> to <escaped hash="08d65c70128f2408d8aad9a2a109c24d"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2418,10 +2418,10 @@
         <item>
             <title>foliantcontrib.multiproject 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#11b594f62aad048f79a7e82a582df0f1</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#45dea9918c315bdd9048e55e63f44e42</guid>
             <pubDate>Wed, 24 Oct 2018 14:08:19 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow to override the <code>edit_uri</code> config option of RepoLink preprocessor with the <code>FOLIANT_REPOLINK_EDIT_URI</code> system environment variable.</li>
+<li>Allow to override the <escaped hash="1da968e9568b8cf1f8999286976c7eda"></escaped> config option of RepoLink preprocessor with the <escaped hash="f363e3a43e20abc3606f76f867ad61a3"></escaped> system environment variable.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2472,7 +2472,7 @@
         <item>
             <title>foliantcontrib.swaggerdoc 1.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git#7a2721531a07a334ac131f07e4869fff</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git#908206f035930e05d91f8f012f4f5b15</guid>
             <pubDate>Fri, 19 Oct 2018 14:04:47 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Change parameter names and behavior uncompatible with 1.0.0</li>
@@ -2631,7 +2631,7 @@
         <item>
             <title>foliantcontrib.pgsqldoc 1.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git#1dc931c276eee0defce614be68ead625</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git#368122230269646045183e0be6326f19</guid>
             <pubDate>Fri, 24 Aug 2018 11:24:44 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Docs and scheme structure is now defined by Jinja2 templates.</li>
@@ -2701,12 +2701,12 @@
         <item>
             <title>foliantcontrib.includes 1.0.8</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#8c6fdf4e9e3214ce8005375d50a985f5</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#3500c5af85c3f75ee4c55339ad6b41b8</guid>
             <pubDate>Mon, 23 Jul 2018 21:29:29 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Require at least one space after hashes in the beginning of each heading.</li>
-<li>Add <code>inline</code> option to the <code>&lt;include&gt;</code> tag.</li>
-<li>Fix the bug: do not ignore empty lines after headings when using <code>sethead</code>.</li>
+<li>Add <escaped hash="6bab8cabd89c122388f671dd46c93638"></escaped> option to the <escaped hash="bf3e209cc6c99ff9f53a813b62421264"></escaped> tag.</li>
+<li>Fix the bug: do not ignore empty lines after headings when using <escaped hash="75ed5477f4312d008e1fd238bbd8f08f"></escaped>.</li>
 <li>Fix the bug: allow to use less than 3 characters in the heading content.</li>
 <li>Do not mark as headings the strings that contain more than 6 leading hashes. If shifted heading level is more than 6, mark the heading content as bold paragraph text, not as heading.</li>
 </ul>]]></description>
@@ -2723,11 +2723,11 @@
         <item>
             <title>foliantcontrib.flatten 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#ad61c0a402ef27e71de6a4eefb9362ff</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#2f90b859d392b6029ede49f9cb980fe6</guid>
             <pubDate>Thu, 07 Jun 2018 14:49:30 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Use flattened file path in <code>includes</code> preprocessor call.</li>
-<li>Require <code>includes</code> preprocessor 1.0.7.</li>
+<li>Use flattened file path in <escaped hash="8997b9e8a18030bafd2002e9ad527605"></escaped> preprocessor call.</li>
+<li>Require <escaped hash="8997b9e8a18030bafd2002e9ad527605"></escaped> preprocessor 1.0.7.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2762,19 +2762,19 @@
         <item>
             <title>foliantcontrib.pandoc 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#9c5ad9ddd86d410431116a83b7a4fc88</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#02714dbbc2a724bc85fbccf86969d590</guid>
             <pubDate>Mon, 04 Jun 2018 17:05:13 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Apply <code>flatten</code> after all preprocessors, not before them. This fixes incompatibility with foliantcontrib.includes 1.0.5.</li>
+<li>Apply <escaped hash="744cf2c75665f62e6b9e1549cc8729b8"></escaped> after all preprocessors, not before them. This fixes incompatibility with foliantcontrib.includes 1.0.5.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.flatten 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#77fa12b49c699668b681f847abc5f714</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#5146c2ac8637c3f4ee7a4dc22ba61091</guid>
             <pubDate>Mon, 04 Jun 2018 15:07:06 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Fix incorrect <code>includes</code> preprocessor call.</li>
+<li>Fix incorrect <escaped hash="8997b9e8a18030bafd2002e9ad527605"></escaped> preprocessor call.</li>
 <li>Require Foliant 1.0.5.</li>
 </ul>]]></description>
         </item>
@@ -2799,21 +2799,21 @@
         <item>
             <title>foliantcontrib.includes 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#4f77eb72b731de675f01d4cc6606ad97</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#eca4f156ae28cc71c65108830fae9df1</guid>
             <pubDate>Fri, 25 May 2018 19:25:04 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Use paths that are relative to the current processed Markdown file.</li>
-<li>Fix <code>sethead</code> behavior for headings that contains hashes (<code>#</code>).</li>
+<li>Fix <escaped hash="75ed5477f4312d008e1fd238bbd8f08f"></escaped> behavior for headings that contains hashes (<escaped hash="e844fc40a6ec303cf8c6720e892d7be0"></escaped>).</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliant 1.0.5</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#c81fce5ce3c384f0b6aa942842eccf9c</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#68b7b3ba50a2b4478c8249fa13ae49c1</guid>
             <pubDate>Mon, 14 May 2018 14:42:36 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Allow to override default config file name in CLI.</li>
-<li>Allow multiline tags. Process <code>true</code> and <code>false</code> attribute values as boolean, not as integer.</li>
+<li>Allow multiline tags. Process <escaped hash="22cfef4d87bd251ba39dd92d08a6b0bb"></escaped> and <escaped hash="249091efa412cf5e332461c484b979d0"></escaped> attribute values as boolean, not as integer.</li>
 <li>Add tests.</li>
 <li>Improve code style.</li>
 </ul>]]></description>
@@ -2821,10 +2821,10 @@
         <item>
             <title>foliantcontrib.pandoc 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#52d60b679d5611457d4cd8116940f97d</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#8cd1b3b74275cb38c807a23d3d73287a</guid>
             <pubDate>Thu, 10 May 2018 14:54:24 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>slug</code> config option.</li>
+<li>Add <escaped hash="d1e3127899b14b30f5101140d95a3770"></escaped> config option.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2866,10 +2866,10 @@
         <item>
             <title>foliantcontrib.plantuml 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#004ed542c3d61f23f5600f2cdb5830a7</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#484a42ad0182a9e6590f5e8c262cb700</guid>
             <pubDate>Fri, 20 Apr 2018 18:15:34 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix logging in <code>__init__</code>.</li>
+<li>Fix logging in <escaped hash="ccf64300a1d4545e2e9ebc8dd90bb253"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2884,10 +2884,10 @@
         <item>
             <title>foliantcontrib.flatten 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flatten.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#25f94c8aa4eb5c9eb7891b6552ec96e2</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flatten.git#d05465a16ef417ca2bf2126ceaee06a4</guid>
             <pubDate>Fri, 20 Apr 2018 12:50:03 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Fix incorrect <code>includes</code> preprocessor call.</li>
+<li>Fix incorrect <escaped hash="8997b9e8a18030bafd2002e9ad527605"></escaped> preprocessor call.</li>
 <li>Add logging.</li>
 <li>Require Foliant 1.0.4.</li>
 </ul>]]></description>
@@ -2895,11 +2895,11 @@
         <item>
             <title>foliantcontrib.epsconvert 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.epsconvert.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#58e95ee7e4f63ef9e718bf005804ae42</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#c6ecd694e58971d10e17f10fb1cac71e</guid>
             <pubDate>Thu, 19 Apr 2018 17:12:41 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Do not use image path when computing MD5 hash.</li>
-<li>Add <code>targets</code> config option.</li>
+<li>Add <escaped hash="a854d903f75cc10d48a723370a3a51f0"></escaped> config option.</li>
 <li>Add logging.</li>
 </ul>]]></description>
         </item>
@@ -2915,10 +2915,10 @@
         <item>
             <title>foliantcontrib.customids 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.customids.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.customids.git#5ee47b3e8d756ea080ec0dbc45533b08</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.customids.git#864450c640c46ecacd91eb6997c44d0b</guid>
             <pubDate>Wed, 18 Apr 2018 16:58:04 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>targets</code> config option.</li>
+<li>Add <escaped hash="a854d903f75cc10d48a723370a3a51f0"></escaped> config option.</li>
 <li>Add logging.</li>
 </ul>]]></description>
         </item>
@@ -2970,21 +2970,21 @@
         <item>
             <title>foliant 1.0.4</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#f7c9c51667853f564d7b7d6fc00477dd</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#cf5143e7a442874cd3a97ec9dad7c64c</guid>
             <pubDate>Wed, 11 Apr 2018 14:29:01 +0400</pubDate>
             <description><![CDATA[<ul>
-<li><strong>Breaking change.</strong> Add logging to all stages of building a project. Config parser extensions, CLI extensions, backends, and preprocessors can now access <code>self.logger</code> and create child loggers with <code>self.logger = self.logger.getChild('newbackend')</code>.</li>
-<li>Add <code>pre</code> backend with <code>pre</code> target that applies the preprocessors from the config and returns a Foliant project that doesn't require any preprocessing.</li>
-<li><code>make</code> now returns its result, which makes is easier to call it from extensions.</li>
+<li><strong>Breaking change.</strong> Add logging to all stages of building a project. Config parser extensions, CLI extensions, backends, and preprocessors can now access <escaped hash="d8a1f1344870ccff2553601dd7fd7690"></escaped> and create child loggers with <escaped hash="01797873400656247a73ef6084168b7f"></escaped>.</li>
+<li>Add <escaped hash="79e6efbf3c41dbb0d74511725ceb9a27"></escaped> backend with <escaped hash="79e6efbf3c41dbb0d74511725ceb9a27"></escaped> target that applies the preprocessors from the config and returns a Foliant project that doesn't require any preprocessing.</li>
+<li><escaped hash="93210f769e1cf92b5d196ef6c65b2e28"></escaped> now returns its result, which makes is easier to call it from extensions.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.bindsympli 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.bindsympli.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#7a21bb7d5328ef1a7f24a371466bce4a</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bindsympli.git#dd6e37a73e5f6196cf0715d25c493417</guid>
             <pubDate>Tue, 10 Apr 2018 14:16:57 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Describe the preprocessor usage in <code>README.md</code>.</li>
+<li>Describe the preprocessor usage in <escaped hash="59c6dcfe6d3476317d1fe291c623166f"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -3017,10 +3017,10 @@
         <item>
             <title>foliantcontrib.includes 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#9027efa4231ee777abb6af5225ff1ff8</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#390dbe5efacb4b70cceb29974444dc44</guid>
             <pubDate>Sat, 31 Mar 2018 00:15:08 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Allow hashes (<code>#</code> characters) in the content of headings.</li>
+<li>Allow hashes (<escaped hash="e844fc40a6ec303cf8c6720e892d7be0"></escaped> characters) in the content of headings.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -3035,11 +3035,11 @@
         <item>
             <title>foliantcontrib.epsconvert 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.epsconvert.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#ffc31adbc437439b9a8e64f24309c254</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#971d2a387dbba03c46ea68547e89714e</guid>
             <pubDate>Thu, 29 Mar 2018 16:49:43 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Add support of any local paths. Add image cache.</li>
-<li>Remove <code>mogrify_path</code> and <code>diagrams_cache_dir</code> options, add <code>convert_path</code> and <code>cache_dir</code> instead.</li>
+<li>Remove <escaped hash="2b04a1ff08eb2d5b497fc76bde08f9be"></escaped> and <escaped hash="2df0d4d957a9550d400e61949cca1276"></escaped> options, add <escaped hash="5cbb7a3ebc01f78cd3ce371e76fa8bd2"></escaped> and <escaped hash="7d028eef1b9b20fffe767f86d4c7256e"></escaped> instead.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -3091,10 +3091,10 @@
         <item>
             <title>foliantcontrib.mkdocs 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#70395b1a3cd2e63180116a73cd50b8ea</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#a413b78aa33757d575b9022322ae5b0e</guid>
             <pubDate>Wed, 21 Mar 2018 18:02:34 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>use_headings</code> and <code>slug</code> options for MkDocs backend.</li>
+<li>Add <escaped hash="8406b89233f6d679332e705c9569fc3b"></escaped> and <escaped hash="d1e3127899b14b30f5101140d95a3770"></escaped> options for MkDocs backend.</li>
 <li>Fix inappropriate translation of image URLs into local paths in MkDocs preprocessor.</li>
 </ul>]]></description>
         </item>
@@ -3110,28 +3110,28 @@
         <item>
             <title>foliantcontrib.epsconvert 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.epsconvert.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#3f916b341c2d7d501e25f7158eb547ee</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.epsconvert.git#62f28eb7ad247e9b3b46af3389f3d543</guid>
             <pubDate>Tue, 13 Mar 2018 19:57:00 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>diagrams_cache_dir</code> option support.</li>
+<li>Add <escaped hash="2df0d4d957a9550d400e61949cca1276"></escaped> option support.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.pandoc 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#836ae1092e01836ad83f679cecdfef30</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#708ec528eca21de206131c550126c83e</guid>
             <pubDate>Wed, 28 Feb 2018 18:00:52 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Change Pandoc command line parameter <code>--reference-docx</code> to <code>--reference-doc</code>.</li>
+<li>Change Pandoc command line parameter <escaped hash="960c1793e86621e015524eba66bd942a"></escaped> to <escaped hash="ba84d9ebe4245ba5978cacb8694c96b5"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliant 1.0.1</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
-            <guid>https://github.com/foliant-docs/foliant.git#662fde07c32cda83fb531f950dde2b76</guid>
+            <guid>https://github.com/foliant-docs/foliant.git#71b3950a8902faf8dd68845502169a08</guid>
             <pubDate>Sun, 25 Feb 2018 21:47:47 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Fix critical bug with CLI module caused by missing version definition in the root <code>__init__.py</code> file.</li>
+<li>Fix critical bug with CLI module caused by missing version definition in the root <escaped hash="c9900f8ce02b4e26c1f8d18b74e88b8a"></escaped> file.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -3146,51 +3146,51 @@
         <item>
             <title>foliantcontrib.blockdiag 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.blockdiag.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.blockdiag.git#4dbd00eafd3bfd473686be8189e1f5e9</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.blockdiag.git#b163aed04d80b0e3fd665162cb2922ad</guid>
             <pubDate>Fri, 16 Feb 2018 21:57:30 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>pdf</code> output format support.</li>
+<li>Add <escaped hash="71847fe3d888c5c7dd87adf70b881ac6"></escaped> output format support.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.init 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#d72750c39280cbab0318ddeb2ef73590</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#1bfd1d3526732e308b40b109de135ca9</guid>
             <pubDate>Wed, 07 Feb 2018 22:24:37 +0400</pubDate>
             <description><![CDATA[<ul>
 <li>Upon creation, relative path to the created project directory is returned instead of an absolute one.</li>
 <li>Templates: basic: Foliant docs related content removed from README.md.</li>
-<li>Templates: basic: <code>foliantcontrib.mkdocs</code> added to requirements.txt.</li>
+<li>Templates: basic: <escaped hash="70c0f56b39a72221f2ff455a3091531d"></escaped> added to requirements.txt.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.init 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#5ded511e7f1ab27a56b929a71c0f0939</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#1e7913cdfc9a691101319bb09af395d2</guid>
             <pubDate>Wed, 07 Feb 2018 22:24:37 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>slug</code> placeholder.</li>
-<li>Process placeholders in <code>.yml</code>, <code>.txt</code>, and <code>.md</code> files, not just <code>foliant.yml</code>.</li>
-<li>Templates: basic: Add <code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>requirements.txt</code>, and <code>README.md</code>.</li>
+<li>Add <escaped hash="d1e3127899b14b30f5101140d95a3770"></escaped> placeholder.</li>
+<li>Process placeholders in <escaped hash="df0140b71f46d0a3723082675416c9ac"></escaped>, <escaped hash="6e407df9f29b1d299a0f20a18c95448b"></escaped>, and <escaped hash="e1ae90835e098300bcb904c5c541d86e"></escaped> files, not just <escaped hash="49f8384bf596e91591a6cd1c37e49eb8"></escaped>.</li>
+<li>Templates: basic: Add <escaped hash="e4e4bc96c0409575cc637b3eb33ed4b6"></escaped>, <escaped hash="8908e39c23754e8db9dd235290f33fb3"></escaped>, <escaped hash="18fdd777ca254fb6a5699e08e5f9c075"></escaped>, and <escaped hash="59c6dcfe6d3476317d1fe291c623166f"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.init 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#5491e98fe3170bcdfae7a513a58fc12d</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#29cfe2e9025fa8f73018b469dd7f55a8</guid>
             <pubDate>Wed, 07 Feb 2018 22:24:37 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Fix issue with <code>init</code> command missing after installation.</li>
+<li>Fix issue with <escaped hash="c5cc8a37b2b5cfd51c521241c02a65a0"></escaped> command missing after installation.</li>
 <li>Fix issue with missing templates after installation.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.macros 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.macros.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.macros.git#fed2f3851d9432b9258879fb42a5ddce</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.macros.git#396e02bcc2329be8975f2322ec1d15af</guid>
             <pubDate>Thu, 01 Feb 2018 21:28:27 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add tag <code>&lt;m&gt;...&lt;/m&gt;</code>.</li>
+<li>Add tag <escaped hash="d83db52a5514b573fb8e94cf18ad62dc"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -3215,37 +3215,37 @@
         <item>
             <title>foliantcontrib.flags 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.flags.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.flags.git#ea5b6ba33695aecccb8e025f68b727c8</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.flags.git#a9578a20e691f343f6dc5c64b074364f</guid>
             <pubDate>Sat, 06 Jan 2018 21:30:15 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>targets</code> and <code>backends</code> options to <code>&lt;if&gt;</code> tag.</li>
+<li>Add <escaped hash="a854d903f75cc10d48a723370a3a51f0"></escaped> and <escaped hash="a98d9469dffea196f00ededb6a8d2d38"></escaped> options to <escaped hash="6212f643887c18777ab33ab9387da0e1"></escaped> tag.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.pandoc 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#cc0e961ce49f32347c6ca22f3a316d67</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#163040d1cfea7fee8c44b769e016a5e6</guid>
             <pubDate>Fri, 05 Jan 2018 12:10:19 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Change default Markdown flavor from <code>markdown_strict</code> to <code>markdown</code>.</li>
+<li>Change default Markdown flavor from <escaped hash="685e637ecf33bbc8b7d7167f547939f2"></escaped> to <escaped hash="6a106545fb94d61e9a644e423b92c134"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.pandoc 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#df0965adab90c16eae5b8f73e3f74690</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#ceaac8ef0eeda18b420b6df0056d25a5</guid>
             <pubDate>Sun, 17 Dec 2017 13:01:44 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>tex</code> target.</li>
+<li>Add <escaped hash="bde9a02b9a866e1a4e9e43968d2c1c25"></escaped> target.</li>
 </ul>]]></description>
         </item>
         <item>
             <title>foliantcontrib.mkdocs 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#6dcfab66ca9cf5da6a517642fe89122d</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#71832376c236ef51cecb6fcdeb09525a</guid>
             <pubDate>Sat, 16 Dec 2017 22:54:59 +0400</pubDate>
             <description><![CDATA[<ul>
-<li>Add <code>ghp</code> target for GitHub Pages deploy with <code>mkdocs gh-deploy</code>.</li>
+<li>Add <escaped hash="321be157cef15748be3a3dab60524d49"></escaped> target for GitHub Pages deploy with <escaped hash="0ce8eac644b5a84a585376e74cbc18f4"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>

@@ -791,37 +791,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#escapecode-and-unescapecode_1" class="md-nav__link">
+    EscapeCode and UnescapeCode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#integration-with-foliant-and-includes" class="md-nav__link">
     Integration with Foliant and Includes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#explicit-enabling" class="md-nav__link">
     Explicit Enabling
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1366,37 +1379,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#escapecode-and-unescapecode_1" class="md-nav__link">
+    EscapeCode and UnescapeCode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#integration-with-foliant-and-includes" class="md-nav__link">
     Integration with Foliant and Includes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#explicit-enabling" class="md-nav__link">
     Explicit Enabling
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1420,6 +1446,8 @@
                 
                 
                 <h1 id="escapecode-and-unescapecode">EscapeCode and UnescapeCode<a class="headerlink" href="#escapecode-and-unescapecode" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.escapecode/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.escapecode.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.escapecode"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.escapecode.svg?label=GitHub" /></a></p>
+<h2 id="escapecode-and-unescapecode_1">EscapeCode and UnescapeCode<a class="headerlink" href="#escapecode-and-unescapecode_1" title="Permanent link">&para;</a></h2>
 <p>EscapeCode and UnescapeCode preprocessors work in pair.</p>
 <p>EscapeCode finds in the source Markdown content the parts that should not be modified by any next preprocessors. Examples of content that should be left raw: fence code blocks, pre code blocks, inline code.</p>
 <p>EscapeCode replaces these raw content parts with pseudo-XML tags recognized by UnescapeCode preprocessor.</p>
@@ -1470,7 +1498,7 @@
 <p>Custom options available in EscapeCode since version 1.0.2. Foliant core supports passing custom options to EscapeCode preprocessor as the value of <code>escape_code.options</code> parameter since version 1.0.11. Options are described below.</p>
 <p>The Python package that includes EscapeCode and UnescapeCode preprocessors is the dependence of Includes preprocessor since version 1.1.1. At the same time this package isn’t a dependence of Foliant core. To use <code>escape_code</code> config option in Foliant core, you have to install the package with EscapeCode and UnescapeCode preprocessors separately.</p>
 <h3 id="explicit-enabling">Explicit Enabling<a class="headerlink" href="#explicit-enabling" title="Permanent link">&para;</a></h3>
-<p>You may not to use the <code>escape_code</code> option and call the preprocessors explicitly:</p>
+<p>You may not want to use the <code>escape_code</code> option and call the preprocessors explicitly:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">escapecode</span>      <span class="c1"># usually the first list item</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1523,7 +1551,7 @@
 <li><code>pre_blocks</code>—pre code blocks;</li>
 <li><code>inline_code</code>—inline code;</li>
 <li><code>comments</code>—HTML-style comments, also usual for Markdown;</li>
-<li><code>tags</code>—content of certain tags with the tags themselves, for example <code>plantuml</code> for <code>&lt;plantuml&gt;...&lt;/plantuml&gt;</code>.</li>
+<li><code>tags</code>—content of certain tags with the tags themselves, for example <code>plantuml</code> for <code>&lt;&lt;plantuml&gt;...&lt;/plantuml&gt;</code>.</li>
 </ul>
 </li>
 </ul>
@@ -1558,19 +1586,19 @@
 <p>The preprocessor EscapeCode with default behavior will do the following replacements:</p>
 <div class="codehilite"><pre><span></span><code># Heading
 
-Text that contains some <span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;2bb20aeb00314e915ecfefd86d26f46a&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>.
+Text that contains some <span class="err">&lt;</span><span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;2bb20aeb00314e915ecfefd86d26f46a&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>.
 
 Below is a fence code block, language is optional:
 
-<span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;15e1e46a75ef29eb760f392bb2df4ebb&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
+<span class="err">&lt;</span><span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;15e1e46a75ef29eb760f392bb2df4ebb&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
 
 One more fence code block:
 
-<span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;91c3d3da865e24c33c4b366760c99579&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
+<span class="err">&lt;</span><span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;91c3d3da865e24c33c4b366760c99579&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
 
 And this is a pre code block:
 
-<span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;a1e51c9ad3da841d393533f1522ab17e&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
+<span class="err">&lt;</span><span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;a1e51c9ad3da841d393533f1522ab17e&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
 </code></pre></div>
 
 

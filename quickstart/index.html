@@ -1570,7 +1570,7 @@ Result: Hello_Foliant-2020-05-25.pdf
 <p><img alt="Basic Foliant project built with Pandoc" src="../images/basic-pdf.png" /></p>
 <h2 id="edit-content">Edit Content<a class="headerlink" href="#edit-content" title="Permanent link">&para;</a></h2>
 <p>Your project’s content lives in <code>*.md</code> files in <code>src</code> folder. You can split it between multiple files and subfolders.</p>
-<p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <a href="../preprocessors/flags/"><code>&lt;if&gt;&lt;/if&gt;</code> blocks</a>.</p>
+<p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <a href="../preprocessors/flags/"><code>&lt;&lt;if&gt;&lt;/if&gt;</code> blocks</a>.</p>
 <p>Create a file <code>hello.md</code> in <code>src</code> with the following content:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Hello</span> <span class="n">Again</span>
 
@@ -1642,7 +1642,7 @@ chapters:
 <p>Then, in <code>hello.md</code>, add the following:</p>
 <div class="codehilite"><pre><span></span><code>Foliant doesn’t force any *special* Markdown flavor.
 
-<span class="gi">+ &lt;seqdiag caption=&quot;This diagram is generated on the fly&quot;&gt;</span>
+<span class="gi">+ &lt;&lt;seqdiag caption=&quot;This diagram is generated on the fly&quot;&gt;</span>
 <span class="gi">+   seqdiag {</span>
 <span class="gi">+     &quot;foliant make site&quot; -&gt; &quot;mkdocs preprocessor&quot; -&gt; &quot;blockdiag preprocessor&quot; -&gt; &quot;mkdocs backend&quot; -&gt; site;</span>
 <span class="gi">+   }</span>
@@ -1650,7 +1650,7 @@ chapters:
 </code></pre></div>
 
 
-<p>Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with <code>&lt;seqdiag&gt;&lt;/seqdiag&gt;</code> tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.</p>
+<p>Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with <code>&lt;&lt;seqdiag&gt;&lt;/seqdiag&gt;</code> tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.</p>
 <p>Rebuild the site with <code>foliant make site</code> and open it in the browser:</p>
 <p><img alt="Sequence diagram drawn with seqdiag on the site" src="../images/basic-mkdocs-seqdiag.png" /></p>
 <p>Rebuild the pdf as well and see that the diagram is there too:</p>
@@ -1671,7 +1671,7 @@ chapters:
 <p>There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <a href="../preprocessors/flags/">Flags</a> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:</p>
 <div class="codehilite"><pre><span></span><code>This is a diagram that is rendered to `.png` in html and to `.pdf` in pdf:
 
-<span class="err">&lt;</span><span class="nt">&lt;blockdiag</span> <span class="na">format=</span><span class="s">&quot;&lt;if targets=&quot;</span><span class="err">html&quot;</span><span class="nt">&gt;</span>png<span class="nt">&lt;/if&gt;</span><span class="err">&lt;</span><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>pdf<span class="err">&lt;</span>/if&quot;&gt;
+<span class="err">&lt;</span><span class="nt">&lt;blockdiag</span> <span class="na">format=</span><span class="s">&quot;&lt;&lt;if targets=&quot;</span><span class="err">html&quot;</span><span class="nt">&gt;</span>png<span class="nt">&lt;/if&gt;</span><span class="err">&lt;</span><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>pdf<span class="err">&lt;</span>/if&quot;&gt;
     ...
 <span class="nt">&lt;/blockdiag&gt;</span>
 </code></pre></div>

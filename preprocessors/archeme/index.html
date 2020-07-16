@@ -647,20 +647,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#archeme_1" class="md-nav__link">
+    Archeme
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -672,6 +680,11 @@
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1365,20 +1378,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#archeme_1" class="md-nav__link">
+    Archeme
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -1390,6 +1411,11 @@
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1418,6 +1444,8 @@
                 
                 
                 <h1 id="archeme">Archeme<a class="headerlink" href="#archeme" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.archeme/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.archeme.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.archeme"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.archeme.svg?label=GitHub" /></a></p>
+<h2 id="archeme_1">Archeme<a class="headerlink" href="#archeme_1" title="Permanent link">&para;</a></h2>
 <p>Archeme preprocessor allows to integrate Foliant with <a href="https://github.com/foliant-docs/archeme/">Archeme</a>, a tool for describing and visualizing schemes and diagrams, primarily architectural. Archeme requires <a href="https://www.graphviz.org/">Graphviz</a> to be installed.</p>
 <p>Archeme preprocessor finds diagram definitions that are described with Archeme DSL, in source Markdown content, then calls Archeme and Graphviz to draw diagrams, and then replaces the diagram definitions with image references.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1454,7 +1482,7 @@
 <dt><code>graphviz_paths</code></dt>
 <dd>Paths to binaries of Graphviz engines to be used in external commands: <code>dot</code>, <code>neato</code>, and <code>fdp</code>.</dd>
 <dt><code>action</code></dt>
-<dd>Default action. Used when the respective <code>action</code> tag attribute is not specified explicitly, see below. Available values are: <code>generate</code> (default), and <code>merge</code> (<a href="https://github.com/foliant-docs/archeme/#cli-usage">see descriptions in Archeme documentation</a>). </dd>
+<dd>Default action. Used when the respective <code>action</code> tag attribute is not specified explicitly, see below. Available values are: <code>generate</code> (default), and <code>merge</code> (<a href="https://github.com/foliant-docs/archeme/#cli-usage">see descriptions in Archeme documentation</a>).</dd>
 <dt><code>config_file</code></dt>
 <dd>Path to default config file. May be overridden with the value of the respective <code>config_file</code> tag attribute, see below. Config file usually defines common settings of multiple diagrams, it’s recommended but not strictly required. By default, no config file is used.</dd>
 <dt><code>format</code></dt>
@@ -1510,7 +1538,7 @@ structure:
 </code></pre></div>
 
 
-<p>Note that the <code>file</code> and <code>description</code> module parameters in Archeme DSL work as usual. If you need to combine the diagrams that are identified within the current Foliant project by using <code>&lt;&lt;archeme id="..."&gt;</code> tags, you should to omit the <code>file</code> and <code>description</code> module parameters in your combined diagrams definitions.</p>
+<p>Note that the <code>file</code> and <code>description</code> module parameters in Archeme DSL work as usual. If you need to combine the diagrams that are identified within the current Foliant project by using <code>&lt;archeme id="..."&gt;</code> tags, you should to omit the <code>file</code> and <code>description</code> module parameters in your combined diagrams definitions.</p>
                 
                   
                 

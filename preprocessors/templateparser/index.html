@@ -1591,7 +1591,7 @@ Base path: <span class="cp">{{</span> <span class="nv">base_path</span> <span cl
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;jinja2</span> <span class="na">ext_context=</span><span class="s">&quot;customers.yml&quot;</span><span class="nt">&gt;</span>
 <span class="cp">{%</span> <span class="k">for</span> <span class="nv">name</span><span class="o">,</span> <span class="nv">data</span> <span class="k">in</span> <span class="nv">_foliant_context.items</span><span class="o">()</span> <span class="cp">%}</span>
 
-## Customer <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
+# Customer <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
 
 Purchase: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;purchase&#39;</span><span class="o">]</span> <span class="cp">}}</span>
 Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;order_id&#39;</span><span class="o">]</span> <span class="cp">}}</span>
@@ -1619,7 +1619,9 @@ Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o"
 <p>If data inside your external context file is not a dictionary, it will be available inside template under <code>context</code> variable (or <code>_foliant_context['context']</code>).</p>
 <h4 id="integration-with-metadata">Integration with metadata<a class="headerlink" href="#integration-with-metadata" title="Permanent link">&para;</a></h4>
 <p>Templates support latest Foliant <a href="https://foliant-docs.github.io/docs/cli/meta/">metadata</a> functionality. You can find the meta dictionary for current section under <code>meta</code> variable inside template:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 Document status: {{ meta.status }}
 
 The document &quot;{{ meta.title }}&quot; is brought to you by {{ meta.author }}
@@ -1635,7 +1637,9 @@ The document &quot;Custom Title&quot; is brought to you by John
 
 
 <p>You can also find the whole project's <code>Meta</code> object under <code>meta_object</code> variable inside template:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 List of chapters in this project:
 {% for chapter in meta_object.chapters %}
 * {{ chapter.name }}

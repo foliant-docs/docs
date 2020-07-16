@@ -899,20 +899,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#includes-for-foliant" class="md-nav__link">
+    Includes for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -951,6 +959,11 @@
   <a href="#the-legacy-syntax" class="md-nav__link">
     The Legacy Syntax
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1392,20 +1405,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#includes-for-foliant" class="md-nav__link">
+    Includes for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -1451,6 +1472,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
       
       
@@ -1472,6 +1498,8 @@
                 
                 
                 <h1 id="includes">Includes<a class="headerlink" href="#includes" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.includes/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.includes.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.includes"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.includes.svg?label=GitHub" /></a></p>
+<h2 id="includes-for-foliant">Includes for Foliant<a class="headerlink" href="#includes-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Includes preprocessor lets you reuse parts of other documents in your Foliant project sources. It can include from files on your local machine and remote Git repositories. You can include entire documents as well as parts between particular headings, removing or normalizing included headings on the way.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.includes
@@ -1643,7 +1671,7 @@
 </dd>
 </dl>
 <p>Different options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you want to include a section with a custom heading:</p>
-<div class="codehilite"><pre><span></span><code>## My Custom Heading
+<div class="codehilite"><pre><span></span><code># My Custom Heading
 
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;other.md&quot;</span> <span class="na">from_heading=</span><span class="s">&quot;Original Heading&quot;</span> <span class="na">sethead=</span><span class="s">&quot;1&quot;</span> <span class="na">nohead=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
