@@ -1,6 +1,8 @@
 title: &title Foliant
 slug: foliant-docs
 
+escape_code: true
+
 chapters:
     - index.md
     - installation.md
