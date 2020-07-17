@@ -6,6 +6,8 @@ Configuration for Foliant is kept in a [YAML](https://yaml.org/)-file in the pro
 $ foliant make pdf --config myconf.yml
 ```
 
+## Config Sections
+
 foliant.yml consists of several sections:
 
 * root options,
@@ -13,7 +15,7 @@ foliant.yml consists of several sections:
 * preprocessors,
 * backend_config.
 
-## Root Options
+### Root Options
 
 These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, [AltStructure](https://foliant-docs.github.io/docs/config/alt_structure/) or [EscapeCode](https://foliant-docs.github.io/docs/preprocessors/escapecode/)), so please refer to each extension's respective docs for details.
 
@@ -38,7 +40,7 @@ tmp_dir: __folianttmp__
 `tmp_dir` *(string)*
 :    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn't want to set this option to something other than default. Default: `__folianttmp__`.
 
-## chapters
+## `chapters`
 
 *(list)*
 
@@ -122,7 +124,7 @@ means "create a subsection in the sidebar with a title **Creating Documentation 
 
 Please, refer to each backend's respective docs for details on how they work with chapters.
 
-## preprocessors
+### `preprocessors`
 
 *(list)*
 
@@ -172,7 +174,7 @@ Generally, preprocessors just ignore the chapters list and apply to *all Markdow
 
 We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use [RemoveExcess](https://foliant-docs.github.io/docs/preprocessors/removeexcess/) preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.
 
-## backend_config
+### `backend_config`
 
 *(mapping)*
 
@@ -204,11 +206,11 @@ Unlike `preprocessors` section, `backend_config` is not a list but a mapping. He
 
 Moreover, you can even skip adding a backend into `backend_config` and still be able to build a project with it. It will just mean that you are using default settings.
 
-# Modifiers
+## Modifiers
 
 Foliant defines several custom YAML-modifiers, some of which you have already met in the examples here.
 
-## !include
+### `!include`
 
 The `!inlude` modifier allows to insert content from another YAML-file.
 
@@ -218,7 +220,7 @@ For example, if your chapters list has grown so big, that you want to keep it se
 chapters: !include chapters.yml
 ```
 
-## !path, !project_path, !rel_path
+### `!path`, `!project_path`, `!rel_path`
 
 When used in foliant.yml, `!path`, `!project_path`, `!rel_path` all do the same thing: they resolve the path to an absolute path to make sure the preprocessor or backend processes this file properly.
 
