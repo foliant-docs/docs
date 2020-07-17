@@ -1,8 +1,8 @@
 # Debugging Builds
 
-Building of simple documentation projects with Foliant is usually straightforward. But Foliant and its extensions are designed to build complex projects. Foliant with its extensions is a powerful, customizable, and very flexible tool. If you understand what do you exactly want to do, and you can formalize it at the project config level, Foliant will perform you task efficiently and accurately.
+Building simple documentation projects with Foliant is usually straightforward. But Foliant and its extensions are designed to build complex projects. Foliant with its extensions is a powerful, customizable, and very flexible tool. If you understand what do you exactly want to do, and you can formalize it at the project config level, Foliant will perform your task efficiently and accurately.
 
-The problem is that it’s sometimes may be difficult to configure all preprocessors and backends correctly for the first time. Some settings are pretty subtle and unobvious. The sequence of applying of the preprocessors matters. Some preprocessors may work unexpectedly if others are used. It may be necessary to apply some preprocessor twice—before and after some another preprocessor. Fetching data from external sources may also become a bottleneck.
+The problem is that it sometimes may be difficult to configure all preprocessors and backends correctly for the first time. Some settings are pretty subtle and unobvious. The order of applying the preprocessors matters. Some preprocessors may work unexpectedly when paired with others. It may be necessary to apply some preprocessor twice — before and after some another preprocessor. Fetching data from external sources may also become a bottleneck.
 
 Fortunately, Foliant will not ask you to diagnose problems with the car engine without opening the hood. Foliant provides advanced diagnostic facilities such as the following:
 
@@ -16,10 +16,10 @@ In this documentation, examples of shell commands in most cases represent the na
 
 In practice, Foliant is more commonly used with Docker. Public images of Foliant with different sets of extensions are available [at Docker Hub](https://hub.docker.com/r/foliant/foliant). The actual tags are:
 
-* `slim`—minimal image of Foliant with no extensions;
-* `latest`—same as `slim` but with the `foliant init` command support;
-* `pandoc`—image of Foliant with Pandoc backend, Pandoc itself, and LaTeX (`texlive-full` Ubuntu package);
-* `full`—most complete image of Foliant with all released extensions and dependencies required for them.
+* `slim` — minimal image of Foliant with no extensions;
+* `latest` — same as `slim` but with the `foliant init` command support;
+* `pandoc` — image of Foliant with Pandoc backend, Pandoc itself, and LaTeX (`texlive-full` Ubuntu package);
+* `full` — most complete image of Foliant with all released extensions and dependencies required for them.
 
 You can find Dockerfiles for each image in [this GitHub repository](https://github.com/foliant-docs/docker/).
 
@@ -104,7 +104,7 @@ This command corresponds to the native command:
 $ foliant make pdf --with pandoc
 ```
 
-Note that by default the commands within Docker containers run as root. So, after running a container, you can get some files owned by root in your local file system. To avoid this, run commands inside Docker containers as an user with the user ID and group ID of your local user on the host machine:
+Note that by default the commands within Docker containers run as root. So, after running a container, you can get some files owned by root in your local file system. To avoid this, run commands inside Docker containers as a user with the user ID and group ID of your local user on the host machine:
 
 ```bash
 $ docker-compose run --user="$(id -u):$(id -g)" --rm foliant make pdf --with pandoc
@@ -116,7 +116,7 @@ If you described the service `bash` in your `docker-compose.yml` file, you may r
 $ docker-compose run --rm bash
 ```
 
-To open shell for an user with the same user ID and group ID as your current user on the host machine:
+To open shell for a user with the same user ID and group ID as your current user on the host machine:
 
 ```bash
 $ docker-compose run --user="$(id -u):$(id -g)" --rm bash
