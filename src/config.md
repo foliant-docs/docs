@@ -40,7 +40,7 @@ tmp_dir: __folianttmp__
 `tmp_dir` *(string)*
 :    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn't want to set this option to something other than default. Default: `__folianttmp__`.
 
-## `chapters`
+### `chapters`
 
 *(list)*
 
