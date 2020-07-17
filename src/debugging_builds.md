@@ -2,7 +2,7 @@
 
 Building simple documentation projects with Foliant is usually straightforward. But Foliant and its extensions are designed to build complex projects. Foliant with its extensions is a powerful, customizable, and very flexible tool. If you understand what do you exactly want to do, and you can formalize it at the project config level, Foliant will perform your task efficiently and accurately.
 
-The problem is that it sometimes may be difficult to configure all preprocessors and backends correctly for the first time. Some settings are pretty subtle and unobvious. The order of applying the preprocessors matters. Some preprocessors may work unexpectedly when paired with others. It may be necessary to apply some preprocessor twice — before and after some another preprocessor. Fetching data from external sources may also become a bottleneck.
+The problem is that it sometimes may be difficult to configure all preprocessors and backends correctly for the first time. Some settings are pretty subtle and unobvious. The order of applying the preprocessors matters. Some preprocessors may work unexpectedly when paired with others. It may be necessary to apply some preprocessor twice—before and after some another preprocessor. Fetching data from external sources may also become a bottleneck.
 
 Fortunately, Foliant will not ask you to diagnose problems with the car engine without opening the hood. Foliant provides advanced diagnostic facilities such as the following:
 

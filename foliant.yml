@@ -8,6 +8,7 @@ chapters:
     - installation.md
     - quickstart.md
     - architecture.md
+    - config.md
     - debugging_builds.md
     - Tutorials:
         - tutorials/full_docker.md
