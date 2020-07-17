@@ -326,9 +326,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#config-sections" class="md-nav__link">
+    Config Sections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#root-options" class="md-nav__link">
     Root Options
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -337,19 +350,52 @@
     chapters
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preprocessors" class="md-nav__link">
     preprocessors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#backend_config" class="md-nav__link">
     backend_config
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include" class="md-nav__link">
+    !include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-project_path-rel_path" class="md-nav__link">
+    !path, !project_path, !rel_path
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1369,9 +1415,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#config-sections" class="md-nav__link">
+    Config Sections
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#root-options" class="md-nav__link">
     Root Options
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1380,19 +1439,52 @@
     chapters
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#preprocessors" class="md-nav__link">
     preprocessors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#backend_config" class="md-nav__link">
     backend_config
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include" class="md-nav__link">
+    !include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-project_path-rel_path" class="md-nav__link">
+    !path, !project_path, !rel_path
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1421,6 +1513,7 @@
 </code></pre></div>
 
 
+<h2 id="config-sections">Config Sections<a class="headerlink" href="#config-sections" title="Permanent link">&para;</a></h2>
 <p>foliant.yml consists of several sections:</p>
 <ul>
 <li>root options,</li>
@@ -1428,7 +1521,7 @@
 <li>preprocessors,</li>
 <li>backend_config.</li>
 </ul>
-<h2 id="root-options">Root Options<a class="headerlink" href="#root-options" title="Permanent link">&para;</a></h2>
+<h3 id="root-options">Root Options<a class="headerlink" href="#root-options" title="Permanent link">&para;</a></h3>
 <p>These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <a href="https://foliant-docs.github.io/docs/config/alt_structure/">AltStructure</a> or <a href="https://foliant-docs.github.io/docs/preprocessors/escapecode/">EscapeCode</a>), so please refer to each extension's respective docs for details.</p>
 <p>Here are all built-in root options:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
@@ -1448,7 +1541,7 @@
 <dt><code>tmp_dir</code> <em>(string)</em></dt>
 <dd>Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn't want to set this option to something other than default. Default: <code>__folianttmp__</code>.</dd>
 </dl>
-<h2 id="chapters">chapters<a class="headerlink" href="#chapters" title="Permanent link">&para;</a></h2>
+<h2 id="chapters"><code>chapters</code><a class="headerlink" href="#chapters" title="Permanent link">&para;</a></h2>
 <p><em>(list)</em></p>
 <p><code>chapters</code> is a list of paths to the Markdown sources which you want to be used in the project. These paths are always relative to your <code>src</code> dir.</p>
 <p>Here's a basic chapters list:</p>
@@ -1518,7 +1611,7 @@
 
 <p>means "create a subsection in the sidebar with a title <strong>Creating Documentation With Foliant</strong> and nest the <code>preprequisites.md</code> chapter inside. Then nest another subsection within the first one, called <strong>Preparing Config</strong> and nest four other chapters inside of it".</p>
 <p>Please, refer to each backend's respective docs for details on how they work with chapters.</p>
-<h2 id="preprocessors">preprocessors<a class="headerlink" href="#preprocessors" title="Permanent link">&para;</a></h2>
+<h3 id="preprocessors"><code>preprocessors</code><a class="headerlink" href="#preprocessors" title="Permanent link">&para;</a></h3>
 <p><em>(list)</em></p>
 <p>All preprocessors which you want to be used in your project, should be listed under the <code>preprocessors</code> section:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
@@ -1555,7 +1648,7 @@
 <p><strong>Preprocessors are applied to all files</strong></p>
 <p>Generally, preprocessors just ignore the chapters list and apply to <em>all Markdown files</em> in the src dir. Usually this is not an issue, but sometimes preprocessor may spend a long time on the files, which may not even get into the resulting build.</p>
 <p>We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use <a href="https://foliant-docs.github.io/docs/preprocessors/removeexcess/">RemoveExcess</a> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.</p>
-<h2 id="backend_config">backend_config<a class="headerlink" href="#backend_config" title="Permanent link">&para;</a></h2>
+<h3 id="backend_config"><code>backend_config</code><a class="headerlink" href="#backend_config" title="Permanent link">&para;</a></h3>
 <p><em>(mapping)</em></p>
 <p>Keep all your backend settings in <code>backend_config</code> section:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
@@ -1582,16 +1675,16 @@
 
 <p>Unlike <code>preprocessors</code> section, <code>backend_config</code> is not a list but a mapping. Here the order in which you define backends, is not important.</p>
 <p>Moreover, you can even skip adding a backend into <code>backend_config</code> and still be able to build a project with it. It will just mean that you are using default settings.</p>
-<h1 id="modifiers">Modifiers<a class="headerlink" href="#modifiers" title="Permanent link">&para;</a></h1>
+<h2 id="modifiers">Modifiers<a class="headerlink" href="#modifiers" title="Permanent link">&para;</a></h2>
 <p>Foliant defines several custom YAML-modifiers, some of which you have already met in the examples here.</p>
-<h2 id="include">!include<a class="headerlink" href="#include" title="Permanent link">&para;</a></h2>
+<h3 id="include"><code>!include</code><a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
 <p>The <code>!inlude</code> modifier allows to insert content from another YAML-file.</p>
 <p>For example, if your chapters list has grown so big, that you want to keep it separately from the main config, you can put it into <code>chapters.yml</code> file and include it in <code>foliant.yml</code>:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml</span>
 </code></pre></div>
 
 
-<h2 id="path-project_path-rel_path">!path, !project_path, !rel_path<a class="headerlink" href="#path-project_path-rel_path" title="Permanent link">&para;</a></h2>
+<h3 id="path-project_path-rel_path"><code>!path</code>, <code>!project_path</code>, <code>!rel_path</code><a class="headerlink" href="#path-project_path-rel_path" title="Permanent link">&para;</a></h3>
 <p>When used in foliant.yml, <code>!path</code>, <code>!project_path</code>, <code>!rel_path</code> all do the same thing: they resolve the path to an absolute path to make sure the preprocessor or backend processes this file properly.</p>
 <p>It is recommended, that whenever you supply a path to any file in options, to precede it with the <code>!path</code> modifier:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
