@@ -1310,6 +1310,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-07-22-foliant-1012" class="md-nav__link">
+    [2020-07-22] foliant 1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-22-foliantcontribpandoc-1011" class="md-nav__link">
+    [2020-07-22] foliantcontrib.pandoc 1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-22-foliantcontribmkdocs-1012" class="md-nav__link">
+    [2020-07-22] foliantcontrib.mkdocs 1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-20-foliantcontribmultiproject-1014" class="md-nav__link">
+    [2020-07-20] foliantcontrib.multiproject 1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-19-foliantcontribescapecode-103" class="md-nav__link">
+    [2020-07-19] foliantcontrib.escapecode 1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-07-14-foliantcontribconfluence-0612" class="md-nav__link">
     [2020-07-14] foliantcontrib.confluence 0.6.12
   </a>
@@ -3714,6 +3749,41 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2020-07-22-foliant-1012" class="md-nav__link">
+    [2020-07-22] foliant 1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-22-foliantcontribpandoc-1011" class="md-nav__link">
+    [2020-07-22] foliantcontrib.pandoc 1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-22-foliantcontribmkdocs-1012" class="md-nav__link">
+    [2020-07-22] foliantcontrib.mkdocs 1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-20-foliantcontribmultiproject-1014" class="md-nav__link">
+    [2020-07-20] foliantcontrib.multiproject 1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2020-07-19-foliantcontribescapecode-103" class="md-nav__link">
+    [2020-07-19] foliantcontrib.escapecode 1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2020-07-14-foliantcontribconfluence-0612" class="md-nav__link">
     [2020-07-14] foliantcontrib.confluence 0.6.12
   </a>
@@ -6107,6 +6177,31 @@
                 
                 <h1 id="history-of-releases">History of Releases<a class="headerlink" href="#history-of-releases" title="Permanent link">&para;</a></h1>
 <p>Here is the single linear history of releases of Foliant and its extensions. It’s also available as an <a href="https://foliant-docs.github.io/docs/rss.xml">RSS feed</a>.</p>
+<h2 id="2020-07-22-foliant-1012">[2020-07-22] <a href="https://github.com/foliant-docs/foliant.git">foliant</a> 1.0.12<a class="headerlink" href="#2020-07-22-foliant-1012" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add the <code>disable_implicit_unescape</code> option. Remove warning when <code>escape_code</code> is not set.</li>
+<li>Support the <code>!env</code> YAML tag to use environment variables in the project config.</li>
+<li>Allow to specify custom directory to store logs with the <code>--logs|-l</code> command line option.</li>
+<li>Flush output to STDOUT in progress status messages and in the <code>foliant.utils.output()</code> method.</li>
+<li>Get and log the names and versions of all installed Foliant-related packages.</li>
+<li>Do not raise exception of the same type that is raised by a preprocessor, raise <code>RuntimeError</code> instead because some exceptions take more arguments than one.</li>
+</ul>
+<h2 id="2020-07-22-foliantcontribpandoc-1011">[2020-07-22] <a href="https://github.com/foliant-docs/foliantcontrib.pandoc.git">foliantcontrib.pandoc</a> 1.0.11<a class="headerlink" href="#2020-07-22-foliantcontribpandoc-1011" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do not re-raise an exception of the same type as raised, raise <code>RuntimeError</code> instead, it’s needed to avoid non-informative error messages.</li>
+</ul>
+<h2 id="2020-07-22-foliantcontribmkdocs-1012">[2020-07-22] <a href="https://github.com/foliant-docs/foliantcontrib.mkdocs.git">foliantcontrib.mkdocs</a> 1.0.12<a class="headerlink" href="#2020-07-22-foliantcontribmkdocs-1012" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do not re-raise an exception of the same type as raised, raise <code>RuntimeError</code> instead, it’s needed to avoid non-informative error messages.</li>
+</ul>
+<h2 id="2020-07-20-foliantcontribmultiproject-1014">[2020-07-20] <a href="https://github.com/foliant-docs/foliantcontrib.multiproject.git">foliantcontrib.multiproject</a> 1.0.14<a class="headerlink" href="#2020-07-20-foliantcontribmultiproject-1014" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Support Foliant Core 1.0.12, write logs to the directory that is specified for the multiproject.</li>
+</ul>
+<h2 id="2020-07-19-foliantcontribescapecode-103">[2020-07-19] <a href="https://github.com/foliant-docs/foliantcontrib.escapecode.git">foliantcontrib.escapecode</a> 1.0.3<a class="headerlink" href="#2020-07-19-foliantcontribescapecode-103" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Do not fail the preprocessor if saved code is not found, show warning message instead.</li>
+</ul>
 <h2 id="2020-07-14-foliantcontribconfluence-0612">[2020-07-14] <a href="https://github.com/foliant-docs/foliantcontrib.confluence.git">foliantcontrib.confluence</a> 0.6.12<a class="headerlink" href="#2020-07-14-foliantcontribconfluence-0612" title="Permanent link">&para;</a></h2>
 <ul>
 <li>New: option to store passwords in passfile.</li>

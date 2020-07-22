@@ -293,6 +293,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1011" class="md-nav__link">
     1.0.11
   </a>
@@ -1460,6 +1467,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1011" class="md-nav__link">
     1.0.11
   </a>
@@ -1584,6 +1598,15 @@
 <li>have documentation spread across many repos and want to reuse parts between documents</li>
 </ul>
 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<h3 id="1012">1.0.12<a class="headerlink" href="#1012" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add the <code>disable_implicit_unescape</code> option. Remove warning when <code>escape_code</code> is not set.</li>
+<li>Support the <code>!env</code> YAML tag to use environment variables in the project config.</li>
+<li>Allow to specify custom directory to store logs with the <code>--logs|-l</code> command line option.</li>
+<li>Flush output to STDOUT in progress status messages and in the <code>foliant.utils.output()</code> method.</li>
+<li>Get and log the names and versions of all installed Foliant-related packages.</li>
+<li>Do not raise exception of the same type that is raised by a preprocessor, raise <code>RuntimeError</code> instead because some exceptions take more arguments than one.</li>
+</ul>
 <h3 id="1011">1.0.11<a class="headerlink" href="#1011" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Allow to specify custom options for EscapeCode preprocessor as the <code>escape_code.options</code> config parameter value.</li>

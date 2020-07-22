@@ -7,6 +7,56 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliant 1.0.12</title>
+            <link>https://github.com/foliant-docs/foliant.git</link>
+            <guid>https://github.com/foliant-docs/foliant.git#4553ea4082e4245b7082fea6a1a3da12</guid>
+            <pubDate>Wed, 22 Jul 2020 18:51:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add the <escaped hash="c09ac3dd7d7ff62c725dd19274928ea4"></escaped> option. Remove warning when <escaped hash="80f56b684b71be2939707b2d152aeb6f"></escaped> is not set.</li>
+<li>Support the <escaped hash="c88505a4312152dc55e533abe6542544"></escaped> YAML tag to use environment variables in the project config.</li>
+<li>Allow to specify custom directory to store logs with the <escaped hash="450d68c49786e4b54efdd88822b6185f"></escaped> command line option.</li>
+<li>Flush output to STDOUT in progress status messages and in the <escaped hash="e0e34cebf133071496ff42d4b9c84414"></escaped> method.</li>
+<li>Get and log the names and versions of all installed Foliant-related packages.</li>
+<li>Do not raise exception of the same type that is raised by a preprocessor, raise <escaped hash="d7bc7257664ea582415d0a342d319791"></escaped> instead because some exceptions take more arguments than one.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.pandoc 1.0.11</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#8060c91f3d870c7bcf40b805d32dc85e</guid>
+            <pubDate>Wed, 22 Jul 2020 17:06:13 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Do not re-raise an exception of the same type as raised, raise <escaped hash="d7bc7257664ea582415d0a342d319791"></escaped> instead, it’s needed to avoid non-informative error messages.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.mkdocs 1.0.12</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#eeed682d6acb769c58ea89998cd7d70e</guid>
+            <pubDate>Wed, 22 Jul 2020 17:05:15 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Do not re-raise an exception of the same type as raised, raise <escaped hash="d7bc7257664ea582415d0a342d319791"></escaped> instead, it’s needed to avoid non-informative error messages.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.multiproject 1.0.14</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#09480c2aa7ac4a9c1902c1749059f94e</guid>
+            <pubDate>Mon, 20 Jul 2020 21:32:34 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support Foliant Core 1.0.12, write logs to the directory that is specified for the multiproject.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.escapecode 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.escapecode.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.escapecode.git#375427a5c3a4267439d95a3f92f46af7</guid>
+            <pubDate>Sun, 19 Jul 2020 03:34:55 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Do not fail the preprocessor if saved code is not found, show warning message instead.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.6.12</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#6cc5e7a9b27940aef1129e0d40ff8c3b</guid>
