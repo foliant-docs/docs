@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.includes 1.1.13</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#f176df2b342847e0562f58a51597aa43</guid>
+            <pubDate>Wed, 29 Jul 2020 09:05:37 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>When getting the included content by URL, take into account the <escaped hash="ed614fefc0322e3729b00879e6fd8676"></escaped> parameter of the <escaped hash="d6579c354deba21046459d132a76b758"></escaped> response header field.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.includes 1.1.12</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#eab800f3e5ba456d9eed6d9cddc2725c</guid>
