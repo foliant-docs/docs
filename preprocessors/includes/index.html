@@ -1550,7 +1550,7 @@
 <dt><code>recursive</code></dt>
 <dd>Flag that defines whether includes in included documents should be processed.</dd>
 <dt><code>extensions</code></dt>
-<dd>List of file extensions where includes will be processed. Might be useful if you want to include content into config-file or a template-file. Default: <code>[md]</code>.</dd>
+<dd>List of file extensions that defines the types of files which should be processed looking for include statements. Might be useful if you need to include some content from third-party sources into non-Markdown files like configs, templates, reports, etc. Defaults to <code>[md]</code>.</dd>
 <dt><code>aliases</code></dt>
 <dd>
 <p>Mapping from aliases to Git repository URLs. Once defined here, an alias can be used to refer to the repository instead of its full URL.</p>
@@ -1611,7 +1611,7 @@
 <dt><code>src</code></dt>
 <dd>Path to the local file to include.</dd>
 <dt><code>url</code></dt>
-<dd>Direct link to remote file, which needs to be included.</dd>
+<dd>HTTP(S) URL of the content that should be included.</dd>
 <dt><code>repo_url</code></dt>
 <dd>Full remote Git repository URL without a revision.</dd>
 <dt><code>path</code></dt>
@@ -1627,11 +1627,11 @@
 <dt><code>revision</code></dt>
 <dd>Revision of the Git repository.</dd>
 <dt><code>from_heading</code></dt>
-<dd>Full content of the starting heading when it’s necessary to include some part of the referenced file content.</dd>
+<dd>Full content of the starting heading when it’s necessary to include some part of the referenced file content. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level.</dd>
 <dt><code>to_heading</code></dt>
 <dd>Full content of the ending heading when it’s necessary to include some part of the referenced file content.</dd>
 <dt><code>from_id</code></dt>
-<dd>ID of the starting heading or starting anchor when it’s necessary to include some part of the referenced file content. The <code>from_id</code> attribute has higher priority than <code>from_heading</code>.</dd>
+<dd>ID of the starting heading or starting anchor when it’s necessary to include some part of the referenced file content. The <code>from_id</code> attribute has higher priority than <code>from_heading</code>. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level.</dd>
 <dt><code>to_id</code></dt>
 <dd>ID of the ending heading or ending anchor when it’s necessary to include some part of the referenced file content. The <code>to_id</code> attribute has higher priority than <code>to_heading</code>.</dd>
 <dt><code>to_end</code></dt>
@@ -1646,6 +1646,10 @@
 
 <p>Here <code>Some Heading {#custom_id}</code> is the full content of the heading, <code>custom_id</code> is its ID, and <code>one_more_custom_id</code> is the ID of the anchor.</p>
 </dd>
+<dt><code>wrap_code</code></dt>
+<dd>Attribute that allows to mark up the included content as fence code block or inline code by wrapping the content with additional Markdown syntax constructions. Available values are: <code>triple_backticks</code>—to add triple backticks separated with newlines before and after the included content; <code>triple_tildas</code>—to do the same but using triple tildas; <code>single_backticks</code>—to add single backticks before and after the included content without adding extra newlines. Note that this attribute doesn’t affect the included content. So if the content consists of multiple lines, and the <code>wrap_code</code> attribute with the value <code>single_backticks</code> is set, all newlines within the content will be kept. To perform forced conversion of multiple lines into one, use the <code>inline</code> attribute.</dd>
+<dt><code>code_language</code></dt>
+<dd>Language of the included code snippet that should be additionally marked up as fence code block by using the <code>wrap_code</code> attribute with the value <code>triple_backticks</code> or <code>triple_tildas</code>. Note that the <code>code_language</code> attribute doesn’t take effect to inline code that is obtained when the <code>single_backticks</code> value is used. The value of this attribute should be a string without whitespace characters, usually in lowercase; examples: <code>python</code>, <code>bash</code>, <code>json</code>.</dd>
 </dl>
 <h4 id="optional-attributes-supported-in-both-syntax-variants">Optional Attributes Supported in Both Syntax Variants<a class="headerlink" href="#optional-attributes-supported-in-both-syntax-variants" title="Permanent link">&para;</a></h4>
 <dl>
@@ -1682,7 +1686,7 @@
 </blockquote>
 </dd>
 </dl>
-<p>Different options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you want to include a section with a custom heading:</p>
+<p>Different options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you need to include a section with a custom heading:</p>
 <div class="codehilite"><pre><span></span><code># My Custom Heading
 
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;other.md&quot;</span> <span class="na">from_heading=</span><span class="s">&quot;Original Heading&quot;</span> <span class="na">sethead=</span><span class="s">&quot;1&quot;</span> <span class="na">nohead=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>

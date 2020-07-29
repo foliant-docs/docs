@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.includes 1.1.12</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#eab800f3e5ba456d9eed6d9cddc2725c</guid>
+            <pubDate>Wed, 29 Jul 2020 01:26:00 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add the <escaped hash="9a650f12d22e2e202b02e97f9fa09b8a"></escaped> and <escaped hash="ec46f458814a33724d63c7d4a3a6f6af"></escaped> attributes to mark up the included content as fence code block or inline code.</li>
+<li>Prevent to create cache directory when it’s not needed. Improve code style. Refactor a little.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliant 1.0.12</title>
             <link>https://github.com/foliant-docs/foliant.git</link>
             <guid>https://github.com/foliant-docs/foliant.git#4553ea4082e4245b7082fea6a1a3da12</guid>
@@ -81,11 +91,11 @@
         <item>
             <title>foliantcontrib.includes 1.1.11</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#67d34d9dc37f8481643b3259cf946625</guid>
+            <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#50a34ed8bd5a379d7501fc5bc4783220</guid>
             <pubDate>Thu, 09 Jul 2020 11:22:08 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>New: <escaped hash="0f377c5efd7c12d18230e8e4315fbbd8"></escaped> parameter to process file types different from .md</li>
-<li>New: <escaped hash="61d7330b4e95acd575f02a3b2ee3c73a"></escaped> attribute to include content from direct link to file</li>
+<li>Add the <escaped hash="0f377c5efd7c12d18230e8e4315fbbd8"></escaped> config parameter to process file types different from <escaped hash="e1ae90835e098300bcb904c5c541d86e"></escaped>.</li>
+<li>Add the <escaped hash="61d7330b4e95acd575f02a3b2ee3c73a"></escaped> attribute to include content that is available by HTTP(S) URL.</li>
 </ul>]]></description>
         </item>
         <item>
