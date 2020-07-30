@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.escapecode 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.escapecode.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.escapecode.git#0d9635abb4685bdfaf549c64a4d6f0a0</guid>
+            <pubDate>Fri, 31 Jul 2020 00:07:42 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Addition to normalization: remove BOM.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.includes 1.1.13</title>
             <link>https://github.com/foliant-docs/foliantcontrib.includes.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.includes.git#f176df2b342847e0562f58a51597aa43</guid>
