@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbdoc 0.1.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#67d719049dc6ab4804dfa95d3e8977d4</guid>
+            <pubDate>Thu, 20 Aug 2020 16:21:12 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: Added support for Microsoft SQL Server</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.escapecode 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.escapecode.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.escapecode.git#0d9635abb4685bdfaf549c64a4d6f0a0</guid>

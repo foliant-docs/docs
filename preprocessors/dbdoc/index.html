@@ -829,6 +829,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1473,6 +1480,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1506,16 +1520,22 @@
 <p>Currently supported databases:</p>
 <ul>
 <li><strong>PostgreSQL</strong>,</li>
-<li><strong>Oracle</strong>.</li>
+<li><strong>Oracle</strong>,</li>
+<li><strong>Microsoft SQL Server</strong>.</li>
 </ul>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
 <p>DBDoc generates documentation by querying database structure. That's why you will need client libraries installed on your computer before running the preprocessor.</p>
+<p><strong>PosgreSQL</strong></p>
 <p>PostgreSQL will be installed automatically with the preprocessor.</p>
-<p>But Oracle libraries are proprietary, so we cannot include them even in our <a href="https://hub.docker.com/r/foliant/foliant/tags">Docker distribution</a>. So, if you are planning on using DBDoc to document Oracle databases, first install the <a href="https://www.oracle.com/database/technologies/instant-client.html">Instant Client</a>.</p>
+<p><strong>Oracle</strong></p>
+<p>Oracle libraries are proprietary, so we cannot include them even in our <a href="https://hub.docker.com/r/foliant/foliant/tags">Docker distribution</a>. So, if you are planning on using DBDoc to document Oracle databases, first install the <a href="https://www.oracle.com/database/technologies/instant-client.html">Instant Client</a>.</p>
 <blockquote>
 <p>If you search the web, you can find ways to install Oracle Instant Client inside your Docker image, just saying.</p>
 </blockquote>
+<p><strong>Microsoft SQL Server</strong></p>
+<p>On Windows you will need to install MS SQL Server.</p>
+<p>On Unix you will first need to install <a href="http://www.unixodbc.org/">unixODBC</a>, and then — the ODBC driver. Microsoft has a detailed instructions on how to install the driver <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server">on Linux</a> and <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos">on Mac</a>.</p>
 <h4 id="preprocessor">Preprocessor<a class="headerlink" href="#preprocessor" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbdoc
 </code></pre></div>
@@ -1531,6 +1551,7 @@
 <p>The preprocessor has a number of options:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">dbdoc</span><span class="p">:</span>
+        <span class="nt">dbms</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pgsql</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
         <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5432</span>
         <span class="nt">dbname</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
@@ -1546,10 +1567,13 @@
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tables</span>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">functions</span>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">triggers</span>
+        <span class="nt">driver</span><span class="p">:</span> <span class="s">&#39;{ODBC</span><span class="nv"> </span><span class="s">Driver</span><span class="nv"> </span><span class="s">17</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">SQL</span><span class="nv"> </span><span class="s">Server}&#39;</span>
 </code></pre></div>
 
 
 <dl>
+<dt><code>dbms</code></dt>
+<dd>Name of the DBMS. Should be one of: <code>pgsql</code>, <code>oracle</code>, <code>sqlserver</code>. Only needed if you are using <code>&lt;dbdoc&gt;</code> tag. If you are using explicit tags (<code>&lt;oracle&gt;</code>, <code>&lt;pgsql&gt;</code>), this parameter is ignored.</dd>
 <dt><code>host</code></dt>
 <dd>Database host address. Default: <code>localhost</code></dd>
 <dt><code>port</code></dt>
@@ -1572,9 +1596,11 @@
 <dd>Path to jinja-template for scheme. Path is relative to the project directory. If not supplied — default template would be used.</dd>
 <dt><code>components</code></dt>
 <dd>List of components to be added to documentation. If not supplied — everything will be added. Use to exclude some parts of documentation. Available components: <code>'tables'</code>, <code>'views'</code>, <code>'functions'</code>, <code>'triggers'</code>.</dd>
+<dt><code>driver</code></dt>
+<dd>Specific option for MS SQL Server database. Defines the driver connection string. Default: <code>{ODBC Driver 17 for SQL Server}</code>.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>DBDoc currently supports two database engines: Oracle and PostgreSQL. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
+<p>DBDoc currently supports three database engines: Oracle, PostgreSQL and Microsoft SQL Server. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
 <div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
@@ -1589,6 +1615,15 @@ This document contains the most awesome automatically generated documentation of
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
 
 <span class="p">&lt;</span><span class="nt">pgsql</span><span class="p">&gt;&lt;/</span><span class="nt">pgsql</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>To generate SQL Server database documentation, add a <code>&lt;sqlserver&gt;&lt;/sqlserver&gt;</code> tag to a desired place of your chapter.</p>
+<div class="codehilite"><pre><span></span><code># Introduction
+
+This document contains the most awesome automatically generated documentation of our marvellous SQL Server database.
+
+<span class="p">&lt;</span><span class="nt">sqlserver</span><span class="p">&gt;&lt;/</span><span class="nt">sqlserver</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
@@ -1683,6 +1718,9 @@ Introduction text for database documentation.
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>Note: <code>regex</code> and <code>not_regex</code> are not supported with Microsoft SQL Server DBMS.</p>
+</blockquote>
 <p>List of currently supported filtering fields:</p>
 <table>
 <thead>
@@ -1727,7 +1765,51 @@ Introduction text for database documentation.
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/oracle/templates/scheme.j2">Default <strong>Oracle scheme</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">Default <strong>PostgreSQL doc</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">Default <strong>PostgreSQL scheme</strong> template.</a></li>
+<li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mssql/templates/doc.j2">Default <strong>SQL Server doc</strong> template.</a></li>
+<li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mssql/templates/doc.j2">Default <strong>SQL Server scheme</strong> template.</a></li>
 </ul>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p>If you get errors during build, especially errors concerning connection to the database, you have to make sure that you are supplying the right parameters.</p>
+<p>There may be a lot of possible causes for errors. For example, MS SQL Server will fail to connect to local database if you specify host as <code>localhost</code>, you have to explicitly write <code>0.0.0.0</code> or <code>127.0.0.1</code>.</p>
+<p>So your first action to root the source of your errors should be running a python console a trying to connect to your database manually.</p>
+<p>Here are sample snippets on how to connect to different databases.</p>
+<p><strong>PostgreSQL</strong></p>
+<p><a href="https://pypi.org/project/psycopg2/">psycopg2</a> library is required.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">psycopg2</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+      <span class="s2">&quot;host=localhost &quot;</span>
+      <span class="s2">&quot;port=5432 &quot;</span>
+      <span class="s2">&quot;dbname=MyDatabase &quot;</span>
+      <span class="s2">&quot;user=postgres&quot;</span>
+      <span class="s2">&quot;password=postgres&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p><strong>Oracle</strong></p>
+<p><a href="https://oracle.github.io/python-cx_Oracle/">cx_Oracle</a> library is required.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">cx_Oracle</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="s2">&quot;Scott/Tiger@localhost:1521/MyDatabase&quot;</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span>
+    <span class="n">nencoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p><strong>Microsoft SQL Server</strong></p>
+<p><a href="https://pypi.org/project/pyodbc/">pyodbc</a> library is required.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyodbc</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="s2">&quot;DRIVER={ODBC Driver 17 for SQL Server};&quot;</span>
+    <span class="s2">&quot;SERVER=0.0.0.0,1433;&quot;</span>
+    <span class="s2">&quot;DATABASE=MyDatabase;&quot;</span>
+    <span class="s2">&quot;UID=Usernam;PWD=Password_0&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
                 
                   
                 
