@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbdoc 0.1.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#df166f090d9ccc9b6f171e8d6787ffe8</guid>
+            <pubDate>Fri, 21 Aug 2020 12:36:07 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: Added support for MySQL</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbdoc 0.1.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#67d719049dc6ab4804dfa95d3e8977d4</guid>

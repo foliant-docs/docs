@@ -1521,8 +1521,12 @@
 <ul>
 <li><strong>PostgreSQL</strong>,</li>
 <li><strong>Oracle</strong>,</li>
-<li><strong>Microsoft SQL Server</strong>.</li>
+<li><strong>Microsoft SQL Server</strong>,</li>
+<li><strong>MySQL</strong>.</li>
 </ul>
+<blockquote>
+<p><strong>Important Notice</strong>: We, here at Foliant, don't work with <em>all</em> of the databases mentioned above. That's why we cannot properly test the preprocessor's work with all of them. That's where we need your help: If you encounter ANY errors during build; if you are not getting enough information for your document in the template; if you can't make the filters work; or if you see any other anomaly, please <a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/issues">send us an issue</a> in GitHub. We will try to fix it as fast as we can. Thanks!</p>
+</blockquote>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
 <p>DBDoc generates documentation by querying database structure. That's why you will need client libraries installed on your computer before running the preprocessor.</p>
@@ -1536,6 +1540,18 @@
 <p><strong>Microsoft SQL Server</strong></p>
 <p>On Windows you will need to install MS SQL Server.</p>
 <p>On Unix you will first need to install <a href="http://www.unixodbc.org/">unixODBC</a>, and then — the ODBC driver. Microsoft has a detailed instructions on how to install the driver <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server">on Linux</a> and <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos">on Mac</a>.</p>
+<p><strong>MySQL</strong></p>
+<p>On Mac you can simply run</p>
+<div class="codehilite"><pre><span></span><code>$ brew install mysql
+</code></pre></div>
+
+
+<p>On Linux you will have to install server and client packages, for example, with apt-get:</p>
+<div class="codehilite"><pre><span></span><code>sudp apt-get update
+sudo apt-get install -y mysql-server libmysqlclient-dev
+</code></pre></div>
+
+
 <h4 id="preprocessor">Preprocessor<a class="headerlink" href="#preprocessor" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbdoc
 </code></pre></div>
@@ -1573,7 +1589,7 @@
 
 <dl>
 <dt><code>dbms</code></dt>
-<dd>Name of the DBMS. Should be one of: <code>pgsql</code>, <code>oracle</code>, <code>sqlserver</code>. Only needed if you are using <code>&lt;dbdoc&gt;</code> tag. If you are using explicit tags (<code>&lt;oracle&gt;</code>, <code>&lt;pgsql&gt;</code>), this parameter is ignored.</dd>
+<dd>Name of the DBMS. Should be one of: <code>pgsql</code>, <code>oracle</code>, <code>sqlserver</code>, <code>mysql</code>. Only needed if you are using <code>&lt;dbdoc&gt;</code> tag. If you are using explicit tags (<code>&lt;oracle&gt;</code>, <code>&lt;pgsql&gt;</code>), this parameter is ignored.</dd>
 <dt><code>host</code></dt>
 <dd>Database host address. Default: <code>localhost</code></dd>
 <dt><code>port</code></dt>
@@ -1615,6 +1631,15 @@ This document contains the most awesome automatically generated documentation of
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
 
 <span class="p">&lt;</span><span class="nt">pgsql</span><span class="p">&gt;&lt;/</span><span class="nt">pgsql</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>To generate MySQL database documentation, add a <code>&lt;mysql&gt;&lt;/mysql&gt;</code> tag to a desired place of your chapter.</p>
+<div class="codehilite"><pre><span></span><code># Introduction
+
+This document contains the most awesome automatically generated documentation of our marvellous SQL Server database.
+
+<span class="p">&lt;</span><span class="nt">mysql</span><span class="p">&gt;&lt;/</span><span class="nt">mysql</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
@@ -1765,13 +1790,15 @@ Introduction text for database documentation.
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/oracle/templates/scheme.j2">Default <strong>Oracle scheme</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">Default <strong>PostgreSQL doc</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">Default <strong>PostgreSQL scheme</strong> template.</a></li>
+<li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mysql/templates/doc.j2">Default <strong>MySQL doc</strong> template.</a></li>
+<li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mysql/templates/doc.j2">Default <strong>MySQL scheme</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mssql/templates/doc.j2">Default <strong>SQL Server doc</strong> template.</a></li>
 <li><a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/mssql/templates/doc.j2">Default <strong>SQL Server scheme</strong> template.</a></li>
 </ul>
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
 <p>If you get errors during build, especially errors concerning connection to the database, you have to make sure that you are supplying the right parameters.</p>
-<p>There may be a lot of possible causes for errors. For example, MS SQL Server will fail to connect to local database if you specify host as <code>localhost</code>, you have to explicitly write <code>0.0.0.0</code> or <code>127.0.0.1</code>.</p>
-<p>So your first action to root the source of your errors should be running a python console a trying to connect to your database manually.</p>
+<p>There may be a lot of possible causes for errors. For example, MS SQL Server may fail to connect to local database if you specify host as <code>localhost</code>, you have to explicitly write <code>0.0.0.0</code> or <code>127.0.0.1</code>.</p>
+<p>So your first action to root the source of your errors should be running a python console and trying to connect to your database manually.</p>
 <p>Here are sample snippets on how to connect to different databases.</p>
 <p><strong>PostgreSQL</strong></p>
 <p><a href="https://pypi.org/project/psycopg2/">psycopg2</a> library is required.</p>
@@ -1796,6 +1823,20 @@ Introduction text for database documentation.
     <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span>
     <span class="n">nencoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span>
 <span class="p">)</span>
+</code></pre></div>
+
+
+<p><strong>MySQL</strong></p>
+<p><a href="https://pypi.org/project/mysqlclient/">mysqlclient</a> library is required.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">MySQLdb</span> <span class="kn">import</span> <span class="n">_mysql</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">_mysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
+        <span class="n">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+        <span class="n">passwd</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">,</span>
+        <span class="n">db</span><span class="o">=</span><span class="s1">&#39;MyDatabase&#39;</span>
+    <span class="p">)</span>
 </code></pre></div>
 
 
