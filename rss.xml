@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.13</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#b5a4b7732b84517d90ec5269e52a73b9</guid>
+            <pubDate>Fri, 21 Aug 2020 13:39:40 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: cache dir for preprocessor was not created</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbdoc 0.1.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#df166f090d9ccc9b6f171e8d6787ffe8</guid>
