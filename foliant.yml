@@ -61,6 +61,7 @@ chapters:
         - preprocessors/pgsqldoc.md
         - preprocessors/plantuml.md
         - preprocessors/ramldoc.md
+        - preprocessors/reindexer.md
         - preprocessors/removeexcess.md
         - preprocessors/replace.md
         - preprocessors/repolink.md
@@ -143,6 +144,7 @@ preprocessors:
             - https://github.com/foliant-docs/foliantcontrib.plantuml.git
             - https://github.com/foliant-docs/foliantcontrib.project_graph.git
             - https://github.com/foliant-docs/foliantcontrib.ramldoc.git
+            - https://github.com/foliant-docs/foliantcontrib.reindexer.git
             - https://github.com/foliant-docs/foliantcontrib.removeexcess.git
             - https://github.com/foliant-docs/foliantcontrib.replace.git
             - https://github.com/foliant-docs/foliantcontrib.runcommands.git
