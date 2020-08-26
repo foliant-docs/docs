@@ -1115,20 +1115,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#testrail-cases-downloader-for-foliant" class="md-nav__link">
+    TestRail cases downloader for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -1140,6 +1148,11 @@
   <a href="#tips" class="md-nav__link">
     Tips
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1389,20 +1402,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#testrail-cases-downloader-for-foliant" class="md-nav__link">
+    TestRail cases downloader for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -1414,6 +1435,11 @@
   <a href="#tips" class="md-nav__link">
     Tips
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1442,6 +1468,8 @@
                 
                 
                 <h1 id="testrail">Testrail<a class="headerlink" href="#testrail" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.testrail/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.testrail.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.testrail"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.testrail.svg?label=GitHub" /></a></p>
+<h2 id="testrail-cases-downloader-for-foliant">TestRail cases downloader for Foliant<a class="headerlink" href="#testrail-cases-downloader-for-foliant" title="Permanent link">&para;</a></h2>
 <p>TestRail preprocessor collects test cases from TestRail project and adds to your testing procedure document.</p>
 <blockquote>
 <p>Important notice! We have some problems with displaying an exclamation mark in the image links, so they are replaced with <code>(leading_exclamation_mark_here)</code> phrase in the text.</p>
@@ -1457,7 +1485,7 @@
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span>
     <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span>
-    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password                                                                 \\ Required</span>
+    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">TESTRAIL_PASS                                                                 \\ Required</span>
     <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35                                                                          \\ Required</span>
     <span class="nt">suite_ids</span><span class="p">:</span>                                                                              <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
     <span class="nt">section_ids</span><span class="p">:</span>                                                                            <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
@@ -1502,6 +1530,11 @@
 <dd>Your TestRail username.</dd>
 <dt><code>testrail_pass</code></dt>
 <dd>Your TestRail password.</dd>
+</dl>
+<blockquote>
+<p>It is not secure to store plain text passwords in your config files. We recommend to use <a href="https://foliant-docs.github.io/docs/config/#env">environment variables</a> to supply passwords.</p>
+</blockquote>
+<dl>
 <dt><code>project_id</code></dt>
 <dd>TestRail project ID. You can find it in the project URL, for example http://testrails.url/index.php?/projects/overview/17 &lt;-.</dd>
 <dt><code>suite_ids</code></dt>

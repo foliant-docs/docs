@@ -1462,7 +1462,7 @@
         <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yml</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
         <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user_password</span>
+        <span class="nt">password</span><span class="p">:</span> <span class="kt">!CONFLUENCE_PASS</span>
         <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
         <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
 </code></pre></div>
@@ -1477,6 +1477,11 @@
 <dd>Login of the user who has permissions to create and update pages. If login is not supplied, it would be taken from backend config, or prompted during the build.</dd>
 <dt><code>password</code></dt>
 <dd>Password of the user. If password is not supplied, it would be taken from backend config, or prompted during the build.</dd>
+</dl>
+<blockquote>
+<p>It is not secure to store plain text passwords in your config files. We recommend to use <a href="https://foliant-docs.github.io/docs/config/#env">environment variables</a> to supply passwords</p>
+</blockquote>
+<dl>
 <dt><code>space_key</code></dt>
 <dd>The space key where the page titles will be searched for.</dd>
 <dt><code>pandoc_path</code></dt>

@@ -1584,7 +1584,7 @@ sudo apt-get install -y mysql-server libmysqlclient-dev
         <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5432</span>
         <span class="nt">dbname</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
         <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">password</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">DBDOC_PASS</span>
         <span class="nt">doc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
         <span class="nt">scheme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
         <span class="nt">filters</span><span class="p">:</span>
@@ -1605,13 +1605,18 @@ sudo apt-get install -y mysql-server libmysqlclient-dev
 <dt><code>host</code></dt>
 <dd>Database host address. Default: <code>localhost</code></dd>
 <dt><code>port</code></dt>
-<dd>Database port. Default: <code>5432</code> for pgsql, <code>1521</code> for Oracle.</dd>
+<dd>Database port. Default: <code>5432</code> for pgsql, <code>1521</code> for Oracle, <code>1433</code> for MS SQL, <code>3306</code> for MySQL.</dd>
 <dt><code>dbname</code></dt>
-<dd>PostgreSQL database name. Default: <code>postgres</code> for pgsql, <code>orcl</code> for oracle.</dd>
+<dd>Database name. Default: <code>postgres</code> for pgsql, <code>orcl</code> for oracle, <code>mssql</code> for MS SQL, <code>mysql</code> for MySQL.</dd>
 <dt><code>user</code></dt>
-<dd>PostgreSQL user name. Default: <code>postgres</code> for pgsql, <code>hr</code> for oracle.</dd>
+<dd>Database user name. Default: <code>postgres</code> for pgsql, <code>hr</code> for oracle, <code>SA</code> for MS SQL, <code>root</code> for MySQL.</dd>
 <dt><code>password</code></dt>
-<dd>PostgreSQL user password. Default: <code>postgres</code> for pgsq, <code>oracle</code> for oracle.</dd>
+<dd>Database user password. Default: <code>postgres</code> for pgsql, <code>oracle</code> for oracle, <code>&lt;YourStrong@Passw0rd&gt;</code> for MS SQL, <code>passwd</code> for MySQL.</dd>
+</dl>
+<blockquote>
+<p>It is not secure to store plain text passwords in your config files. We recommend to use <a href="https://foliant-docs.github.io/docs/config/#env">environment variables</a> to supply passwords</p>
+</blockquote>
+<dl>
 <dt><code>doc</code></dt>
 <dd>If <code>true</code> — documentation will be generated. Set to <code>false</code> if you only want to draw a scheme of the database. Default: <code>true</code></dd>
 <dt><code>scheme</code></dt>
@@ -1628,7 +1633,7 @@ sudo apt-get install -y mysql-server libmysqlclient-dev
 <dd>Specific option for MS SQL Server database. Defines the driver connection string. Default: <code>{ODBC Driver 17 for SQL Server}</code>.</dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>DBDoc currently supports three database engines: Oracle, PostgreSQL and Microsoft SQL Server. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
+<p>DBDoc currently supports four database engines: Oracle, PostgreSQL, MySQL and Microsoft SQL Server. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
 <div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
