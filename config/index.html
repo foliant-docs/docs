@@ -388,6 +388,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    !env
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1483,6 +1490,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    !env
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1729,6 +1743,27 @@ Received the variables!
 
 
 <p><code>!path</code> modifier, if used in tag parameters, works the same as <code>!project_path</code> modifier: it returns the absolute path to the file, relative to project root.</p>
+<h3 id="env"><code>!env</code><a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
+<p>The <code>!env</code> modifier allows you to access environment variables in config, as well as in tag options.</p>
+<p>It is useful if you don't want to keep credentials in your config files, for example:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># foliant.yml</span>
+
+<span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">dbdoc</span><span class="p">:</span>
+        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
+        <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+        <span class="nt">password</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">DBA_PASSWORD</span>
+</code></pre></div>
+
+
+<p>Now to build this project add the variable to your command:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
+</code></pre></div>
+
+
+<p>Or, if you are using docker:</p>
+<div class="codehilite"><pre><span></span><code>docker-compose run --rm -e <span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
+</code></pre></div>
                 
                   
                 

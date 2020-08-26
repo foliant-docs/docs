@@ -1850,7 +1850,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 <li><code>yaml</code>.</li>
 </ul>
 <h4 id="supplying-credentials">Supplying Credentials<a class="headerlink" href="#supplying-credentials" title="Permanent link">&para;</a></h4>
-<p>There are two ways to supply credentials for your confluence server.</p>
+<p>There are several ways to supply credentials for your confluence server.</p>
 <p><strong>1. In foliant.yml</strong></p>
 <p>The most basic way is just to put credentials in foliant.yml:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
@@ -1862,8 +1862,49 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 
 
 <p>It's not very secure because foliant.yml is usually visible to everybody in your project's git repository.</p>
-<p><strong>2. Using passfile</strong></p>
-<p>Alternatively, you can use a passfile. <em>Passfile</em> is a yaml-file which holds all your passwords. You can keep it out from git-repository by storing it only on your local machine and production server.</p>
+<p><strong>2. Omit credentials in config</strong></p>
+<p>A slightly more secure way is to remove password or both login and password from config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+    <span class="nt">confluence</span><span class="p">:</span>
+        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
+        <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+</code></pre></div>
+
+
+<p>In this case Foliant will prompt for missing credentials during each build:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make confluence
+Parsing config... Done
+Applying preprocessor confluence_final... Done
+Making confluence...
+
+!!! User input required !!!
+Please input password <span class="k">for</span> user:
+$
+</code></pre></div>
+
+
+<p><strong>3. Using environment variables</strong></p>
+<p>Foliant 1.0.12 can access environment variables inside config files with <code>!env</code> modifier.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+    <span class="nt">confluence</span><span class="p">:</span>
+        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
+        <span class="nt">login</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_USER</span>
+        <span class="nt">password</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_PASS</span>
+</code></pre></div>
+
+
+<p>Now you can add these variables into your command:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">CONFLUENCE_USER</span><span class="o">=</span>user <span class="nv">CONFLUENCE_PASS</span><span class="o">=</span>pass foliant make confluence
+</code></pre></div>
+
+
+<p>Or, if you are using docker:</p>
+<div class="codehilite"><pre><span></span><code>docker-compose run --rm -e <span class="nv">CONFLUENCE_USER</span><span class="o">=</span>user -e <span class="nv">CONFLUENCE_PASS</span><span class="o">=</span>pass foliant make confluence
+</code></pre></div>
+
+
+<p><strong>4. Using passfile</strong></p>
+<p>Finally, you can use a passfile. <em>Passfile</em> is a yaml-file which holds all your passwords. You can keep it out from git-repository by storing it only on your local machine and production server.</p>
 <p>To use passfile, add a <code>passfile</code> option to foliant.yml:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">confluence</span><span class="p">:</span>
