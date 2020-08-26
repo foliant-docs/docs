@@ -271,3 +271,31 @@ Here are the contetns of the adjacent chapter:
 ```
 
 `!path` modifier, if used in tag parameters, works the same as `!project_path` modifier: it returns the absolute path to the file, relative to project root.
+
+### `!env`
+
+The `!env` modifier allows you to access environment variables in config, as well as in tag options.
+
+It is useful if you don't want to keep credentials in your config files, for example:
+
+```yaml
+# foliant.yml
+
+preprocessors:
+    dbdoc:
+        host: localhost
+        user: admin
+        password: !env DBA_PASSWORD
+```
+
+Now to build this project add the variable to your command:
+
+```bash
+DBA_PASSWORD=WQHsaio901SY foliant make pdf
+```
+
+Or, if you are using docker:
+
+```bash
+docker-compose run --rm -e DBA_PASSWORD=WQHsaio901SY foliant make pdf
+```
