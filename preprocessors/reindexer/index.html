@@ -1441,6 +1441,7 @@
         <span class="nt">database</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
         <span class="nt">namespace</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
         <span class="nt">namespace_renamed</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+        <span class="nt">fulltext_config</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
         <span class="nt">actions</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">drop_database</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create_database</span>
@@ -1462,13 +1463,15 @@
 <dt><code>reindexer_url</code></dt>
 <dd>URL of your Reindexer instance. “Root” server URL should be used here, do not add any endpoints such as <code>/api/v1/db</code> to it.</dd>
 <dt><code>insert_max_bytes</code></dt>
-<dd>Reindexer itself or a proxy server may limit the available size of request body. Use this option, if it’s needed to split a large amount of content for indexing into several chunks, so each of them will be sent in a separate request.</dd>
+<dd>Reindexer itself or a proxy server may limit the available size of request body. Use this option, if it’s needed to split a large amount of content for indexing into several chunks, so each of them will be sent in a separate request. The value of this option represents maximum size of HTTP POST request body in bytes. Allowed values are positive integers starting from <code>1024</code>, and <code>0</code> (default) meaning no limits.</dd>
 <dt><code>database</code></dt>
 <dd>Name of the database that is used to store your search index.</dd>
 <dt><code>namespace</code></dt>
 <dd>Name of the namespace in the specified database. Namespace in Reindexer means the same as table in relational databases. To store the search index for one documentation project, single namespace is enough.</dd>
 <dt><code>namespace_renamed</code></dt>
 <dd>New namespace name to be applied if the <code>rename</code> option is used; see below.</dd>
+<dt><code>fulltext_config</code></dt>
+<dd>The value of the <code>config</code> field that refers to the description of the composite fulltext index over the <code>title</code> and <code>content</code> data fields. Used data structure is described below. <a href="https://github.com/Restream/reindexer/blob/master/cpp_src/server/contrib/server.md#fulltextconfig">Fulltext indexes config options</a> are listed in the Reindexer’s official documentation.</dd>
 <dt><code>actions</code></dt>
 <dd>
 <p>Sequence of actions that the preprocessor should to perform. Available item values are:</p>
@@ -1512,7 +1515,7 @@
         <span class="p">{</span>
             <span class="nt">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;indexed_content&quot;</span><span class="p">,</span>
             <span class="nt">&quot;cond&quot;</span><span class="p">:</span> <span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;@title^3 foliant&quot;</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;@title^3,content^1 foliant&quot;</span>
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="nt">&quot;select_functions&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1524,7 +1527,7 @@
 
 
 <p>To learn how to write efficient queries to Reindexer, you may need to refer to its official documentation on topics: <a href="https://github.com/Restream/reindexer/blob/master/readme.md">general use</a>, <a href="https://github.com/Restream/reindexer/blob/master/fulltext.md">fulltext search</a>, <a href="https://github.com/Restream/reindexer/blob/master/cpp_src/server/contrib/server.md">HTTP REST API</a>.</p>
-<p>In the example above, the <code>indexed_content</code> field corresponds to the composite index over two fields: <code>title</code> and <code>content</code> (this index is generated when the namespace is created by the request from the preprocessor). <a href="https://github.com/Restream/reindexer/blob/master/fulltext.md#text-query-format">Text of the search query</a> starts with <code>@title^3</code> that means that the <code>title</code> field of the composite index has triple weight. Also the example uses the <code>snippet()</code> <a href="https://github.com/Restream/reindexer/blob/master/fulltext.md#using-select-fucntions">select function</a> to highlight the text that matches the query and to cut off excess.</p>
+<p>In the example above, the <code>indexed_content</code> field corresponds to the composite index over two fields: <code>title</code> and <code>content</code> (this index is generated when the namespace is created by the request from the preprocessor). <a href="https://github.com/Restream/reindexer/blob/master/fulltext.md#text-query-format">Text of the search query</a> starts with <code>@title^3,content^1</code> that means that the <code>title</code> field of the composite index has triple priority (i.e. weighting factor of 3), and the <code>content</code> field has normal priority (i.e. weight coefficient equals to 1). Also the example uses the <code>snippet()</code> <a href="https://github.com/Restream/reindexer/blob/master/fulltext.md#using-select-fucntions">select function</a> to highlight the text that matches the query and to cut off excess.</p>
 <p>If you use self-hosted instance of Reindexer, you may need to configure a proxy to append <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> headers to HTTP API responses.</p>
                 
                   

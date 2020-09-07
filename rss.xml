@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.reindexer 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.reindexer.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.reindexer.git#07bfcde8ceab5a9447a6dd8a7a1aa74d</guid>
+            <pubDate>Mon, 07 Sep 2020 04:06:18 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add the <escaped hash="25b9cb8858071f51f938d8aa13df3d3b"></escaped> option.</li>
+<li>Fix web application example: mention the <escaped hash="0706c7919cd4f0777279d9c4fc6a0b58"></escaped> field, not only <escaped hash="92f24a1f999095d1e7e6125d7916d913"></escaped>, in the query filter settings.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.superlinks 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#b2748727d38a18dd5f0e5f8a9af74b0a</guid>
