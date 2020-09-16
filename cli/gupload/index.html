@@ -1519,26 +1519,26 @@ Google document ID: 1GPvNSMJ4Z19YM1xCKWMU5Sg
 
 <p>Authentication form will be opened. Choose account to log in.</p>
 <p>With command line authentication procedure differs little bit:</p>
-<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant gupload docx
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making docx with Pandoc
-─────────────────────
-Result: filename.docx
-─────────────────────
-✔ Parsing config
-Go to the following link in your browser:
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="n">foliant</span> <span class="n">gupload</span> <span class="n">docx</span>
+<span class="err">✔</span> <span class="n">Parsing</span> <span class="n">config</span>
+<span class="err">✔</span> <span class="n">Applying</span> <span class="n">preprocessor</span> <span class="n">flatten</span>
+<span class="err">✔</span> <span class="n">Making</span> <span class="n">docx</span> <span class="n">with</span> <span class="n">Pandoc</span>
+<span class="err">─────────────────────</span>
+<span class="n">Result</span><span class="p">:</span> <span class="n">filename</span><span class="o">.</span><span class="n">docx</span>
+<span class="err">─────────────────────</span>
+<span class="err">✔</span> <span class="n">Parsing</span> <span class="n">config</span>
+<span class="n">Go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">following</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">browser</span><span class="p">:</span>
 
-    https://accounts.google.com/o/oauth2/auth?...
+    <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">accounts</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">o</span><span class="o">/</span><span class="n">oauth2</span><span class="o">/</span><span class="n">auth</span><span class="err">?</span><span class="o">...</span>
 
-Enter verification code: <span class="m">4</span>/XgBllTXpxv8kKjsiTxLc
-Authentication successful.
-✔ Uploading <span class="s1">&#39;filename.docx&#39;</span> to Google Drive
-─────────────────────
-Result:
-Doc link: https://docs.google.com/document/d/1GPvNSMJ4ZutZJwhUYM1xxCKWMU5Sg/edit?usp<span class="o">=</span>drivesdk
-Google drive folder ID: 1AaiWMNIYlq9639P30R3T9
-Google document ID: 1GPvNSMJ4Z19YM1xCKWMU5Sg
+<span class="n">Enter</span> <span class="n">verification</span> <span class="n">code</span><span class="p">:</span> <span class="mi">4</span><span class="o">/</span><span class="n">XgBllTXpxv8kKjsiTxLc</span>
+<span class="n">Authentication</span> <span class="n">successful</span><span class="o">.</span>
+<span class="err">✔</span> <span class="n">Uploading</span> <span class="s1">&#39;filename.docx&#39;</span> <span class="n">to</span> <span class="n">Google</span> <span class="n">Drive</span>
+<span class="err">─────────────────────</span>
+<span class="n">Result</span><span class="p">:</span>
+<span class="n">Doc</span> <span class="n">link</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">document</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="mi">1</span><span class="n">GPvNSMJ4ZutZJwhUYM1xxCKWMU5Sg</span><span class="o">/</span><span class="n">edit</span><span class="err">?</span><span class="n">usp</span><span class="o">=</span><span class="n">drivesdk</span>
+<span class="n">Google</span> <span class="n">drive</span> <span class="n">folder</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">1</span><span class="n">AaiWMNIYlq9639P30R3T9</span>
+<span class="n">Google</span> <span class="n">document</span> <span class="n">ID</span><span class="p">:</span> <span class="mi">1</span><span class="n">GPvNSMJ4Z19YM1xCKWMU5Sg</span>
 </code></pre></div>
 
 

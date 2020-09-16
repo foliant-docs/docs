@@ -1463,7 +1463,7 @@
 <ol>
 <li>
 <p>Install <a href="http://scoop.sh/">Scoop package manager</a> in PowerShell:</p>
-<div class="codehilite"><pre><span></span><code>$ iex <span class="o">(</span>new-object net.webclient<span class="o">)</span>.downloadstring<span class="o">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="o">)</span>
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">iex</span> <span class="p">(</span><span class="n">new</span><span class="o">-</span><span class="n">object</span> <span class="n">net</span><span class="o">.</span><span class="n">webclient</span><span class="p">)</span><span class="o">.</span><span class="n">downloadstring</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -1519,8 +1519,8 @@ $ apt update <span class="o">&amp;&amp;</span> apt install -y python3 python3-pi
 </li>
 <li>
 <p>If you plan to bake pdf or docx, install Pandoc and TeXLive with apt and wget:</p>
-<div class="codehilite"><pre><span></span><code>$ apt update <span class="o">&amp;&amp;</span> apt install -y wget texlive-full librsvg2-bin
-$ wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb <span class="o">&amp;&amp;</span> dpkg -i pandoc-2.0.5-1-amd64.deb
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">apt</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">wget</span> <span class="n">texlive</span><span class="o">-</span><span class="n">full</span> <span class="n">librsvg2</span><span class="o">-</span><span class="n">bin</span>
+<span class="o">$</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jgm</span><span class="o">/</span><span class="n">pandoc</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">pandoc</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">deb</span> <span class="o">&amp;&amp;</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="n">pandoc</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">amd64</span><span class="o">.</span><span class="n">deb</span>
 </code></pre></div>
 
 

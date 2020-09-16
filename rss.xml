@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.archeme 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.archeme.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.archeme.git#38636c3f3c6d7d1bd357803aa03fbd1f</guid>
+            <pubDate>Wed, 16 Sep 2020 13:52:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <escaped hash="92118bfb7d7bb3902e44fbe8840787c3"></escaped> option.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.reindexer 1.0.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.reindexer.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.reindexer.git#07bfcde8ceab5a9447a6dd8a7a1aa74d</guid>

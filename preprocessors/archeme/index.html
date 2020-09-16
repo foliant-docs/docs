@@ -1492,8 +1492,9 @@
             <span class="nt">dot</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dot</span>
             <span class="nt">neato</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">neato</span>
             <span class="nt">fdp</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fdp</span>
-        <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate</span>
+        <span class="nt">config_concat</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
         <span class="nt">config_file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
+        <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate</span>
         <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">png</span>
         <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 </code></pre></div>
@@ -1505,12 +1506,14 @@
 <dd>Directory to store generated Graphviz sources and drawn diagram images.</dd>
 <dt><code>graphviz_paths</code></dt>
 <dd>Paths to binaries of Graphviz engines to be used in external commands: <code>dot</code>, <code>neato</code>, and <code>fdp</code>.</dd>
-<dt><code>action</code></dt>
-<dd>Default action. Used when the respective <code>action</code> tag attribute is not specified explicitly, see below. Available values are: <code>generate</code> (default), and <code>merge</code> (<a href="https://github.com/foliant-docs/archeme/#cli-usage">see descriptions in Archeme documentation</a>).</dd>
+<dt><code>config_concat</code></dt>
+<dd>Flag that tells the preprocessor to read the config file and the diagram definition as YAML strings, concatenate these strings, and then load the concatenation result, i.e. single YAML string, as an object. If this option is not set (by default), config and diagram definition will be loaded as separate objects, and then merged. This option may be useful when some aliases are defined in the config, and you would like to use their values in the diagram definition.</dd>
 <dt><code>config_file</code></dt>
 <dd>Path to default config file. May be overridden with the value of the respective <code>config_file</code> tag attribute, see below. Config file usually defines common settings of multiple diagrams, it’s recommended but not strictly required. By default, no config file is used.</dd>
+<dt><code>action</code></dt>
+<dd>Default action. Used when the respective <code>action</code> tag attribute is not specified explicitly, see below. Available values are: <code>generate</code> (default), and <code>merge</code> (<a href="https://github.com/foliant-docs/archeme/#cli-usage">see descriptions in Archeme documentation</a>).</dd>
 <dt><code>format</code></dt>
-<dd>Format of the output image. May take any value supported by Graphviz, but note that drawn images are used within Markdown content that will be rendered by one or another backend. Preferred values are: <code>png</code> (default), and <code>svg</code>.</dd>
+<dd>Format of the output image. May take any value supported by Graphviz, but note that drawn images are used within Markdown content that will be rendered by one or another backend. Preferred values are: <code>png</code> (default), and <code>svg</code>. The value of this option may be overridden by the respective <code>format</code> tag attribute.</dd>
 <dt><code>targets</code></dt>
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets. Limitation of available targets may be useful when it’s needed to build a certain Foliant project in different ways with various settings, e.g. as a stand-alone documentation (for example, with the <code>site</code> target), and as a part of a documentation that combines several Foliant projects (in this case the <code>pre</code> target is usually used).</dd>
 </dl>
@@ -1531,14 +1534,15 @@ edges:
 
 <p>You may use optional tag attributes:</p>
 <ul>
-<li><code>id</code>—to specify an unique ID of the diagram that may be used for merging multiple diagram definitions;</li>
+<li><code>caption</code>—to set an alternative text description of the diagram that may be rendered as image caption by some backends;</li>
+<li><code>module_id</code>—to specify an unique ID of the diagram that may be used for merging multiple diagram definitions;</li>
 <li><code>action</code>—action that should be applied to the diagram definition; the available values are <code>generate</code> and <code>merge</code>; this attribute overrides the respective <code>action</code> config option;</li>
 <li><code>config_file</code>—path to a specific config file for the certain diagram definition; this attribute overrides the respective <code>config_file</code> config option;</li>
 <li><code>format</code>—output image format for the certain diagram definition; this attribute overrides the respective <code>format</code> config option.</li>
 </ul>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>Diagram definition with explicitly specified ID, config file, and output format:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">id=</span><span class="s">&quot;one&quot;</span> <span class="na">config_file=</span><span class="s">&quot;!project_path another_config.yml&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">module_id=</span><span class="s">&quot;one&quot;</span> <span class="na">caption=</span><span class="s">&quot;Module 1&quot;</span> <span class="na">config_file=</span><span class="s">&quot;!project_path another_config.yml&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
 structure:
     - node:
         id: first
@@ -1562,7 +1566,7 @@ structure:
 </code></pre></div>
 
 
-<p>Note that the <code>file</code> and <code>description</code> module parameters in Archeme DSL work as usual. If you need to combine the diagrams that are identified within the current Foliant project by using <code>&lt;archeme id="..."&gt;</code> tags, you should to omit the <code>file</code> and <code>description</code> module parameters in your combined diagrams definitions.</p>
+<p>Note that the <code>file</code> and <code>description</code> module parameters in Archeme DSL work as usual. If you need to combine the diagrams that are identified within the current Foliant project by using <code>&lt;archeme module_id="..."&gt;</code> tags, you should to omit the <code>file</code> and <code>description</code> module parameters in your combined diagrams definitions.</p>
                 
                   
                 
