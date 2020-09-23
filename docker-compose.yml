@@ -1,6 +1,14 @@
 version: '3'
 
 services:
+    pre:
+        build:
+            context: ./
+            dockerfile: Dockerfile-site
+        volumes:
+            - ./:/usr/src/app/
+        working_dir: /usr/src/app/
+        command: make pre -dk
     site:
         build:
             context: ./

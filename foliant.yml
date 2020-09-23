@@ -98,69 +98,8 @@ preprocessors:
         rss_link: https://foliant-docs.github.io/docs/
         rss_title: Foliant Releases History
         rss_description: Releases of Foliant documentation authoring tool and its extensions.
-        repos:
-            - https://github.com/foliant-docs/foliant.git
-            - https://github.com/foliant-docs/foliantcontrib.admonitions.git
-            - https://github.com/foliant-docs/foliantcontrib.aglio.git
-            - https://github.com/foliant-docs/foliantcontrib.alt_structure.git
-            - https://github.com/foliant-docs/foliantcontrib.anchors.git
-            - https://github.com/foliant-docs/foliantcontrib.apilinks.git
-            - https://github.com/foliant-docs/foliantcontrib.archeme.git
-            - https://github.com/foliant-docs/foliantcontrib.badges.git
-            - https://github.com/foliant-docs/foliantcontrib.bindfigma.git
-            - https://github.com/foliant-docs/foliantcontrib.bindsympli.git
-            - https://github.com/foliant-docs/foliantcontrib.blockdiag.git
-            - https://github.com/foliant-docs/foliantcontrib.bump.git
-            - https://github.com/foliant-docs/foliantcontrib.confluence.git
-            - https://github.com/foliant-docs/foliantcontrib.csvtables.git
-            - https://github.com/foliant-docs/foliantcontrib.customids.git
-            - https://github.com/foliant-docs/foliantcontrib.dbmldoc.git
-            - https://github.com/foliant-docs/foliantcontrib.dbdoc.git
-            - https://github.com/foliant-docs/foliantcontrib.docus.git
-            - https://github.com/foliant-docs/foliantcontrib.elasticsearch.git
-            - https://github.com/foliant-docs/foliantcontrib.epsconvert.git
-            - https://github.com/foliant-docs/foliantcontrib.escapecode.git
-            - https://github.com/foliant-docs/foliantcontrib.flags.git
-            - https://github.com/foliant-docs/foliantcontrib.flatten.git
-            - https://github.com/foliant-docs/foliantcontrib.graphviz.git
-            - https://github.com/foliant-docs/foliantcontrib.gupload.git
-            - https://github.com/foliant-docs/foliantcontrib.history.git
-            - https://github.com/foliant-docs/foliantcontrib.imagemagick.git
-            - https://github.com/foliant-docs/foliantcontrib.imgcaptions.git
-            - https://github.com/foliant-docs/foliantcontrib.imgconvert.git
-            - https://github.com/foliant-docs/foliantcontrib.includes.git
-            - https://github.com/foliant-docs/foliantcontrib.init.git
-            - https://github.com/foliant-docs/foliantcontrib.macros.git
-            - https://github.com/foliant-docs/foliantcontrib.mdtopdf.git
-            - https://github.com/foliant-docs/foliantcontrib.mermaid.git
-            - https://github.com/foliant-docs/foliantcontrib.meta.git
-            - https://github.com/foliant-docs/foliantcontrib.metagraph.git
-            - https://github.com/foliant-docs/foliantcontrib.mkdocs.git
-            - https://github.com/foliant-docs/foliantcontrib.multilinetables.git
-            - https://github.com/foliant-docs/foliantcontrib.multiproject.git
-            - https://github.com/foliant-docs/foliantcontrib.notifier.git
-            - https://github.com/foliant-docs/foliantcontrib.pandoc.git
-            - https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git
-            - https://github.com/foliant-docs/foliantcontrib.plantuml.git
-            - https://github.com/foliant-docs/foliantcontrib.project_graph.git
-            - https://github.com/foliant-docs/foliantcontrib.ramldoc.git
-            - https://github.com/foliant-docs/foliantcontrib.reindexer.git
-            - https://github.com/foliant-docs/foliantcontrib.removeexcess.git
-            - https://github.com/foliant-docs/foliantcontrib.replace.git
-            - https://github.com/foliant-docs/foliantcontrib.runcommands.git
-            - https://github.com/foliant-docs/foliantcontrib.showcommits.git
-            - https://github.com/foliant-docs/foliantcontrib.slate.git
-            - https://github.com/foliant-docs/foliantcontrib.slugs.git
-            - https://github.com/foliant-docs/foliantcontrib.subset.git
-            - https://github.com/foliant-docs/foliantcontrib.superlinks.git
-            - https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git
-            - https://github.com/foliant-docs/foliantcontrib.templateparser.git
-            - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
-            - https://github.com/foliant-docs/foliantcontrib.testcoverage.git
-            - https://github.com/foliant-docs/foliantcontrib.testrail.git
-            - https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
-            - https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git
-            - https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git
+        repos: !include repos.yml
+    - superlinks
 
 backend_config:
     pandoc:

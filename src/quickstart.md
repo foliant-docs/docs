@@ -5,9 +5,9 @@ In this tutorial, you’ll learn how to use Foliant to build websites and pdf do
 
 ## Create New Project
 
-All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to [Init](<macro pandoc="#foliantcontrib-init" mkdocs="cli/init.md">ref</macro>) extension.
+All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to <link src="cli/init/index.md" title="Init">Init</link> extension.
 
-You should have installed it during [Foliant installation](<macro pandoc="#installation" mkdocs="installation.md">ref</macro>) and it’s included in Foliant’s default Docker image.
+You should have installed it during <link src="installation.md" title="Installation">Foliant installation</link>) and it’s included in Foliant’s default Docker image.
 
 To use it, run `foliant init` command:
 
@@ -57,7 +57,7 @@ $ tree
 
 ## Build Site
 
-To build a site you will first need a suitable backend (to catch up with the terminology, check [this](https://foliant-docs.github.io/docs/architecture/) article). Let's start with **MkDocs** backend. First, install it using the following command (or skip to the docker example):
+To build a site you will first need a suitable backend (to catch up with the terminology, check <link src="architecture.md" title="Architecture And Basic Design Concepts">this article</link>. Let’s start with **MkDocs** backend. First, install it using the following command (or skip to the docker example):
 
 ```bash
 python3 -m pip install foliantcontrib.mkdocs
@@ -94,7 +94,7 @@ $ python3 -m http.server -d Hello_Foliant-2020-05-25.mkdocs
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 
-Open [localhost:8000](http://localhost:8000) in your web browser. You should see something like this:
+Open [localhost:8000](http://localhost:8000/) in your web browser. You should see something like this:
 
 ![Basic Foliant project built with MkDocs](images/basic-mkdocs.png)
 
@@ -103,7 +103,7 @@ Open [localhost:8000](http://localhost:8000) in your web browser. You should see
 
 >   **Note**
 >
->   To build PDF with Pandoc, make sure you have it and TeXLive installed (see [Installation](<macro pandoc="#installation" mkdocs="installation.md">ref</macro>)).
+>   To build PDF with Pandoc, make sure you have it and TeXLive installed (see <link src="installation.md" title="Installation">Installation</link>).
 
 In the project directory, run:
 
@@ -156,7 +156,7 @@ Your standalone pdf documentation is ready! It should look something like this:
 
 Your project’s content lives in `*.md` files in `src` folder. You can split it between multiple files and subfolders.
 
-Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in [`<<if></if>` blocks](<macro mkdocs="preprocessors/flags.md" pandoc="#flags">ref</macro>).
+Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <link src="preprocessors/flags.md" title="Flags">`<if>...</if>`</link>.
 
 Create a file `hello.md` in `src` with the following content:
 
@@ -210,15 +210,15 @@ Preprocessors is what makes Foliant special and extremely flexible. Preprocessor
 -   render diagrams from textual description on build,
 -   restructure the project source or compile it into a single file for a particular backend.
 
-In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that [`flatten`](<macro mkdocs="preprocessors/flatten.md" pandoc="#flatten">ref</macro>) preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
+In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that <link src="preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
 
 These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
 
-Now, let’s try to use a different kind of preprocessors, the ones that register new tags: [Blockdiag](<macro mkdocs="preprocessors/blockdiag.md" pandoc="#blockdiag">ref</macro>).
+Now, let’s try to use a different kind of preprocessors, the ones that register new tags: <link src="preprocessors/blockdiag.md" title="Blockdiag">Blockdiag</link>.
 
 ### Embed Diagrams with Blockdiag
 
-[Blockdiag](http://blockdiag.com) is a Python app for generating diagrams. Blockdiag preprocessor extracts diagram descriptions from the project source and replaces them with the generated images.
+[Blockdiag](http://blockdiag.com/) is a Python app for generating diagrams. Blockdiag preprocessor extracts diagram descriptions from the project source and replaces them with the generated images.
 
 First, we need to install the blockdiag preprocessor:
 
@@ -227,7 +227,7 @@ $ python3 -m pip install foliantcontrib.blockdiag
 ```
 Or, if you are building with docker, add `foliantcontrib.blockdiag` to requirements.txt and rebuild the image with `docker-compose build` command.
 
-Next, we need to switch on the [`blockdiag`](https://foliant-docs.github.io/docs/preprocessors/blockdiag/) preprocessor in config. Open `foliant.yml` and add the following lines:
+Next, we need to switch on the <link src="preprocessors/blockdiag.md" title="Blockdiag">`blockdiag`</link> preprocessor in config. Open `foliant.yml` and add the following lines:
 
 ```diff
 title: Hello Foliant
@@ -246,14 +246,14 @@ Then, in `hello.md`, add the following:
 ```diff
 Foliant doesn’t force any *special* Markdown flavor.
 
-+ <<seqdiag caption="This diagram is generated on the fly">
++ <seqdiag caption="This diagram is generated on the fly">
 +   seqdiag {
 +     "foliant make site" -> "mkdocs preprocessor" -> "blockdiag preprocessor" -> "mkdocs backend" -> site;
 +   }
 + </seqdiag>
 ```
 
-Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with `<<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.
+Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with `<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.
 
 Rebuild the site with `foliant make site` and open it in the browser:
 
@@ -281,12 +281,12 @@ After a rebuild, the diagram on the site and in the pdf should look like this:
 
 ![Sequence diagram with Comic Sans in labels, pdf](images/basic-pdf-seqdiag-comic.png)
 
-There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with [Flags](<macro mkdocs="preprocessors/flags.md" pandoc="#flags">ref</macro>) you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:
+There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <link src="preprocessors/flags.md" title="Flags">Flags</link> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:
 
 ```markdown
-This is a diagram that is rendered to `.png` in html and to `.pdf` in pdf:
+This is a diagram that is rendered to `.png` in HTML and to `.pdf` in pdf:
 
-<<blockdiag format="<<if targets="html">png</if><<if targets="pdf">pdf</if">
+<blockdiag format="<if targets="site">png</if><if targets="pdf">pdf</if>">
     ...
 </blockdiag>
 ```

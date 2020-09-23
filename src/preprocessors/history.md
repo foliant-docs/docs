@@ -1,5 +1,3 @@
 # History
 
-<include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.history.git$README.md
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.history.git" path="README.md" sethead="2" nohead="true"></include>

@@ -2,7 +2,7 @@
 
 Installing Foliant to your system can be split into three stages: installing Python with your system’s package manager, installing Foliant with pip, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.
 
-Alternatively, you can avoid installing Foliant and its dependencies on your system by using [Docker and Docker Compose](#docker).
+Alternatively, you can avoid installing Foliant and its dependencies on your system by using <link title="Docker">Docker and Docker Compose</link>.
 
 
 ## macOS
@@ -25,7 +25,7 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
 ## Windows
 
-0.  Install [Scoop package manager](http://scoop.sh/) in PowerShell:
+0.  Install [Scoop package manager](https://scoop.sh/) in PowerShell:
 
         $ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 

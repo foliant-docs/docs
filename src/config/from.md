@@ -1,17 +1,11 @@
 # MultiProject
 
-<include nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#Config Extension to Resolve the `!from` Tag:Usage of the Config Extension
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Config Extension to Resolve the `!from` Tag" to_heading="Usage of the Config Extension"></include>
 
 ## Installation
 
-<include nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#Installation:Config Extension to Resolve the `!from` Tag
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Installation" to_heading="Config Extension to Resolve the `!from` Tag"></include>
 
 ## Usage
 
-<include nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.multiproject.git$README.md#Usage of the Config Extension:CLI Extension for the `src` Command
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Usage of the Config Extension" to_heading="CLI Extension for the `src` Command"></include>

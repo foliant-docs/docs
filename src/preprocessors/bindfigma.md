@@ -1,5 +1,3 @@
 # BindFigma
 
-<include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.bindfigma.git$README.md
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.bindfigma.git" path="README.md" sethead="2" nohead="true"></include>

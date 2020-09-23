@@ -1,7 +1,8 @@
 foliantcontrib.flags >= 1.0.2
 foliantcontrib.history >= 1.0.8
-foliantcontrib.includes >= 1.1.9
+foliantcontrib.includes >= 1.1.13
 foliantcontrib.macros >= 1.0.4
-foliantcontrib.mkdocs >= 1.0.11
-foliantcontrib.pandoc >= 1.0.10
+foliantcontrib.mkdocs >= 1.0.12
+foliantcontrib.pandoc >= 1.0.11
+foliantcontrib.superlinks >= 1.0.6
 mkdocs-material == 4.6.3

@@ -1,5 +1,3 @@
 # RemoveExcess
 
-<include sethead="2" nohead="true">
-    $https://github.com/foliant-docs/foliantcontrib.removeexcess.git$README.md
-</include>
+<include repo_url="https://github.com/foliant-docs/foliantcontrib.removeexcess.git" path="README.md" sethead="2" nohead="true"></include>

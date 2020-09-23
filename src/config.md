@@ -1,6 +1,6 @@
 # Project Configuration
 
-Configuration for Foliant is kept in a [YAML](https://yaml.org/)-file in the project root. The default filename is `foliant.yml` (and that's how it is referred to in other sections of this site), but you can pick a different name. In this case you should run foliant with `--config` option:
+Configuration for Foliant is kept in a [YAML](https://yaml.org/)-file in the project root. The default filename is `foliant.yml` (and that’s how it is referred to in other sections of this site), but you can pick a different name. In this case you should run foliant with `--config` option:
 
 ```bash
 $ foliant make pdf --config myconf.yml
@@ -17,7 +17,7 @@ foliant.yml consists of several sections:
 
 ### Root Options
 
-These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, [AltStructure](https://foliant-docs.github.io/docs/config/alt_structure/) or [EscapeCode](https://foliant-docs.github.io/docs/preprocessors/escapecode/)), so please refer to each extension's respective docs for details.
+These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <link src="config/alt_structure.md" title="AltStructure">AltStructure</link> or <link src="preprocessors/escapecode.md" title="EscapeCode and UnescapeCode">EscapeCode</link>), so please refer to each extension’s respective docs for details.
 
 Here are all built-in root options:
 
@@ -35,10 +35,10 @@ tmp_dir: __folianttmp__
 :    Slug is a string which will be used to name the output file or folder after build. For example, if slug is `myproj`, after building PDF with foliant, the output will be saved in `myproj.pdf`. If not defined — `title` will be used to generate filename.
 
 `src_dir` *(string)*
-:    Name of the directory with your project's Markdown source files. Normally you wouldn't want to set this option to something other than default. Default: `src`.
+:    Name of the directory with your project’s Markdown source files. Normally you wouldn’t want to set this option to something other than default. Default: `src`.
 
 `tmp_dir` *(string)*
-:    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn't want to set this option to something other than default. Default: `__folianttmp__`.
+:    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn’t want to set this option to something other than default. Default: `__folianttmp__`.
 
 ### `chapters`
 
@@ -46,7 +46,7 @@ tmp_dir: __folianttmp__
 
 `chapters` is a list of paths to the Markdown sources which you want to be used in the project. These paths are always relative to your `src` dir.
 
-Here's a basic chapters list:
+Here’s a basic chapters list:
 
 ```yaml
 chapters:
@@ -80,7 +80,7 @@ chapters:
 
 In this example first two chapters are defined as a simple list, third chapter is a mapping with one element, and after that we see several mappings with nested lists.
 
-If we were building a PDF document with [Pandoc backend](https://foliant-docs.github.io/docs/backends/pandoc/) or a static site with [Slate backend](https://foliant-docs.github.io/docs/backends/slate/), this complex chapter structure will be just ignored, as if we have supplied a simple flat list:
+If we were building a PDF document with <link src="backends/pandoc.md" title="Pandoc">Pandoc backend</link> or a static site with <link src="backends/slate.md" title="Slate">Slate backend</link>, this complex chapter structure will be just ignored, as if we have supplied a simple flat list:
 
 ```yaml
 chapters:
@@ -98,7 +98,7 @@ chapters:
 
 In any case we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.
 
-But if we are building site with [MkDocs backend](https://foliant-docs.github.io/docs/backends/mkdocs/), mappings become meaningful.
+But if we are building site with <link src="backends/mkdocs.md" title="MkDocs">MkDocs backend</link>, mappings become meaningful.
 
 For example, this element:
 
@@ -122,7 +122,7 @@ And this element:
 
 means "create a subsection in the sidebar with a title **Creating Documentation With Foliant** and nest the `preprequisites.md` chapter inside. Then nest another subsection within the first one, called **Preparing Config** and nest four other chapters inside of it".
 
-Please, refer to each backend's respective docs for details on how they work with chapters.
+Please, refer to each backend’s respective docs for details on how they work with chapters.
 
 ### `preprocessors`
 
@@ -148,9 +148,9 @@ preprocessors:
             Gdpi: 0
 ```
 
-Each preprocessor has to be put in separate list item. If you don't need to set any options, just put the preprocessor's name in the item (flags, includes and blockdiag in the example above). If you are setting preprocessor options, then make it a mapping, with field name being the preprocessor name, and field value — another mapping, with preprocessor options. (macros, plantuml and graphviz in the example above).
+Each preprocessor has to be put in separate list item. If you don’t need to set any options, just put the preprocessor’s name in the item (flags, includes and blockdiag in the example above). If you are setting preprocessor options, then make it a mapping, with field name being the preprocessor name, and field value — another mapping, with preprocessor options. (macros, plantuml and graphviz in the example above).
 
-Please, refer to each preprocessor's respective docs for details on which options they have.
+Please, refer to each preprocessor’s respective docs for details on which options they have.
 
 There are several things you have to keep in mind when setting up the preprocessors section:
 
@@ -166,13 +166,13 @@ The order, in which the preprocessors are defined in the list, is the order they
 
 then Includes must be defined before PlantUML in the list, otherwise you will get an error from PlantUML when it tries to process `<include>` tag instead of the scheme code.
 
-Some preprocessors are especially sensitive to their position in the preprocessor list (for example, [SuperLinks](https://foliant-docs.github.io/docs/preprocessors/superlinks/)) and there may even be situations when you will have to put the same preprocessor in the list twice.
+Some preprocessors are especially sensitive to their position in the preprocessor list (for example, <link src="preprocessors/superlinks.md" title="SuperLinks">SuperLinks</link>) and there may even be situations when you will have to put the same preprocessor in the list twice.
 
 **Preprocessors are applied to all files**
 
 Generally, preprocessors just ignore the chapters list and apply to *all Markdown files* in the src dir. Usually this is not an issue, but sometimes preprocessor may spend a long time on the files, which may not even get into the resulting build.
 
-We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use [RemoveExcess](https://foliant-docs.github.io/docs/preprocessors/removeexcess/) preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.
+We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use <link src="preprocessors/removeexcess.md" title="RemoveExcess">RemoveExcess</link> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.
 
 ### `backend_config`
 
@@ -249,15 +249,15 @@ Why there are three of them then, would you ask? The reason is that all *foliant
 Received the variables!
 
 {% for var in vars %}
-    I've got a var {{ var }}
+    I’ve got a var {{ var }}
 {% endfor %}
 </jinja2>
 ```
 
-And that's where `!project_path`, `!rel_path` modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:
+And that’s where `!project_path`, `!rel_path` modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:
 
 ```html
-Here are the contents of this project's config:
+Here are the contents of this project’s config:
 
 <include src="!project_path foliant.yml"></include>
 ```
@@ -276,7 +276,7 @@ Here are the contetns of the adjacent chapter:
 
 The `!env` modifier allows you to access environment variables in config, as well as in tag options.
 
-It is useful if you don't want to keep credentials in your config files, for example:
+It is useful if you don’t want to keep credentials in your config files, for example:
 
 ```yaml
 # foliant.yml

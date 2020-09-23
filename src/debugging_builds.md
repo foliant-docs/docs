@@ -16,10 +16,10 @@ In this documentation, examples of shell commands in most cases represent the na
 
 In practice, Foliant is more commonly used with Docker. Public images of Foliant with different sets of extensions are available [at Docker Hub](https://hub.docker.com/r/foliant/foliant). The actual tags are:
 
-* `slim` — minimal image of Foliant with no extensions;
-* `latest` — same as `slim` but with the `foliant init` command support;
-* `pandoc` — image of Foliant with Pandoc backend, Pandoc itself, and LaTeX (`texlive-full` Ubuntu package);
-* `full` — most complete image of Foliant with all released extensions and dependencies required for them.
+* `slim`—minimal image of Foliant with no extensions;
+* `latest`—same as `slim` but with the `foliant init` command support;
+* `pandoc`—image of Foliant with Pandoc backend, Pandoc itself, and LaTeX (`texlive-full` Ubuntu package);
+* `full`—most complete image of Foliant with all released extensions and dependencies required for them.
 
 You can find Dockerfiles for each image in [this GitHub repository](https://github.com/foliant-docs/docker/).
 
