@@ -448,8 +448,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorials/full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../tutorials/full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1522,7 +1522,7 @@
                 
                 
                 <h1 id="project-configuration">Project Configuration<a class="headerlink" href="#project-configuration" title="Permanent link">&para;</a></h1>
-<p>Configuration for Foliant is kept in a <a href="https://yaml.org/">YAML</a>-file in the project root. The default filename is <code>foliant.yml</code> (and that's how it is referred to in other sections of this site), but you can pick a different name. In this case you should run foliant with <code>--config</code> option:</p>
+<p>Configuration for Foliant is kept in a <a href="https://yaml.org/">YAML</a>-file in the project root. The default filename is <code>foliant.yml</code> (and that’s how it is referred to in other sections of this site), but you can pick a different name. In this case you should run foliant with <code>--config</code> option:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make pdf --config myconf.yml
 </code></pre></div>
 
@@ -1536,7 +1536,7 @@
 <li>backend_config.</li>
 </ul>
 <h3 id="root-options">Root Options<a class="headerlink" href="#root-options" title="Permanent link">&para;</a></h3>
-<p>These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <a href="https://foliant-docs.github.io/docs/config/alt_structure/">AltStructure</a> or <a href="https://foliant-docs.github.io/docs/preprocessors/escapecode/">EscapeCode</a>), so please refer to each extension's respective docs for details.</p>
+<p>These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <a href="alt_structure/#altstructure">AltStructure</a> or <a href="../preprocessors/escapecode/#escapecode-and-unescapecode">EscapeCode</a>), so please refer to each extension’s respective docs for details.</p>
 <p>Here are all built-in root options:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myproj</span>
@@ -1551,14 +1551,14 @@
 <dt><code>slug</code> <em>(string)</em></dt>
 <dd>Slug is a string which will be used to name the output file or folder after build. For example, if slug is <code>myproj</code>, after building PDF with foliant, the output will be saved in <code>myproj.pdf</code>. If not defined — <code>title</code> will be used to generate filename.</dd>
 <dt><code>src_dir</code> <em>(string)</em></dt>
-<dd>Name of the directory with your project's Markdown source files. Normally you wouldn't want to set this option to something other than default. Default: <code>src</code>.</dd>
+<dd>Name of the directory with your project’s Markdown source files. Normally you wouldn’t want to set this option to something other than default. Default: <code>src</code>.</dd>
 <dt><code>tmp_dir</code> <em>(string)</em></dt>
-<dd>Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn't want to set this option to something other than default. Default: <code>__folianttmp__</code>.</dd>
+<dd>Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Normally you wouldn’t want to set this option to something other than default. Default: <code>__folianttmp__</code>.</dd>
 </dl>
 <h3 id="chapters"><code>chapters</code><a class="headerlink" href="#chapters" title="Permanent link">&para;</a></h3>
 <p><em>(list)</em></p>
 <p><code>chapters</code> is a list of paths to the Markdown sources which you want to be used in the project. These paths are always relative to your <code>src</code> dir.</p>
-<p>Here's a basic chapters list:</p>
+<p>Here’s a basic chapters list:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
@@ -1589,7 +1589,7 @@
 
 
 <p>In this example first two chapters are defined as a simple list, third chapter is a mapping with one element, and after that we see several mappings with nested lists.</p>
-<p>If we were building a PDF document with <a href="https://foliant-docs.github.io/docs/backends/pandoc/">Pandoc backend</a> or a static site with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate backend</a>, this complex chapter structure will be just ignored, as if we have supplied a simple flat list:</p>
+<p>If we were building a PDF document with <a href="../backends/pandoc/#pandoc">Pandoc backend</a> or a static site with <a href="../backends/slate/#slate">Slate backend</a>, this complex chapter structure will be just ignored, as if we have supplied a simple flat list:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
@@ -1605,7 +1605,7 @@
 
 
 <p>In any case we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.</p>
-<p>But if we are building site with <a href="https://foliant-docs.github.io/docs/backends/mkdocs/">MkDocs backend</a>, mappings become meaningful.</p>
+<p>But if we are building site with <a href="../backends/mkdocs/#mkdocs">MkDocs backend</a>, mappings become meaningful.</p>
 <p>For example, this element:</p>
 <div class="codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
 </code></pre></div>
@@ -1624,7 +1624,7 @@
 
 
 <p>means "create a subsection in the sidebar with a title <strong>Creating Documentation With Foliant</strong> and nest the <code>preprequisites.md</code> chapter inside. Then nest another subsection within the first one, called <strong>Preparing Config</strong> and nest four other chapters inside of it".</p>
-<p>Please, refer to each backend's respective docs for details on how they work with chapters.</p>
+<p>Please, refer to each backend’s respective docs for details on how they work with chapters.</p>
 <h3 id="preprocessors"><code>preprocessors</code><a class="headerlink" href="#preprocessors" title="Permanent link">&para;</a></h3>
 <p><em>(list)</em></p>
 <p>All preprocessors which you want to be used in your project, should be listed under the <code>preprocessors</code> section:</p>
@@ -1646,8 +1646,8 @@
 </code></pre></div>
 
 
-<p>Each preprocessor has to be put in separate list item. If you don't need to set any options, just put the preprocessor's name in the item (flags, includes and blockdiag in the example above). If you are setting preprocessor options, then make it a mapping, with field name being the preprocessor name, and field value — another mapping, with preprocessor options. (macros, plantuml and graphviz in the example above).</p>
-<p>Please, refer to each preprocessor's respective docs for details on which options they have.</p>
+<p>Each preprocessor has to be put in separate list item. If you don’t need to set any options, just put the preprocessor’s name in the item (flags, includes and blockdiag in the example above). If you are setting preprocessor options, then make it a mapping, with field name being the preprocessor name, and field value — another mapping, with preprocessor options. (macros, plantuml and graphviz in the example above).</p>
+<p>Please, refer to each preprocessor’s respective docs for details on which options they have.</p>
 <p>There are several things you have to keep in mind when setting up the preprocessors section:</p>
 <p><strong>The order matters</strong></p>
 <p>The order, in which the preprocessors are defined in the list, is the order they are run during build. For example, if you are using Includes preprocessor to get source code for a PlantUML scheme like this:</p>
@@ -1658,10 +1658,10 @@
 
 
 <p>then Includes must be defined before PlantUML in the list, otherwise you will get an error from PlantUML when it tries to process <code>&lt;include&gt;</code> tag instead of the scheme code.</p>
-<p>Some preprocessors are especially sensitive to their position in the preprocessor list (for example, <a href="https://foliant-docs.github.io/docs/preprocessors/superlinks/">SuperLinks</a>) and there may even be situations when you will have to put the same preprocessor in the list twice.</p>
+<p>Some preprocessors are especially sensitive to their position in the preprocessor list (for example, <a href="../preprocessors/superlinks/#superlinks">SuperLinks</a>) and there may even be situations when you will have to put the same preprocessor in the list twice.</p>
 <p><strong>Preprocessors are applied to all files</strong></p>
 <p>Generally, preprocessors just ignore the chapters list and apply to <em>all Markdown files</em> in the src dir. Usually this is not an issue, but sometimes preprocessor may spend a long time on the files, which may not even get into the resulting build.</p>
-<p>We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use <a href="https://foliant-docs.github.io/docs/preprocessors/removeexcess/">RemoveExcess</a> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.</p>
+<p>We suggest you to keep your src dir clean and only put there files which are actually getting into the project. The other solution is to use <a href="../preprocessors/removeexcess/#removeexcess">RemoveExcess</a> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.</p>
 <h3 id="backend_config"><code>backend_config</code><a class="headerlink" href="#backend_config" title="Permanent link">&para;</a></h3>
 <p><em>(mapping)</em></p>
 <p>Keep all your backend settings in <code>backend_config</code> section:</p>
@@ -1722,14 +1722,14 @@
 Received the variables!
 
 {% for var in vars %}
-    I&#39;ve got a var {{ var }}
+    I’ve got a var {{ var }}
 {% endfor %}
 <span class="p">&lt;/</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
-<p>And that's where <code>!project_path</code>, <code>!rel_path</code> modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:</p>
-<div class="codehilite"><pre><span></span><code>Here are the contents of this project&#39;s config:
+<p>And that’s where <code>!project_path</code>, <code>!rel_path</code> modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:</p>
+<div class="codehilite"><pre><span></span><code>Here are the contents of this project’s config:
 
 <span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;!project_path foliant.yml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">include</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1745,7 +1745,7 @@ Received the variables!
 <p><code>!path</code> modifier, if used in tag parameters, works the same as <code>!project_path</code> modifier: it returns the absolute path to the file, relative to project root.</p>
 <h3 id="env"><code>!env</code><a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
 <p>The <code>!env</code> modifier allows you to access environment variables in config, as well as in tag options.</p>
-<p>It is useful if you don't want to keep credentials in your config files, for example:</p>
+<p>It is useful if you don’t want to keep credentials in your config files, for example:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># foliant.yml</span>
 
 <span class="nt">preprocessors</span><span class="p">:</span>

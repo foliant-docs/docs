@@ -342,8 +342,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../../tutorials/full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1402,14 +1402,10 @@
                 
                 
                 <h1 id="src">Src<a class="headerlink" href="#src" title="Permanent link">&para;</a></h1>
-<p>This extension supports the command <code>src</code> to backup the source directory of Foliant project (usually called as <code>src</code>) and to restore it from prepared backup.</p>
-<p>Backing up of the source directory is needed because MultiProject extension modifies this directory by moving the directories of built subprojects into it.</p>
+<p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="CLI Extension for the <code>src</code> Command" to_heading="Usage of the CLI Extension"></include></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To enable the <code>src</code> command, install MultiProject extension:</p>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.multiproject
-</code></pre></div>
-
-
+<p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Installation" to_heading="Config Extension to Resolve the <code>!from</code> Tag"></include></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>To make a backup of the source directory, use the command:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant src backup

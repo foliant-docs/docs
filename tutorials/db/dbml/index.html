@@ -344,8 +344,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../../full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1432,7 +1432,7 @@
                 
                 
                 <h1 id="documenting-dbml-schema">Documenting DBML schema<a class="headerlink" href="#documenting-dbml-schema" title="Permanent link">&para;</a></h1>
-<p>Quote from the official website: <em><a href="https://dbml.org">DBML</a> (Database Markup Language) is an open-source DSL language designed to define and document database schemas and structures. It is designed to be simple, consistent and highly-readable.</em> And that makes it a perfect choice for designing your database. You can create your table structure without messing with cumbersome SQL in a more human-readible way like this:</p>
+<p>Quote from the official website: <em><a href="https://dbml.org/">DBML</a> (Database Markup Language) is an open-source DSL language designed to define and document database schemas and structures. It is designed to be simple, consistent and highly-readable.</em> And that makes it a perfect choice for designing your database. You can create your table structure without messing with cumbersome SQL in a more human-readible way like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">Table</span> <span class="n">users</span> <span class="p">{</span>
   <span class="kt">id</span> <span class="n">integer</span>
   <span class="n">username</span> <span class="n">varchar</span>
@@ -1460,12 +1460,12 @@
 
 
 <p>As you may have noticed, DBML also has tools to document pieces of you schema using <em>notes</em> (<code>body text [note: 'Content of the post']</code>) and comments (<code>Ref: posts.user_id &gt; users.id // many-to-one</code>).</p>
-<p>So how can we convert DBML schema descriptions into a human-readible document? The idea is pretty simple: we parse the DBML definitions and pass them to a Jinja template, which renders markdown for us. After that we use one of our backends (we will use <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> in this tutorial) to build a static site out of it.</p>
-<p>We won't need to do it all manually, of course, we just need to configure Foliant to do that for us.</p>
+<p>So how can we convert DBML schema descriptions into a human-readible document? The idea is pretty simple: we parse the DBML definitions and pass them to a Jinja template, which renders markdown for us. After that we use one of our backends (we will use <a href="../../../backends/slate/#slate">Slate</a> in this tutorial) to build a static site out of it.</p>
+<p>We won’t need to do it all manually, of course, we just need to configure Foliant to do that for us.</p>
 <h2 id="installing-prerequisites">Installing prerequisites<a class="headerlink" href="#installing-prerequisites" title="Permanent link">&para;</a></h2>
-<p>If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <a href="../../full_docker/">Full Foliant Docker image</a>, you don't need to do that, just go to the next stage.</p>
-<p>First, you will need Foliant, of course. If you don't have it yet, please, refer to the <a href="https://foliant-docs.github.io/docs/installation/">installation guide</a>.</p>
-<p>Next, let's install <a href="https://github.com/foliant-docs/foliantcontrib.init/">Foliant Init</a> to facilitate the task of creating new project:</p>
+<p>If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <a href="../../full_docker/#working-with-full-foliant-docker-image">Full Foliant Docker image</a>, you don’t need to do that, just go to the next stage.</p>
+<p>First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <a href="../../../installation/#installation">installation guide</a>.</p>
+<p>Next, let’s install <a href="../../../cli/init/#init">Foliant Init</a> to facilitate the task of creating new project:</p>
 <div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
 </code></pre></div>
 
@@ -1475,10 +1475,10 @@
 </code></pre></div>
 
 
-<p>We are going to use <a href="https://github.com/slatedocs/slate">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
+<p>We are going to use <a href="../../../backends/slate/#slate">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
 <p>Finally, <a href="https://plantuml.com/ru/starting">install PlantUML</a>, we will need it to draw database scheme.</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
-<p>Let's create a Foliant project for our experiments. <code>cd</code> into the directory where you want your project created and run the <code>init</code> command:</p>
+<p>Let’s create a Foliant project for our experiments. <code>cd</code> into the directory where you want your project created and run the <code>init</code> command:</p>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ foliant init
 Enter the project name: Database Docs
@@ -1490,7 +1490,7 @@ $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
 
-<p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template">Foliant Project template</a> repository:</p>
+<p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template/">Foliant Project template</a> repository:</p>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ mkdir database-docs
 $ git clone https://github.com/foliant-docs/foliant_project_template.git database-docs
@@ -1504,13 +1504,13 @@ $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
 
-<p>Next, let's download the sample DBML spec and save it into file <code>schema.dbml</code> in the root your Foliant project:</p>
+<p>Next, let’s download the sample DBML spec and save it into file <code>schema.dbml</code> in the root your Foliant project:</p>
 <div class="codehilite"><pre><span></span><code>$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
 </code></pre></div>
 
 
 <h2 id="setting-up-project">Setting up project<a class="headerlink" href="#setting-up-project" title="Permanent link">&para;</a></h2>
-<p>Now it's time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
+<p>Now it’s time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
 <div class="codehilite"><pre><span></span><code>title: Database Docs
 
 chapters:
@@ -1524,14 +1524,14 @@ chapters:
 </code></pre></div>
 
 
-<p>We've added the PlantUML and DBMLDoc preprocessors to the pipeline and specified path to our DBML sample schema. DBMLDoc will parse our schema and convert it into Markdown, plantuml will draw the visual diagram of our DB schema.</p>
+<p>We’ve added the PlantUML and DBMLDoc preprocessors to the pipeline and specified path to our DBML sample schema. DBMLDoc will parse our schema and convert it into Markdown, plantuml will draw the visual diagram of our DB schema.</p>
 <blockquote>
 <p>Note: if plantuml is not available under <code>$ plantuml</code> in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
 <code>yaml
   - plantuml:
       plantuml_path: /usr/bin/plantuml.jar</code></p>
 </blockquote>
-<p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let's put it in there. Open <code>src/index.md</code> and make it look like this:</p>
+<p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let’s put it in there. Open <code>src/index.md</code> and make it look like this:</p>
 <div class="codehilite"><pre><span></span><code># Welcome to Database Docs
 
 <span class="gd">-Your content goes here.</span>
@@ -1541,7 +1541,7 @@ chapters:
 
 
 <h2 id="building-site">Building site<a class="headerlink" href="#building-site" title="Permanent link">&para;</a></h2>
-<p>All preparations done, let's build our site:</p>
+<p>All preparations done, let’s build our site:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
 Parsing config... Done
 Applying preprocessor dbmldoc... Done
@@ -1560,9 +1560,9 @@ Result: Database_Docs-2020-06-03.slate/
 </code></pre></div>
 
 
-<p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you've got:</p>
+<p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you’ve got:</p>
 <p><img alt="" src="../img/dbml.png" /></p>
-<p>That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. After first build, the default template should have appeared in your project dir under the name <code>dbml.j2</code>. If you want to change the looks of you site, please, refer for instructions to the <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend documentation.</p>
+<p>That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. After first build, the default template should have appeared in your project dir under the name <code>dbml.j2</code>. If you want to change the looks of you site, please, refer for instructions to the <a href="../../../backends/slate/#slate">Slate</a> backend documentation.</p>
                 
                   
                 

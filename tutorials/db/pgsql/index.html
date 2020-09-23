@@ -344,8 +344,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../../full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1433,12 +1433,12 @@
                 
                 <h1 id="documenting-postgresql-database">Documenting PostgreSQL Database<a class="headerlink" href="#documenting-postgresql-database" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component's doc page.</p>
+<p>Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component’s doc page.</p>
 </blockquote>
 <h2 id="installing-prerequisites">Installing prerequisites<a class="headerlink" href="#installing-prerequisites" title="Permanent link">&para;</a></h2>
-<p>First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <a href="../../full_docker/">Full Docker image</a>, you don't need to do anything, you can skip to the next stage.</p>
-<p>First, you will need Foliant, of course. If you don't have it yet, please, refer to the <a href="https://foliant-docs.github.io/docs/installation/">installation guide</a>.</p>
-<p>Next, let's install <a href="https://github.com/foliant-docs/foliantcontrib.init/">Foliant Init</a> to facilitate the task of creating new project:</p>
+<p>First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <a href="../../full_docker/#working-with-full-foliant-docker-image">Full Docker image</a>, you don’t need to do anything, you can skip to the next stage.</p>
+<p>First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <a href="../../../installation/#installation">installation guide</a>.</p>
+<p>Next, let’s install <a href="../../../cli/init/#init">Foliant Init</a> to facilitate the task of creating new project:</p>
 <div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
 </code></pre></div>
 
@@ -1448,10 +1448,10 @@
 </code></pre></div>
 
 
-<p>We are going to use <a href="https://github.com/slatedocs/slate">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
+<p>We are going to use <a href="https://github.com/slatedocs/slate/">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
 <p><a href="https://plantuml.com/ru/starting">Install PlantUML</a>, we will need it to draw the database scheme.</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
-<p>Let's create a Foliant project for our experiments. <code>cd</code> to the directory where you want your project created and run the <code>init</code> command:</p>
+<p>Let’s create a Foliant project for our experiments. <code>cd</code> to the directory where you want your project created and run the <code>init</code> command:</p>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ foliant init
 Enter the project name: Database Docs
@@ -1463,7 +1463,7 @@ $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
 
-<p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template">Foliant Project template</a> repository:</p>
+<p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template/">Foliant Project template</a> repository:</p>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ mkdir database-docs
 $ git clone https://github.com/foliant-docs/foliant_project_template.git database-docs
@@ -1478,7 +1478,7 @@ $ <span class="nb">cd</span> database-docs
 
 
 <h2 id="setting-up-project">Setting up project<a class="headerlink" href="#setting-up-project" title="Permanent link">&para;</a></h2>
-<p>Now it's time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
+<p>Now it’s time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
 <div class="codehilite"><pre><span></span><code>title: Database Docs
 
 chapters:
@@ -1505,7 +1505,7 @@ chapters:
 </code></pre></div>
 
 
-<p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let's put it in there. Open <code>src/index.md</code> and make it look like this:</p>
+<p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let’s put it in there. Open <code>src/index.md</code> and make it look like this:</p>
 <div class="codehilite"><pre><span></span><code># Welcome to Database Docs
 
 <span class="gd">-Your content goes here.</span>
@@ -1514,9 +1514,9 @@ chapters:
 </code></pre></div>
 
 
-<p>If you are using Docker, you will also need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it's not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this <a href="https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile">Dockerfile by Sergey Makinen</a>. Copy all commands starting from the third line into your <code>Dockerfile</code> and run <code>docker-compose build</code> to rebuild the image.</p>
+<p>If you are using Docker, you will also need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this <a href="https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile">Dockerfile by Sergey Makinen</a>. Copy all commands starting from the third line into your <code>Dockerfile</code> and run <code>docker-compose build</code> to rebuild the image.</p>
 <h2 id="building-site">Building site<a class="headerlink" href="#building-site" title="Permanent link">&para;</a></h2>
-<p>All preparations done, let's build our site:</p>
+<p>All preparations done, let’s build our site:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
 Parsing config... Done
 Applying preprocessor dbdoc... Done
@@ -1535,9 +1535,9 @@ Result: Database_Docs-2020-06-03.slate/
 </code></pre></div>
 
 
-<p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you've got:</p>
+<p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you’ve got:</p>
 <p><img alt="" src="../img/oracle.png" /></p>
-<p>That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. The default template can be found <a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">here</a>. Edit it and save in your project dir, then specify in the <code>doc_template</code> parameter. If you want to change the looks of you site, please, refer for instructions to the <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend documentation.</p>
+<p>That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. The default template can be found <a href="https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2">here</a>. Edit it and save in your project dir, then specify in the <code>doc_template</code> parameter. If you want to change the looks of you site, please, refer for instructions to the <a href="../../../backends/slate/#slate">Slate</a> backend documentation.</p>
                 
                   
                 

@@ -342,8 +342,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../../tutorials/full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1402,33 +1402,11 @@
                 
                 
                 <h1 id="multiproject">MultiProject<a class="headerlink" href="#multiproject" title="Permanent link">&para;</a></h1>
-<p>This extension resolves the <code>!from</code> YAML tag in the project config and replaces the value of the tag with <code>chaptres</code> section of related subproject.</p>
-<p>Nested subprojects are processed recursively.</p>
+<p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Config Extension to Resolve the <code>!from</code> Tag" to_heading="Usage of the Config Extension"></include></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.multiproject
-</code></pre></div>
-
-
+<p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Installation" to_heading="Config Extension to Resolve the <code>!from</code> Tag"></include></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>The subproject location may be specified as a local path, or as a Git repository with optional revision (branch name, commit hash or another reference).</p>
-<p>Example of <code>chapters</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">local_dir</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs.git</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/some_other_group/some_other_repo.git#develop</span>
-</code></pre></div>
-
-
-<p>Before building the documentation superproject, Multiproject extension calls Foliant to build each subproject into <code>pre</code> target, and then moves the directories of built subprojects into the source directory of the superproject (usually called as <code>src</code>).</p>
-<p>Limitations:</p>
-<ul>
-<li>directory names of subprojects of the same level should be unique;</li>
-<li>source directories of the multiproject and of all the subprojects should have the same names; also they should be located inside the “root” directories of corresponding projects;</li>
-<li>config files of the multiproject and of all the subprojects should have the same names;</li>
-<li>subprojects from remote Git repositories do not need to be newly cloned before each build, but local subprojects are copied into cache before each build;</li>
-<li>it’s undesirable if the path of the “root” directory of the top-level project contains <code>.multiprojectcache</code> directory as its some part.</li>
-</ul>
+<p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Usage of the Config Extension" to_heading="CLI Extension for the <code>src</code> Command"></include></p>
                 
                   
                 

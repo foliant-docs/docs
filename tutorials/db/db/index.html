@@ -344,8 +344,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../full_docker/" title="Working Full Foliant Docker image" class="md-nav__link">
-      Working Full Foliant Docker image
+    <a href="../../full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
     </a>
   </li>
 
@@ -1406,17 +1406,17 @@
                 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
 <p>In these tutorials we will show you a way to document your database using Foliant. Right now there are options available for those of you who use <strong>PostgreSQL</strong>, <strong>Oracle</strong> and <strong>DBML</strong>, but we will probably add more vendors later.</p>
 <h2 id="the-principles">The principles<a class="headerlink" href="#the-principles" title="Permanent link">&para;</a></h2>
-<p>Generally, we want to keep our docs as close to the code as possible. When documenting source code we usually can utilize the power of Swagger to generate docs from comments in the sources. Since there's no Swagger for databases, we had to invent something similar.</p>
-<p>We are going to add actual descriptions of the tables and fields using <em>comments</em>. Comment (not to be confused with SQL script <code>--comments</code>) is a special entity which in one way or another is present in most DBMSs. They don't affect the data or table structure, they are only used for documentation purposes. You can add a comment like this:</p>
+<p>Generally, we want to keep our docs as close to the code as possible. When documenting source code we usually can utilize the power of Swagger to generate docs from comments in the sources. Since there’s no Swagger for databases, we had to invent something similar.</p>
+<p>We are going to add actual descriptions of the tables and fields using <em>comments</em>. Comment (not to be confused with SQL script <code>--comments</code>) is a special entity which in one way or another is present in most DBMSs. They don’t affect the data or table structure, they are only used for documentation purposes. You can add a comment like this:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">COMMENT</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="ss">&quot;Clients&quot;</span> <span class="k">IS</span> <span class="ss">&quot;Table holding info about the clients&quot;</span>
 </code></pre></div>
 
 
-<p>After describing all your entities inside your database, we need to get all this data somehow. For this, we will use Foliant <a href="https://foliant-docs.github.io/docs/preprocessors/dbdoc/">DBDoc preprocessor</a>. It queries the database to get its structure (including our comments) and converts it into Markdown. We can then use this Markdown to generate a static site for our documentation.</p>
+<p>After describing all your entities inside your database, we need to get all this data somehow. For this, we will use Foliant <a href="../../../preprocessors/dbdoc/#dbdoc">DBDoc preprocessor</a>. It queries the database to get its structure (including our comments) and converts it into Markdown. We can then use this Markdown to generate a static site for our documentation.</p>
 <h2 id="the-tutorials">The tutorials<a class="headerlink" href="#the-tutorials" title="Permanent link">&para;</a></h2>
-<p><a href="../dbml/">Documenting with DBML specification</a></p>
-<p><a href="../oracle/">Documenting Oracle Database</a></p>
-<p><a href="../pgsql/">Documenting PostgreSQL Database</a></p>
+<p><a href="../dbml/#documenting-dbml-schema">Documenting with DBML specification</a></p>
+<p><a href="../oracle/#documenting-oracle-database">Documenting Oracle Database</a></p>
+<p><a href="../pgsql/#documenting-postgresql-database">Documenting PostgreSQL Database</a></p>
                 
                   
                 

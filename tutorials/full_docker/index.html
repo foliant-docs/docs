@@ -36,7 +36,7 @@
     
     
       
-        <title>Working Full Foliant Docker image - Foliant</title>
+        <title>Working with Full Foliant Docker image - Foliant</title>
       
     
     
@@ -114,7 +114,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#working-full-foliant-docker-image" tabindex="0" class="md-skip">
+      <a href="#working-with-full-foliant-docker-image" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -140,7 +140,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Working Full Foliant Docker image
+                Working with Full Foliant Docker image
               
             </span>
           
@@ -353,11 +353,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Working Full Foliant Docker image
+        Working with Full Foliant Docker image
       </label>
     
-    <a href="./" title="Working Full Foliant Docker image" class="md-nav__link md-nav__link--active">
-      Working Full Foliant Docker image
+    <a href="./" title="Working with Full Foliant Docker image" class="md-nav__link md-nav__link--active">
+      Working with Full Foliant Docker image
     </a>
     
       
@@ -1387,11 +1387,11 @@
                   <a href="https://github.com/foliant-docs/docs/edit/master/src/tutorials/full_docker.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="working-full-foliant-docker-image">Working Full Foliant Docker image<a class="headerlink" href="#working-full-foliant-docker-image" title="Permanent link">&para;</a></h1>
-<p>In this tutorial, we will go through the steps of working with Foliant using the Full Docker image. This is the recommended way of working with Foliant, and here's why.</p>
-<p>Internally Foliant is not an independent documentation builder, which does everything itself, but rather an orchestrator of different tools. Foliant configures and runs them under the hood as a part of its pipeline, saving you the need to run them yourself. Of course, that's not all Foliant does, it has a lot to offer in terms of text processing itself, but many preprocessors and almost all backends use external tools in one way or another.</p>
+                <h1 id="working-with-full-foliant-docker-image">Working with Full Foliant Docker image<a class="headerlink" href="#working-with-full-foliant-docker-image" title="Permanent link">&para;</a></h1>
+<p>In this tutorial, we will go through the steps of working with Foliant using the Full Docker image. This is the recommended way of working with Foliant, and here’s why.</p>
+<p>Internally Foliant is not an independent documentation builder, which does everything itself, but rather an orchestrator of different tools. Foliant configures and runs them under the hood as a part of its pipeline, saving you the need to run them yourself. Of course, that’s not all Foliant does, it has a lot to offer in terms of text processing itself, but many preprocessors and almost all backends use external tools in one way or another.</p>
 <p>That was our goal from the beginning: why build your own static site generator if there are already such beautiful libraries like MkDocs or Slate? Why spend a year on creating your own Markdown to PDF generator if Pandoc has already perfected this craft? And if you are not satisfied with Pandoc, you can plug into Foliant something else, like MdToPdf. This approach comes with some disadvantages though. Let me illustrate that with an example.</p>
-<p>One of the popular ways to use Foliant is to build a static site with <a href="https://foliant-docs.github.io/docs/tutorials/api/">API documetnation</a>. After making all necessary configuration you just run the command:</p>
+<p>One of the popular ways to use Foliant is to build a static site with <a href="../api/#documenting-api-with-foliant">API documetnation</a>. After making all necessary configuration you just run the command:</p>
 <div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
 </code></pre></div>
 
@@ -1400,27 +1400,27 @@
 <p>While the command is pretty simple, internally Foliant will do the following:</p>
 <ol>
 <li>Download your <code>swagger.yaml</code> specification file over the link you supplied in config.</li>
-<li>Pass <code>swagger.yaml</code> to the <a href="https://github.com/Mermade/widdershins">Widdershins</a> tool which will convert it to Markdown.</li>
+<li>Pass <code>swagger.yaml</code> to the <a href="https://github.com/Mermade/widdershins/">Widdershins</a> tool which will convert it to Markdown.</li>
 <li>Run some other specified preprocessors which may call <a href="https://plantuml.com/">PlantUML</a> for generating diagrams or replace links to Jira issues with badges from <a href="https://shields.io/">Shields.io</a>, etc.</li>
-<li>Glue all your separate md-source files into one with <a href="https://foliant-docs.github.io/docs/preprocessors/flatten/">Flatten</a> preprocessor.</li>
-<li>Call <a href="https://github.com/slatedocs/slate">Slate</a> static site generator to build your site.</li>
+<li>Glue all your separate md-source files into one with <a href="../../preprocessors/flatten/#flatten">Flatten</a> preprocessor.</li>
+<li>Call <a href="https://github.com/slatedocs/slate/">Slate</a> static site generator to build your site.</li>
 </ol>
 <p>In this just one use case, Foliant had to internally run several third-party apps, each one of which needs to be installed on your computer before running the <code>foliant make site</code> command. It involves:</p>
 <ul>
 <li>Installing Widdershins, which is written on JS, so it will require <a href="https://www.npmjs.com/">npm</a> and <a href="https://nodejs.org/en/">Node.js</a> to be installed preliminarily.</li>
-<li>Installing PlantUML which requires <a href="https://www.java.com/ru/">Java</a> and <a href="http://graphviz.org/">Graphviz</a> installed preliminarily.</li>
+<li>Installing PlantUML which requires <a href="https://www.java.com/ru/">Java</a> and <a href="https://graphviz.org/">Graphviz</a> installed preliminarily.</li>
 <li>Installing Slate, which requires <a href="https://www.ruby-lang.org/">Ruby</a>, <a href="https://bundler.io/">Bundler</a>, and a bunch of other dependencies.</li>
 </ul>
-<p>Woah! That's a lot of prerequisites! Now imagine you don't have any of them and you will have to spend half a day installing them and making sure they work. And now imagine that you want to build that static site on your home computer and you will need to waste another half a day just to do all that again.</p>
-<p>That's where <a href="https://www.docker.com/">Docker</a> steps in.</p>
+<p>Woah! That’s a lot of prerequisites! Now imagine you don’t have any of them and you will have to spend half a day installing them and making sure they work. And now imagine that you want to build that static site on your home computer and you will need to waste another half a day just to do all that again.</p>
+<p>That’s where <a href="https://www.docker.com/">Docker</a> steps in.</p>
 <h2 id="how-can-docker-make-your-life-easier">How can Docker make your life easier<a class="headerlink" href="#how-can-docker-make-your-life-easier" title="Permanent link">&para;</a></h2>
 <p>Docker allows you to run specific commands in an isolated, preconfigured environment, with no dependence on the system it is running on.</p>
 <p>After reading the previous section, you now may have just one dream: how great would it be if I never needed to configure and install anything, and it would just work out of the box.</p>
-<p>That was exactly our dream when Foliant started growing, so we've come up with a <strong>Full Foliant Docker Image</strong>, which has all the dependencies pre-installed. Not just backends and preprocessors, but all the open-source tools, which are used by them (except some proprietary tools like Oracle instant client).</p>
-<p>It has <a href="https://pandoc.org/">Pandoc</a> with <a href="https://tug.org/texlive/">TexLive</a> for building beautiful and most complex PDFs, it has the most recent <a href="https://github.com/slatedocs/slate">Slate</a> static site generator with all the headache of installing Ruby dependencies already solved for you, it even has a <a href="https://www.postgresql.org/">PostgreSQL</a> client if you ever need to generate docs for your database.</p>
+<p>That was exactly our dream when Foliant started growing, so we’ve come up with a <strong>Full Foliant Docker Image</strong>, which has all the dependencies pre-installed. Not just backends and preprocessors, but all the open-source tools, which are used by them (except some proprietary tools like Oracle instant client).</p>
+<p>It has <a href="https://pandoc.org/">Pandoc</a> with <a href="https://tug.org/texlive/">TexLive</a> for building beautiful and most complex PDFs, it has the most recent <a href="https://github.com/slatedocs/slate/">Slate</a> static site generator with all the headache of installing Ruby dependencies already solved for you, it even has a <a href="https://www.postgresql.org/">PostgreSQL</a> client if you ever need to generate docs for your database.</p>
 <p>We keep the image up to date, and all new features that Foliant gets, shortly appear in there, so the only thing you should worry about is updating this image from time to time.</p>
-<p>But there is a disk space issue. You see, since we've included almost everything you will ever need to use full Foliant's potential, the image had grown up to 2.5GB in compressed size and 6.5GB in unpacked form. That's mostly due to the TexLive package and some other bulky dependencies. All that will require decent Internet Bandwidth and some free disk space to download, which should not be that big of an issue in the modern world. If you prefer more compact installations, please, refer to the <a href="https://foliant-docs.github.io/docs/quickstart/">Quickstart</a> where we show how to work with slimmer Foliant images.</p>
-<p>But enough introductions, let's make it work!</p>
+<p>But there is a disk space issue. You see, since we’ve included almost everything you will ever need to use full Foliant’s potential, the image had grown up to 2.5GB in compressed size and 6.5GB in unpacked form. That’s mostly due to the TexLive package and some other bulky dependencies. All that will require decent Internet Bandwidth and some free disk space to download, which should not be that big of an issue in the modern world. If you prefer more compact installations, please, refer to the <a href="../../quickstart/#quickstart">Quickstart</a> where we show how to work with slimmer Foliant images.</p>
+<p>But enough introductions, let’s make it work!</p>
 <h1 id="getting-docker">Getting Docker<a class="headerlink" href="#getting-docker" title="Permanent link">&para;</a></h1>
 <p>The first step is to download and install Docker.</p>
 <p><strong>Windows</strong></p>
@@ -1432,8 +1432,8 @@
 <p><strong>MacOs</strong></p>
 <p>Download and install Docker from <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">this page</a>.</p>
 <h2 id="setting-up-foliant-project">Setting up Foliant project<a class="headerlink" href="#setting-up-foliant-project" title="Permanent link">&para;</a></h2>
-<p>Now that we've got Docker, we can create our test project.</p>
-<p>Clone somewhere on your machine the <a href="https://github.com/foliant-docs/foliant_project_template">Foliant Project template</a>. It's an empty Foliant project with the required file and directory structure. It also includes necessary Docker configs.</p>
+<p>Now that we’ve got Docker, we can create our test project.</p>
+<p>Clone somewhere on your machine the <a href="https://github.com/foliant-docs/foliant_project_template">Foliant Project template</a>. It’s an empty Foliant project with the required file and directory structure. It also includes necessary Docker configs.</p>
 <p>Open your terminal and <code>cd</code> to the directory with the cloned project template. You should see the following directory structure</p>
 <div class="codehilite"><pre><span></span><code>$ tree
 .
@@ -1446,7 +1446,7 @@
 </code></pre></div>
 
 
-<p>Now let's build the Docker image:</p>
+<p>Now let’s build the Docker image:</p>
 <div class="codehilite"><pre><span></span><code>$ docker-compose build
 Building foliant
 Step <span class="m">1</span>/1 : FROM foliant/foliant:full
@@ -1464,9 +1464,9 @@ Successfully tagged test_foliant:latest
 
 
 <blockquote>
-<p>You will need to run this command every time after updating the image or editing <code>Dockerfile</code>. But you don't need to run it again if you edited any Foliant-related files, including source Markdown files or <code>foliant.yml</code>.</p>
+<p>You will need to run this command every time after updating the image or editing <code>Dockerfile</code>. But you don’t need to run it again if you edited any Foliant-related files, including source Markdown files or <code>foliant.yml</code>.</p>
 </blockquote>
-<p>All preparations are done! Now let's build a site with MkDocs to test it out.</p>
+<p>All preparations are done! Now let’s build a site with MkDocs to test it out.</p>
 <div class="codehilite"><pre><span></span><code>docker-compose run --rm foliant make site -w mkdocs
 Creating network <span class="s2">&quot;test_default&quot;</span> with the default driver
 Parsing config... Done
