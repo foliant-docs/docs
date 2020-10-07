@@ -1522,7 +1522,7 @@
 <h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
 <p>Say, you have an API documentation hosted at the url http://example.com/api-docs</p>
 <p>It may be a <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> website or just some static one-page site (like <a href="https://github.com/slatedocs/slate">Slate</a>).</p>
-<p>So if you have a site with API docs, you probably reference to it from time in your other documents:</p>
+<p>So if you have a site with API docs, you probably reference to them from time in your other documents:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method `GET /user/authenticate`.</span>
 </code></pre></div>
 
@@ -1541,7 +1541,7 @@
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">My-API</span><span class="p">:</span>
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs</span>
-                <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs/swagger.json</span>
+                <span class="nt">spec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs/swagger.json</span>
 </code></pre></div>
 
 <p>Here:</p>
@@ -1549,7 +1549,7 @@
 <li><code>API</code> is a required section;</li>
 <li><code>My-API</code> is a local name of your API. Right now it is not very important but will come in handy in the next example;</li>
 <li><code>url</code> is a string with full url to your API documentation web-page. It will be used to validate references and to construct a link to method;</li>
-<li><code>spec_url</code> is a string with full url to OpenAPI specification file, which will be used to construct the proper anchor for the method.</li>
+<li><code>spec</code> is a string with full url to OpenAPI specification file, which will be used to construct the proper anchor for the method. It may also be a path to local specification file if you don't want to download it each time.</li>
 </ul>
 <p>After foliant applies the preprocessor your document will be transformed into this:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method [GET user/authenticate](http://example.com/api-docs/#get-user-authenticate).</span>
@@ -1565,7 +1565,7 @@
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/client/api-docs</span>
             <span class="nt">Admin-API</span><span class="p">:</span>
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs</span>
-                <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs/swagger.yml</span>
+                <span class="nt">spec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs/swagger.yml</span>
 </code></pre></div>
 
 <p>Now this source:</p>
@@ -1653,7 +1653,7 @@
             <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aglio</span>
         <span class="nt">Internal-API</span><span class="p">:</span>
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui</span>
-            <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui/swagger.json</span>
+            <span class="nt">spec</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui/swagger.json</span>
             <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger</span>
 </code></pre></div>
 
@@ -1704,18 +1704,24 @@ Default:</dd>
 <dl>
 <dt><code>url</code></dt>
 <dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method. In online mode it will also be parsed by preprocessor for validation.</dd>
-<dt><code>spec_url</code></dt>
-<dd><em>(optional)</em> Url to OpenAPI specification file. If this is parameter is present, APILinks assumes that your API documentation web-page is Swagger UI. It will download and parse the specification file and generate anchors for SwaggerUI, which are usually <code>#/&lt;tag&gt;/operationId</code>.</dd>
+<dt><code>spec</code></dt>
+<dd><em>(required for <code>swagger</code> and <code>redoc</code> site backends)</em> URL or local path to OpenAPI specification file.</dd>
 <dt><code>default</code></dt>
 <dd><em>(optional)</em> Only for offline mode. Marker to define the default API. If several APIs are marked default, preprocessor will choose the first of them. If none is marked default — the first API in the list will be chosen. The value of this item should be <code>true</code>.</dd>
 <dt><code>header_template</code></dt>
-<dd><em>(optional)</em> A template string describing the format of the headings in the API documentation web-page. Details in <strong>parsing API web-page</strong> section. Default: <code>'{verb} {command}'</code></dd>
+<dd><em>(optional)</em> A template string describing the format of the headings in the API documentation web-page. It is needed to parse method headings from the web-page. Details in <strong>parsing API web-page</strong> section. Default: <code>'{verb} {command}'</code></dd>
 <dt><code>endpoint-prefix</code></dt>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — apilinks can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info coming soon. Default: <code>''</code></dd>
 <dt><code>site_backend</code></dt>
-<dd><em>(optional)</em> Name of the static site generator, which built your API documentation website. This affects how headers are converted to anchors. Default: <code>slate</code>. Available options: <code>aglio</code>, <code>mkdocs</code>, <code>slate</code>, <code>swagger</code>.</dd>
+<dd><em>(optional)</em> Name of the static site generator, which built your API documentation website. This affects how headers are converted to anchors. Default: <code>slate</code>. Available options: <code>aglio</code>, <code>mkdocs</code>, <code>redoc</code>, <code>slate</code>, <code>swagger</code>.</dd>
 </dl>
+<blockquote>
+<p>If your API documentation website is built by another static site generator, there's still a chance that you will make it work with APILinks, because many of them use similar patterns to generate anchors. Just try one of  <code>aglio</code>, <code>mkdocs</code>, <code>slate</code> (but not <code>redoc</code> and <code>swagger</code>, these are special). If it doesn't work, send us a message, we will add support for your tool.</p>
+</blockquote>
 <h3 id="online-and-offline-modes-comparison">Online and Offline Modes Comparison<a class="headerlink" href="#online-and-offline-modes-comparison" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Note, that Swagger and Redoc sites won't work in offline mode</p>
+</blockquote>
 <p>Let's study an example and look how the behavior of the preprocessor will change in online and offline modes.</p>
 <p>We have three APIs described in the config:</p>
 <div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
@@ -1819,7 +1825,7 @@ Source:</p>
 </code></pre></div>
 
 <h3 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h3>
-<p>apilinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
+<p>APILinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
 <p>The default reg-ex is as following:</p>
 <div class="re codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </code></pre></div>
@@ -1935,8 +1941,9 @@ Source:</p>
 </tbody>
 </table>
 <h3 id="parsing-api-web-page">Parsing API Web-page<a class="headerlink" href="#parsing-api-web-page" title="Permanent link">&para;</a></h3>
-<p>apilinks goes through the API web-page content and gathers all the methods which are described there.</p>
-<p>To do this preprocessor scans each HTML <code>h2</code> tag and stores its <code>id</code> attribute (which is an <em>anchor</em> of the link to be constructed) and the contents of the tag (the <em>heading</em> itself).</p>
+<p><strong><code>aglio</code>, <code>mkdocs</code>, <code>slate</code> site backends</strong></p>
+<p>In online mode APILinks goes through the API web-page content and gathers all the methods which are described there.</p>
+<p>To do this preprocessor scans each HTML <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> tag and stores its <code>id</code> attribute (which is an <em>anchor</em> of the link to be constructed) and the contents of the tag (the <em>heading</em> itself).</p>
 <p>For example in this link:</p>
 <div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1998,6 +2005,15 @@ Source:</p>
 </tr>
 </tbody>
 </table>
+<p><strong><code>swagger</code> and <code>redoc</code> site backends</strong></p>
+<p>For Swagger and Redoc it's a bit different. To figure our the proper anchor to the method's description we need to know <code>operation_id</code> of the method. To get that we need the spec file (<code>swagger.json</code>) which was used to generate the website.</p>
+<p>That's why for Swagger and Redoc sites APILinks parses not the website itself, but the specification file. Right now you can't customize the anchor format, it will be like this for Swagger:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">#\{tag}\{operationId}</span>
+</code></pre></div>
+
+<p>and like this for Redoc:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">operation\{operationId}</span>
+</code></pre></div>
                 
                   
                 

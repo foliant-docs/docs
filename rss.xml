@@ -7,6 +7,17 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.apilinks 1.2.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#f34d7ccc45fedc22e2ec90786c7523d8</guid>
+            <pubDate>Wed, 07 Oct 2020 12:57:57 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Renamed <escaped hash="d3a537a87b3aab9157ae99e8f6f427c5"></escaped> to <escaped hash="d25dd4f0782263f8064355b2d7cfe3a9"></escaped> because it may also be a path to local file,</li>
+<li>Improved swagger.json parsing</li>
+<li>Added Redoc support (<escaped hash="10c279671d485060a2290d5c5864e0ab"></escaped> site backend)</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.apilinks 1.2.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#e28ffe432b4de2c765584448c92388b8</guid>
