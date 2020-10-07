@@ -1418,19 +1418,17 @@
                 <h1 id="multilinetables">MultilineTables<a class="headerlink" href="#multilinetables" title="Permanent link">&para;</a></h1>
 <p>This preprocessor converts tables to multiline and grid format before creating document (very useful especially for pandoc processing). It helps to make tables in doc and pdf formats more proportional — column with more text in it will be more wide. Also it helps whith processing of extremely wide tables with pandoc. Convertation to the grid format allows arbitrary cell' content (multiple paragraphs, code blocks, lists, etc.).</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.multilinetables
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.multilinetables
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor with default options, add <code>multilinetables</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">multilinetables</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options (best values set by default):</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">multilinetables</span><span class="p">:</span>
         <span class="nt">rewrite_src_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
         <span class="nt">min_table_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
@@ -1443,7 +1441,6 @@
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>rewrite_src_file</code></dt>

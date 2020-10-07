@@ -1474,24 +1474,21 @@
 <h2 id="anchors_1">Anchors<a class="headerlink" href="#anchors_1" title="Permanent link">&para;</a></h2>
 <p>Preprocessor which allows to use arbitrary anchors in Foliant documents.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.anchors
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.anchors
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add anchors to preprocessors section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">anchors</span>
 </code></pre></div>
 
-
 <p>The preprocessor has some options, but most probably you won't need any of them:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
         <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
         <span class="nt">tex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>element</code></dt>
@@ -1504,7 +1501,7 @@
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Just add an <code>anchor</code> tag to some place and then use an ordinary Markdown-link to this anchor:</p>
-<div class="codehilite"><pre><span></span><code>...
+<div class="html codehilite"><pre><span></span><code>...
 
 <span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>limitation<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span>
 Some important notice about system limitation.
@@ -1514,16 +1511,14 @@ Some important notice about system limitation.
 Don&#39;t forget about [limitation](#limitation)!
 </code></pre></div>
 
-
 <p>You can also place anchors in the middle of paragraph:</p>
-<div class="codehilite"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>middle<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span> Molestiae illum iusto, sequi magnam consequatur porro iste facere at fugiat est corrupti dolorum quidem sapiente pariatur rem, alias unde! Iste, aliquam.
+<div class="html codehilite"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;</span><span class="nt">anchor</span><span class="p">&gt;</span>middle<span class="p">&lt;/</span><span class="nt">anchor</span><span class="p">&gt;</span> Molestiae illum iusto, sequi magnam consequatur porro iste facere at fugiat est corrupti dolorum quidem sapiente pariatur rem, alias unde! Iste, aliquam.
 
 [Go to the middle of the paragraph](#middle)
 </code></pre></div>
 
-
 <p>You can place anchors inside tables:</p>
-<div class="codehilite"><pre><span></span><code>Name | Age | Weight
+<div class="html codehilite"><pre><span></span><code>Name | Age | Weight
 ---- | --- | ------
 Max  | 17  | 60
 Jane | 98  | 12
@@ -1536,7 +1531,6 @@ Cinty| 25  | 42
 
 Something&#39;s wrong with Mike, [look](#Mike)!
 </code></pre></div>
-
 
 <h3 id="additional-info">Additional info<a class="headerlink" href="#additional-info" title="Permanent link">&para;</a></h3>
 <p><strong>1. Anchors are case sensitive</strong></p>
@@ -1554,7 +1548,6 @@ Something&#39;s wrong with Mike, [look](#Mike)!
 <div class="codehilite"><pre><span></span><code><span class="err">[]&lt;&gt;\&quot;</span>
 </code></pre></div>
 
-
 <p>Also you can't use space.</p>
 <p><strong>5. But a lot of other symbols are available</strong></p>
 <p>All these are valid anchors:</p>
@@ -1569,11 +1562,10 @@ Something&#39;s wrong with Mike, [look](#Mike)!
 <span class="nt">&lt;anchor&gt;</span>👀<span class="nt">&lt;/anchor&gt;</span>
 </code></pre></div>
 
-
 <h3 id="notice-for-mkdocs">Notice for Mkdocs<a class="headerlink" href="#notice-for-mkdocs" title="Permanent link">&para;</a></h3>
 <p>In many Mkdocs themes the top menu lays over the text with absolute position. In this situation all anchors will be hidden by the menu.</p>
 <p>Possible solution is to use <code>element</code> option. Example config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
         <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">style=&quot;display:block;</span><span class="nv"> </span><span class="s">margin:-3.1rem;</span><span class="nv"> </span><span class="s">padding:3.1rem;&quot;</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
 </code></pre></div>

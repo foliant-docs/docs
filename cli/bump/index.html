@@ -1404,25 +1404,22 @@
                 <h1 id="bump">Bump<a class="headerlink" href="#bump" title="Permanent link">&para;</a></h1>
 <p>This CLI extension adds <code>bump</code> command that lets you bump Foliant project <a href="https://semver.org/">semantic version</a> without editing the config manually.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.bump
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.bump
 </code></pre></div>
-
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Bump version from "1.0.0" to "1.0.1":</p>
-<div class="codehilite"><pre><span></span><code>$ foliant bump
+<div class="shell codehilite"><pre><span></span><code>$ foliant bump
 Version bumped from <span class="m">1</span>.0.0 to <span class="m">1</span>.0.1.
 </code></pre></div>
 
-
 <p>Bump major version:</p>
-<div class="codehilite"><pre><span></span><code>$ foliant bump -v major
+<div class="shell codehilite"><pre><span></span><code>$ foliant bump -v major
 Version bumped from <span class="m">1</span>.0.1 to <span class="m">2</span>.0.0.
 </code></pre></div>
 
-
 <p>To see all available options, run <code>foliant bump --help</code>:</p>
-<div class="codehilite"><pre><span></span><code>$ foliant bump --help
+<div class="shell codehilite"><pre><span></span><code>$ foliant bump --help
 usage: foliant bump <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-v VERSION_PART<span class="o">]</span> <span class="o">[</span>-p PATH<span class="o">]</span> <span class="o">[</span>-c CONFIG<span class="o">]</span>
 
 Bump Foliant project version.

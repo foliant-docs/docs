@@ -1404,19 +1404,17 @@
                 <h1 id="epsconvert">Epsconvert<a class="headerlink" href="#epsconvert" title="Permanent link">&para;</a></h1>
 <p>EPSConvert is a tool to convert EPS images into PNG format.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.epsconvert
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.epsconvert
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>epsconvert</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">epsconvert</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">epsconvert</span><span class="p">:</span>
         <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.epsconvertcache</span>
@@ -1427,7 +1425,6 @@
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ghp</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>convert_path</code></dt>

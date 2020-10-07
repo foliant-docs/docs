@@ -647,58 +647,71 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#apilinks-preprocessor-for-foliant" class="md-nav__link">
+    apilinks Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#quick-start" class="md-nav__link">
     Quick Start
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#how-does-it-work" class="md-nav__link">
     How Does It Work?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#online-and-offline-modes-comparison" class="md-nav__link">
     Online and Offline Modes Comparison
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#capturing-references" class="md-nav__link">
     Capturing References
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#customizing-output" class="md-nav__link">
     Customizing Output
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#parsing-api-web-page" class="md-nav__link">
     Parsing API Web-page
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1411,58 +1424,71 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#apilinks-preprocessor-for-foliant" class="md-nav__link">
+    apilinks Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#quick-start" class="md-nav__link">
     Quick Start
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#how-does-it-work" class="md-nav__link">
     How Does It Work?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#online-and-offline-modes-comparison" class="md-nav__link">
     Online and Offline Modes Comparison
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#capturing-references" class="md-nav__link">
     Capturing References
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#customizing-output" class="md-nav__link">
     Customizing Output
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#parsing-api-web-page" class="md-nav__link">
     Parsing API Web-page
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1486,80 +1512,81 @@
                 
                 
                 <h1 id="apilinks">APILinks<a class="headerlink" href="#apilinks" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.apilinks.svg" /></p>
+<h2 id="apilinks-preprocessor-for-foliant">apilinks Preprocessor for Foliant<a class="headerlink" href="#apilinks-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Preprocessor for replacing API <em>reference</em>s in markdown files with links to actual method description on the API documentation web-page.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.apilinks
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.apilinks
 </code></pre></div>
-
 
 <h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
 <p>Say, you have an API documentation hosted at the url http://example.com/api-docs</p>
-<p>On this page you have HTML headings before each method description which look like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-authenticate&quot;</span><span class="p">&gt;</span>GET user/authenticate<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<p>It may be a <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> website or just some static one-page site (like <a href="https://github.com/slatedocs/slate">Slate</a>).</p>
+<p>So if you have a site with API docs, you probably reference to it from time in your other documents:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method `GET /user/authenticate`.</span>
 </code></pre></div>
 
-
-<p>You want references to these methods in your documentation to be replaced with the links to the actual method descriptions. Your references look like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method `GET user/authenticate`.</span>
-</code></pre></div>
-
-
-<p>Now all you need to do is add the apilinks preprocessor into your foliant.yml and state your API url in its options like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<p>We thought, how cool it'd be if this fragment: <strong>`GET /user/authenticate`</strong> automatically transformed into link to this method description on your API docs website. That's what APILinks is for.</p>
+<p>Add it to your preprocessor list like this if your API docs is a Slate-like static website:</p>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">My-API</span><span class="p">:</span>
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs</span>
 </code></pre></div>
 
+<p>Or like this if your API docs is a Swagger UI website:</p>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs</span>
+                <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api-docs/swagger.json</span>
+</code></pre></div>
 
 <p>Here:</p>
 <ul>
 <li><code>API</code> is a required section;</li>
 <li><code>My-API</code> is a local name of your API. Right now it is not very important but will come in handy in the next example;</li>
-<li><code>url</code> is a string with full url to your API documentation web-page. It will be used to validate references and to construct a link to method.</li>
+<li><code>url</code> is a string with full url to your API documentation web-page. It will be used to validate references and to construct a link to method;</li>
+<li><code>spec_url</code> is a string with full url to OpenAPI specification file, which will be used to construct the proper anchor for the method.</li>
 </ul>
 <p>After foliant applies the preprocessor your document will be transformed into this:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method [GET user/authenticate](http://example.com/api-docs/#get-user-authenticate).</span>
 </code></pre></div>
 
-
 <p>Notice that preprocessor figured out the correct anchor <code>#get-user-authenticate</code> by himself. Now instead of plain name of the method you've got a link to the method description!</p>
 <p>Ok, what if I have two different APIs: client API and admin API?</p>
 <p>No problem, put both of them into your config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">Client-API</span><span class="p">:</span>
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/client/api-docs</span>
             <span class="nt">Admin-API</span><span class="p">:</span>
                 <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs</span>
+                <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/admin/api-docs/swagger.yml</span>
 </code></pre></div>
-
 
 <p>Now this source:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method `GET user/authenticate`.</span>
 <span class="err">To ban user from the website use admin API method `POST admin/ban_user/{user_id}`</span>
 </code></pre></div>
 
-
 <p>Will be transformed by apilinks into this:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">To authenticate user use API method [GET user/authenticate](http://example.com/client/api-docs/#get-user-authenticate).</span>
-<span class="err">To ban user from the website use admin API method [POST admin/ban_user/{user_id}](http://example.com/admin/api-docs/#post-admin-ban_user-user_id)</span>
+<span class="err">To ban user from the website use admin API method [POST admin/ban_user/{user_id}](http://example.com/admin/api-docs/#/user/banUser)</span>
 </code></pre></div>
 
-
-<p>Notice that apilinks determined that the first reference is from Client API, and the second one is from the Admin API. How is that possible? Easy: preprocessor parses each API url from the config and stores their methods before looking for references. When the time comes to process the references it already has a list of all methods to validate your reference and to determine which API link should be inserted.</p>
+<p>Notice that apilinks determined that the first reference is from Client API, and the second one is from the Admin API. How is that possible? Preprocessor parses each API url from the config and stores their methods before looking for references. When the time comes to process the references it already has a list of all methods to validate your reference and to determine which API link should be inserted.</p>
 <p>But what if we have the same-named method in both of our APIs? In this case you will see a warning:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">WARNING</span><span class="o">:</span> <span class="n">GET</span> <span class="sr">/service/</span><span class="n">healthcheck</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="n">several</span> <span class="n">APIs</span> <span class="o">(</span><span class="n">Client</span><span class="o">-</span><span class="n">API</span><span class="o">,</span> <span class="n">Admin</span><span class="o">-</span><span class="n">API</span><span class="o">).</span> <span class="n">Please</span><span class="o">,</span> <span class="n">use</span> <span class="n">prefix</span><span class="o">.</span> <span class="n">Skipping</span>
 </code></pre></div>
-
 
 <p>It suggests us to use prefix, and by that it means to prefix the reference by the local name of the API in config. Like that:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Check status of the server through Client API: `Client-API: GET /service/healthcheck`</span>
 <span class="err">Do the same through Admin API: `Admin-API: GET /service/healthcheck`</span>
 </code></pre></div>
-
 
 <p>Here <code>Client-API:</code> and <code>Admin-API:</code> are prefixes. And they should be the same as your API names in the config.</p>
 <p>Now each reference will be replaced with the link to corresponding API web-page.</p>
@@ -1587,17 +1614,19 @@
 <p><strong>In offline mode</strong> it merely replaces <em>references</em> to API methods with links to their description. The references are catched by a regular expression. The link url is taken from config and the link <em>anchor</em> is generated from the reference automatically.</p>
 <p>You can have several different APIs stated in the config. You can use prefixes to point out which API is being <em>reference</em>d. Prefixes format may be customized  in the configuration but by default you do it like this: <code>Client-API: GET user/name</code>. Here '<em>Client-API</em>' is a prefix.</p>
 <p>If you don't use prefix in the <em>reference</em> preprocessor will suppose that you meant the default API, which is marked by <code>default</code> option in config. If none of them is marked — goes for the first in list.</p>
-<p><strong>In online mode</strong> things are getting interesting. Preprocessor actually goes to each of the API web-pages, and collects all method <strong>headers</strong> (right now only <code>h2</code> headers are supported). Then it goes through your document's source: when it meets a <em>reference</em>, it looks through all the collected methods and replaces the reference with the correct link to it. If method is not found — preprocessor will show warning and leave the reference unchanged. Same will happen if there are several methods with this name in different APIs.</p>
+<blockquote>
+<p>Note, that Swagger UI API websites won't work in offline mode at all, because we need to download the spec file (swagger.json) to figure out the proper anchor to a method description.</p>
+</blockquote>
+<p><strong>In online mode</strong> things are getting interesting. Preprocessor actually goes to each of the API web-pages, and collects all method <strong>headers</strong>. Then it goes through your document's source: when it meets a <em>reference</em>, it looks through all the collected methods and replaces the reference with the correct link to it. If method is not found — preprocessor will show a warning and leave the reference unchanged. Same will happen if there are several methods with this name in different APIs.</p>
 <p>Prefixes, explained before, are supported too.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>apilinks</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apilinks</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a lot of options. For your convenience the required options are marked <em>(required)</em>; and those options which are used in customization are marked <em>(optional)</em>. Most likely you will need just one or two of the latter.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
     <span class="nt">targets</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
@@ -1616,12 +1645,17 @@
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
             <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+            <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
         <span class="nt">Admin-API</span><span class="p">:</span>
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
             <span class="nt">endpoint-prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v0</span>
+            <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aglio</span>
+        <span class="nt">Internal-API</span><span class="p">:</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui</span>
+            <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui/swagger.json</span>
+            <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>prefix_to_ignore</code></dt>
@@ -1650,7 +1684,6 @@ Default:</dd>
 <div class="codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </code></pre></div>
 
-
 <dl>
 <dt><code>only_with_prefixes</code></dt>
 <dd><em>(optional)</em> if this is <code>true</code>, only <em>references</em> with prefix will be transformed. Ordinary links like <code>GET user/info</code> will be ignored. Default: <code>false</code></dd>
@@ -1671,17 +1704,21 @@ Default:</dd>
 <dl>
 <dt><code>url</code></dt>
 <dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method. In online mode it will also be parsed by preprocessor for validation.</dd>
+<dt><code>spec_url</code></dt>
+<dd><em>(optional)</em> Url to OpenAPI specification file. If this is parameter is present, APILinks assumes that your API documentation web-page is Swagger UI. It will download and parse the specification file and generate anchors for SwaggerUI, which are usually <code>#/&lt;tag&gt;/operationId</code>.</dd>
 <dt><code>default</code></dt>
 <dd><em>(optional)</em> Only for offline mode. Marker to define the default API. If several APIs are marked default, preprocessor will choose the first of them. If none is marked default — the first API in the list will be chosen. The value of this item should be <code>true</code>.</dd>
 <dt><code>header_template</code></dt>
 <dd><em>(optional)</em> A template string describing the format of the headings in the API documentation web-page. Details in <strong>parsing API web-page</strong> section. Default: <code>'{verb} {command}'</code></dd>
 <dt><code>endpoint-prefix</code></dt>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — apilinks can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info coming soon. Default: <code>''</code></dd>
+<dt><code>site_backend</code></dt>
+<dd><em>(optional)</em> Name of the static site generator, which built your API documentation website. This affects how headers are converted to anchors. Default: <code>slate</code>. Available options: <code>aglio</code>, <code>mkdocs</code>, <code>slate</code>, <code>swagger</code>.</dd>
 </dl>
 <h3 id="online-and-offline-modes-comparison">Online and Offline Modes Comparison<a class="headerlink" href="#online-and-offline-modes-comparison" title="Permanent link">&para;</a></h3>
 <p>Let's study an example and look how the behavior of the preprocessor will change in online and offline modes.</p>
 <p>We have three APIs described in the config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
       <span class="nt">API</span><span class="p">:</span>
         <span class="nt">Admin-API</span><span class="p">:</span>
@@ -1695,24 +1732,20 @@ Default:</dd>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
 </code></pre></div>
 
-
 <p>Now let's look at different examples of the text used in Markdown source and how it is going to be transformed in Offline and Online modes</p>
 <p><strong>Example 1</strong>
 Source:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Unprefixed link which only exists in Remote API: `GET system/info`.</span>
 </code></pre></div>
 
-
 <p>In <em>Offline mode</em> preprocessor won't do any checks and just replace the reference with the link to default API from the config:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Unprefixed link which only exists in Remote API: [GET system/info](http://example.com/api/client/#get-system-info).</span>
 </code></pre></div>
-
 
 <p>This is certainly a wrong decision, but it is our fault, we sould have added the prefix to the reference.</p>
 <p>But let's look what will happen in <em>Online mode</em>:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Unprefixed link which only exists in Remote API: [GET system/info](https://remote.net/api-ref/#system-info).</span>
 </code></pre></div>
-
 
 <p>Without any prefix the preprocessor determined that it should choose the Remote API to replace this reference because this method exists only on its page. The <code>default</code> option is just ignored in this mode.</p>
 <p>By the way, notice how anchors differ in the two examples. For Remote API preprocessor used its header template to reconstruct the anchor, dropping the verb from it.</p>
@@ -1722,90 +1755,74 @@ Source:</p>
 <span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </code></pre></div>
 
-
 <p>In <em>Offline mode</em> preprocessor won't do any checks again. No magic, the reference will be replaced with the link to default API from the config:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Unprefixed link with misprint: [GET user/sttus](http://example.com/api/client/#get-user-sttus).</span>
 <span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </code></pre></div>
-
 
 <p>In <em>Online mode</em> preprocessor won't be able to find the method during validation and the reference won't be replaced at all:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Unprefixed link with misprint: `GET user/sttus`.</span>
 <span class="err">The link is incorrect, there&#39;s no such method in any of the APIs.</span>
 </code></pre></div>
 
-
 <p>During the Foliant project assembly you will see a warning message:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">WARNING</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">method</span> <span class="n">GET</span> <span class="n">user</span><span class="o">/</span><span class="n">sttus</span><span class="o">.</span> <span class="n">Skipping</span>
 </code></pre></div>
-
 
 <p><strong>Example 3</strong>
 Source:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Admin API: `Admin-API: POST user/ban_forever`.</span>
 </code></pre></div>
 
-
 <p>In <em>Offline mode</em> preprocessor will notice the prefix and will be able to replace the reference with an appropriate link:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Admin API: [POST user/ban_forever](http://example.com/api/client/#post-user-ban_forever).</span>
 </code></pre></div>
-
 
 <p>Notice that prefix disappeared from the text. If you wish it to stay there — edit the <code>output_template</code> option to something like this: <code>'{prefix}: {verb} {command}'</code>.</p>
 <p>In <em>Online mode</em> the result will be exactly the same. Preprocessor will check the Admin-API methods, find there the referenced method and replace it in the text:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Admin API: [POST user/ban_forever](http://example.com/api/client/#post-user-ban_forever).</span>
 </code></pre></div>
 
-
 <p><strong>Example 4</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Remote API with a misprint: `Remote-API: GET billling/info`.</span>
 <span class="err">Oh no, the method is incorrect again.</span>
 </code></pre></div>
-
 
 <p>In <em>Offline mode</em> preprocessor will perform no checks and just replace the reference with the link to Remote API:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Remote API with a misprint: [GET billling/info](https://remote.net/api-ref/#get-billling-info).</span>
 <span class="err">Oh no, the method is incorrect again.</span>
 </code></pre></div>
 
-
 <p><em>Online mode</em>, on the other hand, will make its homework. It will check whether the Remote API actually has the method <em>GET billling/info</em>. Finding out that it hasn't it will leave the reference unchanged:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Prefixed link to the Remote API with a misprint: `Remote-API: GET billling/info`.</span>
 <span class="err">Oh no, the method is incorrect again.</span>
 </code></pre></div>
 
-
 <p>...and warn us with the message:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">WARNING</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">method</span> <span class="n">GET</span> <span class="n">billling</span><span class="o">/</span><span class="n">info</span> <span class="k">in</span> <span class="n">Remote</span><span class="o">-</span><span class="n">API</span><span class="o">.</span> <span class="n">Skipping</span>
 </code></pre></div>
-
 
 <p><strong>Example 5</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: `GET service/healthcheck`.</span>
 </code></pre></div>
 
-
 <p>In <em>Offline mode</em> preprocessor will just replace the reference with a link to default API:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: [GET service/healthcheck](http://example.com/api/client/#get-service-healthcheck).</span>
 </code></pre></div>
-
 
 <p>But in <em>Online mode</em> preprocessor will go through all API method lists. It will find several mentions of this exact method and, confused, won't replace the reference at all:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">Now let&#39;s reference a method which is present in both Client and Admin APIs: `GET service/healthcheck`.</span>
 </code></pre></div>
 
-
 <p>You will also see a warning:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">WARNING</span><span class="o">:</span> <span class="n">GET</span> <span class="sr">/service/</span><span class="n">healthcheck</span> <span class="k">is</span> <span class="n">present</span> <span class="k">in</span> <span class="n">several</span> <span class="n">APIs</span> <span class="o">(</span><span class="n">Admin</span><span class="o">-</span><span class="n">API</span><span class="o">,</span> <span class="n">Client</span><span class="o">-</span><span class="n">API</span><span class="o">).</span> <span class="n">Please</span><span class="o">,</span> <span class="n">use</span> <span class="n">prefix</span><span class="o">.</span> <span class="n">Skipping</span>
 </code></pre></div>
 
-
 <h3 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h3>
 <p>apilinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
 <p>The default reg-ex is as following:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
+<div class="re codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </code></pre></div>
-
 
 <p>This expression accepts references like these:</p>
 <ul>
@@ -1848,12 +1865,11 @@ Source:</p>
 </table>
 <p>To redefine the regular expression add an option <code>reg-regex</code> to the preprocessor config.</p>
 <p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
       <span class="nt">reference</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="s">&#39;(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`)&#39;</span>
 </code></pre></div>
-
 
 <blockquote>
 <p>This example is for illustrative purposes only. You can achieve the same goal by just switching on the <code>only_with_prefixes</code> option.</p>
@@ -1863,12 +1879,11 @@ Source:</p>
 <p>You can customize the <em>output</em>-string which will replace the <em>reference</em> string. To do that add a template into your config-file.</p>
 <p>A <em>template</em> is a string which may contain properties, surrounded by curly braces. These properties will be replaced with the values, and all the rest will remain unchanged.</p>
 <p>For example, look at the default template:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
     <span class="nt">reference</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span>
 </code></pre></div>
-
 
 <blockquote>
 <p>Don't forget the single quotes around the template. This way we say to yaml engine that this is a string for it not to be confused with curly braces.</p>
@@ -1876,7 +1891,6 @@ Source:</p>
 <p>With the default template, the reference string will be replaced by something like that:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">[GET user/info](http://example.com/api/#get-user-info)</span>
 </code></pre></div>
-
 
 <p>If you don't want references to be transfromed into links, use your own template. Properties you may use in the template:</p>
 <table>
@@ -1924,9 +1938,8 @@ Source:</p>
 <p>apilinks goes through the API web-page content and gathers all the methods which are described there.</p>
 <p>To do this preprocessor scans each HTML <code>h2</code> tag and stores its <code>id</code> attribute (which is an <em>anchor</em> of the link to be constructed) and the contents of the tag (the <em>heading</em> itself).</p>
 <p>For example in this link:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <p>the anchor would be <code>get-user-info</code> and the heading would be <code>GET user/info</code>.</p>
 <p>To construct the link to the method description we will have to create the correct anchor for it. To create an anchor we would need to reconstruct the heading first. But the heading format may be arbitrary and that's why we need the <code>header_template</code> config option.</p>
@@ -1935,15 +1948,13 @@ Source:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">&quot;method-user-info-get&quot;</span><span class="nt">&gt;</span>Method user/info (GET)<span class="nt">&lt;/h2&gt;</span>
 </code></pre></div>
 
-
 <p>You should use the following option:</p>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">API</span><span class="p">:</span>
     <span class="nt">Client-API</span><span class="p">:</span>
         <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;Method</span><span class="nv"> </span><span class="s">{command}</span><span class="nv"> </span><span class="s">({verb})&#39;</span>
 <span class="nn">...</span>
 </code></pre></div>
-
 
 <blockquote>
 <p>Don't forget the single quotes around the template. This way we say to yaml engine that this is a string.</p>
@@ -1952,15 +1963,13 @@ Source:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">&quot;user-info&quot;</span><span class="nt">&gt;</span>user/info<span class="nt">&lt;/h2&gt;</span>
 </code></pre></div>
 
-
 <p>You should use the following option:</p>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">API</span><span class="p">:</span>
     <span class="nt">Client-API</span><span class="p">:</span>
         <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
 <span class="nn">...</span>
 </code></pre></div>
-
 
 <p>Properties you may use in the template:</p>
 <table>

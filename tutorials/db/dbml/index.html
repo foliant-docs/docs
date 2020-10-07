@@ -1458,7 +1458,6 @@
 <span class="nl">Ref</span><span class="p">:</span> <span class="n">posts</span><span class="p">.</span><span class="n">user_id</span> <span class="o">&gt;</span> <span class="n">users</span><span class="p">.</span><span class="kt">id</span> <span class="c1">// many-to-one</span>
 </code></pre></div>
 
-
 <p>As you may have noticed, DBML also has tools to document pieces of you schema using <em>notes</em> (<code>body text [note: 'Content of the post']</code>) and comments (<code>Ref: posts.user_id &gt; users.id // many-to-one</code>).</p>
 <p>So how can we convert DBML schema descriptions into a human-readible document? The idea is pretty simple: we parse the DBML definitions and pass them to a Jinja template, which renders markdown for us. After that we use one of our backends (we will use <a href="../../../backends/slate/#slate">Slate</a> in this tutorial) to build a static site out of it.</p>
 <p>We won’t need to do it all manually, of course, we just need to configure Foliant to do that for us.</p>
@@ -1466,20 +1465,18 @@
 <p>If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <a href="../../full_docker/#working-with-full-foliant-docker-image">Full Foliant Docker image</a>, you don’t need to do that, just go to the next stage.</p>
 <p>First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <a href="../../../installation/#installation">installation guide</a>.</p>
 <p>Next, let’s install <a href="../../../cli/init/#init">Foliant Init</a> to facilitate the task of creating new project:</p>
-<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
+<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
 </code></pre></div>
-
 
 <p>Install DBMLDoc and PlantUML preprocessors, and the Slate backend:</p>
-<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbmldoc foliantcontrib.slate, foliantcontrib.plantuml
+<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbmldoc foliantcontrib.slate, foliantcontrib.plantuml
 </code></pre></div>
-
 
 <p>We are going to use <a href="../../../backends/slate/#slate">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
 <p>Finally, <a href="https://plantuml.com/ru/starting">install PlantUML</a>, we will need it to draw database scheme.</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
 <p>Let’s create a Foliant project for our experiments. <code>cd</code> into the directory where you want your project created and run the <code>init</code> command:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ foliant init
 Enter the project name: Database Docs
 Generating project... Done
@@ -1489,9 +1486,8 @@ Project <span class="s2">&quot;Database Docs&quot;</span> created in database-do
 $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
-
 <p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template/">Foliant Project template</a> repository:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ mkdir database-docs
 $ git clone https://github.com/foliant-docs/foliant_project_template.git database-docs
 Cloning into <span class="s1">&#39;database-docs&#39;</span>...
@@ -1503,15 +1499,13 @@ Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span cla
 $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
-
 <p>Next, let’s download the sample DBML spec and save it into file <code>schema.dbml</code> in the root your Foliant project:</p>
-<div class="codehilite"><pre><span></span><code>$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
+<div class="bash codehilite"><pre><span></span><code>$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
 </code></pre></div>
-
 
 <h2 id="setting-up-project">Setting up project<a class="headerlink" href="#setting-up-project" title="Permanent link">&para;</a></h2>
 <p>Now it’s time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
-<div class="codehilite"><pre><span></span><code>title: Database Docs
+<div class="diff codehilite"><pre><span></span><code>title: Database Docs
 
 chapters:
   - index.md
@@ -1523,7 +1517,6 @@ chapters:
 <span class="gi">+</span>
 </code></pre></div>
 
-
 <p>We’ve added the PlantUML and DBMLDoc preprocessors to the pipeline and specified path to our DBML sample schema. DBMLDoc will parse our schema and convert it into Markdown, plantuml will draw the visual diagram of our DB schema.</p>
 <blockquote>
 <p>Note: if plantuml is not available under <code>$ plantuml</code> in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
@@ -1532,13 +1525,12 @@ chapters:
       plantuml_path: /usr/bin/plantuml.jar</code></p>
 </blockquote>
 <p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let’s put it in there. Open <code>src/index.md</code> and make it look like this:</p>
-<div class="codehilite"><pre><span></span><code># Welcome to Database Docs
+<div class="diff codehilite"><pre><span></span><code># Welcome to Database Docs
 
 <span class="gd">-Your content goes here.</span>
 <span class="gi">+&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</span>
 <span class="gi">+</span>
 </code></pre></div>
-
 
 <h2 id="building-site">Building site<a class="headerlink" href="#building-site" title="Permanent link">&para;</a></h2>
 <p>All preparations done, let’s build our site:</p>
@@ -1554,11 +1546,9 @@ Making site... Done
 Result: Database_Docs-2020-06-03.slate/
 </code></pre></div>
 
-
 <p>If you are using Docker, the command is:</p>
 <div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site -w slate
 </code></pre></div>
-
 
 <p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you’ve got:</p>
 <p><img alt="" src="../img/dbml.png" /></p>

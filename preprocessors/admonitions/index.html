@@ -1474,16 +1474,14 @@
 <p>Admonitions are decorated fragments of text which indicate a warning, notice, tip, etc.</p>
 <p>We use <a href="https://python-markdown.github.io/extensions/admonition/">rST-style syntax for admonitions</a> which is already supported by mkdocs backend with <code>admonition</code> extension turned on. This preprocessor makes this syntax work for pandoc and slate backends.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.admonitions
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.admonitions
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Just add <code>admonitions</code> into your preprocessors list. Right now the preprocessor doesn't have any options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonitions</span>
 </code></pre></div>
-
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add an admonition to your Markdown file:</p>
@@ -1493,7 +1491,6 @@
     <span class="n">May</span> <span class="n">be</span> <span class="n">several</span> <span class="n">paragraphs</span><span class="p">.</span>
 </code></pre></div>
 
-
 <p>Currently supported backends:</p>
 <ul>
 <li><code>pandoc</code></li>
@@ -1501,13 +1498,12 @@
 <li><code>slate</code></li>
 </ul>
 <p>* for admonitions to work in mkdocs, add <code>admonition</code> to the <code>markdown_extensions</code> section of your mkdocs.yml config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">mkdocs</span><span class="p">:</span>
         <span class="nt">mkdocs.yml</span><span class="p">:</span>
             <span class="nt">markdown_extensions</span><span class="p">:</span>
                 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
 </code></pre></div>
-
 
 <h4 id="notes-for-slate">Notes for slate<a class="headerlink" href="#notes-for-slate" title="Permanent link">&para;</a></h4>
 <p>Slate has its own admonitions syntax of three types: <code>notice</code> (blue notes), <code>warning</code> (red warnings) and <code>success</code> (green notes). If another type is supplied, slate draws a blue note but without the "i" icon.</p>

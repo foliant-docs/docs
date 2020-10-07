@@ -1479,9 +1479,8 @@
 <p>Also, before the replacement, EscapeCode normalizes the source Markdown content to unify and simplify further operations. The preprocessor replaces <code>CRLF</code> with <code>LF</code>, removes excessive whitespace characters, provides trailing newline, etc.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>To install EscapeCode and UnescapeCode preprocessors, run:</p>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.escapecode
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.escapecode
 </code></pre></div>
-
 
 <p>See more details below.</p>
 <h3 id="integration-with-foliant-and-includes">Integration with Foliant and Includes<a class="headerlink" href="#integration-with-foliant-and-includes" title="Permanent link">&para;</a></h3>
@@ -1493,9 +1492,8 @@
 <span class="err">&gt;    The preprocessor _unescape is a part of Foliant core. It allows to use pseudo-XML tags in code examples. If you want an opening tag not to be interpreted by any preprocessor, precede this tag with the `&lt;` character. The preprocessor _unescape applies after all other preprocessors and removes such characters.</span>
 </code></pre></div>
 
-
 <p>Config example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 
 <span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
@@ -1510,7 +1508,6 @@
 <span class="nn">...</span>
 </code></pre></div>
 
-
 <p>If the <code>escape_code</code> option isn’t used or set to <code>false</code>, backward compatibility mode is involved. In this mode EscapeCode and UnescapeCode aren’t applied automatically, but _unescape preprocessor is applied.</p>
 <p>In more complicated case, you may pass some custom options to EscapeCode preprocessor:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">escape_code</span><span class="o">:</span>
@@ -1518,20 +1515,18 @@
         <span class="o">...</span>
 </code></pre></div>
 
-
 <p>Custom options available in EscapeCode since version 1.0.2. Foliant core supports passing custom options to EscapeCode preprocessor as the value of <code>escape_code.options</code> parameter since version 1.0.11. Options are described below.</p>
 <p>The Python package that includes EscapeCode and UnescapeCode preprocessors is the dependence of Includes preprocessor since version 1.1.1. At the same time this package isn’t a dependence of Foliant core. To use <code>escape_code</code> config option in Foliant core, you have to install the package with EscapeCode and UnescapeCode preprocessors separately.</p>
 <h3 id="explicit-enabling">Explicit Enabling<a class="headerlink" href="#explicit-enabling" title="Permanent link">&para;</a></h3>
 <p>You may not want to use the <code>escape_code</code> option and call the preprocessors explicitly:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">escapecode</span>      <span class="c1"># usually the first list item</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">unescapecode</span>    <span class="c1"># usually the last list item</span>
 </code></pre></div>
 
-
 <p>Both preprocessors allow to override the path to the directory that is used to store temporary files:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">escapecode</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1539,13 +1534,12 @@
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span>
 </code></pre></div>
 
-
 <p>The default values are shown in this example. EscapeCode and related UnescapeCode must work with the same cache directory.</p>
 <p>Note that if you use Includes preprocessor, and the included content doesn’t belong to the current Foliant project, there’s no way to escape raw parts of this content before Includes preprocessor is applied.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Since version 1.0.2, EscapeCode preprocessor supports the option <code>actions</code> in additional to <code>cache_dir</code>.</p>
 <p>The value of <code>actions</code> options should be a list of acceptable actions. By default, the following list is used:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
     <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>
@@ -1553,9 +1547,8 @@
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">inline_code</span>
 </code></pre></div>
 
-
 <p>This default list may be overridden. For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
     <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>
@@ -1565,7 +1558,6 @@
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seqdiag</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">comments</span>
 </code></pre></div>
-
 
 <p>Meanings of parameters:</p>
 <ul>
@@ -1606,7 +1598,6 @@
     <span class="nb">int</span> <span class="mi">21</span><span class="n">h</span><span class="p">;</span>
 </code></pre></div>
 
-
 <p>The preprocessor EscapeCode with default behavior will do the following replacements:</p>
 <div class="codehilite"><pre><span></span><code># Heading
 
@@ -1624,7 +1615,6 @@ And this is a pre code block:
 
 <span class="err">&lt;</span><span class="nt">&lt;escaped</span> <span class="na">hash=</span><span class="s">&quot;a1e51c9ad3da841d393533f1522ab17e&quot;</span><span class="nt">&gt;&lt;/escaped&gt;</span>
 </code></pre></div>
-
 
 <p>Escaped content parts will be saved into files located in the cache directory. The names of the files correspond the values of the <code>hash</code> attributes. For example, that’s the content of the file <code>15e1e46a75ef29eb760f392bb2df4ebb.md</code>:</p>
 <div class="codehilite"><pre><span></span><code><span class="sb">``</span><span class="err">`</span><span class="n">python</span>

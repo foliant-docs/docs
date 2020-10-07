@@ -1410,13 +1410,12 @@
 <p><include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Installation" to_heading="Config Extension to Resolve the <code>!from</code> Tag"></include></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>To enable the preprocessor, add <code>repolink</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">repolink</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">repolink</span><span class="p">:</span>
         <span class="nt">repo_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs/</span>
         <span class="nt">edit_uri</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/blob/master/src/</span>
@@ -1428,7 +1427,6 @@
         <span class="nt">targets</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>repo_url</code></dt>

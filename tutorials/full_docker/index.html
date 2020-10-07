@@ -1392,9 +1392,8 @@
 <p>Internally Foliant is not an independent documentation builder, which does everything itself, but rather an orchestrator of different tools. Foliant configures and runs them under the hood as a part of its pipeline, saving you the need to run them yourself. Of course, that’s not all Foliant does, it has a lot to offer in terms of text processing itself, but many preprocessors and almost all backends use external tools in one way or another.</p>
 <p>That was our goal from the beginning: why build your own static site generator if there are already such beautiful libraries like MkDocs or Slate? Why spend a year on creating your own Markdown to PDF generator if Pandoc has already perfected this craft? And if you are not satisfied with Pandoc, you can plug into Foliant something else, like MdToPdf. This approach comes with some disadvantages though. Let me illustrate that with an example.</p>
 <p>One of the popular ways to use Foliant is to build a static site with <a href="../api/#documenting-api-with-foliant">API documetnation</a>. After making all necessary configuration you just run the command:</p>
-<div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
+<div class="bash codehilite"><pre><span></span><code>$ foliant make site -w slate
 </code></pre></div>
-
 
 <p>...and get a folder with a generated static site.</p>
 <p>While the command is pretty simple, internally Foliant will do the following:</p>
@@ -1435,7 +1434,7 @@
 <p>Now that we’ve got Docker, we can create our test project.</p>
 <p>Clone somewhere on your machine the <a href="https://github.com/foliant-docs/foliant_project_template">Foliant Project template</a>. It’s an empty Foliant project with the required file and directory structure. It also includes necessary Docker configs.</p>
 <p>Open your terminal and <code>cd</code> to the directory with the cloned project template. You should see the following directory structure</p>
-<div class="codehilite"><pre><span></span><code>$ tree
+<div class="bash codehilite"><pre><span></span><code>$ tree
 .
 ├── Dockerfile
 ├── README.md
@@ -1445,9 +1444,8 @@
     └── index.md
 </code></pre></div>
 
-
 <p>Now let’s build the Docker image:</p>
-<div class="codehilite"><pre><span></span><code>$ docker-compose build
+<div class="bash codehilite"><pre><span></span><code>$ docker-compose build
 Building foliant
 Step <span class="m">1</span>/1 : FROM foliant/foliant:full
 full: Pulling from foliant/foliant
@@ -1462,12 +1460,11 @@ Successfully built 51f465b95411
 Successfully tagged test_foliant:latest
 </code></pre></div>
 
-
 <blockquote>
 <p>You will need to run this command every time after updating the image or editing <code>Dockerfile</code>. But you don’t need to run it again if you edited any Foliant-related files, including source Markdown files or <code>foliant.yml</code>.</p>
 </blockquote>
 <p>All preparations are done! Now let’s build a site with MkDocs to test it out.</p>
-<div class="codehilite"><pre><span></span><code>docker-compose run --rm foliant make site -w mkdocs
+<div class="bash codehilite"><pre><span></span><code>docker-compose run --rm foliant make site -w mkdocs
 Creating network <span class="s2">&quot;test_default&quot;</span> with the default driver
 Parsing config... Done
 Applying preprocessor mkdocs... Done
@@ -1477,7 +1474,6 @@ Making site with MkDocs... Done
 Result: New_Foliant_Project-2020-06-04.mkdocs
 </code></pre></div>
 
-
 <blockquote>
 <p>We used the <code>-w</code> option to tell Foliant that we want MkDocs backend to build our site. Full Foliant image contains many different backends, and several of them are capable of building <code>site</code> target. Without <code>-w</code> option Foliant will just ask you which backend to use.</p>
 </blockquote>
@@ -1485,7 +1481,7 @@ Result: New_Foliant_Project-2020-06-04.mkdocs
 <p><img alt="" src="../img/docker_mkdocs.jpg" /></p>
 <p>That means, it worked. Now you have all power of Foliant at your disposal!</p>
 <p>One last thing: we keep developing Foliant and release new versions of different preprocessors almost every week, so make sure to update the Docker image every once in a while. To do this, run the command:</p>
-<div class="codehilite"><pre><span></span><code>$ docker pull foliant/foliant:full
+<div class="bash codehilite"><pre><span></span><code>$ docker pull foliant/foliant:full
 </code></pre></div>
                 
                   

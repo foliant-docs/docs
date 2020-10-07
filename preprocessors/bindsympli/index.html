@@ -1448,19 +1448,17 @@
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>Before using BindSympli, you need to install <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a>, <a href="https://www.gnu.org/software/wget/">wget</a>, and <a href="https://imagemagick.org/">ImageMagick</a>.</p>
 <p>BindSympli preprocessor code is written in Python, but it uses the external script written in JavaScript. This script is provided in BindSympli package:</p>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.bindsympli
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.bindsympli
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>bindsympli</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bindsympli</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">bindsympli</span><span class="p">:</span>
         <span class="nt">get_sympli_img_urls_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">get_sympli_img_urls.js</span>
         <span class="nt">wget_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wget</span>
@@ -1471,7 +1469,6 @@
         <span class="nt">image_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">800</span>
         <span class="nt">max_attempts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>get_sympli_img_urls_path</code></dt>
@@ -1493,11 +1490,10 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a design layout image from Sympli into your documentation, use <code>&lt;sympli&gt;...&lt;/sympli&gt;</code> tags in Markdown source:</p>
-<div class="codehilite"><pre><span></span><code>Here’s an image from Sympli:
+<div class="markdown codehilite"><pre><span></span><code>Here’s an image from Sympli:
 
 <span class="nt">&lt;sympli</span> <span class="na">caption=</span><span class="s">&quot;An optional caption&quot;</span> <span class="na">width=</span><span class="s">&quot;400&quot;</span> <span class="na">url=</span><span class="s">&quot;https://app.sympli.io/app#!/designs/0123456789abcdef01234567/specs/assets&quot;</span><span class="nt">&gt;&lt;/sympli&gt;</span>
 </code></pre></div>
-
 
 <p>You have to specify the URL of Sympli design layout page in <code>url</code> attribute.</p>
 <p>You may specify an optional caption in the <code>caption</code> attribute, and an optional custom image width in the <code>width</code> attribute. The <code>width</code> attribute overrides the <code>image_width</code> config option for a certain image.</p>

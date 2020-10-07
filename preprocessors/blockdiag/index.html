@@ -1446,19 +1446,17 @@
 <h2 id="blockdiag-preprocessor-for-foliant">Blockdiag Preprocessor for Foliant<a class="headerlink" href="#blockdiag-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p><a href="http://blockdiag.com/">Blockdiag</a> is a tool to generate diagrams from plain text. This preprocessor finds diagram definitions in the source and converts them into images on the fly during project build. It supports all Blockdiag flavors: blockdiag, seqdiag, actdiag, and nwdiag.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.blockdiag
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.blockdiag
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>blockdiag</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">blockdiag</span><span class="p">:</span>
       <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
       <span class="nt">blockdiag_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
@@ -1468,7 +1466,6 @@
       <span class="nt">params</span><span class="p">:</span>
         <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>cache_dir</code></dt>
@@ -1491,13 +1488,12 @@
 <span class="c">        font: !path Anonymous_pro.ttf</span>
 </code></pre></div>
 
-
 <p>To see the full list of params, run <code>blockdiag -h</code>.</p>
 </dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;blockdiag&gt;...&lt;/blockdiag&gt;</code>, <code>&lt;seqdiag&gt;...&lt;/seqdiag&gt;</code>, <code>&lt;actdiag&gt;...&lt;/actdiag&gt;</code>, or <code>&lt;nwdiag&gt;...&lt;/nwdiag&gt;</code> tags (indentation inside tags is optional):</p>
-<div class="codehilite"><pre><span></span><code>Here&#39;s a block diagram:
+<div class="markdown codehilite"><pre><span></span><code>Here&#39;s a block diagram:
 
 <span class="nt">&lt;blockdiag&gt;</span>
   blockdiag {
@@ -1520,9 +1516,8 @@ Here&#39;s a sequence diagram:
 <span class="err">&lt;/seqdiag</span><span class="nt">&gt;</span>
 </code></pre></div>
 
-
 <p>To set a caption, use <code>caption</code> option:</p>
-<div class="codehilite"><pre><span></span><code>Diagram with a caption:
+<div class="markdown codehilite"><pre><span></span><code>Diagram with a caption:
 
 <span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;Sample diagram from the official site&quot;</span><span class="nt">&gt;</span>
   blockdiag {
@@ -1532,9 +1527,8 @@ Here&#39;s a sequence diagram:
 <span class="nt">&lt;/blockdiag&gt;</span>
 </code></pre></div>
 
-
 <p>You can override <code>params</code> values from the preprocessor config for each diagram:</p>
-<div class="codehilite"><pre><span></span><code>By default, diagrams are in png. But this diagram is in svg:
+<div class="markdown codehilite"><pre><span></span><code>By default, diagrams are in png. But this diagram is in svg:
 
 <span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;High-quality diagram&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
   blockdiag {

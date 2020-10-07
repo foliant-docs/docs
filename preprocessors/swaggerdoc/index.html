@@ -1498,28 +1498,25 @@
                 <h1 id="swaggerdoc">SwaggerDoc<a class="headerlink" href="#swaggerdoc" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.swaggerdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.swaggerdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.swaggerdoc.svg?label=GitHub" /></a></p>
 <h2 id="swagger-api-docs-generator-for-foliant">Swagger API Docs Generator for Foliant<a class="headerlink" href="#swagger-api-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../_img_a1a92dc8-07f2-11eb-931b-0242ac120002/swagger_a1aa974e-07f2-11eb-931b-0242ac120002.png" /></p>
+<p><img alt="" src="../../_img_25d5cda4-0870-11eb-9491-0242ac120002/swagger_25d796a2-0870-11eb-9491-0242ac120002.png" /></p>
 <p><em>The static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with SwaggerDoc preprocessor</em></p>
 <p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">Widdershins</a> for generating Markdown from swagger spec files.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.swaggerdoc
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.swaggerdoc
 </code></pre></div>
-
 
 <p>This preprocessor requires <a href="https://github.com/Mermade/widdershins">Widdershins</a> to be installed on your system (unless you are using <a href="https://foliant-docs.github.io/docs/tutorials/full_docker/">Foliant with Full Docker Image</a>):</p>
 <div class="codehilite"><pre><span></span><code><span class="err">npm install -g widdershins</span>
 </code></pre></div>
 
-
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>swaggerdoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">swaggerdoc</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
         <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/swagger.json</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
@@ -1528,7 +1525,6 @@
         <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.j2</span>
         <span class="nt">environment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">env.yaml</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>spec_url</code></dt>
@@ -1556,17 +1552,16 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> tag at the position in the document where the generated documentation should be inserted:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="markdown codehilite"><pre><span></span><code># Introduction
 
 This document contains the automatically generated documentation of our API.
 
 <span class="nt">&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</span>
 </code></pre></div>
 
-
 <p>Each time the preprocessor encounters the tag <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to Swagger spec file are taken from foliant.yml.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="markdown codehilite"><pre><span></span><code># Introduction
 
 Introduction text for API documentation.
 
@@ -1581,7 +1576,6 @@ Introduction text for API documentation.
 <span class="nt">&lt;/swaggerdoc&gt;</span>
 </code></pre></div>
 
-
 <p>Tag parameters have the highest priority.</p>
 <p>This way you can have documentation from several different Swagger spec files in one foliant project (even in one md-file if you like it so).</p>
 <h3 id="customizing-output">Customizing output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h3>
@@ -1592,13 +1586,12 @@ Introduction text for API documentation.
 <li>Save the modified templates somewhere near your foliant project.</li>
 <li>Specify the path to modified templates in the <code>user_templates</code> field of the <code>environment</code> configuration. For example, like this:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
         <span class="nt">environment</span><span class="p">:</span>
             <span class="nt">user_templates</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">./widdershins_templates/</span>
 </code></pre></div>
-
 
 <h4 id="jinja">Jinja<a class="headerlink" href="#jinja" title="Permanent link">&para;</a></h4>
 <blockquote>

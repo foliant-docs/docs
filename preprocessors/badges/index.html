@@ -1460,19 +1460,17 @@
 <h2 id="badges_1">Badges<a class="headerlink" href="#badges_1" title="Permanent link">&para;</a></h2>
 <p>Preprocessor for Foliant which helps to add badges to your documents. It uses <a href="https://shields.io">Shields.io</a> to generate badges.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.badges
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.badges
 </code></pre></div>
-
 
 <h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
 <p>To enable the preprocessor, add <code>badges</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">badges</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
         <span class="nt">server</span><span class="p">:</span> <span class="s">&#39;https://img.shields.io&#39;</span>
         <span class="nt">as_object</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1484,7 +1482,6 @@
         <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flat-square</span>
         <span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jira</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>server</code></dt>
@@ -1507,20 +1504,17 @@
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;badge&gt;</span>jira/issue/https/issues.apache.org/jira/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>
 </code></pre></div>
 
-
 <p>All options from config may be overriden in tag parameters:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;badge</span> <span class="na">style=</span><span class="s">&quot;social&quot;</span> <span class="na">as_object=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>jira/issue/https/issues.apache.org/jira/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>
 </code></pre></div>
 
-
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>You can use variables in your badges to replace parts which repeat often. For example, if we need to add many badges to our Jira tracker, we may put the protocol and host parameters into a variable like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
         <span class="nt">vars</span><span class="p">:</span>
             <span class="nt">jira</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https/issues.apache.org/jira</span>
 </code></pre></div>
-
 
 <p>To reference a variable in a badge path use syntax <code>${variable}</code>:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;badge&gt;</span>jira/issue/<span class="cp">${</span><span class="n">jira</span><span class="cp">}</span>/kafka-2896.svg<span class="nt">&lt;/badge&gt;</span>

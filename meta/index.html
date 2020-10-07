@@ -1552,28 +1552,25 @@
                 <h1 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h1>
 <p>This extension adds metadata support for Foliant. It also allows to add meta commands which use project's metadata and are called like this: <code>foliant meta &lt;command&gt;</code>. Finally, it adds the <code>meta generate</code> command to Foliant, which generates the yaml-file with project metadata.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.meta
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.meta
 </code></pre></div>
-
 
 <h2 id="specifying-metadata">Specifying metadata<a class="headerlink" href="#specifying-metadata" title="Permanent link">&para;</a></h2>
 <p>Metadata for the <em>main section</em> (more on sections in <strong>User's Guide</strong> below) may be specified in the beginning of a Markdown-file using <a href="http://www.yaml.org/spec/1.2/spec.html#id2760395">YAML Front Matter</a> format:</p>
-<div class="codehilite"><pre><span></span><code><span class="nn">---</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MAIN_DOC</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Description of the product</span>
 <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
 <span class="nn">---</span>
 </code></pre></div>
 
-
 <p>You may also use regular XML-like format with <code>meta</code> tag:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
+<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
     <span class="na">id</span><span class="o">=</span><span class="s">&quot;MAIN_DOC&quot;</span>
     <span class="na">title</span><span class="o">=</span><span class="s">&quot;Description of the product&quot;</span>
     <span class="na">key</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
 </code></pre></div>
-
 
 <blockquote>
 <p>If <code>meta</code> tag is present, all Metadata from YAML Front Matter is ignored.</p>
@@ -1613,21 +1610,19 @@
 <p><strong>load_meta(chapters: list, md_root: str or PosixPath = 'src') -&gt; Meta</strong></p>
 <p>This function collects metadata and returns a <code>Meta</code> object, which gives access to all sections and meta-fields in the project.</p>
 <p>The required parameter is <code>chapters</code> — list of chaters loaded from foliant.yml</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">foliant.meta.generate</span> <span class="kn">import</span> <span class="n">load_meta</span>
+<div class="python codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">foliant.meta.generate</span> <span class="kn">import</span> <span class="n">load_meta</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">load_meta</span><span class="p">([</span><span class="s1">&#39;index.md&#39;</span><span class="p">])</span>
 </code></pre></div>
-
 
 <p>You can also specify the <code>md_root</code> parameter. If your tool is a CLI extension, <code>md_root</code> should point to the project's <code>src</code> dir. But if you are building a preprocessor or a backend, you would probably want to point it to the <code>__folianttmp__</code> dir with the current state of the sources.</p>
 <h3 id="the-meta-class">The Meta class<a class="headerlink" href="#the-meta-class" title="Permanent link">&para;</a></h3>
 <p>Meta class holds all metadata and offers few handy methods to work with it.</p>
 <p><strong>load_meta_from_file(filename: str or PosixPath)</strong></p>
 <p>This method allows you to load meta into the Meta class instance from previously generated yaml-file. Use it only with empty Meta class:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">foliant.meta.classes</span> <span class="kn">import</span> <span class="n">Meta</span>
+<div class="python codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">foliant.meta.classes</span> <span class="kn">import</span> <span class="n">Meta</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">Meta</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">meta</span><span class="o">.</span><span class="n">load_meta_from_file</span><span class="p">(</span><span class="s1">&#39;meta.yml&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p><strong>iter_sections()</strong></p>
 <p>This method returns an iterator which yields project's meta-sections (<code>Section</code> objects) in the proper order from the first chapter to the last one.</p>

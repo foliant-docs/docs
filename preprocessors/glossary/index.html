@@ -1460,25 +1460,22 @@
 <h2 id="glossary-collector-for-foliant">Glossary collector for Foliant<a class="headerlink" href="#glossary-collector-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Glossary preprocessor collects terms and definitions from the files stated and inserts them to specified places of the document.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.glossary
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.glossary
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>glossary</code> to <code>preprocessors</code> section in the project config.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options (default values stated below):</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">glossary</span><span class="p">:</span>
         <span class="nt">term_definitions</span><span class="p">:</span> <span class="s">&#39;term_definitions.md&#39;</span>
         <span class="nt">definition_mark</span><span class="p">:</span> <span class="s">&#39;:</span><span class="nv">   </span><span class="s">&#39;</span>
         <span class="nt">files_to_process</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>term_definitions</code></dt>
@@ -1492,7 +1489,7 @@
 <p>Just add the preprocessor to the project config, set it up and enjoy the automatically collected glossary in your document.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p><strong>foliant.yml</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">text.md</span>
 
@@ -1502,7 +1499,6 @@
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
 <span class="nn">...</span>
 </code></pre></div>
-
 
 <p><strong>term_definitions.md</strong></p>
 <div class="codehilite"><pre><span></span><code># Glossary
@@ -1515,7 +1511,6 @@
     $https://git.repo/repo_name_2$src/glossary_2.md
 <span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <p><strong>glossary_1.md</strong> from <strong>repo_1</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Glossary</span>
@@ -1533,7 +1528,6 @@
 <span class="p">:</span>   <span class="n">Definition</span> <span class="mi">3</span>
 </code></pre></div>
 
-
 <p><strong>glossary_2.md</strong> from <strong>repo_2</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Glossary</span>
 
@@ -1550,7 +1544,6 @@
 <span class="p">:</span>   <span class="n">Definition</span> <span class="mi">5</span>
 </code></pre></div>
 
-
 <p><strong>text.md</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Main</span> <span class="n">chapter</span>
 
@@ -1564,7 +1557,6 @@
 
 <span class="p">:</span>   <span class="n">Term</span> <span class="mi">2</span>
 </code></pre></div>
-
 
 <p><strong>__all__.md</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Main</span> <span class="n">chapter</span>

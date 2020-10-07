@@ -1448,19 +1448,17 @@
 <p>The preprocessor uses <a href="https://www.figma.com/developers/api">Figma REST API</a> to get URLs of images to download. To use the preprocessor, you should get an <a href="https://www.figma.com/developers/api#access-tokens">access token</a> for it via your Figma account.</p>
 <p>If you need to resize downloaded images, you should install <a href="https://imagemagick.org/">ImageMagick</a>.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.bindfigma
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.bindfigma
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>bindfigma</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bindfigma</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">bindfigma</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.bindfigmacache</span>
         <span class="nt">api_caching</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disabled</span>
@@ -1479,7 +1477,6 @@
         <span class="nt">use_absolute_bounds</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
         <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
 </code></pre></div>
-
 
 <p>Some values of options specified in the project config may be overridden by tag attributes, see below.</p>
 <dl>
@@ -1508,11 +1505,10 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a design layout image from Figma into your documentation, use <code>&lt;figma&gt;...&lt;/figma&gt;</code> tags in Markdown source:</p>
-<div class="codehilite"><pre><span></span><code>Here’s an image from Figma:
+<div class="markdown codehilite"><pre><span></span><code>Here’s an image from Figma:
 
 <span class="nt">&lt;figma</span> <span class="na">caption=</span><span class="s">&quot;An optional caption&quot;</span> <span class="na">resize=</span><span class="s">&quot;300&quot;</span> <span class="na">file_key=</span><span class="s">&quot;ABC&quot;</span> <span class="na">ids=</span><span class="s">&quot;node1,node2,node3&quot;</span><span class="nt">&gt;&lt;/figma&gt;</span>
 </code></pre></div>
-
 
 <p>You may use tag attributes to override the values of the project config options with the same names. All the options excepting <code>cache_dir</code>, <code>api_caching</code> and <code>convert_path</code> may be overridden in this way.</p>
 <p>BindFigma preprocessor will replace such statements with local image references. If <code>ids</code> refers to more than one image, a set of image references will be generated. Multiple image references will be separated with the string specified as <code>multi_delimeter</code>.</p>

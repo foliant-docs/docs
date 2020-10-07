@@ -1462,31 +1462,27 @@
 <p>raml2html uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templating system.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>First install <code>raml2html</code> and the markdown theme:</p>
-<div class="codehilite"><pre><span></span><code>$ npm install -g raml2html raml2html-full-markdown-theme
+<div class="bash codehilite"><pre><span></span><code>$ npm install -g raml2html raml2html-full-markdown-theme
 </code></pre></div>
-
 
 <p>Then install the preprocessor:</p>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.ramldoc
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.ramldoc
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>ramldoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ramldoc</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">ramldoc</span><span class="p">:</span>
         <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/my_api.raml</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.raml</span>
         <span class="nt">template_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">custom_templates</span>
         <span class="nt">raml2html_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">raml2html</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>spec_url</code></dt>
@@ -1512,7 +1508,6 @@ This document contains the automatically generated documentation of our API.
 <span class="nt">&lt;ramldoc&gt;&lt;/ramldoc&gt;</span>
 </code></pre></div>
 
-
 <p>Each time the preprocessor encounters the tag <code>&lt;ramldoc&gt;&lt;/ramldoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to RAML spec file are taken from foliant.yml.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
 <div class="codehilite"><pre><span></span><code># Introduction
@@ -1523,7 +1518,6 @@ Introduction text for API documentation.
          <span class="na">template_dir=</span><span class="s">&quot;assets/templates&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/ramldoc&gt;</span>
 </code></pre></div>
-
 
 <p>Tag parameters have the highest priority.</p>
 <p>This way you can have documentation from several different RAML spec files in one Foliant project (even in one md-file if you like it so).</p>

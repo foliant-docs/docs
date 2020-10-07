@@ -1526,19 +1526,17 @@
 <h2 id="includes-for-foliant">Includes for Foliant<a class="headerlink" href="#includes-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Includes preprocessor lets you reuse parts of other documents in your Foliant project sources. It can include from files on your local machine and remote Git repositories. You can include entire documents as well as parts between particular headings, removing or normalizing included headings on the way.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.includes
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.includes
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor with default options, add <code>includes</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
 </code></pre></div>
 
-
 <p>The preprocessor has a number of options:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.includescache</span>
         <span class="nt">recursive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1548,7 +1546,6 @@
         <span class="nt">aliases</span><span class="p">:</span>
             <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>cache_dir</code></dt>
@@ -1577,13 +1574,11 @@
 <span class="err">        baz: https://github.com/foo/far.git#develop</span>
 </code></pre></div>
 
-
 <p>you can include the content of <code>doc.md</code> files from these repositories using the following syntax:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;include&gt;</span>$foo$path/to/doc.md<span class="nt">&lt;/include&gt;</span>
 
 <span class="nt">&lt;include&gt;</span>$baz#master$path/to/doc.md<span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <p>Note that in the second example the default revision (<code>develop</code>) will be overridden with the custom one (<code>master</code>).</p>
 </dd>
@@ -1597,26 +1592,23 @@
 <h4 id="the-new-syntax">The New Syntax<a class="headerlink" href="#the-new-syntax" title="Permanent link">&para;</a></h4>
 <p>To enforce using the new syntax rules, put no content between <code>&lt;include&gt;...&lt;/include&gt;</code> tags, and specify a local file or a file in a remote Git repository in tag attributes.</p>
 <p>To include a local file, use the <code>src</code> attribute:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from another document.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from another document.
 
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;path/to/another/document.md&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>To include a file from a remote Git repository, use the <code>repo_url</code> and <code>path</code> attributes:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from a remote repository.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from a remote repository.
 
 <span class="nt">&lt;include</span> <span class="na">repo_url=</span><span class="s">&quot;https://github.com/foo/bar.git&quot;</span> <span class="na">path=</span><span class="s">&quot;path/to/doc.md&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>You have to specify the full remote repository URL in the <code>repo_url</code> attribute, aliases are not supported here.</p>
 <p>Optional branch or revision can be specified in the <code>revision</code> attribute:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from a remote repository on branch develop.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from a remote repository on branch develop.
 
 <span class="nt">&lt;include</span> <span class="na">repo_url=</span><span class="s">&quot;https://github.com/foo/bar.git&quot;</span> <span class="na">revision=</span><span class="s">&quot;develop&quot;</span> <span class="na">path=</span><span class="s">&quot;path/to/doc.md&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <h5 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h5>
 <dl>
@@ -1655,7 +1647,6 @@
 <span class="nt">&lt;anchor&gt;</span>one_more_custom_id<span class="nt">&lt;/anchor&gt;</span>
 </code></pre></div>
 
-
 <p>Here <code>Some Heading {#custom_id}</code> is the full content of the heading, <code>custom_id</code> is its ID, and <code>one_more_custom_id</code> is the ID of the anchor.</p>
 </dd>
 <dt><code>wrap_code</code></dt>
@@ -1673,7 +1664,6 @@
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;other.md&quot;</span> <span class="na">sethead=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
 
-
 </dd>
 <dt><code>nohead</code></dt>
 <dd>
@@ -1682,7 +1672,6 @@
 
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;other.md&quot;</span> <span class="na">from_heading=</span><span class="s">&quot;Original Heading&quot;</span> <span class="na">nohead=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <p>Default is <code>false</code>.</p>
 <p>By default, the starting heading is included to the output, and the ending heading is not. Starting and ending anchors are never included into the output.</p>
@@ -1699,53 +1688,47 @@
 </dd>
 </dl>
 <p>Different options can be combined. For example, use both <code>sethead</code> and <code>nohead</code> if you need to include a section with a custom heading:</p>
-<div class="codehilite"><pre><span></span><code># My Custom Heading
+<div class="markdown codehilite"><pre><span></span><code># My Custom Heading
 
 <span class="nt">&lt;include</span> <span class="na">src=</span><span class="s">&quot;other.md&quot;</span> <span class="na">from_heading=</span><span class="s">&quot;Original Heading&quot;</span> <span class="na">sethead=</span><span class="s">&quot;1&quot;</span> <span class="na">nohead=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <h4 id="the-legacy-syntax">The Legacy Syntax<a class="headerlink" href="#the-legacy-syntax" title="Permanent link">&para;</a></h4>
 <p>This syntax was the only supported in the preprocessor up to version 1.0.11. It’s weird and cryptic, you had to memorize strange rules about <code>$</code>, <code>#</code> and stuff. The new syntax described above is much cleaner.</p>
 <p>The legacy syntax is kept for backward compatibility. To use it, put the reference to the included file between <code>&lt;include&gt;...&lt;/include&gt;</code> tags.</p>
 <p>Local path example:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from another document.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from another document.
 
 <span class="nt">&lt;include&gt;</span>path/to/another/document.md<span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>The path may be either relative to currently processed Markdown file or absolute.</p>
 <p>To include a document from a remote Git repository, put its URL between <code>$</code>s before the document path:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from a remote repository.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from a remote repository.
 
 <span class="nt">&lt;include&gt;</span>
     $https://github.com/foo/bar.git$path/to/doc.md
 <span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>If the repository alias is defined in the project config, you can use it instead of the URL:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
     <span class="nt">aliases</span><span class="p">:</span>
         <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foo/bar.git</span>
 </code></pre></div>
 
-
 <p>And then in the source:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;include&gt;</span>$foo$path/to/doc.md<span class="nt">&lt;/include&gt;</span>
+<div class="markdown codehilite"><pre><span></span><code><span class="nt">&lt;include&gt;</span>$foo$path/to/doc.md<span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>You can also specify a particular branch or revision:</p>
-<div class="codehilite"><pre><span></span><code>Text below is taken from a remote repository on branch develop.
+<div class="markdown codehilite"><pre><span></span><code>Text below is taken from a remote repository on branch develop.
 
 <span class="nt">&lt;include&gt;</span>$foo#develop$path/to/doc.md<span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
 
-
 <p>To include a part of a document between two headings, use the <code>#Start:Finish</code> syntax after the file path:</p>
-<div class="codehilite"><pre><span></span><code>Include content from “Intro” up to “Credits”:
+<div class="markdown codehilite"><pre><span></span><code>Include content from “Intro” up to “Credits”:
 
 <span class="nt">&lt;include&gt;</span>sample.md#Intro:Credits<span class="nt">&lt;/include&gt;</span>
 
@@ -1757,7 +1740,6 @@ Include content from “Intro” up to the next heading of the same level:
 
 <span class="nt">&lt;include&gt;</span>sample.md#Intro<span class="nt">&lt;/include&gt;</span>
 </code></pre></div>
-
 
 <p>In the legacy syntax, problems may occur with the use of <code>$</code>, <code>#</code>, and <code>:</code> characters in filenames and headings, since these characters may be interpreted as delimeters.</p>
                 

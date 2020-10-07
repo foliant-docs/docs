@@ -1408,9 +1408,8 @@
 <h2 id="the-principles">The principles<a class="headerlink" href="#the-principles" title="Permanent link">&para;</a></h2>
 <p>Generally, we want to keep our docs as close to the code as possible. When documenting source code we usually can utilize the power of Swagger to generate docs from comments in the sources. Since there’s no Swagger for databases, we had to invent something similar.</p>
 <p>We are going to add actual descriptions of the tables and fields using <em>comments</em>. Comment (not to be confused with SQL script <code>--comments</code>) is a special entity which in one way or another is present in most DBMSs. They don’t affect the data or table structure, they are only used for documentation purposes. You can add a comment like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">COMMENT</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="ss">&quot;Clients&quot;</span> <span class="k">IS</span> <span class="ss">&quot;Table holding info about the clients&quot;</span>
+<div class="sql codehilite"><pre><span></span><code><span class="k">COMMENT</span> <span class="k">ON</span> <span class="k">TABLE</span> <span class="ss">&quot;Clients&quot;</span> <span class="k">IS</span> <span class="ss">&quot;Table holding info about the clients&quot;</span>
 </code></pre></div>
-
 
 <p>After describing all your entities inside your database, we need to get all this data somehow. For this, we will use Foliant <a href="../../../preprocessors/dbdoc/#dbdoc">DBDoc preprocessor</a>. It queries the database to get its structure (including our comments) and converts it into Markdown. We can then use this Markdown to generate a static site for our documentation.</p>
 <h2 id="the-tutorials">The tutorials<a class="headerlink" href="#the-tutorials" title="Permanent link">&para;</a></h2>

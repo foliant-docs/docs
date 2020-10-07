@@ -1430,13 +1430,12 @@
                 <h1 id="runcommands">RunCommands<a class="headerlink" href="#runcommands" title="Permanent link">&para;</a></h1>
 <p>RunCommands is a preprocessor that allows to execute a sequence of arbitrary external commands.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.runcommands
+<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.runcommands
 </code></pre></div>
-
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>runcommands</code> to <code>preprocessors</code> section in the project config, and specify the commands to run:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">runcommands</span><span class="p">:</span>
         <span class="nt">commands</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">./build.sh</span>
@@ -1447,7 +1446,6 @@
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>commands</code></dt>

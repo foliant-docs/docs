@@ -1475,13 +1475,12 @@
 <p>Important notice! We have some problems with displaying an exclamation mark in the image links, so they are replaced with <code>(leading_exclamation_mark_here)</code> phrase in the text.</p>
 </blockquote>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.testrail
+<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.testrail
 </code></pre></div>
-
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>testrail</code> to <code>preprocessors</code> section in the project config. The preprocessor has a number of options (best values are set by default where possible):</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span>
     <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span>
@@ -1522,7 +1521,6 @@
     <span class="nt">print_case_structure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                              \\ For debugging</span>
 </code></pre></div>
 
-
 <dl>
 <dt><code>testrail_url</code></dt>
 <dd>URL of TestRail deployed.</dd>
@@ -1550,7 +1548,7 @@
 <dt><code>filename</code></dt>
 <dd>Path to the test cases file. It should be added to project chapters in <em>foliant.yml</em>. Default: <em>test_cases.md</em>. For example:</dd>
 </dl>
-<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
 
 <span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
@@ -1566,7 +1564,6 @@
     <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>
     <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>rewrite_src_files</code></dt>
@@ -1596,7 +1593,6 @@
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-
 
 <p>You can use all parameters of two variables in the template — <em>case</em> and <em>params</em>. Case parameters depends on TestRail template. All custom parameters have prefix 'custom_' before system name set in TestRail.</p>
 <p>Here is an example of <em>case</em> variable (parameters depends on case template):</p>
@@ -1637,7 +1633,6 @@
 <span class="err">}</span>
 </code></pre></div>
 
-
 <p>And here is an example of <em>params</em> variable (parameters are always the same):</p>
 <div class="codehilite"><pre><span></span><code><span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
     <span class="err">&#39;</span><span class="n">multi_param_name</span><span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">platform</span><span class="err">&#39;</span><span class="p">,</span>
@@ -1661,7 +1656,6 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>img_folder</code></dt>
@@ -1695,7 +1689,6 @@
 <span class="p">(</span><span class="n">leading_exclamation_mark_here</span><span class="p">)[</span><span class="n">Result</span><span class="p">](</span><span class="n">index</span><span class="p">.</span><span class="n">php</span><span class="o">?/</span><span class="n">attachments</span><span class="o">/</span><span class="n">get</span><span class="o">/</span><span class="mi">743</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Minimal <em>multilinetables</em> and <em>anchors</em> preprocessor settings in <code>foliant.yml</code> should be like this (more about <em>multilinetables</em> parameters see in <a href="https://foliant-docs.github.io/docs/preprocessors/multilinetables/">preprocessor documentation</a>):</p>
 <div class="codehilite"><pre><span></span><code><span class="err">    - anchors</span>
 <span class="err">    - multilinetables:</span>
@@ -1704,16 +1697,14 @@
 <span class="err">        convert_to_grid: true</span>
 </code></pre></div>
 
-
 <p>After <em>testrail</em> preprocessor process this test case, you will have <code>params['links_to_images']</code> parameter with list of image links in order of appearance to use in jinja template:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">[</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="p p-Indicator">[</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;740&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Button](testrail_imgs/740.png)&#39;</span><span class="p p-Indicator">},</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;741&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Dialog</span><span class="nv"> </span><span class="s">box](testrail_imgs/741.png)&#39;</span><span class="p p-Indicator">},</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;742&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[List</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">options](testrail_imgs/742.png)&#39;</span><span class="p p-Indicator">},</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;743&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Result](testrail_imgs/743.png)&#39;</span><span class="p p-Indicator">}</span>
 <span class="p p-Indicator">]</span>
 </code></pre></div>
-
 
 <p>Using this jinja template:</p>
 <div class="codehilite"><pre><span></span><code>**Testing procedure:**
@@ -1735,7 +1726,6 @@
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 </code></pre></div>
-
 
 <p>The markdown result will be:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">**</span><span class="n">Testing</span> <span class="nl">procedure</span><span class="p">:</span><span class="o">**</span>
@@ -1772,7 +1762,6 @@
 <span class="p">(</span><span class="n">leading_exclamation_mark_here</span><span class="p">)[</span><span class="n">Result</span><span class="p">](</span><span class="n">testrail_imgs</span><span class="o">/</span><span class="mf">743.</span><span class="n">png</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>So you can use links in the table to go to the correspondent image.</p>
 <blockquote>
 <p><strong>Important!</strong> Anchors must differ, so if one image (with the same image id) will appear in several test cases, this image will be downloaded separately for each appearance and renamed with postfix '-1', '-2', etc.</p>
@@ -1803,14 +1792,13 @@
 <dt><code>multi_param_select</code></dt>
 <dd>Here you can set the platforms for which you want to get test cases (case insensitive). For example, you have similar UX for mobile platforms and want to combine them:</dd>
 </dl>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">multi_param_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">platforms</span>
     <span class="nt">multi_param_select</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">android, ios</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>multi_param_select_type</code></dt>
@@ -1979,13 +1967,12 @@
 <dt><code>choose_priorities</code></dt>
 <dd>Here you can set test case priorities to download (case insensitive).</dd>
 </dl>
-<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">choose_priorities</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">critical, high, medium</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
-
 
 <dl>
 <dt><code>add_priority_to_case_header</code></dt>
@@ -2018,27 +2005,22 @@
 <span class="err">└── ...</span>
 </code></pre></div>
 
-
 <p><em>images</em> folder used for projects without platforms.</p>
 <p>Filename ending is a first value of <em>multi_param_select</em> parameter (<em>platform</em>). Now to add screenshot to your document just add following string to the test case (unfortunately, in TestRail interface it will looks like broken image link):</p>
 <div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="o">!</span><span class="p">)[</span><span class="n">Image</span> <span class="n">title</span><span class="p">](</span><span class="n">main_filename_part</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Preprocessor will convert to the following format:</p>
 <div class="codehilite"><pre><span></span><code><span class="c">https://gitlab.url/gitlab_group_name/gitlab_project_name/raw/master/images/platform_name/main_filename_part_platform_name.png</span>
 </code></pre></div>
-
 
 <p>For example, in the project with <em>multi_param_select: smarttv</em> the string</p>
 <div class="codehilite"><pre><span></span><code><span class="err">(leading exclamation mark here!)[Application main screen](main_screen)</span>
 </code></pre></div>
 
-
 <p>will be converted to:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">(leading exclamation mark here!)[Application main screen](https://gitlab.url/documentation/application-screenshots/raw/master/images/smarttv/main_screen_smarttv.png)</span>
 </code></pre></div>
-
 
 <p>That's it.</p>
 <dl>

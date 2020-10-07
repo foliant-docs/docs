@@ -1439,20 +1439,18 @@
 <p>First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <a href="../../full_docker/#working-with-full-foliant-docker-image">Full Docker image</a>, you don’t need to do anything, you can skip to the next stage.</p>
 <p>First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <a href="../../../installation/#installation">installation guide</a>.</p>
 <p>Next, let’s install <a href="../../../cli/init/#init">Foliant Init</a> to facilitate the task of creating new project:</p>
-<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
+<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
 </code></pre></div>
-
 
 <p>Install DBDoc and PlantUML preprocessors, and the Slate backend:</p>
-<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbdoc foliantcontrib.slate, foliantcontrib.plantuml
+<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbdoc foliantcontrib.slate, foliantcontrib.plantuml
 </code></pre></div>
-
 
 <p>We are going to use <a href="https://github.com/slatedocs/slate/">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
 <p><a href="https://plantuml.com/ru/starting">Install PlantUML</a>, we will need it to draw the database scheme.</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
 <p>Let’s create a Foliant project for our experiments. <code>cd</code> to the directory where you want your project created and run the <code>init</code> command:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ foliant init
 Enter the project name: Database Docs
 Generating project... Done
@@ -1462,9 +1460,8 @@ Project <span class="s2">&quot;Database Docs&quot;</span> created in database-do
 $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
-
 <p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template/">Foliant Project template</a> repository:</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ mkdir database-docs
 $ git clone https://github.com/foliant-docs/foliant_project_template.git database-docs
 Cloning into <span class="s1">&#39;database-docs&#39;</span>...
@@ -1476,10 +1473,9 @@ Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span cla
 $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
-
 <h2 id="setting-up-project">Setting up project<a class="headerlink" href="#setting-up-project" title="Permanent link">&para;</a></h2>
 <p>Now it’s time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
-<div class="codehilite"><pre><span></span><code>title: Database Docs
+<div class="diff codehilite"><pre><span></span><code>title: Database Docs
 
 chapters:
   - index.md
@@ -1495,24 +1491,21 @@ chapters:
 <span class="gi">+</span>
 </code></pre></div>
 
-
 <p>Make sure to use proper credentials for your PostgreSQL database. If you are running Foliant from docker, you can use <code>host: host.docker.internal</code> to access <code>localhost</code> from docker.</p>
 <blockquote>
 <p>Note: if plantuml is not available under <code>$ plantuml</code> in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>  <span class="p p-Indicator">-</span> <span class="nt">plantuml</span><span class="p">:</span>
+<div class="yaml codehilite"><pre><span></span><code>  <span class="p p-Indicator">-</span> <span class="nt">plantuml</span><span class="p">:</span>
       <span class="nt">plantuml_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/bin/plantuml.jar</span>
 </code></pre></div>
 
-
 <p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let’s put it in there. Open <code>src/index.md</code> and make it look like this:</p>
-<div class="codehilite"><pre><span></span><code># Welcome to Database Docs
+<div class="diff codehilite"><pre><span></span><code># Welcome to Database Docs
 
 <span class="gd">-Your content goes here.</span>
 <span class="gi">+&lt;dbdoc&gt;&lt;/dbdoc&gt;</span>
 <span class="gi">+</span>
 </code></pre></div>
-
 
 <p>If you are using Docker, you will also need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this <a href="https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile">Dockerfile by Sergey Makinen</a>. Copy all commands starting from the third line into your <code>Dockerfile</code> and run <code>docker-compose build</code> to rebuild the image.</p>
 <h2 id="building-site">Building site<a class="headerlink" href="#building-site" title="Permanent link">&para;</a></h2>
@@ -1529,11 +1522,9 @@ Making site... Done
 Result: Database_Docs-2020-06-03.slate/
 </code></pre></div>
 
-
 <p>If you are using Docker, the command is:</p>
 <div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site -w slate
 </code></pre></div>
-
 
 <p>Now open <code>Database_Docs-2020-06-03.slate/index.html</code> and look what you’ve got:</p>
 <p><img alt="" src="../img/oracle.png" /></p>
