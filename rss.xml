@@ -7,6 +7,22 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.superlinks 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#ddad8e5d32cf33956b7506a44da2e9d5</guid>
+            <pubDate>Thu, 08 Oct 2020 13:13:04 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>If tag body it empty, superlinks will try to guess the right caption of the link:<ul>
+<li>referenced title for links by title,</li>
+<li>meta section title for links by meta section,</li>
+<li>heading title for links by CustomIDs,</li>
+<li>title from config or first heading title in the file for links to file,</li>
+<li>anchor name for links by anchors.</li>
+</ul>
+</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.apilinks 1.2.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#f34d7ccc45fedc22e2ec90786c7523d8</guid>

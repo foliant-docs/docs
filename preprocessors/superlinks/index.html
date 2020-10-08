@@ -1529,6 +1529,14 @@
 <dt><code>id</code></dt>
 <dd>Just a hardcoded id. No magic here.</dd>
 </dl>
+<p>The body of the <code>link</code> tag is your link caption. If the body is empty, SuperLinks will try to guess the right caption:</p>
+<ul>
+<li>referenced title for links by title,</li>
+<li>meta section title for links by meta section,</li>
+<li>heading title for links by CustomIDs,</li>
+<li>title from config or first heading title in the file for links to file,</li>
+<li>anchor name for links by anchors.</li>
+</ul>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p><strong>Reference a title in the same document</strong></p>
 <div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;My title&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
