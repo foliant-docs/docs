@@ -1479,7 +1479,7 @@
 <p>Also, before the replacement, EscapeCode normalizes the source Markdown content to unify and simplify further operations. The preprocessor replaces <code>CRLF</code> with <code>LF</code>, removes excessive whitespace characters, provides trailing newline, etc.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>To install EscapeCode and UnescapeCode preprocessors, run:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.escapecode
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.escapecode
 </code></pre></div>
 
 <p>See more details below.</p>
@@ -1493,7 +1493,7 @@
 </code></pre></div>
 
 <p>Config example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 
 <span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
@@ -1519,14 +1519,14 @@
 <p>The Python package that includes EscapeCode and UnescapeCode preprocessors is the dependence of Includes preprocessor since version 1.1.1. At the same time this package isn’t a dependence of Foliant core. To use <code>escape_code</code> config option in Foliant core, you have to install the package with EscapeCode and UnescapeCode preprocessors separately.</p>
 <h3 id="explicit-enabling">Explicit Enabling<a class="headerlink" href="#explicit-enabling" title="Permanent link">&para;</a></h3>
 <p>You may not want to use the <code>escape_code</code> option and call the preprocessors explicitly:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">escapecode</span>      <span class="c1"># usually the first list item</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">unescapecode</span>    <span class="c1"># usually the last list item</span>
 </code></pre></div>
 
 <p>Both preprocessors allow to override the path to the directory that is used to store temporary files:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">escapecode</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1539,7 +1539,7 @@
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Since version 1.0.2, EscapeCode preprocessor supports the option <code>actions</code> in additional to <code>cache_dir</code>.</p>
 <p>The value of <code>actions</code> options should be a list of acceptable actions. By default, the following list is used:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
     <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>
@@ -1548,7 +1548,7 @@
 </code></pre></div>
 
 <p>This default list may be overridden. For example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
     <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>

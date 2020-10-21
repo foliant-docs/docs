@@ -1446,17 +1446,17 @@
 <h2 id="graphviz-diagrams-preprocessor-for-foliant">Graphviz Diagrams Preprocessor for Foliant<a class="headerlink" href="#graphviz-diagrams-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p><a href="http://plantuml.com/">Graphviz</a> is an open source graph visualization tool. This preprocessor converts Graphviz diagram definitions in the source and converts them into images on the fly during project build.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.graphviz
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.graphviz
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>graphviz</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">graphviz</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">graphviz</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
         <span class="nt">graphviz_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dot</span>
@@ -1497,7 +1497,7 @@
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;graphviz&gt;...&lt;/graphviz&gt;</code> tags:</p>
-<div class="markdown codehilite"><pre><span></span><code>Here’s a diagram:
+<div class="codehilite"><pre><span></span><code>Here’s a diagram:
 
 <span class="nt">&lt;graphviz&gt;</span>
     a -&gt; b
@@ -1509,7 +1509,7 @@
 <blockquote>
 <p>If <code>src</code> tag option is supplied, tag body is ignored. Diagram source is loaded from external file.</p>
 </blockquote>
-<div class="markdown codehilite"><pre><span></span><code>Diagram with a caption:
+<div class="codehilite"><pre><span></span><code>Diagram with a caption:
 
 <span class="nt">&lt;graphviz</span> <span class="na">caption=</span><span class="s">&quot;Deployment diagram&quot;</span>
            <span class="na">params=</span><span class="s">&quot;Earrowsize: 0.5&quot;</span>

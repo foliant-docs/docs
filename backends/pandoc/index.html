@@ -592,6 +592,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#build-modes" class="md-nav__link">
+    Build modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -1445,6 +1452,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#build-modes" class="md-nav__link">
+    Build modes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     Troubleshooting
   </a>
@@ -1502,44 +1516,45 @@
 <p><a href="http://pandoc.org/">Pandoc</a> is a Swiss-army knife document converter. It converts almost any format to any other format: md to pdf, rst to html, adoc to docx, and so on and so on.</p>
 <p>Pandoc backend for Foliant add <code>pdf</code>, <code>docx</code>, and <code>tex</code> targets.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.pandoc
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.pandoc
 </code></pre></div>
 
 <p>You also need to install Pandoc and TeXLive distribution for your platform.</p>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Build pdf:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant make pdf -p my-project
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making pdf with Pandoc
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf -p my-project
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making pdf with Pandoc... Done
 ─────────────────────
-Result: My_Project-2017-12-04.pdf
+Result: My_Project-2020-12-04.pdf
 </code></pre></div>
 
 <p>Build docx:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant make docx -p my-project
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making docx with Pandoc
+<div class="codehilite"><pre><span></span><code>$ foliant make docx -p my-project
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making docx with Pandoc... Done
 ─────────────────────
-Result: My_Project-2017-12-04.docx
+Result: My_Project-2020-12-04.docx
 </code></pre></div>
 
 <p>Build tex (mostly for pdf debugging):</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant make tex -p my-project
-✔ Parsing config
-✔ Applying preprocessor flatten
-✔ Making docx with Pandoc
+<div class="codehilite"><pre><span></span><code>$ foliant make tex -p my-project
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making docx with Pandoc... Done
 ─────────────────────
-Result: My_Project-2017-12-04.tex
+Result: My_Project-2020-12-04.tex
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use Pandoc backend. If it's installed, Foliant will detect it.</p>
 <p>You can however customize the backend with options in <code>backend_config.pandoc</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">pandoc</span><span class="p">:</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+    <span class="nt">build_whole_project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template.tex</span>
     <span class="nt">vars</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1557,6 +1572,8 @@ Result: My_Project-2017-12-04.tex
 <dl>
 <dt><code>pandoc_path</code></dt>
 <dd>is the path to <code>pandoc</code> executable. By default, it's assumed to be in the <code>PATH</code>.</dd>
+<dt><code>build_whole_project</code></dt>
+<dd><em>added in 1.1.0</em> If <code>true</code>, whole project will be built into a single flat document. Default: <code>true</code>.</dd>
 <dt><code>template</code></dt>
 <dd>
 <p>is the path to the TeX template to use when building pdf and tex (see <a href="http://pandoc.org/MANUAL.html#templates">“Templates”</a> in the Pandoc documentation).</p>
@@ -1587,7 +1604,7 @@ Result: My_Project-2017-12-04.tex
 <dd>is the result file name without suffix (e.g. <code>.pdf</code>). Overrides top-level config option <code>slug</code>.</dd>
 </dl>
 <p>Example config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">pandoc</span><span class="p">:</span>
     <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">templates/basic.tex</span>
     <span class="nt">vars</span><span class="p">:</span>
@@ -1595,7 +1612,7 @@ Result: My_Project-2017-12-04.tex
       <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This Is a Title</span>
       <span class="nt">second_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This Is a Subtitle</span>
       <span class="nt">logo</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">templates/logo.png</span>
-      <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2017</span>
+      <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2020</span>
     <span class="nt">params</span><span class="p">:</span>
       <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
       <span class="nt">listings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1606,13 +1623,84 @@ Result: My_Project-2017-12-04.tex
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">strikeout</span>
 </code></pre></div>
 
+<h3 id="build-modes">Build modes<a class="headerlink" href="#build-modes" title="Permanent link">&para;</a></h3>
+<p>Since 1.1.0 you can build parts of your project into separate PDFs, along with the main PDF of the whole project.</p>
+<p>If the <code>build_whole_project</code> parameter of Pandoc backend config is <code>true</code>, the whole project will be built in to a flat document as usual. You can disable it by switching <code>build_whole_project</code> to false.</p>
+<p>You can also build parts of your project into separate documents. To configure such behavior we will be adding <a href="https://foliant-docs.github.io/docs/meta/">Metadata</a> to chapters or even smaller sections.</p>
+<p>To build a chapter into a separate document, add the following <code>meta</code> tag to your chapter's source:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;meta</span>
+  <span class="na">pandoc=</span><span class="s">&quot;</span>
+<span class="s">    vars:</span>
+<span class="s">      toc: true</span>
+<span class="s">      title: Our Awesome Product</span>
+<span class="s">      second_title: Specifications</span>
+<span class="s">      logo: !path templates/logo.png</span>
+<span class="s">      year: 2020</span>
+<span class="s">  &quot;</span><span class="nt">&gt;&lt;/meta&gt;</span>
+
+# Specifications
+
+size: 15
+weight: 59
+lifespan: 9
+</code></pre></div>
+
+<p>In the example above we have added a <code>meta</code> tag with <code>pandoc</code> field, in which we have overriden the <code>vars</code> mapping. The <code>pandoc</code> field is essential in this case. This is how backend determines that we want this chapter built separately. If you don't want to override any parameters, you can just add <code>pandoc="true"</code> field.</p>
+<p><strong>All parameters which are not overriden in the meta tag will be taken from main config <code>foliant.yml</code></strong>.</p>
+<p>Now, as the <code>pandoc</code> field is present in one of the meta tags in the project, Pandoc backend should build not one but two documents. Let's check if it's true:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making pdf with Pandoc... Done
+─────────────────────
+Result:
+My_Project-2020-12-04.pdf
+Specifications-2020-12-04.pdf
+</code></pre></div>
+
+<p>That's right, we've got the main PDF with whole project and another pdf, with just the Specifications chapter.</p>
+<p>If you wish to build even smaller piece of the project into separate file, add meta tag under the heading which you want to build:</p>
+<div class="codehilite"><pre><span></span><code># Specifications
+
+size: 15
+weight: 59
+lifespan: 9
+
+## Additional info
+
+<span class="nt">&lt;meta</span>
+  <span class="na">pandoc=</span><span class="s">&quot;</span>
+<span class="s">    slug: additional</span>
+<span class="s">    vars:</span>
+<span class="s">      toc: true</span>
+<span class="s">      title: Our Awesome Product</span>
+<span class="s">      second_title: Additional info</span>
+<span class="s">      logo: !path templates/logo.png</span>
+<span class="s">      year: 2020</span>
+<span class="s">  &quot;</span><span class="nt">&gt;&lt;/meta&gt;</span>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quos provident dolores eligendi nam quia sequi et tempore enim blanditiis, consequatur nostrum nulla dolor laborum quasi molestiae perspiciatis magni error consectetur nesciunt eaque veritatis voluptates! Cupiditate illum enim id recusandae assumenda excepturi odit tempore incidunt, amet soluta necessitatibus corrupti, aliquam.
+</code></pre></div>
+
+<p>In this example only the Additional info section will be built into a separate document. Notice that we've also given it its own slug.</p>
+<p>Let's build again and look at the results:</p>
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making pdf with Pandoc... Done
+─────────────────────
+Result:
+My_Project-2020-12-04.pdf
+additional.pdf
+</code></pre></div>
+
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
 <h4 id="could-not-convert-image-check-that-rsvg2pdf-is-in-path">Could not convert image ...: check that rsvg2pdf is in path<a class="headerlink" href="#could-not-convert-image-check-that-rsvg2pdf-is-in-path" title="Permanent link">&para;</a></h4>
 <p>In order to use svg images in pdf, you need to have <code>rsvg-convert</code> executable in <code>PATH</code>.</p>
 <p>On macOS, <code>brew install librsvg</code> does the trick. On Ubuntu, <code>apt install librsvg2-bin</code>. On Windows, <a href="http://opensourcepack.blogspot.ru/2012/06/rsvg-convert-svg-image-conversion-tool.html">download <code>rsvg-convert.7z</code></a> (without fontconfig support), unpack <code>rsvg-convert.exe</code>, and put it anywhere in <code>PATH</code>. For example, you can put it in the same directory where you run <code>foliant make</code>.</p>
 <h4 id="latex-listings-package-does-not-work-correctly-with-non-ascii-characters-eg-cyrillic-letters">LaTeX listings package does not work correctly with non-ASCII characters, e.g. Cyrillic letters<a class="headerlink" href="#latex-listings-package-does-not-work-correctly-with-non-ascii-characters-eg-cyrillic-letters" title="Permanent link">&para;</a></h4>
 <p>If you use non-ASCII characters inside backticks in your document, you can see an error like this:</p>
-<div class="bash codehilite"><pre><span></span><code>Error producing PDF.
+<div class="codehilite"><pre><span></span><code>Error producing PDF.
 ! Undefined control sequence.
 <span class="se">\l</span>st@arg -&gt;git clone <span class="o">[</span>SSH-к
                            люч<span class="o">]</span>
@@ -1620,7 +1708,7 @@ l.627 ...through<span class="o">{</span><span class="se">\l</span>stinline!git c
 </code></pre></div>
 
 <p>To fix it, set <code>listings</code> parameter to <code>false</code>:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">pandoc</span><span class="p">:</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="l l-Scalar l-Scalar-Plain">params</span><span class="p p-Indicator">:</span>

@@ -7,6 +7,33 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.pandoc 1.1.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#a07e2694111c96fd0357fadc1530c626</guid>
+            <pubDate>Tue, 20 Oct 2020 16:36:41 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Option to build separate chapters (sections) into separate files.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.14</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#76c219141990233dd79501a58b55198b</guid>
+            <pubDate>Fri, 16 Oct 2020 13:33:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add code blocks processing for Confluence preprocessor.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.graphviz 1.1.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.graphviz.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#e9bfd3a60d8bb55542c431e531153d97</guid>
+            <pubDate>Wed, 14 Oct 2020 18:02:27 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: issue with MkDocs: raw svgs are now wrapped in div tag.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.superlinks 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#ddad8e5d32cf33956b7506a44da2e9d5</guid>

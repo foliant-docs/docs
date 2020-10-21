@@ -1446,22 +1446,22 @@
 <h2 id="mermaid-diagrams-preprocessor-for-foliant">Mermaid Diagrams Preprocessor for Foliant<a class="headerlink" href="#mermaid-diagrams-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p><a href="https://mermaidjs.github.io/">Mermaid</a> is an open source diagram visualization tool. This preprocessor converts Mermaid diagram definitions in your Markdown files into images on the fly during project build.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.mermaid
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.mermaid
 </code></pre></div>
 
 <p>Please note that to use this preprocessor you will also need to install Mermaid and Mermaid CLI:</p>
-<div class="bash codehilite"><pre><span></span><code>$ npm install mermaid <span class="c1"># installs locally</span>
+<div class="codehilite"><pre><span></span><code>$ npm install mermaid <span class="c1"># installs locally</span>
 $ npm install mermaid.cli
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>mermaid</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mermaid</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">mermaid</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
         <span class="nt">mermaid_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">node_modules/.bin/mmdc</span>
@@ -1496,7 +1496,7 @@ $ npm install mermaid.cli
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;mermaid&gt;...&lt;/mermaid&gt;</code> tags:</p>
-<div class="markdown codehilite"><pre><span></span><code>Here’s a diagram:
+<div class="codehilite"><pre><span></span><code>Here’s a diagram:
 
 <span class="nt">&lt;mermaid&gt;</span>
 graph TD;
@@ -1506,7 +1506,7 @@ graph TD;
 
 <p>You can set any parameters in the tag options. Tag options have priority over the config options so you can override some values for specific diagrams while having the default ones set up in the config.</p>
 <p>Tags also have an exclusive option <code>caption</code> — the markdown caption of the diagram image.</p>
-<div class="markdown codehilite"><pre><span></span><code>Diagram with a caption:
+<div class="codehilite"><pre><span></span><code>Diagram with a caption:
 
 <span class="nt">&lt;mermaid</span> <span class="na">caption=</span><span class="s">&quot;Deployment diagram&quot;</span>
           <span class="na">params=</span><span class="s">&quot;theme: dark&quot;</span><span class="nt">&gt;</span>

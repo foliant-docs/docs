@@ -1448,7 +1448,7 @@
 <p>You can find Dockerfiles for each image in <a href="https://github.com/foliant-docs/docker/">this GitHub repository</a>.</p>
 <p>If you need to build PDFs with Pandoc/LaTeX, and some additional functionality is required, e.g. drawing diagrams with PlantUML, it’s recommended to use the image with the tag <code>full</code>. This image is widely used, frequently updated, and well supported.</p>
 <p>To get or update the Foliant Docker image, run the command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker pull foliant/foliant:full
+<div class="codehilite"><pre><span></span><code>$ docker pull foliant/foliant:full
 </code></pre></div>
 
 <p>It’s not necessary but recommended to use <a href="https://docs.docker.com/compose/">Docker Compose</a> utility to build images for Foliant projects and run containers based on them.</p>
@@ -1458,7 +1458,7 @@
 </code></pre></div>
 
 <p>The file <code>docker-compose.yml</code> should define the <code>foliant</code> service in this way:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
 
 <span class="nt">services</span><span class="p">:</span>
   <span class="nt">foliant</span><span class="p">:</span>
@@ -1470,7 +1470,7 @@
 </code></pre></div>
 
 <p>For debug purposes, it’s useful to add one more service, <code>bash</code>, to run containers with an interactive shell. Recommended full content of the file <code>docker-compose.yml</code> is the following:</p>
-<div class="yml codehilite"><pre><span></span><code><span class="k">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
 
 <span class="n">services</span><span class="p">:</span>
   <span class="n">foliant</span><span class="p">:</span>
@@ -1489,33 +1489,33 @@
 </code></pre></div>
 
 <p>To run Foliant project build, first, you have to build an image for the project:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose build
+<div class="codehilite"><pre><span></span><code>$ docker-compose build
 </code></pre></div>
 
 <p>This command should be executed in the project’s “root” directory.</p>
 <p>The image for the project should be rebuilt after pulling a newer version of Foliant image. Also, if you use a custom <code>Dockerfile</code>, and some local files are mentioned in it, the image for the project should be rebuilt after any updates of these files.</p>
 <p>To perform the project build with Foliant, run the command like the following:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make &lt;target&gt; --with &lt;backend&gt;
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make &lt;target&gt; --with &lt;backend&gt;
 </code></pre></div>
 
 <p>You need to specify the certain target and the certain backend. So, if you want to build PDF with Pandoc, the command should be:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf --with pandoc
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf --with pandoc
 </code></pre></div>
 
 <p>This command corresponds to the native command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc
 </code></pre></div>
 
 <p>Note that by default the commands within Docker containers run as root. So, after running a container, you can get some files owned by root in your local file system. To avoid this, run commands inside Docker containers as a user with the user ID and group ID of your local user on the host machine:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm foliant make pdf --with pandoc
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm foliant make pdf --with pandoc
 </code></pre></div>
 
 <p>If you described the service <code>bash</code> in your <code>docker-compose.yml</code> file, you may run a container based on the project’s image, with an interactive shell. To open shell for root, run:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm bash
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm bash
 </code></pre></div>
 
 <p>To open shell for a user with the same user ID and group ID as your current user on the host machine:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm bash
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --user<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> --rm bash
 </code></pre></div>
 
 <p>All examples below will represent native commands. Add <code>docker-compose run --rm</code> or <code>docker-compose run --user="$(id -u):$(id -g)" --rm</code> to their beginnings to run the corresponding commands within Docker containers.</p>
@@ -1523,7 +1523,7 @@
 <p>The usual command to build some target with some backend, <code>foliant make &lt;target&gt; --with &lt;backend&gt;</code>, runs Foliant in the regular mode. In this mode, Foliant and its extensions will log only events of the levels <code>critical</code>, <code>error</code>, and <code>warning</code>. Normally, there should not be critical cases (i.e. fatal crashes) and errors (they mean, for example, fails of some preprocessors, unavailability of some external services, etc.). Warnings are almost acceptable. Some preprocessors generate large numbers of specific warnings, and such behavior doesn’t mean that something is wrong.</p>
 <p>Foliant provides the <code>--debug</code> or <code>-d</code> command line option that enables the debug mode. In the debug mode, Foliant and its extensions also log events of the levels <code>debug</code> and <code>info</code>. How detailed the logging of such events is, depends on the implementation of a particular extension. Complex preprocessors like Includes usually log their actions in great detail. Usually the messages of the <code>info</code> level are informative: they indicate, for example, the beginning of some preprocessor’s work. The messages with the <code>debug</code> level generally show the status of atomic operations, e.g. reading data from the certain file. These messages often contain the values of variables that are important in this context: paths to files, external commands that are called, etc.</p>
 <p>The variant of the command that tells Foliant to build PDF with Pandoc in the debug mode, looks like:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --debug
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --debug
 </code></pre></div>
 
 <p>Log files will be written to the project’s “root” directory with names <code>*.log</code>, where <code>*</code> represents UNIX timestamps of the moments when the certain files were created. We were asked to implement optional overriding of logs location—it will be done in future release of Foliant Core. But it’s so easy to move logs to any custom place with a simple shell script; fixed location of logs is a really imaginary inconvenience!</p>
@@ -1558,19 +1558,19 @@
 <p>If the backend is not the location of your problem, and your problem occurs in an extension of another type (most often in a preprocessor), you don’t need to wait each time when the backend will complete to make the requested target.</p>
 <p>The <code>pre</code> target is convenient for debugging extensions of all types excluding backends, and especially preprocessors.</p>
 <p>To build Foliant project to the <code>pre</code> target, run the command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pre
+<div class="codehilite"><pre><span></span><code>$ foliant make pre
 </code></pre></div>
 
 <p>In additional to the <code>pre</code> backend and target, Foliant Core supports the <code>--keep_tmp</code> or <code>-k</code> command line option. By default, the temporary working directory is removed after the project build. But if the <code>--keep_tmp</code> or <code>-k</code> option is specified, the temporary working directory will be kept after build.</p>
 <p>After the project build, this directory will contain the files that are modified by all preprocessors and the chosen backend.</p>
 <p>The following command tells Foliant to build PDF with Pandoc, keeping the temporary working directory after build:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --keep_tmp
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with pandoc --keep_tmp
 </code></pre></div>
 
 <p>Tip: if Pandoc doesn’t make PDF due to errors in LaTeX markup, you can build the target <code>tex</code> and first debug the LaTeX source. Also, you may call Pandoc directly from the command line to build PDF from LaTeX source.</p>
 <h2 id="killing-two-birds-with-one-stone">Killing Two Birds With One Stone<a class="headerlink" href="#killing-two-birds-with-one-stone" title="Permanent link">&para;</a></h2>
 <p>Now you know what debugging facilities are provided by Foliant. But we strongly recommend you to make it a rule to start debugging Foliant projects with one universal shell command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pre --debug
+<div class="codehilite"><pre><span></span><code>$ foliant make pre --debug
 </code></pre></div>
 
 <p>This command tells Foliant to build the <code>pre</code> target in the debug mode. And this is a very effective way to get closer to understanding what is wrong with your project.</p>

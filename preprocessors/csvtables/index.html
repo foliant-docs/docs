@@ -1432,17 +1432,17 @@
                 <h1 id="csvtables">CSVTables<a class="headerlink" href="#csvtables" title="Permanent link">&para;</a></h1>
 <p>This preprocessor converts csv data to markdown tables.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.csvtables
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.csvtables
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor with default options, add <code>csvtables</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">csvtables</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options (default values stated below):</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">csvtables</span><span class="p">:</span>
         <span class="nt">delimiter</span><span class="p">:</span> <span class="s">&#39;;&#39;</span>
         <span class="nt">padding_symbol</span><span class="p">:</span> <span class="s">&#39;</span><span class="nv"> </span><span class="s">&#39;</span>

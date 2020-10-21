@@ -1500,12 +1500,12 @@
 <h2 id="templateparser-preprocessor-for-foliant">TemplateParser preprocessor for Foliant<a class="headerlink" href="#templateparser-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Preprocessor which allows to use templates in Foliant source files. Preprocessor now supports only <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine, but more can be added easily.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.templateparser
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.templateparser
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>All params that are stated in foliant.yml are considered global params. All of them may be overriden in template tag options, which have higher priority.</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">templateparser</span><span class="p">:</span>
         <span class="nt">engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jinja2</span>
         <span class="nt">engine_params</span><span class="p">:</span>
@@ -1539,7 +1539,7 @@
 </ol>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To use the template in a Markdown file just insert a tag of the template engine name, for example:</p>
-<div class="html codehilite"><pre><span></span><code>This is ordinary markdown text.
+<div class="codehilite"><pre><span></span><code>This is ordinary markdown text.
 <span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 This is a Jinja2 template:
 I can count to five!
@@ -1556,7 +1556,7 @@ I can count to five!
 </code></pre></div>
 
 <p>You can also use a general <code>&lt;template&gt;</code> tag, but in this case you have to specify the engine you want to use in the <code>engine</code> parameter:</p>
-<div class="html codehilite"><pre><span></span><code>This is ordinary markdown text.
+<div class="codehilite"><pre><span></span><code>This is ordinary markdown text.
 <span class="p">&lt;</span><span class="nt">template</span> <span class="na">engine</span><span class="o">=</span><span class="s">&quot;jinja2&quot;</span><span class="p">&gt;</span>
 This is a Jinja2 template:
 I can count to five!
@@ -1566,7 +1566,7 @@ I can count to five!
 
 <h4 id="sending-variables-to-template">Sending variables to template<a class="headerlink" href="#sending-variables-to-template" title="Permanent link">&para;</a></h4>
 <p>To send a variable to template, add them into the <code>context</code> option. This option accepts <code>yaml</code> dictionary format.</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">context</span><span class="o">=</span><span class="s">&quot;{&#39;name&#39;: Andy, &#39;age&#39;: 8}&quot;</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">context</span><span class="o">=</span><span class="s">&quot;{&#39;name&#39;: Andy, &#39;age&#39;: 8}&quot;</span><span class="p">&gt;</span>
 Hi, my name is {{name}}!
 I am {{ age }} years old.
 {% for prev in range(age - 1, 0, -1) %}
@@ -1633,7 +1633,7 @@ Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o"
 <p>If data inside your external context file is not a dictionary, it will be available inside template under <code>context</code> variable (or <code>_foliant_context['context']</code>).</p>
 <h4 id="integration-with-metadata">Integration with metadata<a class="headerlink" href="#integration-with-metadata" title="Permanent link">&para;</a></h4>
 <p>Templates support latest Foliant <a href="https://foliant-docs.github.io/docs/cli/meta/">metadata</a> functionality. You can find the meta dictionary for current section under <code>meta</code> variable inside template:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 Document status: {{ meta.status }}
@@ -1643,13 +1643,13 @@ The document &quot;{{ meta.title }}&quot; is brought to you by {{ meta.author }}
 </code></pre></div>
 
 <p>Result:</p>
-<div class="html codehilite"><pre><span></span><code>Document status: ready
+<div class="codehilite"><pre><span></span><code>Document status: ready
 
 The document &quot;Custom Title&quot; is brought to you by John
 </code></pre></div>
 
 <p>You can also find the whole project's <code>Meta</code> object under <code>meta_object</code> variable inside template:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">jinja2</span><span class="p">&gt;</span>
 List of chapters in this project:
@@ -1660,7 +1660,7 @@ List of chapters in this project:
 </code></pre></div>
 
 <p>Result:</p>
-<div class="html codehilite"><pre><span></span><code>List of chapters in this project:
+<div class="codehilite"><pre><span></span><code>List of chapters in this project:
 
 * index
 * sub

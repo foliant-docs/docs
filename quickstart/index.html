@@ -1473,7 +1473,7 @@
 <p>All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to <a href="../cli/init/#init">Init</a> extension.</p>
 <p>You should have installed it during <a href="../installation/#installation">Foliant installation</a>) and it’s included in Foliant’s default Docker image.</p>
 <p>To use it, run <code>foliant init</code> command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant init
+<div class="codehilite"><pre><span></span><code>$ foliant init
 Enter the project name: Hello Foliant
 ✔ Generating Foliant project
 ─────────────────────
@@ -1481,7 +1481,7 @@ Project <span class="s2">&quot;Hello Foliant&quot;</span> created in hello-folia
 </code></pre></div>
 
 <p>To do the same with Docker, run:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker run --rm -it -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/usr/src/app -w /usr/src/app foliant/foliant init
+<div class="codehilite"><pre><span></span><code>$ docker run --rm -it -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/usr/src/app -w /usr/src/app foliant/foliant init
 Enter the project name: Hello Foliant
 Generating project... Done
 ─────────────────────
@@ -1489,7 +1489,7 @@ Project <span class="s2">&quot;Hello Foliant&quot;</span> created in hello-folia
 </code></pre></div>
 
 <p>Here’s what this command created:</p>
-<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> hello-foliant
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> hello-foliant
 $ tree
 .
 ├── docker-compose.yml
@@ -1509,11 +1509,11 @@ $ tree
 <p><code>Dockerfile</code> and <code>docker-compose.yml</code> are necessary to build the project in a Docker container.</p>
 <h2 id="build-site">Build Site<a class="headerlink" href="#build-site" title="Permanent link">&para;</a></h2>
 <p>To build a site you will first need a suitable backend (to catch up with the terminology, check <a href="../architecture/#architecture-and-basic-design-concepts">this article</a>. Let’s start with <strong>MkDocs</strong> backend. First, install it using the following command (or skip to the docker example):</p>
-<div class="bash codehilite"><pre><span></span><code>python3 -m pip install foliantcontrib.mkdocs
+<div class="codehilite"><pre><span></span><code>python3 -m pip install foliantcontrib.mkdocs
 </code></pre></div>
 
 <p>Then, in the project directory, run:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make site
+<div class="codehilite"><pre><span></span><code>$ foliant make site
 Parsing config... Done
 Applying preprocessor mkdocs... Done
 Applying preprocessor _unescape... Done
@@ -1523,7 +1523,7 @@ Result: Hello_Foliant-2020-05-25.mkdocs
 </code></pre></div>
 
 <p>Or, with Docker Compose:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site
 Parsing config... Done
 Applying preprocessor mkdocs... Done
 Applying preprocessor _unescape... Done
@@ -1533,7 +1533,7 @@ Result: Hello_Foliant-2020-05-25.mkdocs
 </code></pre></div>
 
 <p>That’s it! Your static, MkDocs-powered website is ready. To look at it, use any web server, for example, Python’s built-in one:</p>
-<div class="bash codehilite"><pre><span></span><code>$ python3 -m http.server -d Hello_Foliant-2020-05-25.mkdocs
+<div class="codehilite"><pre><span></span><code>$ python3 -m http.server -d Hello_Foliant-2020-05-25.mkdocs
 Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> <span class="o">(</span>http://0.0.0.0:8000/<span class="o">)</span> ...
 </code></pre></div>
 
@@ -1545,7 +1545,7 @@ Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> 
 <p>To build PDF with Pandoc, make sure you have it and TeXLive installed (see <a href="../installation/#installation">Installation</a>).</p>
 </blockquote>
 <p>In the project directory, run:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pdf
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -1555,7 +1555,7 @@ Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 
 <p>To build pdf in Docker container, first uncomment <code>foliant/foliant:pandoc</code> in your project’s <code>Dockerfile</code>:</p>
-<div class="diff codehilite"><pre><span></span><code><span class="gd">- FROM foliant/foliant</span>
+<div class="codehilite"><pre><span></span><code><span class="gd">- FROM foliant/foliant</span>
 <span class="gi">+ # FROM foliant/foliant</span>
 # If you plan to bake PDFs, uncomment this line and comment the line above:
 <span class="gd">- # FROM foliant/foliant:pandoc</span>
@@ -1571,7 +1571,7 @@ RUN pip3 install -r requirements.txt
 <p>Run <code>docker-compose build</code> to rebuild the image from the new base image if you have previously run <code>docker-compose run</code> with the old one. Also, run it whenever you need to update the versions of the required packages from <code>requirements.txt</code>.</p>
 </blockquote>
 <p>Then, run this command in the project directory:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make pdf
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -1586,7 +1586,7 @@ Result: Hello_Foliant-2020-05-25.pdf
 <p>Your project’s content lives in <code>*.md</code> files in <code>src</code> folder. You can split it between multiple files and subfolders.</p>
 <p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <a href="../preprocessors/flags/#flags"><code>&lt;if&gt;...&lt;/if&gt;</code></a>.</p>
 <p>Create a file <code>hello.md</code> in <code>src</code> with the following content:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Hello</span> <span class="n">Again</span>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Hello</span> <span class="n">Again</span>
 
 <span class="n">This</span> <span class="k">is</span> <span class="n">regular</span> <span class="nb">text</span> <span class="k">generated</span> <span class="k">from</span> <span class="n">regular</span> <span class="n">Markdown</span><span class="p">.</span>
 
@@ -1594,7 +1594,7 @@ Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 
 <p>Open <code>foliant.yml</code> and add <code>hello.md</code> to <code>chapters</code>:</p>
-<div class="diff codehilite"><pre><span></span><code>title: Hello Foliant
+<div class="codehilite"><pre><span></span><code>title: Hello Foliant
 
 chapters:
   - index.md
@@ -1602,7 +1602,7 @@ chapters:
 </code></pre></div>
 
 <p>Rebuild the project to see the new page:</p>
-<div class="bash codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site <span class="o">&amp;&amp;</span> docker-compose run --rm foliant make pdf
+<div class="codehilite"><pre><span></span><code>$ docker-compose run --rm foliant make site <span class="o">&amp;&amp;</span> docker-compose run --rm foliant make pdf
 Parsing config... Done
 Applying preprocessor mkdocs... Done
 Applying preprocessor _unescape... Done
@@ -1633,12 +1633,12 @@ Result: Hello_Foliant-2020-05-25.pdf
 <h3 id="embed-diagrams-with-blockdiag">Embed Diagrams with Blockdiag<a class="headerlink" href="#embed-diagrams-with-blockdiag" title="Permanent link">&para;</a></h3>
 <p><a href="http://blockdiag.com/">Blockdiag</a> is a Python app for generating diagrams. Blockdiag preprocessor extracts diagram descriptions from the project source and replaces them with the generated images.</p>
 <p>First, we need to install the blockdiag preprocessor:</p>
-<div class="bash codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.blockdiag
+<div class="codehilite"><pre><span></span><code>$ python3 -m pip install foliantcontrib.blockdiag
 </code></pre></div>
 
 <p>Or, if you are building with docker, add <code>foliantcontrib.blockdiag</code> to requirements.txt and rebuild the image with <code>docker-compose build</code> command.</p>
 <p>Next, we need to switch on the <a href="../preprocessors/blockdiag/#blockdiag"><code>blockdiag</code></a> preprocessor in config. Open <code>foliant.yml</code> and add the following lines:</p>
-<div class="diff codehilite"><pre><span></span><code>title: Hello Foliant
+<div class="codehilite"><pre><span></span><code>title: Hello Foliant
 <span class="gi">+</span>
 <span class="gi">+ preprocessors:</span>
 <span class="gi">+  - blockdiag</span>
@@ -1649,7 +1649,7 @@ chapters:
 </code></pre></div>
 
 <p>Then, in <code>hello.md</code>, add the following:</p>
-<div class="diff codehilite"><pre><span></span><code>Foliant doesn’t force any *special* Markdown flavor.
+<div class="codehilite"><pre><span></span><code>Foliant doesn’t force any *special* Markdown flavor.
 
 <span class="gi">+ &lt;seqdiag caption=&quot;This diagram is generated on the fly&quot;&gt;</span>
 <span class="gi">+   seqdiag {</span>
@@ -1665,7 +1665,7 @@ chapters:
 <p><img alt="Sequence diagram drawn with seqdiag in the pdf" src="../images/basic-pdf-seqdiag.png" /></p>
 <p>Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever popular Comic Sans font, but you can pick any font that’s available in <code>.ttf</code> format.</p>
 <p>Put the font file in the project directory and add the following lines to <code>foliant.yml</code>:</p>
-<div class="diff codehilite"><pre><span></span><code>preprocessors:
+<div class="codehilite"><pre><span></span><code>preprocessors:
 <span class="gd">-   - blockdiag</span>
 <span class="gi">+   - blockdiag:</span>
 <span class="gi">+       params:</span>
@@ -1676,7 +1676,7 @@ chapters:
 <p><img alt="Sequence diagram with Comic Sans in labels, site" src="../images/basic-mkdocs-seqdiag-comic.png" /></p>
 <p><img alt="Sequence diagram with Comic Sans in labels, pdf" src="../images/basic-pdf-seqdiag-comic.png" /></p>
 <p>There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <a href="../preprocessors/flags/#flags">Flags</a> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:</p>
-<div class="markdown codehilite"><pre><span></span><code>This is a diagram that is rendered to `.png` in HTML and to `.pdf` in pdf:
+<div class="codehilite"><pre><span></span><code>This is a diagram that is rendered to `.png` in HTML and to `.pdf` in pdf:
 
 <span class="nt">&lt;blockdiag</span> <span class="na">format=</span><span class="s">&quot;&lt;if targets=&quot;</span><span class="err">site&quot;</span><span class="nt">&gt;</span>png<span class="nt">&lt;/if&gt;&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>pdf<span class="nt">&lt;/if&gt;</span>&quot;&gt;
     ...

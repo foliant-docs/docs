@@ -1449,15 +1449,15 @@
 <p>MdToPdf backend for Foliant operates the <code>pdf</code> target.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>First install md-to-pdf on your machine:</p>
-<div class="bash codehilite"><pre><span></span><code>$ npm install -g md-to-pdf
+<div class="codehilite"><pre><span></span><code>$ npm install -g md-to-pdf
 </code></pre></div>
 
 <p>Then install the backend:</p>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.mdtopdf
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.mdtopdf
 </code></pre></div>
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ foliant make pdf --with mdtopdf
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --with mdtopdf
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor mdtopdf... Done
@@ -1470,7 +1470,7 @@ Result: MyProject.pdf
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use MdToPdf backend. If it's installed, Foliant will detect it.</p>
 <p>You can however customize the backend with options in <code>backend_config.mdtopdf</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">mdtopdf</span><span class="p">:</span>
     <span class="nt">mdtopdf_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">md-to-pdf</span>
     <span class="nt">options</span><span class="p">:</span>

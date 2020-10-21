@@ -1445,17 +1445,17 @@
 <p><a href="https://pypi.org/project/foliantcontrib.confluence/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.confluence.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.confluence"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.confluence.svg?label=GitHub" /></a></p>
 <p>Confluence preprocessor allows inserting content from Confluence server into your Foliant project.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.confluence
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.confluence
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>confluence</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">confluence</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">confluence</span><span class="p">:</span>
         <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yml</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
@@ -1486,7 +1486,7 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;confluence&gt;&lt;/confluence&gt;</code> tag at the position in the document where the content from Confluence should be inserted. The page is defined by its <code>id</code> or <code>title</code>. If you are specifying page by title, you will also need to set <code>space_key</code> either in tag or in the preprocessor options.</p>
-<div class="html codehilite"><pre><span></span><code>The following content is imported from Confluence:
+<div class="codehilite"><pre><span></span><code>The following content is imported from Confluence:
 
 <span class="p">&lt;</span><span class="nt">confluence</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;12345&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">confluence</span><span class="p">&gt;</span>
 
@@ -1503,7 +1503,7 @@ Here we are overriding space_key:
 <p>There are two ways to supply credentials for your confluence server.</p>
 <p><strong>1. In foliant.yml</strong></p>
 <p>The most basic way is just to put credentials in foliant.yml:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">confluence</span><span class="p">:</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
         <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
@@ -1514,19 +1514,19 @@ Here we are overriding space_key:
 <p><strong>2. Using passfile</strong></p>
 <p>Alternatively, you can use a passfile. <em>Passfile</em> is a yaml-file which holds all your passwords. You can keep it out from git-repository by storing it only on your local machine and production server.</p>
 <p>To use passfile, add a <code>passfile</code> option to foliant.yml:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">confluence</span><span class="p">:</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
         <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span>
 </code></pre></div>
 
 <p>The syntax of the passfile is the following:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">hostname</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">hostname</span><span class="p">:</span>
     <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
 </code></pre></div>
 
 <p>For example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="p p-Indicator">:</span>
     <span class="nt">user1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wFwG34uK</span>
     <span class="nt">user2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEUeU3b4</span>
 <span class="l l-Scalar l-Scalar-Plain">https://another_confluence_server.org</span><span class="p p-Indicator">:</span>
@@ -1534,7 +1534,7 @@ Here we are overriding space_key:
 </code></pre></div>
 
 <p>If there are several records for a specified host in passfile (like in the example above), Foliant will pick the first one. If you want specific one of them, add the login parameter to your foliant.yml:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">confluence</span><span class="p">:</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
         <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span>

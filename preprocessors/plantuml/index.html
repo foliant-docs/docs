@@ -1446,17 +1446,17 @@
 <h2 id="plantuml-diagrams-preprocessor-for-foliant">PlantUML Diagrams Preprocessor for Foliant<a class="headerlink" href="#plantuml-diagrams-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p><a href="http://plantuml.com/">PlantUML</a> is a tool to generate diagrams from plain text. This preprocessor finds PlantUML diagrams definitions in the source and converts them into images on the fly during project build.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.plantuml
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.plantuml
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>plantuml</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">plantuml</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">plantuml</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.diagramscache</span>
         <span class="nt">plantuml_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">plantuml</span>
@@ -1492,7 +1492,7 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;plantuml&gt;...&lt;/plantuml&gt;</code> tags (indentation inside tags is optional):</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="n">Here</span><span class="err">’</span><span class="n">s</span> <span class="n">a</span> <span class="nl">diagram</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Here</span><span class="err">’</span><span class="n">s</span> <span class="n">a</span> <span class="nl">diagram</span><span class="p">:</span>
 
 <span class="o">&lt;</span><span class="n">plantuml</span><span class="o">&gt;</span>
     <span class="p">@</span><span class="n">startuml</span>
@@ -1502,7 +1502,7 @@
 </code></pre></div>
 
 <p>To set a caption, use <code>caption</code> option:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="n">Diagram</span> <span class="n">with</span> <span class="n">a</span> <span class="nl">caption</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Diagram</span> <span class="n">with</span> <span class="n">a</span> <span class="nl">caption</span><span class="p">:</span>
 
 <span class="o">&lt;</span><span class="n">plantuml</span> <span class="n">caption</span><span class="o">=</span><span class="s">&quot;Sample diagram from the official site&quot;</span><span class="o">&gt;</span>
     <span class="p">@</span><span class="n">startuml</span>
@@ -1512,7 +1512,7 @@
 </code></pre></div>
 
 <p>You can override <code>params</code> values from the preprocessor config for each diagram. Also you can use <code>format</code> alias for <code>-t*</code> params:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="n">By</span> <span class="k">default</span><span class="p">,</span> <span class="n">diagrams</span> <span class="n">are</span> <span class="k">in</span> <span class="n">PNG</span><span class="p">.</span> <span class="n">But</span> <span class="n">this</span> <span class="n">diagram</span> <span class="n">is</span> <span class="k">in</span> <span class="nl">EPS</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">By</span> <span class="k">default</span><span class="p">,</span> <span class="n">diagrams</span> <span class="n">are</span> <span class="k">in</span> <span class="n">PNG</span><span class="p">.</span> <span class="n">But</span> <span class="n">this</span> <span class="n">diagram</span> <span class="n">is</span> <span class="k">in</span> <span class="nl">EPS</span><span class="p">:</span>
 
 <span class="o">&lt;</span><span class="n">plantuml</span> <span class="n">caption</span><span class="o">=</span><span class="s">&quot;Vector diagram&quot;</span> <span class="n">format</span><span class="o">=</span><span class="s">&quot;eps&quot;</span><span class="o">&gt;</span>
     <span class="p">@</span><span class="n">startuml</span>

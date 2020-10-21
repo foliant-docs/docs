@@ -1495,17 +1495,17 @@
 <p>Superlinks aim to solve this problem.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>Install the preprocessor:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.superlinks
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.superlinks
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>superlink</code> to <code>preprocessors</code> section in the project config.</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
 </code></pre></div>
 
 <p><strong>Important:</strong> SuperLinks preprocessor is very sensitive to its position in the preprocessors list. If you are using it in along with <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a>, <a href="https://foliant-docs.github.io/docs/preprocessors/anchors/">Anchors</a> or <a href="https://foliant-docs.github.io/docs/preprocessors/customids/">CustomIDs</a> preprocessor, the order in which they are mentioned must be following:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>   <span class="c1"># indludes must be defined BEFORE superlinks in the list</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
@@ -1539,31 +1539,31 @@
 </ul>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p><strong>Reference a title in the same document</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;My title&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;My title&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference a title in another chapter</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Another title&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Another title&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference the beginning of another chapter</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference a title inside meta section</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">meta_id</span><span class="o">=</span><span class="s">&quot;SECTION1&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Title in section1&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">meta_id</span><span class="o">=</span><span class="s">&quot;SECTION1&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Title in section1&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference the beginning of meta section</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">meta_id</span><span class="o">=</span><span class="s">&quot;SECTION1&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">meta_id</span><span class="o">=</span><span class="s">&quot;SECTION1&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference an anchor and search for it globally</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p><strong>Reference an anchor and search for it in specific chapter</strong></p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;subfolder/another_chapter.md&quot;</span> <span class="na">anchor</span><span class="o">=</span><span class="s">&quot;my_anchor&quot;</span><span class="p">&gt;</span>Link caption<span class="p">&lt;/</span><span class="nt">link</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <h3 id="supported-backends">Supported Backends:<a class="headerlink" href="#supported-backends" title="Permanent link">&para;</a></h3>

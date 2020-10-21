@@ -1449,13 +1449,13 @@
 <p>The list of values after the <code>!version</code> tag is replaced with the string that joins these values using <code>.</code> delimeter.</p>
 <p>The value of the node that contains the <code>!commit_count</code> tag is replaced by the number of commits in the current Git repository.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.slugs
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.slugs
 </code></pre></div>
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <h4 id="slug">Slug<a class="headerlink" href="#slug" title="Permanent link">&para;</a></h4>
 <p>Config example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 <span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
 <span class="nt">slug</span><span class="p">:</span> <span class="kt">!slug</span>
     <span class="p p-Indicator">-</span> <span class="nv">*title</span>
@@ -1468,7 +1468,7 @@
 </code></pre></div>
 
 <p>Note that backends allow to override the top-level slug, so you may define different custom slugs for each backend:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">pandoc</span><span class="p">:</span>
         <span class="nt">slug</span><span class="p">:</span> <span class="kt">!slug</span>
             <span class="p p-Indicator">-</span> <span class="nv">*title</span>
@@ -1480,7 +1480,7 @@
 
 <h4 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
 <p>Config example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">5</span><span class="p p-Indicator">]</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">5</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 
 <p>Resulting version:</p>
@@ -1488,7 +1488,7 @@
 </code></pre></div>
 
 <p>If you wish to use the number of commits in the current branch as a part of your version, add the <code>!commit_count</code> tag:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
     <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span>
 </code></pre></div>
@@ -1503,7 +1503,7 @@
 <li>correction—a positive or negative number to adjust the commit count.</li>
 </ul>
 <p>Suppose you want to bump the major version and start counting commits from the beginning. Also you want to use only number of commits in the <code>master</code> branch. So your config will look like this:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
     <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span> <span class="l l-Scalar l-Scalar-Plain">master -85</span>
 </code></pre></div>

@@ -1554,26 +1554,26 @@
 <p>On Unix you will first need to install <a href="http://www.unixodbc.org/">unixODBC</a>, and then — the ODBC driver. Microsoft has a detailed instructions on how to install the driver <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server">on Linux</a> and <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos">on Mac</a>.</p>
 <p><strong>MySQL</strong></p>
 <p>On Mac you can simply run</p>
-<div class="bash codehilite"><pre><span></span><code>$ brew install mysql
+<div class="codehilite"><pre><span></span><code>$ brew install mysql
 </code></pre></div>
 
 <p>On Linux you will have to install server and client packages, for example, with apt-get:</p>
-<div class="bash codehilite"><pre><span></span><code>sudp apt-get update
+<div class="codehilite"><pre><span></span><code>sudp apt-get update
 sudo apt-get install -y mysql-server libmysqlclient-dev
 </code></pre></div>
 
 <h4 id="preprocessor">Preprocessor<a class="headerlink" href="#preprocessor" title="Permanent link">&para;</a></h4>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbdoc
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbdoc
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>dbdoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">dbdoc</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">dbdoc</span><span class="p">:</span>
         <span class="nt">dbms</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pgsql</span>
         <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
@@ -1629,7 +1629,7 @@ sudo apt-get install -y mysql-server libmysqlclient-dev
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>DBDoc currently supports four database engines: Oracle, PostgreSQL, MySQL and Microsoft SQL Server. To generate Oracle database documentation, add an <code>&lt;oracle&gt;&lt;/oracle&gt;</code> tag to a desired place of your chapter.</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
 
@@ -1637,7 +1637,7 @@ This document contains the most awesome automatically generated documentation of
 </code></pre></div>
 
 <p>To generate PostgreSQL database documentation, add a <code>&lt;pgsql&gt;&lt;/pgsql&gt;</code> tag to a desired place of your chapter.</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous Oracle database.
 
@@ -1645,7 +1645,7 @@ This document contains the most awesome automatically generated documentation of
 </code></pre></div>
 
 <p>To generate MySQL database documentation, add a <code>&lt;mysql&gt;&lt;/mysql&gt;</code> tag to a desired place of your chapter.</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous SQL Server database.
 
@@ -1653,7 +1653,7 @@ This document contains the most awesome automatically generated documentation of
 </code></pre></div>
 
 <p>To generate SQL Server database documentation, add a <code>&lt;sqlserver&gt;&lt;/sqlserver&gt;</code> tag to a desired place of your chapter.</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the most awesome automatically generated documentation of our marvellous SQL Server database.
 
@@ -1662,7 +1662,7 @@ This document contains the most awesome automatically generated documentation of
 
 <p>Each time the preprocessor encounters one of the mentioned tags, it inserts the whole generated documentation text instead of it. The connection parameters are taken from the config-file.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 Introduction text for database documentation.
 
@@ -1681,7 +1681,7 @@ Introduction text for database documentation.
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>You can add filters to exclude some tables from the documentation. dbdocs supports several SQL-like filtering operators and a determined list of filtering fields.</p>
 <p>You can switch on filters either in foliant.yml file like this:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">dbdoc</span><span class="p">:</span>
     <span class="nt">filters</span><span class="p">:</span>
       <span class="nt">eq</span><span class="p">:</span>
@@ -1691,7 +1691,7 @@ Introduction text for database documentation.
 </code></pre></div>
 
 <p>or in tag options using the same yaml-syntax:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">pgsql</span> <span class="na">filters</span><span class="o">=</span><span class="s">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">pgsql</span> <span class="na">filters</span><span class="o">=</span><span class="s">&quot;</span>
 <span class="s">  eq:</span>
 <span class="s">    schema: public</span>
 <span class="s">  regex:</span>
@@ -1771,13 +1771,13 @@ Introduction text for database documentation.
 </tbody>
 </table>
 <p>The syntax for using filters in configuration files is following:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
   <span class="nt">&lt;operator&gt;</span><span class="p">:</span>
     <span class="nt">&lt;field&gt;</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
 </code></pre></div>
 
 <p>If <code>value</code> should be list like for <code>in</code> operator, use YAML-lists instead:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
   <span class="nt">in</span><span class="p">:</span>
     <span class="nt">schema</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">public</span>
@@ -1805,7 +1805,7 @@ Introduction text for database documentation.
 <p>Here are sample snippets on how to connect to different databases.</p>
 <p><strong>PostgreSQL</strong></p>
 <p><a href="https://pypi.org/project/psycopg2/">psycopg2</a> library is required.</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">psycopg2</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">psycopg2</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
       <span class="s2">&quot;host=localhost &quot;</span>
@@ -1818,7 +1818,7 @@ Introduction text for database documentation.
 
 <p><strong>Oracle</strong></p>
 <p><a href="https://oracle.github.io/python-cx_Oracle/">cx_Oracle</a> library is required.</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">cx_Oracle</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">cx_Oracle</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
     <span class="s2">&quot;Scott/Tiger@localhost:1521/MyDatabase&quot;</span>
@@ -1829,7 +1829,7 @@ Introduction text for database documentation.
 
 <p><strong>MySQL</strong></p>
 <p><a href="https://pypi.org/project/mysqlclient/">mysqlclient</a> library is required.</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">MySQLdb</span> <span class="kn">import</span> <span class="n">_mysql</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">MySQLdb</span> <span class="kn">import</span> <span class="n">_mysql</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">_mysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
         <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
@@ -1842,7 +1842,7 @@ Introduction text for database documentation.
 
 <p><strong>Microsoft SQL Server</strong></p>
 <p><a href="https://pypi.org/project/pyodbc/">pyodbc</a> library is required.</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyodbc</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyodbc</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
     <span class="s2">&quot;DRIVER={ODBC Driver 17 for SQL Server};&quot;</span>

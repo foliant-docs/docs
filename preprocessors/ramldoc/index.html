@@ -1462,21 +1462,21 @@
 <p>raml2html uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templating system.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>First install <code>raml2html</code> and the markdown theme:</p>
-<div class="bash codehilite"><pre><span></span><code>$ npm install -g raml2html raml2html-full-markdown-theme
+<div class="codehilite"><pre><span></span><code>$ npm install -g raml2html raml2html-full-markdown-theme
 </code></pre></div>
 
 <p>Then install the preprocessor:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.ramldoc
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.ramldoc
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>ramldoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ramldoc</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">ramldoc</span><span class="p">:</span>
         <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/my_api.raml</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.raml</span>

@@ -1444,17 +1444,17 @@
                 <h1 id="replace">Replace<a class="headerlink" href="#replace" title="Permanent link">&para;</a></h1>
 <p>Replace preprocessor reads the dictionary (yaml format) placed in foliant project folder and changes one word to another in created document.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.replace
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.replace
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>replace</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">replace</span>
 </code></pre></div>
 
 <p>The preprocessor has two options (default values stated):</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
       <span class="nt">dictionary_filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">replace_dictionary.yml</span>
       <span class="nt">with_confirmation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -1468,7 +1468,7 @@
 </dl>
 <h4 id="dictionary-format">Dictionary format<a class="headerlink" href="#dictionary-format" title="Permanent link">&para;</a></h4>
 <p>Dictionary stores data in yaml format. It has two sections — with words and with regular expressions. You can pass the lambda function in <code>regexs</code> section. For example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">words</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">words</span><span class="p">:</span>
   <span class="nt">cod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CoD</span>
   <span class="nt">epg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EPG</span>
   <span class="nt">vod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VoD</span>

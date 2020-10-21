@@ -1446,17 +1446,17 @@
 <h2 id="conditional-blocks-for-foliant">Conditional Blocks for Foliant<a class="headerlink" href="#conditional-blocks-for-foliant" title="Permanent link">&para;</a></h2>
 <p>This preprocessors lets you exclude parts of the source based on flags defined in the project config and environment variables, as well as current target and backend.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.flags
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.flags
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Enable the propressor by adding it to <code>preprocessors</code>:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flags</span>
 </code></pre></div>
 
 <p>Enabled project flags are listed in <code>preprocessors.flags.flags</code>:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">flags</span><span class="p">:</span>
       <span class="nt">flags</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
@@ -1464,7 +1464,7 @@
 </code></pre></div>
 
 <p>To set flags for the current session, define <code>FOLIANT_FLAGS</code> environment variable:</p>
-<div class="shell codehilite"><pre><span></span><code>$ <span class="nv">FOLIANT_FLAGS</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span>
+<div class="codehilite"><pre><span></span><code>$ <span class="nv">FOLIANT_FLAGS</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span>
 </code></pre></div>
 
 <p>You can use commas, semicolons, or spaces to separate flags.</p>
@@ -1477,7 +1477,7 @@
 </blockquote>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Conditional blocks are enclosed between <code>&lt;if&gt;...&lt;/if&gt;</code> tags:</p>
-<div class="markdown codehilite"><pre><span></span><code>This paragraph is for everyone.
+<div class="codehilite"><pre><span></span><code>This paragraph is for everyone.
 
 <span class="nt">&lt;if</span> <span class="na">flags=</span><span class="s">&quot;management&quot;</span><span class="nt">&gt;</span>
 This parapraph is for management only.
@@ -1485,7 +1485,7 @@ This parapraph is for management only.
 </code></pre></div>
 
 <p>A block can depend on multiple flags. You can pick whether all tags must be present for the block to appear, or any of them (by default, <code>kind="all"</code> is assumed):</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="o">&gt;</span>
 <span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="k">both</span> <span class="n">`spam`</span> <span class="k">and</span> <span class="n">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
 <span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
 
@@ -1495,13 +1495,13 @@ This parapraph is for management only.
 </code></pre></div>
 
 <p>You can also list flags that must <em>not</em> be set for the block to be included:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="o">&gt;</span>
 <span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="n">neither</span> <span class="n">`spam`</span> <span class="n">nor</span> <span class="n">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
 <span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
 </code></pre></div>
 
 <p>You can check against the current target and backend instead of manually defined flags:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>This is for pdf output<span class="nt">&lt;/if&gt;&lt;if</span> <span class="na">targets=</span><span class="s">&quot;site&quot;</span><span class="nt">&gt;</span>This is for the site<span class="nt">&lt;/if&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>This is for pdf output<span class="nt">&lt;/if&gt;&lt;if</span> <span class="na">targets=</span><span class="s">&quot;site&quot;</span><span class="nt">&gt;</span>This is for the site<span class="nt">&lt;/if&gt;</span>
 
 <span class="nt">&lt;if</span> <span class="na">backends=</span><span class="s">&quot;mkdocs&quot;</span><span class="nt">&gt;</span>This is only for MkDocs.<span class="nt">&lt;/if&gt;</span>
 </code></pre></div>

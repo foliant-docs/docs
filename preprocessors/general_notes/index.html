@@ -1345,7 +1345,7 @@
                 <h1 id="general-notes-on-usage">General Notes on Usage<a class="headerlink" href="#general-notes-on-usage" title="Permanent link">&para;</a></h1>
 <p>Most simple preprocessors apply unconditionally to the whole content of each Markdown file in the Foliant project. But usually preprocessors look for some specific pseudo-XML tags in Markdown content. Each preprocessor registers its own set of tags.</p>
 <p>Tags can have attributes and a body. Attributes are usually used to specify some required or optional parameters. Body is the content that is enclosed between opening and closing tags; preprocessors usually do something with this content:</p>
-<div class="xml codehilite"><pre><span></span><code><span class="nt">&lt;tag</span> <span class="na">attribute_1=</span><span class="s">&quot;value_1&quot;</span> <span class="err">...</span> <span class="na">attribute_N=</span><span class="s">&quot;value_N&quot;</span><span class="nt">&gt;</span>body<span class="nt">&lt;/tag&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;tag</span> <span class="na">attribute_1=</span><span class="s">&quot;value_1&quot;</span> <span class="err">...</span> <span class="na">attribute_N=</span><span class="s">&quot;value_N&quot;</span><span class="nt">&gt;</span>body<span class="nt">&lt;/tag&gt;</span>
 </code></pre></div>
 
 <p>Foliant under 1.0.8 tries to convert each attribute value into a boolean value, a number, or a string. Attribute values must be enclosed in double quotes (<code>"</code>).</p>

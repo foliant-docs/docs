@@ -1404,17 +1404,17 @@
                 <h1 id="customids">CustomIDs<a class="headerlink" href="#customids" title="Permanent link">&para;</a></h1>
 <p>CustomIDs is a preprocessor that allows to define custom identifiers (IDs) for headings in Markdown source by using Pandoc-style syntax in projects built with MkDocs or another backend that provides HTML output. These IDs may be used in hyperlinks that refer to a specific part of a page.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.customids
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.customids
 </code></pre></div>
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>customids</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">customids</span>
 </code></pre></div>
 
 <p>The preprocessor supports the following options:</p>
-<div class="yaml codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">customids</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">customids</span><span class="p">:</span>
         <span class="nt">stylesheet_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">customids.css</span>
         <span class="nt">targets</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre</span>
@@ -1430,7 +1430,7 @@
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
 <p>Custom ID may be specified after a heading content at the same line. Examples of Markdown syntax:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="o">#</span> <span class="k">First</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="k">First</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="err">}</span>
 
 <span class="n">A</span> <span class="n">paragraph</span><span class="p">.</span>
 
@@ -1440,7 +1440,7 @@
 </code></pre></div>
 
 <p>This Markdown source will be finally transformed into the HTML code:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_first_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor_container custom_id_anchor_container_level_1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom_id_for_first_heading&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_id_anchor custom_id_anchor_level_1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>First Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 
@@ -1456,7 +1456,7 @@
 <p>(Note that CustomIDs preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags <code>&lt;div class="custom_id_anchor_container"&gt;...&lt;/div&gt;</code> into Markdown code.)</p>
 <p>Custom IDs must not contain spaces and non-ASCII characters.</p>
 <p>Examples of hyperlinks that refer to custom IDs:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">1</span><span class="p">](</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">1</span><span class="p">](</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="p">)</span>
 
 <span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">2</span> <span class="k">in</span> <span class="k">some</span> <span class="n">document</span> <span class="k">at</span> <span class="n">the</span> <span class="k">current</span> <span class="n">site</span><span class="p">](</span><span class="o">/</span><span class="k">some</span><span class="o">/</span><span class="n">page</span><span class="o">/#</span><span class="n">custom_id_for_second_heading</span><span class="p">)</span>
 

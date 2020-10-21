@@ -1433,18 +1433,18 @@
 <p>This preprocessor converts a Foliant project source directory into a single Markdown file containing all the sources, preserving order and inheritance.</p>
 <p>This preprocessor is used by backends that require a single Markdown file as input instead of a directory. The Pandoc backend is one such example.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.flatten
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.flatten
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>This preprocessor is required by Pandoc backend, so if you use it, you don’t need to install Flatten or enable it in the project config manually.</p>
 <p>However, it’s still a regular preprocessor, and you can run it manually by listing it in <code>preprocessors</code>:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flatten</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">flatten</span><span class="p">:</span>
         <span class="nt">flat_src_file_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">__all__.md</span>
         <span class="nt">keep_sources</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>

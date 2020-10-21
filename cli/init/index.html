@@ -1418,12 +1418,12 @@
                 <h1 id="init">Init<a class="headerlink" href="#init" title="Permanent link">&para;</a></h1>
 <p>This CLI extension add <code>init</code> command that lets you create Foliant projects from templates.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.init
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.init
 </code></pre></div>
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Create project from the default “base” template:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant init
+<div class="codehilite"><pre><span></span><code>$ foliant init
 Enter the project name: Awesome Docs
 ✔ Generating Foliant project
 ─────────────────────
@@ -1431,7 +1431,7 @@ Project <span class="s2">&quot;Awesome Docs&quot;</span> created in awesome-docs
 </code></pre></div>
 
 <p>Create project from a custom template:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant init --template /path/to/custom/template
+<div class="codehilite"><pre><span></span><code>$ foliant init --template /path/to/custom/template
 Enter the project name: Awesome Customized Docs
 ✔ Generating Foliant project
 ─────────────────────
@@ -1439,19 +1439,19 @@ Project <span class="s2">&quot;Awesome Customized Docs&quot;</span> created in a
 </code></pre></div>
 
 <p>You can provide the project name without user prompt:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant init --name Awesome Docs
+<div class="codehilite"><pre><span></span><code>$ foliant init --name Awesome Docs
 ✔ Generating Foliant project
 ─────────────────────
 Project <span class="s2">&quot;Awesome Docs&quot;</span> created in awesome-docs
 </code></pre></div>
 
 <p>Another useful option is <code>--quiet</code>, which hides all output except for the path to the generated project:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant init --name Awesome Docs --quiet
+<div class="codehilite"><pre><span></span><code>$ foliant init --name Awesome Docs --quiet
 awesome-docs
 </code></pre></div>
 
 <p>To see all available options, run <code>foliant init --help</code>:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant init --help
+<div class="codehilite"><pre><span></span><code>$ foliant init --help
 usage: foliant init <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-n NAME<span class="o">]</span> <span class="o">[</span>-t NAME or PATH<span class="o">]</span> <span class="o">[</span>-q<span class="o">]</span>
 
 Generate new Foliant project.

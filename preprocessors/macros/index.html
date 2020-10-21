@@ -1460,12 +1460,12 @@
 <h2 id="macros-for-foliant">Macros for Foliant<a class="headerlink" href="#macros-for-foliant" title="Permanent link">&para;</a></h2>
 <p><em>Macro</em> is a string with placeholders that is replaced with predefined content during documentation build. Macros are defined in the config.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.macros
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.macros
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Enable the preprocessor by adding it to <code>preprocessors</code> and listing your macros in <code>macros</code> dictionary:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
       <span class="nt">macros</span><span class="p">:</span>
         <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a macro definition.</span>
@@ -1474,47 +1474,47 @@
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Here's the simplest usecase for macros:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
       <span class="nt">macros</span><span class="p">:</span>
         <span class="nt">support_number</span><span class="p">:</span> <span class="s">&quot;8</span><span class="nv"> </span><span class="s">800</span><span class="nv"> </span><span class="s">123-45-67&quot;</span>
 </code></pre></div>
 
 <p>Now, every time you need to insert your support phone number, you put a macro instead:</p>
-<div class="html codehilite"><pre><span></span><code>Call you support team: <span class="p">&lt;</span><span class="nt">macro</span><span class="p">&gt;</span>support_number<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>.
+<div class="codehilite"><pre><span></span><code>Call you support team: <span class="p">&lt;</span><span class="nt">macro</span><span class="p">&gt;</span>support_number<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>.
 
 Here&#39;s the number again: <span class="p">&lt;</span><span class="nt">m</span><span class="p">&gt;</span>support_number<span class="p">&lt;/</span><span class="nt">m</span><span class="p">&gt;</span>.
 </code></pre></div>
 
 <p>Macros support params. This simple feature may make your sources a lot tidier:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
       <span class="nt">macros</span><span class="p">:</span>
         <span class="nt">jira</span><span class="p">:</span> <span class="s">&quot;https://mycompany.jira.server.us/jira/ticket?ID={ticket_id}&quot;</span>
 </code></pre></div>
 
 <p>Now you don't need to remember the address of your Jira server if you want to reference a ticket:</p>
-<div class="html codehilite"><pre><span></span><code>Link to jira ticket: <span class="p">&lt;</span><span class="nt">macro</span> <span class="na">ticket_id</span><span class="o">=</span><span class="s">&quot;DOC-123&quot;</span><span class="p">&gt;</span>jira<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code>Link to jira ticket: <span class="p">&lt;</span><span class="nt">macro</span> <span class="na">ticket_id</span><span class="o">=</span><span class="s">&quot;DOC-123&quot;</span><span class="p">&gt;</span>jira<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <h3 id="realworld-example">Realworld example<a class="headerlink" href="#realworld-example" title="Permanent link">&para;</a></h3>
 <p>You can combine Macros with tags by other Foliant preprocessors.</p>
 <p>This can useful in documentation that should be built into multiple targets, e.g. site and pdf, when the same thing is done differently in one target than in the other.</p>
 <p>For example, to reference a page in MkDocs, you just put the Markdown file in the link:</p>
-<div class="html codehilite"><pre><span></span><code>Here is [another page](another_page.md).
+<div class="codehilite"><pre><span></span><code>Here is [another page](another_page.md).
 </code></pre></div>
 
 <p>But when building documents with Pandoc all sources are flattened into a single Markdown, so you refer to different parts of the document by anchor links:</p>
-<div class="html codehilite"><pre><span></span><code>Here is [another page](#another_page).
+<div class="codehilite"><pre><span></span><code>Here is [another page](#another_page).
 </code></pre></div>
 
 <p>This can be implemented using the <a href="https://foliant-docs.github.io/docs/preprocessors/flags/">Flags</a> preprocessor and its <code>&lt;if&gt;&lt;/if&gt;</code> tag:</p>
-<div class="html codehilite"><pre><span></span><code>Here is [another page](<span class="p">&lt;</span><span class="nt">if</span> <span class="na">backends</span><span class="o">=</span><span class="s">&quot;pandoc&quot;</span><span class="p">&gt;</span>#another_page<span class="p">&lt;/</span><span class="nt">if</span><span class="p">&gt;&lt;</span><span class="nt">if</span> <span class="na">backends</span><span class="o">=</span><span class="s">&quot;mkdocs&quot;</span><span class="p">&gt;</span>another_page.md<span class="p">&lt;/</span><span class="nt">if</span><span class="p">&gt;</span>).
+<div class="codehilite"><pre><span></span><code>Here is [another page](<span class="p">&lt;</span><span class="nt">if</span> <span class="na">backends</span><span class="o">=</span><span class="s">&quot;pandoc&quot;</span><span class="p">&gt;</span>#another_page<span class="p">&lt;/</span><span class="nt">if</span><span class="p">&gt;&lt;</span><span class="nt">if</span> <span class="na">backends</span><span class="o">=</span><span class="s">&quot;mkdocs&quot;</span><span class="p">&gt;</span>another_page.md<span class="p">&lt;/</span><span class="nt">if</span><span class="p">&gt;</span>).
 </code></pre></div>
 
 <p>This bulky construct quickly gets old when you use many cross-references in your documentation.</p>
 <p>To make your sources cleaner, move this construct to the config as a reusable macro:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
       <span class="nt">macros</span><span class="p">:</span>
         <span class="nt">ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span>
@@ -1522,7 +1522,7 @@ Here&#39;s the number again: <span class="p">&lt;</span><span class="nt">m</span
 </code></pre></div>
 
 <p>And use it in the source:</p>
-<div class="html codehilite"><pre><span></span><code>Here is [another page](<span class="p">&lt;</span><span class="nt">macro</span> <span class="na">pandoc</span><span class="o">=</span><span class="s">&quot;#another_page&quot;</span> <span class="na">mkdocs</span><span class="o">=</span><span class="s">&quot;another_page.md&quot;</span><span class="p">&gt;</span>ref<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>).
+<div class="codehilite"><pre><span></span><code>Here is [another page](<span class="p">&lt;</span><span class="nt">macro</span> <span class="na">pandoc</span><span class="o">=</span><span class="s">&quot;#another_page&quot;</span> <span class="na">mkdocs</span><span class="o">=</span><span class="s">&quot;another_page.md&quot;</span><span class="p">&gt;</span>ref<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>).
 </code></pre></div>
 
 <blockquote>

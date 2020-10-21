@@ -1516,7 +1516,7 @@
 <h2 id="apilinks-preprocessor-for-foliant">apilinks Preprocessor for Foliant<a class="headerlink" href="#apilinks-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Preprocessor for replacing API <em>reference</em>s in markdown files with links to actual method description on the API documentation web-page.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.apilinks
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.apilinks
 </code></pre></div>
 
 <h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
@@ -1528,7 +1528,7 @@
 
 <p>We thought, how cool it'd be if this fragment: <strong>`GET /user/authenticate`</strong> automatically transformed into link to this method description on your API docs website. That's what APILinks is for.</p>
 <p>Add it to your preprocessor list like this if your API docs is a Slate-like static website:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">My-API</span><span class="p">:</span>
@@ -1536,7 +1536,7 @@
 </code></pre></div>
 
 <p>Or like this if your API docs is a Swagger UI website:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">My-API</span><span class="p">:</span>
@@ -1558,7 +1558,7 @@
 <p>Notice that preprocessor figured out the correct anchor <code>#get-user-authenticate</code> by himself. Now instead of plain name of the method you've got a link to the method description!</p>
 <p>Ok, what if I have two different APIs: client API and admin API?</p>
 <p>No problem, put both of them into your config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
         <span class="nt">API</span><span class="p">:</span>
             <span class="nt">Client-API</span><span class="p">:</span>
@@ -1621,12 +1621,12 @@
 <p>Prefixes, explained before, are supported too.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>apilinks</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apilinks</span>
 </code></pre></div>
 
 <p>The preprocessor has a lot of options. For your convenience the required options are marked <em>(required)</em>; and those options which are used in customization are marked <em>(optional)</em>. Most likely you will need just one or two of the latter.</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
     <span class="nt">targets</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
@@ -1724,7 +1724,7 @@ Default:</dd>
 </blockquote>
 <p>Let's study an example and look how the behavior of the preprocessor will change in online and offline modes.</p>
 <p>We have three APIs described in the config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
       <span class="nt">API</span><span class="p">:</span>
         <span class="nt">Admin-API</span><span class="p">:</span>
@@ -1827,7 +1827,7 @@ Source:</p>
 <h3 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h3>
 <p>APILinks uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
 <p>The default reg-ex is as following:</p>
-<div class="re codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
+<div class="codehilite"><pre><span></span><code><span class="err">(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)?(?P&lt;verb&gt;OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|PATCH|LINK|UNLINK)\s+(?P&lt;command&gt;\S+)`)</span>
 </code></pre></div>
 
 <p>This expression accepts references like these:</p>
@@ -1871,7 +1871,7 @@ Source:</p>
 </table>
 <p>To redefine the regular expression add an option <code>reg-regex</code> to the preprocessor config.</p>
 <p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
       <span class="nt">reference</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="s">&#39;(?P&lt;source&gt;`((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`)&#39;</span>
@@ -1885,7 +1885,7 @@ Source:</p>
 <p>You can customize the <em>output</em>-string which will replace the <em>reference</em> string. To do that add a template into your config-file.</p>
 <p>A <em>template</em> is a string which may contain properties, surrounded by curly braces. These properties will be replaced with the values, and all the rest will remain unchanged.</p>
 <p>For example, look at the default template:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">apilinks</span><span class="p">:</span>
     <span class="nt">reference</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span>
@@ -1945,7 +1945,7 @@ Source:</p>
 <p>In online mode APILinks goes through the API web-page content and gathers all the methods which are described there.</p>
 <p>To do this preprocessor scans each HTML <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> tag and stores its <code>id</code> attribute (which is an <em>anchor</em> of the link to be constructed) and the contents of the tag (the <em>heading</em> itself).</p>
 <p>For example in this link:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-info&quot;</span><span class="p">&gt;</span>GET user/info<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p>the anchor would be <code>get-user-info</code> and the heading would be <code>GET user/info</code>.</p>
@@ -1956,7 +1956,7 @@ Source:</p>
 </code></pre></div>
 
 <p>You should use the following option:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">API</span><span class="p">:</span>
     <span class="nt">Client-API</span><span class="p">:</span>
         <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;Method</span><span class="nv"> </span><span class="s">{command}</span><span class="nv"> </span><span class="s">({verb})&#39;</span>
@@ -1971,7 +1971,7 @@ Source:</p>
 </code></pre></div>
 
 <p>You should use the following option:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">API</span><span class="p">:</span>
     <span class="nt">Client-API</span><span class="p">:</span>
         <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>

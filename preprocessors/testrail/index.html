@@ -1475,12 +1475,12 @@
 <p>Important notice! We have some problems with displaying an exclamation mark in the image links, so they are replaced with <code>(leading_exclamation_mark_here)</code> phrase in the text.</p>
 </blockquote>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.testrail
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.testrail
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>testrail</code> to <code>preprocessors</code> section in the project config. The preprocessor has a number of options (best values are set by default where possible):</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span>
     <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span>
@@ -1548,7 +1548,7 @@
 <dt><code>filename</code></dt>
 <dd>Path to the test cases file. It should be added to project chapters in <em>foliant.yml</em>. Default: <em>test_cases.md</em>. For example:</dd>
 </dl>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
 
 <span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
@@ -1698,7 +1698,7 @@
 </code></pre></div>
 
 <p>After <em>testrail</em> preprocessor process this test case, you will have <code>params['links_to_images']</code> parameter with list of image links in order of appearance to use in jinja template:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="p p-Indicator">[</span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">[</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;740&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Button](testrail_imgs/740.png)&#39;</span><span class="p p-Indicator">},</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;741&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Dialog</span><span class="nv"> </span><span class="s">box](testrail_imgs/741.png)&#39;</span><span class="p p-Indicator">},</span>
     <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;742&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[List</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">options](testrail_imgs/742.png)&#39;</span><span class="p p-Indicator">},</span>
@@ -1792,7 +1792,7 @@
 <dt><code>multi_param_select</code></dt>
 <dd>Here you can set the platforms for which you want to get test cases (case insensitive). For example, you have similar UX for mobile platforms and want to combine them:</dd>
 </dl>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">multi_param_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">platforms</span>
@@ -1967,7 +1967,7 @@
 <dt><code>choose_priorities</code></dt>
 <dd>Here you can set test case priorities to download (case insensitive).</dd>
 </dl>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
     <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">choose_priorities</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">critical, high, medium</span>

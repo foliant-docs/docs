@@ -1421,18 +1421,18 @@
 <p>Also this extension provides a simple working example of a client-side Web application that may be used to perform searching. By editing HTML, CSS and JS code you may customize it according to your needs.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>To install the preprocessor, run the command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.elasticsearch
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.elasticsearch
 </code></pre></div>
 
 <p>To use an example of a client-side Web application for searching, download <a href="https://github.com/foliant-docs/foliantcontrib.elasticsearch/tree/master/webapp_example/">these HTML, CSS, and JS files</a> and open the file <code>index.html</code> in your Web browser.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>elasticsearch</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">elasticsearch</span><span class="p">:</span>
         <span class="nt">es_url</span><span class="p">:</span> <span class="s">&#39;http://127.0.0.1:9200/&#39;</span>
         <span class="nt">index_name</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
@@ -1495,7 +1495,7 @@
 <p>When all the files are processed, the preprocessor calls Elasticsearch API to create the index.</p>
 <p>Optionally the preprocessor may call Elasticsearch API to delete previously created index.</p>
 <p>By using the <code>index_properties</code> option, you may override the default Elasticsearch settings when creating an index. Below is an example of JSON-formatted value of the <code>index_properties</code> option to create an index with Russian morphology analysis:</p>
-<div class="json codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;settings&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;analysis&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;filter&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1525,7 +1525,7 @@
 
 <p>You may perform custom search requests to Elasticsearch API.</p>
 <p>The <a href="https://github.com/foliant-docs/foliantcontrib.elasticsearch/tree/master/webapp_example/">simple client-side Web application example</a> that is provided as a part of this extension, performs requests like this:</p>
-<div class="json codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;multi_match&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;foliant&quot;</span><span class="p">,</span>

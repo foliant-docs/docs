@@ -1460,17 +1460,17 @@
 <h2 id="badges_1">Badges<a class="headerlink" href="#badges_1" title="Permanent link">&para;</a></h2>
 <p>Preprocessor for Foliant which helps to add badges to your documents. It uses <a href="https://shields.io">Shields.io</a> to generate badges.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.badges
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.badges
 </code></pre></div>
 
 <h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
 <p>To enable the preprocessor, add <code>badges</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">badges</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
         <span class="nt">server</span><span class="p">:</span> <span class="s">&#39;https://img.shields.io&#39;</span>
         <span class="nt">as_object</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -1510,7 +1510,7 @@
 
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>You can use variables in your badges to replace parts which repeat often. For example, if we need to add many badges to our Jira tracker, we may put the protocol and host parameters into a variable like this:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">badges</span><span class="p">:</span>
         <span class="nt">vars</span><span class="p">:</span>
             <span class="nt">jira</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https/issues.apache.org/jira</span>

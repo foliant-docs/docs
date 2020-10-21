@@ -1473,17 +1473,17 @@
 <p>Archeme preprocessor allows to integrate Foliant with <a href="https://github.com/foliant-docs/archeme/">Archeme</a>, a tool for describing and visualizing schemes and diagrams, primarily architectural. Archeme requires <a href="https://www.graphviz.org/">Graphviz</a> to be installed.</p>
 <p>Archeme preprocessor finds diagram definitions that are described with Archeme DSL, in source Markdown content, then calls Archeme and Graphviz to draw diagrams, and then replaces the diagram definitions with image references.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.archeme
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.archeme
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>archeme</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">archeme</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">archeme</span><span class="p">:</span>
         <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.archemecache</span>
         <span class="nt">graphviz_paths</span><span class="p">:</span>
@@ -1516,7 +1516,7 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert an Archeme diagram definition into your Markdown source, enclose it between <code>&lt;archeme&gt;...&lt;/archeme&gt;</code> tags:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="nt">&lt;archeme&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme&gt;</span>
 structure:
     - node:
         id: first
@@ -1538,7 +1538,7 @@ edges:
 </ul>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>Diagram definition with explicitly specified ID, config file, and output format:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">module_id=</span><span class="s">&quot;one&quot;</span> <span class="na">caption=</span><span class="s">&quot;Module 1&quot;</span> <span class="na">config_file=</span><span class="s">&quot;!project_path another_config.yml&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">module_id=</span><span class="s">&quot;one&quot;</span> <span class="na">caption=</span><span class="s">&quot;Module 1&quot;</span> <span class="na">config_file=</span><span class="s">&quot;!project_path another_config.yml&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
 structure:
     - node:
         id: first
@@ -1551,7 +1551,7 @@ edges:
 </code></pre></div>
 
 <p>Archeme DSL definition that prescribes to combine two modules with explicitly specified IDs:</p>
-<div class="markdown codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">action=</span><span class="s">&quot;merge&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">action=</span><span class="s">&quot;merge&quot;</span><span class="nt">&gt;</span>
 structure:
     - module:
         id: one

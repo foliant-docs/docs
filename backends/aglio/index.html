@@ -1519,17 +1519,17 @@
 <p>Note, that aglio is designed to render API Blueprint documents. Blueprint syntax is very close to that of Markdown and you may be tempted to use this backend as a general purpose static site generator. It may work in some cases, but is not guaranteed to work in all of them.</p>
 </blockquote>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.aglio
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.aglio
 </code></pre></div>
 
 <p>To use this backend <a href="https://github.com/danielgtaylor/aglio#installation--usage">Aglio should be installed</a> on your system:</p>
-<div class="bash codehilite"><pre><span></span><code>$ npm install -g aglio
+<div class="codehilite"><pre><span></span><code>$ npm install -g aglio
 </code></pre></div>
 
 <p>To test if you've installed aglio properly run the <code>aglio -h</code> command, which should return you a list of options.</p>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To generate a static website from your Foliant project run the following command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make site --with aglio
+<div class="codehilite"><pre><span></span><code>$ foliant make site --with aglio
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -1541,7 +1541,7 @@ Result: My_Awesome_Project.aglio
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use aglio backend. If it's installed, Foliant detects it.</p>
 <p>To customize the output, use options in <code>backend_config.aglio</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">aglio</span><span class="p">:</span>
     <span class="nt">aglio_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aglio</span>
     <span class="nt">params</span><span class="p">:</span>
@@ -1564,7 +1564,7 @@ Result: My_Awesome_Project.aglio
 </ul>
 <p>To add your own template, follow <a href="https://github.com/danielgtaylor/aglio#customizing-layout-templates">the instructions</a> in the official docs.</p>
 <p>To specify the template add the <code>theme-template</code> field to the <code>params</code> option:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">aglio</span><span class="p">:</span>
     <span class="nt">params</span><span class="p">:</span>
         <span class="nt">theme-template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">triple</span>
@@ -1581,7 +1581,7 @@ Result: My_Awesome_Project.aglio
 <li><code>streak</code>.</li>
 </ul>
 <p>You can also specify your own scheme in a LESS or CSS file.</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">aglio</span><span class="p">:</span>
     <span class="nt">params</span><span class="p">:</span>
         <span class="nt">theme-variables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flatly</span>
@@ -1589,7 +1589,7 @@ Result: My_Awesome_Project.aglio
 
 <h4 id="stylesheets">Stylesheets<a class="headerlink" href="#stylesheets" title="Permanent link">&para;</a></h4>
 <p>Finally, you can provide custom stylesheets in a LESS or CSS file in <code>theme-style</code> param:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">aglio</span><span class="p">:</span>
     <span class="nt">params</span><span class="p">:</span>
         <span class="nt">theme-style</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my-style.less</span>

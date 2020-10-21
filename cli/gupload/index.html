@@ -1445,13 +1445,13 @@
 <p>Gupload is the Foliant CLI extension, it's used to upload created documents to Google Drive.</p>
 <p>Gupload adds <code>gupload</code> command to Foliant.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="shell codehilite"><pre><span></span><code>$ pip install foliantcontrib.gupload
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.gupload
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To config the CLI extension, add <code>gupload</code> section in the project config. As <code>gupload</code> needs document to upload, appropriate backend settings also have to be here.</p>
 <p>CLI extension has a number of options (all fields are required but can have no values):</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">gupload</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">gupload</span><span class="p">:</span>
     <span class="nt">gdrive_folder_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Foliant upload</span>
     <span class="nt">gdrive_folder_id</span><span class="p">:</span>
     <span class="nt">gdoc_title</span><span class="p">:</span>
@@ -1493,7 +1493,7 @@
 </ol>
 <p>Now add the CLI extension to the project config with all settings strings. At this moment you have no data to set <em>Google Drive folder ID</em> and <em>google doc ID</em> so keep it empty.</p>
 <p>Run Foliant with <code>gupload</code> command:</p>
-<div class="shell codehilite"><pre><span></span><code>$ foliant gupload docx
+<div class="codehilite"><pre><span></span><code>$ foliant gupload docx
 ✔ Parsing config
 ✔ Applying preprocessor flatten
 ✔ Making docx with Pandoc

@@ -1460,17 +1460,17 @@
 <h2 id="dbml-docs-generator-for-foliant">DBML Docs Generator for Foliant<a class="headerlink" href="#dbml-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
 <p>This preprocessor generates Markdown documentation from <a href="https://www.dbml.org/">DBML</a> specification files . It uses <a href="https://github.com/Vanderhoof/PyDBML">PyDBML</a> for parsing DBML syntax and <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine for generating Markdown.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbmldoc
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.dbmldoc
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>dbmldoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">dbmldoc</span>
 </code></pre></div>
 
 <p>The preprocessor has a number of options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">dbmldoc</span><span class="p">:</span>
         <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/scheme.dbml</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">scheme.dbml</span>
@@ -1501,7 +1501,7 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</code> tag at the position in the document where the generated documentation should be inserted:</p>
-<div class="html codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 This document contains the automatically generated documentation of our Database schema.
 
@@ -1510,7 +1510,7 @@ This document contains the automatically generated documentation of our Database
 
 <p>Each time the preprocessor encounters the tag <code>&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to DBML spec file is taken from foliant.yml.</p>
 <p>You can also override some parameters (or all of them) in the tag options:</p>
-<div class="markdown codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code># Introduction
 
 Introduction text for API documentation.
 

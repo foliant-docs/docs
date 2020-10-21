@@ -1523,7 +1523,7 @@
                 
                 <h1 id="project-configuration">Project Configuration<a class="headerlink" href="#project-configuration" title="Permanent link">&para;</a></h1>
 <p>Configuration for Foliant is kept in a <a href="https://yaml.org/">YAML</a>-file in the project root. The default filename is <code>foliant.yml</code> (and that’s how it is referred to in other sections of this site), but you can pick a different name. In this case you should run foliant with <code>--config</code> option:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make pdf --config myconf.yml
+<div class="codehilite"><pre><span></span><code>$ foliant make pdf --config myconf.yml
 </code></pre></div>
 
 <h2 id="config-sections">Config Sections<a class="headerlink" href="#config-sections" title="Permanent link">&para;</a></h2>
@@ -1537,7 +1537,7 @@
 <h3 id="root-options">Root Options<a class="headerlink" href="#root-options" title="Permanent link">&para;</a></h3>
 <p>These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <a href="alt_structure/#altstructure">AltStructure</a> or <a href="../preprocessors/escapecode/#escapecode-and-unescapecode">EscapeCode</a>), so please refer to each extension’s respective docs for details.</p>
 <p>Here are all built-in root options:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
 <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myproj</span>
 <span class="nt">src_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">src</span>
 <span class="nt">tmp_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">__folianttmp__</span>
@@ -1557,7 +1557,7 @@
 <p><em>(list)</em></p>
 <p><code>chapters</code> is a list of paths to the Markdown sources which you want to be used in the project. These paths are always relative to your <code>src</code> dir.</p>
 <p>Here’s a basic chapters list:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tutorial.md</span>
@@ -1569,7 +1569,7 @@
 <li>the order in which chapters are mentioned in the list, will be preserved in the resulting build.</li>
 </ul>
 <p>Consider this example chapters list:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
     <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
@@ -1586,7 +1586,7 @@
 
 <p>In this example first two chapters are defined as a simple list, third chapter is a mapping with one element, and after that we see several mappings with nested lists.</p>
 <p>If we were building a PDF document with <a href="../backends/pandoc/#pandoc">Pandoc backend</a> or a static site with <a href="../backends/slate/#slate">Slate backend</a>, this complex chapter structure will be just ignored, as if we have supplied a simple flat list:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
@@ -1602,12 +1602,12 @@
 <p>In any case we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.</p>
 <p>But if we are building site with <a href="../backends/mkdocs/#mkdocs">MkDocs backend</a>, mappings become meaningful.</p>
 <p>For example, this element:</p>
-<div class="yaml codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
+<div class="codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
 </code></pre></div>
 
 <p>means "take the source from <code>tutorial_help.md</code> but change its title to <code>How To Use This Tutorial</code>" in the sidebar.</p>
 <p>And this element:</p>
-<div class="yaml codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">Creating Documentation With Foliant</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">Creating Documentation With Foliant</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span>
         <span class="p p-Indicator">-</span> <span class="nt">Preparing Config</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">root options.md</span>
@@ -1621,7 +1621,7 @@
 <h3 id="preprocessors"><code>preprocessors</code><a class="headerlink" href="#preprocessors" title="Permanent link">&para;</a></h3>
 <p><em>(list)</em></p>
 <p>All preprocessors which you want to be used in your project, should be listed under the <code>preprocessors</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
         <span class="nt">macros</span><span class="p">:</span>
             <span class="nt">ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span>
@@ -1643,7 +1643,7 @@
 <p>There are several things you have to keep in mind when setting up the preprocessors section:</p>
 <p><strong>The order matters</strong></p>
 <p>The order, in which the preprocessors are defined in the list, is the order they are run during build. For example, if you are using Includes preprocessor to get source code for a PlantUML scheme like this:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">plantuml</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">plantuml</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">include</span> <span class="na">url</span><span class="o">=</span><span class="s">&quot;http://example.com/scheme.puml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">include</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">plantuml</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1656,7 +1656,7 @@
 <h3 id="backend_config"><code>backend_config</code><a class="headerlink" href="#backend_config" title="Permanent link">&para;</a></h3>
 <p><em>(mapping)</em></p>
 <p>Keep all your backend settings in <code>backend_config</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
     <span class="nt">pandoc</span><span class="p">:</span>
         <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template/docs.tex</span>
         <span class="nt">vars</span><span class="p">:</span>
@@ -1684,13 +1684,13 @@
 <h3 id="include"><code>!include</code><a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
 <p>The <code>!inlude</code> modifier allows to insert content from another YAML-file.</p>
 <p>For example, if your chapters list has grown so big, that you want to keep it separately from the main config, you can put it into <code>chapters.yml</code> file and include it in <code>foliant.yml</code>:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml</span>
 </code></pre></div>
 
 <h3 id="path-project_path-rel_path"><code>!path</code>, <code>!project_path</code>, <code>!rel_path</code><a class="headerlink" href="#path-project_path-rel_path" title="Permanent link">&para;</a></h3>
 <p>When used in foliant.yml, <code>!path</code>, <code>!project_path</code>, <code>!rel_path</code> all do the same thing: they resolve the path to an absolute path to make sure the preprocessor or backend processes this file properly.</p>
 <p>It is recommended, that whenever you supply a path to any file in options, to precede it with the <code>!path</code> modifier:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
         <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
         <span class="nt">environment</span><span class="p">:</span>
@@ -1706,7 +1706,7 @@
 </code></pre></div>
 
 <p>Why there are three of them then, would you ask? The reason is that all <em>foliant tag options</em> in Markdown source files are in fact also YAML-strings, which means that you can supply a list in tag option like this:</p>
-<div class="html codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">vars</span><span class="o">=</span><span class="s">&quot;[a1, a2, a3]&quot;</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">vars</span><span class="o">=</span><span class="s">&quot;[a1, a2, a3]&quot;</span><span class="p">&gt;</span>
 Received the variables!
 
 {% for var in vars %}
@@ -1716,13 +1716,13 @@ Received the variables!
 </code></pre></div>
 
 <p>And that’s where <code>!project_path</code>, <code>!rel_path</code> modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:</p>
-<div class="html codehilite"><pre><span></span><code>Here are the contents of this project’s config:
+<div class="codehilite"><pre><span></span><code>Here are the contents of this project’s config:
 
 <span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;!project_path foliant.yml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">include</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p>By convention, all tag parameters, which accept paths to external files, are considered to be paths relative to current file. But if you want to play safe or make things more explicit, you may add the <code>!rel_path</code> tag, which ensures that the path the preprocessor will get, will be relative to current file:</p>
-<div class="html codehilite"><pre><span></span><code>Here are the contetns of the adjacent chapter:
+<div class="codehilite"><pre><span></span><code>Here are the contetns of the adjacent chapter:
 
 <span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;!rel_path chapter2.md&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">include</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1731,7 +1731,7 @@ Received the variables!
 <h3 id="env"><code>!env</code><a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
 <p>The <code>!env</code> modifier allows you to access environment variables in config, as well as in tag options.</p>
 <p>It is useful if you don’t want to keep credentials in your config files, for example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="c1"># foliant.yml</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># foliant.yml</span>
 
 <span class="nt">preprocessors</span><span class="p">:</span>
     <span class="nt">dbdoc</span><span class="p">:</span>
@@ -1741,11 +1741,11 @@ Received the variables!
 </code></pre></div>
 
 <p>Now to build this project add the variable to your command:</p>
-<div class="bash codehilite"><pre><span></span><code><span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
+<div class="codehilite"><pre><span></span><code><span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
 </code></pre></div>
 
 <p>Or, if you are using docker:</p>
-<div class="bash codehilite"><pre><span></span><code>docker-compose run --rm -e <span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
+<div class="codehilite"><pre><span></span><code>docker-compose run --rm -e <span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
 </code></pre></div>
                 
                   

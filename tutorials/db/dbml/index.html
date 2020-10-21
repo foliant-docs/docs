@@ -1465,18 +1465,18 @@
 <p>If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <a href="../../full_docker/#working-with-full-foliant-docker-image">Full Foliant Docker image</a>, you don’t need to do that, just go to the next stage.</p>
 <p>First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <a href="../../../installation/#installation">installation guide</a>.</p>
 <p>Next, let’s install <a href="../../../cli/init/#init">Foliant Init</a> to facilitate the task of creating new project:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
+<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.init
 </code></pre></div>
 
 <p>Install DBMLDoc and PlantUML preprocessors, and the Slate backend:</p>
-<div class="bash codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbmldoc foliantcontrib.slate, foliantcontrib.plantuml
+<div class="codehilite"><pre><span></span><code>$ pip3 install foliantcontrib.dbmldoc foliantcontrib.slate, foliantcontrib.plantuml
 </code></pre></div>
 
 <p>We are going to use <a href="../../../backends/slate/#slate">Slate</a> for building a static website with documentation, so you will need to <a href="https://github.com/slatedocs/slate/wiki/Using-Slate-Natively">install Slate dependencies</a>.</p>
 <p>Finally, <a href="https://plantuml.com/ru/starting">install PlantUML</a>, we will need it to draw database scheme.</p>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
 <p>Let’s create a Foliant project for our experiments. <code>cd</code> into the directory where you want your project created and run the <code>init</code> command:</p>
-<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ foliant init
 Enter the project name: Database Docs
 Generating project... Done
@@ -1487,7 +1487,7 @@ $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
 <p>The other option is to clone the <a href="https://github.com/foliant-docs/foliant_project_template/">Foliant Project template</a> repository:</p>
-<div class="bash codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
 $ mkdir database-docs
 $ git clone https://github.com/foliant-docs/foliant_project_template.git database-docs
 Cloning into <span class="s1">&#39;database-docs&#39;</span>...
@@ -1500,12 +1500,12 @@ $ <span class="nb">cd</span> database-docs
 </code></pre></div>
 
 <p>Next, let’s download the sample DBML spec and save it into file <code>schema.dbml</code> in the root your Foliant project:</p>
-<div class="bash codehilite"><pre><span></span><code>$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
+<div class="codehilite"><pre><span></span><code>$ wget https://raw.githubusercontent.com/holistics/dbml/master/packages/dbml-core/__tests__/parser/dbml-parse/input/general_schema.in.dbml -O schema.dbml
 </code></pre></div>
 
 <h2 id="setting-up-project">Setting up project<a class="headerlink" href="#setting-up-project" title="Permanent link">&para;</a></h2>
 <p>Now it’s time to set up our config. Open <code>foliant.yml</code> and add the following lines:</p>
-<div class="diff codehilite"><pre><span></span><code>title: Database Docs
+<div class="codehilite"><pre><span></span><code>title: Database Docs
 
 chapters:
   - index.md
@@ -1525,7 +1525,7 @@ chapters:
       plantuml_path: /usr/bin/plantuml.jar</code></p>
 </blockquote>
 <p>Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an <code>index.md</code> chapter created for us by <code>init</code> command, let’s put it in there. Open <code>src/index.md</code> and make it look like this:</p>
-<div class="diff codehilite"><pre><span></span><code># Welcome to Database Docs
+<div class="codehilite"><pre><span></span><code># Welcome to Database Docs
 
 <span class="gd">-Your content goes here.</span>
 <span class="gi">+&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</span>

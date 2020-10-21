@@ -1466,12 +1466,12 @@
 <li><code>slate</code> — generate a slate project out from your Foliant project.</li>
 </ul>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="bash codehilite"><pre><span></span><code>$ pip install foliantcontrib.slate
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.slate
 </code></pre></div>
 
 <p>To use this backend Slate should be installed in your system. Follow the <a href="https://github.com/lord/slate#getting-set-up">instruction</a> in Slate repo.</p>
 <p>To test if you've installed Slate properly head to the cloned Slate repo in your terminal and try the command below. You should get similar response.</p>
-<div class="bash codehilite"><pre><span></span><code>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
+<div class="codehilite"><pre><span></span><code>$ bundle <span class="nb">exec</span> <span class="nv">middleman</span>
 <span class="o">==</span> The Middleman is <span class="nv">loading</span>
 <span class="o">==</span> View your site at ...
 <span class="o">==</span> Inspect your site configuration at ...
@@ -1479,7 +1479,7 @@
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To convert Foliant project to Slate:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make slate
+<div class="codehilite"><pre><span></span><code>$ foliant make slate
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -1489,7 +1489,7 @@ Result: My_Project-2018-09-19.src/
 </code></pre></div>
 
 <p>Build a standalone website:</p>
-<div class="bash codehilite"><pre><span></span><code>$ foliant make site -w slate
+<div class="codehilite"><pre><span></span><code>$ foliant make site -w slate
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -1500,7 +1500,7 @@ Result: My_Project-2018-09-19.slate/
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use Slate backend. If it is installed, Foliant detects it.</p>
 <p>To customize the output, use options in <code>backend_config.slate</code> section:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
   <span class="nt">slate</span><span class="p">:</span>
     <span class="nt">shards</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">data/shards</span>
     <span class="nt">header</span><span class="p">:</span>
