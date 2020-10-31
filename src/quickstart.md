@@ -170,12 +170,12 @@ Foliant doesn’t force any *special* Markdown flavor.
 
 Open `foliant.yml` and add `hello.md` to `chapters`:
 
-```diff
+```
 title: Hello Foliant
 
 chapters:
   - index.md
-+ - hello.md
+  - hello.md
 ```
 
 Rebuild the project to see the new page:
@@ -212,7 +212,7 @@ Preprocessors is what makes Foliant special and extremely flexible. Preprocessor
 
 In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that <link src="preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
 
-These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
+These preprocessors were called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
 
 Now, let’s try to use a different kind of preprocessors, the ones that register new tags: <link src="preprocessors/blockdiag.md" title="Blockdiag">Blockdiag</link>.
 
