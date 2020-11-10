@@ -1586,11 +1586,11 @@ Result: Hello_Foliant-2020-05-25.pdf
 <p>Your project’s content lives in <code>*.md</code> files in <code>src</code> folder. You can split it between multiple files and subfolders.</p>
 <p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <a href="../preprocessors/flags/#flags"><code>&lt;if&gt;...&lt;/if&gt;</code></a>.</p>
 <p>Create a file <code>hello.md</code> in <code>src</code> with the following content:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Hello</span> <span class="n">Again</span>
+<div class="codehilite"><pre><span></span><code><span class="p">#</span> <span class="n">Hello</span> <span class="n">Again</span>
 
-<span class="n">This</span> <span class="k">is</span> <span class="n">regular</span> <span class="nb">text</span> <span class="k">generated</span> <span class="k">from</span> <span class="n">regular</span> <span class="n">Markdown</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="n">regular</span> <span class="n">text</span> <span class="n">generated</span> <span class="n">from</span> <span class="n">regular</span> <span class="n">Markdown</span><span class="p">.</span>
 
-<span class="n">Foliant</span> <span class="n">doesn</span><span class="err">’</span><span class="n">t</span> <span class="k">force</span> <span class="k">any</span> <span class="o">*</span><span class="n">special</span><span class="o">*</span> <span class="n">Markdown</span> <span class="n">flavor</span><span class="p">.</span>
+<span class="n">Foliant</span> <span class="n">doesn</span><span class="err">’</span><span class="n">t</span> <span class="k">force</span> <span class="n">any</span> <span class="o">*</span><span class="n">special</span><span class="o">*</span> <span class="n">Markdown</span> <span class="n">flavor</span><span class="p">.</span>
 </code></pre></div>
 
 <p>Open <code>foliant.yml</code> and add <code>hello.md</code> to <code>chapters</code>:</p>

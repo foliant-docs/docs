@@ -7,6 +7,27 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.apilinks 1.2.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#d3df7adae2c14744baf9fb4f63f847af</guid>
+            <pubDate>Mon, 02 Nov 2020 21:38:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: Endnpoint prefix was ignored in swagger and redoc site backends.</li>
+<li>Better logging.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#3e23edd721498b86d51d77982dcd4548</guid>
+            <pubDate>Wed, 28 Oct 2020 10:59:51 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: proper relative path generation for links.</li>
+<li>Fix: multiple issues when !path modifier is used in the link tag.</li>
+<li>BOF anchors now won't be added for mkdocs backend.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.pandoc 1.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#a07e2694111c96fd0357fadc1530c626</guid>
