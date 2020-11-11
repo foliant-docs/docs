@@ -1512,7 +1512,7 @@
                 
                 
                 <h1 id="apilinks">APILinks<a class="headerlink" href="#apilinks" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.apilinks.svg" /></p>
+<p><a href="https://pypi.org/project/foliantcontrib.apilinks/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.apilinks.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.apilinks"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.apilinks.svg?label=GitHub" /></a></p>
 <h2 id="apilinks-preprocessor-for-foliant">apilinks Preprocessor for Foliant<a class="headerlink" href="#apilinks-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
 <p>Preprocessor for replacing API <em>reference</em>s in markdown files with links to actual method description on the API documentation web-page.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1604,7 +1604,7 @@
 <li><strong>reference</strong> — reference to an API method in the source file. The one to be replaced with the link, e.g. <code>GET user/config</code></li>
 <li><strong>verb</strong> — HTTP method, e.g. <code>GET</code>, <code>POST</code>, etc.</li>
 <li><strong>command</strong> — resource used to represent method on the API documentation webpage, e.g. <code>/service/healthcheck</code>.</li>
-<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/satus</code> then the endpoint-prefix should be stated <code>/api/v0</code>. In references you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. apilinks will sort it out for you.</li>
+<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/satus</code> then the endpoint prefix should be stated <code>/api/v0</code>. In references you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. apilinks will sort it out for you.</li>
 <li><strong>output</strong> — string, which will replace the <em>reference</em>.</li>
 <li><strong>header</strong> — HTML header on the API documentation web-page of the method description, e.g. <code>&lt;h2 id="get-user-config"&gt;GET user/config&lt;/h2&gt;</code></li>
 <li><strong>anchor</strong> — web-anchor leading to the specific <em>header</em> on the API documentation web-page, e.g. <code>#get-user-config</code></li>
@@ -1649,7 +1649,7 @@
         <span class="nt">Admin-API</span><span class="p">:</span>
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
-            <span class="nt">endpoint-prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v0</span>
+            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v0</span>
             <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aglio</span>
         <span class="nt">Internal-API</span><span class="p">:</span>
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger-ui</span>
@@ -1710,7 +1710,7 @@ Default:</dd>
 <dd><em>(optional)</em> Only for offline mode. Marker to define the default API. If several APIs are marked default, preprocessor will choose the first of them. If none is marked default — the first API in the list will be chosen. The value of this item should be <code>true</code>.</dd>
 <dt><code>header_template</code></dt>
 <dd><em>(optional)</em> A template string describing the format of the headings in the API documentation web-page. It is needed to parse method headings from the web-page. Details in <strong>parsing API web-page</strong> section. Default: <code>'{verb} {command}'</code></dd>
-<dt><code>endpoint-prefix</code></dt>
+<dt><code>endpoint_prefix</code></dt>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — apilinks can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info coming soon. Default: <code>''</code></dd>
 <dt><code>site_backend</code></dt>
 <dd><em>(optional)</em> Name of the static site generator, which built your API documentation website. This affects how headers are converted to anchors. Default: <code>slate</code>. Available options: <code>aglio</code>, <code>mkdocs</code>, <code>redoc</code>, <code>slate</code>, <code>swagger</code>.</dd>
@@ -1935,7 +1935,7 @@ Source:</p>
 </tr>
 <tr>
 <td>endpoint_prefix</td>
-<td>Endpoint prefix to the API (if <code>endpoint-prefix</code> option is filled in)</td>
+<td>Endpoint prefix to the API (if <code>endpoint_prefix</code> option is filled in)</td>
 <td><code>/api/v0</code></td>
 </tr>
 </tbody>
@@ -2000,7 +2000,7 @@ Source:</p>
 </tr>
 <tr>
 <td>endpoint_prefix</td>
-<td>Endpoint prefix to the API (if <code>endpoint-prefix</code> option is filled in)</td>
+<td>Endpoint prefix to the API (if <code>endpoint_prefix</code> option is filled in)</td>
 <td><code>/api/v0</code></td>
 </tr>
 </tbody>
