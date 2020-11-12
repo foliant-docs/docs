@@ -7,6 +7,16 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.plantuml 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#2d3ccd5f5ef505c5e6ca201f54e9579d</guid>
+            <pubDate>Thu, 12 Nov 2020 12:26:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Config options now can be overriden in tag options.</li>
+<li>Add <escaped hash="4197e7b6655a11278694b822e55694fa"></escaped> option, which allows (when <escaped hash="249091efa412cf5e332461c484b979d0"></escaped>) to insert svg-code instead of image into the document.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbdoc 0.1.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#e010e771a5a2f5cee99bc5c07a359bfc</guid>
