@@ -7,6 +7,33 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.utils.header_anchors 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#64a9836354f433a5983a81ae4a33ef7d</guid>
+            <pubDate>Wed, 18 Nov 2020 11:44:22 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add IDGenerator class.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.customids 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.customids.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.customids.git#5a7c3fe78e94c0ede82edeba82a7335c</guid>
+            <pubDate>Tue, 17 Nov 2020 10:54:01 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Styles are now inserted after YAML Front Matter if that is present.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.preprocessor_ext 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#9c8b3a77fc174b9d83d6616e5e088d35</guid>
+            <pubDate>Mon, 16 Nov 2020 15:35:00 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: allow_fail decorator now works for any function with any set of parameters.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.plantuml 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#2d3ccd5f5ef505c5e6ca201f54e9579d</guid>
@@ -1895,6 +1922,17 @@
             <pubDate>Wed, 27 Mar 2019 15:12:45 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Added as_image option.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.anchors 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#81e6d36382ab63705639231783ee63d1</guid>
+            <pubDate>Thu, 21 Mar 2019 16:54:01 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Anchor headings conflicts are now more accurate, because for flat backends are checked for all chapters.</li>
+<li>Anchors with illegal characters (list in readme) now will be removed.</li>
+<li>Preprocessor now can also work with custom ids.</li>
 </ul>]]></description>
         </item>
         <item>

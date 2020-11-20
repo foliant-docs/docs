@@ -1470,7 +1470,7 @@
                 
                 
                 <h1 id="anchors">Anchors<a class="headerlink" href="#anchors" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.anchors.svg" /></p>
+<p><a href="https://pypi.org/project/foliantcontrib.anchors/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.anchors.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.anchors"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.anchors.svg?label=GitHub" /></a></p>
 <h2 id="anchors_1">Anchors<a class="headerlink" href="#anchors_1" title="Permanent link">&para;</a></h2>
 <p>Preprocessor which allows to use arbitrary anchors in Foliant documents.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1488,18 +1488,27 @@
     <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
         <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
         <span class="nt">tex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+        <span class="nt">anchors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+        <span class="nt">custom_ids</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </code></pre></div>
 
 <dl>
 <dt><code>element</code></dt>
-<dd>Template of an HTML-element which will be placed instead of the <code>&lt;anchor&gt;</code> tag. In this template <code>{anchor}</code> will be replaced with the tag contents. Default: <code>'&lt;span id="{anchor}"&gt;&lt;/span&gt;'</code></dd>
+<dd>Template of an HTML-element which will be placed instead of the <code>&lt;anchor&gt;</code> tag. In this template <code>{anchor}</code> will be replaced with the tag contents. Ignored when tex is <code>True</code>. Default: <code>'&lt;span id="{anchor}"&gt;&lt;/span&gt;'</code></dd>
 <dt><code>tex</code></dt>
 <dd>If this option is <code>True</code>, preprocessor will try to use TeX-language anchors: <code>\hypertarget{anchor}{}</code>. Default: <code>False</code></dd>
 </dl>
 <blockquote>
 <p>Notice, this option will work only with <code>pdf</code> target. For all other targets it is set to <code>False</code>.</p>
 </blockquote>
+<dl>
+<dt><code>anchors</code></dt>
+<dd>If this options is <code>True</code>, anchors tag will be processed. Turn off if you only want to process custom IDs. Default: <code>True</code></dd>
+<dt><code>custom_ids</code></dt>
+<dd>Since version 1.0.5 preprocessor Anchors can also process Pandoc-style custom IDs. Set this option to <code>True</code> to do that. Default: <code>False</code>.</dd>
+</dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p><strong>anchors</strong></p>
 <p>Just add an <code>anchor</code> tag to some place and then use an ordinary Markdown-link to this anchor:</p>
 <div class="codehilite"><pre><span></span><code>...
 
@@ -1532,17 +1541,37 @@ Cinty| 25  | 42
 Something&#39;s wrong with Mike, [look](#Mike)!
 </code></pre></div>
 
+<p><strong>custom IDs</strong></p>
+<p>Since version 1.0.5 preprocessor Anchors can also process <a href="https://pandoc.org/MANUAL.html#heading-identifiers">Pandoc-style custom heading identifiers</a> (previously you had to use <a href="https://foliant-docs.github.io/docs/preprocessors/customids/">CustomIDs preprocessor</a> for that purpose). To use this function, turn on the <code>custom_ids</code> option in your foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">anchors</span><span class="p">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">...</span>
+        <span class="l l-Scalar l-Scalar-Plain">custom_ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+</code></pre></div>
+
+<p>Then add custom identifiers to your headings:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">My</span> <span class="n">heading</span> <span class="err">{</span><span class="o">#</span><span class="n">foo</span><span class="err">}</span>
+
+<span class="n">Lorem</span> <span class="n">ipsum</span><span class="p">,</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span> <span class="n">consectetur</span> <span class="n">adipisicing</span> <span class="n">elit</span><span class="p">.</span> <span class="n">Omnis</span> <span class="n">non</span> <span class="n">vitae</span> <span class="n">placeat</span> <span class="n">sapiente</span> <span class="n">reprehenderit</span> <span class="n">officia</span><span class="p">.</span>
+</code></pre></div>
+
+<p>After processing your text will be look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">&quot;custom_id&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+
+# My heading
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis non vitae placeat sapiente reprehenderit officia.
+</code></pre></div>
+
 <h3 id="additional-info">Additional info<a class="headerlink" href="#additional-info" title="Permanent link">&para;</a></h3>
 <p><strong>1. Anchors are case sensitive</strong></p>
 <p><code>Markdown</code> and <code>MarkDown</code> are two different anchors.</p>
 <p><strong>2. Anchors should be unique</strong></p>
 <p>You can't use two anchors with the same name in one document.</p>
-<p>If preprocessor notices repeating anchors in one md-file it will throw you a warning.</p>
-<p>If there are repeating anchors in different md-files and they all go into single pdf or docx, all links will lead to the first one.</p>
+<p>If preprocessor notices repeating anchors in one md-file it will throw you a warning. If you are building a flat document (e.g. PDF or docx with Pandoc), you will receive the warning even if anchor repeats in different md-files.</p>
 <p><strong>3. Anchors may conflict with headers</strong></p>
 <p>Headers are usually assigned anchors of their own. Be careful, your anchors may conflict with them.</p>
 <p>Preprocessor will try to detect if you are using anchor which is already taken by the header and warn you in console.</p>
-<p>Remember, that header anchors are almost always in lower-case and almost never use special symbols except <code>-</code>.</p>
 <p><strong>4. Some symbols are restricted</strong></p>
 <p>You can't use these symbols in anchors:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">[]&lt;&gt;\&quot;</span>
@@ -1564,11 +1593,13 @@ Something&#39;s wrong with Mike, [look](#Mike)!
 
 <h3 id="notice-for-mkdocs">Notice for Mkdocs<a class="headerlink" href="#notice-for-mkdocs" title="Permanent link">&para;</a></h3>
 <p>In many Mkdocs themes the top menu lays over the text with absolute position. In this situation all anchors will be hidden by the menu.</p>
-<p>Possible solution is to use <code>element</code> option. Example config:</p>
+<p>Possible solution is to change the <code>element</code> option for your anchors to have a vertical offset. Example config:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
         <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">style=&quot;display:block;</span><span class="nv"> </span><span class="s">margin:-3.1rem;</span><span class="nv"> </span><span class="s">padding:3.1rem;&quot;</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
 </code></pre></div>
+
+<p>Or, even better, you can assign your anchor a class in <code>element</code> and add these rules to your custom mkdocs styles.</p>
                 
                   
                 
