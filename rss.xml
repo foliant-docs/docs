@@ -7,6 +7,36 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.templateparser 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#500c4e86ef576a8835e241fd61361d90</guid>
+            <pubDate>Fri, 04 Dec 2020 11:55:46 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Config, backend name and target are now available under <escaped hash="bae6c3e44ceacbb9a22d6583c36564c6"></escaped>, <escaped hash="b46ea96216eca5291531638a12c4896d"></escaped> and <escaped hash="801946d45f04aa6cea535e33f83867c1"></escaped> variables.</li>
+<li>All the above variables along with <escaped hash="071d88d257bddad6490719e081065bd7"></escaped> and <escaped hash="b4b91136b716b15a225149598b29a85b"></escaped> are now moved from <escaped hash="f8ccae7dbfb67c5098d896a45573aa96"></escaped> into <escaped hash="a489e5130cba7e982ed329d83d098052"></escaped> variable.</li>
+<li>Fix: external context was overriding meta variables.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.replace 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.replace.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.replace.git#c92d4c0832af11ec4c8f1ed642a38984</guid>
+            <pubDate>Thu, 03 Dec 2020 14:10:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Bug fixed with several replaceable items in one string.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#a945292c19c26d8395d459fa84ff70f7</guid>
+            <pubDate>Fri, 27 Nov 2020 17:11:51 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: BOF anchors bug</li>
+<li>Fix: common paths processing</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.utils.header_anchors 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#64a9836354f433a5983a81ae4a33ef7d</guid>

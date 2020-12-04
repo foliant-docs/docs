@@ -1140,6 +1140,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#built-in-variables" class="md-nav__link">
+    Built-in variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#integration-with-metadata" class="md-nav__link">
     Integration with metadata
   </a>
@@ -1149,6 +1156,13 @@
           <li class="md-nav__item">
   <a href="#extends-and-includes" class="md-nav__link">
     Extends and includes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    Pro tips
   </a>
   
 </li>
@@ -1453,6 +1467,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#built-in-variables" class="md-nav__link">
+    Built-in variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#integration-with-metadata" class="md-nav__link">
     Integration with metadata
   </a>
@@ -1462,6 +1483,13 @@
           <li class="md-nav__item">
   <a href="#extends-and-includes" class="md-nav__link">
     Extends and includes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    Pro tips
   </a>
   
 </li>
@@ -1602,35 +1630,17 @@ Base path: <span class="cp">{{</span> <span class="nv">base_path</span> <span cl
 <span class="nt">&lt;/jinja2&gt;</span>
 </code></pre></div>
 
-<p><strong>Pro tip #1</strong></p>
-<p>All context variables are also available in the <code>_foliant_context</code> dictionary. It may be handy if you don't know at design-time which key names are supplied in the external context file:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;jinja2</span> <span class="na">ext_context=</span><span class="s">&quot;customers.yml&quot;</span><span class="nt">&gt;</span>
-<span class="cp">{%</span> <span class="k">for</span> <span class="nv">name</span><span class="o">,</span> <span class="nv">data</span> <span class="k">in</span> <span class="nv">_foliant_context.items</span><span class="o">()</span> <span class="cp">%}</span>
-
-# Customer <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
-
-Purchase: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;purchase&#39;</span><span class="o">]</span> <span class="cp">}}</span>
-Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;order_id&#39;</span><span class="o">]</span> <span class="cp">}}</span>
-
-<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
-<span class="nt">&lt;/jinja2&gt;</span>
-</code></pre></div>
-
-<p><strong>Pro tip #2</strong></p>
-<p>If your context file is inside private git repository, you can utilize the power of <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a> preprocessor to retrieve it.</p>
-<ol>
-<li>Create a file in your <code>src</code> dir, for example, <code>context.md</code> (<code>md</code> extension is obligatory, includes only process markdown files).</li>
-<li>Add an includes tag:</li>
-</ol>
-<p><strong>&lt;include repo_url="https://my_login:my_password@my.git.org/my_repo.git" path="path/to/file.yml"&gt;</include></strong></p>
-<ol>
-<li>And supply path to this file in your <code>ext_context</code> param:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="err">&lt;jinja2 ext_context=&quot;context.md&quot;&gt;</span>
-</code></pre></div>
-
-<p><strong>Pro tip #3</strong></p>
-<p>If data inside your external context file is not a dictionary, it will be available inside template under <code>context</code> variable (or <code>_foliant_context['context']</code>).</p>
+<h4 id="built-in-variables">Built-in variables<a class="headerlink" href="#built-in-variables" title="Permanent link">&para;</a></h4>
+<p>There are some variables that are available in your template by default:</p>
+<ul>
+<li><code>_foliant_context</code> — dictionary with all user-defined variables, from tag parameters, <code>context</code> or <code>ext_context</code> variables,</li>
+<li><code>_foliant_vars</code> — dictionary with all variables mentioned below (in case of name collisions),</li>
+<li><code>meta</code> — dictionary with current chapter's metadata, details in the next chapter,</li>
+<li><code>meta_object</code> — project's meta object, details in the next chapter,</li>
+<li><code>config</code> — Foliant project config,</li>
+<li><code>target</code> — current target,</li>
+<li><code>backend</code> — current backend.</li>
+</ul>
 <h4 id="integration-with-metadata">Integration with metadata<a class="headerlink" href="#integration-with-metadata" title="Permanent link">&para;</a></h4>
 <p>Templates support latest Foliant <a href="https://foliant-docs.github.io/docs/cli/meta/">metadata</a> functionality. You can find the meta dictionary for current section under <code>meta</code> variable inside template:</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ready&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Custom Title&quot;</span> <span class="na">author</span><span class="o">=</span><span class="s">&quot;John&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
@@ -1670,6 +1680,36 @@ List of chapters in this project:
 <h4 id="extends-and-includes">Extends and includes<a class="headerlink" href="#extends-and-includes" title="Permanent link">&para;</a></h4>
 <p>Extends and includes work in templates. The path of the extending\included file is relative to the Markdown file where the template lives.</p>
 <p>In Jinja2 engine you can override the path of the included\extended files with <code>root</code> engine_param. <strong>Note that this param is relative to project root.</strong></p>
+<h4 id="pro-tips">Pro tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h4>
+<p><strong>Pro tip #1</strong></p>
+<p>All context variables are also available in the <code>_foliant_context</code> dictionary. It may be handy if you don't know at design-time which key names are supplied in the external context file:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;jinja2</span> <span class="na">ext_context=</span><span class="s">&quot;customers.yml&quot;</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">name</span><span class="o">,</span> <span class="nv">data</span> <span class="k">in</span> <span class="nv">_foliant_context.items</span><span class="o">()</span> <span class="cp">%}</span>
+
+# Customer <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
+
+Purchase: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;purchase&#39;</span><span class="o">]</span> <span class="cp">}}</span>
+Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o">[</span><span class="s1">&#39;order_id&#39;</span><span class="o">]</span> <span class="cp">}}</span>
+
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/jinja2&gt;</span>
+</code></pre></div>
+
+<p><strong>Pro tip #2</strong></p>
+<p>If your context file is inside private git repository, you can utilize the power of <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a> preprocessor to retrieve it.</p>
+<ol>
+<li>Create a file in your <code>src</code> dir, for example, <code>context.md</code> (<code>md</code> extension is obligatory, includes only process markdown files).</li>
+<li>Add an includes tag:</li>
+</ol>
+<p><strong>&lt;include repo_url="https://my_login:my_password@my.git.org/my_repo.git" path="path/to/file.yml"&gt;</include></strong></p>
+<ol>
+<li>And supply path to this file in your <code>ext_context</code> param:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="err">&lt;jinja2 ext_context=&quot;context.md&quot;&gt;</span>
+</code></pre></div>
+
+<p><strong>Pro tip #3</strong></p>
+<p>If data inside your external context file is not a dictionary, it will be available inside template under <code>context</code> variable (or <code>_foliant_context['context']</code>).</p>
                 
                   
                 
