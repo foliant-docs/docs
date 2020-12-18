@@ -1463,6 +1463,7 @@
         <span class="nt">password</span><span class="p">:</span> <span class="kt">!CONFLUENCE_PASS</span>
         <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
         <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+        <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 
 <dl>
@@ -1483,6 +1484,8 @@
 <dd>The space key where the page titles will be searched for.</dd>
 <dt><code>pandoc_path</code></dt>
 <dd>Path to Pandoc executable (Pandoc is used to convert Confluence content into Markdown).</dd>
+<dt><code>verify_ssl</code></dt>
+<dd>If <code>false</code>, SSL verification will be turned off. Sometimes when dealing with Confluence servers in Intranets it's easier to turn this option off rather than fight with admins. Not recommended to turn off for public servers in production. Default: <code>true</code></dd>
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;confluence&gt;&lt;/confluence&gt;</code> tag at the position in the document where the content from Confluence should be inserted. The page is defined by its <code>id</code> or <code>title</code>. If you are specifying page by title, you will also need to set <code>space_key</code> either in tag or in the preprocessor options.</p>

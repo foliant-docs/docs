@@ -1486,17 +1486,17 @@ This parapraph is for management only.
 
 <p>A block can depend on multiple flags. You can pick whether all tags must be present for the block to appear, or any of them (by default, <code>kind="all"</code> is assumed):</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="k">both</span> <span class="n">`spam`</span> <span class="k">and</span> <span class="n">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
+<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="k">both</span> <span class="n n-Quoted">`spam`</span> <span class="k">and</span> <span class="n n-Quoted">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
 <span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
 
 <span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;any&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">if</span> <span class="k">both</span> <span class="n">`spam`</span> <span class="k">or</span> <span class="n">`eggs`</span> <span class="k">is</span> <span class="k">set</span><span class="p">.</span>
+<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">if</span> <span class="k">both</span> <span class="n n-Quoted">`spam`</span> <span class="k">or</span> <span class="n n-Quoted">`eggs`</span> <span class="k">is</span> <span class="k">set</span><span class="p">.</span>
 <span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
 </code></pre></div>
 
 <p>You can also list flags that must <em>not</em> be set for the block to be included:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="n">neither</span> <span class="n">`spam`</span> <span class="n">nor</span> <span class="n">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
+<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="n">neither</span> <span class="n n-Quoted">`spam`</span> <span class="n">nor</span> <span class="n n-Quoted">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
 <span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
 </code></pre></div>
 

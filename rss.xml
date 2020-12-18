@@ -7,6 +7,17 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.15</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#81c35a4c221deb206a28af818dce8358</guid>
+            <pubDate>Fri, 18 Dec 2020 11:55:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: [experimental] <escaped hash="051a7609ba090071ec7fa0258fc76e07"></escaped> tags are now not necessary for <escaped hash="54ea76cefee8454a27cb1e8fd9ce53f3"></escaped> tags, they are escaped automatically.</li>
+<li>New: supply images with additional parameters using <escaped hash="a05c75a73c68097f63a8acac34e8ed3f"></escaped> tag.</li>
+<li>New: <escaped hash="4d9f6b7723c0a7abc30922c2120e78b5"></escaped> parameter.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.templateparser 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#500c4e86ef576a8835e241fd61361d90</guid>

@@ -591,6 +591,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#advanced-images" class="md-nav__link">
+    Advanced images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#code-blocks-processing" class="md-nav__link">
     Code blocks processing
   </a>
@@ -1509,6 +1516,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#advanced-images" class="md-nav__link">
+    Advanced images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#code-blocks-processing" class="md-nav__link">
     Code blocks processing
   </a>
@@ -1597,6 +1611,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+    <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
     <span class="nt">codeblocks</span><span class="p">:</span>
         <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
@@ -1638,7 +1653,9 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dt><code>resolve_if_changed</code></dt>
 <dd>Delete inline comment from the source if the commented text was changed. This will automatically mark the comment as resolved. Default: <code>false</code></dd>
 <dt><code>pandoc_path</code></dt>
-<dd>Path to Pandoc executable (Pandoc is used to convert Markdown into HTML).</dd>
+<dd>Path to Pandoc binary (Pandoc is used to convert Markdown into HTML).</dd>
+<dt><code>verify_ssl</code></dt>
+<dd>If <code>false</code>, SSL verification will be turned off. Sometimes when dealing with Confluence servers in Intranets it's easier to turn this option off rather than fight with admins. Not recommended to turn off for public servers in production. Default: <code>true</code></dd>
 <dt><code>codeblocks</code></dt>
 <dd>Configuration for converting Markdown code blocks into code-block macros. See details in <strong>Code blocks processing</strong> sections.</dd>
 </dl>
@@ -1761,6 +1778,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, atque!
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam cumque soluta sequi blanditiis, voluptatibus quaerat similique nihil debitis repellendus.
 </code></pre></div>
 
+<p>In version 0.6.15 we've added an experimental feature of automatically escaping <code>&lt;ac:...&gt;&lt;/ac:...&gt;</code> tags for you. So if you want to insert, say, an image with native Confluence tag <code>ac:image</code>, you don't have to wrap it in <code>raw_confluence</code> tag, but keep in mind following caveats:</p>
+<ul>
+<li>singleton <code>ac:...</code> tags are not supported, so <code>&lt;ac:emoticon ac:name="cross" /&gt;</code> will not work, you will have to provide the closing tag: <code>&lt;ac:emoticon ac:name="cross"&gt;&lt;/ac:emoticon&gt;</code>,</li>
+<li>only <code>ac:...</code> tags are escaped right now, other confluence tags like <code>ri:...</code> or <code>at:...</code> are left as is. If these tags appear inside <code>ac:...</code> tag, it's ok. If otherwise, <code>ac:...</code> tag appears inside <code>at:...</code> or <code>ri:...</code> tag, everything will break.</li>
+</ul>
+<h4 id="advanced-images">Advanced images<a class="headerlink" href="#advanced-images" title="Permanent link">&para;</a></h4>
+<p>Confluence has an <code>ac:image</code> tag which allows you to transform and format your attached images:</p>
+<ul>
+<li>resize,</li>
+<li>set alignment,</li>
+<li>add borders,</li>
+<li>etc.</li>
+</ul>
+<p>Since version <code>0.6.15</code> you have access to all these features. Now instead of plain Markdown-image syntax you can use native Confluence image syntax. Add an <code>ac:image</code> tag as if you were editing page source in Confluence interface and use local relative path to the image as if you were inserting Markdown-image.</p>
+<p>For example, if you have an image defined like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">!</span><span class="p">[</span><span class="n">My</span> <span class="n">image</span><span class="p">](</span><span class="n">img</span><span class="o">/</span><span class="n">picture</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+</code></pre></div>
+
+<p>and you want to resize it to 600px and align to center, replace it with following tag:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;ac:image</span> <span class="na">ac:height=</span><span class="s">&quot;600&quot;</span> <span class="na">ac:align=</span><span class="s">&quot;center&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ri:attachment</span> <span class="na">ri:filename=</span><span class="s">&quot;img/picture.png&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/ac:image&gt;</span>
+</code></pre></div>
+
+<p>Here's <a href="https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html#ConfluenceStorageFormat-Images">a link to Confluence docs</a> about <code>ac:image</code> tag and all possible options.</p>
 <h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
 <p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
