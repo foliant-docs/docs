@@ -1631,13 +1631,18 @@
 <dt><code>revision</code></dt>
 <dd>Revision of the Git repository.</dd>
 <dt><code>from_heading</code></dt>
-<dd>Full content of the starting heading when it’s necessary to include some part of the referenced file content. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level.</dd>
+<dd>Full content of the starting heading when it’s necessary to include some part of the referenced file content. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level. <em>The referenced heading is included.</em></dd>
 <dt><code>to_heading</code></dt>
-<dd>Full content of the ending heading when it’s necessary to include some part of the referenced file content.</dd>
+<dd>Full content of the ending heading when it’s necessary to include some part of the referenced file content. <em>The referenced heading will not be included.</em></dd>
 <dt><code>from_id</code></dt>
-<dd>ID of the starting heading or starting anchor when it’s necessary to include some part of the referenced file content. The <code>from_id</code> attribute has higher priority than <code>from_heading</code>. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level.</dd>
+<dd>ID of the starting heading or starting anchor when it’s necessary to include some part of the referenced file content. The <code>from_id</code> attribute has higher priority than <code>from_heading</code>. If the <code>to_heading</code>, <code>to_id</code>, or <code>to_end</code> attribute is not specified, the preprocessor cuts the included content to the next heading of the same level. <em>The referenced id is included.</em></dd>
+</dl>
+<blockquote>
+<p><strong>NOTE:</strong> If you want <code>from_id</code> and <code>to_id</code> features to work with <a href="https://foliant-docs.github.io/docs/preprocessors/anchors/">anchors</a>, make sure that anchors preprocessor is listed <em>after</em> includes in foliant.yml.</p>
+</blockquote>
+<dl>
 <dt><code>to_id</code></dt>
-<dd>ID of the ending heading or ending anchor when it’s necessary to include some part of the referenced file content. The <code>to_id</code> attribute has higher priority than <code>to_heading</code>.</dd>
+<dd>ID of the ending heading or ending anchor when it’s necessary to include some part of the referenced file content. The <code>to_id</code> attribute has higher priority than <code>to_heading</code>. <em>The referenced id will not be included.</em></dd>
 <dt><code>to_end</code></dt>
 <dd>
 <p>Flag that tells the preprocessor to cut to the end of the included content. Otherwise, if <code>from_heading</code> or <code>from_id</code> is specified, the preprocessor cuts the included content to the next heading of the same level as the starting heading, or the heading that precedes the starting anchor.</p>
