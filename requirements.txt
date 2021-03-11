@@ -5,4 +5,5 @@ foliantcontrib.macros >= 1.0.4
 foliantcontrib.mkdocs >= 1.0.12
 foliantcontrib.pandoc >= 1.0.11
 foliantcontrib.superlinks >= 1.0.6
+foliantcontrib.yaml_include >= 1.0.0
 mkdocs-material == 4.6.3

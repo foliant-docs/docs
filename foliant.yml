@@ -32,6 +32,7 @@ chapters:
         - preprocessors/admonitions.md
         - preprocessors/anchors.md
         - preprocessors/apilinks.md
+        - preprocessors/apireferences.md
         - preprocessors/archeme.md
         - preprocessors/badges.md
         - preprocessors/bindfigma.md
@@ -84,6 +85,7 @@ chapters:
         - config/alt_structure.md
         - config/from.md
         - config/slugs.md
+        - config/yaml_include.md
     - releases.md
 
 preprocessors:

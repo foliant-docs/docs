@@ -4,6 +4,7 @@
 - https://github.com/foliant-docs/foliantcontrib.alt_structure.git
 - https://github.com/foliant-docs/foliantcontrib.anchors.git
 - https://github.com/foliant-docs/foliantcontrib.apilinks.git
+- https://github.com/foliant-docs/foliantcontrib.apireferences.git
 - https://github.com/foliant-docs/foliantcontrib.archeme.git
 - https://github.com/foliant-docs/foliantcontrib.badges.git
 - https://github.com/foliant-docs/foliantcontrib.bindfigma.git
@@ -57,6 +58,7 @@
 - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
 - https://github.com/foliant-docs/foliantcontrib.testcoverage.git
 - https://github.com/foliant-docs/foliantcontrib.testrail.git
+- https://github.com/foliant-docs/foliantcontrib.yaml_include.git
 - https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
 - https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git
 - https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git
