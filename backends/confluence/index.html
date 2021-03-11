@@ -591,6 +591,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#attaching-files" class="md-nav__link">
+    Attaching files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced-images" class="md-nav__link">
     Advanced images
   </a>
@@ -750,6 +757,18 @@
   <li class="md-nav__item">
     <a href="../../preprocessors/apilinks/" title="APILinks" class="md-nav__link">
       APILinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preprocessors/apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
     </a>
   </li>
 
@@ -1414,6 +1433,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1516,6 +1547,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#attaching-files" class="md-nav__link">
+    Attaching files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced-images" class="md-nav__link">
     Advanced images
   </a>
@@ -1612,6 +1650,9 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
     <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">attachments</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">license.txt</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">project.pdf</span>
     <span class="nt">codeblocks</span><span class="p">:</span>
         <span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
@@ -1656,6 +1697,8 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dd>Path to Pandoc binary (Pandoc is used to convert Markdown into HTML).</dd>
 <dt><code>verify_ssl</code></dt>
 <dd>If <code>false</code>, SSL verification will be turned off. Sometimes when dealing with Confluence servers in Intranets it's easier to turn this option off rather than fight with admins. Not recommended to turn off for public servers in production. Default: <code>true</code></dd>
+<dt><code>attachments</code></dt>
+<dd>List of files (relative to project root) which should be attached to the Confluence page.</dd>
 <dt><code>codeblocks</code></dt>
 <dd>Configuration for converting Markdown code blocks into code-block macros. See details in <strong>Code blocks processing</strong> sections.</dd>
 </dl>
@@ -1783,6 +1826,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 <li>singleton <code>ac:...</code> tags are not supported, so <code>&lt;ac:emoticon ac:name="cross" /&gt;</code> will not work, you will have to provide the closing tag: <code>&lt;ac:emoticon ac:name="cross"&gt;&lt;/ac:emoticon&gt;</code>,</li>
 <li>only <code>ac:...</code> tags are escaped right now, other confluence tags like <code>ri:...</code> or <code>at:...</code> are left as is. If these tags appear inside <code>ac:...</code> tag, it's ok. If otherwise, <code>ac:...</code> tag appears inside <code>at:...</code> or <code>ri:...</code> tag, everything will break.</li>
 </ul>
+<h4 id="attaching-files">Attaching files<a class="headerlink" href="#attaching-files" title="Permanent link">&para;</a></h4>
+<p>To attach an arbitrary file to Confluence page simply put path to this file in the <code>attachments</code> parameter in foliant.yml or in meta section.</p>
+<p>This will just tell Foliant to attach this file to the page, but if you want to reference it in text, use the other approach:</p>
+<p>Insert Confluence <code>ac:link</code> tag to attachment right inside your Markdown document and put local path to your file in the <code>ri:filename</code> parameter like this:</p>
+<div class="codehilite"><pre><span></span><code>Presentation in PDF:
+
+<span class="nt">&lt;ac:link&gt;</span>
+  <span class="nt">&lt;ri:attachment</span> <span class="na">ri:filename=</span><span class="s">&quot;presentation.pdf&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ac:link&gt;</span>
+</code></pre></div>
+
+<p>In this case Foliant will upload the <code>presentation.pdf</code> to the Confluence page and make a link to it in the text. The path in <code>ri:filename</code> parameter should be relative to current Markdown file, but you can use <code>!path</code>, <code>!project_path</code> modifiers to reference images relative to project root.</p>
 <h4 id="advanced-images">Advanced images<a class="headerlink" href="#advanced-images" title="Permanent link">&para;</a></h4>
 <p>Confluence has an <code>ac:image</code> tag which allows you to transform and format your attached images:</p>
 <ul>
@@ -1802,6 +1857,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 <span class="nt">&lt;/ac:image&gt;</span>
 </code></pre></div>
 
+<p>As you noticed, you should put path to your image right inside the <code>ri:filename</code> param. This path should be relative to current Markdown file, but you can (since 0.6.16) use <code>!path</code>, <code>!project_path</code> modifiers to reference images relative to project root.</p>
 <p>Here's <a href="https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html#ConfluenceStorageFormat-Images">a link to Confluence docs</a> about <code>ac:image</code> tag and all possible options.</p>
 <h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
 <p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
@@ -1836,19 +1892,19 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 <dd>Collapse code blocks into a clickable bar. Default: <code>false</code></dd>
 </dl>
 <p>Right now Foliant only converts code blocks by backticks/tildes (tabbed code blocks are ignored for now):</p>
-<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="n">code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">be</span> <span class="n">converted</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code>This code block will be converted:
 
-<span class="o">```</span><span class="n">python</span>
-<span class="n">def</span> <span class="n">test2</span><span class="p">():</span>
-    <span class="n">pass</span>
- <span class="o">```</span>
+```python
+def test2():
+    pass
+ ```
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err">And this:</span>
-<span class="err">~~~</span>
-<span class="err">def test3():</span>
-<span class="err">    pass</span>
-<span class="err">~~~</span>
+<div class="codehilite"><pre><span></span><code>And this:
+~~~
+def test3():
+    pass
+~~~
 </code></pre></div>
 
 <p>Syntax name, defined after backticks/tildes is converted into its Confluence counterpart. Right now following syntaxes are supported:</p>

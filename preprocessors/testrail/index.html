@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1364,6 +1376,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1596,41 +1620,41 @@
 
 <p>You can use all parameters of two variables in the template — <em>case</em> and <em>params</em>. Case parameters depends on TestRail template. All custom parameters have prefix 'custom_' before system name set in TestRail.</p>
 <p>Here is an example of <em>case</em> variable (parameters depends on case template):</p>
-<div class="codehilite"><pre><span></span><code><span class="err">case = {</span>
-<span class="err">    &#39;created_by&#39;: 3,</span>
-<span class="err">    &#39;created_on&#39;: 1524909903,</span>
-<span class="err">    &#39;custom_expected&#39;: None,</span>
-<span class="err">    &#39;custom_goals&#39;: None,</span>
-<span class="err">    &#39;custom_mission&#39;: None,</span>
-<span class="err">    &#39;custom_preconds&#39;: &#39;- The user is not registered in the system.\r\n&#39;</span>
-<span class="err">        &#39;- Registration form opened.&#39;,</span>
-<span class="err">    &#39;custom_steps&#39;: &#39;&#39;,</span>
-<span class="err">    &#39;custom_steps_separated&#39;: [{</span>
-<span class="err">        &#39;content&#39;: &#39;Enter mobile phone number.&#39;,</span>
-<span class="err">        &#39;expected&#39;: &#39;- Entered phone number &#39;</span>
-<span class="err">        &#39;is visible in the form field.&#39;</span>
-<span class="err">        },</span>
-<span class="err">        {&#39;content&#39;: &#39;Press OK button.&#39;,</span>
-<span class="err">        &#39;expected&#39;: &#39;- SMS with registration code &#39;</span>
-<span class="err">        &#39;received.\n&#39;}],</span>
-<span class="err">    &#39;custom_test_androidtv&#39;: None,</span>
-<span class="err">    &#39;custom_test_appletv&#39;: None,</span>
-<span class="err">    &#39;custom_test_smarttv&#39;: &#39;None,</span>
-<span class="err">    &#39;custom_tp&#39;: True,</span>
-<span class="err">    &#39;estimate&#39;: None,</span>
-<span class="err">    &#39;estimate_forecast&#39;: None,</span>
-<span class="err">    &#39;id&#39;: 15940,</span>
-<span class="err">    &#39;milestone_id&#39;: None,</span>
-<span class="err">    &#39;priority_id&#39;: 4,</span>
-<span class="err">    &#39;refs&#39;: None,</span>
-<span class="err">    &#39;section_id&#39;: 3441,</span>
-<span class="err">    &#39;suite_id&#39;: 101,</span>
-<span class="err">    &#39;template_id&#39;: 7,</span>
-<span class="err">    &#39;title&#39;: &#39;Registration by mobile phone number.&#39;,</span>
-<span class="err">    &#39;type_id&#39;: 7,</span>
-<span class="err">    &#39;updated_by&#39;: 10,</span>
-<span class="err">    &#39;updated_on&#39;: 1528978979</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="k">case</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">&#39;</span><span class="n">created_by</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">3</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">created_on</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">1524909903</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_expected</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_goals</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_mission</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_preconds</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="o">-</span> <span class="n">The</span> <span class="n">user</span> <span class="n">is</span> <span class="k">not</span> <span class="n">registered</span> <span class="n">in</span> <span class="n">the</span> <span class="n">system</span><span class="p">.</span><span class="n">\r\n&#39;</span>
+        <span class="p">&#39;</span><span class="o">-</span> <span class="n">Registration</span> <span class="n">form</span> <span class="n">opened</span><span class="p">.&#39;,</span>
+    <span class="p">&#39;</span><span class="n">custom_steps</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;&#39;,</span>
+    <span class="p">&#39;</span><span class="n">custom_steps_separated</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="p">&#39;</span><span class="n">content</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="n">Enter</span> <span class="n">mobile</span> <span class="n">phone</span> <span class="n">number</span><span class="p">.&#39;,</span>
+        <span class="p">&#39;</span><span class="n">expected</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="o">-</span> <span class="n">Entered</span> <span class="n">phone</span> <span class="n">number</span> <span class="p">&#39;</span>
+        <span class="p">&#39;</span><span class="n">is</span> <span class="n">visible</span> <span class="n">in</span> <span class="n">the</span> <span class="n">form</span> <span class="n">field</span><span class="p">.&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{&#39;</span><span class="n">content</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="n">Press</span> <span class="n">OK</span> <span class="n">button</span><span class="p">.&#39;,</span>
+        <span class="p">&#39;</span><span class="n">expected</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="o">-</span> <span class="n">SMS</span> <span class="n">with</span> <span class="n">registration</span> <span class="n">code</span> <span class="p">&#39;</span>
+        <span class="p">&#39;</span><span class="n">received</span><span class="p">.</span><span class="n">\n&#39;}],</span>
+    <span class="p">&#39;</span><span class="n">custom_test_androidtv</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_test_appletv</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_test_smarttv</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">custom_tp</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">True</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">estimate</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">estimate_forecast</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">15940</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">milestone_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">priority_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">4</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">refs</span><span class="p">&#39;</span><span class="o">:</span> <span class="n">None</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">section_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">3441</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">suite_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">101</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">template_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">7</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">title</span><span class="p">&#39;</span><span class="o">:</span> <span class="p">&#39;</span><span class="n">Registration</span> <span class="n">by</span> <span class="n">mobile</span> <span class="n">phone</span> <span class="n">number</span><span class="p">.&#39;,</span>
+    <span class="p">&#39;</span><span class="n">type_id</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">7</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">updated_by</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">10</span><span class="p">,</span>
+    <span class="p">&#39;</span><span class="n">updated_on</span><span class="p">&#39;</span><span class="o">:</span> <span class="mh">1528978979</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>And here is an example of <em>params</em> variable (parameters are always the same):</p>
@@ -1690,11 +1714,11 @@
 </code></pre></div>
 
 <p>Minimal <em>multilinetables</em> and <em>anchors</em> preprocessor settings in <code>foliant.yml</code> should be like this (more about <em>multilinetables</em> parameters see in <a href="https://foliant-docs.github.io/docs/preprocessors/multilinetables/">preprocessor documentation</a>):</p>
-<div class="codehilite"><pre><span></span><code><span class="err">    - anchors</span>
-<span class="err">    - multilinetables:</span>
-<span class="err">        enable_hyphenation: true</span>
-<span class="err">        hyph_combination: brkln</span>
-<span class="err">        convert_to_grid: true</span>
+<div class="codehilite"><pre><span></span><code>    - anchors
+    - multilinetables:
+        enable_hyphenation: true
+        hyph_combination: brkln
+        convert_to_grid: true
 </code></pre></div>
 
 <p>After <em>testrail</em> preprocessor process this test case, you will have <code>params['links_to_images']</code> parameter with list of image links in order of appearance to use in jinja template:</p>
@@ -1983,26 +2007,26 @@
 <p>Using described setting you can flexibly adjust test cases sampling. For example, you can download only published <em>critical</em> test cases for both and only <em>Mac</em> and <em>PC</em>.</p>
 <p>Now strange things, mostly made specially for my project, but may be useful for others.</p>
 <p>Screenshots. There is a possibility to store screenshots in TestRail test cases, but you can store them in the GitLab repository (link to which should be stated in one of the following parameters). GitLab project should have following structure:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">images/</span>
-<span class="err">├── smarttv/</span>
-<span class="err">|   ├── screenshot1_smarttv.png</span>
-<span class="err">|   ├── screenshot2_smarttv.png</span>
-<span class="err">|   └── ...</span>
-<span class="err">├── androidtv/</span>
-<span class="err">|   ├── screenshot1_androidtv.png</span>
-<span class="err">|   ├── screenshot2_androidtv.png</span>
-<span class="err">|   └── ...</span>
-<span class="err">├── appletv/</span>
-<span class="err">|   ├── screenshot1_appletv.png</span>
-<span class="err">|   ├── screenshot2_appletv.png</span>
-<span class="err">|   └── ...</span>
-<span class="err">├── web/</span>
-<span class="err">|   ├── screenshot1_web.png</span>
-<span class="err">|   ├── screenshot2_web.png</span>
-<span class="err">|   └── ...</span>
-<span class="err">├── screenshot1.png</span>
-<span class="err">├── screenshot2.png</span>
-<span class="err">└── ...</span>
+<div class="codehilite"><pre><span></span><code>images/
+├── smarttv/
+|   ├── screenshot1_smarttv.png
+|   ├── screenshot2_smarttv.png
+|   └── ...
+├── androidtv/
+|   ├── screenshot1_androidtv.png
+|   ├── screenshot2_androidtv.png
+|   └── ...
+├── appletv/
+|   ├── screenshot1_appletv.png
+|   ├── screenshot2_appletv.png
+|   └── ...
+├── web/
+|   ├── screenshot1_web.png
+|   ├── screenshot2_web.png
+|   └── ...
+├── screenshot1.png
+├── screenshot2.png
+└── ...
 </code></pre></div>
 
 <p><em>images</em> folder used for projects without platforms.</p>
@@ -2011,15 +2035,15 @@
 </code></pre></div>
 
 <p>Preprocessor will convert to the following format:</p>
-<div class="codehilite"><pre><span></span><code><span class="c">https://gitlab.url/gitlab_group_name/gitlab_project_name/raw/master/images/platform_name/main_filename_part_platform_name.png</span>
+<div class="codehilite"><pre><span></span><code>https://gitlab.url/gitlab_group_name/gitlab_project_name/raw/master/images/platform_name/main_filename_part_platform_name.png
 </code></pre></div>
 
 <p>For example, in the project with <em>multi_param_select: smarttv</em> the string</p>
-<div class="codehilite"><pre><span></span><code><span class="err">(leading exclamation mark here!)[Application main screen](main_screen)</span>
+<div class="codehilite"><pre><span></span><code>(leading exclamation mark here!)[Application main screen](main_screen)
 </code></pre></div>
 
 <p>will be converted to:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">(leading exclamation mark here!)[Application main screen](https://gitlab.url/documentation/application-screenshots/raw/master/images/smarttv/main_screen_smarttv.png)</span>
+<div class="codehilite"><pre><span></span><code>(leading exclamation mark here!)[Application main screen](https://gitlab.url/documentation/application-screenshots/raw/master/images/smarttv/main_screen_smarttv.png)
 </code></pre></div>
 
 <p>That's it.</p>

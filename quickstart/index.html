@@ -709,6 +709,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../preprocessors/apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../preprocessors/archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1363,6 +1375,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1586,11 +1610,11 @@ Result: Hello_Foliant-2020-05-25.pdf
 <p>Your project’s content lives in <code>*.md</code> files in <code>src</code> folder. You can split it between multiple files and subfolders.</p>
 <p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <a href="../preprocessors/flags/#flags"><code>&lt;if&gt;...&lt;/if&gt;</code></a>.</p>
 <p>Create a file <code>hello.md</code> in <code>src</code> with the following content:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">#</span> <span class="n">Hello</span> <span class="n">Again</span>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Hello Again</span>
 
-<span class="n">This</span> <span class="n">is</span> <span class="n">regular</span> <span class="n">text</span> <span class="n">generated</span> <span class="n">from</span> <span class="n">regular</span> <span class="n">Markdown</span><span class="p">.</span>
+This is regular text generated from regular Markdown.
 
-<span class="n">Foliant</span> <span class="n">doesn</span><span class="err">’</span><span class="n">t</span> <span class="k">force</span> <span class="n">any</span> <span class="o">*</span><span class="n">special</span><span class="o">*</span> <span class="n">Markdown</span> <span class="n">flavor</span><span class="p">.</span>
+Foliant doesn’t force any <span class="ge">*special*</span> Markdown flavor.
 </code></pre></div>
 
 <p>Open <code>foliant.yml</code> and add <code>hello.md</code> to <code>chapters</code>:</p>
@@ -1676,11 +1700,11 @@ chapters:
 <p><img alt="Sequence diagram with Comic Sans in labels, site" src="../images/basic-mkdocs-seqdiag-comic.png" /></p>
 <p><img alt="Sequence diagram with Comic Sans in labels, pdf" src="../images/basic-pdf-seqdiag-comic.png" /></p>
 <p>There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <a href="../preprocessors/flags/#flags">Flags</a> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site:</p>
-<div class="codehilite"><pre><span></span><code>This is a diagram that is rendered to `.png` in HTML and to `.pdf` in pdf:
+<div class="codehilite"><pre><span></span><code>This is a diagram that is rendered to <span class="sb">`.png`</span> in HTML and to <span class="sb">`.pdf`</span> in pdf:
 
-<span class="nt">&lt;blockdiag</span> <span class="na">format=</span><span class="s">&quot;&lt;if targets=&quot;</span><span class="err">site&quot;</span><span class="nt">&gt;</span>png<span class="nt">&lt;/if&gt;&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>pdf<span class="nt">&lt;/if&gt;</span>&quot;&gt;
+&lt;blockdiag format=&quot;&lt;if targets=&quot;site&quot;&gt;png&lt;/if&gt;&lt;if targets=&quot;pdf&quot;&gt;pdf&lt;/if&gt;&quot;&gt;
     ...
-<span class="nt">&lt;/blockdiag&gt;</span>
+&lt;/blockdiag&gt;
 </code></pre></div>
 
 <p>The possibilities acquired by combining different preprocessors are endless!</p>

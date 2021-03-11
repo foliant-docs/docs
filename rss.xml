@@ -7,6 +7,83 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.apilinks 1.2.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#e4b3d26c8b799bdf3af1674ea83d02cc</guid>
+            <pubDate>Thu, 11 Mar 2021 10:52:53 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>APILinks is now deprecated. Use APIReferences instead.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#31b3edadcdb1edfae47e3c1ed0f55f14</guid>
+            <pubDate>Thu, 11 Mar 2021 09:59:23 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better logging and output.</li>
+<li>New: <escaped hash="5b2afa0cf165e35fac6b57b5a4afebe8"></escaped> param.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.17</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#c42188f4f831e57ea1009751aad11bc1</guid>
+            <pubDate>Wed, 10 Mar 2021 10:58:46 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: parent_id param didn't work.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.yaml_include 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.yaml_include.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.yaml_include.git#b701e219da64f6126d8b9463469f4058</guid>
+            <pubDate>Wed, 10 Mar 2021 09:48:09 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#09085bf63bad3fe392719e4009454ab6</guid>
+            <pubDate>Tue, 09 Mar 2021 11:35:04 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils.header_anchors 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#b1a5fa746f16a65ec75af163fbb3571a</guid>
+            <pubDate>Thu, 25 Feb 2021 14:53:27 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add <escaped hash="f99c83f752a6a2101918f25ec5f6e0b7"></escaped> to_id generator.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.16</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d35960b73d6277e17831763876f890f8</guid>
+            <pubDate>Thu, 18 Feb 2021 17:01:46 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: attaching arbitrary files with help of <escaped hash="979f45d292372843145c7a70b4a9fd6f"></escaped> parameter.</li>
+<li>New: supply attachments implicitly using <escaped hash="a05c75a73c68097f63a8acac34e8ed3f"></escaped> tag, without mentioning them in <escaped hash="979f45d292372843145c7a70b4a9fd6f"></escaped> parameter.</li>
+<li>Attachments and images which were referenced several times on a page will now only be uploaded once.</li>
+<li>Allow <escaped hash="b87f36c468353a7a278a5f1e85ffcc30"></escaped>, <escaped hash="b49a3941ba7c6b3716b144be8712cd39"></escaped> modifiers inside <escaped hash="0f49f2031bbdac4a3bde6e1c4fe46ef1"></escaped> param for <escaped hash="238e2ea71d4bf762cfbac9034fa3056a"></escaped>, <escaped hash="a05c75a73c68097f63a8acac34e8ed3f"></escaped>.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apilinks 1.2.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#ef0cf6efad6006f710efe91d39439290</guid>
+            <pubDate>Wed, 03 Feb 2021 17:01:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better warning when there's error in API configuration</li>
+<li>Trailing slash is not enforced in generated urls. Previously didn't work with *.html sites</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbdoc 0.1.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#9d9a335b52d0da113879721fe46bcd2e</guid>

@@ -630,6 +630,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -1364,6 +1376,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1516,16 +1540,16 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To insert an Archeme diagram definition into your Markdown source, enclose it between <code>&lt;archeme&gt;...&lt;/archeme&gt;</code> tags:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;archeme&gt;
 structure:
-    - node:
+    <span class="k">-</span> node:
         id: first
-    - node:
+    <span class="k">-</span> node:
         id: second
 edges:
-    -   tail: first
+    <span class="k">-</span>   tail: first
         head: second
-<span class="nt">&lt;/archeme&gt;</span>
+&lt;/archeme&gt;
 </code></pre></div>
 
 <p>You may use optional tag attributes:</p>
@@ -1538,26 +1562,26 @@ edges:
 </ul>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>Diagram definition with explicitly specified ID, config file, and output format:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">module_id=</span><span class="s">&quot;one&quot;</span> <span class="na">caption=</span><span class="s">&quot;Module 1&quot;</span> <span class="na">config_file=</span><span class="s">&quot;!project_path another_config.yml&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;archeme module_id=&quot;one&quot; caption=&quot;Module 1&quot; config_file=&quot;!project_path another_config.yml&quot; format=&quot;svg&quot;&gt;
 structure:
-    - node:
+    <span class="k">-</span> node:
         id: first
-    - node:
+    <span class="k">-</span> node:
         id: second
 edges:
-    -   tail: first
+    <span class="k">-</span>   tail: first
         head: second
-<span class="nt">&lt;/archeme&gt;</span>
+&lt;/archeme&gt;
 </code></pre></div>
 
 <p>Archeme DSL definition that prescribes to combine two modules with explicitly specified IDs:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;archeme</span> <span class="na">action=</span><span class="s">&quot;merge&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;archeme action=&quot;merge&quot;&gt;
 structure:
-    - module:
+    <span class="k">-</span> module:
         id: one
-    - module:
+    <span class="k">-</span> module:
         id: two
-<span class="nt">&lt;/archeme&gt;</span>
+&lt;/archeme&gt;
 </code></pre></div>
 
 <p>Note that the <code>file</code> and <code>description</code> module parameters in Archeme DSL work as usual. If you need to combine the diagrams that are identified within the current Foliant project by using <code>&lt;archeme module_id="..."&gt;</code> tags, you should to omit the <code>file</code> and <code>description</code> module parameters in your combined diagrams definitions.</p>
@@ -1582,7 +1606,7 @@ structure:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../apilinks/" title="APILinks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../apireferences/" title="APIReferences" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1591,7 +1615,7 @@ structure:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                APILinks
+                APIReferences
               </span>
             </div>
           </a>

@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1378,6 +1390,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1498,7 +1522,7 @@
                 <h1 id="swaggerdoc">SwaggerDoc<a class="headerlink" href="#swaggerdoc" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.swaggerdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.swaggerdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.swaggerdoc.svg?label=GitHub" /></a></p>
 <h2 id="swagger-api-docs-generator-for-foliant">Swagger API Docs Generator for Foliant<a class="headerlink" href="#swagger-api-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../_img_f010c602-6633-11eb-ba95-0242ac120002/swagger_f0124234-6633-11eb-ba95-0242ac120002.png" /></p>
+<p><img alt="" src="../../_img_5b0a92b0-8247-11eb-9379-0242ac120002/swagger_5b0c015e-8247-11eb-9379-0242ac120002.png" /></p>
 <p><em>The static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with SwaggerDoc preprocessor</em></p>
 <p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">Widdershins</a> for generating Markdown from swagger spec files.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1506,7 +1530,7 @@
 </code></pre></div>
 
 <p>This preprocessor requires <a href="https://github.com/Mermade/widdershins">Widdershins</a> to be installed on your system (unless you are using <a href="https://foliant-docs.github.io/docs/tutorials/full_docker/">Foliant with Full Docker Image</a>):</p>
-<div class="codehilite"><pre><span></span><code><span class="err">npm install -g widdershins</span>
+<div class="codehilite"><pre><span></span><code>npm install -g widdershins
 </code></pre></div>
 
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
@@ -1552,28 +1576,28 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> tag at the position in the document where the generated documentation should be inserted:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code><span class="gh"># Introduction</span>
 
 This document contains the automatically generated documentation of our API.
 
-<span class="nt">&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</span>
+&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;
 </code></pre></div>
 
 <p>Each time the preprocessor encounters the tag <code>&lt;swaggerdoc&gt;&lt;/swaggerdoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to Swagger spec file are taken from foliant.yml.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code><span class="gh"># Introduction</span>
 
 Introduction text for API documentation.
 
-<span class="nt">&lt;swaggerdoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
-            <span class="na">mode=</span><span class="s">&quot;jinja&quot;</span>
-            <span class="na">template=</span><span class="s">&quot;swagger.j2&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/swaggerdoc&gt;</span>
+&lt;swaggerdoc spec_url=&quot;http://localhost/swagger.json&quot;
+            mode=&quot;jinja&quot;
+            template=&quot;swagger.j2&quot;&gt;
+&lt;/swaggerdoc&gt;
 
-<span class="nt">&lt;swaggerdoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/swagger.json&quot;</span>
-            <span class="na">mode=</span><span class="s">&quot;widdershins&quot;</span>
-            <span class="na">environment=</span><span class="s">&quot;env.yml&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/swaggerdoc&gt;</span>
+&lt;swaggerdoc spec_url=&quot;http://localhost/swagger.json&quot;
+            mode=&quot;widdershins&quot;
+            environment=&quot;env.yml&quot;&gt;
+&lt;/swaggerdoc&gt;
 </code></pre></div>
 
 <p>Tag parameters have the highest priority.</p>

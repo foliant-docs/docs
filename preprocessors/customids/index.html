@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1344,6 +1356,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1458,13 +1482,13 @@
 <dd>Allowed targets for the preprocessor. If not specified (by default), the preprocessor applies to all targets.</dd>
 </dl>
 <p>Custom ID may be specified after a heading content at the same line. Examples of Markdown syntax:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="k">First</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="gh"># First Heading {#custom_id_for_first_heading}</span>
 
-<span class="n">A</span> <span class="n">paragraph</span><span class="p">.</span>
+A paragraph.
 
-<span class="o">##</span> <span class="k">Second</span> <span class="n">Heading</span> <span class="err">{</span><span class="o">#</span><span class="n">custom_id_for_second_heading</span><span class="err">}</span>
+<span class="gu">## Second Heading {#custom_id_for_second_heading}</span>
 
-<span class="k">Some</span> <span class="n">another</span> <span class="n">paragraph</span><span class="p">.</span>
+Some another paragraph.
 </code></pre></div>
 
 <p>This Markdown source will be finally transformed into the HTML code:</p>
@@ -1484,11 +1508,11 @@
 <p>(Note that CustomIDs preprocessor does not convert Markdown syntax into HTML; it only inserts HTML tags <code>&lt;div class="custom_id_anchor_container"&gt;...&lt;/div&gt;</code> into Markdown code.)</p>
 <p>Custom IDs must not contain spaces and non-ASCII characters.</p>
 <p>Examples of hyperlinks that refer to custom IDs:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">1</span><span class="p">](</span><span class="o">#</span><span class="n">custom_id_for_first_heading</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code>[<span class="nt">Link to Heading 1</span>](<span class="na">#custom_id_for_first_heading</span>)
 
-<span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="n">Heading</span> <span class="mi">2</span> <span class="k">in</span> <span class="k">some</span> <span class="n">document</span> <span class="k">at</span> <span class="n">the</span> <span class="k">current</span> <span class="n">site</span><span class="p">](</span><span class="o">/</span><span class="k">some</span><span class="o">/</span><span class="n">page</span><span class="o">/#</span><span class="n">custom_id_for_second_heading</span><span class="p">)</span>
+[<span class="nt">Link to Heading 2 in some document at the current site</span>](<span class="na">/some/page/#custom_id_for_second_heading</span>)
 
-<span class="p">[</span><span class="n">Link</span> <span class="k">to</span> <span class="k">some</span> <span class="n">heading</span> <span class="k">with</span> <span class="n">custom</span> <span class="n">ID</span> <span class="k">at</span> <span class="n">an</span> <span class="k">external</span> <span class="n">site</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="k">some</span><span class="p">.</span><span class="n">site</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">the</span><span class="o">/</span><span class="n">page</span><span class="o">/#</span><span class="n">some_custom_id</span><span class="p">)</span>
+[<span class="nt">Link to some heading with custom ID at an external site</span>](<span class="na">https://some.site/path/to/the/page/#some_custom_id</span>)
 </code></pre></div>
                 
                   

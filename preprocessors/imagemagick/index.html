@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1351,6 +1363,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1475,17 +1499,17 @@
 
 <p>This command takes the source EPS image <code>image.eps</code>, resizes it, puts a text label over the picture, and writes the result into new file <code>image.jpg</code>. The suffix of output file name specifies that the image must be converted into JPEG format.</p>
 <p>To use the ImageMagick preprocessor to do the same, enclose one or more image references in your Markdown source between <code>&lt;magick&gt;</code> and <code>&lt;/magick&gt;</code> tags.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">magick</span> <span class="n">command_params</span><span class="o">=</span><span class="s">&quot;-resize 600 -background Orange label:&#39;Picture&#39; +swap -gravity Center -append&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;magick command_params=&quot;-resize 600 -background Orange label:&#39;Picture&#39; +swap -gravity Center -append&quot; output_format=&quot;jpg&quot;&gt;
+(leading exclamation mark here)[Optional Caption](image.eps)
+&lt;/magick&gt;
 </code></pre></div>
 
 <p>Use <code>output_format</code> attribute to specify the suffix of output file name. The whole output file name will be generated automatically.</p>
 <p>Use <code>command_params</code> attribute to specify the string of parameters that should be passed to ImageMagick <code>convert</code> binary.</p>
 <p>Instead of using <code>command_params</code> attribute, you may specify each parameter as its own attribute with the same name:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">magick</span> <span class="n">resize</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="n">background</span><span class="o">=</span><span class="s">&quot;Orange label:&#39;Picture&#39; +swap&quot;</span> <span class="n">gravity</span><span class="o">=</span><span class="s">&quot;Center&quot;</span> <span class="n">append</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="n">output_format</span><span class="o">=</span><span class="s">&quot;jpg&quot;</span><span class="o">&gt;</span>
-<span class="p">(</span><span class="n">leading</span> <span class="n">exclamation</span> <span class="n">mark</span> <span class="n">here</span><span class="p">)[</span><span class="n">Optional</span> <span class="n">Caption</span><span class="p">](</span><span class="n">image</span><span class="p">.</span><span class="n">eps</span><span class="p">)</span>
-<span class="o">&lt;/</span><span class="n">magick</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;magick resize=&quot;600&quot; background=&quot;Orange label:&#39;Picture&#39; +swap&quot; gravity=&quot;Center&quot; append=&quot;true&quot; output_format=&quot;jpg&quot;&gt;
+(leading exclamation mark here)[Optional Caption](image.eps)
+&lt;/magick&gt;
 </code></pre></div>
                 
                   

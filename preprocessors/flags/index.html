@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1351,6 +1363,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1471,7 +1495,7 @@
 <blockquote>
 <p><strong>Hint</strong></p>
 <p>To emulate a particular target or backend with a flag, use the special flags <code>target:FLAG</code> and <code>backend:FLAG</code> where <code>FLAG</code> is your target or backend:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">  $ FOLIANT_FLAGS=&quot;target:pdf, backend:pandoc, spam&quot;</span>
+<div class="codehilite"><pre><span></span><code>  $ FOLIANT_FLAGS=&quot;target:pdf, backend:pandoc, spam&quot;
 </code></pre></div>
 
 </blockquote>
@@ -1479,31 +1503,31 @@
 <p>Conditional blocks are enclosed between <code>&lt;if&gt;...&lt;/if&gt;</code> tags:</p>
 <div class="codehilite"><pre><span></span><code>This paragraph is for everyone.
 
-<span class="nt">&lt;if</span> <span class="na">flags=</span><span class="s">&quot;management&quot;</span><span class="nt">&gt;</span>
+&lt;if flags=&quot;management&quot;&gt;
 This parapraph is for management only.
-<span class="nt">&lt;/if&gt;</span>
+&lt;/if&gt;
 </code></pre></div>
 
 <p>A block can depend on multiple flags. You can pick whether all tags must be present for the block to appear, or any of them (by default, <code>kind="all"</code> is assumed):</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="k">both</span> <span class="n n-Quoted">`spam`</span> <span class="k">and</span> <span class="n n-Quoted">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
-<span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;if flags=&quot;spam, eggs&quot; kind=&quot;all&quot;&gt;
+This is included only if both <span class="sb">`spam`</span> and <span class="sb">`eggs`</span> are set.
+&lt;/if&gt;
 
-<span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;any&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">if</span> <span class="k">both</span> <span class="n n-Quoted">`spam`</span> <span class="k">or</span> <span class="n n-Quoted">`eggs`</span> <span class="k">is</span> <span class="k">set</span><span class="p">.</span>
-<span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
+&lt;if flags=&quot;spam, eggs&quot; kind=&quot;any&quot;&gt;
+This is included if both <span class="sb">`spam`</span> or <span class="sb">`eggs`</span> is set.
+&lt;/if&gt;
 </code></pre></div>
 
 <p>You can also list flags that must <em>not</em> be set for the block to be included:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="k">if</span> <span class="n">flags</span><span class="o">=</span><span class="s2">&quot;spam, eggs&quot;</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="n">included</span> <span class="k">only</span> <span class="k">if</span> <span class="n">neither</span> <span class="n n-Quoted">`spam`</span> <span class="n">nor</span> <span class="n n-Quoted">`eggs`</span> <span class="n">are</span> <span class="k">set</span><span class="p">.</span>
-<span class="o">&lt;/</span><span class="k">if</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;if flags=&quot;spam, eggs&quot; kind=&quot;none&quot;&gt;
+This is included only if neither <span class="sb">`spam`</span> nor <span class="sb">`eggs`</span> are set.
+&lt;/if&gt;
 </code></pre></div>
 
 <p>You can check against the current target and backend instead of manually defined flags:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;if</span> <span class="na">targets=</span><span class="s">&quot;pdf&quot;</span><span class="nt">&gt;</span>This is for pdf output<span class="nt">&lt;/if&gt;&lt;if</span> <span class="na">targets=</span><span class="s">&quot;site&quot;</span><span class="nt">&gt;</span>This is for the site<span class="nt">&lt;/if&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;if targets=&quot;pdf&quot;&gt;This is for pdf output&lt;/if&gt;&lt;if targets=&quot;site&quot;&gt;This is for the site&lt;/if&gt;
 
-<span class="nt">&lt;if</span> <span class="na">backends=</span><span class="s">&quot;mkdocs&quot;</span><span class="nt">&gt;</span>This is only for MkDocs.<span class="nt">&lt;/if&gt;</span>
+&lt;if backends=&quot;mkdocs&quot;&gt;This is only for MkDocs.&lt;/if&gt;
 </code></pre></div>
                 
                   

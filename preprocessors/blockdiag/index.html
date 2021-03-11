@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1351,6 +1363,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1481,11 +1505,11 @@
 <dt><code>params</code></dt>
 <dd>
 <p>Params passed to the image generation commands (<code>blockdiag</code>, <code>seqdiag</code>, etc.). Params should be defined by their long names, with dashes replaced with underscores (e.g. <code>--no-transparency</code> becomes <code>no_transparency</code>); also, <code>-T</code> param is called <code>format</code> for readability:</p>
-<div class="codehilite"><pre><span></span><code><span class="c">preprocessors:</span>
-<span class="c">  - blockdiag:</span>
-<span class="c">      params:</span>
-<span class="c">        antialias: true</span>
-<span class="c">        font: !path Anonymous_pro.ttf</span>
+<div class="codehilite"><pre><span></span><code>preprocessors:
+  - blockdiag:
+      params:
+        antialias: true
+        font: !path Anonymous_pro.ttf
 </code></pre></div>
 
 <p>To see the full list of params, run <code>blockdiag -h</code>.</p>
@@ -1495,47 +1519,47 @@
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;blockdiag&gt;...&lt;/blockdiag&gt;</code>, <code>&lt;seqdiag&gt;...&lt;/seqdiag&gt;</code>, <code>&lt;actdiag&gt;...&lt;/actdiag&gt;</code>, or <code>&lt;nwdiag&gt;...&lt;/nwdiag&gt;</code> tags (indentation inside tags is optional):</p>
 <div class="codehilite"><pre><span></span><code>Here&#39;s a block diagram:
 
-<span class="nt">&lt;blockdiag&gt;</span>
+&lt;blockdiag&gt;
   blockdiag {
     A -&gt; B -&gt; C -&gt; D;
     A -&gt; E -&gt; F -&gt; G;
   }
-<span class="nt">&lt;/blockdiag&gt;</span>
+&lt;/blockdiag&gt;
 
 Here&#39;s a sequence diagram:
 
-<span class="nt">&lt;seqdiag&gt;</span>
+&lt;seqdiag&gt;
   seqdiag {
     browser  -&gt; webserver [label = &quot;GET /index.html&quot;];
-    browser <span class="nt">&lt;--</span> <span class="err">webserver;</span>
-    <span class="err">browser</span>  <span class="err">-</span><span class="nt">&gt;</span> webserver [label = &quot;POST /blog/comment&quot;];
+    browser &lt;-- webserver;
+    browser  -&gt; webserver [label = &quot;POST /blog/comment&quot;];
                 webserver  -&gt; database [label = &quot;INSERT comment&quot;];
-                webserver <span class="nt">&lt;--</span> <span class="err">database;</span>
-    <span class="err">browser</span> <span class="err">&lt;--</span> <span class="err">webserver;</span>
-  <span class="err">}</span>
-<span class="err">&lt;/seqdiag</span><span class="nt">&gt;</span>
+                webserver &lt;-- database;
+    browser &lt;-- webserver;
+  }
+&lt;/seqdiag&gt;
 </code></pre></div>
 
 <p>To set a caption, use <code>caption</code> option:</p>
 <div class="codehilite"><pre><span></span><code>Diagram with a caption:
 
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;Sample diagram from the official site&quot;</span><span class="nt">&gt;</span>
+&lt;blockdiag caption=&quot;Sample diagram from the official site&quot;&gt;
   blockdiag {
     A -&gt; B -&gt; C -&gt; D;
     A -&gt; E -&gt; F -&gt; G;
   }
-<span class="nt">&lt;/blockdiag&gt;</span>
+&lt;/blockdiag&gt;
 </code></pre></div>
 
 <p>You can override <code>params</code> values from the preprocessor config for each diagram:</p>
 <div class="codehilite"><pre><span></span><code>By default, diagrams are in png. But this diagram is in svg:
 
-<span class="nt">&lt;blockdiag</span> <span class="na">caption=</span><span class="s">&quot;High-quality diagram&quot;</span> <span class="na">format=</span><span class="s">&quot;svg&quot;</span><span class="nt">&gt;</span>
+&lt;blockdiag caption=&quot;High-quality diagram&quot; format=&quot;svg&quot;&gt;
   blockdiag {
     A -&gt; B -&gt; C -&gt; D;
     A -&gt; E -&gt; F -&gt; G;
   }
-<span class="nt">&lt;/blockdiag&gt;</span>
+&lt;/blockdiag&gt;
 </code></pre></div>
                 
                   

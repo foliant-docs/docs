@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1351,6 +1363,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1483,10 +1507,10 @@ $ npm install mermaid.cli
 <dt><code>format</code></dt>
 <dd>Generated image format. Available: <code>svg</code>, <code>png</code>, <code>pdf</code>. Default <code>svg</code>.</dd>
 <dt><code>params</code></dt>
-<dd>Params passed to the image generation command:<div class="codehilite"><pre><span></span><code><span class="c">preprocessors:</span>
-<span class="c">    - mermaid:</span>
-<span class="c">        params:</span>
-<span class="c">            theme: forest</span>
+<dd>Params passed to the image generation command:<div class="codehilite"><pre><span></span><code>preprocessors:
+    - mermaid:
+        params:
+            theme: forest
 </code></pre></div>
 
 </dd>
@@ -1498,19 +1522,19 @@ $ npm install mermaid.cli
 <p>To insert a diagram definition in your Markdown source, enclose it between <code>&lt;mermaid&gt;...&lt;/mermaid&gt;</code> tags:</p>
 <div class="codehilite"><pre><span></span><code>Here’s a diagram:
 
-<span class="nt">&lt;mermaid&gt;</span>
+&lt;mermaid&gt;
 graph TD;
     A--&gt;B;
-<span class="nt">&lt;/mermaid&gt;</span>
+&lt;/mermaid&gt;
 </code></pre></div>
 
 <p>You can set any parameters in the tag options. Tag options have priority over the config options so you can override some values for specific diagrams while having the default ones set up in the config.</p>
 <p>Tags also have an exclusive option <code>caption</code> — the markdown caption of the diagram image.</p>
 <div class="codehilite"><pre><span></span><code>Diagram with a caption:
 
-<span class="nt">&lt;mermaid</span> <span class="na">caption=</span><span class="s">&quot;Deployment diagram&quot;</span>
-          <span class="na">params=</span><span class="s">&quot;theme: dark&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/mermaid&gt;</span>
+&lt;mermaid caption=&quot;Deployment diagram&quot;
+          params=&quot;theme: dark&quot;&gt;
+&lt;/mermaid&gt;
 </code></pre></div>
 
 <blockquote>

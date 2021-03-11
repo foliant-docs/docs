@@ -1,0 +1,2572 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>APIReferences - Foliant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,400i,700%7CPT+Mono&display=fallback">
+        <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"PT Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-120535275-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  <link rel="alternate" type="application/rss+xml" title="History of Releases" href="https://foliant-docs.github.io/docs/rss.xml">
+
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="rgba(0,-0,-0,-0.87)" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apireferences" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../assets/images/octopus-white.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Foliant
+            </span>
+            <span class="md-header-nav__topic">
+              
+                APIReferences
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Foliant" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../assets/images/octopus-white.svg" width="48" height="48">
+      
+    </a>
+    Foliant
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome to Foliant!" class="md-nav__link">
+      Welcome to Foliant!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/" title="Architecture And Basic Design Concepts" class="md-nav__link">
+      Architecture And Basic Design Concepts
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../config/" title="Project Configuration" class="md-nav__link">
+      Project Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../debugging_builds/" title="Debugging Builds" class="md-nav__link">
+      Debugging Builds
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/full_docker/" title="Working with Full Foliant Docker image" class="md-nav__link">
+      Working with Full Foliant Docker image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Documenting Databases with Foliant
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Documenting Databases with Foliant
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/db/db/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/db/dbml/" title="Documenting DBML schema" class="md-nav__link">
+      Documenting DBML schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/db/oracle/" title="Documenting Oracle Database" class="md-nav__link">
+      Documenting Oracle Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/db/pgsql/" title="Documenting PostgreSQL Database" class="md-nav__link">
+      Documenting PostgreSQL Database
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/dev_reference/" title="Developer’s Reference" class="md-nav__link">
+      Developer’s Reference
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../meta/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Backends
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/aglio/" title="Aglio" class="md-nav__link">
+      Aglio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/confluence/" title="Confluence" class="md-nav__link">
+      Confluence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/mdtopdf/" title="MdToPdf" class="md-nav__link">
+      MdToPdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/pandoc/" title="Pandoc" class="md-nav__link">
+      Pandoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../backends/slate/" title="Slate" class="md-nav__link">
+      Slate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      Preprocessors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Preprocessors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general_notes/" title="General Notes" class="md-nav__link">
+      General Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../admonitions/" title="Admonitions" class="md-nav__link">
+      Admonitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../anchors/" title="Anchors" class="md-nav__link">
+      Anchors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apilinks/" title="APILinks" class="md-nav__link">
+      APILinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        APIReferences
+      </label>
+    
+    <a href="./" title="APIReferences" class="md-nav__link md-nav__link--active">
+      APIReferences
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apireferences-preprocessor-for-foliant" class="md-nav__link">
+    APIReferences Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it-for" class="md-nav__link">
+    What is it for?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-recipes" class="md-nav__link">
+    Quick Recipes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipe-1-find-by-tag-content" class="md-nav__link">
+    Recipe 1: find by tag content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-2-find-by-tag-id" class="md-nav__link">
+    Recipe 2: find by tag id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-3-generate-tag-id" class="md-nav__link">
+    Recipe 3: generate tag id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-4-find-link-for-swaggerui" class="md-nav__link">
+    Recipe 4: find link for SwaggerUI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-guide" class="md-nav__link">
+    User guide
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-modes" class="md-nav__link">
+    API Modes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate_anchor-mode" class="md-nav__link">
+    generate_anchor mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_by_anchor-mode" class="md-nav__link">
+    find_by_anchor mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_by_tag_content-mode" class="md-nav__link">
+    find_by_tag_content mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_for_swagger-mode" class="md-nav__link">
+    find_for_swagger mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_for_redoc-mode" class="md-nav__link">
+    find_for_redoc mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-multiple-apis" class="md-nav__link">
+    Handling Multiple APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-multiple-reference-configuration" class="md-nav__link">
+    Handling Multiple Reference Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-and-endpoint-prefixes" class="md-nav__link">
+    Commands and Endpoint Prefixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturing-references" class="md-nav__link">
+    Capturing References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-output" class="md-nav__link">
+    Customizing Output
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../archeme/" title="Archeme" class="md-nav__link">
+      Archeme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../badges/" title="Badges" class="md-nav__link">
+      Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bindfigma/" title="BindFigma" class="md-nav__link">
+      BindFigma
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bindsympli/" title="BindSympli" class="md-nav__link">
+      BindSympli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blockdiag/" title="Blockdiag" class="md-nav__link">
+      Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../confluence/" title="Confluence" class="md-nav__link">
+      Confluence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../csvtables/" title="CSVTables" class="md-nav__link">
+      CSVTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dbmldoc/" title="DBMLDoc" class="md-nav__link">
+      DBMLDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dbdoc/" title="DBDoc" class="md-nav__link">
+      DBDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elasticsearch/" title="Elasticsearch" class="md-nav__link">
+      Elasticsearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epsconvert/" title="Epsconvert" class="md-nav__link">
+      Epsconvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
+      EscapeCode and UnescapeCode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flags/" title="Flags" class="md-nav__link">
+      Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flatten/" title="Flatten" class="md-nav__link">
+      Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../graphviz/" title="Graphviz" class="md-nav__link">
+      Graphviz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../history/" title="History" class="md-nav__link">
+      History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imagemagick/" title="ImageMagick" class="md-nav__link">
+      ImageMagick
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imgcaptions/" title="ImgCaptions" class="md-nav__link">
+      ImgCaptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../imgconvert/" title="ImgConvert" class="md-nav__link">
+      ImgConvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../includes/" title="Includes" class="md-nav__link">
+      Includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../macros/" title="Macros" class="md-nav__link">
+      Macros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mermaid/" title="Mermaid" class="md-nav__link">
+      Mermaid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../metagraph/" title="MetaGraph" class="md-nav__link">
+      MetaGraph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multilinetables/" title="MultilineTables" class="md-nav__link">
+      MultilineTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
+      Pgsqldoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plantuml/" title="Plantuml" class="md-nav__link">
+      Plantuml
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ramldoc/" title="RAMLDoc" class="md-nav__link">
+      RAMLDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reindexer/" title="Reindexer" class="md-nav__link">
+      Reindexer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../removeexcess/" title="RemoveExcess" class="md-nav__link">
+      RemoveExcess
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../replace/" title="Replace" class="md-nav__link">
+      Replace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../repolink/" title="RepoLink" class="md-nav__link">
+      RepoLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runcommands/" title="RunCommands" class="md-nav__link">
+      RunCommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../showcommits/" title="ShowCommits" class="md-nav__link">
+      ShowCommits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../superlinks/" title="SuperLinks" class="md-nav__link">
+      SuperLinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
+      SwaggerDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../templateparser/" title="TemplateParser" class="md-nav__link">
+      TemplateParser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testrail/" title="Testrail" class="md-nav__link">
+      Testrail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      CLI Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        CLI Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/bump/" title="Bump" class="md-nav__link">
+      Bump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/gupload/" title="Gupload" class="md-nav__link">
+      Gupload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/meta_generate/" title="Meta Generate" class="md-nav__link">
+      Meta Generate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/" title="Init" class="md-nav__link">
+      Init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11-5" type="checkbox" id="nav-11-5">
+    
+    <label class="md-nav__link" for="nav-11-5">
+      Init Templates
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-11-5">
+        Init Templates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
+      Preprocessor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/src/" title="Src" class="md-nav__link">
+      Src
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cli/subset/" title="Subset" class="md-nav__link">
+      Subset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Config Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Config Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/alt_structure/" title="AltStructure" class="md-nav__link">
+      AltStructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/from/" title="MultiProject" class="md-nav__link">
+      MultiProject
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/slugs/" title="Slugs" class="md-nav__link">
+      Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../releases/" title="History of Releases" class="md-nav__link">
+      History of Releases
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apireferences-preprocessor-for-foliant" class="md-nav__link">
+    APIReferences Preprocessor for Foliant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-it-for" class="md-nav__link">
+    What is it for?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-recipes" class="md-nav__link">
+    Quick Recipes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recipe-1-find-by-tag-content" class="md-nav__link">
+    Recipe 1: find by tag content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-2-find-by-tag-id" class="md-nav__link">
+    Recipe 2: find by tag id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-3-generate-tag-id" class="md-nav__link">
+    Recipe 3: generate tag id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recipe-4-find-link-for-swaggerui" class="md-nav__link">
+    Recipe 4: find link for SwaggerUI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-guide" class="md-nav__link">
+    User guide
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-modes" class="md-nav__link">
+    API Modes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate_anchor-mode" class="md-nav__link">
+    generate_anchor mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_by_anchor-mode" class="md-nav__link">
+    find_by_anchor mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_by_tag_content-mode" class="md-nav__link">
+    find_by_tag_content mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_for_swagger-mode" class="md-nav__link">
+    find_for_swagger mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_for_redoc-mode" class="md-nav__link">
+    find_for_redoc mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-multiple-apis" class="md-nav__link">
+    Handling Multiple APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-multiple-reference-configuration" class="md-nav__link">
+    Handling Multiple Reference Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-and-endpoint-prefixes" class="md-nav__link">
+    Commands and Endpoint Prefixes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturing-references" class="md-nav__link">
+    Capturing References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-output" class="md-nav__link">
+    Customizing Output
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/preprocessors/apireferences.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="apireferences">APIReferences<a class="headerlink" href="#apireferences" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.apireferences/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.apireferences.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.apireferences"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.apireferences.svg?label=GitHub" /></a></p>
+<h2 id="apireferences-preprocessor-for-foliant">APIReferences Preprocessor for Foliant<a class="headerlink" href="#apireferences-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>APIReferences is a successor of APILinks preprocessor with slightly changed configuration syntax and completely rewritten insides. APILinks is now deprecated, please use APIReferences instead.</p>
+</blockquote>
+<p>Preprocessor replaces API <em>reference</em>s in markdown files with links to corresponding method description on the API documentation web-page.</p>
+<h3 id="what-is-it-for">What is it for?<a class="headerlink" href="#what-is-it-for" title="Permanent link">&para;</a></h3>
+<p>Say, you have API documentation hosted at the url http://example.com/api-docs</p>
+<p>It may be a <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> website or just some static one-page site (like <a href="https://github.com/slatedocs/slate">Slate</a>).</p>
+<p>If you have a site with API docs, you probably reference them from time in your other documents:</p>
+<div class="codehilite"><pre><span></span><code>To authenticate user use API method `POST /user/authenticate`.
+</code></pre></div>
+
+<p>We thought, how cool it'd be if this fragment: <strong>`POST /user/authenticate`</strong> automatically transformed into a URL of this method's description on your API docs website:</p>
+<div class="codehilite"><pre><span></span><code>To authenticate user use API method [POST user/authenticate](http://example.com/api-docs/#post-user-authenticate).
+</code></pre></div>
+
+<p>That's exactly what APIReferences does.</p>
+<h3 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h3>
+<p>The purpose of APIReferences is to convert references into links. In the example above `<code>POST /user/authenticate</code>` is a reference, and <code>[POST user/authenticate](http://example.com/api-docs/#post-user-authenticate)</code> is a Markdown link, the result of APIReferences' work.</p>
+<p>The resulting link URL (http://example.com/api-docs/#get-user-authenticate) always consists of two parts: <code>{url}{anchor}</code>. <code>url</code> is static and is set in config, but <code>anchor</code> differs for each method. Open your API documentation website and look for HTML elements with <code>id</code> attribute near method description sections. When you add this <code>id</code> to the website's URL with number sign # (we call this combination an <em>anchor</em>), your browser scrolls the page to this exact element.</p>
+<p>The tricky part is to determine which anchor should be added to the website's URL for each method. APIReferences offers several ways to do that, we call these ways <em>modes</em> (which are supplied in the <code>mode</code> parameter). It's up to you to choose the most suitable mode for your API website.</p>
+<p>Here are available modes with their short descriptions. Detailed descriptions and examples are in the <strong>User Guide</strong> below.</p>
+<p><strong>1. Generating anchors</strong></p>
+<p>Mode option: <code>generate_anchor</code></p>
+<p>Convert reference into an anchor without checking the website.</p>
+<p><strong>2. Find anchor</strong></p>
+<p>Mode option: <code>find_by_anchor</code></p>
+<p>Parse API website and collect all ids from specific tags. Then convert reference into an anchor and check whether the converted anchor is present among these ids.</p>
+<p><strong>3. Find tag content</strong></p>
+<p>Mode option: <code>find_by_tag_content</code></p>
+<p>This mode searches not by tag ids but by tag content (<code>&lt;tag id="id"&gt;content&lt;/tag&gt;</code>) Parse API website and collect all tags from the specified list, which have ids and text content. The content to search is constructed from the reference. If the tag is found, return a link to its id.</p>
+<p><strong>4. Find method in swagger spec for SwaggerUI</strong></p>
+<p>Mode option: <code>find_for_swagger</code></p>
+<p>Parse the swagger spec file and find the referenced method. The anchor is then constructed by a template. This mode will work for SwaggerUI websites.</p>
+<p><strong>5. Find method in swagger spec for Redoc</strong></p>
+<p>Mode option: <code>find_for_redoc</code></p>
+<p>Parse the swagger spec file and find the referenced method. The anchor is then constructed by a template. This mode will work for Redoc websites.</p>
+<hr />
+<p>APIReferences is a highly customizable preprocessor. You can tune almost anything about reference conversion.</p>
+<p>For details look through the following sections.</p>
+<p>Glossary:</p>
+<ul>
+<li><strong>reference</strong> — reference to an API method in the source file. The one to be replaced with the link, e.g. <code>GET user/config</code></li>
+<li><strong>verb</strong> — HTTP method, e.g. <code>GET</code>, <code>POST</code>, etc.</li>
+<li><strong>command</strong> — resource used to represent method on the API documentation webpage, e.g. <code>/service/healthcheck</code>.</li>
+<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/satus</code> then the endpoint prefix should be stated <code>/api/v0</code>. In references you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. APIReferences will sort it out for you.</li>
+<li><strong>output</strong> — string, which will replace the <em>reference</em>.</li>
+<li><strong>tag content</strong> — plain text between the tags, for example <code>&lt;tag&gt;Tag content&lt;/tag&gt;</code>.</li>
+<li><strong>anchor</strong> — web-element id with leading number sign, for example <code>#get-user-config</code>. Adding the anchor to the end of the web URL will make a browser scroll to the specified web element.</li>
+<li><strong>mode</strong> — the way APIReferences will determine correct anchors to add to website URLs.</li>
+</ul>
+<h3 id="quick-recipes">Quick Recipes<a class="headerlink" href="#quick-recipes" title="Permanent link">&para;</a></h3>
+<h4 id="recipe-1-find-by-tag-content">Recipe 1: find by tag content<a class="headerlink" href="#recipe-1-find-by-tag-content" title="Permanent link">&para;</a></h4>
+<p>We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Minimal sufficiant foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
+                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;Operation</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+</code></pre></div>
+
+<p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
+<h4 id="recipe-2-find-by-tag-id">Recipe 2: find by tag id<a class="headerlink" href="#recipe-2-find-by-tag-id" title="Permanent link">&para;</a></h4>
+<p>The task is the same as in Recipe 1. We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Minimal sufficiant foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
+                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
+</code></pre></div>
+
+<p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
+<h4 id="recipe-3-generate-tag-id">Recipe 3: generate tag id<a class="headerlink" href="#recipe-3-generate-tag-id" title="Permanent link">&para;</a></h4>
+<p>The task is the same as in Recipes 1 and 2, but this time you don't have access to API website at the time of building foliant project. We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Minimal sufficiant foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
+                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
+</code></pre></div>
+
+<p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
+<h4 id="recipe-4-find-link-for-swaggerui">Recipe 4: find link for SwaggerUI<a class="headerlink" href="#recipe-4-find-link-for-swaggerui" title="Permanent link">&para;</a></h4>
+<p>We have a SwaggerUI website and we need to find link to the method by reference `<code>GET /user/status</code>``.</p>
+<p>Method anchors on SwaggerUI consist of tag and operationId, both of which are not present in our reference. APIReferences can find them for you in the spec file. Let's assume that correct tag and operationId are <code>usertag</code> and <code>getStatus</code>.</p>
+<p>Minimal sufficiant foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_for_swagger</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger_ui</span>  <span class="c1"># path to your API website</span>
+                <span class="nt">spec</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>  <span class="c1"># path or direct url to OpenAPI spec</span>
+</code></pre></div>
+
+<p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/swagger_ui#/usertag/getStatus">GET /user/status</a></p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.apireferences
+</code></pre></div>
+
+<h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
+<p>To enable the preprocessor, add <code>apireferences</code> to <code>preprocessors</code> section in the project config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apireferences</span>
+</code></pre></div>
+
+<p>The preprocessor has a lot of options. For your convenience, the required options are marked <em>(required)</em>; and those options which are used in customization are marked <em>(optional)</em>. Most likely you will need just one or two of the latter.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
+    <span class="nt">targets</span><span class="p">:</span>  <span class="c1"># optional. default: []</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
+    <span class="nt">trim_if_targets</span><span class="p">:</span> <span class="c1"># optional. default: []</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
+    <span class="nt">prefix_to_ignore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ignore</span>  <span class="c1"># optional</span>
+    <span class="nt">warning_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>  <span class="c1"># optional</span>
+    <span class="nt">reference</span><span class="p">:</span>  <span class="c1"># optional</span>
+        <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="nv">*ref_pattern</span>
+          <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+          <span class="nt">only_defined_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+          <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
+          <span class="nt">trim_template</span><span class="p">:</span> <span class="s">&#39;`{verb}</span><span class="nv"> </span><span class="s">{command}`&#39;</span>
+        <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="nv">*another_ref_pattern</span>  <span class="c1"># second reference config. Unlisted options are default</span>
+          <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**{verb}</span><span class="nv"> </span><span class="s">{command}**&#39;</span>
+    <span class="nt">API</span><span class="p">:</span>  <span class="c1"># below are examples for each mode</span>
+        <span class="nt">Client-API</span><span class="p">:</span>  <span class="c1"># reference prefix</span>
+            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>  <span class="c1"># optional</span>
+            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
+        <span class="nt">Admin-API</span><span class="p">:</span>
+            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span>
+            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>  <span class="c1"># optional</span>
+            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
+            <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span>  <span class="c1"># optional</span>
+            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
+            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
+        <span class="nt">External-API</span><span class="p">:</span>
+            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/external</span>
+            <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
+            <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span>  <span class="c1"># optional</span>
+            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
+            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
+        <span class="nt">Inernal-API</span><span class="p">:</span>
+            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span>
+            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/swagger-ui</span>
+            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;/{tag}/{operation_id}&#39;</span>
+            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">no-transform</span>
+            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
+            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
+            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
+</code></pre></div>
+
+<dl>
+<dt><code>targets</code></dt>
+<dd><em>(optional)</em> List of supported targets for <code>foliant make</code> command. If target is not listed here — preprocessor won't be applied. If the list is empty — preprocessor will be applied for any target. Default: <code>[]</code></dd>
+<dt><code>trim_if_targets</code></dt>
+<dd><em>(optional)</em> List of targets for <code>foliant make</code> command for which the prefixes from all <em>references</em> in the text will be cut out. Default: <code>[]</code></dd>
+</dl>
+<blockquote>
+<p>Only those references whose prefixes are defined in the <code>API</code> section (described below) are affected by this option. All references with unlisted prefixes will not be trimmed.</p>
+</blockquote>
+<dl>
+<dt><code>prefix_to_ignore</code></dt>
+<dd><em>(optional)</em> A default prefix for ignoring references. If APIReferences meets a reference with this prefix it leaves it unchanged. Default: <code>Ignore</code></dd>
+<dt><code>warning_level</code></dt>
+<dd><em>(optional)</em> <code>2</code> — show all warnings for not found references; <code>1</code> — show only warnings for not found prefixed references; <code>0</code> — don't show warnings about not found references. Default: <code>2</code></dd>
+<dt><code>reference</code></dt>
+<dd><em>(optional)</em> List of dictionaries. A subsection for listing all the types of references you are going to catch in the text, and their properties. Options for this section are listed below.</dd>
+</dl>
+<blockquote>
+<p>All reference properties have defaults. If any of them are missing in the config, the defaults will be used. If <code>reference</code> section is omitted, APIReferences will use default values.</p>
+</blockquote>
+<hr />
+<p><strong>Reference options</strong></p>
+<dl>
+<dt><code>regex</code></dt>
+<dd><em>(optional)</em> regular expression used to catch <em>references</em> in the source. Look for details in the <strong>Capturing References</strong> section.
+Default:</dd>
+</dl>
+<div class="codehilite"><pre><span></span><code>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`
+</code></pre></div>
+
+<dl>
+<dt><code>only_with_prefixes</code></dt>
+<dd><em>(optional)</em> if this is <code>true</code>, only <em>references</em> with prefix will be transformed. Ordinary links like <code>GET user/info</code> will be ignored. Default: <code>false</code></dd>
+<dt><code>only_defined_prefixes</code></dt>
+<dd><em>(optional)</em> if this is <code>true</code> all references whose prefix is not listed in the <code>API</code> section (described below) will be ignored. References without prefixes are not affected by this option. Default: <code>false</code>.</dd>
+<dt><code>output_template</code></dt>
+<dd><em>(optional)</em> A template string describing the <em>output</em> which will replace the <em>reference</em>. More info in the <strong>Customizing Output</strong> section. Default: <code>'[{verb} {command}]({url})'</code></dd>
+<dt><code>trim_template</code></dt>
+<dd><em>(optional)</em> Only for targets listed in <code>trim_if_targets</code> option. Tune this template if you want to customize how APIReferences cuts out prefixes. The reference will be replaced with text based on this template. Default: <code>'`{verb} {command}`'</code></dd>
+</dl>
+<hr />
+<dl>
+<dt><code>API</code></dt>
+<dd><em>(required)</em> A subsection for listing APIs and their properties. Define a separate subsection for each API here. The section name represents the API name and, at the same time, the <em>prefix</em> used in the references. You need to add at least one API subsection for the preprocessor to work.</dd>
+</dl>
+<p><strong>API properties</strong></p>
+<p>The list of options and some default values differ for each mode.</p>
+<dl>
+<dt><code>mode</code></dt>
+<dd><em>(required)</em> API mode, which determines how references are collected. Available modes: <code>generate_anchor</code>, <code>find_by_anchor</code>, <code>find_by_tag_content</code>, <code>find_for_swagger</code>, <code>find_for_redoc</code>.</dd>
+</dl>
+<p><strong><code>generate_anchor</code> mode</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method.</dd>
+<dt><code>anchor_template</code></dt>
+<dd><em>(required)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups from the reference regex. Example: <code>'user-content {verb} {command}'</code>.</dd>
+<dt><code>anchor_converter</code></dt>
+<dd><em>(optional)</em> anchor converter from <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">this list</a>. Determines how string <code>GET /user/status</code> is converted into <code>get-userstatus</code> or <code>get-user-status</code> etc. <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">List of available converters</a>. Default: <code>pandoc</code></dd>
+<dt><code>endpoint_prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+</dl>
+<p><strong><code>find_by_anchor</code> mode</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method. In this mode, it is also being parsed to check whether the generated anchor is present on the page.</dd>
+<dt><code>anchor_template</code></dt>
+<dd><em>(required)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. Example: <code>'user-content {verb} {command}'</code>.</dd>
+<dt><code>anchor_converter</code></dt>
+<dd><em>(optional)</em> anchor converter from <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">this list</a>. Determines how string <code>GET /user/status</code> is converted into <code>get-userstatus</code> or <code>get-user-status</code> etc. Default: <code>pandoc</code></dd>
+<dt><code>endpoint_prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dt><code>tags</code></dt>
+<dd><em>(optional)</em> list of HTML tags which will be parsed out from the page and searched for ids. Default: <code>['h1', 'h2', 'h3', 'h4']</code></dd>
+<dt><code>login</code></dt>
+<dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
+<dt><code>password</code></dt>
+<dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+</dl>
+<p><strong><code>find_by_tag_content</code> mode</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method. In this mode, it is also being parsed to check whether the generated anchor is present on the page.</dd>
+<dt><code>content_template</code></dt>
+<dd><em>(required)</em> A template string describing the format of the tag content in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. Example: <code>'{verb} {command}'</code>.</dd>
+<dt><code>endpoint_prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dt><code>tags</code></dt>
+<dd><em>(optional)</em> list of HTML tags which will be parsed out from the page and searched for ids. Default: <code>['h1', 'h2', 'h3', 'h4']</code></dd>
+<dt><code>login</code></dt>
+<dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
+<dt><code>password</code></dt>
+<dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+</dl>
+<p><strong><code>find_for_swagger</code> mode</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method.</dd>
+<dt><code>spec</code></dt>
+<dd><em>(required)</em> URL or local path to OpenAPI specification file.</dd>
+<dt><code>anchor_template</code></dt>
+<dd><em>(optional)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. In this mode, you can also use two additional placeholders: <code>{tag}</code> and <code>{operation_id}</code>. Default: <code>'/{tag}/{operation_id}'</code>.</dd>
+<dt><code>endpoint_prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. You may use it in output template. Default: <code>''</code></dd>
+<dt><code>login</code></dt>
+<dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
+<dt><code>password</code></dt>
+<dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+</dl>
+<p><strong><code>find_for_redoc</code> mode</strong></p>
+<dl>
+<dt><code>url</code></dt>
+<dd><em>(required)</em> An API documentation web-page URL. It will be used to construct the full link to the method.</dd>
+<dt><code>spec</code></dt>
+<dd><em>(required)</em> URL or local path to OpenAPI specification file.</dd>
+<dt><code>anchor_template</code></dt>
+<dd><em>(optional)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. In this mode, you can also use two additional placeholders: <code>{tag}</code> and <code>{operation_id}</code>. Default: <code>'operation/{operation_id}'</code>.</dd>
+<dt><code>endpoint_prefix</code></dt>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. You may use it in output template. Default: <code>''</code></dd>
+<dt><code>login</code></dt>
+<dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
+<dt><code>password</code></dt>
+<dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+</dl>
+<h2 id="user-guide">User guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h2>
+<p>The purpose of APIReferences is to convert <em>references</em> into Markdown links.</p>
+<p>Reference is a chunk of text in your Markdown source which will be parsed by APIReferences, separated into groups, and converted into a link. An example of a reference is `<code>GET /user/authenticate</code>`. APIReferences uses Regular Expressions to find the reference and split into groups. You can supply your own regular expression in <code>reference -&gt; regex</code> param (details in <strong>Capturing References</strong> section below). If you are using the default one, the reference from the example above will be split into two groups:</p>
+<ul>
+<li><strong>verb</strong>: <code>GET</code>,</li>
+<li><strong>command</strong>: <code>/user/authenticate</code>.</li>
+</ul>
+<p>These groups then will be used to find the referenced method on the API website and also to construct an <em>output string</em>.</p>
+<p>For example, with <code>find_by_tag_content</code> mode (see the detailed description of all modes below) APIReferences will use <code>content_template</code> from API configuration to construct a tag content and search for it on the API website. If the content template is <code>'{verb} {command}'</code>, then the constructed content for the example above will be <code>GET /user/authenticate</code>. APIReferences will search for a tag with such content on the page and get its id.</p>
+<p>The found tag may be <code>&lt;h2 id="get-userauthenticate"&gt;GET /user/authenticate&lt;/h2&gt;</code>. APIReferences will take the id from this tag and use it as an anchor to the link: <code>#get-userauthenticate</code>. Then it will add the API website path and here's your url: <code>http://example.com/api/#get-userauthenticate</code>.</p>
+<p>Now, when APILink has the url of the method description, it can construct an output string. The output string is formed by a template, stated in reference <code>output_template</code> param. This template contains placeholders, which correspond to the reference groups with an addition of <code>{url}</code> placeholder, which contains the url formed above.</p>
+<p>If the output template is <code>'[{verb} {command}]({url})'</code>, then the output string for our example will be:</p>
+<p><code>[GET /user/authenticate](http://example.com/api/#get-userauthenticate)</code>.</p>
+<p>That's it, we've turned our reference into a Markdown link:</p>
+<p>`<code>GET /user/authenticate</code>` -&gt; <code>[GET /user/authenticate](http://example.com/api/#get-userauthenticate)</code>.</p>
+<p>That's the big picture. Now let's start with exploring different <em>modes</em> by means of which APIReferences captures references on API websites and transforms them into links.</p>
+<h3 id="api-modes">API Modes<a class="headerlink" href="#api-modes" title="Permanent link">&para;</a></h3>
+<p>As mentioned above, APIReferences takes a reference from your markdown source and splits it into groups. It then uses these groups to find the correct id on the API website. How this search is performed is determined by <em>API Mode</em>. It can search for a specific tag on the page by tag content or by its id; it can also search for the operation in an OpenAPI specification file or just construct an id without any checks, depending on the mode you've chosen. The mode is specified in <code>API -&gt; &lt;api name&gt; -&gt; mode</code> config option.</p>
+<h4 id="generate_anchor-mode"><code>generate_anchor</code> mode<a class="headerlink" href="#generate_anchor-mode" title="Permanent link">&para;</a></h4>
+<p><code>generate_anchor</code> is the simplest mode. It just generates the anchor basing on the <code>anchor_template</code> parameter. It doesn't perform any checks on the API website and doesn't even require the website to be reachable at the time of building your Foliant project.</p>
+<p>Let's assume that your API website code looks like this:</p>
+<div class="codehilite"><pre><span></span><code>...
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;user-content-get-userlogin&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;user-content-get-apiv2adminstatus&quot;</span><span class="p">&gt;</span>GET /api/v2/admin/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+...
+</code></pre></div>
+
+<p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
+                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;user</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+</code></pre></div>
+
+<p>As you may have noticed, there's no <code>reference</code> section in the example above. That's because we will be using default values for the reference.</p>
+<p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use `My-API: GET /user/status` method.
+</code></pre></div>
+
+<blockquote>
+<p>Note that for <code>generate_anchor</code> mode, the API prefix (<code>My-API</code> in our case) is required in the reference. More info about prefixes in <strong>Handling Multiple APIs</strong> section.</p>
+</blockquote>
+<p>APIReferences will notice a reference mentioned in our markdown: `<code>My-API: GET /user/status</code>`. It will capture it and split into three groups:</p>
+<ul>
+<li><strong>prefix</strong>: <code>My-API</code>,</li>
+<li><strong>verb</strong>: <code>GET</code>,</li>
+<li><strong>command</strong>: <code>/user/status</code>.</li>
+</ul>
+<p>Then it will pass it to the anchor template <code>'user content {verb} {command}'</code> which we've stated in our config, and this will result in a string:</p>
+<p><code>'user content GET /user/status'</code></p>
+<p>After that APIReferences will convert this string into an id with anchor converter. We've chosen <code>pandoc</code> converter in our config, which will turn the string into this: <code>user-content-getuserstatus</code>. That's exactly the id we needed, look an the webpage source:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;user-content-get-userstatus&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>APIReferences will add this id to our API url (which we've stated in config) to form a link: <code>http://example.com/api#user-content-get-userstatus</code>.</p>
+<p>Finally, it's time to construct a Markdown link. APIReferences takes an <code>output_template</code> from the reference config (which is omitted in our example foliant.yml because we are using defaults): <code>'[{verb} {command}]({url})'</code>.</p>
+<p>Placeholders in the output template are replaced by groups from our reference, except <code>{url}</code> placeholder which is replaced with the url constructed above:</p>
+<p><code>[GET /user/status](http://example.com/api#user-content-get-userstatus)</code></p>
+<p>The conversion is done. Our Markdown content will now look like this:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use [GET /user/status](http://example.com/api#user-content-get-userstatus) method.
+</code></pre></div>
+
+<h4 id="find_by_anchor-mode"><code>find_by_anchor</code> mode<a class="headerlink" href="#find_by_anchor-mode" title="Permanent link">&para;</a></h4>
+<p><code>find_by_anchor</code> generates the id by <code>anchor_template</code> parameter and searches for this id on the API web page. If an element with such id is found, the reference is converted into a Markdown link. If not — the reference is skipped.</p>
+<p>Let's assume that your API website code looks like this:</p>
+<div class="codehilite"><pre><span></span><code>...
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;api-method-get-userstatus&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;api-method-get-apiv2adminstatus&quot;</span><span class="p">&gt;</span>GET /api/v2/admin/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+...
+</code></pre></div>
+
+<p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">reference</span><span class="p">:</span>
+            <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
+            <span class="c1"># other reference properties are default</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
+                <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span>
+                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;api-method</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+</code></pre></div>
+
+<p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use `GET /user/status` method.
+</code></pre></div>
+
+<p>APIReferences will notice a reference mentioned in our markdown: `<code>GET /user/status</code>`. It will capture it and split into two groups:</p>
+<ul>
+<li><strong>verb</strong>: <code>GET</code>,</li>
+<li><strong>command</strong>: <code>/user/status</code>.</li>
+</ul>
+<p>Then it will pass it to the anchor template <code>'api-method {verb} {command}'</code> which we've stated in our config, and this will result in a string:</p>
+<p><code>'user content GET /user/status'</code></p>
+<p>After that APIReferences will convert this string into an id with an anchor converter. We've used <code>pandoc</code> converter in our config, which will turn the string into this: <code>api-method-getuserstatus</code>.</p>
+<p>Now APIReferences will parse the web page and look for all <code>h1</code> and <code>h2</code> tags (as specified in <code>tags</code> parameter) that have ids and compare these ids to our generated id.</p>
+<p>One of the elements satisfies the requirement:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;api-method-get-userstatus&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>It means that referenced method is present on API web page, so APIReferences will add this id to our API url (which we've stated in config) to form a link: <code>http://example.com/api#api-method-get-userstatus</code>.</p>
+<p>Finally, it's time to construct a Markdown link. APIReferences takes an <code>output_template</code> from the reference config: <code>'**[{verb} {command}]({url})**'</code>.</p>
+<p>Placeholders in the output template are replaced by groups from our reference, except <code>{url}</code> placeholder which is replaced with the url constructed above:</p>
+<p><code>**[GET /user/status](http://example.com/api#api-method-get-userstatus)**</code></p>
+<p>The conversion is done. Our Markdown content will now look like this:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use **[GET /user/status](http://example.com/api#api-method-get-userstatus)** method.
+</code></pre></div>
+
+<h4 id="find_by_tag_content-mode"><code>find_by_tag_content</code> mode<a class="headerlink" href="#find_by_tag_content-mode" title="Permanent link">&para;</a></h4>
+<p><code>find_by_tag_content</code> generates tag content by the <code>content_template</code> and searches for an HTML element with such content on the API web page. If an element is found, the reference is converted into a Markdown link. If not — the reference is skipped.</p>
+<p>This mode is convenient when there's no way to determine tag id basing on the reference, for example, when ids are random strings.</p>
+<p>Let's assume that your API website code looks like this:</p>
+<div class="codehilite"><pre><span></span><code>...
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;o1egwb7agw&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;y3yn8ewg32&quot;</span><span class="p">&gt;</span>GET /api/v2/admin/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+...
+</code></pre></div>
+
+<p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">reference</span><span class="p">:</span>
+            <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{prefix}:</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
+            <span class="c1"># other reference properties are default</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
+                <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span>
+                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+</code></pre></div>
+
+<p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use `My-API: GET /user/status` method.
+</code></pre></div>
+
+<p>APIReferences will notice a reference mentioned in our markdown: `<code>My-API: GET /user/status</code>`. The reference has the prefix <code>My-API</code>, which means that <code>My-API</code> from the <code>API</code> section should be used. It will capture it and split into three groups:</p>
+<ul>
+<li><strong>prefix</strong>: <code>My-API</code>,</li>
+<li><strong>verb</strong>: <code>GET</code>,</li>
+<li><strong>command</strong>: <code>/user/status</code>.</li>
+</ul>
+<p>Then it will pass it to the header template <code>'{verb} {command}'</code> which we've stated in our config, and this will result in a string:</p>
+<p><code>'GET /user/status'</code></p>
+<p>Now APIReferences will parse the web page and look for all <code>h1</code> and <code>h2</code> tags (as specified in the <code>tags</code> parameter) whose content equals to our generated content.</p>
+<p>One of the elements satisfies the requirement:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;o1egwb7agw&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>It means that referenced method is present on the API web page, so APIReferences will take an id <code>o1egwb7agw</code> from it and add it to our API url (which we've stated in config) to form a link: <code>http://example.com/api#o1egwb7agw</code>.</p>
+<p>Finally, it's time to construct a Markdown link. APIReferences takes an <code>output_template</code> from the reference config: <code>'[{prefix}: {verb} {command}]({url})'</code>.</p>
+<p>Placeholders in the output template are replaced by groups from our reference, except <code>{url}</code> placeholder which is replaced with the url constructed above:</p>
+<p><code>[My-API: GET /user/status](http://example.com/api#api-method-get-userstatus)</code></p>
+<p>The conversion is done. Our Markdown content will now look like this:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use [My-API: GET /user/status](http://example.com/api#api-method-get-userstatus) method.
+</code></pre></div>
+
+<h4 id="find_for_swagger-mode"><code>find_for_swagger</code> mode<a class="headerlink" href="#find_for_swagger-mode" title="Permanent link">&para;</a></h4>
+<p><code>find_for_swagger</code> mode parses the OpenAPI spec file and looks for the referenced method in it. It then generates an anchor for SwaggerUI website based on data from the reference and the operation properties in the spec.</p>
+<p>Let's assume that your OpenAPI specification looks like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;swagger&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;/user/status&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;GET&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;userauth&quot;</span><span class="p">],</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Returns user auth status&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;checkStatus&quot;</span><span class="p">,</span>
+                <span class="err">...</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+    <span class="err">...</span>
+</code></pre></div>
+
+<p>On the default SwaggerUI website the anchor to this method will be <code>#/userauth/checkStatus</code>. It consists of the first tag from the operation properties and the operationId. So to generate the proper anchor APIReferences will need to get those parts from the spec.</p>
+<p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="c1"># reference options are default in this example</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
+                <span class="nt">spec</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
+                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;/{tag}/{operation_id}&#39;</span>  <span class="c1"># you can omit this line because it&#39;s the default value</span>
+</code></pre></div>
+
+<p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use `GET /user/login` method.
+</code></pre></div>
+
+<p>APIReferences will notice a reference mentioned in our markdown: `<code>GET /user/login</code>`. It will capture it and split into two groups:</p>
+<ul>
+<li><strong>verb</strong>: <code>GET</code>,</li>
+<li><strong>command</strong>: <code>/user/login</code>.</li>
+</ul>
+<blockquote>
+<p>Note that <code>verb</code> and <code>command</code> groups are required for this mode if you are to redefine default reference regex.</p>
+</blockquote>
+<p>Now, when we have a verb and a command, we can search for it in the OpenAPI spec. APIReferences parses the spec and searches the <code>paths</code> section for our operation. From the operation properties APIReferences takes two values:</p>
+<ul>
+<li><strong>tag</strong>: first element from the <code>tags</code> list,</li>
+<li><strong>operationId</strong>.</li>
+</ul>
+<p>These values are then passed to the anchor template <code>'/{tag}/{operation_id}'</code>, along with groups from our reference, this will result in a string:</p>
+<p><code>'/userauth/checkStatus'</code></p>
+<p>That's the id we were looking for. APIReferences will add it to our API url (which we've stated in config) to form a link: <code>http://example.com/api#/userauth/checkStatus</code>.</p>
+<p>Finally, it's time to construct a Markdown link. APIReferences takes an <code>output_template</code> from the reference config, which is default: <code>'[{verb} {command}]({url})'</code>.</p>
+<p>Placeholders in the output template are replaced by groups from our reference, except <code>{url}</code> placeholder which is replaced with the url constructed above:</p>
+<p><code>[GET /user/login](http://example.com/api#/userauth/checkStatus)</code></p>
+<p>The conversion is done. Our Markdown content will now look like this:</p>
+<div class="codehilite"><pre><span></span><code>To find out user&#39;s status use [GET /user/login](http://example.com/api#/userauth/checkStatus) method.
+</code></pre></div>
+
+<h4 id="find_for_redoc-mode"><code>find_for_redoc</code> mode<a class="headerlink" href="#find_for_redoc-mode" title="Permanent link">&para;</a></h4>
+<p><code>find_for_redoc</code> is similar to <code>find_for_swagger</code> mode, except that deafult anchor template is <code>'operation/{operation_id}'</code>.</p>
+<h3 id="handling-multiple-apis">Handling Multiple APIs<a class="headerlink" href="#handling-multiple-apis" title="Permanent link">&para;</a></h3>
+<p>APIReferences can work with several APIs at once, and honestly, it's very good at this.</p>
+<p>Let's consider an example foliant.yml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">Client-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
+                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+            <span class="nt">Admin-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span>
+                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+</code></pre></div>
+
+<p>In this example we've defined two APIs: <code>Client-API</code> and <code>Admin-API</code>, these are just names, they may be anything you want. Now we can reference both APIs:</p>
+<div class="codehilite"><pre><span></span><code>When user clicks &quot;LOGIN&quot; button, the app sends a request `POST /user/login`.
+
+To restrict user from logging in run `PUT /admin/ban_user/{id}`.
+</code></pre></div>
+
+<p>After applying the preprocessor, this source will turn into:</p>
+<div class="codehilite"><pre><span></span><code>When user clicks &quot;LOGIN&quot; button, the app sends a request [POST /user/login](http://example.com/api/client#post-userlogin).
+
+To restrict user from logging in run [PUT /admin/ban_user/{id}](](http://example.com/api/admin#put-adminbanuser-id).
+</code></pre></div>
+
+<p>As you see, APIReferences determined, which reference corresponds to which API. That is possible because when APIReferences meets a non-prefixed reference, it goes through each defined API and searches for the mentioned method.</p>
+<p>But what happens if we reference a method which is present in both APIs?</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">Run</span> `<span class="nv">GET</span> <span class="o">/</span><span class="nv">system</span><span class="o">/</span><span class="nv">healthcheck</span>` <span class="k">for</span> <span class="nv">debug</span> <span class="nv">information</span>.
+</code></pre></div>
+
+<p>You have to understand that, even though APIReferences is very powerful, it doesn't understand the concept of free will. It can't make the choice for you, so instead, it will show a warning and skip this reference:</p>
+<div class="codehilite"><pre><span></span><code>WARNING: [index.md] Failed to process reference. Skipping. `GET /system/healthcheck` is present in several APIs (Client-API, Admin-API). Please, use prefix.
+</code></pre></div>
+
+<p>In the warning text, there's a suggestion to use a <em>prefix</em>. A prefix is a way to make your reference more specific and point APIReferences to the correct API. The value of the prefix is the API name as defined in the config. So for Client API, the prefix would be <code>Client-API</code>, for Admin — <code>Admin-API</code>. Let's fix our example:</p>
+<div class="codehilite"><pre><span></span><code>Run `Admin-API: GET /system/healthcheck` to get debug information about the Admin API service.
+
+Run `Client-API: GET /system/healthcheck` to get debug information about the Client API service.
+</code></pre></div>
+
+<blockquote>
+<p>If you don't like the format in which we supply prefix (<code>&lt;prefix&gt;: &lt;verb&gt; &lt;command&gt;</code>), you can change it by tweaking reference regex. More info in <strong>Capturing References</strong> section.</p>
+</blockquote>
+<p>It's recommended to always use prefixes for unambiguity. The <code>generate_anchor</code> mode won't work at all for references without prefixes, because it doesn't perform any checks and almost always returns a link.</p>
+<h3 id="handling-multiple-reference-configuration">Handling Multiple Reference Configuration<a class="headerlink" href="#handling-multiple-reference-configuration" title="Permanent link">&para;</a></h3>
+<p>You can not only make APIReferences work with different APIs but also with different reference configurations. <code>reference</code> parameter is a list for a reason. And because <code>output_template</code> is part of reference configuration, you can make different references transform into different values.</p>
+<p>Here's an example config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">reference</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
+            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+
+<p>With such config references with prefixes will be transformed into <strong>bold links</strong>, while non-prefixed references will remain regular links.</p>
+<h3 id="commands-and-endpoint-prefixes">Commands and Endpoint Prefixes<a class="headerlink" href="#commands-and-endpoint-prefixes" title="Permanent link">&para;</a></h3>
+<p>APIReferences treats the <code>command</code> part of your reference in a special way. While searching for it on the API website it will try to substitute the command place holder:</p>
+<ul>
+<li>with and without leading slash (<code>/user/login</code> and <code>user/login</code>),</li>
+<li>with and without endpoint prefix, if one is defined (<code>/api/v1/user/login</code> and <code>/user/login</code>).</li>
+</ul>
+<p>Here's an example config to illustrate this feature:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+    <span class="nt">apireferences</span><span class="p">:</span>
+        <span class="nt">reference</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
+            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
+        <span class="nt">API</span><span class="p">:</span>
+            <span class="nt">My-API</span><span class="p">:</span>
+                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
+                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
+                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+                <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>
+</code></pre></div>
+
+<p>Considering that the API website source looks like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;asoi17uo&quot;</span><span class="p">&gt;</span>GET /api/v1/user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Which of these references, do you think, will give us the desired result?</p>
+<div class="codehilite"><pre><span></span><code>`GET /user/status`
+`GET user/status`
+`GET /api/v2/user/status`
+</code></pre></div>
+
+<p>If you were reading carefully, you already know the answer — all of these references will result in the same link:</p>
+<div class="codehilite"><pre><span></span><code>[GET /user/status](http://example.com/api#asoi17uo)
+[GET /user/status](http://example.com/api#asoi17uo)
+[GET /user/status](http://example.com/api#asoi17uo)
+</code></pre></div>
+
+<h2 id="capturing-references">Capturing References<a class="headerlink" href="#capturing-references" title="Permanent link">&para;</a></h2>
+<p>APIReferences uses regular expressions to capture <em>references</em> to API methods in Markdown files.</p>
+<p>The default reg-ex is:</p>
+<div class="codehilite"><pre><span></span><code>`<span class="ss">((</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">prefix</span><span class="o">&gt;</span>[\<span class="nv">w</span><span class="o">-</span>]<span class="o">+</span><span class="ss">)</span>:\<span class="nv">s</span><span class="o">*</span><span class="ss">)</span>?<span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">verb</span><span class="o">&gt;</span><span class="nv">OPTIONS</span><span class="o">|</span><span class="nv">GET</span><span class="o">|</span><span class="nv">HEAD</span><span class="o">|</span><span class="nv">POST</span><span class="o">|</span><span class="nv">PUT</span><span class="o">|</span><span class="nv">DELETE</span><span class="o">|</span><span class="nv">TRACE</span><span class="o">|</span><span class="k">CONNECT</span><span class="o">|</span><span class="nv">PATCH</span><span class="o">|</span><span class="nv">LINK</span><span class="o">|</span><span class="k">UNLINK</span><span class="ss">)</span>\<span class="nv">s</span><span class="o">+</span><span class="ss">(</span>?<span class="nv">P</span><span class="o">&lt;</span><span class="nv">command</span><span class="o">&gt;</span>\<span class="nv">S</span><span class="o">+</span><span class="ss">)</span>`
+</code></pre></div>
+
+<p>This expression accepts references like these:</p>
+<ul>
+<li><code>Client-API: GET user/info</code></li>
+<li><code>UPDATE user/details</code></li>
+</ul>
+<p>Notice that the default expression uses <a href="https://docs.python.org/3/howto/regex.html#non-capturing-and-named-groups">Named Capturing Groups</a>. You have to use them too if you are to redefine the expression. You can name these groups as you like and have as many or as few as you wish, but it's recommended to include the <code>prefix</code> group for API prefix logic to work. It is also required for all groups which are in the <code>output_template</code> also to be present in the regex.</p>
+<p>To redefine the regular expression add an option <code>regex</code> to the reference config.</p>
+<p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
+      <span class="nt">reference</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="s">&#39;((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`&#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>This example is for illustrative purposes only. You can achieve the same goal by just switching on the <code>only_with_prefixes</code> option.</p>
+</blockquote>
+<p>Now the references without prefix (<code>UPDATE user/details</code>) will be ignored.</p>
+<h2 id="customizing-output">Customizing Output<a class="headerlink" href="#customizing-output" title="Permanent link">&para;</a></h2>
+<p>You can customize the <em>output</em>-string which will replace the <em>reference</em> string. To do that add a template into your reference configuration.</p>
+<p>A <em>template</em> is a string that may contain placeholders, surrounded by curly braces. These placeholders will be replaced with the values, and all the rest will remain unchanged.</p>
+<p>For example, look at the default template:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
+    <span class="nt">reference</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span>
+</code></pre></div>
+
+<blockquote>
+<p>Don't forget the single quotes around the template. These braces and parenthesis easily make YAML think that it is an embedded dictionary or list.</p>
+</blockquote>
+<p>With the default template, the reference string will be replaced by something like that:</p>
+<div class="codehilite"><pre><span></span><code>[GET user/info](http://example.com/api/#get-user-info)
+</code></pre></div>
+
+<p>If you want references to be transformed into something else, create your own template. You can use placeholders from the reference regular expression along with some additional:</p>
+<table>
+<thead>
+<tr>
+<th>placeholder</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>Full original reference string</td>
+<td>`<code>Client-API: GET user/info</code>`</td>
+</tr>
+<tr>
+<td>url</td>
+<td>Full url to the method description</td>
+<td><code>http://example.com/api/#get-user-info</code></td>
+</tr>
+<tr>
+<td>endpoint_prefix</td>
+<td>API endpoint prefix from API configuration</td>
+<td><code>/api/v2</code></td>
+</tr>
+</tbody>
+</table>
+<p>Placeholders from the default regex are:</p>
+<table>
+<thead>
+<tr>
+<th>placeholder</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>API Prefix used in the reference</td>
+<td><code>Client-API</code></td>
+</tr>
+<tr>
+<td>verb</td>
+<td>HTTP verb used in the reference</td>
+<td><code>GET</code></td>
+</tr>
+<tr>
+<td>command</td>
+<td>API command being referenced with endpoint prefix removed</td>
+<td><code>/user/info</code></td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../apilinks/" title="APILinks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                APILinks
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../archeme/" title="Archeme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Archeme
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="/docs/assets/foliant-docs.pdf" target="_blank" rel="noopener" title="file-pdf-o" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

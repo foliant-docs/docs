@@ -689,6 +689,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../preprocessors/apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../preprocessors/archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1343,6 +1355,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1454,7 +1478,7 @@
 <p>It’s not necessary but recommended to use <a href="https://docs.docker.com/compose/">Docker Compose</a> utility to build images for Foliant projects and run containers based on them.</p>
 <p>To prepare your Foliant project to be built within Docker container, add the files <code>Dockerfile</code> and <code>docker-compose.yml</code> into the project’s “root” directory.</p>
 <p>If you decided to use the image with the <code>full</code> tag, the content of <code>Dockerfile</code> should be the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">FROM foliant/foliant:full</span>
+<div class="codehilite"><pre><span></span><code>FROM foliant/foliant:full
 </code></pre></div>
 
 <p>The file <code>docker-compose.yml</code> should define the <code>foliant</code> service in this way:</p>
@@ -1470,22 +1494,22 @@
 </code></pre></div>
 
 <p>For debug purposes, it’s useful to add one more service, <code>bash</code>, to run containers with an interactive shell. Recommended full content of the file <code>docker-compose.yml</code> is the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+<div class="codehilite"><pre><span></span><code>version: &#39;3&#39;
 
-<span class="n">services</span><span class="p">:</span>
-  <span class="n">foliant</span><span class="p">:</span>
-    <span class="n">build</span><span class="p">:</span>
-      <span class="n">context</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span>
-      <span class="n">dockerfile</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span><span class="n">Dockerfile</span>
-    <span class="n">volumes</span><span class="p">:</span>
-      <span class="o">-</span> <span class="p">.</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
-  <span class="n">bash</span><span class="p">:</span>
-    <span class="n">build</span><span class="p">:</span>
-      <span class="n">context</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span>
-      <span class="n">dockerfile</span><span class="p">:</span> <span class="p">.</span><span class="o">/</span><span class="n">Dockerfile</span>
-    <span class="n">volumes</span><span class="p">:</span>
-      <span class="o">-</span> <span class="p">.</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
-    <span class="n">entrypoint</span><span class="p">:</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>
+services:
+  foliant:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/src/app/
+  bash:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/src/app/
+    entrypoint: /bin/bash
 </code></pre></div>
 
 <p>To run Foliant project build, first, you have to build an image for the project:</p>
@@ -1535,17 +1559,17 @@
 <li>message text that explains the essence of the event.</li>
 </ul>
 <p>For example, the first record of a log is usually looks like that:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">2020-06-25 09:40:54,419 |                  flt |     INFO | Build started.</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">2020</span><span class="o">-</span><span class="mf">06</span><span class="o">-</span><span class="mf">25</span> <span class="mf">09</span><span class="p">:</span><span class="mf">40</span><span class="p">:</span><span class="mf">54</span><span class="p">,</span><span class="mf">419</span> <span class="err">|</span>                  <span class="n">flt</span> <span class="err">|</span>     <span class="n">INFO</span> <span class="err">|</span> <span class="n">Build</span> <span class="n">started</span><span class="mf">.</span>
 </code></pre></div>
 
 <p>The string <code>flt</code> in the second field means Foliant itself, i.e. Foliant Core.</p>
 <p>The context is hierarchical. The following record represents an event that is registered in the preprocessor Includes that is called from the preprocessor Flatten, that is called during project build with Pandoc backend.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">2020-06-25 09:40:54,678 | flt.pandoc.flatten.includes |    DEBUG | Processing Markdown file: /usr/src/app/__folianttmp__/__all__.md</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">2020</span><span class="o">-</span><span class="mf">06</span><span class="o">-</span><span class="mf">25</span> <span class="mf">09</span><span class="p">:</span><span class="mf">40</span><span class="p">:</span><span class="mf">54</span><span class="p">,</span><span class="mf">678</span> <span class="err">|</span> <span class="n">flt</span><span class="mf">.</span><span class="n">pandoc</span><span class="mf">.</span><span class="n">flatten</span><span class="mf">.</span><span class="n">includes</span> <span class="err">|</span>    <span class="n">DEBUG</span> <span class="err">|</span> <span class="n">Processing</span> <span class="n">Markdown</span> <span class="n">file</span><span class="p">:</span> <span class="o">/</span><span class="nb">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">__folianttmp__</span><span class="o">/</span><span class="n">__all__</span><span class="mf">.</span><span class="n">md</span>
 </code></pre></div>
 
 <p>In this example, the message text contains the path to the file that is currently processed.</p>
 <p>In the next example, Pandoc backend logs the external command that is called to build needed target:</p>
-<div class="codehilite"><pre><span></span><code><span class="mi">2020</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">25</span> <span class="mi">09</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">54</span><span class="p">,</span><span class="mi">684</span> <span class="o">|</span>           <span class="n">flt</span><span class="o">.</span><span class="n">pandoc</span> <span class="o">|</span>    <span class="n">DEBUG</span> <span class="o">|</span> <span class="n">PDF</span> <span class="n">generation</span> <span class="n">command</span><span class="p">:</span> <span class="n">pandoc</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="s2">&quot;/foliant_stuff/pandoc_templates/tex_templates/main.tex&quot;</span> <span class="o">--</span><span class="n">output</span> <span class="s2">&quot;My_Awesome_Project-1.0-2020-06-25.pdf&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My Awesome Project&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">subtitle</span><span class="o">=</span><span class="s2">&quot;Description Of My Awesome Project&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">logo</span><span class="o">=</span><span class="s2">&quot;/foliant_stuff/pandoc_templates/logos/logo.png&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">year</span><span class="o">=</span><span class="s2">&quot;2020&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">title_page</span> <span class="o">--</span><span class="n">variable</span> <span class="n">toc</span> <span class="o">--</span><span class="n">variable</span> <span class="n">tof</span>  <span class="o">--</span><span class="n">pdf</span><span class="o">-</span><span class="n">engine</span><span class="o">=</span><span class="n">xelatex</span> <span class="o">--</span><span class="n">listings</span> <span class="o">-</span><span class="n">f</span> <span class="n">markdown</span> <span class="n">__folianttmp__</span><span class="o">/</span><span class="n">__all__</span><span class="o">.</span><span class="n">md</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">2020</span><span class="o">-</span><span class="mf">06</span><span class="o">-</span><span class="mf">25</span> <span class="mf">09</span><span class="p">:</span><span class="mf">40</span><span class="p">:</span><span class="mf">54</span><span class="p">,</span><span class="mf">684</span> <span class="err">|</span>           <span class="n">flt</span><span class="mf">.</span><span class="n">pandoc</span> <span class="err">|</span>    <span class="n">DEBUG</span> <span class="err">|</span> <span class="n">PDF</span> <span class="n">generation</span> <span class="n">command</span><span class="p">:</span> <span class="n">pandoc</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="s">&quot;/foliant_stuff/pandoc_templates/tex_templates/main.tex&quot;</span> <span class="o">--</span><span class="n">output</span> <span class="s">&quot;My_Awesome_Project-1.0-2020-06-25.pdf&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;My Awesome Project&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">version</span><span class="o">=</span><span class="s">&quot;1.0&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">subtitle</span><span class="o">=</span><span class="s">&quot;Description Of My Awesome Project&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="nb">log</span><span class="n">o</span><span class="o">=</span><span class="s">&quot;/foliant_stuff/pandoc_templates/logos/logo.png&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">year</span><span class="o">=</span><span class="s">&quot;2020&quot;</span> <span class="o">--</span><span class="n">variable</span> <span class="n">title_page</span> <span class="o">--</span><span class="n">variable</span> <span class="kr">to</span><span class="n">c</span> <span class="o">--</span><span class="n">variable</span> <span class="kr">to</span><span class="n">f</span>  <span class="o">--</span><span class="n">pdf</span><span class="o">-</span><span class="n">engine</span><span class="o">=</span><span class="n">xelatex</span> <span class="o">--</span><span class="kr">list</span><span class="n">ings</span> <span class="o">-</span><span class="n">f</span> <span class="n">markdown</span> <span class="n">__folianttmp__</span><span class="o">/</span><span class="n">__all__</span><span class="mf">.</span><span class="n">md</span>
 </code></pre></div>
 
 <p>If you suspect that the command executes wrong, you can copy it and try to run directly in an interactive shell.</p>

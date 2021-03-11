@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1365,6 +1377,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1521,26 +1545,26 @@
 </dl>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Add a <code>&lt;pgsqldoc&gt;&lt;/pgsqldoc&gt;</code> tag at the position in the document where the generated documentation of a PostgreSQL database should be inserted:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code><span class="gh"># Introduction</span>
 
 This document contains the most awesome automatically generated documentation of our marvellous database.
 
-<span class="nt">&lt;pgsqldoc&gt;&lt;/pgsqldoc&gt;</span>
+&lt;pgsqldoc&gt;&lt;/pgsqldoc&gt;
 </code></pre></div>
 
 <p>Each time the preprocessor encounters the tag <code>&lt;pgsqldoc&gt;&lt;/pgsqldoc&gt;</code> it inserts the whole generated documentation text instead of it. The connection parameters are taken from the config-file.</p>
 <p>You can also specify some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code><span class="gh"># Introduction</span>
 
 Introduction text for database documentation.
 
-<span class="nt">&lt;pgsqldoc</span> <span class="na">draw=</span><span class="s">&quot;true&quot;</span>
-          <span class="na">host=</span><span class="s">&quot;11.51.126.8&quot;</span>
-          <span class="na">port=</span><span class="s">&quot;5432&quot;</span>
-          <span class="na">dbname=</span><span class="s">&quot;mydb&quot;</span>
-          <span class="na">user=</span><span class="s">&quot;scott&quot;</span>
-          <span class="na">password=</span><span class="s">&quot;tiger&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/pgsqldoc&gt;</span>
+&lt;pgsqldoc draw=&quot;true&quot;
+          host=&quot;11.51.126.8&quot;
+          port=&quot;5432&quot;
+          dbname=&quot;mydb&quot;
+          user=&quot;scott&quot;
+          password=&quot;tiger&quot;&gt;
+&lt;/pgsqldoc&gt;
 </code></pre></div>
 
 <p>Tag parameters have the highest priority.</p>
@@ -1558,12 +1582,12 @@ Introduction text for database documentation.
 </code></pre></div>
 
 <p>or in tag options using the same yaml-syntax:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;pgsqldoc</span> <span class="na">filters=</span><span class="s">&quot;</span>
-<span class="s">eq:</span>
-<span class="s">    schema: public</span>
-<span class="s">  regex:</span>
-<span class="s">    table_name: &#39;main_.+&#39;&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/pgsqldoc&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;pgsqldoc filters=&quot;
+eq:
+    schema: public
+  regex:
+    table_name: &#39;main_.+&#39;&quot;&gt;
+&lt;/pgsqldoc&gt;
 </code></pre></div>
 
 <p>List of currently supported operators:</p>

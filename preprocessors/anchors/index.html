@@ -711,6 +711,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1365,6 +1377,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1550,9 +1574,9 @@ Something&#39;s wrong with Mike, [look](#Mike)!
 </code></pre></div>
 
 <p>Then add custom identifiers to your headings:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">My</span> <span class="n">heading</span> <span class="err">{</span><span class="o">#</span><span class="n">foo</span><span class="err">}</span>
+<div class="codehilite"><pre><span></span><code># My heading {#foo}
 
-<span class="n">Lorem</span> <span class="n">ipsum</span><span class="p">,</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span> <span class="n">consectetur</span> <span class="n">adipisicing</span> <span class="n">elit</span><span class="p">.</span> <span class="n">Omnis</span> <span class="n">non</span> <span class="n">vitae</span> <span class="n">placeat</span> <span class="n">sapiente</span> <span class="n">reprehenderit</span> <span class="n">officia</span><span class="p">.</span>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis non vitae placeat sapiente reprehenderit officia.
 </code></pre></div>
 
 <p>After processing your text will be look like this:</p>
@@ -1574,7 +1598,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis non vitae placea
 <p>Preprocessor will try to detect if you are using anchor which is already taken by the header and warn you in console.</p>
 <p><strong>4. Some symbols are restricted</strong></p>
 <p>You can't use these symbols in anchors:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">[]&lt;&gt;\&quot;</span>
+<div class="codehilite"><pre><span></span><code>[]&lt;&gt;\&quot;
 </code></pre></div>
 
 <p>Also you can't use space.</p>

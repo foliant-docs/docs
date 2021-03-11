@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1358,6 +1370,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1510,21 +1534,21 @@ This document contains the automatically generated documentation of our Database
 
 <p>Each time the preprocessor encounters the tag <code>&lt;dbmldoc&gt;&lt;/dbmldoc&gt;</code> it inserts the whole generated documentation text instead of it. The path or url to DBML spec file is taken from foliant.yml.</p>
 <p>You can also override some parameters (or all of them) in the tag options:</p>
-<div class="codehilite"><pre><span></span><code># Introduction
+<div class="codehilite"><pre><span></span><code><span class="gh"># Introduction</span>
 
 Introduction text for API documentation.
 
-<span class="nt">&lt;dbmldoc</span> <span class="na">spec_url=</span><span class="s">&quot;http://localhost/schema.dbml&quot;</span>
-         <span class="na">template=</span><span class="s">&quot;dbml.j2&quot;</span>
-         <span class="na">scheme=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/dbmldoc&gt;</span>
+&lt;dbmldoc spec_url=&quot;http://localhost/schema.dbml&quot;
+         template=&quot;dbml.j2&quot;
+         scheme=&quot;false&quot;&gt;
+&lt;/dbmldoc&gt;
 
-# Database scheme
+<span class="gh"># Database scheme</span>
 
 And here goes a visual diagram of our database:
 
-<span class="nt">&lt;dbmldoc</span> <span class="na">doc=</span><span class="s">&quot;false&quot;</span> <span class="na">scheme=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/dbmldoc&gt;</span>
+&lt;dbmldoc doc=&quot;false&quot; scheme=&quot;true&quot;&gt;
+&lt;/dbmldoc&gt;
 </code></pre></div>
 
 <blockquote>

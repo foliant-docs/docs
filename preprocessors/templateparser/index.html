@@ -632,6 +632,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../archeme/" title="Archeme" class="md-nav__link">
       Archeme
     </a>
@@ -1392,6 +1404,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1576,11 +1600,11 @@ I can count to five!
 </code></pre></div>
 
 <p>After making a document with Foliant this will be transformed to:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">This</span> <span class="k">is</span> <span class="n">ordinary</span> <span class="n">markdown</span> <span class="nb">text</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><code>This is ordinary markdown text.
 
-<span class="n">This</span> <span class="k">is</span> <span class="n">a</span> <span class="n">Jinja2</span> <span class="k">template</span><span class="p">:</span>
-<span class="n">I</span> <span class="n">can</span> <span class="k">count</span> <span class="k">to</span> <span class="n">five</span><span class="o">!</span>
-<span class="mi">12345</span>
+This is a Jinja2 template:
+I can count to five!
+12345
 </code></pre></div>
 
 <p>You can also use a general <code>&lt;template&gt;</code> tag, but in this case you have to specify the engine you want to use in the <code>engine</code> parameter:</p>
@@ -1604,22 +1628,22 @@ The year before I was {{prev}} years old.
 </code></pre></div>
 
 <p>Result:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Hi</span><span class="p">,</span> <span class="n">my</span> <span class="n">name</span> <span class="k">is</span> <span class="n">Andy</span><span class="o">!</span>
-<span class="n">I</span> <span class="n">am</span> <span class="mi">8</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><code>Hi, my name is Andy!
+I am 8 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">7</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 7 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">6</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 6 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">5</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 5 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">4</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 4 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">3</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 3 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">2</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 2 years old.
 
-<span class="n">The</span> <span class="k">year</span> <span class="k">before</span> <span class="n">I</span> <span class="n">was</span> <span class="mi">1</span> <span class="n">years</span> <span class="k">old</span><span class="p">.</span>
+The year before I was 1 years old.
 </code></pre></div>
 
 <p>Also, you can supply a yaml-file with variables in an <code>ext_context</code> parameter:</p>
@@ -1705,7 +1729,7 @@ Order id: <span class="cp">{{</span> <span class="nv">data</span><span class="o"
 <ol>
 <li>And supply path to this file in your <code>ext_context</code> param:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="err">&lt;jinja2 ext_context=&quot;context.md&quot;&gt;</span>
+<div class="codehilite"><pre><span></span><code>&lt;jinja2 ext_context=&quot;context.md&quot;&gt;
 </code></pre></div>
 
 <p><strong>Pro tip #3</strong></p>
