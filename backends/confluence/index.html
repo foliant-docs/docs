@@ -1752,8 +1752,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quod omnis i
 
 <span class="p">&lt;</span><span class="nt">meta</span>
     <span class="na">confluence</span><span class="o">=</span><span class="s">&quot;</span>
-<span class="s">        title=&#39;System components&#39;</span>
-<span class="s">        space_key=&#39;~user&#39;</span>
+<span class="s">        title: &#39;System components&#39;</span>
+<span class="s">        space_key: &#39;~user&#39;</span>
 <span class="s">    &quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">meta</span><span class="p">&gt;</span>
 
@@ -1853,12 +1853,20 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 
 <p>and you want to resize it to 600px and align to center, replace it with following tag:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;ac:image</span> <span class="na">ac:height=</span><span class="s">&quot;600&quot;</span> <span class="na">ac:align=</span><span class="s">&quot;center&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;ri:attachment</span> <span class="na">ri:filename=</span><span class="s">&quot;img/picture.png&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;ri:attachment</span> <span class="na">ri:filename=</span><span class="s">&quot;img/picture.png&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/ac:image&gt;</span>
 </code></pre></div>
 
 <p>As you noticed, you should put path to your image right inside the <code>ri:filename</code> param. This path should be relative to current Markdown file, but you can (since 0.6.16) use <code>!path</code>, <code>!project_path</code> modifiers to reference images relative to project root.</p>
 <p>Here's <a href="https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html#ConfluenceStorageFormat-Images">a link to Confluence docs</a> about <code>ac:image</code> tag and all possible options.</p>
+<p>If you want to upload an external image, you can also use this approach, just insert that proper <code>ac:image</code> tag, no need for <code>raw_confluence</code>:</p>
+<div class="codehilite"><pre><span></span><code>External image:
+
+
+<span class="nt">&lt;ac:image&gt;</span>
+<span class="nt">&lt;ri:url</span> <span class="na">ri:value=</span><span class="s">&quot;http://confluence.atlassian.com/images/logo/confluence_48_trans.png&quot;</span> <span class="nt">/&gt;&lt;/ac:image&gt;</span>
+</code></pre></div>
+
 <h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
 <p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>

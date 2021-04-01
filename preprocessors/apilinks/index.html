@@ -648,7 +648,7 @@
       
         <li class="md-nav__item">
   <a href="#apilinks-preprocessor-for-foliant" class="md-nav__link">
-    apilinks Preprocessor for Foliant
+    APILinks Preprocessor for Foliant
   </a>
   
     <nav class="md-nav">
@@ -1449,7 +1449,7 @@
       
         <li class="md-nav__item">
   <a href="#apilinks-preprocessor-for-foliant" class="md-nav__link">
-    apilinks Preprocessor for Foliant
+    APILinks Preprocessor for Foliant
   </a>
   
     <nav class="md-nav">
@@ -1537,7 +1537,10 @@
                 
                 <h1 id="apilinks">APILinks<a class="headerlink" href="#apilinks" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.apilinks/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.apilinks.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.apilinks"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.apilinks.svg?label=GitHub" /></a></p>
-<h2 id="apilinks-preprocessor-for-foliant">apilinks Preprocessor for Foliant<a class="headerlink" href="#apilinks-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
+<h2 id="apilinks-preprocessor-for-foliant">APILinks Preprocessor for Foliant<a class="headerlink" href="#apilinks-preprocessor-for-foliant" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>APILinks preprocessor is now deprecated. It won't be updated and may be removed in future. Please use APIReferences instead.</p>
+</blockquote>
 <p>Preprocessor for replacing API <em>reference</em>s in markdown files with links to actual method description on the API documentation web-page.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.apilinks
@@ -1670,6 +1673,8 @@ To ban user from the website use admin API method [POST admin/ban_user/{user_id}
             <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
             <span class="nt">site_backend</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
+            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylogin</span>
+            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mypass</span>
         <span class="nt">Admin-API</span><span class="p">:</span>
             <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
             <span class="nt">header_template</span><span class="p">:</span> <span class="s">&#39;{command}&#39;</span>
@@ -1738,6 +1743,10 @@ Default:</dd>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — apilinks can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info coming soon. Default: <code>''</code></dd>
 <dt><code>site_backend</code></dt>
 <dd><em>(optional)</em> Name of the static site generator, which built your API documentation website. This affects how headers are converted to anchors. Default: <code>slate</code>. Available options: <code>aglio</code>, <code>mkdocs</code>, <code>redoc</code>, <code>slate</code>, <code>swagger</code>.</dd>
+<dt><code>login</code></dt>
+<dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
+<dt><code>password</code></dt>
+<dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
 </dl>
 <blockquote>
 <p>If your API documentation website is built by another static site generator, there's still a chance that you will make it work with APILinks, because many of them use similar patterns to generate anchors. Just try one of  <code>aglio</code>, <code>mkdocs</code>, <code>slate</code> (but not <code>redoc</code> and <code>swagger</code>, these are special). If it doesn't work, send us a message, we will add support for your tool.</p>

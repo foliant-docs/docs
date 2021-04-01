@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.18</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#fb62346f1da23ed270bea9ff2f113d08</guid>
+            <pubDate>Thu, 01 Apr 2021 11:46:42 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: external images didn't work.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.apilinks 1.2.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#e4b3d26c8b799bdf3af1674ea83d02cc</guid>
