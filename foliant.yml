@@ -83,6 +83,7 @@ chapters:
         - cli/subset.md
     - Config Extensions:
         - config/alt_structure.md
+        - config/downloadfile.md
         - config/from.md
         - config/slugs.md
         - config/yaml_include.md
