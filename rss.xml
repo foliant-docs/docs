@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.downloadfile 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.downloadfile.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.downloadfile.git#0a00fc785e3c524952aa41e2c47bde52</guid>
+            <pubDate>Tue, 04 May 2021 13:24:58 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.anchors 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#65a8a19da61bb5abdc311b518bdaca86</guid>
+            <pubDate>Tue, 20 Apr 2021 14:24:17 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: missing dependency in setup.py</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.6.18</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#fb62346f1da23ed270bea9ff2f113d08</guid>
@@ -90,6 +108,16 @@
             <description><![CDATA[<ul>
 <li>Better warning when there's error in API configuration</li>
 <li>Trailing slash is not enforced in generated urls. Previously didn't work with *.html sites</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.plantuml 1.0.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#d91685cd571a301dad4954a348d921ec</guid>
+            <pubDate>Mon, 01 Feb 2021 17:03:26 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Config options now can be overriden in tag options.</li>
+<li>Add <escaped hash="4197e7b6655a11278694b822e55694fa"></escaped> option, which allows (when <escaped hash="249091efa412cf5e332461c484b979d0"></escaped>) to insert svg-code instead of image into the document.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -177,16 +205,6 @@
             <pubDate>Mon, 16 Nov 2020 15:35:00 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Fix: allow_fail decorator now works for any function with any set of parameters.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.plantuml 1.0.7</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#2d3ccd5f5ef505c5e6ca201f54e9579d</guid>
-            <pubDate>Thu, 12 Nov 2020 12:26:44 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Config options now can be overriden in tag options.</li>
-<li>Add <escaped hash="4197e7b6655a11278694b822e55694fa"></escaped> option, which allows (when <escaped hash="249091efa412cf5e332461c484b979d0"></escaped>) to insert svg-code instead of image into the document.</li>
 </ul>]]></description>
         </item>
         <item>
