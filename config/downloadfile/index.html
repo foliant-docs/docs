@@ -1501,6 +1501,8 @@
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To configure DownloadFile add the following section to your foliant.yml file:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">downloadfile</span><span class="p">:</span>
+    <span class="nt">fail_fast</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">ignore_ssl_errors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">queue</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com/image.png</span>  <span class="c1"># required</span>
           <span class="nt">save_to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">images/img1.png</span>
@@ -1510,6 +1512,10 @@
 </code></pre></div>
 
 <dl>
+<dt><code>fail_fast</code></dt>
+<dd>When <code>true</code>, build will be stopped if any file can't be downloaded. If <code>false</code> ­— unavailable files will be just skipped. Doesn't affect <code>!download</code> tag, this one will always break the build on errors. Default: <code>true</code>.</dd>
+<dt><code>ignore_ssl_errors</code></dt>
+<dd>Switch to <code>true</code> to skip SSL certificate check. Default: <code>false</code>.</dd>
 <dt><code>queue</code></dt>
 <dd>list of files to download. Each file is represented by a dictionary with the following fields:</dd>
 <dt><code>url</code></dt>
@@ -1525,7 +1531,7 @@
 <p><strong>Warning:</strong> don't store plain text passwords in foliant.yml. Use <a href="https://foliant-docs.github.io/docs/config/#env">environment variables</a>.</p>
 </blockquote>
 <h4 id="download-yaml-tag"><code>!download</code> YAML tag<a class="headerlink" href="#download-yaml-tag" title="Permanent link">&para;</a></h4>
-<p>Another way to use DownloadFile is by specifying <code>!download</code> YAML tag. This is the quickest and the simplest way, but it comes with its disadvantages.</p>
+<p>Another way to use DownloadFile is by specifying <code>!download</code> YAML tag. This is the quickest and the simplest way, but it comes with a few disadvantages.</p>
 <p>Insert the <code>!download</code> tag, followed by file URL, in any place in foliant.yml or tag parameters, where file path is expected:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>

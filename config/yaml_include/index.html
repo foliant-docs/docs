@@ -1467,9 +1467,9 @@
 <p><a href="https://pypi.org/project/foliantcontrib.yaml_include/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.yaml_include.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.yaml_include"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.yaml_include.svg?label=GitHub" /></a></p>
 <h2 id="yamlinclude-extension">YAMLInclude Extension<a class="headerlink" href="#yamlinclude-extension" title="Permanent link">&para;</a></h2>
 <p>YAMLInclude is a configuration extension for Foliant to include parts of configuration from YAML-files.</p>
-<p>It resolves <code>!include</code> YAML tags in the project config and inside XML-tags parameters.</p>
+<p>It resolves <code>!include</code> YAML tag in the project config and inside XML-tags parameters.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.include
+<div class="codehilite"><pre><span></span><code>$ pip install foliantcontrib.yaml_include
 </code></pre></div>
 
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
@@ -1544,7 +1544,7 @@
 
 <p><strong>Including part of a remote file</strong></p>
 <p>Config example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml#chapters_for_pdf</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/chapters.yml#chapters_for_pdf</span>
 </code></pre></div>
 
 <p>In this example the <code>chapters.yml</code> file is stored on the website <code>http://example.com/</code>.</p>

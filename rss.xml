@@ -7,6 +7,35 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.multiproject 1.0.15</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#8c85a48efeacc2998118758c2154ab96</guid>
+            <pubDate>Fri, 07 May 2021 13:23:14 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix crash caused by YAML-tags in subproject config.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.yaml_include 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.yaml_include.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.yaml_include.git#4330b66754b2c93ce259e2872fce095c</guid>
+            <pubDate>Fri, 07 May 2021 13:15:48 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better logging.</li>
+<li>Improved paths handling.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.downloadfile 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.downloadfile.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.downloadfile.git#abfe19495a78379381a0f88a700f8479</guid>
+            <pubDate>Thu, 06 May 2021 19:41:43 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Better work with multiproject.</li>
+<li><escaped hash="7e53c21c86b827b7355722f98ff657c0"></escaped> parameter.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.downloadfile 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.downloadfile.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.downloadfile.git#0a00fc785e3c524952aa41e2c47bde52</guid>
