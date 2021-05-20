@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbmldoc 0.3.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#4b59f2e55511de34e850f238731d38f1</guid>
+            <pubDate>Thu, 20 May 2021 19:08:31 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Update PyDBML parser to 0.4.0. This breaks backward compatibility with previous versions (reference cols are now lists).</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.multiproject 1.0.15</title>
             <link>https://github.com/foliant-docs/foliantcontrib.multiproject.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.multiproject.git#8c85a48efeacc2998118758c2154ab96</guid>
@@ -704,16 +713,6 @@
             <pubDate>Wed, 20 May 2020 15:21:08 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Fix: bug with chapters.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.dbmldoc 0.2.2</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#c623ad5cca95c3fa90f168067199ee77</guid>
-            <pubDate>Wed, 29 Apr 2020 09:40:21 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Pydbml parser version updated to 0.3.2</li>
-<li>Updated templates</li>
 </ul>]]></description>
         </item>
         <item>
