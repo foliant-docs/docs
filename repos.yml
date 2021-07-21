@@ -60,6 +60,4 @@
 - https://github.com/foliant-docs/foliantcontrib.testcoverage.git
 - https://github.com/foliant-docs/foliantcontrib.testrail.git
 - https://github.com/foliant-docs/foliantcontrib.yaml_include.git
-- https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git
-- https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git
-- https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git
+- https://github.com/foliant-docs/foliantcontrib.utils.git
