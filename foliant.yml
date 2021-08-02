@@ -38,6 +38,7 @@ chapters:
         - preprocessors/bindfigma.md
         - preprocessors/bindsympli.md
         - preprocessors/blockdiag.md
+        - preprocessors/bpmn.md
         - preprocessors/confluence.md
         - preprocessors/csvtables.md
         - preprocessors/customids.md
