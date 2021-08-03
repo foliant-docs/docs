@@ -1,5 +1,9 @@
 repo_name: foliant-docs/docs
 repo_url: https://github.com/foliant-docs/docs
+
+# main repo will be displayed in the header
+main_repo_name: foliant-docs/foliant
+main_repo_url: https://github.com/foliant-docs/foliant
 edit_uri: edit/master/src/
 theme:
     name: material
