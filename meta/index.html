@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-4.6.3">
     
     
       
@@ -182,7 +182,7 @@
 
   
 
-<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -191,7 +191,7 @@
     </div>
   
   <div class="md-source__repository">
-    foliant-docs/docs
+    foliant-docs/foliant
   </div>
 </a>
           </div>
@@ -229,7 +229,7 @@
 
   
 
-<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -238,7 +238,7 @@
     </div>
   
   <div class="md-source__repository">
-    foliant-docs/docs
+    foliant-docs/foliant
   </div>
 </a>
     </div>
@@ -812,6 +812,18 @@
   <li class="md-nav__item">
     <a href="../preprocessors/blockdiag/" title="Blockdiag" class="md-nav__link">
       Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/bpmn/" title="BPMN" class="md-nav__link">
+      BPMN
     </a>
   </li>
 
@@ -1645,7 +1657,7 @@
 <p>Typical way to work with metadata is to run the <code>load_meta</code> function from the <code>foliant.meta.generate</code> module.</p>
 <p><strong>load_meta(chapters: list, md_root: str or PosixPath = 'src') -&gt; Meta</strong></p>
 <p>This function collects metadata and returns a <code>Meta</code> object, which gives access to all sections and meta-fields in the project.</p>
-<p>The required parameter is <code>chapters</code> — list of chaters loaded from foliant.yml</p>
+<p>The required parameter is <code>chapters</code> — list of chapters loaded from foliant.yml</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">foliant.meta.generate</span> <span class="kn">import</span> <span class="n">load_meta</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">load_meta</span><span class="p">([</span><span class="s1">&#39;index.md&#39;</span><span class="p">])</span>
 </code></pre></div>
@@ -1678,9 +1690,9 @@
 <p><strong>main_section</strong></p>
 <p>A property which holds the main section of the chapter.</p>
 <p><strong>name</strong></p>
-<p>Chapter's name as stated in foliant.yml.</p>
+<p>Chapter's name as stated in foliant.yml (<code>'chapter.md'</code>).</p>
 <p><strong>filename</strong></p>
-<p>Chapter's filename.</p>
+<p>Chapter's filepath string (<code>'src/chapter.md'</code>).</p>
 <h3 id="the-section-class">The Section class<a class="headerlink" href="#the-section-class" title="Permanent link">&para;</a></h3>
 <p><code>Section</code> represents a meta section.</p>
 <p><strong>iter_children()</strong></p>
@@ -1789,7 +1801,7 @@
     
       <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.2.2",url:{base:".."}})</script>
       
     
   </body>

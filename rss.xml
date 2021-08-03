@@ -7,6 +7,249 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.superlinks 1.0.11</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#68540b66e855489ed31536d43af396e8</guid>
+            <pubDate>Tue, 03 Aug 2021 11:10:03 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix imports.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.bpmn 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.bpmn.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.bpmn.git#e4d39b17c20349309211e8e8139033db</guid>
+            <pubDate>Mon, 02 Aug 2021 17:13:28 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.pgsqldoc 1.1.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pgsqldoc.git#9bc0fa2cc6c73b895530d7acabf2fa77</guid>
+            <pubDate>Mon, 02 Aug 2021 16:43:23 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apilinks 1.2.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apilinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apilinks.git#3343e0e0cb81e2b2511900ad8a5a9295</guid>
+            <pubDate>Mon, 02 Aug 2021 15:58:08 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.git#707e1bec7f3c5a48779004a4cd3e6375</guid>
+            <pubDate>Mon, 02 Aug 2021 13:40:24 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>PreprocessorExt: add <escaped hash="fe654415bd343ff69a7ab6d0021e9a43"></escaped> param to <escaped hash="914b60ef7b37a5492b16a0c413de3186"></escaped> method.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.pandoc 1.1.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#300b3b57ed889b99ee446655337422e5</guid>
+            <pubDate>Wed, 21 Jul 2021 15:05:36 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Passing metadata parameters via config.</li>
+<li>Fix: images didn't render during separate sections build.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.meta 1.3.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.meta.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.meta.git#db3b37154ba6c15d62d392409c6d0417</guid>
+            <pubDate>Wed, 21 Jul 2021 14:11:04 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.csvtables 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.csvtables.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.csvtables.git#34859a0370d0247db75707cf1204c8cf</guid>
+            <pubDate>Wed, 21 Jul 2021 12:11:28 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.mermaid 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mermaid.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mermaid.git#628b11102d28e96d09c345a8a383fa45</guid>
+            <pubDate>Wed, 21 Jul 2021 12:04:06 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.ramldoc 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.ramldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.ramldoc.git#b3496d9c9b64e4d77b644d6fbe195bf4</guid>
+            <pubDate>Wed, 21 Jul 2021 11:48:34 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.admonitions 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.admonitions.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.admonitions.git#482cd1df08b57148b56cc3279dd50f00</guid>
+            <pubDate>Wed, 21 Jul 2021 11:42:25 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.metagraph 0.1.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.metagraph.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.metagraph.git#51602ee2b2168f44518016bcd49e97b3</guid>
+            <pubDate>Wed, 21 Jul 2021 11:32:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.swaggerdoc 1.2.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.swaggerdoc.git#de481d4d3064ca46f75b3c3e70bb01c3</guid>
+            <pubDate>Wed, 21 Jul 2021 11:13:13 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#6a089b090190f34ba1d45b4cfecde57f</guid>
+            <pubDate>Tue, 20 Jul 2021 16:12:11 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.dbdoc 0.1.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#949487fe6e9026601c43d038901cf909</guid>
+            <pubDate>Tue, 20 Jul 2021 15:55:21 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.dbmldoc 0.3.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#94b0992db3b7094aa6743e717a741db7</guid>
+            <pubDate>Tue, 20 Jul 2021 15:19:04 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+<li>Update PyDBML parser to 0.4.1.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.plantuml 1.0.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#39e32a7fb24ca2c3ee21a47441eda973</guid>
+            <pubDate>Tue, 20 Jul 2021 15:10:19 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.graphviz 1.1.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.graphviz.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.graphviz.git#7a31b7b17c1517f584c948a870b8e54b</guid>
+            <pubDate>Tue, 20 Jul 2021 14:55:38 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+<li>Output syntax errors in stdout.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.templateparser 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#4b1ece12db96c480eed5089f104bdef1</guid>
+            <pubDate>Tue, 20 Jul 2021 14:33:53 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.alt_structure 0.2.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.alt_structure.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.alt_structure.git#8e60ba3084a23c637bd886e1aca0fdf1</guid>
+            <pubDate>Tue, 20 Jul 2021 12:57:05 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.anchors 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#3bbc4c558c716d224d10d7de4993920b</guid>
+            <pubDate>Tue, 20 Jul 2021 12:52:40 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.confluence 0.6.19</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#5f6df47556ad757af7635bf99533a952</guid>
+            <pubDate>Tue, 20 Jul 2021 12:41:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#c8932275225ce2d629ab6b6c2d644872</guid>
+            <pubDate>Mon, 19 Jul 2021 16:40:01 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New utils module.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils 1.0.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.git#67fd81b551634f882eb8d89dd615298c</guid>
+            <pubDate>Thu, 15 Jul 2021 15:30:44 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix error in initial values for combined options classes.</li>
+<li>Combined options classes now clone input dicts and lists.</li>
+<li>Combined options: fix validate_in.</li>
+<li>Header Anchors: fix slate id generator.</li>
+<li>PreprocessorExt: allow_fail now supports methods without args.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.utils 1.0.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.git#343fef42b65633e1d8ef1930956f74f9</guid>
+            <pubDate>Wed, 14 Jul 2021 11:46:25 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>All utils from separate repositories now reside here.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.plantuml 1.0.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.plantuml.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.plantuml.git#e2f3842d9485d79bf06e511fa8c578bb</guid>
+            <pubDate>Fri, 18 Jun 2021 11:10:49 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Diagrams with same options now generate in single PlantUML instance.</li>
+<li>Error tracebacks now are shown in console, <em>error images are not generated</em>.</li>
+<li>Markdown image tags for broken diagrams are not inserted so they won't crash the build of the project.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.dbmldoc 0.3.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#4b59f2e55511de34e850f238731d38f1</guid>
@@ -118,15 +361,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.header_anchors 1.0.4</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#b1a5fa746f16a65ec75af163fbb3571a</guid>
-            <pubDate>Thu, 25 Feb 2021 14:53:27 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add <escaped hash="f99c83f752a6a2101918f25ec5f6e0b7"></escaped> to_id generator.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.confluence 0.6.16</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#d35960b73d6277e17831763876f890f8</guid>
@@ -219,15 +453,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.header_anchors 1.0.3</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#64a9836354f433a5983a81ae4a33ef7d</guid>
-            <pubDate>Wed, 18 Nov 2020 11:44:22 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add IDGenerator class.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.customids 1.0.7</title>
             <link>https://github.com/foliant-docs/foliantcontrib.customids.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.customids.git#5a7c3fe78e94c0ede82edeba82a7335c</guid>
@@ -237,12 +462,12 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.5</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#9c8b3a77fc174b9d83d6616e5e088d35</guid>
-            <pubDate>Mon, 16 Nov 2020 15:35:00 +0300</pubDate>
+            <title>foliantcontrib.utils 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.utils.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.utils.git#fdd28a37d1432e625c219b9c268f3f25</guid>
+            <pubDate>Mon, 16 Nov 2020 15:27:31 +0300</pubDate>
             <description><![CDATA[<ul>
-<li>Fix: allow_fail decorator now works for any function with any set of parameters.</li>
+<li>Initial release.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -376,24 +601,6 @@
 <li>New: added Confluence backend support.</li>
 <li>Fix: links were corrupted when customids were used.</li>
 <li>Fix: several other bug fixes and optimizations.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.4</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#8441fbf823d3c813e8b75b5779472a8c</guid>
-            <pubDate>Tue, 25 Aug 2020 16:10:49 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add <escaped hash="bfbe3c378e7f2b0c06245b7a71b2905f"></escaped> param to both <escaped hash="7fb578a0630c4f5c8219d4231c4c41e1"></escaped> functions which allows to buffer results and save all changed files at once after processing.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.header_anchors 1.0.2</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#df67983a0abe9d6a2995216e965aefe4</guid>
-            <pubDate>Tue, 25 Aug 2020 16:05:17 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Use pymdownx uslugify instead of default Python-Markdown slugify for MkDocs.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -821,15 +1028,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.3</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#d0edd35c6ed604699197eff6551d0c50</guid>
-            <pubDate>Thu, 02 Apr 2020 12:07:42 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add <escaped hash="b8ead95d49c07ba6e8738382ffafca0a"></escaped> method for preprocessors without tags.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.testcoverage 0.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.testcoverage.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.testcoverage.git#c43ed9f7aaa285a2ba01e92f8596fa7b</guid>
@@ -923,17 +1121,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.10</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#dc5128f8d81bf1510fe9073e90d6d35e</guid>
-            <pubDate>Mon, 23 Mar 2020 11:47:36 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Fix: default dict was overriden after the first use.</li>
-<li>Allow to supply the list of priorities instead of just one priority.</li>
-<li>Priority for those option dictionaries, which are not mentioned in the <escaped hash="6dd9cfc9dd7efe6460008e181811c4a0"></escaped> param, are now defined by the order dictionaries are defined.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.testrail 1.1.11</title>
             <link>https://github.com/foliant-docs/foliantcontrib.testrail.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.testrail.git#216698b9744467c985f1871b475e9d22</guid>
@@ -996,16 +1183,6 @@
             <pubDate>Mon, 10 Feb 2020 10:39:18 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.combined_options 1.0.9</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#109f94b7d4ef9ef78347746c7a8b02eb</guid>
-            <pubDate>Fri, 07 Feb 2020 09:42:34 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>defaults now actually supply default value (before they were only used for validation)</li>
-<li>add None to possible type validation in <escaped hash="b29ecda4b5f31dfbf2ee3134ea8faec9"></escaped>.</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1114,15 +1291,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.header_anchors 1.0.1</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#65ff8764e3531544fb3136fb3115dfc7</guid>
-            <pubDate>Tue, 24 Dec 2019 10:48:02 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add <escaped hash="4917d79132a2177e737912d39f741a03"></escaped> function to determine flat backends.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.anchors 1.0.4</title>
             <link>https://github.com/foliant-docs/foliantcontrib.anchors.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.anchors.git#24029246466e2ad78f2392cede06bf3e</guid>
@@ -1145,15 +1313,6 @@
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#ac54a53a6f30cf6e1c2853e5f52a4dcd</guid>
             <pubDate>Mon, 23 Dec 2019 09:35:44 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Initial release.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.header_anchors 1.0.0</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.header_anchors.git#836df0f482faf7722e123df56ab61699</guid>
-            <pubDate>Fri, 20 Dec 2019 16:24:16 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Initial release.</li>
 </ul>]]></description>
@@ -1387,15 +1546,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.8</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#d0e7bf89f9ed9222ddfe75d4e46bfd9d</guid>
-            <pubDate>Wed, 02 Oct 2019 10:10:50 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Fix <escaped hash="92dd2e169f7e5bafc813491db04715d5"></escaped> validator.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.confluence 0.6.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#82d5167eb690d185f21d321bf1fb7437</guid>
@@ -1568,16 +1718,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.7</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#fcad30d66afaf03126ddfd090cda966c</guid>
-            <pubDate>Mon, 26 Aug 2019 16:27:24 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add <escaped hash="92dd2e169f7e5bafc813491db04715d5"></escaped> validator.</li>
-<li>Add <escaped hash="0fcc787bdff6c16e598eabdbd47bc31e"></escaped>.</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.customids 1.0.6</title>
             <link>https://github.com/foliant-docs/foliantcontrib.customids.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.customids.git#918138dc38576a5b3111eccb5c6752e6</guid>
@@ -1686,17 +1826,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.6</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#7a3aa29e96330f35d0b34389a7b162f5</guid>
-            <pubDate>Fri, 16 Aug 2019 15:20:48 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add check for required params.</li>
-<li>Add val_type validator to check for param types.</li>
-<li>Allow to set values in Options objects</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.confluence 0.1.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#b3e4b28e677b288baec0968d724d5203</guid>
@@ -1767,16 +1896,6 @@
             <description><![CDATA[<ul>
 <li>Support <escaped hash="80f56b684b71be2939707b2d152aeb6f"></escaped> config option. Require Foliant 1.0.10 and escapecode preprocessor 1.0.0.</li>
 <li>Process <escaped hash="75ed5477f4312d008e1fd238bbd8f08f"></escaped> recursively.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.2</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#d318180b9fd118adc48fd1bc63d9858e</guid>
-            <pubDate>Mon, 29 Jul 2019 13:16:33 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Fix output</li>
-<li>Remove get_options overriding, it's now implemented similarly in core</li>
 </ul>]]></description>
         </item>
         <item>
@@ -1894,24 +2013,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.1</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#1d3dc4d47338908a3a208f19cb0c4c4c</guid>
-            <pubDate>Fri, 14 Jun 2019 16:21:08 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Support PyYAML 5.1</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.combined_options 1.0.5</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#0008e7575877918c171a57dc015ef982</guid>
-            <pubDate>Fri, 14 Jun 2019 16:19:58 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>support PyYAML 5.1</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.templateparser 1.0.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.templateparser.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.templateparser.git#55a7ffef7323111d7da36439b00ac6ca</guid>
@@ -1989,15 +2090,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.4</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#3e04131a4ef45463cb1ddc8168032ec7</guid>
-            <pubDate>Mon, 20 May 2019 12:19:42 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add path_convertor which converts string options to pathlib.PosixPath</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.blockdiag 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.blockdiag.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.blockdiag.git#00c2f8504a655d601071a3145c1039bc</guid>
@@ -2013,33 +2105,6 @@
             <pubDate>Fri, 17 May 2019 14:09:57 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Attributes of <escaped hash="485700309812a992bf24211185379faf"></escaped> tag have higher priority than config file options.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.preprocessor_ext 1.0.0</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.preprocessor_ext.git#92f06ca5e3651496d550bde3135120fd</guid>
-            <pubDate>Fri, 17 May 2019 11:18:15 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Initial release.</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.combined_options 1.0.3</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#498c319ea0f623e270b4aabcb3e73a43</guid>
-            <pubDate>Wed, 15 May 2019 08:51:30 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>add <strong>iter</strong> method to allow <escaped hash="513492d7de579ccf8f9ac6a4bc20c960"></escaped></li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.combined_options 1.0.2</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#515b19704a04bf7ec125a7da56778c2c</guid>
-            <pubDate>Wed, 15 May 2019 08:51:30 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>add '0'\'1' to bool_convertor</li>
 </ul>]]></description>
         </item>
         <item>
@@ -2155,15 +2220,6 @@
 </ul>]]></description>
         </item>
         <item>
-            <title>foliantcontrib.utils.combined_options 1.0.1</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#836deba944411e6caecab5daf5de6c0d</guid>
-            <pubDate>Thu, 21 Mar 2019 16:50:19 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Add boolean convertor</li>
-</ul>]]></description>
-        </item>
-        <item>
             <title>foliantcontrib.notifier 1.0.0</title>
             <link>https://github.com/foliant-docs/foliantcontrib.notifier.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.notifier.git#5d2dc2f9a463687e6c9cc088fbc4f387</guid>
@@ -2223,15 +2279,6 @@
             <pubDate>Thu, 14 Feb 2019 14:08:47 +0300</pubDate>
             <description><![CDATA[<ul>
 <li>Move combined_options into another module</li>
-</ul>]]></description>
-        </item>
-        <item>
-            <title>foliantcontrib.utils.combined_options 1.0.0</title>
-            <link>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git</link>
-            <guid>https://github.com/foliant-docs/foliantcontrib.utils.combined_options.git#9ec236916b68a9eee5d75343c8cf4a5c</guid>
-            <pubDate>Thu, 14 Feb 2019 12:19:01 +0300</pubDate>
-            <description><![CDATA[<ul>
-<li>Initial release.</li>
 </ul>]]></description>
         </item>
         <item>

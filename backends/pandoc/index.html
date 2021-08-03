@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-4.6.3">
     
     
       
@@ -182,7 +182,7 @@
 
   
 
-<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -191,7 +191,7 @@
     </div>
   
   <div class="md-source__repository">
-    foliant-docs/docs
+    foliant-docs/foliant
   </div>
 </a>
           </div>
@@ -229,7 +229,7 @@
 
   
 
-<a href="https://github.com/foliant-docs/docs/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -238,7 +238,7 @@
     </div>
   
   <div class="md-source__repository">
-    foliant-docs/docs
+    foliant-docs/foliant
   </div>
 </a>
     </div>
@@ -793,6 +793,18 @@
   <li class="md-nav__item">
     <a href="../../preprocessors/blockdiag/" title="Blockdiag" class="md-nav__link">
       Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../preprocessors/bpmn/" title="BPMN" class="md-nav__link">
+      BPMN
     </a>
   </li>
 
@@ -1594,6 +1606,8 @@ Result: My_Project-2020-12-04.tex
     <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template.tex</span>
     <span class="nt">vars</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="nt">meta</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">reference.docx</span>
     <span class="nt">params</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -1619,7 +1633,9 @@ Result: My_Project-2020-12-04.tex
 </blockquote>
 </dd>
 <dt><code>vars</code></dt>
-<dd>is a mapping of template variables and their values.</dd>
+<dd>is a mapping of template variables and their values. They will be added to pandoc command as <code>--variable key[=val]</code>.</dd>
+<dt><code>meta</code></dt>
+<dd>is a mapping of document metadata properties and their values. They will be added to pandoc command as <code>--metadata key[=val]</code>.</dd>
 <dt><code>reference_docx</code></dt>
 <dd>
 <p>is the path to the reference document to used when building docx (see <a href="http://pandoc.org/MANUAL.html#templates">“Templates”</a> in the Pandoc documentation).</p>
@@ -1670,7 +1686,7 @@ Result: My_Project-2020-12-04.tex
 <span class="s">      toc: true</span>
 <span class="s">      title: Our Awesome Product</span>
 <span class="s">      second_title: Specifications</span>
-<span class="s">      logo: !path templates/logo.png</span>
+<span class="s">      logo: templates/logo.png</span>
 <span class="s">      year: 2020</span>
 <span class="s">  &quot;</span><span class="nt">&gt;&lt;/meta&gt;</span>
 
@@ -1711,7 +1727,7 @@ lifespan: 9
 <span class="s">      toc: true</span>
 <span class="s">      title: Our Awesome Product</span>
 <span class="s">      second_title: Additional info</span>
-<span class="s">      logo: !path templates/logo.png</span>
+<span class="s">      logo: templates/logo.png</span>
 <span class="s">      year: 2020</span>
 <span class="s">  &quot;</span><span class="nt">&gt;&lt;/meta&gt;</span>
 
@@ -1834,7 +1850,7 @@ l.627 ...through<span class="o">{</span><span class="se">\l</span>stinline!git c
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.2.2",url:{base:"../.."}})</script>
       
     
   </body>
