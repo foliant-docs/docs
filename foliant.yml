@@ -34,6 +34,7 @@ chapters:
         - preprocessors/apilinks.md
         - preprocessors/apireferences.md
         - preprocessors/archeme.md
+        - preprocessors/argdown.md
         - preprocessors/badges.md
         - preprocessors/bindfigma.md
         - preprocessors/bindsympli.md
