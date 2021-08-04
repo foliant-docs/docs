@@ -1,6 +1,6 @@
 #   Foliant Documentation
 
-[![Build Status](https://travis-ci.org/foliant-docs/docs.svg?branch=master)](https://travis-ci.org/foliant-docs/docs)
+[![Build Status](https://api.travis-ci.com/foliant-docs/docs.svg?branch=master)](https://travis-ci.com/github/foliant-docs)
 
 ##  Build Locally
 
