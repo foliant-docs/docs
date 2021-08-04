@@ -7,6 +7,24 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.argdown 0.1.1</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.argdown.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.argdown.git#f67ad3daefb50cf5b1a514bf36fc28e5</guid>
+            <pubDate>Wed, 04 Aug 2021 09:54:16 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Embed dot and graphml formats with <escaped hash="0b28fc6e94a00370e669e6027e11b8e9"></escaped>.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.argdown 0.1.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.argdown.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.argdown.git#3b0f637c505f75a1041f3954b305140c</guid>
+            <pubDate>Tue, 03 Aug 2021 13:36:52 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.superlinks 1.0.11</title>
             <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#68540b66e855489ed31536d43af396e8</guid>
