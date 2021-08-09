@@ -2,19 +2,21 @@
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
+It is recommended to run Foliant through Docker to get consistent results, but it's perfectly fine to run it natively. In this tutorial we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
+
 
 ## Create New Project
 
 All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to <link src="cli/init/index.md" title="Init">Init</link> extension.
 
-You should have installed it during <link src="installation.md" title="Installation">Foliant installation</link>) and it’s included in Foliant’s default Docker image.
+You should have installed it during <link src="installation.md" title="Installation">Foliant installation</link> and it’s included in Foliant’s default Docker image.
 
 To use it, run `foliant init` command:
 
 ```bash
 $ foliant init
 Enter the project name: Hello Foliant
-✔ Generating Foliant project
+Generating Foliant project
 ─────────────────────
 Project "Hello Foliant" created in hello-foliant
 ```
@@ -22,14 +24,14 @@ Project "Hello Foliant" created in hello-foliant
 To do the same with Docker, run:
 
 ```bash
-$ docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app foliant/foliant init
+$ docker run --rm -it --user $(id -u):$(id -g) -v $(pwd):/usr/src/app -w /usr/src/app foliant/foliant init
 Enter the project name: Hello Foliant
 Generating project... Done
 ─────────────────────
 Project "Hello Foliant" created in hello-foliant
 ```
 
-Here’s what this command created:
+The `init` command created a structure for Foliant project in `hello-foliant` subfolder:
 
 ```bash
 $ cd hello-foliant
@@ -46,24 +48,28 @@ $ tree
 1 directory, 6 files
 ```
 
-`foliant.yml` is your project’s config file.
+`foliant.yml` is your <link src="config.md">Project Configuration</link> file.
 
-`src` directory is where the content of the project lives. Currently, there’s just one file `index.md`.
+`src` is the directory for your Markdown documents. Currently, there’s just one file there called `index.md`.
 
-`requirements.txt` lists  the Python packages required for the project: Foliant backends and preprocessors, MkDocs themes, and what not. The the Docker image for the project is built, these requirements are installed in it.
+`requirements.txt` lists the Python packages required for the project: Foliant backends and preprocessors, MkDocs themes, and whatnot. When the Docker image for the project is built, these requirements will be installed in it.
 
 `Dockerfile` and `docker-compose.yml` are necessary to build the project in a Docker container.
 
 
 ## Build Site
 
-To build a site you will first need a suitable backend (to catch up with the terminology, check <link src="architecture.md" title="Architecture And Basic Design Concepts">this article</link>. Let’s start with **MkDocs** backend. First, install it using the following command (or skip to the docker example):
+To build a site you will first need a suitable *backend*. To catch up with the terminology, check <link src="architecture.md" title="Architecture And Basic Design Concepts">this article</link>, but in short, backends are Foliant modules responsible for converting Markdown sources into the final documentation format.
+
+Let’s start with **MkDocs** backend. First, install it using the following command:
 
 ```bash
-python3 -m pip install foliantcontrib.mkdocs
+pip3 install foliantcontrib.mkdocs
 ```
 
-Then, in the project directory, run:
+Docker users would normally need to add this package to the `requirements.txt` file instead, but mkdocs is already there by default if you used `init` to generate project structure.
+
+To build a site, in the project directory, run:
 
 ```bash
 $ foliant make site
@@ -101,11 +107,9 @@ Open [localhost:8000](http://localhost:8000/) in your web browser. You should se
 
 ## Build PDF
 
->   **Note**
->
->   To build PDF with Pandoc, make sure you have it and TeXLive installed (see <link src="installation.md" title="Installation">Installation</link>).
+To build PDF with Pandoc natively, first you will need to install Pandoc itself and TexLive, check <link src="installation.md">Foliant installation page</link> for instructions.
 
-In the project directory, run:
+Then, in the project directory, run:
 
 ```bash
 $ foliant make pdf
@@ -154,11 +158,17 @@ Your standalone pdf documentation is ready! It should look something like this:
 
 ## Edit Content
 
-Your project’s content lives in `*.md` files in `src` folder. You can split it between multiple files and subfolders.
+Your project’s content lives in `.md` files inside `src` folder. You can organize it into multiple files and subfolders isinde the `src` as you please.
 
 Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <link src="preprocessors/flags.md" title="Flags">`<if>...</if>`</link>.
 
-Create a file `hello.md` in `src` with the following content:
+Let's create a file `hello.md` inside `src` folder:
+
+```bash
+$ touch src/hello.md
+```
+
+And fill it with some content. For example:
 
 ```markdown
 # Hello Again
@@ -168,7 +178,7 @@ This is regular text generated from regular Markdown.
 Foliant doesn’t force any *special* Markdown flavor.
 ```
 
-Open `foliant.yml` and add `hello.md` to `chapters`:
+Now you have two files (or *chapters*) inside `src`, but Foliant knows only about one of them. To add `hello.md` to the project, open `foliant.yml` and add the new chapter to the `chapters` list:
 
 ```diff
 title: Hello Foliant
@@ -178,7 +188,28 @@ chapters:
 + - hello.md
 ```
 
-Rebuild the project to see the new page:
+Let's rebuild the project to see the new page.
+
+The native command:
+
+```bash
+foliant make pdf && foliant make site
+Parsing config... Done
+Applying preprocessor flatten... Done
+Applying preprocessor _unescape... Done
+Making pdf with Pandoc... Done
+────────────────────
+Result: 
+Hello_Foliant-2020-05-25.pdf
+Parsing config... Done
+Applying preprocessor mkdocs... Done
+Applying preprocessor _unescape... Done
+Making site with MkDocs... Done
+────────────────────
+Result: Hello_Foliant-2020-05-25.mkdocs
+```
+
+The command for Docker:
 
 ```bash
 $ docker-compose run --rm foliant make site && docker-compose run --rm foliant make pdf
@@ -204,17 +235,18 @@ And see the new page appear on the site and in the pdf document:
 
 ## Use Preprocessors
 
-Preprocessors is what makes Foliant special and extremely flexible. Preprocessors are additional packages that, well, preprocess the source code of your project. You can do all kinds of stuff with preprocessors:
+Preprocessors are additional Foliant packages which transform your Markdown chapters in different ways. You can do all kinds of stuff with them:
 
 -   include remote Markdown files or their parts in the source files,
+-   perform auto-replace,
 -   render diagrams from textual description on build,
 -   restructure the project source or compile it into a single file for a particular backend.
 
-In fact, you have already used two preprocessors! Check the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The first one informs you that the project source has been preprocessed with `mkdocs` preprocessor in order to make it compatible with MkDocs’ requirements, and the second one tells you that <link src="preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one a single file (because Pandoc only works with single files).
+Preprocessors don't touch your sources in the `src` folder. Instead they copy them into a temporary directory and transform the fresh copies on each build.
 
-These preprocessors where called by MkDocs and Pandoc backends respectively. You didn’t have to install or activate them explicitly.
+In fact, you have already used two preprocessors! Look at the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The `mkdocs` preprocessor made your files compatible with MkDocs’ requirements, and the <link src="preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one file to produce a single PDF with Pandoc. These preprocessors where called by MkDocs and Pandoc backends implicitly.
 
-Now, let’s try to use a different kind of preprocessors, the ones that register new tags: <link src="preprocessors/blockdiag.md" title="Blockdiag">Blockdiag</link>.
+Now let's add a preprocessor into the pipeline ourselves. We've chosen <link src="preprocessors/blockdiag.md" title="Blockdiag">Blockdiag</link> preprocessor for this tutorial.
 
 ### Embed Diagrams with Blockdiag
 
@@ -223,11 +255,11 @@ Now, let’s try to use a different kind of preprocessors, the ones that registe
 First, we need to install the blockdiag preprocessor:
 
 ```bash
-$ python3 -m pip install foliantcontrib.blockdiag
+$ pip3 install foliantcontrib.blockdiag
 ```
 Or, if you are building with docker, add `foliantcontrib.blockdiag` to requirements.txt and rebuild the image with `docker-compose build` command.
 
-Next, we need to switch on the <link src="preprocessors/blockdiag.md" title="Blockdiag">`blockdiag`</link> preprocessor in config. Open `foliant.yml` and add the following lines:
+Next, we need to switch on the <link src="preprocessors/blockdiag.md" title="Blockdiag">`blockdiag`</link> preprocessor in project config. Open `foliant.yml` and add the following lines:
 
 ```diff
 title: Hello Foliant
@@ -248,18 +280,18 @@ Foliant doesn’t force any *special* Markdown flavor.
 
 + <seqdiag caption="This diagram is generated on the fly">
 +   seqdiag {
-+     "foliant make site" -> "mkdocs preprocessor" -> "blockdiag preprocessor" -> "mkdocs backend" -> site;
++     "foliant make site" -> "blockdiag preprocessor" -> "mkdocs preprocessor" -> "mkdocs backend" -> site;
 +   }
 + </seqdiag>
 ```
 
-Blockdiag preprocessor adds several tags to Foliant, each corresponding to a certain diagram type. Sequence diagrams are defined with `<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag parameters.
+Blockdiag preprocessor extends the Markdown syntax of your documentation by adding several *tags*. Each tag produces different diagram type. Sequence diagrams are defined with `<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag attributes.
 
-Rebuild the site with `foliant make site` and open it in the browser:
+Rebuild the site with `foliant make site` or `docker-compose run --rm foliant make site` and open it in the browser:
 
 ![Sequence diagram drawn with seqdiag on the site](images/basic-mkdocs-seqdiag.png)
 
-Rebuild the pdf as well and see that the diagram is there too:
+Rebuild the pdf and see that the diagram is there too:
 
 ![Sequence diagram drawn with seqdiag in the pdf](images/basic-pdf-seqdiag.png)
 
