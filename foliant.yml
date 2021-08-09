@@ -31,7 +31,6 @@ chapters:
         - General Notes: preprocessors/general_notes.md
         - preprocessors/admonitions.md
         - preprocessors/anchors.md
-        - preprocessors/apilinks.md
         - preprocessors/apireferences.md
         - preprocessors/archeme.md
         - preprocessors/argdown.md
