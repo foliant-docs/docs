@@ -78,8 +78,9 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
 There is a selection of Docker images for Foliant in the [Docker hub](https://hub.docker.com/r/foliant/foliant):
 
-* `foliant/foliant` — the basic image with just Foliant core and the `init` command
-* `foliant/foliant:pandoc` — same as basic image but with addition of TexLive  and Pandoc for building PDF and DOCX
+* `foliant/foliant:slim` — minimal image of Foliant with no extensions;
+* `foliant/foliant` — the basic image with just Foliant core and the `init` command;
+* `foliant/foliant:pandoc` — asic image with the addition of TexLive and Pandoc for building PDF and DOCX;
 * `foliant/foliant:full` — the full image with all official Foliant extensions and third-party tools required for them to work.
 
 Choose the image you want and run the `docker pull command`

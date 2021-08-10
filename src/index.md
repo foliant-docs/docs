@@ -2,7 +2,7 @@
 
 Foliant is an all-in-one single-source documentation authoring tool. It lets you produce standalone documents in **pdf** and **docx**, build **static websites**, upload pages to **Confluence**, all from single Markdown source.
 
-Foliant is a higher order tool, which means it uses other programs to do its job. For pdf and docx, it can use [Pandoc](https://pandoc.org/) or [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf), for websites there are available integrations with [MkDocs](https://www.mkdocs.org/), [Aglio](https://github.com/danielgtaylor/aglio) and [Slate](https://github.com/slatedocs/slate).
+Foliant is a higher order tool, which means it uses other programs to do its job. For pdf and docx, it can use [Pandoc](https://pandoc.org/) or [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf), for websites [MkDocs](https://www.mkdocs.org/), [Aglio](https://github.com/danielgtaylor/aglio) and [Slate](https://github.com/slatedocs/slate).
 
 Foliant preprocessors let you reuse parts of your documents, show and hide content with flags, render diagrams from text, and much more.
 
