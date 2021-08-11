@@ -5,7 +5,7 @@
 
 ## Installing prerequisites
 
-First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="../full_docker.md" title="Working with Full Foliant Docker image">Full Docker image</link>, you don’t need to do anything, you can skip to the next stage.
+First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="../../docker.md" title="Working with Foliant full image">Full Docker image</link>, you don’t need to do anything, you can skip to the next stage.
 
 First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <link src="../../installation.md" title="Installation">installation guide</link>.
 

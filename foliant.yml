@@ -8,11 +8,11 @@ chapters:
     - installation.md
     - quickstart.md
     - first_project.md
+    - docker.md
     - architecture.md
     - config.md
     - debugging_builds.md
     - Tutorials:
-        - tutorials/full_docker.md
         - tutorials/api.md
         - Documenting Databases with Foliant:
             - tutorials/db/db.md
