@@ -94,7 +94,7 @@ These commands are
 ```bash
 apt update
 apt install -y texlive-full librsvg2-bin
-apt install pandoc
+apt install -y pandoc
 ```
 
 So we take this commands and put them in our `Dockerfile`, but we will put `RUN` before each one to explain Docker our intentions. The order in which lines appear in the `Dockerfile` is important. Docker does a nice job of caching stages of container build, so make a rule of putting the commands which less prone to change at the start.
@@ -107,7 +107,7 @@ FROM foliant/foliant
 + ENV DEBIAN_FRONTEND=noninteractive
 + RUN apt update
 + RUN apt install -y texlive-full librsvg2-bin
-+ RUN apt install pandoc
++ RUN apt install -y pandoc
 
 COPY requirements.txt .
 
