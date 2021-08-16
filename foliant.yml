@@ -19,6 +19,11 @@ chapters:
             - tutorials/db/dbml.md
             - tutorials/db/oracle.md
             - tutorials/db/pgsql.md
+        - Creating a Preprocessor:
+            - tutorials/preprocessor/intro.md
+            - tutorials/preprocessor/generator.md
+            - tutorials/preprocessor/preprocessor.md
+            - tutorials/preprocessor/install.md
         - tutorials/dev_reference.md
     - meta.md
     - Backends:
