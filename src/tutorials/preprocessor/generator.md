@@ -2,13 +2,13 @@
 
 There are already several Python packages present on PyPi which generate placeholder texts like [loremipsum](https://github.com/monkeython/loremipsum) but we won't deprive ourselves from the fun of creating our own.
 
-Let's define some guidelines:
+Let's define some requirements:
 
 - The generated text should consist of sentences which start with a capital letter and end with a dot.
-- It should be possible to control the size of the sentence and the number of sentences in the resulting text.
-- The words in the text should have at least slight resemblance with real words.
+- There should be a way of controlling the size of the sentence and the number of sentences in the resulting text.
+- The words in the text should have at least slight resemblance with real language words.
 
-The last requirement is a bit tricky: we don't want words like `q` or `zxd`, or at least not too many of those, for the text look a bit more real. So what we will do is create a simple `gen_word` function which will generate a word with random number of random letters, but the letters will be picked in a more controlled way by another function `pick_letter`:
+The last requirement is a bit tricky: we don't want words like `q` or `zxd`, or at least not too many of those for the text look a bit more real. So what we will do is create a simple `gen_word` function which will generate a word with random number of random letters, but the letters will be picked in a more controlled way by another function `pick_letter`:
 
 ```python
 from random import randint
@@ -18,10 +18,10 @@ def gen_word():
     return ''.join(pick_letter() for _ in range(word_len))  # [2]
 ```
 
-1. We've restricted the length of our words to 2 to 9 letters so we could avoid too short and too long words.
+1. We've restricted the length of the words to 2 to 9 letters so we could avoid too short and too long words.
 2. The `pick_letter` function will be supplying us with random letters.
 
-Now to the `pick_letter` function. To make the words look real we don't want this function to return many of the letters q, w, x and z, which don't appear in words commonly. We also want to get more vowels than consonants. `Kiobe` looks more like a word than `Lknsd`.
+Now to the `pick_letter` function. To make the words look real we don't want this function to return too many of the letters q, w, x and z, which don't appear in words often. We also want to get more vowels than consonants. `kiobe` looks more like a word than `lknsd`.
 
 Here's what I've come up with
 
@@ -64,7 +64,7 @@ Let's put it all together and test our `gen_word` function
 
 Oh my god, I think we've just created Finnish language! Jokes aside, it seems that our words generator works fine.
 
-Now all it's left to do is create functions for generating sentences and putting them together into text.
+Now we need to create functions for generating sentences and putting them together into a text.
 
 ```python
 def gen_sentence(num_words=7):  # [1]
@@ -74,7 +74,7 @@ def gen_sentence(num_words=7):  # [1]
 
 1. The number of words in the sentence is determined by the `num_words` parameter with a sensible default of 7 words.
 2. Creating a generator which will yield a new word required number of times.
-3. Joining the generated words into a single string, separated by spaces. We are also making the first word capitalized for our sentence.
+3. Joining the generated words into a single string, separated by spaces. We are also making the first word capitalized in our sentence.
 
 A quick test to make sure it works
 
@@ -95,9 +95,9 @@ def gen_text(num_sentences=10):  # [1]
 ```
 
 1. Text generator will accept one parameter `num_sentences` with a default of 10.
-2. Creating a generator which will yield a number of words in a sentence required number of times. We are limiting the sentence size here to 3 to 12 words.
+2. Creating a generator which will yield a number of words in each sentence required number of times. We are limiting the sentence size here to 3 to 12 words.
 3. Creating a generator which will yield a new sentence required number of times.
-4. Joining the generated sentences into a single string, separated by dots. We are also adding a dot to the end of the text.
+4. Joining the generated sentences into a single string, separated by dots. We are also adding a dot at the end of the text.
 
 Time for the final test!
 
@@ -161,3 +161,4 @@ Our gibberish generator turned out quite decent. Now it's time to make it a Foli
 
 
 Next: <link src="preprocessor.md"></link>
+Previous: <link src="intro.md"></link>

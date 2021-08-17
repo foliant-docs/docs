@@ -1,6 +1,6 @@
 # Installing and Testing
 
-Right now our preprocessor's folder looks like this
+Right now our preprocessor folder looks like this.
 
 ```bash
 $ tree
@@ -12,11 +12,11 @@ $ tree
 2 directories, 1 file
 ```
 
-To make it an installable Python package we need to add a `setup.py` file to the root folder.
+To make it an installable Python package we need to add a `setup.py` file to the root.
 
-Here's an [article on creating the setup file](https://docs.python.org/3/distutils/setupscript.html) from the official docs. Usually we just take one of the setup.py's from an existing preprocessor as a template or use this official Foliant [snippet](https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/setup.py).
+Here's an [article on creating setup files](https://docs.python.org/3/distutils/setupscript.html) from the official docs. Usually we just take one of the setup.py's from an existing preprocessor as a template or use this official Foliant [snippet](https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/setup.py).
 
-Here's what your `setup.py` may look like
+Here's what your `setup.py` may look like.
 
 ```python
 from setuptools import setup
@@ -60,7 +60,7 @@ setup(
 )
 ```
 
-Lines marked with commented asteriks you would probably want to change to suit your preprocessor. Also note that we supplied the contents of the `README.md` as a full description of the package. It's a good time to add the readme for your preprocessor. Explain what your preprocessor does and what options it has. You may use one of the official preprocessors for possible readme structure.
+Lines marked with asteriks you would probably want to change to suit your preprocessor. Also note that we refered to the contents of the `README.md` as a full description of the package. It's a good time to add a readme for your preprocessor. Explain what your preprocessor does and what options it has. You may use one of the official preprocessors for possible readme structure.
 
 Now the folder structure should look like this
 
@@ -76,13 +76,13 @@ $ tree
 2 directories, 3 files
 ```
 
-Now it's time to test if the preprocessor actually works. First install by running this command inside the preprocessor folder.
+Time to test if the preprocessor actually works. First install it by running this command inside the preprocessor folder.
 
 ```bash
 $ pip3 install .
 ```
 
-Create an empty Foliant project with `init` command:
+Create an empty Foliant project using the `init` command:
 
 ```bash
 $ foliant init  # creating the empty project
@@ -104,7 +104,7 @@ $ tree  # inspecting the project file structure
 1 directory, 6 files
 ```
 
-First let's add our preprocessor to the `foliant.yml`
+First let's add our preprocessor to the `foliant.yml`.
 
 ```diff
 title: Gibberish Test
@@ -130,7 +130,7 @@ Here are just two sentences of gibberish:
 <gibberish size="2"></gibberish>
 ```
 
-Let's run a build into `pre` target. This target doesn't create a PDF or a DOCX, it just returns the preprocessed Markdown text, which perfectly suits our testing needs.
+Let's build our project into the `pre` target. This target doesn't create a PDF or a DOCX, it just returns the preprocessed Markdown text, which perfectly suits our testing needs.
 
 ```bash
 $ foliant make pre   
@@ -197,9 +197,9 @@ Here are just two sentences of gibberish:
 Wnuhocx uqny ns. Iu ieuiaea iogyjyfy kl eyyeex agayii aioaac yacjume.
 ```
 
-Everything works as expected. Now you can add the `LICENSE` file and the `changelog.md` to your preprocessor folder and publish it github and pypi so others could use our wonderful creation!
+Everything works as expected. Now you can add a `LICENSE` and a `changelog.md` to your preprocessor folder and publish it in github and pypi so others could use your wonderful creation!
 
-The repository with full code of Gibberish preprocessor is available here.
+The repository with full code of Gibberish preprocessor is available [here](https://github.com/foliant-docs/preprocessor_tutorial).
 
 # Summary
 
@@ -208,3 +208,5 @@ Now you know the basics of creating preprocessors for Foliant. But there's a lot
 When you get comfortable creating simple preprocessors you may find the [`utils` package](https://github.com/foliant-docs/foliantcontrib.utils) useful. It contains different tools which perform common tasks in preprocessors like [dealing with `chapters` section](https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/chapters.md) in foliant.yml or efficiently [combining options](https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/combined_options.md) from foliant.yml and XML tags. There's also a powerful [`BasePreprocessorExt` class](https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/preprocessor_ext.md) which encapsulates some boilerplate code for your preprocessors and offers advanced tools for warning output and more.
 
 That's all for now. We wish you luck in extending Foliant! Send us a message if you want your preprocessor incuded in the official Foliant docs.
+
+Previous: <link src="preprocessor.md"></link>
