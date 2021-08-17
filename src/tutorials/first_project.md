@@ -2,12 +2,12 @@
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
-> It is recommended to run Foliant through Docker to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
+> It is recommended to run Foliant through Docker to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
 
 
 ## Create New Project
 
-All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to <link src="!path src/cli/init/index.md" title="Init">Init</link> extension.
+All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to the <link src="!path src/cli/init/index.md" title="Init">Init</link> extension.
 
 You should have installed it during <link src="!path src/installation.md" title="Installation">Foliant installation</link> and it’s included in Foliant’s default Docker image.
 
@@ -31,7 +31,7 @@ Generating project... Done
 Project "Hello Foliant" created in hello-foliant
 ```
 
-The `init` command created a structure for Foliant project in `hello-foliant` subfolder
+The `init` command created a structure for the Foliant project in `hello-foliant` subfolder.
 
 ```bash
 $ cd hello-foliant
@@ -93,7 +93,7 @@ Making site with MkDocs... Done
 Result: Hello_Foliant-2020-05-25.mkdocs
 ```
 
-That’s it! Your static, MkDocs-powered website is ready. To look at it, use any web server, for example, Python’s built-in one
+That’s it! Your static, MkDocs-powered website is ready. To look at it, use any web server, for example, Python’s built-in one.
 
 ```bash
 $ python3 -m http.server -d Hello_Foliant-2020-05-25.mkdocs
@@ -158,9 +158,9 @@ Your standalone pdf documentation is ready! It should look something like this
 
 ## Edit Content
 
-Your project’s content lives in `.md` files inside `src` folder. You can organize it into multiple files and subfolders isinde the `src` as you please.
+Your project’s content lives in `.md` files inside the `src` folder. You can organize it into multiple files and subfolders inside the `src` as you please.
 
-Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend to put them in <link src="!path src/preprocessors/flags.md" title="Flags">`<if>...</if>`</link>.
+Foliant encourages [pure Markdown](https://daringfireball.net/projects/markdown/) syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend putting them in <link src="!path src/preprocessors/flags.md" title="Flags">`<if>...</if>`</link>.
 
 Let's create a file `hello.md` inside `src` folder
 
@@ -235,16 +235,16 @@ And see the new page appear on the site and in the pdf document
 
 ## Use Preprocessors
 
-Preprocessors are additional Foliant packages which transform your Markdown chapters in different ways. You can do all kinds of stuff with them:
+Preprocessors are additional Foliant packages that transform your Markdown chapters in different ways. You can do all kinds of stuff with them:
 
 -   include remote Markdown files or their parts in the source files,
 -   perform auto-replace,
--   render diagrams from textual description on build,
+-   render diagrams from their textual description on the build,
 -   restructure the project source or compile it into a single file for a particular backend.
 
-Preprocessors don't touch your sources in the `src` folder. Instead they copy them into a temporary directory and transform the fresh copies on each build.
+Preprocessors don't touch your sources in the `src` folder. Instead, they copy them into a temporary directory and transform the fresh copies on each build.
 
-In fact, you have already used two preprocessors! Look at the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The `mkdocs` preprocessor made your files compatible with MkDocs’ requirements, and the <link src="!path src/preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one file to produce a single PDF with Pandoc. These preprocessors where called by MkDocs and Pandoc backends implicitly.
+In fact, you have already used two preprocessors! Look at the output of the `foliant make` commands and note the lines `Applying preprocessor mkdocs` and `Applying preprocessor flatten`. The `mkdocs` preprocessor made your files compatible with MkDocs’ requirements, and the <link src="!path src/preprocessors/flatten.md" title="Flatten">`flatten`</link> preprocessor was used to squash the project source into one file to produce a single PDF with Pandoc. These preprocessors were called by MkDocs and Pandoc backends implicitly.
 
 Now let's add a preprocessor into the pipeline ourselves. We've chosen <link src="!path src/preprocessors/blockdiag.md" title="Blockdiag">Blockdiag</link> preprocessor for this tutorial.
 
@@ -286,7 +286,7 @@ Foliant doesn’t force any *special* Markdown flavor.
 + </seqdiag>
 ```
 
-Blockdiag preprocessor extends the Markdown syntax of your documentation by adding several *tags*. Each tag produces different diagram type. Sequence diagrams are defined with `<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag attributes.
+Blockdiag preprocessor extends the Markdown syntax of your documentation by adding several *tags*. Each tag produces a different diagram type. Sequence diagrams are defined with `<seqdiag></seqdiag>` tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag attributes.
 
 Rebuild the site with `foliant make site` or `docker-compose run --rm foliant make site` and open it in the browser
 
@@ -296,7 +296,7 @@ Rebuild the pdf and see that the diagram is there too
 
 ![Sequence diagram drawn with seqdiag in the pdf](images/basic-pdf-seqdiag.png)
 
-Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever popular Comic Sans font, but you can pick any font that’s available in `.ttf` format.
+Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever-popular Comic Sans font, but you can pick any font that’s available in `.ttf` format.
 
 Put the font file in the project directory and add the following lines to `foliant.yml`
 
@@ -314,7 +314,7 @@ After a rebuild, the diagram on the site and in the pdf should look like this
 
 ![Sequence diagram with Comic Sans in labels, pdf](images/basic-pdf-seqdiag-comic.png)
 
-There are many more params you can define for your diagrams. You can override global params for particluar diagrams in their tags. And by combining this preprocessor with <link src="!path src/preprocessors/flags.md" title="Flags">Flags</link> you can even set different params for different backends, for example build vector diagrams for pdf output and bitmap for site
+There are many more params you can define for your diagrams. You can override global params for particular diagrams in their tags. And by combining this preprocessor with <link src="!path src/preprocessors/flags.md" title="Flags">Flags</link> you can even set different params for different backends, for example, build vector diagrams for pdf output and bitmap for site
 
 ```markdown
 This is a diagram that is rendered to `.png` in HTML and to `.pdf` in pdf:
@@ -328,7 +328,7 @@ The possibilities acquired by combining different preprocessors are endless!
 
 > **Why Foliant Uses XML syntax for Preprocessor Tags**
 >
-> It’s common for Markdown-based tools to extend Markdown with custom syntax for additional functions. There’s no standard for custom syntax in the Markdown spec, so every developer uses whatever syntax is available for them, different one for every new extension.
+> It’s common for Markdown-based tools to extend Markdown with custom syntax for additional functions. There’s no standard for custom syntax in the Markdown spec, so every developer uses whatever syntax is available for them, a different one for every new extension.
 >
 > In Foliant, we tried our best not to dive into this mess. Foliant aims to be an extensible platform, with many available preprocessors. So we needed one syntax for all preprocessors, but the one that was flexible enough to support them all.
 >

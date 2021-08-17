@@ -1,6 +1,6 @@
 # Project Configuration
 
-Configuration for Foliant is kept in a [YAML](https://yaml.org/)-file in the project root. The default filename is `foliant.yml` but you can pick a different name by specifying the `--config` option:
+Configuration for Foliant is kept in a [YAML](https://yaml.org/) file in the project root. The default filename is `foliant.yml` but you can pick a different name by specifying the `--config` option:
 
 ```bash
 $ foliant make pdf --config myconf.yml
@@ -9,9 +9,9 @@ $ foliant make pdf --config myconf.yml
 ## Config Sections
 
 * <link title="Root Options"></link>
-* <link title="`chapters`"></link>
-* <link title="`preprocessors`"></link>
-* <link title="`backend_config`"></link>
+* <link title="chapters"></link>
+* <link title="preprocessors"></link>
+* <link title="backend_config"></link>
 
 ### Root Options
 
@@ -38,7 +38,7 @@ tmp_dir: __folianttmp__
 `tmp_dir` *(string)*
 :    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Default: `__folianttmp__`.
 
-### `chapters`
+### chapters
 
 *(list)*
 
@@ -53,10 +53,10 @@ chapters:
     - tutorial.md
 ```
 
-Chapters may nested with mappings and sublists. These complex structures may be treated differently by different backends: some may ignore nesting, some may use it to alter the resulting build. But usually these two ideas are shared between all backends:
+Chapters may be nested with mappings and sublists. These complex structures may be treated differently by different backends: some may ignore nesting, some may use it to alter the resulting build. But usually, these two ideas are shared between all backends:
 
-- only those Markdown files which are mentioned in the chapters list, will appear in the resulting build;
-- the order in which chapters are mentioned in the list, will be preserved in the resulting build.
+- only those Markdown files which are mentioned in the chapters list will appear in the resulting build;
+- the order in which chapters are mentioned in the list will be preserved in the resulting build.
 
 Consider this example chapters list:
 
@@ -76,7 +76,7 @@ chapters:
         - building_project.md
 ```
 
-In this example first two chapters are defined as simple list items, third chapter is a mapping with one element, and after that we see several mappings with nested lists.
+In this example first two chapters are defined as simple list items, the third chapter is a mapping with one element, and after that, we see several mappings with nested lists.
 
 If we were building a PDF document with <link src="backends/pandoc.md">Pandoc backend</link> or a static site with <link src="backends/slate.md">Slate backend</link>, this complex chapter structure will be ignored, as if we have supplied a simple flat list:
 
@@ -94,7 +94,7 @@ chapters:
     - building_project.md
 ```
 
-In any case we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.
+In any case, we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.
 
 But if we were building a site with <link src="backends/mkdocs.md" title="MkDocs">MkDocs backend</link>, mappings would become meaningful.
 
@@ -122,7 +122,7 @@ means "create a subsection **Creating Documentation With Foliant** in the sideba
 
 Refer to each backend’s respective docs for details on how they work with chapters.
 
-### `preprocessors`
+### preprocessors
 
 *(list)*
 
@@ -146,7 +146,7 @@ preprocessors:
             Gdpi: 0
 ```
 
-Each preprocessor has to be put in separate list item. If you don’t need to set any options, just put the preprocessor’s name in the item (`flags`, `includes` and `blockdiag` in the example above). If you are setting preprocessor options, then make it a mapping, with key being the preprocessor name, and value — another mapping, with preprocessor options. (`macros`, `plantuml` and `graphviz` in the example above).
+Each preprocessor has to be put in a separate list item. If you don’t need to set any options, just put the preprocessor’s name in the item (`flags`, `includes`, and `blockdiag` in the example above). If you are setting preprocessor options, then make it a mapping, with key being the preprocessor name, and value — another mapping, with preprocessor options. (`macros`, `plantuml`, and `graphviz` in the example above).
 
 Refer to each preprocessor’s respective docs for details on which options they have and how to set them.
 
@@ -154,7 +154,7 @@ There are several things you have to keep in mind when building the preprocessor
 
 **The order matters**
 
-The order, in which the preprocessors are defined in the list, is the order they are run during build. For example, if you are using <link src="preprocessors/includes.md">Includes preprocessor</link> to get source code for a PlantUML scheme like this:
+The order, in which the preprocessors are defined in the list, is the order they are run during the build. For example, if you are using <link src="preprocessors/includes.md">Includes preprocessor</link> to get source code for a PlantUML scheme like this:
 
 ```html
 <plantuml>
@@ -162,17 +162,17 @@ The order, in which the preprocessors are defined in the list, is the order they
 </plantuml>
 ```
 
-then `includes` must be defined before `plantuml` in the preprocessor list. Otherwise you will get an error from PlantUML when it tries to process `<include>` tag instead of the scheme code.
+then `includes` must be defined before `plantuml` in the preprocessor list. Otherwise, you will get an error from PlantUML when it tries to process `<include>` tag instead of the scheme code.
 
 Some preprocessors are especially sensitive to their position in the list (for example, <link src="preprocessors/superlinks.md" title="SuperLinks">SuperLinks</link>) and there may even be situations when you will have to put the same preprocessor in the list twice.
 
 **Preprocessors are applied to all files**
 
-Generally, preprocessors just ignore the chapters list and apply to *all Markdown files* in the src dir. Usually this is not an issue, but sometimes preprocessor may spend a long time on the files, which may not even get into the resulting build.
+Generally, preprocessors just ignore the chapters list and apply to *all Markdown files* in the src dir. Usually, this is not an issue, but sometimes preprocessor may spend a long time on the files, which may not even get into the resulting build.
 
-We suggest you to keep your src dir tidy and only put there files which are actually getting into the project. The other solution is to use <link src="preprocessors/removeexcess.md">RemoveExcess</link> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.
+We suggest you keep your src dir tidy and only put there files that are actually getting into the project. The other solution is to use <link src="preprocessors/removeexcess.md">RemoveExcess</link> preprocessor, which removes all Markdown files, which are not mentioned in the chapters list, from the temporary directory.
 
-### `backend_config`
+### backend_config
 
 *(mapping)*
 
@@ -200,7 +200,7 @@ backend_config:
                 custom_dir: !path ./theme/
 ```
 
-Unlike `preprocessors` section, `backend_config` is not a list but a mapping. Hence, the order in which you define backends, is not important.
+Unlike `preprocessors` section, `backend_config` is not a list but a mapping. Hence, the order in which you define backends is not important.
 
 Moreover, you can even skip adding a backend into `backend_config` and still be able to build a project with it. It will just mean that you are using default settings.
 
@@ -210,7 +210,7 @@ Foliant defines several custom YAML-modifiers, some of which you have already me
 
 ### `!include`
 
-The `!include` modifier allows to insert content from another YAML-file.
+The `!include` modifier allows inserting content from another YAML-file.
 
 For example, if your chapters list has grown so big, that you want to keep it separately from the main config, you can put it into `chapters.yml` file and include it in `foliant.yml`:
 
@@ -252,7 +252,7 @@ Received the variables!
 </jinja2>
 ```
 
-And that’s where `!project_path`, `!rel_path` modifiers come in really handy. Now you can refer to a file which is sitting in the project root, no matter where inside the src dir your current file is:
+And that’s where `!project_path`, `!rel_path` modifiers come in really handy. Now you can refer to a file that is sitting in the project root, no matter where inside the src dir your current file is:
 
 ```html
 Here are the contents of this project’s config:
@@ -260,19 +260,19 @@ Here are the contents of this project’s config:
 <include src="!project_path foliant.yml"></include>
 ```
 
-By convention, all tag parameters, which accept paths to external files, are considered to be paths relative to current file. But if you want to make things more explicit, you may add the `!rel_path` tag, which ensures that the path the preprocessor will get, will be relative to current file:
+By convention, all tag parameters, which accept paths to external files, are considered to be paths relative to the current file. But if you want to make things more explicit, you may add the `!rel_path` tag, which ensures that the path the preprocessor will get, will be relative to the current file:
 
 ```html
-Here are the contetns of the adjacent chapter:
+Here are the contents of the adjacent chapter:
 
 <include src="!rel_path chapter2.md"></include>
 ```
 
-`!path` modifier, if used in tag parameters, works the same as `!project_path` modifier: it returns the absolute path to the file, relative to project root.
+`!path` modifier, if used in tag parameters, works the same as `!project_path` modifier: it returns the absolute path to the file, relative to the project root.
 
 ### `!env`
 
-The `!env` modifier allows you to access environment variables in config, as well as in tag options.
+The `!env` modifier allows you to access environment variables in the config, as well as in tag options.
 
 It is useful if you don’t want to keep credentials in your config files, for example:
 
