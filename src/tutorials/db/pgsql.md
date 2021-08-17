@@ -1,18 +1,17 @@
 # Documenting PostgreSQL Database
 
-> Please note that in this article we cover only the basic usage of the tools. For detailed information on features and customizing output refer to each component’s doc page.
-
+> Please note that this article will cover only the basic usage of the tools. For detailed information on the features and customizing output refer to each component’s docs.
 
 ## Installing prerequisites
 
-First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="../../docker.md" title="Working with Foliant full image">Full Docker image</link>, you don’t need to do anything, you can skip to the next stage.
+You will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="../../docker.md" title="Using different Foliant Docker images">Full Docker image</link>, you don’t need to do anything, you can skip to the <link title="Creating project">next stage</link>.
 
-First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <link src="../../installation.md" title="Installation">installation guide</link>.
+First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <link src="../../installation.md">installation guide</link>.
 
-Next, let’s install <link src="../../cli/init/index.md" title="Init">Foliant Init</link> to facilitate the task of creating new project:
+Install PostgreSQL and its Python connector.
 
 ```bash
-$ pip3 install foliantcontrib.init
+$ pip3 install psycopg2-binary
 ```
 
 Install DBDoc and PlantUML preprocessors, and the Slate backend:
@@ -23,7 +22,7 @@ $ pip3 install foliantcontrib.dbdoc foliantcontrib.slate, foliantcontrib.plantum
 
 We are going to use [Slate](https://github.com/slatedocs/slate/) for building a static website with documentation, so you will need to [install Slate dependencies](https://github.com/slatedocs/slate/wiki/Using-Slate-Natively).
 
-[Install PlantUML](https://plantuml.com/ru/starting), we will need it to draw the database scheme.
+Finally, [Install PlantUML](https://plantuml.com/ru/starting), we will need it to draw the database scheme.
 
 ## Creating project
 
@@ -67,6 +66,7 @@ chapters:
 
 +preprocessors:
 +   - dbdoc:
++       dbms: pgsql
 +       host: localhost
 +       port: 5432
 +       dbname: posgres
@@ -79,13 +79,13 @@ chapters:
 Make sure to use proper credentials for your PostgreSQL database. If you are running Foliant from docker, you can use `host: host.docker.internal` to access `localhost` from docker.
 
 > Note: if plantuml is not available under `$ plantuml` in your system, you will also need to specify path to platnum.jar in preprocessor settings like this:
+>
+> ```yaml
+>   - plantuml:
+>       plantuml_path: /usr/bin/plantuml.jar
+> ```
 
-```yaml
-  - plantuml:
-      plantuml_path: /usr/bin/plantuml.jar
-```
-
-Finally, we need to tell Foliant where in the source files should it insert the generated documentation. Since we already have an `index.md` chapter created for us by `init` command, let’s put it in there. Open `src/index.md` and make it look like this:
+Finally, we need to point Foliant the place in the Markdown source files where the generated documentation should be inserted. Since we already have an `index.md` chapter created for us by `init` command, let’s put it in there. Open `src/index.md` and make it look like this:
 
 ```diff
 # Welcome to Database Docs
@@ -94,8 +94,6 @@ Finally, we need to tell Foliant where in the source files should it insert the 
 +<dbdoc></dbdoc>
 +
 ```
-
-If you are using Docker, you will also need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this [Dockerfile by Sergey Makinen](https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile). Copy all commands starting from the third line into your `Dockerfile` and run `docker-compose build` to rebuild the image.
 
 ## Building site
 
@@ -124,4 +122,4 @@ Now open `Database_Docs-2020-06-03.slate/index.html` and look what you’ve got:
 
 ![](img/oracle.png)
 
-That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBMLDoc generates markdown our of your schema. The default template can be found [here](https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2). Edit it and save in your project dir, then specify in the `doc_template` parameter. If you want to change the looks of you site, please, refer for instructions to the <link src="../../backends/slate.md" title="Slate">Slate</link> backend documentation.
+That looks good enough, but you may want to tweak the appearance of your site. You can edit the Jinja-template to change the way DBDoc generates markdown out of your schema. The default template can be found [here](https://github.com/foliant-docs/foliantcontrib.dbdoc/blob/master/foliant/preprocessors/dbdoc/pgsql/templates/doc.j2). Edit it and save in your project dir, then specify in the `doc_template` parameter. If you want to change the looks of your site, please, refer for instructions in <link src="../../backends/slate.md" title="Slate">Slate</link> backend documentation.
