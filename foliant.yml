@@ -7,12 +7,9 @@ chapters:
     - index.md
     - installation.md
     - quickstart.md
-    - first_project.md
-    - docker.md
-    - architecture.md
-    - config.md
-    - debugging_builds.md
     - Tutorials:
+        - tutorials/first_project.md
+        - tutorials/docker.md
         - tutorials/api.md
         - Documenting Databases with Foliant:
             - tutorials/db/db.md
@@ -24,8 +21,11 @@ chapters:
             - tutorials/preprocessor/generator.md
             - tutorials/preprocessor/preprocessor.md
             - tutorials/preprocessor/install.md
-        - tutorials/dev_reference.md
+    - architecture.md
+    - config.md
+    - debugging_builds.md
     - meta.md
+    - tutorials/dev_reference.md
     - Backends:
         - backends/aglio.md
         - backends/confluence.md

@@ -1,6 +1,6 @@
 # Creating the Gibberish Generator
 
-There are already several Python packages present on PyPi which generate placeholder texts like [loremipsum](https://github.com/monkeython/loremipsum) but we won't deprive ourselves from the fun of creating our own.
+There are already several Python packages present on PyPi which generate placeholder texts like [loremipsum](https://github.com/monkeython/loremipsum) but we won't deprive ourselves of the fun of creating our own.
 
 Let's define some requirements:
 
@@ -110,6 +110,7 @@ Time for the final test!
 
 Our gibberish generator turned out quite decent. Now it's time to make it a Foliant preprocessor.
 
+<if backend="mkdocs">
 ??? example "Complete source of the generator module"
     ```python
     from random import choice
@@ -158,7 +159,7 @@ Our gibberish generator turned out quite decent. Now it's time to make it a Foli
         sentences = (gen_sentence(size) for size in sizes)
         return '. '.join(sentences) + '.'
     ```
-
+</if>
 
 Next: <link src="preprocessor.md"></link>
 Previous: <link src="intro.md"></link>

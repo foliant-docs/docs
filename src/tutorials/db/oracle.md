@@ -5,7 +5,7 @@
 
 ## Installing prerequisites
 
-First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="../../docker.md" title="Using different Foliant Docker images">Full Docker image</link>, you will just need the <link anchor="docker_oracle">last paragraph</link> in this section.
+First you will need to install some prerequisites. If you are running Foliant natively, follow the guide below. If you are working with our <link src="!path src/tutorials/docker.md" title="Using different Foliant Docker images">Full Docker image</link>, you will just need the <link anchor="docker_oracle">last paragraph</link> in this section.
 
 First, you will need Foliant, of course. If you don’t have it yet, please, refer to the <link src="../../installation.md" title="Installation">installation guide</link>.
 
@@ -25,9 +25,9 @@ We are going to use <link src="../../backends/slate.md" title="Slate">Slate</lin
 
 [Install PlantUML](https://plantuml.com/ru/starting), we will need it to draw the database scheme.
 
-Install [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) if you don’t have it. We will need it to query the database.
-
 <anchor>docker_oracle</anchor>
+
+Install [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) if you don’t have it. We will need it to query the database.
 
 If you are using Docker, you will need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this [Dockerfile by Sergey Makinen](https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile). Copy all commands starting from the third line into your `Dockerfile` and run `docker-compose build` to rebuild the image.
 

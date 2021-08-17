@@ -101,7 +101,7 @@ Detailed logging in debug mode allows you to quickly localize problems zooming i
 
 ## Debugging extensions
 
-Each Foliant backend takes preprocessed Markdown content and passes it to an external command (see <link src="architecture"></link>). For debugging backends it's essential to see the content which the backend actually gets. 
+Each Foliant backend takes preprocessed Markdown content and passes it to an external command (see <link src="architecture.md"></link>). For debugging backends it's essential to see the content which the backend actually gets. 
 
 During the build source files of Foliant project are copied to a temporary working directory. By default, it is called `__folianttmp__/` and located in the “root” directory of the project. Source Markdown files of the project are kept unchanged during build. Any transformations are applied only to the files located in the temporary working directory.
 

@@ -78,4 +78,4 @@ $ docker-compose run --rm foliant make docx
 
 ***
 
-If you want to know more about how Foliant works, check out the <link src="architecture.md"></link> or just dive straight into <link src="first_project.md"></link>.
+If you want to know more about how Foliant works, check out the <link src="architecture.md"></link> or just dive straight into <link src="tutorials/first_project.md"></link>.

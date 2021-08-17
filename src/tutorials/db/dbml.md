@@ -36,7 +36,7 @@ We won’t need to do it all manually, of course, we just need to configure Foli
 
 ## Installing prerequisites
 
-If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <link src="../../docker.md" title="Using different Foliant Docker images">Full Foliant Docker image</link>, you don’t need to do that, just skip to the <link title="Creating project">next stage</link>.
+If you are running Foliant natively, you will need to install some prerequisites. But if you are working with our <link src="!path src/tutorials/docker.md" title="Using different Foliant Docker images">Full Foliant Docker image</link>, you don’t need to do that, just skip to the <link title="Creating project">next stage</link>.
 
 First you will need Foliant, of course. If you don’t have it yet, please, refer to the <link src="../../installation.md">installation guide</link>.
 
