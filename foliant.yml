@@ -25,7 +25,7 @@ chapters:
     - config.md
     - debugging_builds.md
     - meta.md
-    - tutorials/dev_reference.md
+    - dev_reference.md
     - Backends:
         - backends/aglio.md
         - backends/confluence.md

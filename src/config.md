@@ -208,7 +208,7 @@ Moreover, you can even skip adding a backend into `backend_config` and still be 
 
 Foliant defines several custom YAML-modifiers, some of which you have already met in the examples above.
 
-### `!include`
+### !include
 
 The `!include` modifier allows inserting content from another YAML-file.
 
@@ -218,7 +218,7 @@ For example, if your chapters list has grown so big, that you want to keep it se
 chapters: !include chapters.yml
 ```
 
-### `!path`, `!project_path`, `!rel_path`
+### !path, !project_path, !rel_path
 
 When used in foliant.yml, `!path`, `!project_path`, `!rel_path` all do the same thing: they resolve the path to an absolute path to make sure the preprocessor or backend processes this file properly.
 
