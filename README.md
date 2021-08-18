@@ -2,6 +2,8 @@
 
 [![Build Status](https://api.travis-ci.com/foliant-docs/docs.svg?branch=master)](https://travis-ci.com/github/foliant-docs)
 
+[https://foliant-docs.github.io/docs/](https://foliant-docs.github.io/docs/)
+
 ##  Build Locally
 
 With Docker Compose:
