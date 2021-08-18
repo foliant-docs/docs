@@ -4,11 +4,11 @@ There are already several Python packages present on PyPi which generate placeho
 
 Let's define some requirements:
 
-- The generated text should consist of sentences which start with a capital letter and end with a dot.
+- The generated text should consist of sentences that start with a capital letter and end with a dot.
 - There should be a way of controlling the size of the sentence and the number of sentences in the resulting text.
-- The words in the text should have at least slight resemblance with real language words.
+- The words in the text should have at least a slight resemblance with real language words.
 
-The last requirement is a bit tricky: we don't want words like `q` or `zxd`, or at least not too many of those for the text look a bit more real. So what we will do is create a simple `gen_word` function which will generate a word with random number of random letters, but the letters will be picked in a more controlled way by another function `pick_letter`:
+The last requirement is a bit tricky: we don't want words like `q` or `zxd` in our text, or at least not too many of those, so that the text looks a bit more real. So what we will do is create a simple `gen_word` function which will generate a word with a random number of letters, but the letters will be picked in a more controlled way by another function called `pick_letter`:
 
 ```python
 from random import randint
@@ -21,9 +21,9 @@ def gen_word():
 1. We've restricted the length of the words to 2 to 9 letters so we could avoid too short and too long words.
 2. The `pick_letter` function will be supplying us with random letters.
 
-Now to the `pick_letter` function. To make the words look real we don't want this function to return too many of the letters q, w, x and z, which don't appear in words often. We also want to get more vowels than consonants. `kiobe` looks more like a word than `lknsd`.
+Now to the `pick_letter` function. To make the words look real we don't want this function to return too many of the letters q, w, x and z, which don't appear in the words often. We also want to get more vowels than consonants: `kiobe` looks more like a word than `lknsd`.
 
-Here's what I've come up with
+Here's one way to do it
 
 ```python
 from random import choice, random
@@ -42,12 +42,12 @@ def pick_letter():
         return choice(consonants) # [6]
 ```
 
-1. Get a random float number with [`random`](https://docs.python.org/3/library/random.html#random.random) function.
-2. Since `random` returns random floats from 0.0 to 1.0, there's about 10% chance of getting a float which is larger than 0.9.
-3. In this case we will randomly pick one of the rare letters: q, w, x or z with [`choice`](https://docs.python.org/3/library/random.html#random.choice) function.
+1. Get a random float number from the [`random`](https://docs.python.org/3/library/random.html#random.random) function.
+2. Since `random` returns a float from 0.0 to 1.0, there's about a 10% chance of getting a float that is larger than 0.9.
+3. In this case, we will randomly pick one of the rare letters: q, w, x, or z with the [`choice`](https://docs.python.org/3/library/random.html#random.choice) function.
 4. The chance of getting a float between 0.25 and 0.9 is about 65%.
-5. In this case we will return a vowel.
-6. Finally, with a chance of about 25% we will be returning one of the remaining consonants.
+5. In this case, we will return a vowel.
+6. Finally, with a chance of about 25%, we will be returning one of the remaining consonants.
 
 Let's put it all together and test our `gen_word` function
 
@@ -62,9 +62,9 @@ Let's put it all together and test our `gen_word` function
 'itookao'
 ```
 
-Oh my god, I think we've just created Finnish language! Jokes aside, it seems that our words generator works fine.
+Oh my god, I think we've just created the Finnish language! Jokes aside, it seems that our words generator works fine.
 
-Now we need to create functions for generating sentences and putting them together into a text.
+Now we need to create functions for generating sentences and putting them together in a text.
 
 ```python
 def gen_sentence(num_words=7):  # [1]
@@ -73,7 +73,7 @@ def gen_sentence(num_words=7):  # [1]
 ```
 
 1. The number of words in the sentence is determined by the `num_words` parameter with a sensible default of 7 words.
-2. Creating a generator which will yield a new word required number of times.
+2. Creating a [generator](https://docs.python.org/3/reference/expressions.html#generator-expressions) that will yield a new word a required number of times.
 3. Joining the generated words into a single string, separated by spaces. We are also making the first word capitalized in our sentence.
 
 A quick test to make sure it works
@@ -94,9 +94,9 @@ def gen_text(num_sentences=10):  # [1]
     return '. '.join(sentences) + '.'  # [4]
 ```
 
-1. Text generator will accept one parameter `num_sentences` with a default of 10.
-2. Creating a generator which will yield a number of words in each sentence required number of times. We are limiting the sentence size here to 3 to 12 words.
-3. Creating a generator which will yield a new sentence required number of times.
+1. The text generator will accept one parameter `num_sentences` with a default of 10.
+2. Creating a generator that will yield a number of words in each sentence a required number of times. We are limiting the sentence size here to 3 to 12 words.
+3. Creating a generator that will yield a new sentence a required number of times.
 4. Joining the generated sentences into a single string, separated by dots. We are also adding a dot at the end of the text.
 
 Time for the final test!
@@ -162,4 +162,5 @@ Our gibberish generator turned out quite decent. Now it's time to make it a Foli
 </if>
 
 Next: <link src="preprocessor.md"></link>
+
 Previous: <link src="intro.md"></link>
