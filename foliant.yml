@@ -7,19 +7,25 @@ chapters:
     - index.md
     - installation.md
     - quickstart.md
-    - architecture.md
-    - config.md
-    - debugging_builds.md
     - Tutorials:
-        - tutorials/full_docker.md
+        - tutorials/first_project.md
+        - tutorials/docker.md
         - tutorials/api.md
         - Documenting Databases with Foliant:
             - tutorials/db/db.md
             - tutorials/db/dbml.md
             - tutorials/db/oracle.md
             - tutorials/db/pgsql.md
-        - tutorials/dev_reference.md
+        - Creating a Preprocessor:
+            - tutorials/preprocessor/intro.md
+            - tutorials/preprocessor/generator.md
+            - tutorials/preprocessor/preprocessor.md
+            - tutorials/preprocessor/install.md
+    - architecture.md
+    - config.md
+    - debugging_builds.md
     - meta.md
+    - dev_reference.md
     - Backends:
         - backends/aglio.md
         - backends/confluence.md
@@ -31,7 +37,6 @@ chapters:
         - General Notes: preprocessors/general_notes.md
         - preprocessors/admonitions.md
         - preprocessors/anchors.md
-        - preprocessors/apilinks.md
         - preprocessors/apireferences.md
         - preprocessors/archeme.md
         - preprocessors/argdown.md
@@ -97,6 +102,8 @@ preprocessors:
                 ref: <if backends="pandoc">{pandoc}</if><if backends="mkdocs">{mkdocs}</if>
     - flags
     - includes
+    - superlinks
+    - anchors
     - history:
         target_heading_level: 2
         rss: true
@@ -104,7 +111,6 @@ preprocessors:
         rss_title: Foliant Releases History
         rss_description: Releases of Foliant documentation authoring tool and its extensions.
         repos: !include repos.yml
-    - superlinks
 
 backend_config:
     pandoc:
