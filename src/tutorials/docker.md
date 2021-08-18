@@ -32,7 +32,7 @@ Download and install Docker from [this page](https://hub.docker.com/editions/com
 
 Now that we’ve got Docker, we can create our test project.
 
-If you have Foliant <link src="installation.md">installed</link> on your system, run the `init` command
+If you have Foliant <link src="!path src/installation.md">installed</link> on your system, run the `init` command
 
 ```bash
 $ foliant init
@@ -61,7 +61,7 @@ $ docker-compose run --rm foliant make pdf
 No backend available for pdf.
 ```
 
-If you are already familiar with Foliant you know that to build PDFs you need to install [Pandoc](https://pandoc.org/) with TeXLive and <link src="backends/pandoc.md">Pandoc backend</link>. So how do we install that in a Docker container?
+If you are already familiar with Foliant you know that to build PDFs you need to install [Pandoc](https://pandoc.org/) with TeXLive and <link src="!path src/backends/pandoc.md">Pandoc backend</link>. So how do we install that in a Docker container?
 
 In your project root you have a `Dockerfile`. This file describes the steps required to set up your virtual container.
 

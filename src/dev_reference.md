@@ -4,7 +4,7 @@ The power of Foliant is in its extensions. Foliant's ecosystem consists of many 
 
 This article contains the reference of the main classes and functions available in Foliant Core. As an extension developer, you will be using them to write your own preprocessors, backends, CLI- and config-extensions.
 
-If you are new to extending Foliant, we suggest you to take a look at the <link src="tutorials/preprocessor/intro">Creating a Preprocessor</link> tutorial first.
+If you are new to extending Foliant, we suggest you to take a look at the <link src="tutorials/preprocessor/intro.md">Creating a Preprocessor</link> tutorial first.
 
 Official Foliant extensions live in Git repositories inside the [foliant-docs](https://github.com/foliant-docs/) GitHub group. Check out their source code to find out different approaches to solving techwriters' problems.
 

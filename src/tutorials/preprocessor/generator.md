@@ -110,7 +110,7 @@ Time for the final test!
 
 Our gibberish generator turned out quite decent. Now it's time to make it a Foliant preprocessor.
 
-<if backend="mkdocs">
+<if backends="mkdocs">
 ??? example "Complete source of the generator module"
     ```python
     from random import choice

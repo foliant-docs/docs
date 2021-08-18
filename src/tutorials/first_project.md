@@ -2,7 +2,7 @@
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
-> It is recommended to <link src="tutorials/docker.md">run Foliant through Docker</link> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
+> It is recommended to <link src="docker.md">run Foliant through Docker</link> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
 
 
 ## Create New Project
@@ -48,7 +48,7 @@ $ tree
 1 directory, 6 files
 ```
 
-`foliant.yml` is your <link src="config.md">Project Configuration</link> file.
+`foliant.yml` is your <link src="!path src/config.md">Project Configuration</link> file.
 
 `src` is the directory for your Markdown documents. Currently, there’s just one file there called `index.md`.
 
@@ -102,12 +102,12 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Open [localhost:8000](http://localhost:8000/) in your web browser. You should see something like this
 
-![Basic Foliant project built with MkDocs](images/basic-mkdocs.png)
+![Basic Foliant project built with MkDocs](../images/basic-mkdocs.png)
 
 
 ## Build PDF
 
-To build PDF with Pandoc natively, first you will need to install Pandoc itself and TexLive, check <link src="installation.md">Foliant installation page</link> for instructions.
+To build PDF with Pandoc natively, first you will need to install Pandoc itself and TexLive, check <link src="!path src/installation.md">Foliant installation page</link> for instructions.
 
 Then, in the project directory, run
 
@@ -153,7 +153,7 @@ Result: Hello_Foliant-2020-05-25.pdf
 
 Your standalone pdf documentation is ready! It should look something like this
 
-![Basic Foliant project built with Pandoc](images/basic-pdf.png)
+![Basic Foliant project built with Pandoc](../images/basic-pdf.png)
 
 
 ## Edit Content
@@ -229,9 +229,9 @@ Result: Hello_Foliant-2020-05-25.pdf
 
 And see the new page appear on the site and in the pdf document
 
-![New page on the site](images/basic-mkdocs-hello.png)
+![New page on the site](../images/basic-mkdocs-hello.png)
 
-![New page in the pdf document](images/basic-pdf-hello.png)
+![New page in the pdf document](../images/basic-pdf-hello.png)
 
 ## Use Preprocessors
 
@@ -290,11 +290,11 @@ Blockdiag preprocessor extends the Markdown syntax of your documentation by addi
 
 Rebuild the site with `foliant make site` or `docker-compose run --rm foliant make site` and open it in the browser
 
-![Sequence diagram drawn with seqdiag on the site](images/basic-mkdocs-seqdiag.png)
+![Sequence diagram drawn with seqdiag on the site](../images/basic-mkdocs-seqdiag.png)
 
 Rebuild the pdf and see that the diagram is there too
 
-![Sequence diagram drawn with seqdiag in the pdf](images/basic-pdf-seqdiag.png)
+![Sequence diagram drawn with seqdiag in the pdf](../images/basic-pdf-seqdiag.png)
 
 Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever-popular Comic Sans font, but you can pick any font that’s available in `.ttf` format.
 
@@ -310,9 +310,9 @@ preprocessors:
 
 After a rebuild, the diagram on the site and in the pdf should look like this
 
-![Sequence diagram with Comic Sans in labels, site](images/basic-mkdocs-seqdiag-comic.png)
+![Sequence diagram with Comic Sans in labels, site](../images/basic-mkdocs-seqdiag-comic.png)
 
-![Sequence diagram with Comic Sans in labels, pdf](images/basic-pdf-seqdiag-comic.png)
+![Sequence diagram with Comic Sans in labels, pdf](../images/basic-pdf-seqdiag-comic.png)
 
 There are many more params you can define for your diagrams. You can override global params for particular diagrams in their tags. And by combining this preprocessor with <link src="!path src/preprocessors/flags.md" title="Flags">Flags</link> you can even set different params for different backends, for example, build vector diagrams for pdf output and bitmap for site
 

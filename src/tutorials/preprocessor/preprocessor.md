@@ -117,7 +117,7 @@ Note the order of the bullet points: we start with the last line of the code abo
 And that's it! We have all the code required for the preprocessor to work. All is left to do is to make our package installable and test its work.
 
 
-<if backend="mkdocs">
+<if backends="mkdocs">
 ??? example "Complete source of the preprocessor module"
     ```python
     '''
