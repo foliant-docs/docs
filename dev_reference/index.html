@@ -1,0 +1,1864 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/octopus-black-32.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Developer’s Reference - Foliant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,400i,700%7CPT+Mono&display=fallback">
+        <style>body,input{font-family:"PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"PT Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-120535275-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  <link rel="alternate" type="application/rss+xml" title="History of Releases" href="https://foliant-docs.github.io/docs/rss.xml">
+
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="rgba(0,-0,-0,-0.87)" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#developers-reference" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Foliant" aria-label="Foliant" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../assets/images/octopus-white.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Foliant
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Developer’s Reference
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/foliant
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Foliant" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../assets/images/octopus-white.svg" width="48" height="48">
+      
+    </a>
+    Foliant
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/foliant-docs/foliant" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    foliant-docs/foliant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome to Foliant!" class="md-nav__link">
+      Welcome to Foliant!
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/first_project/" title="Your First Foliant Project" class="md-nav__link">
+      Your First Foliant Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/docker/" title="Running Foliant in Docker" class="md-nav__link">
+      Running Foliant in Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/api/" title="Documenting API with Foliant" class="md-nav__link">
+      Documenting API with Foliant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Documenting Databases with Foliant
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Documenting Databases with Foliant
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/db/db/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/db/dbml/" title="Documenting DBML schema" class="md-nav__link">
+      Documenting DBML schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/db/oracle/" title="Documenting Oracle Database" class="md-nav__link">
+      Documenting Oracle Database
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/db/pgsql/" title="Documenting PostgreSQL Database" class="md-nav__link">
+      Documenting PostgreSQL Database
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Creating a Preprocessor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Creating a Preprocessor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/preprocessor/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/preprocessor/generator/" title="Creating the Gibberish Generator" class="md-nav__link">
+      Creating the Gibberish Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/preprocessor/preprocessor/" title="Formalizing the Preprocessor" class="md-nav__link">
+      Formalizing the Preprocessor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/preprocessor/install/" title="Installing and Testing" class="md-nav__link">
+      Installing and Testing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../architecture/" title="Architecture And Basic Design Concepts" class="md-nav__link">
+      Architecture And Basic Design Concepts
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../config/" title="Project Configuration" class="md-nav__link">
+      Project Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../debugging_builds/" title="Debugging Builds" class="md-nav__link">
+      Debugging Builds
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../meta/" title="Metadata" class="md-nav__link">
+      Metadata
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Developer’s Reference
+      </label>
+    
+    <a href="./" title="Developer’s Reference" class="md-nav__link md-nav__link--active">
+      Developer’s Reference
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-modules" class="md-nav__link">
+    Core Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-make-method-arguments" class="md-nav__link">
+    The make() Method Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-classes" class="md-nav__link">
+    Base Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basebackend-attributes" class="md-nav__link">
+    The BaseBackend() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-basepreprocessor-attributes" class="md-nav__link">
+    The BasePreprocessor() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basecli-attributes" class="md-nav__link">
+    BaseCli() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseconfig-attributes" class="md-nav__link">
+    BaseConfig() Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Backends
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Backends
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/aglio/" title="Aglio" class="md-nav__link">
+      Aglio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/confluence/" title="Confluence" class="md-nav__link">
+      Confluence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/mdtopdf/" title="MdToPdf" class="md-nav__link">
+      MdToPdf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/mkdocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/pandoc/" title="Pandoc" class="md-nav__link">
+      Pandoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backends/slate/" title="Slate" class="md-nav__link">
+      Slate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Preprocessors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Preprocessors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/general_notes/" title="General Notes" class="md-nav__link">
+      General Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/admonitions/" title="Admonitions" class="md-nav__link">
+      Admonitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/anchors/" title="Anchors" class="md-nav__link">
+      Anchors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/apireferences/" title="APIReferences" class="md-nav__link">
+      APIReferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/archeme/" title="Archeme" class="md-nav__link">
+      Archeme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/argdown/" title="Argdown" class="md-nav__link">
+      Argdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/badges/" title="Badges" class="md-nav__link">
+      Badges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/bindfigma/" title="BindFigma" class="md-nav__link">
+      BindFigma
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/bindsympli/" title="BindSympli" class="md-nav__link">
+      BindSympli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/blockdiag/" title="Blockdiag" class="md-nav__link">
+      Blockdiag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/bpmn/" title="BPMN" class="md-nav__link">
+      BPMN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/confluence/" title="Confluence" class="md-nav__link">
+      Confluence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/csvtables/" title="CSVTables" class="md-nav__link">
+      CSVTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/customids/" title="CustomIDs" class="md-nav__link">
+      CustomIDs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/dbmldoc/" title="DBMLDoc" class="md-nav__link">
+      DBMLDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/dbdoc/" title="DBDoc" class="md-nav__link">
+      DBDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/elasticsearch/" title="Elasticsearch" class="md-nav__link">
+      Elasticsearch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/epsconvert/" title="Epsconvert" class="md-nav__link">
+      Epsconvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/escapecode/" title="EscapeCode and UnescapeCode" class="md-nav__link">
+      EscapeCode and UnescapeCode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/flags/" title="Flags" class="md-nav__link">
+      Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/flatten/" title="Flatten" class="md-nav__link">
+      Flatten
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/graphviz/" title="Graphviz" class="md-nav__link">
+      Graphviz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/history/" title="History" class="md-nav__link">
+      History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/imagemagick/" title="ImageMagick" class="md-nav__link">
+      ImageMagick
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/imgcaptions/" title="ImgCaptions" class="md-nav__link">
+      ImgCaptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/imgconvert/" title="ImgConvert" class="md-nav__link">
+      ImgConvert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/includes/" title="Includes" class="md-nav__link">
+      Includes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/macros/" title="Macros" class="md-nav__link">
+      Macros
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/mermaid/" title="Mermaid" class="md-nav__link">
+      Mermaid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/metagraph/" title="MetaGraph" class="md-nav__link">
+      MetaGraph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/multilinetables/" title="MultilineTables" class="md-nav__link">
+      MultilineTables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/pgsqldoc/" title="Pgsqldoc" class="md-nav__link">
+      Pgsqldoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/plantuml/" title="Plantuml" class="md-nav__link">
+      Plantuml
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/ramldoc/" title="RAMLDoc" class="md-nav__link">
+      RAMLDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/reindexer/" title="Reindexer" class="md-nav__link">
+      Reindexer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/removeexcess/" title="RemoveExcess" class="md-nav__link">
+      RemoveExcess
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/replace/" title="Replace" class="md-nav__link">
+      Replace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/repolink/" title="RepoLink" class="md-nav__link">
+      RepoLink
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/runcommands/" title="RunCommands" class="md-nav__link">
+      RunCommands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/showcommits/" title="ShowCommits" class="md-nav__link">
+      ShowCommits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/superlinks/" title="SuperLinks" class="md-nav__link">
+      SuperLinks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/swaggerdoc/" title="SwaggerDoc" class="md-nav__link">
+      SwaggerDoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/templateparser/" title="TemplateParser" class="md-nav__link">
+      TemplateParser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preprocessors/testrail/" title="Testrail" class="md-nav__link">
+      Testrail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      CLI Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        CLI Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/bump/" title="Bump" class="md-nav__link">
+      Bump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/gupload/" title="Gupload" class="md-nav__link">
+      Gupload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/meta_generate/" title="Meta Generate" class="md-nav__link">
+      Meta Generate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/init/" title="Init" class="md-nav__link">
+      Init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-5" type="checkbox" id="nav-12-5">
+    
+    <label class="md-nav__link" for="nav-12-5">
+      Init Templates
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-12-5">
+        Init Templates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/init/templates/preprocessor/" title="Preprocessor" class="md-nav__link">
+      Preprocessor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/src/" title="Src" class="md-nav__link">
+      Src
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/subset/" title="Subset" class="md-nav__link">
+      Subset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Config Extensions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Config Extensions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/alt_structure/" title="AltStructure" class="md-nav__link">
+      AltStructure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/downloadfile/" title="DownloadFile" class="md-nav__link">
+      DownloadFile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/from/" title="MultiProject" class="md-nav__link">
+      MultiProject
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/slugs/" title="Slugs" class="md-nav__link">
+      Slugs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/yaml_include/" title="YAMLInclude" class="md-nav__link">
+      YAMLInclude
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../releases/" title="History of Releases" class="md-nav__link">
+      History of Releases
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-modules" class="md-nav__link">
+    Core Modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-make-method-arguments" class="md-nav__link">
+    The make() Method Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-classes" class="md-nav__link">
+    Base Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basebackend-attributes" class="md-nav__link">
+    The BaseBackend() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-basepreprocessor-attributes" class="md-nav__link">
+    The BasePreprocessor() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basecli-attributes" class="md-nav__link">
+    BaseCli() Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseconfig-attributes" class="md-nav__link">
+    BaseConfig() Attributes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/foliant-docs/docs/edit/master/src/dev_reference.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="developers-reference">Developer’s Reference<a class="headerlink" href="#developers-reference" title="Permanent link">&para;</a></h1>
+<p>The power of Foliant is in its extensions. Foliant's ecosystem consists of many beautiful tools for technical writers, but there is still a lot to be done. You are welcome to contribute to Foliant and its extensions.</p>
+<p>This article contains the reference of the main classes and functions available in Foliant Core. As an extension developer, you will be using them to write your own preprocessors, backends, CLI- and config-extensions.</p>
+<p>If you are new to extending Foliant, we suggest you to take a look at the <a href="tutorials/preprocessor/intro">Creating a Preprocessor</a> tutorial first.</p>
+<p>Official Foliant extensions live in Git repositories inside the <a href="https://github.com/foliant-docs/">foliant-docs</a> GitHub group. Check out their source code to find out different approaches to solving techwriters' problems.</p>
+<p>The repo of Foliant Core is called <a href="https://github.com/foliant-docs/foliant/">foliant</a>. The names of Foliant extensions' repositories start with the <code>foliantcontrib.</code> prefix. The repo of this documentation project is called <a href="https://github.com/foliant-docs/docs/">docs</a>.</p>
+<h2 id="core-modules">Core Modules<a class="headerlink" href="#core-modules" title="Permanent link">&para;</a></h2>
+<p>Core modules live in the <a href="https://github.com/foliant-docs/foliant">foliant</a> GitHub repository. Foliant Core itself does not build documentation projects, this job is delegated to extensions. But it defines the base classes for all types of extensions. Each base class offers useful attributes and methods which are described later in this article. For more info on how Foliant works check the <a href="../architecture/">Architecture And Basic Design Concepts</a> article.</p>
+<p>This section lists all modules in the Foliant Core package.</p>
+<ul>
+<li><code>foliant</code>:<ul>
+<li><code>backends</code>:<ul>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/backends/base.py"><code>base</code></a> — defines the base class for all backends;</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/backends/pre.py"><code>pre</code></a> — simplest backend that returns Markdown content processed by specified preprocessors as a build result;</li>
+</ul>
+</li>
+<li><code>preprocessors</code>:<ul>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/base.py"><code>base</code></a> — defines the base class for all preprocessors;</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/_unescape.py"><code>_unescape</code></a> — simple preprocessor that escapes pseudo-XML tags (which are normally recognized by other preprocessors as control sequences) in code examples. If you want an opening tag to be ignored by any preprocessor, precede this tag with the <code>&lt;</code> character. The <code>_unescape</code> preprocessor removes these characters before build. Instead of the <code>_unescape</code> preprocessor, you may use more flexible <a href="https://foliant-docs.github.io/docs/preprocessors/escapecode/">EscapeCode and UnescapeCode</a> preprocessors;</li>
+</ul>
+</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/__init__.py"><code>cli</code></a> — defines the Foliant’s root class <code>Foliant()</code> and the <code>entry_point()</code> method that is used as a starting point for calling Foliant. Nested modules:<ul>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/base.py"><code>base</code></a> — defines the base class for all CLI extensions;</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/make.py"><code>make</code></a> — provides the main Foliant’s <code>make</code> command;</li>
+</ul>
+</li>
+<li><code>config</code>:<ul>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/config/base.py"><code>base</code></a> — defines the base class for all config extensions;</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/config/include.py"><code>include</code></a> — resolves the <code>!include</code> YAML tag that allows to include the content of additional YAML-files in Foliant config. More info in the <a href="../config/#include">Project Configuration</a> article;</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/config/path.py"><code>path</code></a> — resolves the <code>!path</code>, <code>!project_path</code> and <code>!rep_path</code> YAML tags. These tags are useful for specifying file paths in Foliant config or tag attributes. More info in the <a href="../config/#path-project_path-rel_path">Project Configuration</a> article;</li>
+</ul>
+</li>
+<li><a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/utils.py"><code>utils</code></a> — defines basic methods that may be used in different types of extensions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-make-method-arguments">The <code>make()</code> Method Arguments<a class="headerlink" href="#the-make-method-arguments" title="Permanent link">&para;</a></h3>
+<p>The <code>make()</code> method is defined in the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/make.py"><code>foliant.cli.make</code></a> module. This method is called when the user runs <code>foliant make ...</code> command. For more info on how <code>make</code> command works check the <a href="../architecture/#project-build-process">Project Build Process</a> article.</p>
+<p>The <code>make()</code> method accepts a number of arguments; some of them are then passed to the backends and preprocessors in the build <em>context</em>:</p>
+<ul>
+<li><code>target</code> (string) — required resulting target of the current build;</li>
+<li><code>backend</code> (string, defaults to an empty string) — the name of the backend that is used for the current build;</li>
+<li><code>project_path</code> (path, defaults to the current directory path) — the path of top-level, “root” directory of the current Foliant project;</li>
+<li><code>config_file_name</code> (string, defaults to <code>foliant.yml</code>) — the file name of the Foliant project’s config;</li>
+<li><code>quiet</code> (boolean, default to <code>False</code>) — a flag that prohibits writing to <code>STDOUT</code>;</li>
+<li><code>keep_tmp</code> (boolean, defaults to <code>False</code>) — a flag that tells Foliant and its extensions to preserve the temporary working directory, which is used during the build;</li>
+<li><code>debug</code> (boolean, defaults to <code>False</code>) — a flag that tells Foliant and its extensions to log events of <code>info</code> and <code>debug</code> levels in addition to messages of <code>warning</code>, <code>error</code>, and <code>critical</code> levels.</li>
+</ul>
+<h2 id="base-classes">Base Classes<a class="headerlink" href="#base-classes" title="Permanent link">&para;</a></h2>
+<p>Foliant Core provides 4 base classes—one per each type of extension.</p>
+<ul>
+<li><code>BaseBackend()</code> is defined in the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/backends/base.py"><code>foliant.backends.base</code></a> module. It is the base class for all backends. Each newly developed backend should:<ul>
+<li>be a module or a package <code>foliant.backends.&lt;your_backend_name&gt;</code>;</li>
+<li>import the class <code>BaseBackend()</code> from the <code>foliant.backends.base</code> module;</li>
+<li>define its own class called <code>Backend()</code> that is inherited from <code>BaseBackend()</code>;</li>
+<li>define the method called <code>make()</code> within the <code>Backend</code> class.</li>
+</ul>
+</li>
+<li><code>BasePreprocessor()</code> is defined in the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/base.py"><code>foliant.preprocessors.base</code></a> module. It is the base class for all preprocessors. Each newly developed preprocessor should:<ul>
+<li>be a module or a package <code>foliant.preprocessors.&lt;your_preprocessor_name&gt;</code>;</li>
+<li>import the class <code>BasePreprocessor()</code> from the <code>foliant.preprocessors.base</code> module;</li>
+<li>define its own class called <code>Preprocessor()</code> that is inherited from <code>BasePreprocessor()</code>;</li>
+<li>define the method called <code>apply()</code> within the class <code>Preprocessor()</code>.</li>
+</ul>
+</li>
+<li><code>BaseCli()</code> is defined in the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/cli/base.py"><code>foliant.cli.base</code></a> module. It is the base class for all CLI extensions. Each newly developed CLI extension should:<ul>
+<li>be a module or a package <code>foliant.cli.&lt;your_cli_extension_name&gt;</code>;</li>
+<li>import the class <code>BaseCli()</code> from the <code>foliant.cli.base</code> module;</li>
+<li>define its own class called <code>Cli()</code> that is inherited from <code>BaseCli()</code>.</li>
+</ul>
+</li>
+<li><code>BaseParser()</code> is defined in the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/config/base.py"><code>foliant.config.base</code></a> module. It is the base class for all config extensions. Each newly developed config extension should:<ul>
+<li>be a module or a package <code>foliant.config.&lt;your_config_extension_name&gt;</code>;</li>
+<li>import the class <code>BaseParser()</code> from the <code>foliant.config.base</code> module;</li>
+<li>define its own class called <code>Parser()</code> that is inherited from <code>BaseParser()</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-basebackend-attributes">The <code>BaseBackend()</code> Attributes<a class="headerlink" href="#the-basebackend-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Class attributes:<ul>
+<li><code>targets</code> (tuple of strings) — names of the targets that the backend can build;</li>
+<li><code>required_preprocessors_before</code> (tuple of strings) — names of the preprocessors that should be applied before all other preprocessors when this backend is used;</li>
+<li><code>required_preprocessors_after</code> (tuple of strings) — names of preprocessors that should be applied after all other preprocessors when this backend is used;</li>
+</ul>
+</li>
+<li>instance variables:<ul>
+<li><code>context</code> — a dictionary that contains the build context:<ul>
+<li><code>project_path</code> (path) — path to the currently built Foliant project;</li>
+<li><code>config</code> (dictionary) — full config of the currently built Foliant project;</li>
+<li><code>target</code> (string) — the name of the resulting target;</li>
+<li><code>backend</code> (string) — the name of the backend that is used in the current build;</li>
+</ul>
+</li>
+<li><code>config</code> — full config of the currently built Foliant project. The same as <code>context['config']</code>;</li>
+<li><code>project_path</code> — path to the currently built Foliant project. The same as <code>context['project_path']</code>;</li>
+<li><code>working_dir</code> (path) — the path to the temporary working directory that is used during the build. It is defined as <code>self.project_path / self.config['tmp_dir']</code>;</li>
+<li><code>logger</code> — the <a href="https://docs.python.org/3/library/logging.html#logging.Logger">Logger</a> instance of the current build;</li>
+<li><code>quiet</code> (boolean) — if <code>True</code>, the backend should not write anything to stdout;</li>
+<li><code>debug</code> (boolean) — if <code>True</code>, the backend should log the messages of <code>info</code> and <code>debug</code> levels.</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-basepreprocessor-attributes">The <code>BasePreprocessor()</code> Attributes<a class="headerlink" href="#the-basepreprocessor-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Class attributes:<ul>
+<li><code>defaults</code> (dictionary) — default values of options that may be overridden in config;</li>
+<li><code>tags</code> (tuple of strings) — names of pseudo-XML tags that are recognized by the preprocessor, without <code>&lt;</code> and <code>&gt;</code> characters;</li>
+</ul>
+</li>
+<li>instance variables:<ul>
+<li><code>context</code> — a dictionary that contains the build context:<ul>
+<li><code>project_path</code> (path) — path to the currently built Foliant project;</li>
+<li><code>config</code> (dictionary) — full config of the currently built Foliant project;</li>
+<li><code>target</code> (string) — the name of the resulting target;</li>
+<li><code>backend</code> (string) — the name of the backend that is used in the current build;</li>
+</ul>
+</li>
+<li><code>config</code> — full config of the currently built Foliant project. The same as <code>self.context['config']</code>;</li>
+<li><code>project_path</code> — path to the currently built Foliant project. The same as <code>self.context['project_path']</code>;</li>
+<li><code>working_dir</code> (path) — the path to the temporary working directory that is used during the build. It is defined as <code>self.project_path / self.config['tmp_dir']</code>;</li>
+<li><code>logger</code> — the <a href="https://docs.python.org/3/library/logging.html#logging.Logger">Logger</a> instance of the current build;</li>
+<li><code>quiet</code> (boolean) — if <code>True</code>, the backend should not write anything to stdout;</li>
+<li><code>debug</code> (boolean) — if <code>True</code>, the backend should log the messages of <code>info</code> and <code>debug</code> levels.</li>
+<li><code>options</code> (dictionary) — the preprocessor’s options. Is defined as <code>{**self.defaults, **options}</code>, where <code>options</code> is the data that is read from the preprocessor's config in foliant.yml;</li>
+<li><code>pattern</code> — the regular expression <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/base.py#L53">pattern</a> that is used to get components of a pseudo-XML tag in an easy way. Defined if <code>self.tags</code> is not empty. Provides the RegEx groups with the following names:<ul>
+<li><code>tag</code> — captured tag name;</li>
+<li><code>options</code> — captured tag attributes (options) as a string; this string may be converted into a dictionary by using the <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/base.py#L17"><code>self.get_options()</code> method</a>, which is provided by the base class;</li>
+<li><code>body</code> — captured tag body, i.e. the content between the opening and closing tags.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="basecli-attributes"><code>BaseCli()</code> Attributes<a class="headerlink" href="#basecli-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Instance attributes:<ul>
+<li><code>logger</code> — the <a href="https://docs.python.org/3/library/logging.html#logging.Logger">Logger</a> instance of the current build.</li>
+</ul>
+</li>
+</ul>
+<h3 id="baseconfig-attributes"><code>BaseConfig()</code> Attributes<a class="headerlink" href="#baseconfig-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Instance attributes:<ul>
+<li><code>project_path</code> (path) — the path to the currently built Foliant project;</li>
+<li><code>config_path</code> (path) — the path to the config file of the currently built Foliant project;</li>
+<li><code>logger</code> — the <a href="https://docs.python.org/3/library/logging.html#logging.Logger">Logger</a> instance of the current build;</li>
+<li><code>quiet</code> (boolean) — if <code>True</code>, the config extension should not write anything to stdout.</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../meta/" title="Metadata" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Metadata
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../backends/aglio/" title="Aglio" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Aglio
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/foliant-docs/foliant" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="/docs/assets/foliant-docs.pdf" target="_blank" rel="noopener" title="file-pdf-o" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.2.2",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

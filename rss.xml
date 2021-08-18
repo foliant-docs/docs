@@ -7,6 +7,15 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.dbdoc 0.1.8</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbdoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbdoc.git#17a99206f807ff4a6956e2ae9f8125da</guid>
+            <pubDate>Tue, 17 Aug 2021 12:12:04 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>DBMS python connectors are only imported on use.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.argdown 0.1.1</title>
             <link>https://github.com/foliant-docs/foliantcontrib.argdown.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.argdown.git#f67ad3daefb50cf5b1a514bf36fc28e5</guid>
