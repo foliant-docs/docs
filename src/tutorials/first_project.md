@@ -2,7 +2,7 @@
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
-> It is recommended to run Foliant through Docker to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
+> It is recommended to <link src="tutorials/docker.md">run Foliant through Docker</link> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
 
 
 ## Create New Project

@@ -12,7 +12,7 @@ Fortunately, Foliant will not ask you to diagnose problems with the car engine w
 
 ## Notes on Docker Use
 
-In practice, Foliant is more commonly <link src="TODO!">used with Docker</link>.
+In practice, Foliant is more commonly <link src="tutorials/docker.md">used with Docker</link>.
 
 Here's a tip for debugging Foliant projects with docker.
 
