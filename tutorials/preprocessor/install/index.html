@@ -1486,8 +1486,8 @@
 
 <span class="m">2</span> directories, <span class="m">1</span> file
 </code></pre></div>
-<p>To make it an installable Python package we need to add a <code>setup.py</code> file to the root.</p>
-<p>Here's an <a href="https://docs.python.org/3/distutils/setupscript.html">article on creating setup files</a> from the official docs. Usually we just take one of the setup.py's from an existing preprocessor as a template or use this official Foliant <a href="https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/setup.py">snippet</a>.</p>
+<p>To make it an installable Python package we need to add a <code>setup.py</code> file to the root folder.</p>
+<p>Here's an <a href="https://docs.python.org/3/distutils/setupscript.html">article on creating setup files</a> from the official docs. Usually, we just take one of the <code>setup.py</code>s from an existing preprocessor as a template or use this official Foliant <a href="https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/setup.py">snippet</a>.</p>
 <p>Here's what your <code>setup.py</code> may look like.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
@@ -1529,7 +1529,7 @@
     <span class="p">]</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Lines marked with asteriks you would probably want to change to suit your preprocessor. Also note that we refered to the contents of the <code>README.md</code> as a full description of the package. It's a good time to add a readme for your preprocessor. Explain what your preprocessor does and what options it has. You may use one of the official preprocessors for possible readme structure.</p>
+<p>Lines marked with asterisks you would probably want to change to suit your preprocessor. Also, note that we referred to the contents of the <code>README.md</code> as the full description of the package. It's a good time to add a readme for your preprocessor. Explain what your preprocessor does and what options it has. You may use one of the official preprocessors for possible readme structure.</p>
 <p>Now the folder structure should look like this</p>
 <div class="highlight"><pre><span></span><code>$ tree
 .
@@ -1541,7 +1541,7 @@
 
 <span class="m">2</span> directories, <span class="m">3</span> files
 </code></pre></div>
-<p>Time to test if the preprocessor actually works. First install it by running this command inside the preprocessor folder.</p>
+<p>Time to test if the preprocessor actually works. First, install it by running this command inside the preprocessor folder.</p>
 <div class="highlight"><pre><span></span><code>$ pip3 install .
 </code></pre></div>
 <p>Create an empty Foliant project using the <code>init</code> command:</p>
@@ -1563,7 +1563,7 @@ $ tree  <span class="c1"># inspecting the project file structure</span>
 
 <span class="m">1</span> directory, <span class="m">6</span> files
 </code></pre></div>
-<p>First let's add our preprocessor to the <code>foliant.yml</code>.</p>
+<p>First, let's add our preprocessor to the <code>foliant.yml</code>.</p>
 <div class="highlight"><pre><span></span><code>title: Gibberish Test
 
 <span class="gi">+ preprocessors:</span>
@@ -1634,12 +1634,12 @@ Here are just two sentences of gibberish:
 
 Wnuhocx uqny ns. Iu ieuiaea iogyjyfy kl eyyeex agayii aioaac yacjume.
 </code></pre></div>
-<p>Everything works as expected. Now you can add a <code>LICENSE</code> and a <code>changelog.md</code> to your preprocessor folder and publish it in github and pypi so others could use your wonderful creation!</p>
+<p>Everything works as expected. Now you can add a <code>LICENSE</code> and a <code>changelog.md</code> to your preprocessor folder and publish it in GitHub and pypi, so that others could use your wonderful creation too!</p>
 <p>The repository with full code of Gibberish preprocessor is available <a href="https://github.com/foliant-docs/preprocessor_tutorial">here</a>.</p>
 <h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
-<p>Now you know the basics of creating preprocessors for Foliant. But there's a lot more to learn. Study the code of different preprocessors created by our team to find out different approaches to solving techwriters' problems.</p>
-<p>When you get comfortable creating simple preprocessors you may find the <a href="https://github.com/foliant-docs/foliantcontrib.utils"><code>utils</code> package</a> useful. It contains different tools which perform common tasks in preprocessors like <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/chapters.md">dealing with <code>chapters</code> section</a> in foliant.yml or efficiently <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/combined_options.md">combining options</a> from foliant.yml and XML tags. There's also a powerful <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/preprocessor_ext.md"><code>BasePreprocessorExt</code> class</a> which encapsulates some boilerplate code for your preprocessors and offers advanced tools for warning output and more.</p>
-<p>That's all for now. We wish you luck in extending Foliant! Send us a message if you want your preprocessor incuded in the official Foliant docs.</p>
+<p>Now you know the basics of creating preprocessors for Foliant. But there's a lot more to learn! Study the code of different preprocessors created by our team to find out different approaches to solving techwriters' problems. Refer to the <a href="../../../dev_reference/">Developer’s Reference</a> for all helper functions, classes and their attributes available for building Foliant extensions.</p>
+<p>When you get comfortable creating simple preprocessors you may find the <a href="https://github.com/foliant-docs/foliantcontrib.utils"><code>utils</code> package</a> useful. It contains different tools which perform common tasks in preprocessors like <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/chapters.md">dealing with the <code>chapters</code> section</a> in foliant.yml or efficiently <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/combined_options.md">combining options</a> from foliant.yml and XML tags. There's also a powerful <a href="https://github.com/foliant-docs/foliantcontrib.utils/blob/master/docs/preprocessor_ext.md"><code>BasePreprocessorExt</code> class</a> which encapsulates some boilerplate code for your preprocessors and offers advanced tools for warnings output and more.</p>
+<p>That's all for now. We wish you luck in extending Foliant! Send us a message if you want your preprocessor included in the official Foliant docs.</p>
 <p>Previous: <a href="../preprocessor/">Formalizing the Preprocessor</a></p>
                 
                   

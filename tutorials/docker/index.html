@@ -1592,7 +1592,7 @@
 <p>Download and install Docker from <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">this page</a>.</p>
 <h2 id="creating-a-test-project">Creating a Test Project<a class="headerlink" href="#creating-a-test-project" title="Permanent link">&para;</a></h2>
 <p>Now that we’ve got Docker, we can create our test project.</p>
-<p>If you have Foliant <a href="installation.md">installed</a> on your system, run the <code>init</code> command</p>
+<p>If you have Foliant <a href="../../installation/">installed</a> on your system, run the <code>init</code> command</p>
 <div class="highlight"><pre><span></span><code>$ foliant init
 </code></pre></div>
 <p>Type the name of the project and <code>cd</code> into the freshly created folder.</p>
@@ -1607,7 +1607,7 @@
 <div class="highlight"><pre><span></span><code>$ docker-compose run --rm foliant make pdf
 No backend available <span class="k">for</span> pdf.
 </code></pre></div>
-<p>If you are already familiar with Foliant you know that to build PDFs you need to install <a href="https://pandoc.org/">Pandoc</a> with TeXLive and <a href="backends/pandoc.md">Pandoc backend</a>. So how do we install that in a Docker container?</p>
+<p>If you are already familiar with Foliant you know that to build PDFs you need to install <a href="https://pandoc.org/">Pandoc</a> with TeXLive and <a href="../../backends/pandoc/">Pandoc backend</a>. So how do we install that in a Docker container?</p>
 <p>In your project root you have a <code>Dockerfile</code>. This file describes the steps required to set up your virtual container.</p>
 <p>If you open the <code>Dockerfile</code>, you will see that apart from comments it contains three lines:</p>
 <div class="highlight"><pre><span></span><code>FROM foliant/foliant

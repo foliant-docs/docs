@@ -1493,8 +1493,8 @@
 </li>
 <li>The <code>Preprocessor</code> class must define at least the <code>apply</code> method.</li>
 </ol>
-<p>Let's take our <code>gibberish</code> module which we've created in the previous chapter and make it work with Foliant. We will be adding code into the same module.</p>
-<p>According the the requirements above we first need to create a proper directory structure. It should look like this:</p>
+<p>Let's take our <code>gibberish</code> module which we've created in the previous chapter and make it work with Foliant. We will be adding the code into the same module.</p>
+<p>According to the requirements above, we first need to create a proper directory structure. It should look like this:</p>
 <div class="highlight"><pre><span></span><code>$ tree
 .
 └── foliant
@@ -1504,8 +1504,8 @@
 <span class="m">2</span> directories, <span class="m">1</span> file
 </code></pre></div>
 <p>This is the first requirement satisfied. Now to the rest of them.</p>
-<p>We sould define a <code>Preprocessor</code> class and ideally subclass it from <code>BasePreprocessor</code>.</p>
-<p>Usually we start out a new preprocessor from a template containing the boilerplate code. You can find the full template <a href="https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/foliant/cli/init/templates/preprocessor/foliant/preprocessors/%24slug.py">here</a>.</p>
+<p>We should define a <code>Preprocessor</code> class and ideally subclass it from <code>BasePreprocessor</code>.</p>
+<p>Usually, we start out a new preprocessor from a template containing the boilerplate code. You can find the full template <a href="https://github.com/foliant-docs/foliantcontrib.templates.preprocessor/blob/develop/foliant/cli/init/templates/preprocessor/foliant/preprocessors/%24slug.py">here</a>.</p>
 <p>But to understand the boilerplate code you have to write it at least once, so let's start from scratch.</p>
 <p>We start by defining the <code>Preprocessor</code> class.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">foliant.preprocessors.base</span> <span class="kn">import</span> <span class="n">BasePreprocessor</span>
@@ -1514,7 +1514,7 @@
 <span class="k">class</span> <span class="nc">Preprocessor</span><span class="p">(</span><span class="n">BasePreprocessor</span><span class="p">):</span>
 </code></pre></div>
 <p>The <code>BasePreprocessor</code> parent class offers some useful attributes and methods, go ahead and take a look at its <a href="https://github.com/foliant-docs/foliant/blob/develop/foliant/preprocessors/base.py">source code</a>.</p>
-<p>Let's start writing the class with adding the <code>__init__</code> method and several class attributes.</p>
+<p>Let's start writing the class by adding the <code>__init__</code> method and several class attributes.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Preprocessor</span><span class="p">(</span><span class="n">BasePreprocessor</span><span class="p">):</span>
     <span class="n">tags</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;gibberish&#39;</span><span class="p">,</span> <span class="p">)</span>  <span class="c1"># [1]</span>
     <span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;default_size&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>  <span class="c1"># [2]</span>
@@ -1527,13 +1527,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Preprocessor inited: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># [5]</span>
 </code></pre></div>
 <ol>
-<li>First we define the tags which will be captured in the Markdown source. As we've decided in the beginning, we want to process tags which look like <code>&lt;gibberish&gt;&lt;/gibberish&gt;</code>, so our tag name is <code>gibberish</code>. We put that into the <code>tags</code> class attribute which must be a sequence. <code>tuple</code> or <code>list</code> are equally good choices.</li>
-<li>We will allow user to define the default size of the generated text in the preprocessor options. Here we provide the default value of <code>10</code> to this option, in case user haven't supplied the option.</li>
-<li>Running the parent's <code>__init__</code> method first, it will populate our class with useful attributes.</li>
-<li>Using the <code>logger</code> attribute to set up a logger. This line embeds our preprocessor into the main log file under a name of <code>gibberish</code>.</li>
+<li>First, we define the tags which will be captured in the Markdown source. As we've decided in the beginning, we want to process tags that look like <code>&lt;gibberish&gt;&lt;/gibberish&gt;</code>, so our tag name is <code>gibberish</code>. We put that into the <code>tags</code> class attribute which must be a sequence. <code>tuple</code> or <code>list</code> are equally good choices.</li>
+<li>We will allow the user to define the default size of the generated text in the preprocessor options. Here we provide the default value of <code>10</code> to this option, in case the user hasn't supplied it.</li>
+<li>Running the parent's <code>__init__</code> method first. It will populate our class with useful attributes.</li>
+<li>Using the <code>logger</code> attribute to set up a logger. This line embeds our preprocessor into the main log file under the name of <code>gibberish</code>.</li>
 <li>Posting our first log message, which will contain all preprocessor's attributes for inspection.</li>
 </ol>
-<p>Now let's write the <code>apply</code> method. As mentioned above, this method must be present in all preprocessors. This is the method which Foliant will call to apply the preprocessor. Usually it subsequently opens each file from the temporary directory and calls the main processing method to transform their content in a desired way. It's a good practice to start and end this method with log messages.</p>
+<p>Now let's write the <code>apply</code> method. As mentioned above, this method must be present in all preprocessors. This is the method that Foliant will call to apply the preprocessor. Usually, it subsequently opens each file from the temporary directory and calls the main processing method to transform their content in the desired way. It's a good practice to start and end this method with log messages.</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Applying preprocessor Gibberish&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">markdown_file_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">working_dir</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.md&#39;</span><span class="p">):</span>  <span class="c1"># [1]</span>
@@ -1550,9 +1550,9 @@
 <ol>
 <li>Scan the temporary directory (the <code>working_dir</code> attribute, which is a <code>pathlib.Path</code> object, created for us by the parent class) and find all Markdown files in it.</li>
 <li>Get the source content of each Markdown file.</li>
-<li>Process the content with <code>_process_tags</code> method which we are about to write next.</li>
-<li>This step is important. We check if the main processing method actually returned any content. If the string is empty it usually means that something went wrong. Foliant won't interrupt the build process if one of the preprocessors failes to run. We don't want to write empty or broken content into Markdown files, because other preprocessors still may run after ours even if ours failed.</li>
-<li>If everything is OK and our preprocessing function returned some content, we overwrite the original Markdown file with it.</li>
+<li>Process the content with the <code>_process_tags</code> method which we are about to write next.</li>
+<li>This step is important. We check if the main processing method actually returned any content. If the string is empty, it usually means that something went wrong. Foliant won't interrupt the build process if one of the preprocessors fails to run. We don't want to write empty or broken content into Markdown files, because other preprocessors still may run after ours even if ours failed.</li>
+<li>If everything is OK, and our preprocessing function returned some content, we overwrite the original Markdown file with it.</li>
 </ol>
 <p>The <code>apply</code> method defers the actual preprocessing work to the <code>_process_tags</code> method, so now let's write it.</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">_process_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
@@ -1567,15 +1567,106 @@
 <p>Note the order of the bullet points: we start with the last line of the code above:</p>
 <ol>
 <li>The <code>pattern</code> is another attribute created by the base class. It is a RegEx pattern object which will capture the XML tags in the Markdown source. Remember the <code>tags</code> class attribute we've defined in the beginning? <code>pattern</code> will use it to capture the appropriate tags for our preprocessor. We use the <a href="https://docs.python.org/3/library/re.html#re.sub"><code>re.sub</code></a> method of the pattern which will replace our tag definitions (<code>&lt;gibberish&gt;&lt;/gibberish&gt;</code>) in the <code>content</code> with whatever string returns the <code>sub_tag</code> local function.</li>
-<li>Next we define the <code>sub_tag</code> local function. This function accepts one argument: the <a href="https://docs.python.org/3/library/re.html#match-objects"><code>Match</code></a> object which was captured by the pattern.</li>
-<li>We use the handy <code>get_options</code> method of the base class, which takes the options string of the tag found in the source and turns it into a dictionary of options. For example, if the captured tag was <code>&lt;gibberish size="15"&gt;&lt;/gibberish&gt;</code>, the options string is <code>size="15"</code>. It will be turned into <code>{'size': 15}</code> by the <code>get_options</code> method.</li>
-<li>Getting the value of the <code>default_size</code> parameter from the preprocessor options. The options are stored in <code>self.options</code> dictionary by the base class. The dictionary is first prepopulated by values from the <code>defaults</code> attribute that we defined earlier. According to the <code>defaults</code>, if the user hasn't stated any options, the <code>default_size</code> will have the value of <code>10</code>.</li>
+<li>Next, we define the <code>sub_tag</code> local function. This function accepts one argument: the <a href="https://docs.python.org/3/library/re.html#match-objects"><code>Match</code></a> object which was captured by the pattern.</li>
+<li>We use the handy <code>get_options</code> method of the base class, which takes the options string of the tag found in the source, and turns it into a dictionary of options. For example, if the captured tag was <code>&lt;gibberish size="15"&gt;&lt;/gibberish&gt;</code>, the options string is <code>size="15"</code>. It will be turned into <code>{'size': 15}</code> by the <code>get_options</code> method.</li>
+<li>Getting the value of the <code>default_size</code> parameter from the preprocessor options. The options are stored in <code>self.options</code> dictionary by the base class. The dictionary is first prepopulated by values from the <code>defaults</code> attribute that we've defined earlier. According to the <code>defaults</code>, if the user hasn't stated any options, the <code>default_size</code> will have the value of <code>10</code>.</li>
 <li>Getting the <code>size</code> option from the tag options. If options were not stated, we are using the <code>default_size</code> value as a fallback.</li>
-<li>Finally, we are using the <code>get_text</code> function from our gibberish generator, which we've written in the previous part of the tutorial. We are returning the string got from the <code>gen_text</code> function as the result of our <code>sub_tag</code> local function. This is the text which will replace the <code>&lt;gibberish&gt;&lt;/gibberish&gt;</code> tag in the processed Markdown file.</li>
+<li>Finally, we are using the <code>get_text</code> function from our gibberish generator, which we've written in the previous part of the tutorial. We are returning the string returned from the <code>gen_text</code> function as the result of our <code>sub_tag</code> local function. This is the text which will replace the <code>&lt;gibberish&gt;&lt;/gibberish&gt;</code> tag in the processed Markdown file.</li>
 </ol>
 <p>And that's it! We have all the code required for the preprocessor to work. All is left to do is to make our package installable and test its work.</p>
-<p>Next: <a href="../install/">Installing and Testing</a>
-Previous: <a href="../generator/">Creating the Gibberish Generator</a></p>
+<details class="example"><summary>Complete source of the preprocessor module</summary><div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Gibberish preprocessor for Foliant documenation authoring tool.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="kn">from</span> <span class="nn">foliant.preprocessors.base</span> <span class="kn">import</span> <span class="n">BasePreprocessor</span>
+
+
+<span class="k">def</span> <span class="nf">pick_letter</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pick a random letter.</span>
+<span class="sd">    Vowels have a higher chance of picking.</span>
+<span class="sd">    Letters q, w, x and z have the lowest chance of picking.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">rare_letters</span> <span class="o">=</span> <span class="s1">&#39;qwxz&#39;</span>
+    <span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+    <span class="n">consonants</span> <span class="o">=</span> <span class="s1">&#39;cdfghjklmnpqrstv&#39;</span>
+
+    <span class="n">pick</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">pick</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="n">rare_letters</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pick</span> <span class="o">&gt;</span> <span class="mf">0.3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="n">vowels</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="n">consonants</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">gen_word</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return a word consisting of 2 to 9 letters.&quot;&quot;&quot;</span>
+    <span class="n">word_len</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pick_letter</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">word_len</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">gen_sentence</span><span class="p">(</span><span class="n">num_words</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Generate a sentence consisting of `num_words` words.&quot;&quot;&quot;</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">(</span><span class="n">gen_word</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_words</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">gen_text</span><span class="p">(</span><span class="n">num_sentences</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a paragraph of gibberish consisting of `num_sentences`</span>
+<span class="sd">    senteces, each consisting of 3 to 12 words.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">sizes</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_sentences</span><span class="p">))</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="p">(</span><span class="n">gen_sentence</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">sizes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;. &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">Preprocessor</span><span class="p">(</span><span class="n">BasePreprocessor</span><span class="p">):</span>
+    <span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;default_size&#39;</span><span class="p">:</span> <span class="mi">10</span>
+    <span class="p">}</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;gibberish&#39;</span><span class="p">,)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">getChild</span><span class="p">(</span><span class="s1">&#39;gibberish&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Preprocessor inited: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_process_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">sub_tag</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
+          <span class="n">tag_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_options</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;options&#39;</span><span class="p">))</span>
+          <span class="n">default_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;default_size&#39;</span><span class="p">]</span>
+          <span class="n">size</span> <span class="o">=</span> <span class="n">tag_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="n">default_size</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">gen_text</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">sub_tag</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Applying preprocessor Gibberish&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">markdown_file_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">working_dir</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.md&#39;</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">markdown_file_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">markdown_file</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">markdown_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+            <span class="n">processed_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_tags</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">processed_content</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">markdown_file_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">markdown_file</span><span class="p">:</span>
+                    <span class="n">markdown_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">processed_content</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Preprocessor Gibberish applied&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Next: <a href="../install/">Installing and Testing</a></p>
+<p>Previous: <a href="../generator/">Creating the Gibberish Generator</a></p>
                 
                   
                 

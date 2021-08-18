@@ -1604,7 +1604,7 @@
                 <h1 id="your-first-foliant-project">Your First Foliant Project<a class="headerlink" href="#your-first-foliant-project" title="Permanent link">&para;</a></h1>
 <p>In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.</p>
 <blockquote>
-<p>It is recommended to <a href="tutorials/docker.md">run Foliant through Docker</a> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).</p>
+<p>It is recommended to <a href="../docker/">run Foliant through Docker</a> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).</p>
 </blockquote>
 <h2 id="create-new-project">Create New Project<a class="headerlink" href="#create-new-project" title="Permanent link">&para;</a></h2>
 <p>All Foliant projects must adhere to a certain structure. Luckily, you don’t have to memorize it thanks to the <a href="../../cli/init/#init">Init</a> extension.</p>
@@ -1637,7 +1637,7 @@ $ tree
 
 <span class="m">1</span> directory, <span class="m">6</span> files
 </code></pre></div>
-<p><code>foliant.yml</code> is your <a href="config.md">Project Configuration</a> file.</p>
+<p><code>foliant.yml</code> is your <a href="../../config/">Project Configuration</a> file.</p>
 <p><code>src</code> is the directory for your Markdown documents. Currently, there’s just one file there called <code>index.md</code>.</p>
 <p><code>requirements.txt</code> lists the Python packages required for the project: Foliant backends and preprocessors, MkDocs themes, and whatnot. When the Docker image for the project is built, these requirements will be installed in it.</p>
 <p><code>Dockerfile</code> and <code>docker-compose.yml</code> are necessary to build the project in a Docker container.</p>
@@ -1670,9 +1670,9 @@ Result: Hello_Foliant-2020-05-25.mkdocs
 Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> <span class="o">(</span>http://0.0.0.0:8000/<span class="o">)</span> ...
 </code></pre></div>
 <p>Open <a href="http://localhost:8000/">localhost:8000</a> in your web browser. You should see something like this</p>
-<p><img alt="Basic Foliant project built with MkDocs" src="images/basic-mkdocs.png" /></p>
+<p><img alt="Basic Foliant project built with MkDocs" src="../../images/basic-mkdocs.png" /></p>
 <h2 id="build-pdf">Build PDF<a class="headerlink" href="#build-pdf" title="Permanent link">&para;</a></h2>
-<p>To build PDF with Pandoc natively, first you will need to install Pandoc itself and TexLive, check <a href="installation.md">Foliant installation page</a> for instructions.</p>
+<p>To build PDF with Pandoc natively, first you will need to install Pandoc itself and TexLive, check <a href="../../installation/">Foliant installation page</a> for instructions.</p>
 <p>Then, in the project directory, run</p>
 <div class="highlight"><pre><span></span><code>$ foliant make pdf
 Parsing config... Done
@@ -1707,7 +1707,7 @@ Making pdf with Pandoc... Done
 Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 <p>Your standalone pdf documentation is ready! It should look something like this</p>
-<p><img alt="Basic Foliant project built with Pandoc" src="images/basic-pdf.png" /></p>
+<p><img alt="Basic Foliant project built with Pandoc" src="../../images/basic-pdf.png" /></p>
 <h2 id="edit-content">Edit Content<a class="headerlink" href="#edit-content" title="Permanent link">&para;</a></h2>
 <p>Your project’s content lives in <code>.md</code> files inside the <code>src</code> folder. You can organize it into multiple files and subfolders inside the <code>src</code> as you please.</p>
 <p>Foliant encourages <a href="https://daringfireball.net/projects/markdown/">pure Markdown</a> syntax as described by John Gruber. Pandoc, MkDocs, and other backend-specific additions are allowed, but we strongly recommend putting them in <a href="../../preprocessors/flags/#flags"><code>&lt;if&gt;...&lt;/if&gt;</code></a>.</p>
@@ -1761,8 +1761,8 @@ Making pdf with Pandoc... Done
 Result: Hello_Foliant-2020-05-25.pdf
 </code></pre></div>
 <p>And see the new page appear on the site and in the pdf document</p>
-<p><img alt="New page on the site" src="images/basic-mkdocs-hello.png" /></p>
-<p><img alt="New page in the pdf document" src="images/basic-pdf-hello.png" /></p>
+<p><img alt="New page on the site" src="../../images/basic-mkdocs-hello.png" /></p>
+<p><img alt="New page in the pdf document" src="../../images/basic-pdf-hello.png" /></p>
 <h2 id="use-preprocessors">Use Preprocessors<a class="headerlink" href="#use-preprocessors" title="Permanent link">&para;</a></h2>
 <p>Preprocessors are additional Foliant packages that transform your Markdown chapters in different ways. You can do all kinds of stuff with them:</p>
 <ul>
@@ -1801,9 +1801,9 @@ chapters:
 </code></pre></div>
 <p>Blockdiag preprocessor extends the Markdown syntax of your documentation by adding several <em>tags</em>. Each tag produces a different diagram type. Sequence diagrams are defined with <code>&lt;seqdiag&gt;&lt;/seqdiag&gt;</code> tag. This is what we used in the sample above. The diagram definition sits in the tag body and the diagram properties such as caption or format are defined as tag attributes.</p>
 <p>Rebuild the site with <code>foliant make site</code> or <code>docker-compose run --rm foliant make site</code> and open it in the browser</p>
-<p><img alt="Sequence diagram drawn with seqdiag on the site" src="images/basic-mkdocs-seqdiag.png" /></p>
+<p><img alt="Sequence diagram drawn with seqdiag on the site" src="../../images/basic-mkdocs-seqdiag.png" /></p>
 <p>Rebuild the pdf and see that the diagram is there too</p>
-<p><img alt="Sequence diagram drawn with seqdiag in the pdf" src="images/basic-pdf-seqdiag.png" /></p>
+<p><img alt="Sequence diagram drawn with seqdiag in the pdf" src="../../images/basic-pdf-seqdiag.png" /></p>
 <p>Let’s customize the look of the diagrams in our project by setting their properties in the config file. For example, let’s use a custom font for labels. I’m using the ever-popular Comic Sans font, but you can pick any font that’s available in <code>.ttf</code> format.</p>
 <p>Put the font file in the project directory and add the following lines to <code>foliant.yml</code></p>
 <div class="highlight"><pre><span></span><code>preprocessors:
@@ -1813,8 +1813,8 @@ chapters:
 <span class="gi">+           font: !path comic.ttf</span>
 </code></pre></div>
 <p>After a rebuild, the diagram on the site and in the pdf should look like this</p>
-<p><img alt="Sequence diagram with Comic Sans in labels, site" src="images/basic-mkdocs-seqdiag-comic.png" /></p>
-<p><img alt="Sequence diagram with Comic Sans in labels, pdf" src="images/basic-pdf-seqdiag-comic.png" /></p>
+<p><img alt="Sequence diagram with Comic Sans in labels, site" src="../../images/basic-mkdocs-seqdiag-comic.png" /></p>
+<p><img alt="Sequence diagram with Comic Sans in labels, pdf" src="../../images/basic-pdf-seqdiag-comic.png" /></p>
 <p>There are many more params you can define for your diagrams. You can override global params for particular diagrams in their tags. And by combining this preprocessor with <a href="../../preprocessors/flags/#flags">Flags</a> you can even set different params for different backends, for example, build vector diagrams for pdf output and bitmap for site</p>
 <div class="highlight"><pre><span></span><code>This is a diagram that is rendered to <span class="sb">`.png`</span> in HTML and to <span class="sb">`.pdf`</span> in pdf:
 

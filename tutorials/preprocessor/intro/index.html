@@ -1477,20 +1477,20 @@
                 
                 
                 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<p>Creating preprocessors for Foliant is quite straightforward, because they are essentially just Python scripts wrapped in a <code>Preprocessor</code> class, which is provided by Foliant core. In this tutorial we will go through all steps of creating a new preprocessor.</p>
+<p>Creating preprocessors for Foliant is quite straightforward because they are essentially just Python scripts wrapped in a <code>Preprocessor</code> class, which is provided by Foliant core. In this tutorial, we will go through all steps of creating a new preprocessor.</p>
 <p>The full source code of the preprocessor created in this tutorial can be found <a href="https://github.com/foliant-docs/preprocessor_tutorial">here</a>.</p>
 <hr />
-<p>First of all we need to decide what our preprocessor will do. Let's say you need a preprocessor which will generate some placeholder gibberish text for your documentation, somewhat like <a href="https://lipsum.com/">Lorem Ipsum</a>.</p>
-<p>We need a way to tell Foliant to insert the placeholder into a specific part of our document and the Foliant way of doing that is using an XML-tag like the following.</p>
+<p>First of all, we need to decide what our preprocessor will do. Let's say you need a preprocessor that will generate some placeholder gibberish text for your documentation, somewhat like <a href="https://lipsum.com/">Lorem Ipsum</a>.</p>
+<p>We need a way to tell Foliant to insert the placeholder into a specific part of our document. The Foliant way of doing that is using an XML-tag like the following.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">gibberish</span><span class="p">&gt;&lt;/</span><span class="nt">gibberish</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>After the preprocessor is applied this tag should be transformed into some placeholder text.</p>
+<p>After the preprocessor is applied, this tag should be transformed into some placeholder text.</p>
 <div class="highlight"><pre><span></span><code>Hiteap zoiouxwaf jyrcaay yty xuzuapo eyuigouu. Ysseotaeq ytuiio qqyy yehiiy koyiyoky uul. Pan osfu zoiz oy ikcya tcsxecy qxiiyo. Gryxeye ogeelaee atprwm mjioy eigyyoov nx qe tayoiaud jodmaofue yvo ieyuunyrq eaowu. Jyqnr aej elqj wuytjcae oy igy ak.
 </code></pre></div>
-<p>We would also want to specify the size of the generated text so our tag should accept the <code>size</code> parameter which will define the number of generated sentences:</p>
+<p>We would also want to specify the size of the generated text, so our tag should accept the <code>size</code> parameter which will define the number of generated sentences:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">gibberish</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;15&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">gibberish</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>The tutorial will be split into three stages:</p>
+<p>The tutorial is split into three stages:</p>
 <ol>
 <li><a href="../generator/">Writing the gibberish generator</a>,</li>
 <li><a href="../preprocessor/">Wrapping it in a <code>Preprocessor</code> class</a>,</li>

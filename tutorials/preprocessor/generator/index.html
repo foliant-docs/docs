@@ -1480,11 +1480,11 @@
 <p>There are already several Python packages present on PyPi which generate placeholder texts like <a href="https://github.com/monkeython/loremipsum">loremipsum</a> but we won't deprive ourselves of the fun of creating our own.</p>
 <p>Let's define some requirements:</p>
 <ul>
-<li>The generated text should consist of sentences which start with a capital letter and end with a dot.</li>
+<li>The generated text should consist of sentences that start with a capital letter and end with a dot.</li>
 <li>There should be a way of controlling the size of the sentence and the number of sentences in the resulting text.</li>
-<li>The words in the text should have at least slight resemblance with real language words.</li>
+<li>The words in the text should have at least a slight resemblance with real language words.</li>
 </ul>
-<p>The last requirement is a bit tricky: we don't want words like <code>q</code> or <code>zxd</code>, or at least not too many of those for the text look a bit more real. So what we will do is create a simple <code>gen_word</code> function which will generate a word with random number of random letters, but the letters will be picked in a more controlled way by another function <code>pick_letter</code>:</p>
+<p>The last requirement is a bit tricky: we don't want words like <code>q</code> or <code>zxd</code> in our text, or at least not too many of those, so that the text looks a bit more real. So what we will do is create a simple <code>gen_word</code> function which will generate a word with a random number of letters, but the letters will be picked in a more controlled way by another function called <code>pick_letter</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span> <span class="nf">gen_word</span><span class="p">():</span>
@@ -1495,8 +1495,8 @@
 <li>We've restricted the length of the words to 2 to 9 letters so we could avoid too short and too long words.</li>
 <li>The <code>pick_letter</code> function will be supplying us with random letters.</li>
 </ol>
-<p>Now to the <code>pick_letter</code> function. To make the words look real we don't want this function to return too many of the letters q, w, x and z, which don't appear in words often. We also want to get more vowels than consonants. <code>kiobe</code> looks more like a word than <code>lknsd</code>.</p>
-<p>Here's what I've come up with</p>
+<p>Now to the <code>pick_letter</code> function. To make the words look real we don't want this function to return too many of the letters q, w, x and z, which don't appear in the words often. We also want to get more vowels than consonants: <code>kiobe</code> looks more like a word than <code>lknsd</code>.</p>
+<p>Here's one way to do it</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span><span class="p">,</span> <span class="n">random</span>
 
 <span class="k">def</span> <span class="nf">pick_letter</span><span class="p">():</span>
@@ -1513,12 +1513,12 @@
         <span class="k">return</span> <span class="n">choice</span><span class="p">(</span><span class="n">consonants</span><span class="p">)</span> <span class="c1"># [6]</span>
 </code></pre></div>
 <ol>
-<li>Get a random float number with <a href="https://docs.python.org/3/library/random.html#random.random"><code>random</code></a> function.</li>
-<li>Since <code>random</code> returns random floats from 0.0 to 1.0, there's about 10% chance of getting a float which is larger than 0.9.</li>
-<li>In this case we will randomly pick one of the rare letters: q, w, x or z with <a href="https://docs.python.org/3/library/random.html#random.choice"><code>choice</code></a> function.</li>
+<li>Get a random float number from the <a href="https://docs.python.org/3/library/random.html#random.random"><code>random</code></a> function.</li>
+<li>Since <code>random</code> returns a float from 0.0 to 1.0, there's about a 10% chance of getting a float that is larger than 0.9.</li>
+<li>In this case, we will randomly pick one of the rare letters: q, w, x, or z with the <a href="https://docs.python.org/3/library/random.html#random.choice"><code>choice</code></a> function.</li>
 <li>The chance of getting a float between 0.25 and 0.9 is about 65%.</li>
-<li>In this case we will return a vowel.</li>
-<li>Finally, with a chance of about 25% we will be returning one of the remaining consonants.</li>
+<li>In this case, we will return a vowel.</li>
+<li>Finally, with a chance of about 25%, we will be returning one of the remaining consonants.</li>
 </ol>
 <p>Let's put it all together and test our <code>gen_word</code> function</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">gen_word</span><span class="p">()</span>
@@ -1530,15 +1530,15 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">gen_word</span><span class="p">()</span>
 <span class="s1">&#39;itookao&#39;</span>
 </code></pre></div>
-<p>Oh my god, I think we've just created Finnish language! Jokes aside, it seems that our words generator works fine.</p>
-<p>Now we need to create functions for generating sentences and putting them together into a text.</p>
+<p>Oh my god, I think we've just created the Finnish language! Jokes aside, it seems that our words generator works fine.</p>
+<p>Now we need to create functions for generating sentences and putting them together in a text.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen_sentence</span><span class="p">(</span><span class="n">num_words</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>  <span class="c1"># [1]</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">(</span><span class="n">gen_word</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_words</span><span class="p">))</span>  <span class="c1"># [2]</span>
     <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>  <span class="c1"># [3]</span>
 </code></pre></div>
 <ol>
 <li>The number of words in the sentence is determined by the <code>num_words</code> parameter with a sensible default of 7 words.</li>
-<li>Creating a generator which will yield a new word required number of times.</li>
+<li>Creating a <a href="https://docs.python.org/3/reference/expressions.html#generator-expressions">generator</a> that will yield a new word a required number of times.</li>
 <li>Joining the generated words into a single string, separated by spaces. We are also making the first word capitalized in our sentence.</li>
 </ol>
 <p>A quick test to make sure it works</p>
@@ -1554,9 +1554,9 @@
     <span class="k">return</span> <span class="s1">&#39;. &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>  <span class="c1"># [4]</span>
 </code></pre></div>
 <ol>
-<li>Text generator will accept one parameter <code>num_sentences</code> with a default of 10.</li>
-<li>Creating a generator which will yield a number of words in each sentence required number of times. We are limiting the sentence size here to 3 to 12 words.</li>
-<li>Creating a generator which will yield a new sentence required number of times.</li>
+<li>The text generator will accept one parameter <code>num_sentences</code> with a default of 10.</li>
+<li>Creating a generator that will yield a number of words in each sentence a required number of times. We are limiting the sentence size here to 3 to 12 words.</li>
+<li>Creating a generator that will yield a new sentence a required number of times.</li>
 <li>Joining the generated sentences into a single string, separated by dots. We are also adding a dot at the end of the text.</li>
 </ol>
 <p>Time for the final test!</p>
@@ -1613,8 +1613,8 @@
     <span class="k">return</span> <span class="s1">&#39;. &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
 </code></pre></div>
 </details>
-<p>Next: <a href="../preprocessor/">Formalizing the Preprocessor</a>
-Previous: <a href="../intro/">Introduction</a></p>
+<p>Next: <a href="../preprocessor/">Formalizing the Preprocessor</a></p>
+<p>Previous: <a href="../intro/">Introduction</a></p>
                 
                   
                 
