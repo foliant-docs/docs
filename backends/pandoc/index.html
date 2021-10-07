@@ -1646,7 +1646,7 @@
 <h2 id="pandoc-backend-for-foliant">Pandoc Backend for Foliant<a class="headerlink" href="#pandoc-backend-for-foliant" title="Permanent link">&para;</a></h2>
 <p><img alt="PDF built with Foliant" src="https://raw.githubusercontent.com/foliant-docs/foliantcontrib.pandoc/master/img/pandoc.png" /></p>
 <p><a href="http://pandoc.org/">Pandoc</a> is a Swiss-army knife document converter. It converts almost any format to any other format: md to pdf, rst to html, adoc to docx, and so on and so on.</p>
-<p>Pandoc backend for Foliant add <code>pdf</code>, <code>docx</code>, and <code>tex</code> targets.</p>
+<p>Pandoc backend for Foliant adds <code>pdf</code>, <code>docx</code>, <code>odt</code>, <code>epub</code> and <code>tex</code> targets.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>$ pip install foliantcontrib.pandoc
 </code></pre></div>
@@ -1667,6 +1667,22 @@ Applying preprocessor flatten... Done
 Making docx with Pandoc... Done
 ─────────────────────
 Result: My_Project-2020-12-04.docx
+</code></pre></div>
+<p>Build odt:</p>
+<div class="highlight"><pre><span></span><code>$ foliant make odt -p my-project
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making odt with Pandoc... Done
+─────────────────────
+Result: My_Project-2020-12-04.odt
+</code></pre></div>
+<p>Build docx:</p>
+<div class="highlight"><pre><span></span><code>$ foliant make epub -p my-project
+Parsing config... Done
+Applying preprocessor flatten... Done
+Making epub with Pandoc... Done
+─────────────────────
+Result: My_Project-2020-12-04.epub
 </code></pre></div>
 <p>Build tex (mostly for pdf debugging):</p>
 <div class="highlight"><pre><span></span><code>$ foliant make tex -p my-project
@@ -1689,6 +1705,8 @@ Result: My_Project-2020-12-04.tex
     <span class="nt">meta</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">reference.docx</span>
+    <span class="nt">reference_odt</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">reference.odt</span>
+    <span class="nt">css</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">epub.css</span>
     <span class="nt">params</span><span class="p">:</span>
       <span class="l l-Scalar l-Scalar-Plain">...</span>
     <span class="nt">filters</span><span class="p">:</span>
@@ -1716,13 +1734,11 @@ Result: My_Project-2020-12-04.tex
 <dt><code>meta</code></dt>
 <dd>is a mapping of document metadata properties and their values. They will be added to pandoc command as <code>--metadata key[=val]</code>.</dd>
 <dt><code>reference_docx</code></dt>
-<dd>
-<p>is the path to the reference document to used when building docx (see <a href="http://pandoc.org/MANUAL.html#templates">“Templates”</a> in the Pandoc documentation).</p>
-<blockquote>
-<p><strong>Tip</strong></p>
-<p>Use <code>!path</code> tag to ensure the value is converted into a valid path relative to the project directory.</p>
-</blockquote>
-</dd>
+<dd>is the path to the reference document to be used when building docx (see <strong>--reference-doc</strong> option info in the Pandoc  <a href="https://pandoc.org/MANUAL#options-affecting-specific-writers">Options</a> documentation).</dd>
+<dt><code>reference_odt</code></dt>
+<dd>is the path to the reference document to be used when building odt (see <strong>--reference-doc</strong> option info in the Pandoc  <a href="https://pandoc.org/MANUAL#options-affecting-specific-writers">Options</a> documentation).</dd>
+<dt><code>css</code></dt>
+<dd>is the path to the stylesheets to be used when building epub (see <strong>--css</strong> option info in the Pandoc  <a href="https://pandoc.org/MANUAL#options-affecting-specific-writers">Options</a> documentation).</dd>
 <dt><code>params</code></dt>
 <dd>are passed to the <code>pandoc</code> command. Params should be defined by their long names, with dashes replaced with underscores (e.g. <code>--pdf-engine</code> is defined as <code>pdf_engine</code>).</dd>
 <dt><code>filters</code></dt>
