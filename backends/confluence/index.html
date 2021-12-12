@@ -1756,6 +1756,7 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
     <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
     <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">cloud</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">attachments</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">license.txt</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">project.pdf</span>
@@ -1802,6 +1803,8 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <dd>Path to Pandoc binary (Pandoc is used to convert Markdown into HTML).</dd>
 <dt><code>verify_ssl</code></dt>
 <dd>If <code>false</code>, SSL verification will be turned off. Sometimes when dealing with Confluence servers in Intranets it's easier to turn this option off rather than fight with admins. Not recommended to turn off for public servers in production. Default: <code>true</code></dd>
+<dt><code>cloud</code></dt>
+<dd>If <code>true</code>, foliant will try to publish content without HTML code formatting, which introduces unwanted spaces and newlines when working with Confluence Cloud.</dd>
 <dt><code>attachments</code></dt>
 <dd>List of files (relative to project root) which should be attached to the Confluence page.</dd>
 <dt><code>codeblocks</code></dt>
