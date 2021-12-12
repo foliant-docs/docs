@@ -7,6 +7,35 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.confluence 0.6.20</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#f370b9dd9f478abcd5eff312f00e0427</guid>
+            <pubDate>Sun, 12 Dec 2021 17:54:48 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Support for Confluence Cloud option to remove HTML formatting.</li>
+<li>Page URL is now taken from the properties.</li>
+<li>Article change is now detected by article body and title hash, stored in page properties.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.replace 2.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.replace.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.replace.git#b79a555a71005845d8db7d96bbe349f1</guid>
+            <pubDate>Sun, 12 Dec 2021 16:01:59 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Preprocessor rewritten.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.superlinks 1.0.12</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.superlinks.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.superlinks.git#978a9a22cbcf70896a0d871cbcc10e49</guid>
+            <pubDate>Sun, 12 Dec 2021 15:10:31 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Anchors added to beginning of files are not random anymore.</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.pandoc 1.1.2</title>
             <link>https://github.com/foliant-docs/foliantcontrib.pandoc.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.pandoc.git#508133bd0782b1869f7d2c73c9ec6198</guid>

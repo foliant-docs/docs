@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
     
     
       
@@ -1139,36 +1139,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
+  <a href="#replace-text-for-foliant" class="md-nav__link">
+    Replace text for Foliant
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dictionary-format" class="md-nav__link">
-    Dictionary format
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
   
 </li>
       
@@ -1521,36 +1521,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
+  <a href="#replace-text-for-foliant" class="md-nav__link">
+    Replace text for Foliant
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dictionary-format" class="md-nav__link">
-    Dictionary format
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
   
 </li>
       
@@ -1574,7 +1574,9 @@
                 
                 
                 <h1 id="replace">Replace<a class="headerlink" href="#replace" title="Permanent link">&para;</a></h1>
-<p>Replace preprocessor reads the dictionary (yaml format) placed in foliant project folder and changes one word to another in created document.</p>
+<p><a href="https://pypi.org/project/foliantcontrib.replace/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.replace.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.replace"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.replace.svg?label=GitHub" /></a></p>
+<h2 id="replace-text-for-foliant">Replace text for Foliant<a class="headerlink" href="#replace-text-for-foliant" title="Permanent link">&para;</a></h2>
+<p>Preprocessor for simple search and replace in Markdown sources with support of regular expressions.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>$ pip install foliantcontrib.replace
 </code></pre></div>
@@ -1583,30 +1585,30 @@
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">replace</span>
 </code></pre></div>
-<p>The preprocessor has two options (default values stated):</p>
+<p>The preprocessor has two options:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
-      <span class="nt">dictionary_filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">replace_dictionary.yml</span>
-      <span class="nt">with_confirmation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+      <span class="nt">dictionary</span><span class="p">:</span>
+        <span class="nt">Mike</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Michael</span>
+        <span class="nt">Sam</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Samuel</span>
+        <span class="nt">Tim</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Timoel</span>
+      <span class="nt">re_dictionary</span><span class="p">:</span>
+        <span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;![Figure](\1)&#39;</span>
 </code></pre></div>
 <dl>
-<dt><code>dictionary_filename</code></dt>
-<dd>File in foliant project folder with dictionary in it (<em>replace_dictionary.yml</em> by default).</dd>
-<dt><code>with_confirmation</code></dt>
-<dd>if <code>true</code> you will be prompted to confirm any changes.</dd>
+<dt><code>dictionary</code></dt>
+<dd>YAML mapping where key is string to replace, value is the replacement string.</dd>
+<dt><code>re_dictionary</code></dt>
+<dd>YAML mapping where key is <a href="https://docs.python.org/3/howto/regex.html">Python regular expression</a> pattern, value is the replacement string.</dd>
 </dl>
-<h4 id="dictionary-format">Dictionary format<a class="headerlink" href="#dictionary-format" title="Permanent link">&para;</a></h4>
-<p>Dictionary stores data in yaml format. It has two sections — with words and with regular expressions. You can pass the lambda function in <code>regexs</code> section. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">words</span><span class="p">:</span>
-  <span class="nt">cod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CoD</span>
-  <span class="nt">epg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EPG</span>
-  <span class="nt">vod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VoD</span>
-<span class="nt">regexs</span><span class="p">:</span>
-  <span class="s">&#39;!\w*!&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#39;</span>
-  <span class="s">&#39;\.</span><span class="nv"> </span><span class="s">*(\w)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;lambda</span><span class="nv"> </span><span class="s">x:</span><span class="nv"> </span><span class="s">x.group(0).upper()&#39;</span>
-</code></pre></div>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Just add the preprocessor to the project config, set the dictionary and enjoy the result.</p>
+<p>Fill up the <code>dictionary</code> or/and <code>re_dictionary</code> in preprocessor options and the keys will be replaced with values.</p>
+<p>For example, if you wish that all images without title in your Markdown sources were titled "Figure", use the following config:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
+      <span class="nt">re_dictionary</span><span class="p">:</span>
+        <span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;![Figure](\1)&#39;</span>
+</code></pre></div>
                 
                   
                 
@@ -1688,7 +1690,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
       
     
   </body>
