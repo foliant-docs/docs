@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1630,7 +1630,7 @@
                 <h1 id="swaggerdoc">SwaggerDoc<a class="headerlink" href="#swaggerdoc" title="Permanent link">&para;</a></h1>
 <p><a href="https://pypi.org/project/foliantcontrib.swaggerdoc/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.swaggerdoc.svg" /></a>  <a href="https://github.com/foliant-docs/foliantcontrib.swaggerdoc"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.swaggerdoc.svg?label=GitHub" /></a></p>
 <h2 id="swagger-api-docs-generator-for-foliant">Swagger API Docs Generator for Foliant<a class="headerlink" href="#swagger-api-docs-generator-for-foliant" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../_img_e1acdbbe-5b60-11ec-a233-0242ac120002/swagger_e1adcb8c-5b60-11ec-a233-0242ac120002.png" /></p>
+<p><img alt="" src="../../_img_999d88c4-debd-11ec-b592-0242ac120002/swagger_999e7e32-debd-11ec-b592-0242ac120002.png" /></p>
 <p><em>The static site on the picture was built with <a href="https://foliant-docs.github.io/docs/backends/slate/">Slate</a> backend together with SwaggerDoc preprocessor</em></p>
 <p>This preprocessor generates Markdown documentation from <a href="https://swagger.io/">Swagger</a> spec files. It uses <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine or <a href="https://github.com/mermade/widdershins">Widdershins</a> for generating Markdown from swagger spec files.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1641,18 +1641,18 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>swaggerdoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">swaggerdoc</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swaggerdoc</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a number of options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">spec_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost/swagger.json</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
-        <span class="nt">additional_json_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tags.json</span>
-        <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">widdershins</span>
-        <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.j2</span>
-        <span class="nt">environment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">env.yaml</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">swaggerdoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost/swagger.json</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.json</span><span class="w"></span>
+<span class="w">        </span><span class="nt">additional_json_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags.json</span><span class="w"></span>
+<span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widdershins</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.j2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">env.yaml</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>spec_url</code></dt>
@@ -1712,11 +1712,11 @@ Introduction text for API documentation.
 <li>Save the modified templates somewhere near your foliant project.</li>
 <li>Specify the path to modified templates in the <code>user_templates</code> field of the <code>environment</code> configuration. For example, like this:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
-        <span class="nt">environment</span><span class="p">:</span>
-            <span class="nt">user_templates</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">./widdershins_templates/</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">swaggerdoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.yml</span><span class="w"></span>
+<span class="w">        </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">user_templates</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./widdershins_templates/</span><span class="w"></span>
 </code></pre></div>
 <h4 id="jinja">Jinja<a class="headerlink" href="#jinja" title="Permanent link">&para;</a></h4>
 <blockquote>
@@ -1806,7 +1806,7 @@ Introduction text for API documentation.
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

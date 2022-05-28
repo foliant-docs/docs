@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1542,11 +1542,11 @@
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>The subproject location may be specified as a local path, or as a Git repository with optional revision (branch name, commit hash or another reference).</p>
 <p>Example of <code>chapters</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">local_dir</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs.git</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!from</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/some_other_group/some_other_repo.git#develop</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!from</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local_dir</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!from</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/foliant-docs/docs.git</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!from</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/some_other_group/some_other_repo.git#develop</span><span class="w"></span>
 </code></pre></div>
 <p>Before building the documentation superproject, Multiproject extension calls Foliant to build each subproject into <code>pre</code> target, and then moves the directories of built subprojects into the source directory of the superproject (usually called as <code>src</code>).</p>
 <p>Limitations:</p>
@@ -1638,7 +1638,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

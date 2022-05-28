@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1670,12 +1670,12 @@ Result: My_Awesome_Project.aglio
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use aglio backend. If it's installed, Foliant detects it.</p>
 <p>To customize the output, use options in <code>backend_config.aglio</code> section:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">aglio</span><span class="p">:</span>
-    <span class="nt">aglio_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aglio</span>
-    <span class="nt">params</span><span class="p">:</span>
-        <span class="nt">theme-variables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flatly</span>
-        <span class="nt">fullWidth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">aglio</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">aglio_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aglio</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">theme-variables</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flatly</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fullWidth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>aglio_path</code></dt>
@@ -1692,10 +1692,10 @@ Result: My_Awesome_Project.aglio
 </ul>
 <p>To add your own template, follow <a href="https://github.com/danielgtaylor/aglio#customizing-layout-templates">the instructions</a> in the official docs.</p>
 <p>To specify the template add the <code>theme-template</code> field to the <code>params</code> option:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">aglio</span><span class="p">:</span>
-    <span class="nt">params</span><span class="p">:</span>
-        <span class="nt">theme-template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">triple</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">aglio</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">theme-template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triple</span><span class="w"></span>
 </code></pre></div>
 <h4 id="color-scheme">Color scheme<a class="headerlink" href="#color-scheme" title="Permanent link">&para;</a></h4>
 <p>You can customize the color scheme of the website by specifying the color scheme name in <code>theme-variables</code> param.</p>
@@ -1708,17 +1708,17 @@ Result: My_Awesome_Project.aglio
 <li><code>streak</code>.</li>
 </ul>
 <p>You can also specify your own scheme in a LESS or CSS file.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">aglio</span><span class="p">:</span>
-    <span class="nt">params</span><span class="p">:</span>
-        <span class="nt">theme-variables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flatly</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">aglio</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">theme-variables</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flatly</span><span class="w"></span>
 </code></pre></div>
 <h4 id="stylesheets">Stylesheets<a class="headerlink" href="#stylesheets" title="Permanent link">&para;</a></h4>
 <p>Finally, you can provide custom stylesheets in a LESS or CSS file in <code>theme-style</code> param:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">aglio</span><span class="p">:</span>
-    <span class="nt">params</span><span class="p">:</span>
-        <span class="nt">theme-style</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my-style.less</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">aglio</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">theme-style</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-style.less</span><span class="w"></span>
 </code></pre></div>
                 
                   
@@ -1801,7 +1801,7 @@ Result: My_Awesome_Project.aglio
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

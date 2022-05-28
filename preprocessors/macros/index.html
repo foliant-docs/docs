@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1596,18 +1596,18 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Enable the preprocessor by adding it to <code>preprocessors</code> and listing your macros in <code>macros</code> dictionary:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
-      <span class="nt">macros</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a macro definition.</span>
-        <span class="nt">bar</span><span class="p">:</span> <span class="s">&quot;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">macro</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parameter:</span><span class="nv"> </span><span class="s">{param}&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This is a macro definition.</span><span class="w"></span>
+<span class="w">        </span><span class="nt">bar</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">macro</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parameter:</span><span class="nv"> </span><span class="s">{param}&quot;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Here's the simplest usecase for macros:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
-      <span class="nt">macros</span><span class="p">:</span>
-        <span class="nt">support_number</span><span class="p">:</span> <span class="s">&quot;8</span><span class="nv"> </span><span class="s">800</span><span class="nv"> </span><span class="s">123-45-67&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">support_number</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;8</span><span class="nv"> </span><span class="s">800</span><span class="nv"> </span><span class="s">123-45-67&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Now, every time you need to insert your support phone number, you put a macro instead:</p>
 <div class="highlight"><pre><span></span><code>Call you support team: <span class="p">&lt;</span><span class="nt">macro</span><span class="p">&gt;</span>support_number<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>.
@@ -1615,10 +1615,10 @@
 Here&#39;s the number again: <span class="p">&lt;</span><span class="nt">m</span><span class="p">&gt;</span>support_number<span class="p">&lt;/</span><span class="nt">m</span><span class="p">&gt;</span>.
 </code></pre></div>
 <p>Macros support params. This simple feature may make your sources a lot tidier:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
-      <span class="nt">macros</span><span class="p">:</span>
-        <span class="nt">jira</span><span class="p">:</span> <span class="s">&quot;https://mycompany.jira.server.us/jira/ticket?ID={ticket_id}&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">jira</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mycompany.jira.server.us/jira/ticket?ID={ticket_id}&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Now you don't need to remember the address of your Jira server if you want to reference a ticket:</p>
 <div class="highlight"><pre><span></span><code>Link to jira ticket: <span class="p">&lt;</span><span class="nt">macro</span> <span class="na">ticket_id</span><span class="o">=</span><span class="s">&quot;DOC-123&quot;</span><span class="p">&gt;</span>jira<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>
@@ -1637,11 +1637,11 @@ Here&#39;s the number again: <span class="p">&lt;</span><span class="nt">m</span
 </code></pre></div>
 <p>This bulky construct quickly gets old when you use many cross-references in your documentation.</p>
 <p>To make your sources cleaner, move this construct to the config as a reusable macro:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>
-      <span class="nt">macros</span><span class="p">:</span>
-        <span class="nt">ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flags</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flags</span><span class="w"></span>
 </code></pre></div>
 <p>And use it in the source:</p>
 <div class="highlight"><pre><span></span><code>Here is [another page](<span class="p">&lt;</span><span class="nt">macro</span> <span class="na">pandoc</span><span class="o">=</span><span class="s">&quot;#another_page&quot;</span> <span class="na">mkdocs</span><span class="o">=</span><span class="s">&quot;another_page.md&quot;</span><span class="p">&gt;</span>ref<span class="p">&lt;/</span><span class="nt">macro</span><span class="p">&gt;</span>).
@@ -1730,7 +1730,7 @@ Here&#39;s the number again: <span class="p">&lt;</span><span class="nt">m</span
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

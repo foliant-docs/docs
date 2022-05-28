@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1599,56 +1599,56 @@ optional arguments:
 </code></pre></div>
 <p>Let’s look at some examples.</p>
 <p>The content of the common (default) file <code>./foliant.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Default Title</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;title</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default Title</span><span class="w"></span>
 
-<span class="nt">subtitle</span><span class="p">:</span> <span class="nl">&amp;subtitle</span> <span class="l l-Scalar l-Scalar-Plain">Default Subtitle</span>
+<span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;subtitle</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default Subtitle</span><span class="w"></span>
 
-<span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">0.0</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span><span class="w"></span>
 
-<span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">/somewhere/template.tex</span>
-        <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">/somewhere/reference.docx</span>
-        <span class="nt">vars</span><span class="p">:</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="nv">*title</span>
-            <span class="nt">version</span><span class="p">:</span> <span class="nv">*version</span>
-            <span class="nt">subtitle</span><span class="p">:</span> <span class="nv">*subtitle</span>
-            <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2018</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
+<span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/somewhere/template.tex</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference_docx</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/somewhere/reference.docx</span><span class="w"></span>
+<span class="w">        </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nv">*title</span><span class="w"></span>
+<span class="w">            </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nv">*version</span><span class="w"></span>
+<span class="w">            </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="nv">*subtitle</span><span class="w"></span>
+<span class="w">            </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2018</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">pdf_engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xelatex</span><span class="w"></span>
 </code></pre></div>
 <p>The content of the partial config file <code>./src/group_1/product_1/feautre_1/foliant.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Group 1, Product 1, Feature 1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;title</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Group 1, Product 1, Feature 1</span><span class="w"></span>
 
-<span class="nt">subtitle</span><span class="p">:</span> <span class="nl">&amp;subtitle</span> <span class="l l-Scalar l-Scalar-Plain">Technical Specification</span>
+<span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;subtitle</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Technical Specification</span><span class="w"></span>
 
-<span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
 
-<span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">vars</span><span class="p">:</span>
-            <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019</span>
+<span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019</span><span class="w"></span>
 </code></pre></div>
 <p>The content of newly generated file <code>./foliant.yml.subset</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Group 1, Product 1, Feature 1</span>
-<span class="nt">subtitle</span><span class="p">:</span> <span class="nl">&amp;subtitle</span> <span class="l l-Scalar l-Scalar-Plain">Technical Specification</span>
-<span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
-<span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">/somewhere/template.tex</span>
-        <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">/somewhere/reference.docx</span>
-        <span class="nt">vars</span><span class="p">:</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="nv">*title</span>
-            <span class="nt">version</span><span class="p">:</span> <span class="nv">*version</span>
-            <span class="nt">subtitle</span><span class="p">:</span> <span class="nv">*subtitle</span>
-            <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2019</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
-<span class="nt">chapters</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">b2b/order_1/feature_1/index.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;title</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Group 1, Product 1, Feature 1</span><span class="w"></span>
+<span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;subtitle</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Technical Specification</span><span class="w"></span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
+<span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/somewhere/template.tex</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference_docx</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/somewhere/reference.docx</span><span class="w"></span>
+<span class="w">        </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nv">*title</span><span class="w"></span>
+<span class="w">            </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nv">*version</span><span class="w"></span>
+<span class="w">            </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="nv">*subtitle</span><span class="w"></span>
+<span class="w">            </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2019</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">pdf_engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xelatex</span><span class="w"></span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">b2b/order_1/feature_1/index.md</span><span class="w"></span>
 </code></pre></div>
 <p>If the option <code>--no-rewrite</code> is not set, the paths of Markdown files that are specified in the <code>chapters</code> section of the file <code>./src/group_1/product_1/feautre_1/foliant.yml</code>, will be rewritten as if these paths were relative to the directory <code>./src/group_1/product_1/feautre_1/</code>.</p>
 <p>Otherwise, the Subset CLI extension will not rewrite the paths of Markdown files as if they were relative to <code>./src/</code> directory.</p>
@@ -1734,7 +1734,7 @@ optional arguments:
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

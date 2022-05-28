@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1610,16 +1610,16 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add anchors to preprocessors section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">anchors</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">anchors</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has some options, but most probably you won't need any of them:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
-        <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
-        <span class="nt">tex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-        <span class="nt">anchors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-        <span class="nt">custom_ids</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">anchors</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">element</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
+<span class="w">        </span><span class="nt">anchors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">        </span><span class="nt">custom_ids</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>element</code></dt>
@@ -1669,10 +1669,10 @@ Something&#39;s wrong with Mike, [look](#Mike)!
 </code></pre></div>
 <p><strong>custom IDs</strong></p>
 <p>Since version 1.0.5 preprocessor Anchors can also process <a href="https://pandoc.org/MANUAL.html#heading-identifiers">Pandoc-style custom heading identifiers</a> (previously you had to use <a href="https://foliant-docs.github.io/docs/preprocessors/customids/">CustomIDs preprocessor</a> for that purpose). To use this function, turn on the <code>custom_ids</code> option in your foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">anchors</span><span class="p">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
-        <span class="l l-Scalar l-Scalar-Plain">custom_ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">anchors</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">custom_ids</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
 </code></pre></div>
 <p>Then add custom identifiers to your headings:</p>
 <div class="highlight"><pre><span></span><code># My heading {#foo}
@@ -1715,9 +1715,9 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis non vitae placea
 <h3 id="notice-for-mkdocs">Notice for Mkdocs<a class="headerlink" href="#notice-for-mkdocs" title="Permanent link">&para;</a></h3>
 <p>In many Mkdocs themes the top menu lays over the text with absolute position. In this situation all anchors will be hidden by the menu.</p>
 <p>Possible solution is to change the <code>element</code> option for your anchors to have a vertical offset. Example config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">anchors</span><span class="p">:</span>
-        <span class="nt">element</span><span class="p">:</span> <span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">style=&quot;display:block;</span><span class="nv"> </span><span class="s">margin:-3.1rem;</span><span class="nv"> </span><span class="s">padding:3.1rem;&quot;</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">anchors</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">element</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;span</span><span class="nv"> </span><span class="s">style=&quot;display:block;</span><span class="nv"> </span><span class="s">margin:-3.1rem;</span><span class="nv"> </span><span class="s">padding:3.1rem;&quot;</span><span class="nv"> </span><span class="s">id=&quot;{anchor}&quot;&gt;&lt;/span&gt;&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>Or, even better, you can assign your anchor a class in <code>element</code> and add these rules to your custom mkdocs styles.</p>
                 
@@ -1801,7 +1801,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis non vitae placea
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

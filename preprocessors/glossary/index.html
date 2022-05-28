@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1596,15 +1596,15 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>glossary</code> to <code>preprocessors</code> section in the project config.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">glossary</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a number of options (default values stated below):</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">glossary</span><span class="p">:</span>
-        <span class="nt">term_definitions</span><span class="p">:</span> <span class="s">&#39;term_definitions.md&#39;</span>
-        <span class="nt">definition_mark</span><span class="p">:</span> <span class="s">&#39;:</span><span class="nv">   </span><span class="s">&#39;</span>
-        <span class="nt">files_to_process</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">glossary</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">term_definitions</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;term_definitions.md&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">definition_mark</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;:</span><span class="nv">   </span><span class="s">&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">files_to_process</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>term_definitions</code></dt>
@@ -1618,15 +1618,15 @@
 <p>Just add the preprocessor to the project config, set it up and enjoy the automatically collected glossary in your document.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p><strong>foliant.yml</strong></p>
-<div class="highlight"><pre><span></span><code><span class="nn">...</span>
-<span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">text.md</span>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text.md</span><span class="w"></span>
 
-<span class="nt">preprocessors</span><span class="p">:</span>
-<span class="nn">...</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">glossary</span>
-<span class="nn">...</span>
+<span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">glossary</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
 </code></pre></div>
 <p><strong>term_definitions.md</strong></p>
 <div class="highlight"><pre><span></span><code># Glossary
@@ -1788,7 +1788,7 @@ Term 2
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

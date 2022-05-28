@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1631,17 +1631,17 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>superlink</code> to <code>preprocessors</code> section in the project config.</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
+<p><div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superlinks</span><span class="w"></span>
 </code></pre></div>
 <strong>Important:</strong> SuperLinks preprocessor is very sensitive to its position in the preprocessors list. If you are using it in along with <a href="https://foliant-docs.github.io/docs/preprocessors/includes/">Includes</a>, <a href="https://foliant-docs.github.io/docs/preprocessors/anchors/">Anchors</a> or <a href="https://foliant-docs.github.io/docs/preprocessors/customids/">CustomIDs</a> preprocessor, the order in which they are mentioned must be following:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>   <span class="c1"># indludes must be defined BEFORE superlinks in the list</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">superlinks</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>        <span class="c1"># following preprocessors must be defined AFTER superlinks in the list</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">anchors</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">customids</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes</span><span class="w">   </span><span class="c1"># indludes must be defined BEFORE superlinks in the list</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">superlinks</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w">        </span><span class="c1"># following preprocessors must be defined AFTER superlinks in the list</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">anchors</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">customids</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has no config options just now. But it has some important tag options.</p>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
@@ -1804,7 +1804,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1611,45 +1611,45 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>testrail</code> to <code>preprocessors</code> section in the project config. The preprocessor has a number of options (best values are set by default where possible):</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
-    <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span>
-    <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span>
-    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">TESTRAIL_PASS                                                                 \\ Required</span>
-    <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35                                                                          \\ Required</span>
-    <span class="nt">suite_ids</span><span class="p">:</span>                                                                              <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">section_ids</span><span class="p">:</span>                                                                            <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">exclude_suite_ids</span><span class="p">:</span>                                                                      <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">exclude_section_ids</span><span class="p">:</span>                                                                    <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">exclude_case_ids</span><span class="p">:</span>                                                                       <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test_cases.md                                                                 \\ Optional</span>
-    <span class="nt">rewrite_src_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                                \\ Optional</span>
-    <span class="nt">template_folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">case_templates                                                         \\ Optional</span>
-    <span class="nt">img_folder</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">testrail_imgs                                                               \\ Optional</span>
-    <span class="nt">move_imgs_from_text</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                              \\ Optional</span>
-    <span class="nt">section_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Testing program                                                         \\ Recommended</span>
-    <span class="nt">std_table_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Table with testing results                                            \\ Recommended</span>
-    <span class="nt">std_table_column_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">№; Priority; Platform; ID; Test case name; Result; Comment    \\ Recommended</span>
-    <span class="nt">add_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                     \\ Optional</span>
-    <span class="nt">add_suite_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                 \\ Optional</span>
-    <span class="nt">add_section_headers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                               \\ Optional</span>
-    <span class="nt">add_case_id_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                       \\ Optional</span>
-    <span class="nt">add_case_id_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                         \\ Optional</span>
-    <span class="nt">multi_param_name</span><span class="p">:</span>                                                                       <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">multi_param_select</span><span class="p">:</span>                                                                     <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">multi_param_select_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">any                                                            \\ Optional</span>
-    <span class="nt">add_cases_without_multi_param</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                     \\ Optional</span>
-    <span class="nt">add_multi_param_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                   \\ Optional</span>
-    <span class="nt">add_multi_param_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                     \\ Optional</span>
-    <span class="nt">checkbox_param_name</span><span class="p">:</span>                                                                    <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">checkbox_param_select_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">checked                                                     \\ Optional</span>
-    <span class="nt">choose_priorities</span><span class="p">:</span>                                                                      <span class="l l-Scalar l-Scalar-Plain">\\ Optional</span>
-    <span class="nt">add_priority_to_case_header</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                      \\ Optional</span>
-    <span class="nt">add_priority_to_std_table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false                                                        \\ Optional</span>
-    <span class="nt">resolve_urls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                                      \\ Optional</span>
-    <span class="nt">screenshots_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://gitlab_repository.url                                          \\ Optional</span>
-    <span class="nt">img_ext</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.png                                                                           \\ Optional</span>
-    <span class="nt">print_case_structure</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true                                                              \\ For debugging</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">testrail</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://testrails.url                                                      \\ Required</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">username                                                                \\ Required</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_pass</span><span class="p">:</span><span class="w"> </span><span class="kt">!env</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TESTRAIL_PASS                                                                 \\ Required</span><span class="w"></span>
+<span class="w">    </span><span class="nt">project_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">35                                                                          \\ Required</span><span class="w"></span>
+<span class="w">    </span><span class="nt">suite_ids</span><span class="p">:</span><span class="w">                                                                              </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">section_ids</span><span class="p">:</span><span class="w">                                                                            </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exclude_suite_ids</span><span class="p">:</span><span class="w">                                                                      </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exclude_section_ids</span><span class="p">:</span><span class="w">                                                                    </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exclude_case_ids</span><span class="p">:</span><span class="w">                                                                       </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_cases.md                                                                 \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">rewrite_src_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                                \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">template_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">case_templates                                                         \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">img_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">testrail_imgs                                                               \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">move_imgs_from_text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                              \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">section_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Testing program                                                         \\ Recommended</span><span class="w"></span>
+<span class="w">    </span><span class="nt">std_table_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Table with testing results                                            \\ Recommended</span><span class="w"></span>
+<span class="w">    </span><span class="nt">std_table_column_headers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">№; Priority; Platform; ID; Test case name; Result; Comment    \\ Recommended</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_std_table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                                     \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_suite_headers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                                 \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_section_headers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                               \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_case_id_to_case_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                       \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_case_id_to_std_table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                         \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">multi_param_name</span><span class="p">:</span><span class="w">                                                                       </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">multi_param_select</span><span class="p">:</span><span class="w">                                                                     </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">multi_param_select_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">any                                                            \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_cases_without_multi_param</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                     \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_multi_param_to_case_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                   \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_multi_param_to_std_table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                     \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">checkbox_param_name</span><span class="p">:</span><span class="w">                                                                    </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">checkbox_param_select_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checked                                                     \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">choose_priorities</span><span class="p">:</span><span class="w">                                                                      </span><span class="l l-Scalar l-Scalar-Plain">\\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_priority_to_case_header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                      \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">add_priority_to_std_table</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false                                                        \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resolve_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                                      \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">screenshots_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://gitlab_repository.url                                          \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">img_ext</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.png                                                                           \\ Optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">print_case_structure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true                                                              \\ For debugging</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>testrail_url</code></dt>
@@ -1678,21 +1678,21 @@
 <dt><code>filename</code></dt>
 <dd>Path to the test cases file. It should be added to project chapters in <em>foliant.yml</em>. Default: <em>test_cases.md</em>. For example:</dd>
 </dl>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">Test procedure</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;title</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test procedure</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conditions.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md &lt;- This one for test cases</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">appendum.md</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conditions.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md &lt;- This one for test cases</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">appendum.md</span><span class="w"></span>
 
-<span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
-    <span class="nt">testrail_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://testrails.url</span>
-    <span class="nt">testrail_login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
-    <span class="nt">testrail_pass</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
-    <span class="nt">project_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>
-    <span class="nt">filename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md</span>
+<span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">testrail</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://testrails.url</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">username</span><span class="w"></span>
+<span class="w">    </span><span class="nt">testrail_pass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w"></span>
+<span class="w">    </span><span class="nt">project_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">35</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">awesome_test_cases.md</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>rewrite_src_files</code></dt>
@@ -1822,12 +1822,12 @@ Option selected:
         convert_to_grid: true
 </code></pre></div>
 <p>After <em>testrail</em> preprocessor process this test case, you will have <code>params['links_to_images']</code> parameter with list of image links in order of appearance to use in jinja template:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">[</span>
-    <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;740&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Button](testrail_imgs/740.png)&#39;</span><span class="p p-Indicator">},</span>
-    <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;741&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Dialog</span><span class="nv"> </span><span class="s">box](testrail_imgs/741.png)&#39;</span><span class="p p-Indicator">},</span>
-    <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;742&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[List</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">options](testrail_imgs/742.png)&#39;</span><span class="p p-Indicator">},</span>
-    <span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;743&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;(leading_exclamation_mark_here)[Result](testrail_imgs/743.png)&#39;</span><span class="p p-Indicator">}</span>
-<span class="p p-Indicator">]</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">[</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;740&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;(leading_exclamation_mark_here)[Button](testrail_imgs/740.png)&#39;</span><span class="p p-Indicator">},</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;741&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;(leading_exclamation_mark_here)[Dialog</span><span class="nv"> </span><span class="s">box](testrail_imgs/741.png)&#39;</span><span class="p p-Indicator">},</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;742&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;(leading_exclamation_mark_here)[List</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">options](testrail_imgs/742.png)&#39;</span><span class="p p-Indicator">},</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">{</span><span class="s">&#39;id&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;743&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;link&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;(leading_exclamation_mark_here)[Result](testrail_imgs/743.png)&#39;</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div>
 <p>Using this jinja template:</p>
 <div class="highlight"><pre><span></span><code>**Testing procedure:**
@@ -1913,12 +1913,12 @@ Option selected:
 <dt><code>multi_param_select</code></dt>
 <dd>Here you can set the platforms for which you want to get test cases (case insensitive). For example, you have similar UX for mobile platforms and want to combine them:</dd>
 </dl>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">multi_param_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">platforms</span>
-    <span class="nt">multi_param_select</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">android, ios</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">testrail</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">multi_param_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platforms</span><span class="w"></span>
+<span class="w">    </span><span class="nt">multi_param_select</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">android, ios</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>multi_param_select_type</code></dt>
@@ -2087,11 +2087,11 @@ Option selected:
 <dt><code>choose_priorities</code></dt>
 <dd>Here you can set test case priorities to download (case insensitive).</dd>
 </dl>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">testrail</span><span class="p">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">choose_priorities</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">critical, high, medium</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">testrail</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">choose_priorities</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">critical, high, medium</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>add_priority_to_case_header</code></dt>
@@ -2235,7 +2235,7 @@ Option selected:
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1578,75 +1578,75 @@
 <p>An optional <code>#&lt;key&gt;</code> part is used to get a key from the mapping stored inside <code>&lt;file&gt;</code>.</p>
 <p><strong>Including a local file</strong></p>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"> </span><span class="kt">!include</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.yml</span><span class="w"></span>
 </code></pre></div>
 <p>In this example the <code>chapters.yml</code> file should be placed in your Foliant project root.</p>
 <p>if the contents of <code>chapters.yml</code> are as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p>then the resulting config after applying the extension will be:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Including part of a local file</strong></p>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml#chapters_for_pdf</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"> </span><span class="kt">!include</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.yml#chapters_for_pdf</span><span class="w"></span>
 </code></pre></div>
 <p>In this example the <code>chapters.yml</code> file should be placed in your Foliant project root.</p>
 <p>if the contents of <code>chapters.yml</code> are as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span><span class="w"></span>
 
-<span class="nt">chapters_for_site</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index_site.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description_site.md</span>
-<span class="nt">chapters_for_pdf</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<span class="nt">chapters_for_site</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index_site.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description_site.md</span><span class="w"></span>
+<span class="nt">chapters_for_pdf</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p>then the resulting config after applying the extension will be:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Including a remote file</strong></p>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"> </span><span class="kt">!include</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/chapters.yml</span><span class="w"></span>
 </code></pre></div>
 <p>In this example the <code>chapters.yml</code> file is stored on the website <code>http://example.com/</code>.</p>
 <p>if the contents of <code>chapters.yml</code> are as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span><span class="w"></span>
 
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p>then the resulting config after applying the extension will be:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Including part of a remote file</strong></p>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/chapters.yml#chapters_for_pdf</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"> </span><span class="kt">!include</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/chapters.yml#chapters_for_pdf</span><span class="w"></span>
 </code></pre></div>
 <p>In this example the <code>chapters.yml</code> file is stored on the website <code>http://example.com/</code>.</p>
 <p>if the contents of <code>chapters.yml</code> are as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># chapters.yml</span><span class="w"></span>
 
-<span class="nt">chapters_for_site</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index_site.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description_site.md</span>
-<span class="nt">chapters_for_pdf</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<span class="nt">chapters_for_site</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index_site.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description_site.md</span><span class="w"></span>
+<span class="nt">chapters_for_pdf</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
 <p>then the resulting config after applying the extension will be:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">description.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description.md</span><span class="w"></span>
 </code></pre></div>
                 
                   
@@ -1729,7 +1729,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

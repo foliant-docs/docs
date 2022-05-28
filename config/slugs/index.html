@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1586,37 +1586,37 @@
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <h4 id="slug">Slug<a class="headerlink" href="#slug" title="Permanent link">&para;</a></h4>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="nl">&amp;title</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
-<span class="nt">version</span><span class="p">:</span> <span class="nl">&amp;version</span> <span class="l l-Scalar l-Scalar-Plain">1.0</span>
-<span class="nt">slug</span><span class="p">:</span> <span class="kt">!slug</span>
-    <span class="p p-Indicator">-</span> <span class="nv">*title</span>
-    <span class="p p-Indicator">-</span> <span class="nv">*version</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!date</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;title</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span><span class="w"></span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
+<span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="kt">!slug</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nv">*title</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nv">*version</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!date</span><span class="w"></span>
 </code></pre></div>
 <p>Example of the resulting slug:</p>
 <div class="highlight"><pre><span></span><code>My_Awesome_Project-1.0-2018-05-10
 </code></pre></div>
 <p>Note that backends allow to override the top-level slug, so you may define different custom slugs for each backend:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">slug</span><span class="p">:</span> <span class="kt">!slug</span>
-            <span class="p p-Indicator">-</span> <span class="nv">*title</span>
-            <span class="p p-Indicator">-</span> <span class="nv">*version</span>
-            <span class="p p-Indicator">-</span> <span class="kt">!date</span>
-    <span class="nt">mkdocs</span><span class="p">:</span>
-        <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_awesome_project</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="kt">!slug</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nv">*title</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nv">*version</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!date</span><span class="w"></span>
+<span class="w">    </span><span class="nt">mkdocs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_awesome_project</span><span class="w"></span>
 </code></pre></div>
 <h4 id="version">Version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">5</span><span class="p p-Indicator">]</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="kt">!version</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5</span><span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div>
 <p>Resulting version:</p>
 <div class="highlight"><pre><span></span><code>1.0.5
 </code></pre></div>
 <p>If you wish to use the number of commits in the current branch as a part of your version, add the <code>!commit_count</code> tag:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="kt">!version</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!commit_count</span><span class="w"></span>
 </code></pre></div>
 <p>Resulting version:</p>
 <div class="highlight"><pre><span></span><code>1.85
@@ -1627,9 +1627,9 @@
 <li>correction—a positive or negative number to adjust the commit count.</li>
 </ul>
 <p>Suppose you want to bump the major version and start counting commits from the beginning. Also you want to use only number of commits in the <code>master</code> branch. So your config will look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="kt">!version</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-    <span class="p p-Indicator">-</span> <span class="kt">!commit_count</span> <span class="l l-Scalar l-Scalar-Plain">master -85</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="kt">!version</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="kt">!commit_count</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master -85</span><span class="w"></span>
 </code></pre></div>
 <p>Result:</p>
 <div class="highlight"><pre><span></span><code>2.0
@@ -1715,7 +1715,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

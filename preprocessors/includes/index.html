@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1662,19 +1662,19 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor with default options, add <code>includes</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a number of options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.includescache</span>
-        <span class="nt">recursive</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">extensions</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">j2</span>
-        <span class="nt">aliases</span><span class="p">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">includes</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.includescache</span><span class="w"></span>
+<span class="w">        </span><span class="nt">recursive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">        </span><span class="nt">extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">j2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">aliases</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>cache_dir</code></dt>
@@ -1840,9 +1840,9 @@
 &lt;/include&gt;
 </code></pre></div>
 <p>If the repository alias is defined in the project config, you can use it instead of the URL:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">includes</span><span class="p">:</span>
-    <span class="nt">aliases</span><span class="p">:</span>
-        <span class="nt">foo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/foo/bar.git</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">includes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">aliases</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/foo/bar.git</span><span class="w"></span>
 </code></pre></div>
 <p>And then in the source:</p>
 <div class="highlight"><pre><span></span><code>&lt;include&gt;$foo$path/to/doc.md&lt;/include&gt;
@@ -1947,7 +1947,7 @@ Include content from “Intro” up to the next heading of the same level:
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

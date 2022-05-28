@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1564,13 +1564,13 @@ $ tree  <span class="c1"># inspecting the project file structure</span>
 <span class="m">1</span> directory, <span class="m">6</span> files
 </code></pre></div>
 <p>First, let's add our preprocessor to the <code>foliant.yml</code>.</p>
-<div class="highlight"><pre><span></span><code>title: Gibberish Test
+<div class="highlight"><pre><span></span><code><span class="w">title: Gibberish Test</span>
 
-<span class="gi">+ preprocessors:</span>
-<span class="gi">+   - gibberish</span>
-<span class="gi">+</span>
-chapters:
-  - index.md
+<span class="gi">+ preprocessors:</span><span class="w"></span>
+<span class="gi">+   - gibberish</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w">chapters:</span>
+<span class="w"> </span> - index.md<span class="w"></span>
 </code></pre></div>
 <p>Now let's edit the <code>index.md</code> and use the <code>&lt;gibberish&gt;&lt;gibberish&gt;</code> tag a few times.</p>
 <div class="highlight"><pre><span></span><code># Welcome to Gibberish Test
@@ -1604,15 +1604,15 @@ Here are just two sentences of gibberish:
 Lof peuoy iiouy yyau qggedo evuoucaig. Pziqgsg ekiqepyu laeiridyc.
 </code></pre></div>
 <p>Looks like everything worked fine. Now let's set the <code>default_size</code> parameter to check if preprocessor options work too. Edit the <code>foliant.yml</code></p>
-<div class="highlight"><pre><span></span><code>title: Gibberish Test
+<div class="highlight"><pre><span></span><code><span class="w">title: Gibberish Test</span>
 
-preprocessors:
-<span class="gd">-   - gibberish</span>
-<span class="gi">+   - gibberish:</span>
-<span class="gi">+       default_size: 1</span>
+<span class="w">preprocessors:</span>
+<span class="gd">-   - gibberish</span><span class="w"></span>
+<span class="gi">+   - gibberish:</span><span class="w"></span>
+<span class="gi">+       default_size: 1</span><span class="w"></span>
 
-chapters:
-  - index.md
+<span class="w">chapters:</span>
+<span class="w"> </span> - index.md<span class="w"></span>
 </code></pre></div>
 <p>And run the build</p>
 <div class="highlight"><pre><span></span><code>$ foliant make pre
@@ -1722,7 +1722,7 @@ Wnuhocx uqny ns. Iu ieuiaea iogyjyfy kl eyyeex agayii aioaac yacjume.
     
       <script src="../../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../../.."}})</script>
       
     
   </body>

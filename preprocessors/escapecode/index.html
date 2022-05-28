@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1624,19 +1624,19 @@
 </code></pre></div>
 
 <p>Config example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 
-<span class="nt">escape_code</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">escape_code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 
-<span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="l l-Scalar l-Scalar-Plain">- includes</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="nn">...</span>
+<span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- includes</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
 </code></pre></div>
 <p>If the <code>escape_code</code> option isn’t used or set to <code>false</code>, backward compatibility mode is involved. In this mode EscapeCode and UnescapeCode aren’t applied automatically, but _unescape preprocessor is applied.</p>
 <p>In more complicated case, you may pass some custom options to EscapeCode preprocessor:</p>
@@ -1648,41 +1648,41 @@
 <p>The Python package that includes EscapeCode and UnescapeCode preprocessors is the dependence of Includes preprocessor since version 1.1.1. At the same time this package isn’t a dependence of Foliant core. To use <code>escape_code</code> config option in Foliant core, you have to install the package with EscapeCode and UnescapeCode preprocessors separately.</p>
 <h3 id="explicit-enabling">Explicit Enabling<a class="headerlink" href="#explicit-enabling" title="Permanent link">&para;</a></h3>
 <p>You may not want to use the <code>escape_code</code> option and call the preprocessors explicitly:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">escapecode</span>      <span class="c1"># usually the first list item</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">unescapecode</span>    <span class="c1"># usually the last list item</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">escapecode</span><span class="w">      </span><span class="c1"># usually the first list item</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unescapecode</span><span class="w">    </span><span class="c1"># usually the last list item</span><span class="w"></span>
 </code></pre></div>
 <p>Both preprocessors allow to override the path to the directory that is used to store temporary files:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">escapecode</span><span class="p">:</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="p p-Indicator">-</span> <span class="nt">unescapecode</span><span class="p">:</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">escapecode</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">unescapecode</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.escapecodecache</span><span class="w"></span>
 </code></pre></div>
 <p>The default values are shown in this example. EscapeCode and related UnescapeCode must work with the same cache directory.</p>
 <p>Note that if you use Includes preprocessor, and the included content doesn’t belong to the current Foliant project, there’s no way to escape raw parts of this content before Includes preprocessor is applied.</p>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>Since version 1.0.2, EscapeCode preprocessor supports the option <code>actions</code> in additional to <code>cache_dir</code>.</p>
 <p>The value of <code>actions</code> options should be a list of acceptable actions. By default, the following list is used:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
-    <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pre_blocks</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">inline_code</span>
+<div class="highlight"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">escape</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fence_blocks</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre_blocks</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inline_code</span><span class="w"></span>
 </code></pre></div>
 <p>This default list may be overridden. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">normalize</span>
-    <span class="p p-Indicator">-</span> <span class="nt">escape</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fence_blocks</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">inline_code</span>
-        <span class="p p-Indicator">-</span> <span class="nt">tags</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">plantuml</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seqdiag</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">comments</span>
+<div class="highlight"><pre><span></span><code><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normalize</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">escape</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fence_blocks</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inline_code</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">plantuml</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seqdiag</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">comments</span><span class="w"></span>
 </code></pre></div>
 <p>Meanings of parameters:</p>
 <ul>
@@ -1827,7 +1827,7 @@ And this is a pre code block:
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

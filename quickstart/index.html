@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1502,8 +1502,8 @@ Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> 
 <div class="highlight"><pre><span></span><code>$ foliant make docx
 </code></pre></div>
 <p>With Docker you will need to adjust the Dockerfile first, replace the first line with the following</p>
-<div class="highlight"><pre><span></span><code><span class="gd">- FROM foliant/foliant</span>
-<span class="gi">+ FROM foliant/foliant:pandoc</span>
+<div class="highlight"><pre><span></span><code><span class="gd">- FROM foliant/foliant</span><span class="w"></span>
+<span class="gi">+ FROM foliant/foliant:pandoc</span><span class="w"></span>
 </code></pre></div>
 <p>and rebuild the image</p>
 <div class="highlight"><pre><span></span><code>$ docker-compose build
@@ -1595,7 +1595,7 @@ Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> 
     
       <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:".."}})</script>
       
     
   </body>

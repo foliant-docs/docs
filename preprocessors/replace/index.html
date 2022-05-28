@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1582,18 +1582,18 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>replace</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">replace</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">replace</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has two options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
-      <span class="nt">dictionary</span><span class="p">:</span>
-        <span class="nt">Mike</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Michael</span>
-        <span class="nt">Sam</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Samuel</span>
-        <span class="nt">Tim</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Timoel</span>
-      <span class="nt">re_dictionary</span><span class="p">:</span>
-        <span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;![Figure](\1)&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">replace</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dictionary</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Mike</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Michael</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Sam</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Samuel</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Tim</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Timoel</span><span class="w"></span>
+<span class="w">      </span><span class="nt">re_dictionary</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;![Figure](\1)&#39;</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>dictionary</code></dt>
@@ -1604,10 +1604,10 @@
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Fill up the <code>dictionary</code> or/and <code>re_dictionary</code> in preprocessor options and the keys will be replaced with values.</p>
 <p>For example, if you wish that all images without title in your Markdown sources were titled "Figure", use the following config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">replace</span><span class="p">:</span>
-      <span class="nt">re_dictionary</span><span class="p">:</span>
-        <span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;![Figure](\1)&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">replace</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">re_dictionary</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="s">&#39;!\[\]\((.+?)\)&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;![Figure](\1)&#39;</span><span class="w"></span>
 </code></pre></div>
                 
                   
@@ -1690,7 +1690,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

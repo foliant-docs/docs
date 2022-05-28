@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1737,31 +1737,31 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You have to set up the correct config for this backend to work properly.</p>
 <p>Specify all options in <code>backend_config.confluence</code> section:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yml</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="s">&#39;https://my_confluence_server.org&#39;</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user_password</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Title of the page</span>
-    <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
-    <span class="nt">parent_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124442</span>
-    <span class="nt">parent_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Parent</span>
-    <span class="nt">test_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">notify_watchers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">nohead</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">restore_comments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">resolve_if_changed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
-    <span class="nt">verify_ssl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">cloud</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">attachments</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">license.txt</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">project.pdf</span>
-    <span class="nt">codeblocks</span><span class="p">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">passfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yml</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://my_confluence_server.org&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user_password</span><span class="w"></span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">124443</span><span class="w"></span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Title of the page</span><span class="w"></span>
+<span class="w">    </span><span class="nt">space_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;~user&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">parent_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">124442</span><span class="w"></span>
+<span class="w">    </span><span class="nt">parent_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parent</span><span class="w"></span>
+<span class="w">    </span><span class="nt">test_run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">notify_watchers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">nohead</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">restore_comments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resolve_if_changed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w"></span>
+<span class="w">    </span><span class="nt">verify_ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cloud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">attachments</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license.txt</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project.pdf</span><span class="w"></span>
+<span class="w">    </span><span class="nt">codeblocks</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>passfile</code></dt>
@@ -1815,12 +1815,12 @@ https://my_confluence_server.org/pages/viewpage.action?pageId<span class="o">=</
 <p>By default, if you specify <code>id</code> or <code>space_key</code> and <code>title</code> in foliant.yml, the whole project will be built and uploaded to this page.</p>
 <p>If you wish to upload separate chapters into separate articles, you need to specify the respective <code>id</code> or <code>space_key</code> and <code>title</code> in <em>meta section</em> of the chapter.</p>
 <p>Meta section is a YAML-formatted field-value section in the beginning of the document, which is defined like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">field</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="nt">field2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="nn">---</span>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<span class="nt">field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
+<span class="nt">field2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">Your chapter md-content</span>
+<span class="l l-Scalar l-Scalar-Plain">Your chapter md-content</span><span class="w"></span>
 </code></pre></div>
 <p>or like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
@@ -1834,13 +1834,13 @@ Your chapter md-content
 <p>The result of the above examples will be exactly the same. Just remember that first syntax, with three dashes --- will only work if it is in the beginning of the document. For all other cases use the meta-tag syntax.</p>
 </blockquote>
 <p>If you want to upload a chapter into confluence, add its properties under the <code>confluence</code> key like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My confluence page</span>
-    <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
-<span class="nn">---</span>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My confluence page</span><span class="w"></span>
+<span class="w">    </span><span class="nt">space_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;~user&quot;</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">You chapter md-content</span>
+<span class="l l-Scalar l-Scalar-Plain">You chapter md-content</span><span class="w"></span>
 </code></pre></div>
 <blockquote>
 <p><strong>Important notice!</strong>
@@ -1869,34 +1869,34 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, atque!
 <h4 id="creating-pages">Creating pages<a class="headerlink" href="#creating-pages" title="Permanent link">&para;</a></h4>
 <p>If you want a new page to be created for content in your Foliant project, just supply in foliant.yml the space key and a title that does not yet exist in this space. Remember that in Confluence page titles are unique inside one space. If you use a title of an already existing page, the backend will attempt to edit it and replace its content with your project.</p>
 <p>Example config for this situation is:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My unique title</span>
-    <span class="nt">space_key</span><span class="p">:</span> <span class="s">&quot;~user&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span><span class="w"></span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My unique title</span><span class="w"></span>
+<span class="w">    </span><span class="nt">space_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;~user&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>Now if you change the title in your config, confluence will <em>create a new page with the new title</em>, leaving the old one intact.</p>
 <p>If you want to change the title of your page, the answer is in the following section.</p>
 <h4 id="updating-pages">Updating pages<a class="headerlink" href="#updating-pages" title="Permanent link">&para;</a></h4>
 <p>Generally to update the page contents you may use the same config you used to create it (see the previous section). If the page with a specified title exists, it will be updated.</p>
 <p>Also, you can just specify the id of an existing page. After build its contents will be updated.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span><span class="w"></span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">124443</span><span class="w"></span>
 </code></pre></div>
 <p>This is also <em>the only</em> way to edit a page title. If <code>title</code> param is specified, the backend will attempt to change the page's title to the new one:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">confluence</span><span class="p">:</span>
-    <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">124443</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">New unique title</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span><span class="w"></span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">124443</span><span class="w"></span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">New unique title</span><span class="w"></span>
 </code></pre></div>
 <h4 id="updating-part-of-a-page">Updating part of a page<a class="headerlink" href="#updating-part-of-a-page" title="Permanent link">&para;</a></h4>
 <p>Confluence backend can also upload an article into the middle of a Confluence page, leaving all the rest of it intact. To do this you need to add an <em>Anchor</em> into your page in the place where you want Foliant content to appear.</p>
@@ -1965,13 +1965,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laboriosam c
 </code></pre></div>
 <h4 id="code-blocks-processing">Code blocks processing<a class="headerlink" href="#code-blocks-processing" title="Permanent link">&para;</a></h4>
 <p>Since 0.6.9 backend converts Markdown code blocks into Confluence code-block macros. You can tune the macros appearance by specifying some options in <code>codeblocks</code> config section of Confluence backend</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">codeblocks</span><span class="p">:</span>  <span class="c1"># all are optional</span>
-            <span class="nt">theme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">django</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Code example</span>
-            <span class="nt">linenumbers</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-            <span class="nt">collapse</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">codeblocks</span><span class="p">:</span><span class="w">  </span><span class="c1"># all are optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">django</span><span class="w"></span>
+<span class="w">            </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Code example</span><span class="w"></span>
+<span class="w">            </span><span class="nt">linenumbers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">            </span><span class="nt">collapse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>theme</code></dt>
@@ -2038,19 +2038,19 @@ def test3():
 <p>There are several ways to supply credentials for your confluence server.</p>
 <p><strong>1. In foliant.yml</strong></p>
 <p>The most basic way is just to put credentials in foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-        <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pass</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">        </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pass</span><span class="w"></span>
 </code></pre></div>
 <p>It's not very secure because foliant.yml is usually visible to everybody in your project's git repository.</p>
 <p><strong>2. Omit credentials in config</strong></p>
 <p>A slightly more secure way is to remove password or both login and password from config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-        <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">        </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span><span class="w"></span>
 </code></pre></div>
 <p>In this case Foliant will prompt for missing credentials during each build:</p>
 <div class="highlight"><pre><span></span><code>$ foliant make confluence
@@ -2064,11 +2064,11 @@ $
 </code></pre></div>
 <p><strong>3. Using environment variables</strong></p>
 <p>Foliant 1.0.12 can access environment variables inside config files with <code>!env</code> modifier.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-        <span class="nt">login</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_USER</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_PASS</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">        </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="kt">!env</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_USER</span><span class="w"></span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="kt">!env</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CONFLUENCE_PASS</span><span class="w"></span>
 </code></pre></div>
 <p>Now you can add these variables into your command:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">CONFLUENCE_USER</span><span class="o">=</span>user <span class="nv">CONFLUENCE_PASS</span><span class="o">=</span>pass foliant make confluence
@@ -2079,28 +2079,28 @@ $
 <p><strong>4. Using passfile</strong></p>
 <p>Finally, you can use a passfile. <em>Passfile</em> is a yaml-file which holds all your passwords. You can keep it out from git-repository by storing it only on your local machine and production server.</p>
 <p>To use passfile, add a <code>passfile</code> option to foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-        <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">        </span><span class="nt">passfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span><span class="w"></span>
 </code></pre></div>
 <p>The syntax of the passfile is the following:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">hostname</span><span class="p">:</span>
-    <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+<div class="highlight"><pre><span></span><code><span class="nt">hostname</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w"></span>
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="p p-Indicator">:</span>
-    <span class="nt">user1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wFwG34uK</span>
-    <span class="nt">user2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEUeU3b4</span>
-<span class="l l-Scalar l-Scalar-Plain">https://another_confluence_server.org</span><span class="p p-Indicator">:</span>
-    <span class="nt">admin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">adminpass</span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">user1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wFwG34uK</span><span class="w"></span>
+<span class="w">    </span><span class="nt">user2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEUeU3b4</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">https://another_confluence_server.org</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">admin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adminpass</span><span class="w"></span>
 </code></pre></div>
 <p>If there are several records for a specified host in passfile (like in the example above), Foliant will pick the first one. If you want specific one of them, add the login parameter to your foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">confluence</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span>
-        <span class="nt">passfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span>
-        <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">user2</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confluence</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://my_confluence_server.org</span><span class="w"></span>
+<span class="w">        </span><span class="nt">passfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confluence_secrets.yaml</span><span class="w"></span>
+<span class="w">        </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user2</span><span class="w"></span>
 </code></pre></div>
 <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
 <p>The following wonderful tools and libraries are used in foliantcontrib.confluence:</p>
@@ -2191,7 +2191,7 @@ $
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

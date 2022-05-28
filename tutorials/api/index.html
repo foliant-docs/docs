@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1752,19 +1752,19 @@ foliant init
         └── index.md
 </code></pre></div>
 <p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">foliant/foliant:full</span>
 </code></pre></div>
 <h3 id="configuring-project">Configuring project<a class="headerlink" href="#configuring-project" title="Permanent link">&para;</a></h3>
 <p>Now let’s set up <code>foliant.yml</code>. Right now it looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">OpenAPI docs</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenAPI docs</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
 </code></pre></div>
 <p>First add and fill up the <code>preprocessors</code> section at the bottom:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your API spec file, relative to project root</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">swaggerdoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_path</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span><span class="w"> </span><span class="c1"># path to your API spec file, relative to project root</span><span class="w"></span>
 </code></pre></div>
 <p>At this stage you may also specify path to custom templates dir in <code>environment: {user_templates: path/to/custom/templates}</code> parameter. Templates describe the exact way of how to convert structured specification file into a Markdown document. For this tutorial we will be using default templates because they are perfect for our static site. Check <a href="https://github.com/Mermade/widdershins#templates">Widdershins docs</a> for detailed info on templates.</p>
 <p>The last thing we need to do is point Foliant where to insert the generated Markdown from the spec file. We already have a source file created for us by <code>init</code> command, called <code>index.md</code>, so let’s use it to store our API docs.</p>
@@ -1828,19 +1828,19 @@ foliant init
         └── index.md
 </code></pre></div>
 <p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">foliant/foliant:full</span>
 </code></pre></div>
 <h3 id="configuring-project_1">Configuring project<a class="headerlink" href="#configuring-project_1" title="Permanent link">&para;</a></h3>
 <p>Now let’s set up <code>foliant.yml</code>. Right now it looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">API docs</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w"></span>
 </code></pre></div>
 <p>First add and fill up the <code>preprocessors</code> section at the bottom:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">ramldoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span> <span class="c1"># path to your API spec file, relative to project root</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ramldoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_path</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_api.yaml</span><span class="w"> </span><span class="c1"># path to your API spec file, relative to project root</span><span class="w"></span>
 </code></pre></div>
 <p>At this stage you may also specify path to custom templates dir in the <code>template_dir</code> parameter. Templates describe the exact way of how to convert structured specification file into a Markdown document. raml2html uses <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> templates, which are stored in the theme. So the easiest way to create your own templates is to copy <a href="https://github.com/Vanderhoof/raml2html-full-markdown-theme/tree/master/templates/">default</a> ones and adjust them to your needs. But we will use the default template which works great with Slate.</p>
 <p>The last thing we need to do is point Foliant where to insert the generated Markdown from the spec file. We already have a source file created for us by <code>init</code> command, called <code>index.md</code>, so let’s use it to store our API docs.</p>
@@ -1898,14 +1898,14 @@ foliant init
         └── index.md
 </code></pre></div>
 <p>If you wish to use Docker with full Foliant image, which is the recommended way to build Foliant projects, then open generated <code>Dockerfile</code> and replace its contents with the following line:</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">foliant/foliant:full</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">foliant/foliant:full</span>
 </code></pre></div>
 <h3 id="configuring-project_2">Configuring project<a class="headerlink" href="#configuring-project_2" title="Permanent link">&para;</a></h3>
 <p>Now check your <code>foliant.yml</code>. Right now it looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">API docs</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">API docs</span><span class="w"></span>
 
-<span class="nt">chapters</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">index.md</span>  <span class="c1"># this should be your API Blueprint specification</span>
+<span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span><span class="w">  </span><span class="c1"># this should be your API Blueprint specification</span><span class="w"></span>
 </code></pre></div>
 <p>It may be hard to believe, but no other configuration is required! Let’s build our project:</p>
 <div class="highlight"><pre><span></span><code>foliant make site --with aglio
@@ -1923,11 +1923,11 @@ foliant init
 <p><img alt="Aglio static site" src="../img/aglio1.png" /></p>
 <p>It’s not near as attractive as the Slate site we had in previous examples. But don’t worry, Aglio supports styling with CSS and layout control with <a href="http://jade-lang.com/">Jade</a> templates. It also has several built-in themes, which look much better than the default one.</p>
 <p>Open your <code>foliant.yml</code> again and add following lines at the end:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">aglio</span><span class="p">:</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">theme-variables</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">streak</span>
-            <span class="nt">theme-template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">triple</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">aglio</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">theme-variables</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">streak</span><span class="w"></span>
+<span class="w">            </span><span class="nt">theme-template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triple</span><span class="w"></span>
 </code></pre></div>
 <p>Now run the same build command:</p>
 <div class="highlight"><pre><span></span><code>foliant make site --with aglio
@@ -2016,7 +2016,7 @@ foliant init
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

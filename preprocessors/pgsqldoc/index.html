@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1611,22 +1611,22 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>pgsqldoc</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pgsqldoc</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pgsqldoc</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a number of options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">pgsqldoc</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
-        <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5432</span>
-        <span class="nt">dbname</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
-        <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
-        <span class="nt">draw</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">filters</span><span class="p">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">...</span>
-        <span class="nt">doc_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pgsqldoc.j2</span>
-        <span class="nt">scheme_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">scheme.j2</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pgsqldoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span><span class="w"></span>
+<span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span><span class="w"></span>
+<span class="w">        </span><span class="nt">dbname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span><span class="w"></span>
+<span class="w">        </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span><span class="w"></span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">draw</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">        </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">        </span><span class="nt">doc_template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pgsqldoc.j2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">scheme_template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scheme.j2</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>host</code></dt>
@@ -1675,13 +1675,13 @@ Introduction text for database documentation.
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>You can add filters to exclude some tables from the documentation. Pgsqldocs supports several SQL-like filtering operators and a determined list of filtering fields.</p>
 <p>You can switch on filters either in foliant.yml file like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">pgsqldoc</span><span class="p">:</span>
-    <span class="nt">filters</span><span class="p">:</span>
-      <span class="nt">eq</span><span class="p">:</span>
-        <span class="nt">schema</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">public</span>
-      <span class="nt">regex</span><span class="p">:</span>
-        <span class="nt">table_name</span><span class="p">:</span> <span class="s">&#39;main_.+&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pgsqldoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">eq</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span><span class="w"></span>
+<span class="w">      </span><span class="nt">regex</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">table_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;main_.+&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>or in tag options using the same yaml-syntax:</p>
 <div class="highlight"><pre><span></span><code>&lt;pgsqldoc filters=&quot;
@@ -1760,16 +1760,16 @@ eq:
 </tbody>
 </table>
 <p>The syntax for using filters in configuration files is following:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
-  <span class="nt">&lt;operator&gt;</span><span class="p">:</span>
-    <span class="nt">&lt;field&gt;</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
+<div class="highlight"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&lt;operator&gt;</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&lt;field&gt;</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
 </code></pre></div>
 <p>If <code>value</code> should be list like for <code>in</code> operator, use YAML-lists instead:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span>
-  <span class="nt">in</span><span class="p">:</span>
-    <span class="nt">schema</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">public</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">corp</span>
+<div class="highlight"><pre><span></span><code><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">in</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schema</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">corp</span><span class="w"></span>
 </code></pre></div>
 <h3 id="about-templates">About Templates<a class="headerlink" href="#about-templates" title="Permanent link">&para;</a></h3>
 <p>The structure of generated documentation is defined by jinja-templates. You can choose what elements will appear in the documentation, change their positions, add constant text, change layouts and more. Check the <a href="http://jinja.pocoo.org/docs/2.10/templates/">Jinja documentation</a> for info on all cool things you can do with templates.</p>
@@ -1862,7 +1862,7 @@ eq:
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

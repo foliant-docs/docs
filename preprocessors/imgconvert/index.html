@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1540,16 +1540,16 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>imgconvert</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">imgconvert</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">imgconvert</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a number of options with the following default values:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">imgconvert</span><span class="p">:</span>
-        <span class="nt">convert_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">convert</span>
-        <span class="nt">cache_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">.imgconvertcache</span>
-        <span class="nt">image_width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-        <span class="nt">formats</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">imgconvert</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">convert_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">convert</span><span class="w"></span>
+<span class="w">        </span><span class="nt">cache_dir</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.imgconvertcache</span><span class="w"></span>
+<span class="w">        </span><span class="nt">image_width</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">        </span><span class="nt">formats</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>convert_path</code></dt>
@@ -1563,13 +1563,13 @@
 </dl>
 <p>The <code>formats</code> option may be used to define lists of targets for each format. If targets for a format are not specified explicitly, the preprocessor will be applied to all targets.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">formats</span><span class="p">:</span>
-    <span class="nt">eps</span><span class="p">:</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
-    <span class="nt">svg</span><span class="p">:</span>
-        <span class="nt">targets</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docx</span>
+<div class="highlight"><pre><span></span><code><span class="nt">formats</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">eps</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">targets</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">site</span><span class="w"></span>
+<span class="w">    </span><span class="nt">svg</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">targets</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docx</span><span class="w"></span>
 </code></pre></div>
 <p>Formats should be named in lowercase.</p>
                 
@@ -1653,7 +1653,7 @@
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

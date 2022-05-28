@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1695,26 +1695,26 @@ Result: My_Project-2020-12-04.tex
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>You don't have to put anything in the config to use Pandoc backend. If it's installed, Foliant will detect it.</p>
 <p>You can however customize the backend with options in <code>backend_config.pandoc</code> section:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">pandoc</span><span class="p">:</span>
-    <span class="nt">pandoc_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
-    <span class="nt">build_whole_project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template.tex</span>
-    <span class="nt">vars</span><span class="p">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">meta</span><span class="p">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">reference.docx</span>
-    <span class="nt">reference_odt</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">reference.odt</span>
-    <span class="nt">css</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">epub.css</span>
-    <span class="nt">params</span><span class="p">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">filters</span><span class="p">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">markdown_flavor</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">markdown</span>
-    <span class="nt">markdown_extensions</span><span class="p">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My_Awesome_Custom_Slug</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w"></span>
+<span class="w">    </span><span class="nt">build_whole_project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template.tex</span><span class="w"></span>
+<span class="w">    </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">meta</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">reference_docx</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reference.docx</span><span class="w"></span>
+<span class="w">    </span><span class="nt">reference_odt</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reference.odt</span><span class="w"></span>
+<span class="w">    </span><span class="nt">css</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epub.css</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">markdown_flavor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">markdown</span><span class="w"></span>
+<span class="w">    </span><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My_Awesome_Custom_Slug</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>pandoc_path</code></dt>
@@ -1751,23 +1751,23 @@ Result: My_Project-2020-12-04.tex
 <dd>is the result file name without suffix (e.g. <code>.pdf</code>). Overrides top-level config option <code>slug</code>.</dd>
 </dl>
 <p>Example config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">pandoc</span><span class="p">:</span>
-    <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">templates/basic.tex</span>
-    <span class="nt">vars</span><span class="p">:</span>
-      <span class="nt">toc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This Is a Title</span>
-      <span class="nt">second_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This Is a Subtitle</span>
-      <span class="nt">logo</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">templates/logo.png</span>
-      <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2020</span>
-    <span class="nt">params</span><span class="p">:</span>
-      <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
-      <span class="nt">listings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">number_sections</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">markdown_extensions</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">simple_tables</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fenced_code_blocks</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">strikeout</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">templates/basic.tex</span><span class="w"></span>
+<span class="w">    </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">toc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">      </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This Is a Title</span><span class="w"></span>
+<span class="w">      </span><span class="nt">second_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This Is a Subtitle</span><span class="w"></span>
+<span class="w">      </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">templates/logo.png</span><span class="w"></span>
+<span class="w">      </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2020</span><span class="w"></span>
+<span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">pdf_engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xelatex</span><span class="w"></span>
+<span class="w">      </span><span class="nt">listings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">      </span><span class="nt">number_sections</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">simple_tables</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fenced_code_blocks</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">strikeout</span><span class="w"></span>
 </code></pre></div>
 <h3 id="build-modes">Build modes<a class="headerlink" href="#build-modes" title="Permanent link">&para;</a></h3>
 <p>Since 1.1.0 you can build parts of your project into separate PDFs, along with the main PDF of the whole project.</p>
@@ -1849,14 +1849,14 @@ additional.pdf
 l.627 ...through<span class="o">{</span><span class="se">\l</span>stinline!git clone <span class="o">[</span>SSH-ключ<span class="o">]</span>!<span class="o">}</span>
 </code></pre></div>
 <p>To fix it, set <code>listings</code> parameter to <code>false</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-  <span class="nt">pandoc</span><span class="p">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-    <span class="l l-Scalar l-Scalar-Plain">params</span><span class="p p-Indicator">:</span>
-      <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
-      <span class="nt">listings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-      <span class="nt">number_sections</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">params</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">pdf_engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xelatex</span><span class="w"></span>
+<span class="w">      </span><span class="nt">listings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">      </span><span class="nt">number_sections</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
                 
                   
@@ -1939,7 +1939,7 @@ l.627 ...through<span class="o">{</span><span class="se">\l</span>stinline!git c
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>

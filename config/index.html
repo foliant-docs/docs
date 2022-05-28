@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1667,10 +1667,10 @@
 <h3 id="root-options">Root Options<a class="headerlink" href="#root-options" title="Permanent link">&para;</a></h3>
 <p>These are the options that are placed at the root of the config file. There are several built-in options, which are described below, but extensions may introduce their own root options (for example, <a href="alt_structure/">AltStructure</a> or <a href="../preprocessors/escapecode/">EscapeCode and UnescapeCode</a>). Refer to each extension’s respective docs for details.</p>
 <p>Here are all built-in root options:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span>
-<span class="nt">slug</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myproj</span>
-<span class="nt">src_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">src</span>
-<span class="nt">tmp_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">__folianttmp__</span>
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Awesome Project</span><span class="w"></span>
+<span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myproj</span><span class="w"></span>
+<span class="nt">src_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src</span><span class="w"></span>
+<span class="nt">tmp_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">__folianttmp__</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>title</code> <em>(string)</em></dt>
@@ -1686,10 +1686,10 @@
 <p><em>(list)</em></p>
 <p><code>chapters</code> is a list of paths to the Markdown sources which you want to be used in the project. The paths are specified relative to your <code>src</code> dir.</p>
 <p>Here’s a basic chapters list:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tutorial.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">definitions.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorial.md</span><span class="w"></span>
 </code></pre></div>
 <p>Chapters may be nested with mappings and sublists. These complex structures may be treated differently by different backends: some may ignore nesting, some may use it to alter the resulting build. But usually, these two ideas are shared between all backends:</p>
 <ul>
@@ -1697,69 +1697,69 @@
 <li>the order in which chapters are mentioned in the list will be preserved in the resulting build.</li>
 </ul>
 <p>Consider this example chapters list:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>  <span class="c1"># list item</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>  <span class="c1"># list item</span>
-    <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>  <span class="c1"># mapping with one element</span>
-    <span class="p p-Indicator">-</span> <span class="nt">Creating Documentation With Foliant</span><span class="p">:</span>  <span class="c1"># mapping with nested list</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span>
-        <span class="p p-Indicator">-</span> <span class="nt">Preparing Config</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">root options.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">chapters.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">backend_config.md</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create_sources.md</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">building_project.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.md</span><span class="w">  </span><span class="c1"># list item</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">definitions.md</span><span class="w">  </span><span class="c1"># list item</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">How To Use This Tutorial</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span><span class="w">  </span><span class="c1"># mapping with one element</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Creating Documentation With Foliant</span><span class="p">:</span><span class="w">  </span><span class="c1"># mapping with nested list</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Preparing Config</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root options.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend_config.md</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create_sources.md</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">building_project.md</span><span class="w"></span>
 </code></pre></div>
 <p>In this example first two chapters are defined as simple list items, the third chapter is a mapping with one element, and after that, we see several mappings with nested lists.</p>
 <p>If we were building a PDF document with <a href="../backends/pandoc/">Pandoc backend</a> or a static site with <a href="../backends/slate/">Slate backend</a>, this complex chapter structure will be ignored, as if we have supplied a simple flat list:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">intro.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">definitions.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">root options.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">chapters.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">backend_config.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create_sources.md</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">building_project.md</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">definitions.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root options.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend_config.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create_sources.md</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">building_project.md</span><span class="w"></span>
 </code></pre></div>
 <p>In any case, we would get a one-file PDF or a one-page site with data from listed Markdown files in the provided order.</p>
 <p>But if we were building a site with <a href="../backends/mkdocs/#mkdocs">MkDocs backend</a>, mappings would become meaningful.</p>
 <p>For example, this element:</p>
-<div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">How To Use This Tutorial</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">How To Use This Tutorial</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorial_help.md</span><span class="w"></span>
 </code></pre></div>
 <p>means "take the source from <code>tutorial_help.md</code> but change its title to <code>How To Use This Tutorial</code>" in the sidebar.</p>
 <p>And this element:</p>
-<div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">Creating Documentation With Foliant</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span>
-        <span class="p p-Indicator">-</span> <span class="nt">Preparing Config</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">root options.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">chapters.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">backend_config.md</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Creating Documentation With Foliant</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprequisites.md</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Preparing Config</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root options.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preprocessors.md</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend_config.md</span><span class="w"></span>
 </code></pre></div>
 <p>means "create a subsection <strong>Creating Documentation With Foliant</strong> in the sidebar and nest the <code>preprequisites.md</code> chapter inside. Then nest another subsection <strong>Preparing Config</strong> within the first one, and nest four other chapters inside of it".</p>
 <p>Refer to each backend’s respective docs for details on how they work with chapters.</p>
 <h3 id="preprocessors">preprocessors<a class="headerlink" href="#preprocessors" title="Permanent link">&para;</a></h3>
 <p><em>(list)</em></p>
 <p>All preprocessors which you want to be used in your project, should be listed under the <code>preprocessors</code> section:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">macros</span><span class="p">:</span>  <span class="c1"># options are adjusted</span>
-        <span class="nt">macros</span><span class="p">:</span>
-            <span class="nt">ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flags</span>  <span class="c1"># all options are set to defaults</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">includes</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">blockdiag</span>
-    <span class="p p-Indicator">-</span> <span class="nt">plantuml</span><span class="p">:</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">config</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">configs/plantuml.cfg</span>
-    <span class="p p-Indicator">-</span> <span class="nt">graphviz</span><span class="p">:</span>
-        <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">svg</span>
-        <span class="nt">as_image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">Gdpi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span><span class="w">  </span><span class="c1"># options are adjusted</span><span class="w"></span>
+<span class="w">        </span><span class="nt">macros</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;if backends=&quot;pandoc&quot;&gt;{pandoc}&lt;/if&gt;&lt;if backends=&quot;mkdocs&quot;&gt;{mkdocs}&lt;/if&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flags</span><span class="w">  </span><span class="c1"># all options are set to defaults</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blockdiag</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">plantuml</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">config</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configs/plantuml.cfg</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">graphviz</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">svg</span><span class="w"></span>
+<span class="w">        </span><span class="nt">as_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">Gdpi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 </code></pre></div>
 <p>Each preprocessor has to be put in a separate list item. If you don’t need to set any options, just put the preprocessor’s name in the item (<code>flags</code>, <code>includes</code>, and <code>blockdiag</code> in the example above). If you are setting preprocessor options, then make it a mapping, with key being the preprocessor name, and value — another mapping, with preprocessor options. (<code>macros</code>, <code>plantuml</code>, and <code>graphviz</code> in the example above).</p>
 <p>Refer to each preprocessor’s respective docs for details on which options they have and how to set them.</p>
@@ -1778,25 +1778,25 @@
 <h3 id="backend_config">backend_config<a class="headerlink" href="#backend_config" title="Permanent link">&para;</a></h3>
 <p><em>(mapping)</em></p>
 <p>Keep all your backend settings in <code>backend_config</code> section:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template/docs.tex</span>
-        <span class="nt">vars</span><span class="p">:</span>
-            <span class="nt">title</span><span class="p">:</span> <span class="nv">*title</span>
-            <span class="nt">subtitle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">User’s Manual</span>
-            <span class="nt">logo</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">template/octopus-black-512.png</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">pdf_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xelatex</span>
-            <span class="nt">listings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">mkdocs</span><span class="p">:</span>
-        <span class="nt">use_title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">use_chapters</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">use_headings</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-        <span class="nt">mkdocs.yml</span><span class="p">:</span>
-            <span class="nt">repo_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foliant-docs/docs</span>
-            <span class="nt">theme</span><span class="p">:</span>
-                <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">material</span>
-                <span class="nt">custom_dir</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">./theme/</span>
+<div class="highlight"><pre><span></span><code><span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template/docs.tex</span><span class="w"></span>
+<span class="w">        </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="nv">*title</span><span class="w"></span>
+<span class="w">            </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User’s Manual</span><span class="w"></span>
+<span class="w">            </span><span class="nt">logo</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template/octopus-black-512.png</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">pdf_engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xelatex</span><span class="w"></span>
+<span class="w">            </span><span class="nt">listings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">mkdocs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">use_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">        </span><span class="nt">use_chapters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">        </span><span class="nt">use_headings</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">        </span><span class="nt">mkdocs.yml</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foliant-docs/docs</span><span class="w"></span>
+<span class="w">            </span><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span><span class="w"></span>
+<span class="w">                </span><span class="nt">custom_dir</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./theme/</span><span class="w"></span>
 </code></pre></div>
 <p>Unlike <code>preprocessors</code> section, <code>backend_config</code> is not a list but a mapping. Hence, the order in which you define backends is not important.</p>
 <p>Moreover, you can even skip adding a backend into <code>backend_config</code> and still be able to build a project with it. It will just mean that you are using default settings.</p>
@@ -1805,24 +1805,24 @@
 <h3 id="include">!include<a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
 <p>The <code>!include</code> modifier allows inserting content from another YAML-file.</p>
 <p>For example, if your chapters list has grown so big, that you want to keep it separately from the main config, you can put it into <code>chapters.yml</code> file and include it in <code>foliant.yml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">chapters.yml</span>
+<div class="highlight"><pre><span></span><code><span class="nt">chapters</span><span class="p">:</span><span class="w"> </span><span class="kt">!include</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chapters.yml</span><span class="w"></span>
 </code></pre></div>
 <h3 id="path-project_path-rel_path">!path, !project_path, !rel_path<a class="headerlink" href="#path-project_path-rel_path" title="Permanent link">&para;</a></h3>
 <p>When used in foliant.yml, <code>!path</code>, <code>!project_path</code>, <code>!rel_path</code> all do the same thing: they resolve the path to an absolute path to make sure the preprocessor or backend processes this file properly.</p>
 <p>It is recommended, that whenever you supply a path to any file in options, to precede it with the <code>!path</code> modifier:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">swaggerdoc</span><span class="p">:</span>
-        <span class="nt">spec_path</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.yml</span>
-        <span class="nt">environment</span><span class="p">:</span>
-            <span class="nt">user_templates</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">widdershins_templates</span>
-    <span class="p p-Indicator">-</span> <span class="nt">plantuml</span><span class="p">:</span>
-        <span class="nt">params</span><span class="p">:</span>
-            <span class="nt">config</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">configs/plantuml.cfg</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">swaggerdoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">spec_path</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.yml</span><span class="w"></span>
+<span class="w">        </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">user_templates</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">widdershins_templates</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">plantuml</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">config</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configs/plantuml.cfg</span><span class="w"></span>
 
-<span class="nt">backend_config</span><span class="p">:</span>
-    <span class="nt">pandoc</span><span class="p">:</span>
-        <span class="nt">template</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">pandoc/tex_templates/main.tex</span>
-        <span class="nt">reference_docx</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">pandoc/docx_references/basic.docx</span>
+<span class="nt">backend_config</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">pandoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc/tex_templates/main.tex</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference_docx</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc/docx_references/basic.docx</span><span class="w"></span>
 </code></pre></div>
 <p>Why there are three of them then, would you ask? The reason is that all <em>foliant tag options</em> in Markdown source files are in fact also YAML-strings, which means that you can supply a list in tag option like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">jinja2</span> <span class="na">vars</span><span class="o">=</span><span class="s">&quot;[a1, a2, a3]&quot;</span><span class="p">&gt;</span>
@@ -1847,13 +1847,13 @@ Received the variables!
 <h3 id="env"><code>!env</code><a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
 <p>The <code>!env</code> modifier allows you to access environment variables in the config, as well as in tag options.</p>
 <p>It is useful if you don’t want to keep credentials in your config files, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># foliant.yml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># foliant.yml</span><span class="w"></span>
 
-<span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">dbdoc</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
-        <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
-        <span class="nt">password</span><span class="p">:</span> <span class="kt">!env</span> <span class="l l-Scalar l-Scalar-Plain">DBA_PASSWORD</span>
+<span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dbdoc</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span><span class="w"></span>
+<span class="w">        </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admin</span><span class="w"></span>
+<span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="kt">!env</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DBA_PASSWORD</span><span class="w"></span>
 </code></pre></div>
 <p>Now to build this project add the variable to your command:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">DBA_PASSWORD</span><span class="o">=</span>WQHsaio901SY foliant make pdf
@@ -1942,7 +1942,7 @@ Received the variables!
     
       <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:".."}})</script>
       
     
   </body>

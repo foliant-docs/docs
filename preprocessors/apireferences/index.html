@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-4.6.3">
     
     
       
@@ -1918,13 +1918,13 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Minimal sufficiant foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
-                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;Operation</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w">  </span><span class="c1"># path to your API website</span><span class="w"></span>
+<span class="w">                </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Operation</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
 <h4 id="recipe-2-find-by-tag-id">Recipe 2: find by tag id<a class="headerlink" href="#recipe-2-find-by-tag-id" title="Permanent link">&para;</a></h4>
@@ -1932,14 +1932,14 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Minimal sufficiant foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
-                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w">  </span><span class="c1"># path to your API website</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span><span class="w"></span>
 </code></pre></div>
 <p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
 <h4 id="recipe-3-generate-tag-id">Recipe 3: generate tag id<a class="headerlink" href="#recipe-3-generate-tag-id" title="Permanent link">&para;</a></h4>
@@ -1947,27 +1947,27 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Minimal sufficiant foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>  <span class="c1"># path to your API website</span>
-                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">slate</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate_anchor</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w">  </span><span class="c1"># path to your API website</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span><span class="w"></span>
 </code></pre></div>
 <p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
 <h4 id="recipe-4-find-link-for-swaggerui">Recipe 4: find link for SwaggerUI<a class="headerlink" href="#recipe-4-find-link-for-swaggerui" title="Permanent link">&para;</a></h4>
 <p>We have a SwaggerUI website and we need to find link to the method by reference `<code>GET /user/status</code>``.</p>
 <p>Method anchors on SwaggerUI consist of tag and operationId, both of which are not present in our reference. APIReferences can find them for you in the spec file. Let's assume that correct tag and operationId are <code>usertag</code> and <code>getStatus</code>.</p>
 <p>Minimal sufficiant foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_for_swagger</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger_ui</span>  <span class="c1"># path to your API website</span>
-                <span class="nt">spec</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>  <span class="c1"># path or direct url to OpenAPI spec</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate_for_swagger</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/swagger_ui</span><span class="w">  </span><span class="c1"># path to your API website</span><span class="w"></span>
+<span class="w">                </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.json</span><span class="w">  </span><span class="c1"># path or direct url to OpenAPI spec</span><span class="w"></span>
 </code></pre></div>
 <p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/swagger_ui#/usertag/getStatus">GET /user/status</a></p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
@@ -1975,58 +1975,58 @@
 </code></pre></div>
 <h3 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>To enable the preprocessor, add <code>apireferences</code> to <code>preprocessors</code> section in the project config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apireferences</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apireferences</span><span class="w"></span>
 </code></pre></div>
 <p>The preprocessor has a lot of options. For your convenience, the required options are marked <em>(required)</em>; and those options which are used in customization are marked <em>(optional)</em>. Most likely you will need just one or two of the latter.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
-    <span class="nt">targets</span><span class="p">:</span>  <span class="c1"># optional. default: []</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">site</span>
-    <span class="nt">trim_if_targets</span><span class="p">:</span> <span class="c1"># optional. default: []</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pdf</span>
-    <span class="nt">prefix_to_ignore</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ignore</span>  <span class="c1"># optional</span>
-    <span class="nt">warning_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>  <span class="c1"># optional</span>
-    <span class="nt">reference</span><span class="p">:</span>  <span class="c1"># optional</span>
-        <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="nv">*ref_pattern</span>
-          <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-          <span class="nt">only_defined_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-          <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
-          <span class="nt">trim_template</span><span class="p">:</span> <span class="s">&#39;`{verb}</span><span class="nv"> </span><span class="s">{command}`&#39;</span>
-        <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="nv">*another_ref_pattern</span>  <span class="c1"># second reference config. Unlisted options are default</span>
-          <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**{verb}</span><span class="nv"> </span><span class="s">{command}**&#39;</span>
-    <span class="nt">API</span><span class="p">:</span>  <span class="c1"># below are examples for each mode</span>
-        <span class="nt">Client-API</span><span class="p">:</span>  <span class="c1"># reference prefix</span>
-            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
-            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
-            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>  <span class="c1"># optional</span>
-            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
-        <span class="nt">Admin-API</span><span class="p">:</span>
-            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
-            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span>
-            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>  <span class="c1"># optional</span>
-            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
-            <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span>  <span class="c1"># optional</span>
-            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
-            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
-        <span class="nt">External-API</span><span class="p">:</span>
-            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
-            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/external</span>
-            <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
-            <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span>  <span class="c1"># optional</span>
-            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
-            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
-        <span class="nt">Inernal-API</span><span class="p">:</span>
-            <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span>
-            <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/swagger-ui</span>
-            <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;/{tag}/{operation_id}&#39;</span>
-            <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">no-transform</span>
-            <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>  <span class="c1"># optional</span>
-            <span class="nt">login</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">login</span>  <span class="c1"># optional</span>
-            <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>  <span class="c1"># optional</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targets</span><span class="p">:</span><span class="w">  </span><span class="c1"># optional. default: []</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">site</span><span class="w"></span>
+<span class="w">    </span><span class="nt">trim_if_targets</span><span class="p">:</span><span class="w"> </span><span class="c1"># optional. default: []</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span><span class="w"></span>
+<span class="w">    </span><span class="nt">prefix_to_ignore</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ignore</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">warning_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">    </span><span class="nt">reference</span><span class="p">:</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="nv">*ref_pattern</span><span class="w"></span>
+<span class="w">          </span><span class="nt">only_with_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">          </span><span class="nt">only_defined_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">          </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="w"></span>
+<span class="w">          </span><span class="nt">trim_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;`{verb}</span><span class="nv"> </span><span class="s">{command}`&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="nv">*another_ref_pattern</span><span class="w">  </span><span class="c1"># second reference config. Unlisted options are default</span><span class="w"></span>
+<span class="w">          </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;**{verb}</span><span class="nv"> </span><span class="s">{command}**&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">API</span><span class="p">:</span><span class="w">  </span><span class="c1"># below are examples for each mode</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Client-API</span><span class="p">:</span><span class="w">  </span><span class="c1"># reference prefix</span><span class="w"></span>
+<span class="w">            </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate_anchor</span><span class="w"></span>
+<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Admin-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span><span class="w"></span>
+<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">        </span><span class="nt">External-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span><span class="w"></span>
+<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/external</span><span class="w"></span>
+<span class="w">            </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h2&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h3&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h4&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">        </span><span class="nt">Inernal-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span><span class="w"></span>
+<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/swagger-ui</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/{tag}/{operation_id}&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-transform</span><span class="w"></span>
+<span class="w">            </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">login</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
 </code></pre></div>
 <dl>
 <dt><code>targets</code></dt>
@@ -2181,14 +2181,14 @@ Default:</dd>
 ...
 </code></pre></div>
 <p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">generate_anchor</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
-                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;user</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">generate_anchor</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;user</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w"></span>
 </code></pre></div>
 <p>As you may have noticed, there's no <code>reference</code> section in the example above. That's because we will be using default values for the reference.</p>
 <p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
@@ -2227,18 +2227,18 @@ Default:</dd>
 ...
 </code></pre></div>
 <p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">reference</span><span class="p">:</span>
-            <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
-            <span class="c1"># other reference properties are default</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
-                <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span>
-                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;api-method</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-                <span class="nt">anchor_converter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pandoc</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="c1"># other reference properties are default</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w"></span>
+<span class="w">                </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;api-method</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w"></span>
 </code></pre></div>
 <p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
 <div class="highlight"><pre><span></span><code>To find out user&#39;s status use `GET /user/status` method.
@@ -2275,17 +2275,17 @@ Default:</dd>
 ...
 </code></pre></div>
 <p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">reference</span><span class="p">:</span>
-            <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{prefix}:</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
-            <span class="c1"># other reference properties are default</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
-                <span class="nt">tags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span>
-                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[{prefix}:</span><span class="nv"> </span><span class="s">{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="c1"># other reference properties are default</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w"></span>
+<span class="w">                </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;h1&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;h2&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">                </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
 <div class="highlight"><pre><span></span><code>To find out user&#39;s status use `My-API: GET /user/status` method.
@@ -2312,31 +2312,31 @@ Default:</dd>
 <h4 id="find_for_swagger-mode"><code>find_for_swagger</code> mode<a class="headerlink" href="#find_for_swagger-mode" title="Permanent link">&para;</a></h4>
 <p><code>find_for_swagger</code> mode parses the OpenAPI spec file and looks for the referenced method in it. It then generates an anchor for SwaggerUI website based on data from the reference and the operation properties in the spec.</p>
 <p>Let's assume that your OpenAPI specification looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;swagger&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
-    <span class="err">...</span>
-    <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;/user/status&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;GET&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;userauth&quot;</span><span class="p">],</span>
-                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Returns user auth status&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;checkStatus&quot;</span><span class="p">,</span>
-                <span class="err">...</span>
-            <span class="p">},</span>
-        <span class="p">}</span>
-    <span class="err">...</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;swagger&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;/user/status&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;GET&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;userauth&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Returns user auth status&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;operationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checkStatus&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="err">...</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span><span class="w"></span>
 </code></pre></div>
 <p>On the default SwaggerUI website the anchor to this method will be <code>#/userauth/checkStatus</code>. It consists of the first tag from the operation properties and the operationId. So to generate the proper anchor APIReferences will need to get those parts from the spec.</p>
 <p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="c1"># reference options are default in this example</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
-                <span class="nt">spec</span><span class="p">:</span> <span class="kt">!path</span> <span class="l l-Scalar l-Scalar-Plain">swagger.json</span>
-                <span class="nt">anchor_template</span><span class="p">:</span> <span class="s">&#39;/{tag}/{operation_id}&#39;</span>  <span class="c1"># you can omit this line because it&#39;s the default value</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="c1"># reference options are default in this example</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_for_swagger</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w"></span>
+<span class="w">                </span><span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="kt">!path</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">swagger.json</span><span class="w"></span>
+<span class="w">                </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/{tag}/{operation_id}&#39;</span><span class="w">  </span><span class="c1"># you can omit this line because it&#39;s the default value</span><span class="w"></span>
 </code></pre></div>
 <p>Now let's reference a <strong>GET /user/status</strong> method in our Markdown source:</p>
 <div class="highlight"><pre><span></span><code>To find out user&#39;s status use `GET /user/login` method.
@@ -2368,17 +2368,17 @@ Default:</dd>
 <h3 id="handling-multiple-apis">Handling Multiple APIs<a class="headerlink" href="#handling-multiple-apis" title="Permanent link">&para;</a></h3>
 <p>APIReferences can work with several APIs at once, and honestly, it's very good at this.</p>
 <p>Let's consider an example foliant.yml:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">Client-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span>
-                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-            <span class="nt">Admin-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span>
-                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">Client-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/client</span><span class="w"></span>
+<span class="w">                </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">Admin-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span><span class="w"></span>
+<span class="w">                </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
 </code></pre></div>
 <p>In this example we've defined two APIs: <code>Client-API</code> and <code>Admin-API</code>, these are just names, they may be anything you want. Now we can reference both APIs:</p>
 <div class="highlight"><pre><span></span><code>When user clicks &quot;LOGIN&quot; button, the app sends a request `POST /user/login`.
@@ -2409,15 +2409,15 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <h3 id="handling-multiple-reference-configuration">Handling Multiple Reference Configuration<a class="headerlink" href="#handling-multiple-reference-configuration" title="Permanent link">&para;</a></h3>
 <p>You can not only make APIReferences work with different APIs but also with different reference configurations. <code>reference</code> parameter is a list for a reason. And because <code>output_template</code> is part of reference configuration, you can make different references transform into different values.</p>
 <p>Here's an example config:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">reference</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
-            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="l l-Scalar l-Scalar-Plain">...</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">only_with_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">              </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">only_with_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">              </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 </code></pre></div>
 <p>With such config references with prefixes will be transformed into <strong>bold links</strong>, while non-prefixed references will remain regular links.</p>
 <h3 id="commands-and-endpoint-prefixes">Commands and Endpoint Prefixes<a class="headerlink" href="#commands-and-endpoint-prefixes" title="Permanent link">&para;</a></h3>
@@ -2427,19 +2427,19 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <li>with and without endpoint prefix, if one is defined (<code>/api/v1/user/login</code> and <code>/user/login</code>).</li>
 </ul>
 <p>Here's an example config to illustrate this feature:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-    <span class="nt">apireferences</span><span class="p">:</span>
-        <span class="nt">reference</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span>
-            <span class="p p-Indicator">-</span> <span class="nt">only_with_prefixes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-              <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span>
-        <span class="nt">API</span><span class="p">:</span>
-            <span class="nt">My-API</span><span class="p">:</span>
-                <span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span>
-                <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span>
-                <span class="nt">content_template</span><span class="p">:</span> <span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span>
-                <span class="nt">endpoint_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">only_with_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">              </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;**[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})**&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">only_with_prefixes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">              </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">My-API</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_tag_content</span><span class="w"></span>
+<span class="w">                </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api</span><span class="w"></span>
+<span class="w">                </span><span class="nt">content_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w"></span>
 </code></pre></div>
 <p>Considering that the API website source looks like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;asoi17uo&quot;</span><span class="p">&gt;</span>GET /api/v1/user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -2467,10 +2467,10 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <p>Notice that the default expression uses <a href="https://docs.python.org/3/howto/regex.html#non-capturing-and-named-groups">Named Capturing Groups</a>. You have to use them too if you are to redefine the expression. You can name these groups as you like and have as many or as few as you wish, but it's recommended to include the <code>prefix</code> group for API prefix logic to work. It is also required for all groups which are in the <code>output_template</code> also to be present in the regex.</p>
 <p>To redefine the regular expression add an option <code>regex</code> to the reference config.</p>
 <p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
-      <span class="nt">reference</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">regex</span><span class="p">:</span> <span class="s">&#39;((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;((?P&lt;prefix&gt;[\w-]+):\s*)(?P&lt;verb&gt;POST|GET|PUT|UPDATE|DELETE)\s+(?P&lt;command&gt;\S+)`&#39;</span><span class="w"></span>
 </code></pre></div>
 <blockquote>
 <p>This example is for illustrative purposes only. You can achieve the same goal by just switching on the <code>only_with_prefixes</code> option.</p>
@@ -2480,10 +2480,10 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <p>You can customize the <em>output</em>-string which will replace the <em>reference</em> string. To do that add a template into your reference configuration.</p>
 <p>A <em>template</em> is a string that may contain placeholders, surrounded by curly braces. These placeholders will be replaced with the values, and all the rest will remain unchanged.</p>
 <p>For example, look at the default template:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">apireferences</span><span class="p">:</span>
-    <span class="nt">reference</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">output_template</span><span class="p">:</span> <span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span>
+<div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">output_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;[{verb}</span><span class="nv"> </span><span class="s">{command}]({url})&#39;</span><span class="err">,</span><span class="w"></span>
 </code></pre></div>
 <blockquote>
 <p>Don't forget the single quotes around the template. These braces and parenthesis easily make YAML think that it is an embedded dictionary or list.</p>
@@ -2626,7 +2626,7 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.2.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.3.0",url:{base:"../.."}})</script>
       
     
   </body>
