@@ -45,6 +45,7 @@ chapters:
         - preprocessors/bindsympli.md
         - preprocessors/blockdiag.md
         - preprocessors/bpmn.md
+        - preprocessors/checksources.md
         - preprocessors/confluence.md
         - preprocessors/csvtables.md
         - preprocessors/customids.md
