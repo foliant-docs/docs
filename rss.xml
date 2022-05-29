@@ -7,6 +7,25 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.imgcaptions 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#398364b87545652d9135bee8485ba85c</guid>
+            <pubDate>Sun, 29 May 2022 12:36:29 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: <escaped hash="c91ea694cae560e7ad0ecd7c151c4b2c"></escaped> was inserted before front matter</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.mkdocs 1.0.13</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#d25f8c842e7c8c546e007ca54ca33d6f</guid>
+            <pubDate>Sun, 29 May 2022 12:27:54 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Update to mkdocs 1.3.0</li>
+<li>Replaced <escaped hash="2a2046a9c7d21e87f132bf2acb37c9a8"></escaped> to <escaped hash="52ffb59dfbf1534cfb7ffe6054b930f4"></escaped> in config generation due to <a href="https://github.com/mkdocs/mkdocs/pull/2652">github.com/mkdocs/mkdocs/pull/2652</a></li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.confluence 0.6.20</title>
             <link>https://github.com/foliant-docs/foliantcontrib.confluence.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.confluence.git#f370b9dd9f478abcd5eff312f00e0427</guid>
