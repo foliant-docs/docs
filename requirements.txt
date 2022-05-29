@@ -3,8 +3,10 @@ foliantcontrib.flags >= 1.0.2
 foliantcontrib.history >= 1.0.8
 foliantcontrib.includes >= 1.1.13
 foliantcontrib.macros >= 1.0.4
-foliantcontrib.mkdocs >= 1.0.12
+foliantcontrib.mkdocs >= 1.0.13
 foliantcontrib.pandoc == 1.0.11
 foliantcontrib.superlinks >= 1.0.11
 foliantcontrib.yaml_include >= 1.0.0
-mkdocs-material == 4.6.3
+mkdocs-material == 8.2.14
+mkdocs-material-extensions == 1.0.3
+Jinja2 == 3.1.2

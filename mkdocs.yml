@@ -1,9 +1,9 @@
-repo_name: foliant-docs/docs
-repo_url: https://github.com/foliant-docs/docs
-
 # main repo will be displayed in the header
 main_repo_name: foliant-docs/foliant
 main_repo_url: https://github.com/foliant-docs/foliant
+
+repo_name: foliant-docs/docs
+repo_url: https://github.com/foliant-docs/docs
 edit_uri: edit/master/src/
 theme:
     name: material
@@ -16,15 +16,26 @@ theme:
         code: PT Mono
     logo: assets/images/octopus-white.svg
     favicon: assets/images/octopus-black-32.ico
+    features:
+        - search.suggest
+        - search.highlight
+        - navigation.top
+    icon:
+      repo: fontawesome/brands/github-alt
+
 extra:
     social:
-        -   type: github
+        -   icon: fontawesome/brands/github
             link: https://github.com/foliant-docs/foliant
-        -   type: file-pdf-o
+        -   icon: fontawesome/regular/file-pdf
             link: /docs/assets/foliant-docs.pdf
+    analytics:
+      provider: google
+      property: UA-120535275-2
+
 markdown_extensions:
     - def_list
-    - codehilite
+    - pymdownx.highlight
     - toc:
         permalink: true
     - admonition
@@ -32,6 +43,3 @@ markdown_extensions:
     - pymdownx.superfences
 extra_css:
     - 'stylesheets/extra.css'
-google_analytics:
-    - 'UA-120535275-2'
-    - 'auto'

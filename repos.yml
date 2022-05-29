@@ -13,11 +13,12 @@
 - https://github.com/foliant-docs/foliantcontrib.blockdiag.git
 - https://github.com/foliant-docs/foliantcontrib.bpmn.git
 - https://github.com/foliant-docs/foliantcontrib.bump.git
+# - https://github.com/foliant-docs/foliantcontrib.checksources.git
 - https://github.com/foliant-docs/foliantcontrib.confluence.git
 - https://github.com/foliant-docs/foliantcontrib.csvtables.git
 - https://github.com/foliant-docs/foliantcontrib.customids.git
-- https://github.com/foliant-docs/foliantcontrib.dbmldoc.git
 - https://github.com/foliant-docs/foliantcontrib.dbdoc.git
+- https://github.com/foliant-docs/foliantcontrib.dbmldoc.git
 - https://github.com/foliant-docs/foliantcontrib.docus.git
 - https://github.com/foliant-docs/foliantcontrib.downloadfile.git
 - https://github.com/foliant-docs/foliantcontrib.elasticsearch.git
@@ -61,5 +62,5 @@
 - https://github.com/foliant-docs/foliantcontrib.templates.preprocessor.git
 - https://github.com/foliant-docs/foliantcontrib.testcoverage.git
 - https://github.com/foliant-docs/foliantcontrib.testrail.git
-- https://github.com/foliant-docs/foliantcontrib.yaml_include.git
 - https://github.com/foliant-docs/foliantcontrib.utils.git
+- https://github.com/foliant-docs/foliantcontrib.yaml_include.git
