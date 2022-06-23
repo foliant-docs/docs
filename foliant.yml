@@ -60,6 +60,7 @@ chapters:
         - preprocessors/graphviz.md
         - preprocessors/history.md
         - preprocessors/imagemagick.md
+        - preprocessors/imagineui.md
         - preprocessors/imgcaptions.md
         - preprocessors/imgconvert.md
         - preprocessors/includes.md
