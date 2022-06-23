@@ -7,6 +7,43 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.apireferences 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#ffbb5249760e00da934bc4061945c4d8</guid>
+            <pubDate>Wed, 22 Jun 2022 13:17:29 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: <escaped hash="ac317c5894e204903205b8dd9d323d02"></escaped> option (default: <escaped hash="2bbf400530c8186d2500dff16eb05e78"></escaped>) to use cached API registries in multiproject</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliant 1.0.13</title>
+            <link>https://github.com/foliant-docs/foliant.git</link>
+            <guid>https://github.com/foliant-docs/foliant.git#9f18aa5732252534cd26f75c7a906c75</guid>
+            <pubDate>Tue, 21 Jun 2022 21:05:42 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add the <escaped hash="af1f525335f6f60d3b9ca0723950d3be"></escaped> function to <escaped hash="93210f769e1cf92b5d196ef6c65b2e28"></escaped>.
+  This function checks if multiproject and removes <escaped hash="e8956130042e50278e7afb0bd39bf176"></escaped> files in  <escaped hash="0357af1918f4c6d85eb7147464d99ca1"></escaped>.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#8d5c0756a38605ee90699b5a89cce193</guid>
+            <pubDate>Wed, 15 Jun 2022 14:10:39 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: <escaped hash="0bc039203dd4d5eef476657c900a61f2"></escaped> option (default: <escaped hash="cd574764ed88796c6894503353328836"></escaped>) for every API class</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#c9211d5754f1ec19420ea5f300f914cc</guid>
+            <pubDate>Thu, 09 Jun 2022 10:22:10 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>New: <escaped hash="bb7fc7d62456efebb7c5fac8405bc173"></escaped> option (default: True) for every API class</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.imgcaptions 1.0.3</title>
             <link>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#398364b87545652d9135bee8485ba85c</guid>

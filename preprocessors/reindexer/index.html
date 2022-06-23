@@ -1160,6 +1160,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../imagineui/" class="md-nav__link">
+        ImagineUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../imgcaptions/" class="md-nav__link">
         ImgCaptions
       </a>
@@ -1334,23 +1348,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reindexer-integration-extension" class="md-nav__link">
+    Reindexer Integration Extension
+  </a>
+  
+    <nav class="md-nav" aria-label="Reindexer Integration Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1806,23 +1833,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reindexer-integration-extension" class="md-nav__link">
+    Reindexer Integration Extension
+  </a>
+  
+    <nav class="md-nav" aria-label="Reindexer Integration Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#config" class="md-nav__link">
     Config
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1845,6 +1885,8 @@
 
 
 <h1 id="reindexer">Reindexer<a class="headerlink" href="#reindexer" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.org/project/foliantcontrib.reindexer/"><img alt="" src="https://img.shields.io/pypi/v/foliantcontrib.reindexer.svg" /></a> <a href="https://github.com/foliant-docs/foliantcontrib.reindexer"><img alt="" src="https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.reindexer.svg?label=GitHub" /></a></p>
+<h2 id="reindexer-integration-extension">Reindexer Integration Extension<a class="headerlink" href="#reindexer-integration-extension" title="Permanent link">&para;</a></h2>
 <p>This extension allows to integrate Foliant-managed documentation projects with the in-memory DBMS <a href="https://github.com/Restream/reindexer/">Reindexer</a> to use it as a fulltext search engine.</p>
 <p>The main part of this extension is a preprocessor that prepares data for a search index. In addition, the preprocessor performs basic manipulations with the database and the namespace in it.</p>
 <p>Also this extension provides a simple working example of a client-side Web application that may be used to perform searching. By editing HTML, CSS and JS code you may customize it according to your needs.</p>
@@ -1896,18 +1938,18 @@
 <dt><code>fulltext_config</code></dt>
 <dd>The value of the <code>config</code> field that refers to the description of the composite fulltext index over the <code>title</code> and <code>content</code> data fields. Used data structure is described below. <a href="https://github.com/Restream/reindexer/blob/master/cpp_src/server/contrib/server.md#fulltextconfig">Fulltext indexes config options</a> are listed in the Reindexer’s official documentation.</dd>
 <dt><code>actions</code></dt>
-<dd>
-<p>Sequence of actions that the preprocessor should to perform. Available item values are:</p>
+<dd>Sequence of actions that the preprocessor should to perform. Available item values are:</dd>
+</dl>
 <ul>
-<li><code>drop_database</code>—fully remove the database that is specified as the value of the <code>database</code> option. Please be careful using this action when the single database is used to store multiple namespaces. Since this action is included to the default actions list, it’s recommended to use separate databases for each search index. The default list of actions assumes that in most cases it’s needed to remove and then fully rebuild the index, and wherein the database and the namespace may not exist;</li>
-<li><code>create_database</code>—create the new database with the name specified as the <code>database</code> option value;</li>
-<li><code>drop_namespace</code>—delete the namespace that is specified as the <code>namespace</code> option value. All <code>*_namespace</code> actions are applied to the existing database with the name from the <code>database</code> option;</li>
-<li><code>truncate_namespace</code>—remove all items from the namespace that is specified as the <code>namespace</code> option value, but keep the namespace itself;</li>
-<li><code>rename_namespace</code>—rename the existing namespace that has the name specified as the <code>namespace</code> option value, to the new name from the <code>renamed_namespace</code> option. This action may be useful when a common search index is created for multiple Foliant projects, and the index may remain incomplete for a long time during their building;</li>
-<li><code>create_namespace</code>—create the new namespace with the name from the <code>namespace</code> option;</li>
-<li><code>insert_items</code>—fill the namespace that is specified in the <code>namespace</code> option, with the content that should be indexed. Each data item added to the namespace corresponds a single Markdown file of the documentation project.</li>
+<li><code>drop_database</code> — fully remove the database that is specified as the value of the <code>database</code> option. Please be careful using this action when the single database is used to store multiple namespaces. Since this action is included to the default actions list, it’s recommended to use separate databases for each search index. The default list of actions assumes that in most cases it’s needed to remove and then fully rebuild the index, and wherein the database and the namespace may not exist;</li>
+<li><code>create_database</code> — create the new database with the name specified as the <code>database</code> option value;</li>
+<li><code>drop_namespace</code> — delete the namespace that is specified as the <code>namespace</code> option value. All <code>*_namespace</code> actions are applied to the existing database with the name from the <code>database</code> option;</li>
+<li><code>truncate_namespace</code> — remove all items from the namespace that is specified as the <code>namespace</code> option value, but keep the namespace itself;</li>
+<li><code>rename_namespace</code> — rename the existing namespace that has the name specified as the <code>namespace</code> option value, to the new name from the <code>renamed_namespace</code> option. This action may be useful when a common search index is created for multiple Foliant projects, and the index may remain incomplete for a long time during their building;</li>
+<li><code>create_namespace</code> — create the new namespace with the name from the <code>namespace</code> option;</li>
+<li><code>insert_items</code> — fill the namespace that is specified in the <code>namespace</code> option, with the content that should be indexed. Each data item added to the namespace corresponds a single Markdown file of the documentation project.</li>
 </ul>
-</dd>
+<dl>
 <dt><code>use_chapters</code></dt>
 <dd>If set to <code>true</code> (by default), the preprocessor applies only to the files that are mentioned in the <code>chapters</code> section of the project config. Otherwise, the preprocessor applies to all Markdown files of the project.</dd>
 <dt><code>format</code></dt>

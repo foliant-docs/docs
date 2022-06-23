@@ -1372,6 +1372,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../imagineui/" class="md-nav__link">
+        ImagineUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../imgcaptions/" class="md-nav__link">
         ImgCaptions
       </a>
@@ -2164,7 +2178,7 @@
 <blockquote>
 <p>APIReferences is a successor of APILinks preprocessor with slightly changed configuration syntax and completely rewritten insides. APILinks is now deprecated, please use APIReferences instead.</p>
 </blockquote>
-<p>Preprocessor replaces API <em>reference</em>s in markdown files with links to corresponding method description on the API documentation web-page.</p>
+<p>Preprocessor replaces API <em>reference</em>s in markdown files with links to the corresponding method description on the API documentation web-page.</p>
 <h3 id="what-is-it-for">What is it for?<a class="headerlink" href="#what-is-it-for" title="Permanent link">&para;</a></h3>
 <p>Say, you have API documentation hosted at the url http://example.com/api-docs</p>
 <p>It may be a <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a> website or just some static one-page site (like <a href="https://github.com/slatedocs/slate">Slate</a>).</p>
@@ -2203,7 +2217,7 @@
 <li><strong>reference</strong> — reference to an API method in the source file. The one to be replaced with the link, e.g. <code>GET user/config</code></li>
 <li><strong>verb</strong> — HTTP method, e.g. <code>GET</code>, <code>POST</code>, etc.</li>
 <li><strong>command</strong> — resource used to represent method on the API documentation webpage, e.g. <code>/service/healthcheck</code>.</li>
-<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/satus</code> then the endpoint prefix should be stated <code>/api/v0</code>. In references you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. APIReferences will sort it out for you.</li>
+<li><strong>endpoint prefix</strong> — A prefix from server root to the command. If the command is <code>/user/status</code> and full resource is <code>/api/v0/user/status</code> then the endpoint prefix should be stated <code>/api/v0</code>. In references, you can use either full resource (<code>{endpoint_prefix}/{command}</code>) or just the command. APIReferences will sort it out for you.</li>
 <li><strong>output</strong> — string, which will replace the <em>reference</em>.</li>
 <li><strong>tag content</strong> — plain text between the tags, for example <code>&lt;tag&gt;Tag content&lt;/tag&gt;</code>.</li>
 <li><strong>anchor</strong> — web-element id with leading number sign, for example <code>#get-user-config</code>. Adding the anchor to the end of the web URL will make a browser scroll to the specified web element.</li>
@@ -2214,7 +2228,7 @@
 <p>We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Minimal sufficiant foliant.yml:</p>
+<p>Minimal sufficient foliant.yml:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
@@ -2228,7 +2242,7 @@
 <p>The task is the same as in Recipe 1. We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Minimal sufficiant foliant.yml:</p>
+<p>Minimal sufficient foliant.yml:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
@@ -2243,7 +2257,7 @@
 <p>The task is the same as in Recipes 1 and 2, but this time you don't have access to API website at the time of building foliant project. We want reference `<code>GET /user/status</code>` to be pointed at this element on our API website:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;get-user-status&quot;</span><span class="p">&gt;</span>Operation GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Minimal sufficiant foliant.yml:</p>
+<p>Minimal sufficient foliant.yml:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
@@ -2255,9 +2269,9 @@
 </code></pre></div>
 <p>`<code>GET /user/status</code>` -&gt; <a href="http://example.com/api#get-user-status">GET /user/status</a></p>
 <h4 id="recipe-4-find-link-for-swaggerui">Recipe 4: find link for SwaggerUI<a class="headerlink" href="#recipe-4-find-link-for-swaggerui" title="Permanent link">&para;</a></h4>
-<p>We have a SwaggerUI website and we need to find link to the method by reference `<code>GET /user/status</code>``.</p>
+<p>We have a SwaggerUI website, and we need to find the link to the method by reference `<code>GET /user/status</code>``.</p>
 <p>Method anchors on SwaggerUI consist of tag and operationId, both of which are not present in our reference. APIReferences can find them for you in the spec file. Let's assume that correct tag and operationId are <code>usertag</code> and <code>getStatus</code>.</p>
-<p>Minimal sufficiant foliant.yml:</p>
+<p>Minimal sufficient foliant.yml:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">API</span><span class="p">:</span><span class="w"></span>
@@ -2299,6 +2313,7 @@
 <span class="w">            </span><span class="nt">anchor_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{verb}</span><span class="nv"> </span><span class="s">{command}&#39;</span><span class="w"></span>
 <span class="w">            </span><span class="nt">anchor_converter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandoc</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
 <span class="w">            </span><span class="nt">endpoint_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1</span><span class="w">  </span><span class="c1"># optional</span><span class="w"></span>
+<span class="w">            </span><span class="nt">endpoint_prefix_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">/api/v1/</span><span class="p p-Indicator">,</span><span class="nv">/api/v2/</span><span class="p p-Indicator">,</span><span class="nv">/api/v3/</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">        </span><span class="nt">Admin-API</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">find_by_anchor</span><span class="w"></span>
 <span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://example.com/api/admin</span><span class="w"></span>
@@ -2327,7 +2342,7 @@
 </code></pre></div>
 <dl>
 <dt><code>targets</code></dt>
-<dd><em>(optional)</em> List of supported targets for <code>foliant make</code> command. If target is not listed here — preprocessor won't be applied. If the list is empty — preprocessor will be applied for any target. Default: <code>[]</code></dd>
+<dd><em>(optional)</em> List of supported targets for <code>foliant make</code> command. If target is not listed here — preprocessor won't be applied. If the list is an empty — preprocessor will be applied for any target. Default: <code>[]</code></dd>
 <dt><code>trim_if_targets</code></dt>
 <dd><em>(optional)</em> List of targets for <code>foliant make</code> command for which the prefixes from all <em>references</em> in the text will be cut out. Default: <code>[]</code></dd>
 </dl>
@@ -2336,9 +2351,11 @@
 </blockquote>
 <dl>
 <dt><code>prefix_to_ignore</code></dt>
-<dd><em>(optional)</em> A default prefix for ignoring references. If APIReferences meets a reference with this prefix it leaves it unchanged. Default: <code>Ignore</code></dd>
+<dd><em>(optional)</em> A default prefix for ignoring references. If APIReferences meets a reference with this prefix, it leaves it unchanged. Default: <code>Ignore</code></dd>
 <dt><code>warning_level</code></dt>
 <dd><em>(optional)</em> <code>2</code> — show all warnings for not found references; <code>1</code> — show only warnings for not found prefixed references; <code>0</code> — don't show warnings about not found references. Default: <code>2</code></dd>
+<dt><code>use_multiproject_mode</code></dt>
+<dd><em>(optional)</em> - Use cached API registries in case of multiproject. Default: <code>True</code></dd>
 <dt><code>reference</code></dt>
 <dd><em>(optional)</em> List of dictionaries. A subsection for listing all the types of references you are going to catch in the text, and their properties. Options for this section are listed below.</dd>
 </dl>
@@ -2362,7 +2379,7 @@ Default:</dd>
 <dt><code>output_template</code></dt>
 <dd><em>(optional)</em> A template string describing the <em>output</em> which will replace the <em>reference</em>. More info in the <strong>Customizing Output</strong> section. Default: <code>'[{verb} {command}]({url})'</code></dd>
 <dt><code>trim_template</code></dt>
-<dd><em>(optional)</em> Only for targets listed in <code>trim_if_targets</code> option. Tune this template if you want to customize how APIReferences cuts out prefixes. The reference will be replaced with text based on this template. Default: <code>'`{verb} {command}`'</code></dd>
+<dd><em>(optional)</em> Only for targets listed in <code>trim_if_targets</code> option. Tune this template if you want to customize how APIReferences cuts out prefixes. The reference will be replaced with a text based on this template. Default: <code>'`{verb} {command}`'</code></dd>
 </dl>
 <hr />
 <dl>
@@ -2384,7 +2401,11 @@ Default:</dd>
 <dt><code>anchor_converter</code></dt>
 <dd><em>(optional)</em> anchor converter from <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">this list</a>. Determines how string <code>GET /user/status</code> is converted into <code>get-userstatus</code> or <code>get-user-status</code> etc. <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">List of available converters</a>. Default: <code>pandoc</code></dd>
 <dt><code>endpoint_prefix</code></dt>
-<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command into the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dt><code>endpoint_prefix_list</code></dt>
+<dd><em>(optional)</em> The list of available endpoint prefixes which could be added to output. Default: <code>[]</code></dd>
+<dt><code>trim_query</code></dt>
+<dd><em>(optional)</em> Cut a query part after <code>?</code> character from command while searching for an API link. Default: <code>True</code></dd>
 </dl>
 <p><strong><code>find_by_anchor</code> mode</strong></p>
 <dl>
@@ -2395,13 +2416,17 @@ Default:</dd>
 <dt><code>anchor_converter</code></dt>
 <dd><em>(optional)</em> anchor converter from <a href="https://github.com/foliant-docs/foliantcontrib.utils.header_anchors#to_id">this list</a>. Determines how string <code>GET /user/status</code> is converted into <code>get-userstatus</code> or <code>get-user-status</code> etc. Default: <code>pandoc</code></dd>
 <dt><code>endpoint_prefix</code></dt>
-<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command into the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dt><code>endpoint_prefix_list</code></dt>
+<dd><em>(optional)</em> The list of available endpoint prefixes which could be added to output. Default: <code>[]</code></dd>
 <dt><code>tags</code></dt>
 <dd><em>(optional)</em> list of HTML tags which will be parsed out from the page and searched for ids. Default: <code>['h1', 'h2', 'h3', 'h4']</code></dd>
 <dt><code>login</code></dt>
 <dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
 <dt><code>password</code></dt>
 <dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+<dt><code>trim_query</code></dt>
+<dd><em>(optional)</em> Cut a query part after <code>?</code> character from command while searching for an API link. Default: <code>True</code></dd>
 </dl>
 <p><strong><code>find_by_tag_content</code> mode</strong></p>
 <dl>
@@ -2410,13 +2435,17 @@ Default:</dd>
 <dt><code>content_template</code></dt>
 <dd><em>(required)</em> A template string describing the format of the tag content in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. Example: <code>'{verb} {command}'</code>.</dd>
 <dt><code>endpoint_prefix</code></dt>
-<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command in the reference and search for it more accurately. Also you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dd><em>(optional)</em> The endpoint prefix from the server root to API methods. If is stated — APIReferences can divide the command into the reference and search for it more accurately. Also, you could use it in templates. More info in the <strong>Commands and Endpoint Prefixes</strong> section. Default: <code>''</code></dd>
+<dt><code>endpoint_prefix_list</code></dt>
+<dd><em>(optional)</em> The list of available endpoint prefixes which could be added to output. Default: <code>[]</code></dd>
 <dt><code>tags</code></dt>
 <dd><em>(optional)</em> list of HTML tags which will be parsed out from the page and searched for ids. Default: <code>['h1', 'h2', 'h3', 'h4']</code></dd>
 <dt><code>login</code></dt>
 <dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
 <dt><code>password</code></dt>
 <dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+<dt><code>trim_query</code></dt>
+<dd><em>(optional)</em> Cut a query part after <code>?</code> character from command while searching for an API link. Default: <code>True</code></dd>
 </dl>
 <p><strong><code>find_for_swagger</code> mode</strong></p>
 <dl>
@@ -2428,10 +2457,14 @@ Default:</dd>
 <dd><em>(optional)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. In this mode, you can also use two additional placeholders: <code>{tag}</code> and <code>{operation_id}</code>. Default: <code>'/{tag}/{operation_id}'</code>.</dd>
 <dt><code>endpoint_prefix</code></dt>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. You may use it in output template. Default: <code>''</code></dd>
+<dt><code>endpoint_prefix_list</code></dt>
+<dd><em>(optional)</em> The list of available endpoint prefixes which could be added to output. Default: <code>[]</code></dd>
 <dt><code>login</code></dt>
 <dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
 <dt><code>password</code></dt>
 <dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+<dt><code>trim_query</code></dt>
+<dd><em>(optional)</em> Cut a query part after <code>?</code> character from command while searching for an API link. Default: <code>True</code></dd>
 </dl>
 <p><strong><code>find_for_redoc</code> mode</strong></p>
 <dl>
@@ -2443,10 +2476,14 @@ Default:</dd>
 <dd><em>(optional)</em> A template string describing the format of the anchors in the API documentation web-page. You can use placeholders in {curly braces}, with names of the groups in the reference regex. In this mode, you can also use two additional placeholders: <code>{tag}</code> and <code>{operation_id}</code>. Default: <code>'operation/{operation_id}'</code>.</dd>
 <dt><code>endpoint_prefix</code></dt>
 <dd><em>(optional)</em> The endpoint prefix from the server root to API methods. You may use it in output template. Default: <code>''</code></dd>
+<dt><code>endpoint_prefix_list</code></dt>
+<dd><em>(optional)</em> The list of available endpoint prefixes which could be added to output. Default: <code>[]</code></dd>
 <dt><code>login</code></dt>
 <dd><em>(optional)</em> Login for basic authentication if present on your API site.</dd>
 <dt><code>password</code></dt>
 <dd><em>(optional)</em> Password for basic authentication if present on your API site.</dd>
+<dt><code>trim_query</code></dt>
+<dd><em>(optional)</em> Cut a query part after <code>?</code> character from command while searching for an API link. Default: <code>True</code></dd>
 </dl>
 <h2 id="user-guide">User guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h2>
 <p>The purpose of APIReferences is to convert <em>references</em> into Markdown links.</p>
@@ -2456,10 +2493,10 @@ Default:</dd>
 <li><strong>command</strong>: <code>/user/authenticate</code>.</li>
 </ul>
 <p>These groups then will be used to find the referenced method on the API website and also to construct an <em>output string</em>.</p>
-<p>For example, with <code>find_by_tag_content</code> mode (see the detailed description of all modes below) APIReferences will use <code>content_template</code> from API configuration to construct a tag content and search for it on the API website. If the content template is <code>'{verb} {command}'</code>, then the constructed content for the example above will be <code>GET /user/authenticate</code>. APIReferences will search for a tag with such content on the page and get its id.</p>
+<p>For example, with <code>find_by_tag_content</code> mode (see the detailed description of all modes below) APIReferences will use <code>content_template</code> from API configuration to construct a tag content and search for it on the API website. If the content template is <code>'{verb} {command}'</code>, then the constructed content, for the example above, will be <code>GET /user/authenticate</code>. APIReferences will search for a tag with such content on the page and get its id.</p>
 <p>The found tag may be <code>&lt;h2 id="get-userauthenticate"&gt;GET /user/authenticate&lt;/h2&gt;</code>. APIReferences will take the id from this tag and use it as an anchor to the link: <code>#get-userauthenticate</code>. Then it will add the API website path and here's your url: <code>http://example.com/api/#get-userauthenticate</code>.</p>
 <p>Now, when APILink has the url of the method description, it can construct an output string. The output string is formed by a template, stated in reference <code>output_template</code> param. This template contains placeholders, which correspond to the reference groups with an addition of <code>{url}</code> placeholder, which contains the url formed above.</p>
-<p>If the output template is <code>'[{verb} {command}]({url})'</code>, then the output string for our example will be:</p>
+<p>If the output template is <code>'[{verb} {command}]({url})'</code>, then the output string, for our example, will be:</p>
 <p><code>[GET /user/authenticate](http://example.com/api/#get-userauthenticate)</code>.</p>
 <p>That's it, we've turned our reference into a Markdown link:</p>
 <p>`<code>GET /user/authenticate</code>` -&gt; <code>[GET /user/authenticate](http://example.com/api/#get-userauthenticate)</code>.</p>
@@ -2502,7 +2539,7 @@ Default:</dd>
 </ul>
 <p>Then it will pass it to the anchor template <code>'user content {verb} {command}'</code> which we've stated in our config, and this will result in a string:</p>
 <p><code>'user content GET /user/status'</code></p>
-<p>After that APIReferences will convert this string into an id with anchor converter. We've chosen <code>pandoc</code> converter in our config, which will turn the string into this: <code>user-content-getuserstatus</code>. That's exactly the id we needed, look an the webpage source:</p>
+<p>After that, APIReferences will convert this string into an id with an anchor converter. We've chosen <code>pandoc</code> converter in our config, which will turn the string into this: <code>user-content-getuserstatus</code>. That's exactly the id we needed, look at the webpage source:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;user-content-get-userstatus&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>APIReferences will add this id to our API url (which we've stated in config) to form a link: <code>http://example.com/api#user-content-get-userstatus</code>.</p>
@@ -2547,7 +2584,7 @@ Default:</dd>
 </ul>
 <p>Then it will pass it to the anchor template <code>'api-method {verb} {command}'</code> which we've stated in our config, and this will result in a string:</p>
 <p><code>'user content GET /user/status'</code></p>
-<p>After that APIReferences will convert this string into an id with an anchor converter. We've used <code>pandoc</code> converter in our config, which will turn the string into this: <code>api-method-getuserstatus</code>.</p>
+<p>After that, APIReferences will convert this string into an id with an anchor converter. We've used <code>pandoc</code> converter in our config, which will turn the string into this: <code>api-method-getuserstatus</code>.</p>
 <p>Now APIReferences will parse the web page and look for all <code>h1</code> and <code>h2</code> tags (as specified in <code>tags</code> parameter) that have ids and compare these ids to our generated id.</p>
 <p>One of the elements satisfies the requirement:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;api-method-get-userstatus&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -2561,7 +2598,7 @@ Default:</dd>
 </code></pre></div>
 <h4 id="find_by_tag_content-mode"><code>find_by_tag_content</code> mode<a class="headerlink" href="#find_by_tag_content-mode" title="Permanent link">&para;</a></h4>
 <p><code>find_by_tag_content</code> generates tag content by the <code>content_template</code> and searches for an HTML element with such content on the API web page. If an element is found, the reference is converted into a Markdown link. If not — the reference is skipped.</p>
-<p>This mode is convenient when there's no way to determine tag id basing on the reference, for example, when ids are random strings.</p>
+<p>This mode is convenient when there's no way to determine tag ID based on the reference, for example, when ids are random strings.</p>
 <p>Let's assume that your API website code looks like this:</p>
 <div class="highlight"><pre><span></span><code>...
 <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;o1egwb7agw&quot;</span><span class="p">&gt;</span>GET /user/status<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
@@ -2623,7 +2660,7 @@ Default:</dd>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="err">...</span><span class="w"></span>
 </code></pre></div>
-<p>On the default SwaggerUI website the anchor to this method will be <code>#/userauth/checkStatus</code>. It consists of the first tag from the operation properties and the operationId. So to generate the proper anchor APIReferences will need to get those parts from the spec.</p>
+<p>On the default SwaggerUI website the anchor to this method will be <code>#/userauth/checkStatus</code>. It consists of the first tag from the operation properties and the operationId. So to generate the proper anchor APIReferences, will need to get those parts from the spec.</p>
 <p>APIReferences config in your <code>foliant.yml</code> in this case may look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
@@ -2653,7 +2690,7 @@ Default:</dd>
 </ul>
 <p>These values are then passed to the anchor template <code>'/{tag}/{operation_id}'</code>, along with groups from our reference, this will result in a string:</p>
 <p><code>'/userauth/checkStatus'</code></p>
-<p>That's the id we were looking for. APIReferences will add it to our API url (which we've stated in config) to form a link: <code>http://example.com/api#/userauth/checkStatus</code>.</p>
+<p>That's the ID we were looking for. APIReferences will add it to our API url (which we've stated in config) to form a link: <code>http://example.com/api#/userauth/checkStatus</code>.</p>
 <p>Finally, it's time to construct a Markdown link. APIReferences takes an <code>output_template</code> from the reference config, which is default: <code>'[{verb} {command}]({url})'</code>.</p>
 <p>Placeholders in the output template are replaced by groups from our reference, except <code>{url}</code> placeholder which is replaced with the url constructed above:</p>
 <p><code>[GET /user/login](http://example.com/api#/userauth/checkStatus)</code></p>
@@ -2661,7 +2698,7 @@ Default:</dd>
 <div class="highlight"><pre><span></span><code>To find out user&#39;s status use [GET /user/login](http://example.com/api#/userauth/checkStatus) method.
 </code></pre></div>
 <h4 id="find_for_redoc-mode"><code>find_for_redoc</code> mode<a class="headerlink" href="#find_for_redoc-mode" title="Permanent link">&para;</a></h4>
-<p><code>find_for_redoc</code> is similar to <code>find_for_swagger</code> mode, except that deafult anchor template is <code>'operation/{operation_id}'</code>.</p>
+<p><code>find_for_redoc</code> is similar to <code>find_for_swagger</code> mode, except that default anchor template is <code>'operation/{operation_id}'</code>.</p>
 <h3 id="handling-multiple-apis">Handling Multiple APIs<a class="headerlink" href="#handling-multiple-apis" title="Permanent link">&para;</a></h3>
 <p>APIReferences can work with several APIs at once, and honestly, it's very good at this.</p>
 <p>Let's consider an example foliant.yml:</p>
@@ -2718,7 +2755,7 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 </code></pre></div>
 <p>With such config references with prefixes will be transformed into <strong>bold links</strong>, while non-prefixed references will remain regular links.</p>
 <h3 id="commands-and-endpoint-prefixes">Commands and Endpoint Prefixes<a class="headerlink" href="#commands-and-endpoint-prefixes" title="Permanent link">&para;</a></h3>
-<p>APIReferences treats the <code>command</code> part of your reference in a special way. While searching for it on the API website it will try to substitute the command place holder:</p>
+<p>APIReferences treats the <code>command</code> part of your reference in a special way. While searching for it on the API website, it will try to substitute the command placeholder:</p>
 <ul>
 <li>with and without leading slash (<code>/user/login</code> and <code>user/login</code>),</li>
 <li>with and without endpoint prefix, if one is defined (<code>/api/v1/user/login</code> and <code>/user/login</code>).</li>
@@ -2761,9 +2798,9 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <li><code>Client-API: GET user/info</code></li>
 <li><code>UPDATE user/details</code></li>
 </ul>
-<p>Notice that the default expression uses <a href="https://docs.python.org/3/howto/regex.html#non-capturing-and-named-groups">Named Capturing Groups</a>. You have to use them too if you are to redefine the expression. You can name these groups as you like and have as many or as few as you wish, but it's recommended to include the <code>prefix</code> group for API prefix logic to work. It is also required for all groups which are in the <code>output_template</code> also to be present in the regex.</p>
-<p>To redefine the regular expression add an option <code>regex</code> to the reference config.</p>
-<p>For example, if you want to capture ONLY references with prefixes you may use the following:</p>
+<p>Notice that the default expression uses <a href="https://docs.python.org/3/howto/regex.html#non-capturing-and-named-groups">Named Capturing Groups</a>. You have to use them too, if you are to redefine the expression. You can name these groups as you like and have as many or as few as you wish, but it's recommended to include the <code>prefix</code> group for API prefix logic to work. It is also required for all groups which are in the <code>output_template</code> also to be present in the regex.</p>
+<p>To redefine the regular expression, add an option <code>regex</code> to the reference config.</p>
+<p>For example, if you want to capture ONLY references with prefixes, you may use the following:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">preprocessors</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apireferences</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
@@ -2786,7 +2823,7 @@ Run `Client-API: GET /system/healthcheck` to get debug information about the Cli
 <p>Don't forget the single quotes around the template. These braces and parenthesis easily make YAML think that it is an embedded dictionary or list.</p>
 </blockquote>
 <p>With the default template, the reference string will be replaced by something like that:</p>
-<div class="highlight"><pre><span></span><code>[GET user/info](http://example.com/api/#get-user-info)
+<div class="highlight"><pre><span></span><code>[<span class="nt">GET user/info</span>](<span class="na">http://example.com/api/#get-user-info</span>)
 </code></pre></div>
 <p>If you want references to be transformed into something else, create your own template. You can use placeholders from the reference regular expression along with some additional:</p>
 <table>
