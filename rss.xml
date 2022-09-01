@@ -7,6 +7,42 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.history 1.0.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.history.git#c75c1ef0648f8b1b4c1b63086fef9427</guid>
+            <pubDate>Thu, 01 Sep 2022 09:20:41 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>The <escaped hash="f4000add6f4657100cfcc8c66c49af48"></escaped> argument has been changed so that the default repository branch is used when generating the history.</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.checksources 1.0.0</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.checksources.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.checksources.git#8b97a3f9f24925e2aa713649e9b2d4f9</guid>
+            <pubDate>Tue, 30 Aug 2022 16:56:31 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Initial release</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.init 1.0.9</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#8553b018044bf3ca97be90880a1e0344</guid>
+            <pubDate>Mon, 15 Aug 2022 14:41:19 +0500</pubDate>
+            <description><![CDATA[<ul>
+<li>Add template download from got repository</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.showcommits 1.0.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.showcommits.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.showcommits.git#3746af6f94911817fb4acd0e861dd599</guid>
+            <pubDate>Mon, 27 Jun 2022 14:25:29 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add multithread file processing</li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.apireferences 1.0.5</title>
             <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#ffbb5249760e00da934bc4061945c4d8</guid>

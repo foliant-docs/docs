@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../assets/images/octopus-black-32.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.14">
     
     
       
@@ -1583,6 +1583,53 @@
     Usage
   </a>
   
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-template" class="md-nav__link">
+    Base template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-template" class="md-nav__link">
+    Custom template
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-template-from-a-local-path" class="md-nav__link">
+    Custom template from a local path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-template-from-a-git-repository" class="md-nav__link">
+    Custom template from a git repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-options" class="md-nav__link">
+    Other options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1852,6 +1899,53 @@
     Usage
   </a>
   
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-template" class="md-nav__link">
+    Base template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-template" class="md-nav__link">
+    Custom template
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-template-from-a-local-path" class="md-nav__link">
+    Custom template from a local path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-template-from-a-git-repository" class="md-nav__link">
+    Custom template from a git repository
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-options" class="md-nav__link">
+    Other options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1892,20 +1986,31 @@
 <div class="highlight"><pre><span></span><code>$ pip install foliantcontrib.init
 </code></pre></div>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<p>Create project from the default “base” template:</p>
+<p>You can create a project from the default <em>base</em> template or from a custom template</p>
+<h4 id="base-template">Base template<a class="headerlink" href="#base-template" title="Permanent link">&para;</a></h4>
+<p>Create project from the default <em>base</em> template:</p>
 <div class="highlight"><pre><span></span><code>$ foliant init
 Enter the project name: Awesome Docs
 ✔ Generating Foliant project
 ─────────────────────
 Project <span class="s2">&quot;Awesome Docs&quot;</span> created <span class="k">in</span> awesome-docs
 </code></pre></div>
-<p>Create project from a custom template:</p>
+<h4 id="custom-template">Custom template<a class="headerlink" href="#custom-template" title="Permanent link">&para;</a></h4>
+<p>You can load a custom template from a local path or from a git repo</p>
+<h5 id="custom-template-from-a-local-path">Custom template from a local path<a class="headerlink" href="#custom-template-from-a-local-path" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code>$ foliant init --template /path/to/custom/template
 Enter the project name: Awesome Customized Docs
 ✔ Generating Foliant project
 ─────────────────────
 Project <span class="s2">&quot;Awesome Customized Docs&quot;</span> created <span class="k">in</span> awesome-customized-docs
 </code></pre></div>
+<h5 id="custom-template-from-a-git-repository">Custom template from a git repository<a class="headerlink" href="#custom-template-from-a-git-repository" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>$ foliant init --template https://github.com/path/to/custom/template
+Enter the project name: Awesome Docs from git
+────────────────────
+Project <span class="s2">&quot;Awesome Docs from git&quot;</span> created <span class="k">in</span> awesome-docs-from-git
+</code></pre></div>
+<h4 id="other-options">Other options<a class="headerlink" href="#other-options" title="Permanent link">&para;</a></h4>
 <p>You can provide the project name without user prompt:</p>
 <div class="highlight"><pre><span></span><code>$ foliant init --name Awesome Docs
 ✔ Generating Foliant project
@@ -1918,19 +2023,20 @@ awesome-docs
 </code></pre></div>
 <p>To see all available options, run <code>foliant init --help</code>:</p>
 <div class="highlight"><pre><span></span><code>$ foliant init --help
-usage: foliant init <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-n NAME<span class="o">]</span> <span class="o">[</span>-t NAME or PATH<span class="o">]</span> <span class="o">[</span>-q<span class="o">]</span>
+usage: foliant init <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-n NAME<span class="o">]</span> <span class="o">[</span>-t NAME, PATH or git-repo<span class="o">]</span> <span class="o">[</span>-q<span class="o">]</span> <span class="o">[</span>-d<span class="o">]</span>
 
-Generate new Foliant project.
+Generate a new Foliant project.
 
 optional arguments:
   -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
-  -n NAME, --name NAME  Name of the Foliant project
-  -t NAME or PATH, --template NAME or PATH
-                        Name of a built-in project template or path to custom one
+  -n NAME, --name NAME  Name of the Foliant project.
+  -t NAME, PATH or git-repo, --template NAME, PATH or git-repo
+                        Name of a built-in project template or path to custom one.
   -q, --quiet           Hide all output accept <span class="k">for</span> the result. Useful <span class="k">for</span> piping.
+  -d, --debug           Log all events during project creation. If not set, only warnings and errors are logged.
 </code></pre></div>
 <h3 id="project-templates">Project Templates<a class="headerlink" href="#project-templates" title="Permanent link">&para;</a></h3>
-<p>A project template is a regular Foliant project but containing placeholders in files. When the project is generated, the placeholders are replaced with the values you provide. Currently, there are two placeholders: <code>$title</code> and <code>$slug</code>.</p>
+<p>A project template is a regular Foliant project but maybe containing placeholders in files. When the project is generated, the placeholders are replaced with the values you provide. Currently, there are two placeholders: <code>$title</code> and <code>$slug</code>.</p>
 <p>There is a built-in template called <code>base</code>. It's used by default if no template is specified.</p>
 
               
