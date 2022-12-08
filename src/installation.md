@@ -2,8 +2,9 @@
 
 Installation of Foliant is split into three stages: installing Python with your system’s package manager, installing Foliant with pip, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.
 
-Alternatively, you can avoid installing Foliant and its dependencies on your system by using <link title="Docker">Docker and Docker Compose</link>.
+!!! note 
 
+    It is recommended to use Foliant inside [Docker](tutorials/docker.md) for the sake of stability and to avoid installing all dependencies.
 
 ## macOS
 
@@ -25,19 +26,25 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
 
 ## Windows
 
-0.  Install [Scoop package manager](https://scoop.sh/) in PowerShell:
+!!! warning "Foliant native usage on Windows is very unstable"
 
-        $ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+    It is highly recommended to use Foliant inside [docker](tutorials/docker.md), rather then native install.
 
-1.  Install Python 3 with Scoop:
+0. Install Python 3 any available way, or use Scoop like shown below:
 
-        $ scoop install python
+      1.  Install [Scoop package manager](https://scoop.sh/) in PowerShell:
+            
+              $ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
-2.  Install Foliant with pip:
+      2.  Install Python 3 with Scoop:
+
+              $ scoop install python
+
+1.  Install Foliant with pip:
 
         $ python -m pip install foliant foliantcontrib.init
 
-3.  If you plan to bake pdf or DOCX, install Pandoc and MikTeX with Scoop:
+2.  If you plan to bake pdf or DOCX, install Pandoc and MikTeX with Scoop:
 
         $ scoop install pandoc latex
 

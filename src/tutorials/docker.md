@@ -18,13 +18,15 @@ Go to [https://www.docker.com/get-started](https://www.docker.com/get-started) a
 
 Follow the instructions of the installer. In the end, it may ask you to restart the computer. After restarting, run Docker by the shortcut in your Start menu.
 
+You can also use Docker within [WSL](https://learn.microsoft.com/windows/wsl/install).
+
 **Linux**
 
 Follow the [instructions](https://docs.docker.com/engine/install/) for your Linux distribution on the official website.
 
 After that [install Docker Compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems).
 
-**MacOs**
+**MacOS**
 
 Download and install Docker from [this page](https://hub.docker.com/editions/community/docker-ce-desktop-mac/).
 
