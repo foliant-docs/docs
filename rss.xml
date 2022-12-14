@@ -7,6 +7,90 @@
         <description>Releases of Foliant documentation authoring tool and its extensions.</description>
         <language>en-US</language>
         <item>
+            <title>foliantcontrib.mkdocs 1.0.15</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#9873dd3cf1c2fd4ef5b8d28521c1a8e7</guid>
+            <pubDate>Mon, 12 Dec 2022 10:41:42 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Raise error if mkdocs build failed but exited with status code 0</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.dbmldoc 0.3.3</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#2bbd08cc37f33e78d9021f6971339e98</guid>
+            <pubDate>Sun, 11 Dec 2022 12:15:47 +0100</pubDate>
+            <description><![CDATA[<ul>
+<li>Update PyDBML version</li>
+<li>Update default template</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.macros 1.0.5</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.macros.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.macros.git#530ea4dd1163cd2c2d448dd9ceba24eb</guid>
+            <pubDate>Fri, 09 Dec 2022 09:33:33 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Do not fail preprocessors run if no replacement for a macro is found.</li>
+</ul>
+<p><escaped hash="dba15e54e70765f514ab6666f26fe542"></escaped></p>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.dbmldoc 0.3.2</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.dbmldoc.git#72b53fb104470e7ef2385b6cab205f96</guid>
+            <pubDate>Sun, 04 Dec 2022 12:36:24 +0100</pubDate>
+            <description><![CDATA[<ul>
+<li>Update PyDBML version</li>
+<li>Update default template</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.init 1.0.10</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.init.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.init.git#92b00624876ffee9908374f0b0bf5cda</guid>
+            <pubDate>Thu, 10 Nov 2022 14:57:00 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Add Makefile to the base template</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.imgcaptions 1.0.4</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.imgcaptions.git#0505fe5f7a1c7feb51cf321cace6da37</guid>
+            <pubDate>Mon, 31 Oct 2022 12:55:30 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: wrong captions were placed for figma-like images</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.mkdocs 1.0.14</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.mkdocs.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.mkdocs.git#2846c754ff2c35b68c369e71a284090e</guid>
+            <pubDate>Fri, 28 Oct 2022 13:12:34 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix <escaped hash="4f29b9efbbf2e851f32560d15f176b53"></escaped> not to match image refs with brackets in captions</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.7</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#8caa9faac37c94f97814bdd433ca28a3</guid>
+            <pubDate>Tue, 11 Oct 2022 12:06:02 +0300</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: small fix for proper work when input reference is a list item and have initial and last spaces inside</li>
+</ul>]]></description>
+        </item>
+        <item>
+            <title>foliantcontrib.apireferences 1.0.6</title>
+            <link>https://github.com/foliant-docs/foliantcontrib.apireferences.git</link>
+            <guid>https://github.com/foliant-docs/foliantcontrib.apireferences.git#df2f0a08abbdf6b9fd0bdc6dd404387a</guid>
+            <pubDate>Wed, 21 Sep 2022 16:17:56 +0500</pubDate>
+            <description><![CDATA[<ul>
+<li>Fix: now the preprocessor works correctly with initial and last spaces in input references like <escaped hash="fc9d6fd2d8db223be4a7484a8619f26b"></escaped><escaped hash="93ee730b633e653166ec61cdc83c20d4"></escaped> Client-API: GET user/info <escaped hash="93ee730b633e653166ec61cdc83c20d4"></escaped><escaped hash="fc9d6fd2d8db223be4a7484a8619f26b"></escaped></li>
+</ul>]]></description>
+        </item>
+        <item>
             <title>foliantcontrib.history 1.0.9</title>
             <link>https://github.com/foliant-docs/foliantcontrib.history.git</link>
             <guid>https://github.com/foliant-docs/foliantcontrib.history.git#c75c1ef0648f8b1b4c1b63086fef9427</guid>
