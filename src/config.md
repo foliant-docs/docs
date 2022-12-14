@@ -1,3 +1,9 @@
+---
+tags:
+  - yaml
+  - config
+---
+
 # Project Configuration
 
 Configuration for Foliant is kept in a [YAML](https://yaml.org/) file in the project root. The default filename is `foliant.yml` but you can pick a different name by specifying the `--config` option:

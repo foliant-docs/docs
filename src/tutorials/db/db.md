@@ -1,3 +1,8 @@
+---
+tags:
+  - database
+---
+
 # Introduction
 
 In these tutorials we will show you a way to document your database using Foliant. Right now there are options available for those of you who use **PostgreSQL**, **Oracle**, **MySQL**, **MS SQL Server** and **DBML**. If your DBMS is not in the list, [send us an issue](https://github.com/foliant-docs/foliantcontrib.dbdoc/issues), we'll do our best to add the support to it as fast as possible.

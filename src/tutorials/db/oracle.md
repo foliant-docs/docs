@@ -1,3 +1,8 @@
+---
+tags:
+  - database
+---
+
 # Documenting Oracle Database
 
 > Please note that in this article covers only the basic usage of the tools. For detailed information on features and customizing output refer to each component’s docs.

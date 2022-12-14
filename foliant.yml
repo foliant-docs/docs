@@ -97,6 +97,7 @@ chapters:
         - config/slugs.md
         - config/yaml_include.md
     - releases.md
+    - tags.md
 
 preprocessors:
     - macros:

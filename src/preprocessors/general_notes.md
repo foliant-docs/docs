@@ -1,3 +1,9 @@
+---
+tags:
+  - yaml
+  - config
+---
+
 # General Notes on Usage
 
 Most simple preprocessors apply unconditionally to the whole content of each Markdown file in the Foliant project. But usually preprocessors look for some specific pseudo-XML tags in Markdown content. Each preprocessor registers its own set of tags.

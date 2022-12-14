@@ -1,3 +1,8 @@
+---
+tags:
+  - API
+---
+
 # Documenting API with Foliant
 
 In this tutorial we will learn how to use Foliant to generate documentation from API specification formats [OpenAPI (Swagger)](https://swagger.io/specification/), [RAML](https://raml.org/) and [API Blueprint](https://apiblueprint.org/).

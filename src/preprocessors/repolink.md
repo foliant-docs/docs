@@ -1,3 +1,9 @@
+---
+tags:
+  - git
+  - mkdocs
+---
+
 # RepoLink
 
 <include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="RepoLink Preprocessor" to_heading="Usage of the Preprocessor"></include>

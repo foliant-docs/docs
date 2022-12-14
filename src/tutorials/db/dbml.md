@@ -1,3 +1,8 @@
+---
+tags:
+  - database
+---
+
 # Documenting DBML schema
 
 Quote from the official website: *[DBML](https://dbml.org/) (Database Markup Language) is an open-source DSL language designed to define and document database schemas and structures. It is designed to be simple, consistent and highly-readable.* And that makes it a perfect choice for the designing stage of your database. You can create your table structure without messing with cumbersome SQL in a more readible way like this:

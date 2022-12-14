@@ -1,3 +1,8 @@
+---
+tags:
+  - database
+---
+
 # Documenting PostgreSQL Database
 
 > Please note that this article will cover only the basic usage of the tools. For detailed information on the features and customizing output refer to each component’s docs.
