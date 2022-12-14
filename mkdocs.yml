@@ -22,6 +22,12 @@ theme:
         - navigation.top
     icon:
       repo: fontawesome/brands/github-alt
+    features:
+        - search.suggest
+        - search.highlight
+        - navigation.instant
+        - navigation.top
+
 
 extra:
     social:
@@ -35,6 +41,10 @@ extra:
 plugins:
     - tags:
         tags_file: tags.md
+    - search:
+        lang:
+          - en
+
 markdown_extensions:
     - def_list
     - pymdownx.highlight
