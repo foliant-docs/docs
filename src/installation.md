@@ -1,3 +1,9 @@
+---
+tags:
+  - tutorial
+  - install
+---
+
 # Installation
 
 Installation of Foliant is split into three stages: installing Python with your system’s package manager, installing Foliant with pip, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.

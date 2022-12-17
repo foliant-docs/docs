@@ -1,3 +1,9 @@
+---
+tags:
+  - tutorial
+  - preprocessor
+---
+
 # Installing and Testing
 
 Right now our preprocessor folder looks like this.

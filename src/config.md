@@ -1,7 +1,8 @@
 ---
 tags:
-  - yaml
+  - overview
   - config
+  - yaml
 ---
 
 # Project Configuration

@@ -1,3 +1,8 @@
+---
+tags:
+  - tutorial
+---
+
 # Quickstart
 
 If you don't have Foliant installed, please follow <link src="installation.md">the instructions</link> first.

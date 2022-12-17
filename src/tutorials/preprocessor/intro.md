@@ -1,3 +1,9 @@
+---
+tags:
+  - tutorial
+  - preprocessor
+---
+
 # Introduction
 
 Creating preprocessors for Foliant is quite straightforward because they are essentially just Python scripts wrapped in a `Preprocessor` class, which is provided by Foliant core. In this tutorial, we will go through all steps of creating a new preprocessor.

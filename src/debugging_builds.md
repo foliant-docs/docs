@@ -1,3 +1,9 @@
+---
+tags:
+  - overview
+  - debug
+---
+
 # Debugging Builds
 
 Building simple documentation projects with Foliant is usually straightforward. But Foliant is a powerful, customizable, and very flexible tool, capable of turning your most complex ideas into beautiful documents. If you understand exactly what you want to achieve, you can formalize it at the project config level, and Foliant will perform your task efficiently and precisely.

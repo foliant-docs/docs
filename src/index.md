@@ -1,3 +1,8 @@
+---
+tags:
+  - changelog
+---
+
 # Welcome to Foliant!
 
 Foliant is an all-in-one single-source documentation authoring tool. It lets you produce standalone documents in **pdf** and **docx**, build **static websites** and upload pages to **Confluence**, all from single Markdown source.

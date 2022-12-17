@@ -1,3 +1,8 @@
+---
+tags:
+  - tutorial
+---
+
 # Your First Foliant Project
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.

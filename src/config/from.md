@@ -1,3 +1,9 @@
+---
+tags:
+  - config extension
+  - multiproject
+---
+
 # MultiProject
 
 <include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="Config Extension to Resolve the !from Tag" to_heading="Usage of the Config Extension"></include>
