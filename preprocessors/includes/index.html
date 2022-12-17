@@ -1983,6 +1983,12 @@
   <nav class="md-tags" >
     
       
+        <a href="../../tags/#preprocessor" class="md-tag">
+          preprocessor
+        </a>
+      
+    
+      
         <a href="../../tags/#git" class="md-tag">
           git
         </a>
@@ -2072,6 +2078,11 @@
 <div class="highlight"><pre><span></span><code>Text below is taken from a remote repository on branch develop.
 
 &lt;include repo_url=&quot;https://github.com/foo/bar.git&quot; revision=&quot;develop&quot; path=&quot;path/to/doc.md&quot;&gt;&lt;/include&gt;
+</code></pre></div>
+<p>To include a code snippet, use <code>wrap_code</code> and <code>code_language</code> attributes:</p>
+<div class="highlight"><pre><span></span><code>&lt;include src=&quot;path/to/some/config.yaml&quot;
+wrap_code=&quot;triple_backticks&quot; code_language=&quot;yaml&quot;&gt;
+&lt;/include&gt;
 </code></pre></div>
 <h5 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h5>
 <dl>
