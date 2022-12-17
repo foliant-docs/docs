@@ -1,7 +1,8 @@
 ---
 tags:
+  - overview
+  - config  
   - yaml
-  - config
 ---
 
 # Metadata

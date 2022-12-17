@@ -1,3 +1,9 @@
+---
+tags:
+  - tutorial
+  - preprocessor
+---
+
 # Formalizing the Preprocessor
 
 A Foliant preprocessor is a Python package of a certain structure. Here's a list of requirements for a package to be considered by Foliant a preprocessor:

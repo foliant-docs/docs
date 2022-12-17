@@ -1,3 +1,8 @@
+---
+tags:
+  - tutorial
+---
+
 # Running Foliant in Docker
 
 Foliant's design philosophy says that everybody should do what they do best. We don't aim to create a universal text processing combine which covers all needs of a technical writer by itself. Instead Foliant introduces integrations with different beautiful open source tools which specialize on a little chunk of work and do it perfectly.

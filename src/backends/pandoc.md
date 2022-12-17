@@ -1,9 +1,12 @@
 ---
 tags:
-  - pandoc
+  - backend
   - docx
   - pdf
-  - backend
+  - odt
+  - epub
+  - tex
+  - pandoc
 ---
 
 # Pandoc

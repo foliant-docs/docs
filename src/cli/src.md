@@ -1,3 +1,10 @@
+---
+tags:
+  - cli extension
+  - backup
+  - multiproject
+---
+
 # Src
 
 <include repo_url="https://github.com/foliant-docs/foliantcontrib.multiproject.git" path="README.md" nohead="true" from_heading="CLI Extension for the `src` Command" to_heading="Usage of the CLI Extension"></include>

@@ -1,3 +1,9 @@
+---
+tags:
+  - overview
+  - developing
+---
+
 # Developer’s Reference
 
 The power of Foliant is in its extensions. Foliant's ecosystem consists of many beautiful tools for technical writers, but there is still a lot to be done. You are welcome to contribute to Foliant and its extensions.

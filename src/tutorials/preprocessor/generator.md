@@ -1,3 +1,9 @@
+---
+tags:
+  - tutorial
+  - preprocessor
+---
+
 # Creating the Gibberish Generator
 
 There are already several Python packages present on PyPi which generate placeholder texts like [loremipsum](https://github.com/monkeython/loremipsum) but we won't deprive ourselves of the fun of creating our own.
