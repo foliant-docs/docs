@@ -9,8 +9,16 @@ theme:
     name: material
     custom_dir: !path ./theme/
     palette:
-        primary: "rgba(0, 0, 0, 0.87)"
-        accent: light blue
+        - scheme: default
+          primary: "rgba(0, 0, 0, 0.87)"
+          accent: light blue
+          toggle:
+            icon: material/weather-night
+            name: Switch to dark mode
+        - scheme: slate
+          toggle:
+            icon: material/weather-sunny
+            name: Switch to light mode
     font:
         text: PT Sans
         code: PT Mono

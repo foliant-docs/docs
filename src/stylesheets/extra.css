@@ -1,3 +1,11 @@
 .md-header {
     background-color: rgba(0, 0, 0, 0.87);
 }
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #0d0839;
+    --md-typeset-a-color: #6bc7f3;
+    --md-accent-fg-color: #ff6e42;
+    --md-default-fg-color--light: hsla(var(--md-hue));
+    --md-typeset-mark-color: #069884;
+}
