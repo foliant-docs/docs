@@ -37,6 +37,33 @@ Install [Oracle Instant Client](https://www.oracle.com/database/technologies/ins
 
 If you are using Docker, you will need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this [Dockerfile by Sergey Makinen](https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile). Copy all commands starting from the third line into your `Dockerfile` and run `docker-compose build` to rebuild the image.
 
+
+??? "For the sake of reliability another variant of the Oracle-ready `Dockefile` is provided below:"
+
+    ```Dockerfile
+    FROM foliant/foliant:full
+
+    RUN pip3 install cx_Oracle
+
+    ENV DEBIAN_FRONTEND noninteractive
+
+    ENV ORACLE_INSTANTCLIENT_MAJOR 21
+    ENV ORACLE /usr/local/oracle
+    ENV ORACLE_HOME $ORACLE/lib/oracle/$ORACLE_INSTANTCLIENT_MAJOR/client64
+    ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:$ORACLE_HOME/lib
+    ENV C_INCLUDE_PATH $C_INCLUDE_PATH:$ORACLE/include/oracle/$ORACLE_INSTANTCLIENT_MAJOR/client64
+
+    RUN apt-get update && apt-get install -y libaio1 \
+            curl rpm2cpio cpio \
+        && mkdir $ORACLE && TMP_DIR="$(mktemp -d)" && cd "$TMP_DIR" \
+        && curl -L https://download.oracle.com/otn_software/linux/instantclient/218000/oracle-instantclient-basic-21.8.0.0.0-1.el8.x86_64.rpm -o basic.rpm \
+        && rpm2cpio basic.rpm | cpio -i -d -v && cp -r usr/* $ORACLE && rm -rf ./* \
+        && ln -s libclntsh.so.12.1 $ORACLE/lib/oracle/$ORACLE_INSTANTCLIENT_MAJOR/client64/lib/libclntsh.so.$ORACLE_INSTANTCLIENT_MAJOR \
+        && ln -s libocci.so.12.1 $ORACLE/lib/oracle/$ORACLE_INSTANTCLIENT_MAJOR/client64/lib/libocci.so.$ORACLE_INSTANTCLIENT_MAJOR \
+        && echo "$ORACLE_HOME/lib" > /etc/ld.so.conf.d/oracle.conf && chmod o+r /etc/ld.so.conf.d/oracle.conf && ldconfig \
+        && rm -rf /var/lib/apt/lists/* && apt-get purge -y --auto-remove curl rpm2cpio cpio
+    ```
+
 ## Creating project
 
 Let’s create a Foliant project for our experiments. `cd` to the directory where you want your project created and run the `init` command:
