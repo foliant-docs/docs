@@ -1948,6 +1948,31 @@
 <p><span id="docker_oracle"></span></p>
 <p>Install <a href="https://www.oracle.com/database/technologies/instant-client.html">Oracle Instant Client</a> if you don’t have it. We will need it to query the database.</p>
 <p>If you are using Docker, you will need to add Oracle Instant Client to your image. Since it is a proprietary software, we cannot include it in our Full Docker Image. But you can do it yourself. Our image is based on Ubuntu, so you can find instructions on how to install Oracle Instant Client on Ubuntu (spoiler: it’s not that easy) and add those commands into the Dockerfile, or just find those commands made by someone else. For example, from this <a href="https://github.com/sergeymakinen/docker-oracle-instant-client/blob/master/12.2/Dockerfile">Dockerfile by Sergey Makinen</a>. Copy all commands starting from the third line into your <code>Dockerfile</code> and run <code>docker-compose build</code> to rebuild the image.</p>
+<details>
+<summary>For the sake of reliability another variant of the Oracle-ready <code>Dockefile</code> is provided below:</summary>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">foliant/foliant:full</span>
+
+<span class="k">RUN</span><span class="w"> </span>pip3 install cx_Oracle
+
+<span class="k">ENV</span><span class="w"> </span>DEBIAN_FRONTEND noninteractive
+
+<span class="k">ENV</span><span class="w"> </span>ORACLE_INSTANTCLIENT_MAJOR <span class="m">21</span>
+<span class="k">ENV</span><span class="w"> </span>ORACLE /usr/local/oracle
+<span class="k">ENV</span><span class="w"> </span>ORACLE_HOME <span class="nv">$ORACLE</span>/lib/oracle/<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span>/client64
+<span class="k">ENV</span><span class="w"> </span>LD_LIBRARY_PATH <span class="nv">$LD_LIBRARY_PATH</span>:<span class="nv">$ORACLE_HOME</span>/lib
+<span class="k">ENV</span><span class="w"> </span>C_INCLUDE_PATH <span class="nv">$C_INCLUDE_PATH</span>:<span class="nv">$ORACLE</span>/include/oracle/<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span>/client64
+
+<span class="k">RUN</span><span class="w"> </span>apt-get update <span class="o">&amp;&amp;</span> apt-get install -y libaio1 <span class="se">\</span>
+        curl rpm2cpio cpio <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> mkdir <span class="nv">$ORACLE</span> <span class="o">&amp;&amp;</span> <span class="nv">TMP_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>mktemp -d<span class="k">)</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$TMP_DIR</span><span class="s2">&quot;</span> <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> curl -L https://download.oracle.com/otn_software/linux/instantclient/218000/oracle-instantclient-basic-21.8.0.0.0-1.el8.x86_64.rpm -o basic.rpm <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> rpm2cpio basic.rpm <span class="p">|</span> cpio -i -d -v <span class="o">&amp;&amp;</span> cp -r usr/* <span class="nv">$ORACLE</span> <span class="o">&amp;&amp;</span> rm -rf ./* <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> ln -s libclntsh.so.12.1 <span class="nv">$ORACLE</span>/lib/oracle/<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span>/client64/lib/libclntsh.so.<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span> <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> ln -s libocci.so.12.1 <span class="nv">$ORACLE</span>/lib/oracle/<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span>/client64/lib/libocci.so.<span class="nv">$ORACLE_INSTANTCLIENT_MAJOR</span> <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$ORACLE_HOME</span><span class="s2">/lib&quot;</span> &gt; /etc/ld.so.conf.d/oracle.conf <span class="o">&amp;&amp;</span> chmod o+r /etc/ld.so.conf.d/oracle.conf <span class="o">&amp;&amp;</span> ldconfig <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> rm -rf /var/lib/apt/lists/* <span class="o">&amp;&amp;</span> apt-get purge -y --auto-remove curl rpm2cpio cpio
+</code></pre></div>
+</details>
 <h2 id="creating-project">Creating project<a class="headerlink" href="#creating-project" title="Permanent link">&para;</a></h2>
 <p>Let’s create a Foliant project for our experiments. <code>cd</code> to the directory where you want your project created and run the <code>init</code> command:</p>
 <div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> ~/foliant_projects
