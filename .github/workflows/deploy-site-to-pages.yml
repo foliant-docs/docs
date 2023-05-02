@@ -3,7 +3,7 @@ name: build and deploy docs-site to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - master
   workflow_dispatch:
 
 permissions:
