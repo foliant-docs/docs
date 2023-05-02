@@ -1,10 +1,10 @@
 name: build and deploy docs-site to GitHub Pages
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - ci-cd/build-and-deploy-gh-pages
+  workflow_dispatch:
 
 permissions:
   contents: read
