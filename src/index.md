@@ -5,29 +5,38 @@ tags:
 
 # Welcome to Foliant!
 
-Foliant is an all-in-one single-source documentation authoring tool. It lets you produce standalone documents in **pdf** and **docx**, build **static websites** and upload pages to **Confluence**, all from single Markdown source.
+**Foliant** is documentation tool empowered with single-source publishing. Made possible by using external services.
 
-Foliant is a higher order tool, which means it uses other programs to do its job. For building pdf and docx, it can use [Pandoc](https://pandoc.org/) or [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf), for websites [MkDocs](https://www.mkdocs.org/), [Aglio](https://github.com/danielgtaylor/aglio) or [Slate](https://github.com/slatedocs/slate).
+Deliver your docs to
 
-Foliant preprocessors let you reuse parts of your documents, show and hide content with flags, render diagrams from text, and much more.
+- Markdown;
+- pdf with [Pandoc](https://pandoc.org/) or [md-to-pdf](https://github.com/simonhaenisch/md-to-pdf);
+- docx;
+- static websites as [MkDocs](https://www.mkdocs.org/), [Aglio](https://github.com/danielgtaylor/aglio) or [Slate](https://github.com/slatedocs/slate);
+- Confluence pages.
 
-Foliant is highly extensible, so if it lacks some functions or output formats you can always make a plugin for it or request one from our team.
+Every layout form and function is implemented in preprocessors - Foliant instructions for 3rd party apps. That's why be creative and
 
-> Logo made by [Hand Drawn Goods](http://handdrawngoods.com/) from [flaticon.com](https://www.flaticon.com/).
+- reuse docs;
+- flag and restrict content;
+- draw diagrams from text;
+- build extensions on demand or request one from our team;
+- make docs, as you imagine.
 
-## Who Is It for?
+## Why Foliant?
 
-You’ll love Foliant if you:
+You gain unlimited options to
 
-* need to ship documentation as pdf, docx, and websites
-* want to use Markdown with consistent extension system instead of custom syntax for every new bit of functionality
-* like reStructuredText’s extensibility and AsciiDoc’s flexibility, but would rather use Markdown
-* want a tool that you can extend with custom plugins without dealing with something as over-engineered as Sphinx
-* want to work with docs as code and make them a part of your CI pipeline
-* have a lot of segregated repositories with sources of your documents and want to standardize the documentation approach.
+* code your docs;
+* store them as Markdown basic texts;
+* ship right away in preferred form;
+* extend with simple scripts;
+* decentralise repositories and direct them into single source.
 
 ## Changelog
 
-Here is the changelog of [Foliant Core](https://github.com/foliant-docs/foliant/), the main and only strictly required package. See also the <link src="releases.md" title="History of Releases">history of releases of numerous Foliant extensions</link>.
+Updates to [Foliant Core](https://github.com/foliant-docs/foliant/) - the first and the last strictly required package. See also the <link src="releases.md" title="History of Releases">Foliant releasing history</link>.
 
 <include repo_url="https://github.com/foliant-docs/foliant.git" path="changelog.md" sethead="3"></include>
+
+<!-- > Logo made by [Hand Drawn Goods](http://handdrawngoods.com/) from [flaticon.com](https://www.flaticon.com/). -->
