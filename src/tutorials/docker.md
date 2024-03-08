@@ -222,7 +222,7 @@ That's all you need to know to work with Foliant the Docker way. Just remember t
 And one last note for the `full` image users. We keep constantly updating Foliant, adding and updating its extensions. To use all the fresh features update the image every once in a while with command
 
 ```bash
-$ docker pull registry.itv.restr.im:5000/foliant:full
+$ docker pull ghcr.io/foliant-docs/foliant/foliant:full
 ```
 
 And don't forget to rebuild your project's image after updating:
