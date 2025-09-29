@@ -31,6 +31,7 @@ title: My Awesome Project
 slug: myproj
 src_dir: src
 tmp_dir: __folianttmp__
+multithread: false
 ```
 
 `title` *(string)*
@@ -44,6 +45,9 @@ tmp_dir: __folianttmp__
 
 `tmp_dir` *(string)*
 :    Name of the directory where the intermediate files will be stored during preprocessor pipeline execution. Default: `__folianttmp__`.
+
+`multithread` *(bool)*
+:    The option enables multithreaded processing of files and tags by preprocessors using the `BasePreprocessorExt` class from [foliantcontrib.utils](https://github.com/foliant-docs/foliantcontrib.utils). Default: `false`.
 
 ### chapters
 
