@@ -13,6 +13,12 @@ If you don't have Foliant installed, please follow <link src="installation.md">t
 $ foliant init
 ```
 
+Or with Poetry
+
+```bash
+$ poetry run foliant init
+```
+
 Or with Docker
 
 ```bash
@@ -37,6 +43,12 @@ pip3 install foliantcontrib.mkdocs
 
 ```bash
 $ foliant make site
+```
+
+Or with Poetry
+
+```bash
+$ poetry run foliant make site
 ```
 
 Or with Docker

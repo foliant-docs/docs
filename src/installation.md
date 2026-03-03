@@ -6,7 +6,7 @@ tags:
 
 # Installation
 
-Installation of Foliant is split into three stages: installing Python with your system’s package manager, installing Foliant with pip, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.
+Installation of Foliant is split into three stages: installing Python with your system’s package manager, installing Foliant with pip or Poetry, and optionally installing Pandoc and TeXLive bundle. Below you’ll find the instructions for three popular platforms: macOS, Windows, and Ubuntu.
 
 Alternatively, you can avoid installing Foliant and its dependencies on your system by using <link title="Docker">Docker and Docker Compose</link>.
 
@@ -78,6 +78,25 @@ Alternatively, you can avoid installing Foliant and its dependencies on your sys
     Finally, install the Pandoc backend:
 
         $ pip3 install foliantcontrib.pandoc
+
+
+## Poetry
+
+If you prefer to manage Foliant and its extensions as dependencies of your documentation project, you can use [Poetry](https://python-poetry.org/).
+
+1.  Install [Python](https://www.python.org/) and [Poetry](https://python-poetry.org/docs/#installation) globally on your system.
+
+2.  Initialize a new Poetry project in your documentation directory:
+
+        $ poetry init
+
+3.  Add Foliant and the necessary extensions as dependencies:
+
+        $ poetry add foliant foliantcontrib.init
+
+4.  To build your project, use `poetry run`:
+
+        $ poetry run foliant make site
 
 
 ## Docker

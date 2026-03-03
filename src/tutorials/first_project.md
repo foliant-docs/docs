@@ -7,7 +7,7 @@ tags:
 
 In this tutorial, you’ll learn how to use Foliant to build websites and pdf documents from a single Markdown source. You’ll also learn how to use Foliant preprocessors.
 
-> It is recommended to <link src="docker.md">run Foliant through Docker</link> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization). In this tutorial, we will show the example commands for both native way (these will go first) and the Docker way (these will follow).
+> It is recommended to <link src="docker.md">run Foliant through Docker</link> to get consistent results on different machines, but it's also perfectly fine to run it natively (e.g. as a pure CLI tool without virtualization) or using **Poetry** for dependency management. In this tutorial, we will show the example commands for the native way, the Poetry way, and the Docker way.
 
 
 ## Create New Project
@@ -20,11 +20,18 @@ To use it, run `foliant init` command
 
 ```bash
 $ foliant init
+```
+
+Or, with Poetry
+
+```bash
+$ poetry run foliant init
+```
+
 Enter the project name: Hello Foliant
 Generating Foliant project
 ─────────────────────
 Project "Hello Foliant" created in hello-foliant
-```
 
 To do the same with Docker, run
 
@@ -72,19 +79,32 @@ Let’s start with **MkDocs** backend. First, install it using the following com
 pip3 install foliantcontrib.mkdocs
 ```
 
+Or with Poetry
+
+```bash
+poetry add foliantcontrib.mkdocs
+```
+
 Docker users would normally need to add this package to the `requirements.txt` file instead, but mkdocs is already there by default if you used `init` to generate project structure.
 
 To build a site, in the project directory, run
 
 ```bash
 $ foliant make site
+```
+
+Or with Poetry
+
+```bash
+$ poetry run foliant make site
+```
+
 Parsing config... Done
 Applying preprocessor mkdocs... Done
 Applying preprocessor _unescape... Done
 Making site with MkDocs... Done
 ────────────────────
 Result: Hello_Foliant-2020-05-25.mkdocs
-```
 
 Or, with Docker Compose
 
@@ -118,13 +138,22 @@ Then, in the project directory, run
 
 ```bash
 $ foliant make pdf
+```
+
+Or with Poetry
+
+```bash
+$ poetry run foliant make pdf
+```
+
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
 Making pdf with Pandoc... Done
 ────────────────────
 Result: Hello_Foliant-2020-05-25.pdf
-```
+
+To build pdf in Docker container
 
 To build pdf in Docker container, first uncomment `foliant/foliant:pandoc` in your project’s `Dockerfile`
 
@@ -199,6 +228,14 @@ The native command
 
 ```bash
 foliant make pdf && foliant make site
+```
+
+Or with Poetry
+
+```bash
+poetry run foliant make pdf && poetry run foliant make site
+```
+
 Parsing config... Done
 Applying preprocessor flatten... Done
 Applying preprocessor _unescape... Done
@@ -212,7 +249,6 @@ Applying preprocessor _unescape... Done
 Making site with MkDocs... Done
 ────────────────────
 Result: Hello_Foliant-2020-05-25.mkdocs
-```
 
 The command for Docker
 
@@ -261,6 +297,12 @@ First, we need to install the blockdiag preprocessor
 
 ```bash
 $ pip3 install foliantcontrib.blockdiag
+```
+
+Or with Poetry
+
+```bash
+$ poetry add foliantcontrib.blockdiag
 ```
 
 Or, if you are building with docker, add `foliantcontrib.blockdiag` to requirements.txt and rebuild the image with `docker-compose build` command.
