@@ -1,6 +1,6 @@
 #   Foliant Documentation
 
-[![Build Status](https://api.travis-ci.com/foliant-docs/docs.svg?branch=master)](https://travis-ci.com/github/foliant-docs)
+[![Build Status](https://github.com/foliant-docs/docs/actions/workflows/deploy-site-to-pages.yml/badge.svg)](https://github.com/foliant-docs/docs/actions/workflows/deploy-site-to-pages.yml)
 
 ##  Build Locally
 
